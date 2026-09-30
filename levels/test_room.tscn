@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://src/level/greybox_level.gd" id="1"]
+
+[node name="TestRoom" type="Node2D"]
+script = ExtResource("1")
+blocks = Array[Rect2]([Rect2(0, -10, 1, 28), Rect2(0, 12, 20, 6), Rect2(10, 11, 3, 1), Rect2(15, 10, 5, 2), Rect2(23, 12, 19, 6), Rect2(28, 9, 4, 0.5), Rect2(36, 8, 3, 0.5),Rect2(42, 10, 6, 8), Rect2(48, 8, 6, 10), Rect2(57, 8, 8, 10), Rect2(65, -10, 1, 28)])
+checkpoints = Array[Vector2]([Vector2(2, 12), Vector2(25, 12), Vector2(58, 8)])
+bounds_tiles = Rect2(0, -10, 66, 29)
+kill_y_tiles = 19.0

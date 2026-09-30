@@ -1,0 +1,39 @@
+; Engine configuration file.
+; Godot 4.7. Прототип этапа 1: серые прямоугольники, общая камера, геймпады.
+
+config_version=5
+
+[application]
+
+config/name="Держись! (Glue)"
+config/description="Кооперативный платформер-головоломка для 2–4 игроков на одном экране."
+run/main_scene="res://src/game/game.tscn"
+config/features=PackedStringArray("4.7", "GL Compatibility")
+
+[autoload]
+
+InputRouter="*res://src/autoload/input_router.gd"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/size/window_width_override=1280
+window/size/window_height_override=720
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+
+[layer_names]
+
+2d_physics/layer_1="world"
+2d_physics/layer_2="players"
+
+[physics]
+
+common/physics_ticks_per_second=60
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_clear_color=Color(0.29, 0.33, 0.4, 1)

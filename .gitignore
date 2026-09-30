@@ -11,3 +11,9 @@
 Thumbs.db
 desktop.ini
 
+
+# Local Godot editor binary (not versioned)
+tools/godot/
+
+# Local builds
+build/
