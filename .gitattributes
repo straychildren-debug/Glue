@@ -6,3 +6,4 @@
 *.tscn text eol=lf
 *.tres text eol=lf
 *.png binary
+*.bat text eol=crlf

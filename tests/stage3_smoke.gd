@@ -61,8 +61,17 @@ func _ready() -> void:
 	await frames(60)
 	check(not plate.active and is_equal_approx(door.global_position.y, door_closed_y), "ушёл с плиты — дверь закрылась")
 
-	# --- Ящик на плите держит дверь сам.
-	crate.global_position = Vector2(plate.global_position.x, plate_top - 20.0)
+	# --- Ящик въезжает на плиту толканием (по скосу края) и держит дверь сам.
+	crate.global_position = Vector2(plate.global_position.x - 220.0, 12 * TILE - 32.0)
+	await _teleport(p1, Vector2(plate.global_position.x - 290.0, FLOOR_Y), p2, Vector2(plate.global_position.x - 500.0, FLOOR_Y))
+	press(KEY_D, true)
+	for i in 120:
+		await get_tree().physics_frame
+		if crate.global_position.x >= plate.global_position.x:
+			break
+	press(KEY_D, false)
+	check(Weight.floor_below(crate) == plate, "ящик затолкали на плиту")
+	place(p1, Vector2(18 * TILE - 60.0, FLOOR_Y))
 	await frames(40)
 	check(plate.active and door.global_position.y < door_closed_y - 150.0, "ящик на плите держит дверь открытой")
 	crate.global_position = crate_home

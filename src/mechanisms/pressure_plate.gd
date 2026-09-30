@@ -10,6 +10,8 @@ signal changed(active: bool)
 
 const RAISED := 14.0
 const PRESSED := 4.0
+## Края плиты — скосы такой длины: ящик въезжает на плиту, а не упирается в ступеньку.
+const RAMP := 28.0
 
 @export var width_tiles := 2.0:
 	set(value):
@@ -38,11 +40,10 @@ var _label: Label
 
 
 func _ready() -> void:
-	var shape := RectangleShape2D.new()
-	shape.size = Vector2(width_tiles * GreyboxLevel.TILE - 8.0, RAISED)
+	var shape := ConvexPolygonShape2D.new()
+	shape.points = _outline()
 	var collision := CollisionShape2D.new()
 	collision.shape = shape
-	collision.position = Vector2(0, -RAISED / 2.0)
 	add_child(collision)
 	if Engine.is_editor_hint():
 		return
@@ -108,11 +109,18 @@ static func _format(value: float) -> String:
 	return str(snappedf(value, 0.1)).trim_suffix(".0")
 
 
+## Трапеция плиты: низ на уровне пола, по бокам — скосы.
+func _outline() -> PackedVector2Array:
+	var half := width_tiles * GreyboxLevel.TILE / 2.0 - 4.0
+	return PackedVector2Array([
+		Vector2(-half, 0), Vector2(-half + RAMP, -RAISED), Vector2(half - RAMP, -RAISED), Vector2(half, 0)])
+
+
 func _draw() -> void:
-	var width := width_tiles * GreyboxLevel.TILE - 8.0
 	var color := Color("f2994a") if active else Color("c2410c")
 	if latch:
 		color = Color("a78bfa") if active else Color("6d28d9")
-	var rect := Rect2(-width / 2.0, -RAISED, width, RAISED)
-	draw_rect(rect, color)
-	draw_rect(rect, color.darkened(0.4), false, 2.0)
+	var outline := _outline()
+	draw_colored_polygon(outline, color)
+	outline.append(outline[0])
+	draw_polyline(outline, color.darkened(0.4), 2.0)
