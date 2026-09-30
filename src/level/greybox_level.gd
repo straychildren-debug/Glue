@@ -9,6 +9,9 @@ const TILE := 64.0
 ## возвращаются в состояние, в котором были при взятии чекпоинта.
 const RESETTABLE := "resettable"
 
+## Название на экране, например «01 · Первые шаги».
+@export var title := ""
+
 ## Твёрдые блоки: Rect2 в тайлах (x, y, ширина, высота); y растёт вниз.
 @export var blocks: Array[Rect2] = []:
 	set(value):
@@ -26,6 +29,7 @@ const RESETTABLE := "resettable"
 @export var sky_color := Color("c9d9e8")
 @export var block_color := Color("6b7280")
 @export var top_color := Color("7fae5c")
+@export var beam_color := Color("a0703f")
 
 var active_checkpoint := 0:
 	set(value):
@@ -91,6 +95,14 @@ func _physics_process(_delta: float) -> void:
 			crate.fall_out()
 
 
+## Выход уровня (null — в комнате нет финиша, как в песочнице).
+func get_finish() -> Finish:
+	for node in get_tree().get_nodes_in_group(Finish.GROUP):
+		if is_ancestor_of(node):
+			return node
+	return null
+
+
 ## Индекс последнего чекпоинта, который лежит левее x (в пикселях).
 func checkpoint_at_x(x: float) -> int:
 	var result := 0
@@ -106,6 +118,11 @@ func _draw() -> void:
 			Vector2(bounds_tiles.end.x * TILE, get_kill_y()), Color(0.8, 0.2, 0.2, 0.5), 4.0)
 	for rect in blocks:
 		var px := Rect2(rect.position * TILE, rect.size * TILE)
+		if rect.size.y <= 0.5:
+			# Тонкие блоки — деревянные балки и насесты: за них цепляется взгляд.
+			draw_rect(px, beam_color)
+			draw_rect(px, beam_color.darkened(0.4), false, 2.0)
+			continue
 		draw_rect(px, block_color)
 		draw_rect(Rect2(px.position, Vector2(px.size.x, minf(10.0, px.size.y))), top_color)
 		draw_rect(px, block_color.darkened(0.3), false, 2.0)

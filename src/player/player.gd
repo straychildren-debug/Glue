@@ -14,6 +14,8 @@ const LAYER_WORLD := 1
 const LAYER_PLAYERS := 2
 const LAYER_CAMERA_WALLS := 4
 const GROUP := "players"
+## Зазор над товарищем, на котором стоит игрок (px): больше safe_margin, незаметен глазу.
+const STACK_GAP := 0.25
 
 @export var run_speed := 360.0
 @export var ground_accel := 3000.0
@@ -182,6 +184,10 @@ func _physics_process(delta: float) -> void:
 	# Стоящий на товарище едет вместе с ним: move_and_slide берёт скорость опоры сам.
 	var fall_speed := velocity.y
 	move_and_slide()
+	# Нижний игрок «отодвигается» от стоящего на нём в пределах safe_margin и уходит в пол,
+	# пока не застрянет. Стоящий на товарище держится чуть выше — нижний его не касается.
+	if standing_on() != null:
+		global_position.y -= STACK_GAP
 	landing_speed = fall_speed if is_on_floor() and not on_floor else 0.0
 	_update_push(input_x)
 	_update_pass_through(delta)
@@ -295,13 +301,7 @@ func _launch_riders(side: int) -> void:
 
 ## На ком из игроков стоит этот игрок (null — ни на ком).
 func standing_on() -> Player:
-	if not is_on_floor():
-		return null
-	for i in get_slide_collision_count():
-		var collision := get_slide_collision(i)
-		if collision.get_normal().y < -0.5 and collision.get_collider() is Player:
-			return collision.get_collider()
-	return null
+	return Weight.floor_below(self) as Player
 
 
 ## Бросок катапультой: скорость задаётся целиком, отпускание прыжка его не гасит.

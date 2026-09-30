@@ -91,7 +91,8 @@ static func probe_below(body: PhysicsBody2D, distance := 4.0) -> Node:
 	return null
 
 
-## Опора под телом по столкновениям последнего move_and_slide.
+## Опора под телом по столкновениям последнего move_and_slide. Если тело стоит, но касания
+## в этом кадре не было (его довела до пола привязка floor_snap), — по пробному сдвигу вниз.
 static func floor_below(body: CharacterBody2D) -> Node:
 	if not body.is_on_floor():
 		return null
@@ -99,4 +100,4 @@ static func floor_below(body: CharacterBody2D) -> Node:
 		var collision := body.get_slide_collision(i)
 		if collision.get_normal().y < -0.5:
 			return collision.get_collider()
-	return null
+	return probe_below(body)
