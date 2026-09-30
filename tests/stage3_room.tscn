@@ -1,0 +1,41 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://src/level/greybox_level.gd" id="1"]
+[ext_resource type="Script" path="res://src/mechanisms/crate.gd" id="2"]
+[ext_resource type="Script" path="res://src/mechanisms/pressure_plate.gd" id="3"]
+[ext_resource type="Script" path="res://src/mechanisms/door.gd" id="4"]
+[ext_resource type="Script" path="res://src/mechanisms/seesaw.gd" id="5"]
+
+[node name="Stage3Room" type="Node2D"]
+script = ExtResource("1")
+blocks = Array[Rect2]([Rect2(0, -10, 1, 28), Rect2(0, 12, 48, 6), Rect2(26, -10, 1, 19), Rect2(52, 12, 28, 6), Rect2(80, -10, 1, 28)])
+checkpoints = Array[Vector2]([Vector2(2, 12), Vector2(60, 12)])
+bounds_tiles = Rect2(0, -10, 81, 29)
+kill_y_tiles = 19.0
+
+[node name="Crate" type="CharacterBody2D" parent="."]
+position = Vector2(416, 735)
+script = ExtResource("2")
+
+[node name="HeavyCrate" type="CharacterBody2D" parent="."]
+position = Vector2(928, 735)
+script = ExtResource("2")
+mass = 2.0
+
+[node name="Plate" type="AnimatableBody2D" parent="."]
+position = Vector2(1408, 768)
+script = ExtResource("3")
+
+[node name="Door" type="AnimatableBody2D" parent="."]
+position = Vector2(1664, 576)
+script = ExtResource("4")
+triggers = Array[NodePath]([NodePath("../Plate")])
+
+[node name="LatchPlate" type="AnimatableBody2D" parent="."]
+position = Vector2(1920, 768)
+script = ExtResource("3")
+latch = true
+
+[node name="Seesaw" type="Node2D" parent="."]
+position = Vector2(2432, 704)
+script = ExtResource("5")

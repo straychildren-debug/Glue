@@ -2,6 +2,7 @@ class_name Player
 extends CharacterBody2D
 ## Игрок-прямоугольник: бег, прыжок, стояние на других игроках, «Замри» и хват.
 ## Связь хвата решает GrabLinks после движения всех игроков.
+## Вес игрока давит на плиты и качели (см. Weight), игрок толкает ящики.
 ## Все значения — стартовые для настройки, не утверждённые (см. docs/06_параметры_и_решения.md).
 
 signal died(player: Player)
@@ -49,6 +50,8 @@ const GROUP := "players"
 @export var tilt_speed_deg := 600.0
 ## Катапульта: скорость, с которой резкий наклон подбрасывает стоящего сверху (≈ 275 px).
 @export var catapult_speed := 1150.0
+## Масса игрока: единица веса для плит, качелей и толкания ящиков.
+@export var mass := 1.0
 
 var slot := 0
 var color := Color.WHITE
@@ -58,6 +61,13 @@ var frozen := false
 ## За кого держится этот игрок (null — ни за кого) и максимальная длина связи.
 var grab_target: Player = null
 var grab_length := 0.0
+## Механизм, на котором замер игрок (ящик, качели, плита): замерший едет вместе с ним.
+var carrier: Node2D = null
+## Скорость падения в кадре приземления (для удара по качелям), иначе 0.
+var landing_speed := 0.0
+## Ящик, который игрок толкал в прошлом кадре (сам или через товарища впереди), и направление.
+var pushing: Crate = null
+var pushing_dir := 0
 
 var _coyote := 0.0
 var _jump_buffer := 0.0
@@ -69,6 +79,10 @@ var _grab_blocked := false
 var _passing_through := {}
 ## Катапульта взведена: следующий резкий наклон из нейтрали подбросит стоящих сверху.
 var _catapult_armed := true
+## Наклон замершего; поворот игрока = наклон + поворот механизма, на котором он замер.
+var _tilt := 0.0
+var _carrier_local := Vector2.ZERO
+var _carrier_rotation := 0.0
 var _style := StyleBoxFlat.new()
 var _frozen_style := StyleBoxFlat.new()
 
@@ -81,6 +95,7 @@ func setup(p_slot: int) -> void:
 
 func _ready() -> void:
 	add_to_group(GROUP)
+	add_to_group(Weight.GROUP)
 	var shape := RectangleShape2D.new()
 	shape.size = SIZE
 	$CollisionShape2D.shape = shape
@@ -113,7 +128,10 @@ func _physics_process(delta: float) -> void:
 	queue_redraw()
 	if frozen:
 		velocity = Vector2.ZERO
+		landing_speed = 0.0
+		pushing = null
 		_update_tilt(delta)
+		_apply_carrier_transform()
 		return
 
 	var on_floor := is_on_floor()
@@ -162,16 +180,92 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, input_x * run_speed, rate * delta)
 
 	# Стоящий на товарище едет вместе с ним: move_and_slide берёт скорость опоры сам.
+	var fall_speed := velocity.y
 	move_and_slide()
+	landing_speed = fall_speed if is_on_floor() and not on_floor else 0.0
+	_update_push(input_x)
 	_update_pass_through(delta)
+
+
+## Упёрся сбоку в ящик — толкает его. Упёрся в товарища, который толкает ящик, — толкает вместе
+## с ним (паровозик): так тяжёлый ящик сдвигают вдвоём. Толкающий идёт со скоростью ящика.
+func _update_push(input_x: float) -> void:
+	var direction := 0 if absf(input_x) < 0.01 else signi(roundi(signf(input_x)))
+	var target: Crate = null
+	if direction != 0 and is_on_floor():
+		for i in get_slide_collision_count():
+			var collision := get_slide_collision(i)
+			if collision.get_normal().x * direction > -0.7:
+				continue
+			var collider := collision.get_collider()
+			if collider is Crate:
+				target = collider
+			elif collider is Player and collider.pushing != null and collider.pushing_dir == direction:
+				target = collider.pushing
+			if target != null:
+				break
+	pushing = target
+	pushing_dir = direction if target != null else 0
+	if target != null:
+		target.add_push(direction, mass)
+		velocity.x = direction * minf(run_speed, target.push_speed)
 
 
 func set_frozen(value: bool) -> void:
 	frozen = value
 	velocity = Vector2.ZERO
 	_jump_rising = false
+	_tilt = 0.0
 	rotation = 0.0
 	_catapult_armed = true
+	carrier = null
+	if frozen:
+		var below := Weight.probe_below(self)
+		if below != null and below.is_in_group(Weight.CARRIERS):
+			carrier = below
+			_carrier_local = below.global_transform.affine_inverse() * global_position
+			_carrier_rotation = below.global_rotation
+
+
+## Замершие на механизме едут вместе с ним. Механизм вызывает это после своего движения.
+static func follow_carrier(moved: Node2D) -> void:
+	for player: Player in moved.get_tree().get_nodes_in_group(GROUP):
+		if player.carrier == moved and player.frozen:
+			player._apply_carrier_transform()
+
+
+func _apply_carrier_transform() -> void:
+	if carrier != null and not is_instance_valid(carrier):
+		carrier = null
+	if carrier == null:
+		rotation = _tilt
+		return
+	global_position = carrier.global_transform * _carrier_local
+	rotation = _tilt + carrier.global_rotation - _carrier_rotation
+
+
+## Прямая опора для расчёта веса: на чём стоит, на ком висит, на чём замер.
+## Замерший в воздухе опоры не имеет — он якорь.
+func get_support() -> Node:
+	if not alive:
+		return null
+	if frozen:
+		return carrier if carrier != null else Weight.probe_below(self)
+	var below := Weight.floor_below(self)
+	if below != null:
+		return below
+	# Висит на руке: вес уходит тому, кто выше по натянутой связи.
+	if grab_target != null and _hangs_from(grab_target, grab_length):
+		return grab_target
+	for holder in _holders():
+		if _hangs_from(holder, holder.grab_length):
+			return holder
+	return null
+
+
+func _hangs_from(other: Player, length: float) -> bool:
+	return other.alive and other.global_position.y < global_position.y - 8.0 \
+			and global_position.distance_to(other.global_position) >= length - 4.0
 
 
 ## Замерший наклоняется стиком. Резкий наклон из нейтрали — катапульта:
@@ -179,23 +273,24 @@ func set_frozen(value: bool) -> void:
 func _update_tilt(delta: float) -> void:
 	var input_x := InputRouter.get_move_x(slot)
 	var side := 0 if absf(input_x) < 0.5 else signi(roundi(signf(input_x)))
-	var neutral := absf(rotation) < deg_to_rad(5.0)
+	var neutral := absf(_tilt) < deg_to_rad(5.0)
 	if side == 0 and neutral:
 		_catapult_armed = true
-	elif side != 0 and not neutral and signf(rotation) == -side:
+	elif side != 0 and not neutral and signf(_tilt) == -side:
 		_catapult_armed = true  # перекладка с одного бока на другой — тоже бросок
 	if side != 0 and neutral and _catapult_armed:
 		_catapult_armed = false
 		_launch_riders(side)
-	rotation = move_toward(rotation, deg_to_rad(max_tilt_deg) * side, deg_to_rad(tilt_speed_deg) * delta)
+	_tilt = move_toward(_tilt, deg_to_rad(max_tilt_deg) * side, deg_to_rad(tilt_speed_deg) * delta)
 
 
 func _launch_riders(side: int) -> void:
 	var tilt := deg_to_rad(max_tilt_deg)
 	var direction := Vector2(side * sin(tilt), -cos(tilt))
-	for other: Player in get_tree().get_nodes_in_group(GROUP):
-		if other != self and other.alive and not other.frozen and other.standing_on() == self:
-			other.launch(direction * catapult_speed)
+	# Подбрасывает всех, кто стоит сверху: игроков и ящики (не висящих на руке).
+	for rider: Node2D in Weight.riders_of(self):
+		if rider.global_position.y < global_position.y:
+			rider.launch(direction * catapult_speed)
 
 
 ## На ком из игроков стоит этот игрок (null — ни на ком).
@@ -211,6 +306,8 @@ func standing_on() -> Player:
 
 ## Бросок катапультой: скорость задаётся целиком, отпускание прыжка его не гасит.
 func launch(launch_velocity: Vector2) -> void:
+	if frozen:
+		return  # замерший приклеен к месту
 	velocity = launch_velocity
 	_jump_rising = false
 	_coyote = 0.0
@@ -314,6 +411,8 @@ func die() -> void:
 	alive = false
 	visible = false
 	velocity = Vector2.ZERO
+	carrier = null
+	pushing = null
 	release_grab()
 	_end_pass_through()
 	_enable_collisions(false)
@@ -347,7 +446,7 @@ func respawn(at: Vector2) -> void:
 
 func _enable_collisions(enabled: bool) -> void:
 	collision_layer = LAYER_PLAYERS if enabled else 0
-	collision_mask = (LAYER_WORLD | LAYER_PLAYERS | LAYER_CAMERA_WALLS) if enabled else 0
+	collision_mask = (LAYER_WORLD | LAYER_PLAYERS | LAYER_CAMERA_WALLS | Crate.LAYER_OBJECTS) if enabled else 0
 
 
 func _draw() -> void:

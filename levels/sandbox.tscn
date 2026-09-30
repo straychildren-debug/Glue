@@ -1,0 +1,79 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://src/level/greybox_level.gd" id="1"]
+[ext_resource type="Script" path="res://src/mechanisms/crate.gd" id="2"]
+[ext_resource type="Script" path="res://src/mechanisms/pressure_plate.gd" id="3"]
+[ext_resource type="Script" path="res://src/mechanisms/door.gd" id="4"]
+[ext_resource type="Script" path="res://src/mechanisms/seesaw.gd" id="5"]
+
+[node name="Sandbox" type="Node2D"]
+script = ExtResource("1")
+blocks = Array[Rect2]([Rect2(0, -10, 1, 28), Rect2(0, 12, 30, 6), Rect2(20, -10, 1, 19), Rect2(30, 8, 5, 1), Rect2(30, 9, 4, 9), Rect2(34, 12, 1, 6), Rect2(35, 12, 12, 6), Rect2(37, 7, 2.5, 0.5), Rect2(47, 8.5, 4, 9.5), Rect2(56, 8.5, 18, 9.5), Rect2(68, -10, 1, 15.5), Rect2(74, -10, 1, 28)])
+checkpoints = Array[Vector2]([Vector2(2, 12), Vector2(23, 12), Vector2(36, 12), Vector2(57, 8.5)])
+bounds_tiles = Rect2(0, -10, 75, 29)
+kill_y_tiles = 19.0
+
+[node name="Crate" type="CharacterBody2D" parent="."]
+position = Vector2(480, 735)
+script = ExtResource("2")
+
+[node name="Plate1" type="AnimatableBody2D" parent="."]
+position = Vector2(832, 768)
+script = ExtResource("3")
+
+[node name="Door1" type="AnimatableBody2D" parent="."]
+position = Vector2(1280, 576)
+script = ExtResource("4")
+triggers = Array[NodePath]([NodePath("../Plate1")])
+
+[node name="HeavyCrate" type="CharacterBody2D" parent="."]
+position = Vector2(1632, 735)
+script = ExtResource("2")
+mass = 2.0
+
+[node name="LatchPlate2" type="AnimatableBody2D" parent="."]
+position = Vector2(2016, 512)
+script = ExtResource("3")
+latch = true
+
+[node name="Door2" type="AnimatableBody2D" parent="."]
+position = Vector2(2176, 576)
+script = ExtResource("4")
+triggers = Array[NodePath]([NodePath("../LatchPlate2")])
+open_offset_tiles = Vector2(0, 3)
+
+[node name="Seesaw" type="Node2D" parent="."]
+position = Vector2(2720, 704)
+script = ExtResource("5")
+start_side = 1
+
+[node name="LatchPlate6" type="AnimatableBody2D" parent="."]
+position = Vector2(3744, 544)
+script = ExtResource("3")
+latch = true
+
+[node name="Bridge" type="AnimatableBody2D" parent="."]
+position = Vector2(3584, 544)
+script = ExtResource("4")
+size_tiles = Vector2(5, 0.5)
+triggers = Array[NodePath]([NodePath("../LatchPlate6")])
+open_offset_tiles = Vector2(-5, 0)
+
+[node name="Crate3" type="CharacterBody2D" parent="."]
+position = Vector2(3936, 511)
+script = ExtResource("2")
+
+[node name="Plate4" type="AnimatableBody2D" parent="."]
+position = Vector2(4096, 544)
+script = ExtResource("3")
+threshold = 2.0
+
+[node name="Door3" type="AnimatableBody2D" parent="."]
+position = Vector2(4352, 352)
+script = ExtResource("4")
+triggers = Array[NodePath]([NodePath("../Plate4"), NodePath("../LatchPlate5")])
+
+[node name="LatchPlate5" type="AnimatableBody2D" parent="."]
+position = Vector2(4544, 544)
+script = ExtResource("3")
+latch = true

@@ -3,8 +3,14 @@ extends Node2D
 ## ведёт общий чекпоинт команды и респавн.
 
 const PLAYER_SCENE := preload("res://src/player/player.tscn")
+## Комнаты прототипа, F2 переключает по кругу.
+const LEVELS: Array[String] = ["res://levels/sandbox.tscn", "res://levels/test_room.tscn"]
 
-@export var level_scene: PackedScene = preload("res://levels/test_room.tscn")
+## Номер комнаты из LEVELS; переживает перезапуск сцены по F2/F5.
+static var level_index := 0
+
+## Если задано (автотесты), грузится эта сцена вместо комнаты из LEVELS.
+@export var level_scene: PackedScene
 
 var level: GreyboxLevel
 var players := {}  # slot -> Player
@@ -16,6 +22,8 @@ var _team_respawning := false
 
 
 func _ready() -> void:
+	if level_scene == null:
+		level_scene = load(LEVELS[level_index])
 	level = level_scene.instantiate()
 	add_child(level)
 	move_child(level, 0)
@@ -45,6 +53,7 @@ func _physics_process(_delta: float) -> void:
 		var reached := level.checkpoint_at_x(player.global_position.x)
 		if reached > level.active_checkpoint:
 			level.active_checkpoint = reached
+			level.save_checkpoint_state()
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -53,6 +62,9 @@ func _unhandled_input(event: InputEvent) -> void:
 			KEY_ESCAPE:
 				get_tree().quit()
 			KEY_F5:
+				get_tree().reload_current_scene()
+			KEY_F2:
+				level_index = (level_index + 1) % LEVELS.size()
 				get_tree().reload_current_scene()
 
 
@@ -94,9 +106,15 @@ func _on_player_died(player: Player) -> void:
 	for other: Player in players.values():
 		other.pause_for_respawn()
 	await get_tree().create_timer(player.respawn_delay).timeout
+	# Сначала камера: стены кадра переезжают к чекпоинту. Физика видит их новое место только
+	# со следующего кадра, иначе старая стена вытолкнет появившихся игроков.
+	_camera.snap_to(level.get_spawn_position(level.active_checkpoint, 0))
+	await get_tree().physics_frame
 	for other: Player in players.values():
 		other.respawn(level.get_spawn_position(level.active_checkpoint, other.slot))
 	_camera.snap_to(level.get_spawn_position(level.active_checkpoint, 0))
+	# Механизмы — после игроков: иначе стоявший на защёлке успел бы нажать её снова.
+	level.restore_checkpoint_state()
 	_team_respawning = false
 
 
@@ -107,5 +125,5 @@ func _update_hint() -> void:
 	if players.size() < InputRouter.MAX_PLAYERS:
 		lines.append("Подключиться: A на геймпаде · W/Пробел или ↑/Enter на клавиатуре")
 	lines.append("Геймпад: A — прыжок · X или LB — замри · RB или RT (держать) — хват · стик у замершего — наклон/катапульта")
-	lines.append("Back — выйти из игры игроку · F5 — перезапуск · Esc — выход")
+	lines.append("Back — выйти из игры игроку · F2 — другая комната · F5 — перезапуск · Esc — выход")
 	_hint.text = "\n".join(lines)

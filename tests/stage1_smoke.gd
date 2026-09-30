@@ -4,7 +4,7 @@ extends SmokeTest
 
 
 func _ready() -> void:
-	var game: Node = await start_game()
+	var game: Node = await start_game(preload("res://levels/test_room.tscn"))
 	var p1: Player = game.players.get(0)
 	var p2: Player = game.players.get(1)
 	check(p1 != null and p2 != null, "оба игрока подключились")

@@ -5,6 +5,9 @@ extends Node2D
 ## поэтому геометрию можно править прямо в инспекторе.
 
 const TILE := 64.0
+## Механизмы и предметы с save_state()/load_state(): при общем респавне
+## возвращаются в состояние, в котором были при взятии чекпоинта.
+const RESETTABLE := "resettable"
 
 ## Твёрдые блоки: Rect2 в тайлах (x, y, ширина, высота); y растёт вниз.
 @export var blocks: Array[Rect2] = []:
@@ -28,6 +31,8 @@ var active_checkpoint := 0:
 	set(value):
 		active_checkpoint = value
 		queue_redraw()
+## Состояние механизмов на момент взятия активного чекпоинта: узел -> состояние.
+var _snapshot := {}
 
 
 func _ready() -> void:
@@ -44,6 +49,23 @@ func _ready() -> void:
 		collision.position = (rect.position + rect.size / 2.0) * TILE
 		body.add_child(collision)
 		add_child(body)
+	# Механизмы готовы раньше уровня (дочерние _ready идут первыми) — снимок старта.
+	save_checkpoint_state.call_deferred()
+
+
+## Запоминает состояние механизмов уровня (вызывается при взятии чекпоинта).
+func save_checkpoint_state() -> void:
+	_snapshot.clear()
+	for node in get_tree().get_nodes_in_group(RESETTABLE):
+		if is_ancestor_of(node):
+			_snapshot[node] = node.save_state()
+
+
+## Возвращает механизмы к состоянию активного чекпоинта (при общем респавне команды).
+func restore_checkpoint_state() -> void:
+	for node: Node in _snapshot:
+		if is_instance_valid(node):
+			node.load_state(_snapshot[node])
 
 
 func get_bounds_px() -> Rect2:
@@ -58,6 +80,15 @@ func get_kill_y() -> float:
 func get_spawn_position(checkpoint: int, slot: int) -> Vector2:
 	var base := checkpoints[checkpoint] * TILE
 	return base + Vector2(slot * (Player.SIZE.x + 8.0), -Player.SIZE.y / 2.0 - 1.0)
+
+
+## Предметы, упавшие за линию смерти, возвращаются (игроков обрабатывает игра).
+func _physics_process(_delta: float) -> void:
+	if Engine.is_editor_hint():
+		return
+	for crate: Crate in get_tree().get_nodes_in_group(Crate.GROUP):
+		if crate.visible and crate.global_position.y > get_kill_y() and is_ancestor_of(crate):
+			crate.fall_out()
 
 
 ## Индекс последнего чекпоинта, который лежит левее x (в пикселях).
