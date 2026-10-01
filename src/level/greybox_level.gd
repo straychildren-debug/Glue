@@ -37,9 +37,15 @@ var active_checkpoint := 0:
 		queue_redraw()
 ## Состояние механизмов на момент взятия активного чекпоинта: узел -> состояние.
 var _snapshot := {}
+var _sky: Node2D
 
 
 func _ready() -> void:
+	_sky = Node2D.new()
+	_sky.name = "Sky"
+	_sky.z_index = -2
+	_sky.draw.connect(_draw_sky)
+	add_child(_sky, false, Node.INTERNAL_MODE_FRONT)
 	if Engine.is_editor_hint():
 		return
 	for rect in blocks:
@@ -112,14 +118,25 @@ func checkpoint_at_x(x: float) -> int:
 	return result
 
 
-func _draw() -> void:
-	draw_rect(get_bounds_px(), sky_color)
-	draw_line(Vector2(bounds_tiles.position.x * TILE, get_kill_y()),
+## Серое небо и линия смерти — на своём слое позади всего уровня: двери и мосты (z = -1)
+## рисуются позади блоков, чтобы закрытая заслонка пряталась в скале, но перед небом.
+func _draw_sky() -> void:
+	# С задником (Backdrop) небо и отладочная линия смерти не рисуются — их место занимает фон.
+	if get_children().any(func(child: Node) -> bool: return child is Backdrop):
+		return
+	_sky.draw_rect(get_bounds_px(), sky_color)
+	_sky.draw_line(Vector2(bounds_tiles.position.x * TILE, get_kill_y()),
 			Vector2(bounds_tiles.end.x * TILE, get_kill_y()), Color(0.8, 0.2, 0.2, 0.5), 4.0)
+
+
+func _draw() -> void:
 	for rect in blocks:
 		var px := Rect2(rect.position * TILE, rect.size * TILE)
 		if rect.size.y <= 0.5:
 			# Тонкие блоки — деревянные балки и насесты: за них цепляется взгляд.
+			if Art.enabled:
+				Art.draw_wood(self, px)
+				continue
 			draw_rect(px, beam_color)
 			draw_rect(px, beam_color.darkened(0.4), false, 2.0)
 			continue
@@ -128,6 +145,11 @@ func _draw() -> void:
 		draw_rect(px, block_color.darkened(0.3), false, 2.0)
 	for i in checkpoints.size():
 		var base := checkpoints[i] * TILE
+		if Art.enabled:
+			# Спрайт флажка 48×104: основание древка — точка (8, 104).
+			draw_texture_rect(Art.tex("flag_on" if i == active_checkpoint else "flag_off"),
+					Rect2(base - Vector2(8, 104), Vector2(48, 104)), false)
+			continue
 		var flag := Color("f2c230") if i == active_checkpoint else Color("9aa3ad")
 		draw_line(base, base + Vector2(0, -96), Color("3a3f47"), 4.0)
 		draw_colored_polygon(PackedVector2Array([

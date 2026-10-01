@@ -87,6 +87,12 @@ var _carrier_local := Vector2.ZERO
 var _carrier_rotation := 0.0
 var _style := StyleBoxFlat.new()
 var _frozen_style := StyleBoxFlat.new()
+var _sprite: PlayerSprite
+
+## Куда смотрит игрок: 1 — вправо, -1 — влево.
+var facing: int:
+	get:
+		return _facing
 
 
 func setup(p_slot: int) -> void:
@@ -117,6 +123,10 @@ func _ready() -> void:
 	_frozen_style.bg_color = color.darkened(0.25)
 	_frozen_style.border_color = Color(1, 1, 1, 0.85)
 	_frozen_style.set_border_width_all(5)
+
+	_sprite = PlayerSprite.new()
+	add_child(_sprite)
+	_sprite.setup(self)
 
 
 func _physics_process(delta: float) -> void:
@@ -165,6 +175,9 @@ func _physics_process(delta: float) -> void:
 	var input_x := InputRouter.get_move_x(slot)
 	if absf(input_x) > 0.01:
 		_facing = signi(roundi(signf(input_x)))
+	# Держащий смотрит на того, кого держит: рука тянется вперёд, а не из-за спины.
+	if grab_target != null and absf(grab_target.global_position.x - global_position.x) > 6.0:
+		_facing = signi(roundi(signf(grab_target.global_position.x - global_position.x)))
 	if hanging and grab_target == null and holders.is_empty():
 		hanging = false  # только что вырвался прыжком
 	if hanging:
@@ -342,6 +355,16 @@ func release_grab() -> void:
 	grab_target = null
 
 
+## Висит на руке: в воздухе и держит товарища или держат его.
+func is_hanging() -> bool:
+	return alive and not is_on_floor() and (grab_target != null or not _holders().is_empty())
+
+
+## Кнопка хвата зажата, но хватать некого — руки вытянуты вперёд.
+func is_reaching() -> bool:
+	return alive and grab_target == null and not _grab_blocked and InputRouter.is_grab_held(slot)
+
+
 ## Товарищи, которые держатся за этого игрока.
 func _holders() -> Array[Player]:
 	var result: Array[Player] = []
@@ -450,6 +473,9 @@ func _enable_collisions(enabled: bool) -> void:
 
 
 func _draw() -> void:
+	if Art.enabled:
+		_draw_sprite_arm()
+		return
 	# Рука тянется к товарищу, за которого держится игрок.
 	if grab_target != null:
 		var to_target := to_local(grab_target.global_position)
@@ -478,3 +504,25 @@ func _draw() -> void:
 			draw_set_transform(eye_center + Vector2(eye_x, 0.0), 0.0, Vector2(1.0, 1.6))
 			draw_circle(Vector2.ZERO, 3.6, Color.BLACK)
 			draw_set_transform(Vector2.ZERO)
+
+
+## Рука хвата поверх спрайтов: из плеча дальней руки к товарищу (или вперёд, если хватать
+## некого). Рисуется до спрайта-ребёнка, поэтому уходит за тело — как рука из-за плеча.
+## Стиль модели: цвет тела с тёмным контуром и округлая кисть.
+func _draw_sprite_arm() -> void:
+	if not alive or not (grab_target != null or is_reaching()):
+		return
+	var start := _sprite.shoulder_local()
+	var end: Vector2
+	if grab_target != null:
+		var to_target := to_local(grab_target.global_position)
+		end = to_target - (to_target - start).normalized() * SIZE.x * 0.3
+	else:
+		end = start + Vector2(_facing * 20.0, 2.0).rotated(-rotation)
+	var outline := PlayerSprite.OUTLINE_COLOR
+	for pass_index in 2:
+		var width := 12.0 if pass_index == 0 else 7.0
+		var fill := outline if pass_index == 0 else color
+		draw_line(start, end, fill, width)
+		draw_circle(start, width / 2.0, fill)
+		draw_circle(end, width / 2.0 + 2.5, fill)

@@ -16,7 +16,9 @@
 
 Автономный exe: `build_exe.bat` собирает `build/windows/Glue.exe` — один файл, запускается на любом Windows x64 без Godot. Нужны шаблоны экспорта Godot 4.7 в `%APPDATA%\Godot\export_templates\4.7.stable\`. Папка `build/` не хранится в git.
 
-Автотесты: `tools\godot\Godot_v4.7-stable_win64_console.exe --headless --path . res://tests/stage1_smoke.tscn` (и `stage2_smoke.tscn` … `stage5_smoke.tscn`, `menu_smoke.tscn`). Превью уровней в PNG: `tests/preview.tscn` (как запускать — в шапке `tests/preview.gd`). В игре: Start или Esc — пауза (рестарт с чекпоинта, выбор уровня); F2 — следующий уровень, F5 — заново; в меню F9 открывает все уровни для отладки.
+Автотесты: `tools\godot\Godot_v4.7-stable_win64_console.exe --headless --path . res://tests/stage1_smoke.tscn` (и `stage2_smoke.tscn` … `stage5_smoke.tscn`, `menu_smoke.tscn`). Превью уровней в PNG: `tests/preview.tscn` (как запускать — в шапке `tests/preview.gd`). В игре: Start или Esc — пауза (рестарт с чекпоинта, выбор уровня); F2 — следующий уровень, F3 — персонажи или серые прямоугольники с хитбоксом, F5 — заново; в меню F9 открывает все уровни для отладки.
+
+Персонажи (этап 6): модель и анимации из Blender, `tools/blender/character.py` → `assets/characters/v1/` ([как устроено](docs/03_визуал_и_производство.md#персонаж-v1-02102026)).
 
 ## Материалы
 

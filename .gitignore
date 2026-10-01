@@ -17,3 +17,12 @@ tools/godot/
 
 # Local builds
 build/
+
+# Blender backup copies
+*.blend1
+
+# Python cache (Blender scripts)
+__pycache__/
+
+# Local preview server for index.html (machine-specific paths)
+.claude/launch.json

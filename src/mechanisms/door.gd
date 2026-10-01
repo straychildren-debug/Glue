@@ -32,6 +32,8 @@ func _ready() -> void:
 	if Engine.is_editor_hint():
 		return
 	add_to_group(GreyboxLevel.RESETTABLE)
+	# Позади блоков уровня: закрытая заслонка прячется в скале, а не торчит поверх неё.
+	z_index = -1
 	collision_layer = Player.LAYER_WORLD
 	# Маска нужна только для проверки «не раздавить» при закрытии.
 	collision_mask = Player.LAYER_PLAYERS | Crate.LAYER_OBJECTS
@@ -76,6 +78,12 @@ func load_state(state: Variant) -> void:
 
 func _draw() -> void:
 	var rect := Rect2(Vector2.ZERO, size_tiles * GreyboxLevel.TILE)
+	if Art.enabled:
+		if size_tiles.x > size_tiles.y:
+			Art.draw_wood(self, rect)  # мост, ступенька, опускаемая площадка
+		else:
+			Art.draw_strip_v(self, rect, "door_mid", "door_end")
+		return
 	draw_rect(rect, Color("8b5e34"))
 	# Доски: поперёк длинной стороны.
 	var along_x := size_tiles.x > size_tiles.y

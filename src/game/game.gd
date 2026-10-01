@@ -137,6 +137,10 @@ func _unhandled_input(event: InputEvent) -> void:
 			KEY_F2:
 				var next := Levels.debug_next(world, level_index)
 				play(get_tree(), next.x, next.y)
+			KEY_F3:
+				# Отладка: графика из Blender ↔ серые прямоугольники с хитбоксами.
+				Art.enabled = not Art.enabled
+				Art.redraw_all(self)
 
 
 func _open_pause() -> void:
@@ -226,5 +230,5 @@ func _update_hint() -> void:
 	if players.size() < InputRouter.MAX_PLAYERS:
 		lines.append("Подключиться: A на геймпаде · W/Пробел или ↑/Enter на клавиатуре")
 	lines.append("Геймпад: A — прыжок · X или LB — замри · RB или RT (держать) — хват · стик у замершего — наклон/катапульта")
-	lines.append("Start или Esc — пауза: рестарт с чекпоинта, выбор уровня · Back — выйти игроку · F2 — следующий уровень · F5 — заново")
+	lines.append("Start или Esc — пауза: рестарт с чекпоинта, выбор уровня · Back — выйти игроку · F2 — следующий уровень · F3 — серые прямоугольники · F5 — заново")
 	_hint.text = "\n".join(lines)

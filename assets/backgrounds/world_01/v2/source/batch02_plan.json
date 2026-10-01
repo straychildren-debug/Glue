@@ -1,0 +1,178 @@
+[
+  {
+    "name": "w01_v2_lm02_arcade",
+    "prompt": "Attached image 1: concept sheet for my game \"Hold On!\" / \"Forgotten Bridges\", STYLE REFERENCE ONLY: bright hand-painted cartoon game art, chunky ancient grey-brown stone ruins, thick green moss, rounded trees, thin waterfalls, turquoise water, soft shading, daylight from upper left. Attached image 2: the approved far valley background. Same world as image 2, match palette and lighting. Do NOT copy sheet layouts, text, logos, interface, characters or frames. Neutral white balance, no yellow/sepia tint.\nCreate ONE isolated background landmark for a 2D side-scrolling platformer. Genuine TRANSPARENT BACKGROUND PNG with alpha, nothing else. Strict side view, centered with transparent padding. Medium detail, clean readable chunky forms, no hard black outlines; base fades into soft white mist fading to alpha zero. No sky backdrop, no solid background, no checkerboard. Open arch holes are transparent so the background can show through. No people, animals, characters, text, logos, interface, crates, flags, dark doorways or ropes in the foreground. This is scenery, not a playable platform. The game adds atmospheric haze, so retain the reference's clear cartoon forms without over-washing them out.\nObject: a long ruined stone arcade climbing up a slope like a staircase of arches, each arch higher than the previous one, moss and hanging ivy, sky can show through fully transparent arch openings. Landscape 3:2. Make the stepwise ascent unmistakable; one coherent ruin.",
+    "kind": "background",
+    "status": "generated",
+    "refs": [
+      "D:\\AI_projects\\Games\\Glue\\docs\\референсы\\reference.png",
+      "D:\\AI_projects\\Games\\Glue\\assets\\backgrounds\\world_01\\v2\\source\\w01_v2_far_valley.png"
+    ],
+    "final_prompt_location": "prompts.txt"
+  },
+  {
+    "name": "w01_v2_lm03_cascade",
+    "prompt": "Attached image 1: concept sheet for my game \"Hold On!\" / \"Forgotten Bridges\", STYLE REFERENCE ONLY: bright hand-painted cartoon game art, chunky ancient grey-brown stone ruins, thick green moss, rounded trees, thin waterfalls, turquoise water, soft shading, daylight from upper left. Attached image 2: the approved far valley background. Same world as image 2, match palette and lighting. Do NOT copy sheet layouts, text, logos, interface, characters or frames. Neutral white balance, no yellow/sepia tint.\nCreate ONE isolated background landmark for a 2D side-scrolling platformer. Genuine TRANSPARENT BACKGROUND PNG with alpha, nothing else. Strict side view, centered with transparent padding. Medium detail, clean readable chunky forms, no hard black outlines; base fades into soft white mist fading to alpha zero. No sky backdrop, no solid background, no checkerboard. Open arch holes are transparent so the background can show through. No people, animals, characters, text, logos, interface, crates, flags, dark doorways or ropes in the foreground. This is scenery, not a playable platform. The game adds atmospheric haze, so retain the reference's clear cartoon forms without over-washing them out.\nObject: a tall cliff with a cascade of THREE waterfalls falling into mist, and far above, a SMALL sagging old rope-and-plank bridge between two rock spires (small, clearly far away). This one tiny bridge is the only exception to the no-rope rule; no foreground ropes. Portrait 2:3.",
+    "kind": "background",
+    "status": "generated",
+    "refs": [
+      "D:\\AI_projects\\Games\\Glue\\docs\\референсы\\reference.png",
+      "D:\\AI_projects\\Games\\Glue\\assets\\backgrounds\\world_01\\v2\\source\\w01_v2_far_valley.png"
+    ],
+    "final_prompt_location": "prompts.txt"
+  },
+  {
+    "name": "w01_v2_lm04_pillars",
+    "prompt": "Attached image 1: concept sheet for my game \"Hold On!\" / \"Forgotten Bridges\", STYLE REFERENCE ONLY: bright hand-painted cartoon game art, chunky ancient grey-brown stone ruins, thick green moss, rounded trees, thin waterfalls, turquoise water, soft shading, daylight from upper left. Attached image 2: the approved far valley background. Same world as image 2, match palette and lighting. Do NOT copy sheet layouts, text, logos, interface, characters or frames. Neutral white balance, no yellow/sepia tint.\nCreate ONE isolated background landmark for a 2D side-scrolling platformer. Genuine TRANSPARENT BACKGROUND PNG with alpha, nothing else. Strict side view, centered with transparent padding. Medium detail, clean readable chunky forms, no hard black outlines; base fades into soft white mist fading to alpha zero. No sky backdrop, no solid background, no checkerboard. Open arch holes are transparent so the background can show through. No people, animals, characters, text, logos, interface, crates, flags, dark doorways or ropes in the foreground. This is scenery, not a playable platform. The game adds atmospheric haze, so retain the reference's clear cartoon forms without over-washing them out.\nObject: THREE tall thin stone pillars of a collapsed ancient bridge standing alone in a misty gorge at different heights, fragments of arch stones on top, moss and small trees on their tops. Separated by transparent air, no continuous bridge deck. Portrait 2:3.",
+    "kind": "background",
+    "status": "generated",
+    "refs": [
+      "D:\\AI_projects\\Games\\Glue\\docs\\референсы\\reference.png",
+      "D:\\AI_projects\\Games\\Glue\\assets\\backgrounds\\world_01\\v2\\source\\w01_v2_far_valley.png"
+    ],
+    "final_prompt_location": "prompts.txt"
+  },
+  {
+    "name": "w01_v2_lm05_aqueduct_end",
+    "prompt": "Attached image 1: concept sheet for my game \"Hold On!\" / \"Forgotten Bridges\", STYLE REFERENCE ONLY: bright hand-painted cartoon game art, chunky ancient grey-brown stone ruins, thick green moss, rounded trees, thin waterfalls, turquoise water, soft shading, daylight from upper left. Attached image 2: the approved far valley background. Same world as image 2, match palette and lighting. Do NOT copy sheet layouts, text, logos, interface, characters or frames. Neutral white balance, no yellow/sepia tint.\nCreate ONE isolated background landmark for a 2D side-scrolling platformer. Genuine TRANSPARENT BACKGROUND PNG with alpha, nothing else. Strict side view, centered with transparent padding. Medium detail, clean readable chunky forms, no hard black outlines; base fades into soft white mist fading to alpha zero. No sky backdrop, no solid background, no checkerboard. Open arch holes are transparent so the background can show through. No people, animals, characters, text, logos, interface, crates, flags, dark doorways or ropes in the foreground. This is scenery, not a playable platform. The game adds atmospheric haze, so retain the reference's clear cartoon forms without over-washing them out.\nObject: a high cliff with an ancient aqueduct on top that ends abruptly in the air, its last broken arch hanging over the void, water spilling from the broken end as a thin waterfall falling into base mist. Landscape 3:2. Clearly show the broken projecting end and empty transparent void.",
+    "kind": "background",
+    "status": "generated",
+    "refs": [
+      "D:\\AI_projects\\Games\\Glue\\docs\\референсы\\reference.png",
+      "D:\\AI_projects\\Games\\Glue\\assets\\backgrounds\\world_01\\v2\\source\\w01_v2_far_valley.png"
+    ],
+    "final_prompt_location": "prompts.txt"
+  },
+  {
+    "name": "w01_v2_far_town",
+    "prompt": "Attached image 1: concept sheet for my game \"Hold On!\" / \"Forgotten Bridges\", STYLE REFERENCE ONLY: bright hand-painted cartoon game art, chunky ancient grey-brown stone ruins, thick green moss, rounded trees, thin waterfalls, turquoise water, soft shading, daylight from upper left. Attached image 2: the approved far valley background. Same world as image 2, match palette and lighting. Do NOT copy sheet layouts, text, logos, interface, characters or frames. Neutral white balance, no yellow/sepia tint.\nCreate an opaque FAR BACKGROUND parallax layer. Landscape 3:2. Strict side view, level horizon, no perspective floor or isometric view. Everything distant and small. No characters, animals, text, logo, UI, frame, watermark, crates, doors, levers, buttons, flags, foreground ropes/chains or playable flat platforms. Neutral white balance. Gentle atmospheric haze and lower contrast than foreground. Horizontal repeat intended: low unobtrusive matching edge colors and silhouettes, no major object clipped at either lateral edge.\nCRITICAL GAMEPLAY COMPOSITION: The band between 40% and 80% of the height is ONLY soft haze and faint distant silhouettes — NO waterfalls, islands or bright details there. Put recognizable details near the horizon line above 40% and in bottom mist below 80%. Preserve bright blue upper sky but keep the gameplay band exceptionally calm. Bottom edge is bright mist and depth, never solid ground.\nScene: BRIGHT MIDDAY. Far away on a hillside, overgrown ruins of a town of bridge builders: terraces of roofless mossy stone houses, wide storage arches, round towers, long town wall, tiny old wooden crane and scaffolding. The town forms a SMALL hazy skyline close to the horizon around 30–40% height. Deep blue sky with big white clouds, distant blue mountains behind. Waterfalls between distant terraces may only be hinted at ABOVE 40% and reappear BELOW 80% into misty pools; the middle 40–80% is an uninterrupted quiet pale blue atmospheric depth. Top 35–40% sky, lower part soft mist. Do not fill the middle with large town architecture.",
+    "kind": "background",
+    "status": "generated",
+    "refs": [
+      "D:\\AI_projects\\Games\\Glue\\docs\\референсы\\reference.png",
+      "D:\\AI_projects\\Games\\Glue\\assets\\backgrounds\\world_01\\v2\\source\\w01_v2_far_valley.png"
+    ],
+    "final_prompt_location": "prompts.txt"
+  },
+  {
+    "name": "w01_v2_mid_town",
+    "prompt": "Attached image 1: concept sheet for my game \"Hold On!\" / \"Forgotten Bridges\", STYLE REFERENCE ONLY: bright hand-painted cartoon game art, chunky ancient grey-brown stone ruins, thick green moss, rounded trees, thin waterfalls, turquoise water, soft shading, daylight from upper left. Attached image 2: the approved far valley background. Same world as image 2, match palette and lighting. Do NOT copy sheet layouts, text, logos, interface, characters or frames. Neutral white balance, no yellow/sepia tint.\nCreate a MIDDLE-DISTANCE parallax layer. Genuine transparent PNG, landscape 3:2, strict side view. One horizontal band only in the LOWER HALF: broken stone house walls with arched windows, short terraces, old wooden beams protruding, hanging ivy, a few rounded trees, one or two small waterfalls. The highest point of ALL scenery, including trees and beams, must be BELOW the middle of the image; upper 50% COMPLETELY EMPTY alpha zero. Ruins medium detail, chunky readable forms, tops irregular and broken, never long flat walkable ledges. All openings transparent; no sky or clouds. Bottom fades into soft white base mist and then alpha zero. Left/right edges continue for horizontal repetition with small subdued matching fragments, no large edge objects. No characters, animals, text, logo, interface, crates, doors, levers, buttons, flags, ropes or chains across the image. No checkerboard or solid background. Neutral white balance; game handles haze.",
+    "kind": "background",
+    "status": "generated",
+    "refs": [
+      "D:\\AI_projects\\Games\\Glue\\docs\\референсы\\reference.png",
+      "D:\\AI_projects\\Games\\Glue\\assets\\backgrounds\\world_01\\v2\\source\\w01_v2_far_valley.png"
+    ],
+    "final_prompt_location": "prompts.txt"
+  },
+  {
+    "name": "w01_v2_lm06_storehouse",
+    "prompt": "Attached image 1: concept sheet for my game \"Hold On!\" / \"Forgotten Bridges\", STYLE REFERENCE ONLY: bright hand-painted cartoon game art, chunky ancient grey-brown stone ruins, thick green moss, rounded trees, thin waterfalls, turquoise water, soft shading, daylight from upper left. Attached image 2: the approved far valley background. Same world as image 2, match palette and lighting. Do NOT copy sheet layouts, text, logos, interface, characters or frames. Neutral white balance, no yellow/sepia tint.\nCreate ONE isolated background landmark for a 2D side-scrolling platformer. Genuine TRANSPARENT BACKGROUND PNG with alpha, nothing else. Strict side view, centered with transparent padding. Medium detail, clean readable chunky forms, no hard black outlines; base fades into soft white mist fading to alpha zero. No sky backdrop, no solid background, no checkerboard. Open arch holes are transparent so the background can show through. No people, animals, characters, text, logos, interface, crates, flags, dark doorways or ropes in the foreground. This is scenery, not a playable platform. The game adds atmospheric haze, so retain the reference's clear cartoon forms without over-washing them out.\nObject: the ruins of a big stone storehouse of bridge builders: a row of low wide arches, half-collapsed roof beams, old wooden scaffolding along one wall, moss and grass on top. Open arches not dark doorways. Landscape 3:2.",
+    "kind": "background",
+    "status": "generated",
+    "refs": [
+      "D:\\AI_projects\\Games\\Glue\\docs\\референсы\\reference.png",
+      "D:\\AI_projects\\Games\\Glue\\assets\\backgrounds\\world_01\\v2\\source\\w01_v2_far_valley.png"
+    ],
+    "final_prompt_location": "prompts.txt"
+  },
+  {
+    "name": "w01_v2_lm07_gate_wall",
+    "prompt": "Attached image 1: concept sheet for my game \"Hold On!\" / \"Forgotten Bridges\", STYLE REFERENCE ONLY: bright hand-painted cartoon game art, chunky ancient grey-brown stone ruins, thick green moss, rounded trees, thin waterfalls, turquoise water, soft shading, daylight from upper left. Attached image 2: the approved far valley background. Same world as image 2, match palette and lighting. Do NOT copy sheet layouts, text, logos, interface, characters or frames. Neutral white balance, no yellow/sepia tint.\nCreate ONE isolated background landmark for a 2D side-scrolling platformer. Genuine TRANSPARENT BACKGROUND PNG with alpha, nothing else. Strict side view, centered with transparent padding. Medium detail, clean readable chunky forms, no hard black outlines; base fades into soft white mist fading to alpha zero. No sky backdrop, no solid background, no checkerboard. Open arch holes are transparent so the background can show through. No people, animals, characters, text, logos, interface, crates, flags, dark doorways or ropes in the foreground. This is scenery, not a playable platform. The game adds atmospheric haze, so retain the reference's clear cartoon forms without over-washing them out.\nObject: a long ancient town gate wall with exactly THREE tall round open arches; bright sky and distant hills from the game must be visible THROUGH the arches, so make their openings completely TRANSPARENT, not dark doorways and not painted scenery; two massive round towers at the ends, ivy cascading down. Landscape 3:2.",
+    "kind": "background",
+    "status": "generated",
+    "refs": [
+      "D:\\AI_projects\\Games\\Glue\\docs\\референсы\\reference.png",
+      "D:\\AI_projects\\Games\\Glue\\assets\\backgrounds\\world_01\\v2\\source\\w01_v2_far_valley.png"
+    ],
+    "final_prompt_location": "prompts.txt"
+  },
+  {
+    "name": "w01_v2_lm08_stone_yard",
+    "prompt": "Attached image 1: concept sheet for my game \"Hold On!\" / \"Forgotten Bridges\", STYLE REFERENCE ONLY: bright hand-painted cartoon game art, chunky ancient grey-brown stone ruins, thick green moss, rounded trees, thin waterfalls, turquoise water, soft shading, daylight from upper left. Attached image 2: the approved far valley background. Same world as image 2, match palette and lighting. Do NOT copy sheet layouts, text, logos, interface, characters or frames. Neutral white balance, no yellow/sepia tint.\nCreate ONE isolated background landmark for a 2D side-scrolling platformer. Genuine TRANSPARENT BACKGROUND PNG with alpha, nothing else. Strict side view, centered with transparent padding. Medium detail, clean readable chunky forms, no hard black outlines; base fades into soft white mist fading to alpha zero. No sky backdrop, no solid background, no checkerboard. Open arch holes are transparent so the background can show through. No people, animals, characters, text, logos, interface, crates, flags, dark doorways or ropes in the foreground. This is scenery, not a playable platform. The game adds atmospheric haze, so retain the reference's clear cartoon forms without over-washing them out.\nObject: an old stonemasons' yard: huge carved stone blocks stacked unevenly, a tall old wooden crane with a wheel standing beside them, small trees growing between the blocks. One coherent ruin group with the distinctive old crane, not movable game crates. Landscape 3:2.",
+    "kind": "background",
+    "status": "generated",
+    "refs": [
+      "D:\\AI_projects\\Games\\Glue\\docs\\референсы\\reference.png",
+      "D:\\AI_projects\\Games\\Glue\\assets\\backgrounds\\world_01\\v2\\source\\w01_v2_far_valley.png"
+    ],
+    "final_prompt_location": "prompts.txt"
+  },
+  {
+    "name": "w01_v2_lm09_watchtower",
+    "prompt": "Attached image 1: concept sheet for my game \"Hold On!\" / \"Forgotten Bridges\", STYLE REFERENCE ONLY: bright hand-painted cartoon game art, chunky ancient grey-brown stone ruins, thick green moss, rounded trees, thin waterfalls, turquoise water, soft shading, daylight from upper left. Attached image 2: the approved far valley background. Same world as image 2, match palette and lighting. Do NOT copy sheet layouts, text, logos, interface, characters or frames. Neutral white balance, no yellow/sepia tint.\nCreate ONE isolated background landmark for a 2D side-scrolling platformer. Genuine TRANSPARENT BACKGROUND PNG with alpha, nothing else. Strict side view, centered with transparent padding. Medium detail, clean readable chunky forms, no hard black outlines; base fades into soft white mist fading to alpha zero. No sky backdrop, no solid background, no checkerboard. Open arch holes are transparent so the background can show through. No people, animals, characters, text, logos, interface, crates, flags, dark doorways or ropes in the foreground. This is scenery, not a playable platform. The game adds atmospheric haze, so retain the reference's clear cartoon forms without over-washing them out.\nObject: a VERY TALL slender stone watchtower with an OUTER STAIRCASE spiraling around it, a broken top with a small tree growing on it, moss and ivy. External stairs unmistakable and attached to the tower. Portrait 2:3.",
+    "kind": "background",
+    "status": "generated",
+    "refs": [
+      "D:\\AI_projects\\Games\\Glue\\docs\\референсы\\reference.png",
+      "D:\\AI_projects\\Games\\Glue\\assets\\backgrounds\\world_01\\v2\\source\\w01_v2_far_valley.png"
+    ],
+    "final_prompt_location": "prompts.txt"
+  },
+  {
+    "name": "w01_v2_far_pass",
+    "prompt": "Attached image 1: concept sheet for my game \"Hold On!\" / \"Forgotten Bridges\", STYLE REFERENCE ONLY: bright hand-painted cartoon game art, chunky ancient grey-brown stone ruins, thick green moss, rounded trees, thin waterfalls, turquoise water, soft shading, daylight from upper left. Attached image 2: the approved far valley background. Same world as image 2, match palette and lighting. Do NOT copy sheet layouts, text, logos, interface, characters or frames. Neutral white balance, no yellow/sepia tint.\nCreate an opaque FAR BACKGROUND parallax layer. Landscape 3:2. Strict side view, level horizon, no perspective floor or isometric view. Everything distant and small. No characters, animals, text, logo, UI, frame, watermark, crates, doors, levers, buttons, flags, foreground ropes/chains or playable flat platforms. Neutral white balance. Gentle atmospheric haze and lower contrast than foreground. Horizontal repeat intended: low unobtrusive matching edge colors and silhouettes, no major object clipped at either lateral edge.\nCRITICAL GAMEPLAY COMPOSITION: The band between 40% and 80% of the height is ONLY soft haze and faint distant silhouettes — NO waterfalls, islands or bright details there. Put recognizable details near the horizon line above 40% and in bottom mist below 80%. Preserve bright blue upper sky but keep the gameplay band exceptionally calm. Bottom edge is bright mist and depth, never solid ground.\nScene: EARLY AFTERNOON high mountain pass above a sea of clouds. Snowless rocky peaks rise from clouds NEAR THE HORIZON around 30–40% height. Far below, through small cloud gaps in the bottom 15%, subtle hints of green valley and ruined town. Far ahead at the horizon a wide river with tiny watermills and the long faint silhouette of a huge broken stone viaduct. Streaky high clouds and mist streamers suggest wind. Clear fresh slightly cooler light. Top 40–45% sky; center 40–80% ONLY soft cloud haze and barely visible distant silhouettes, no bright peaks or objects there. Lower part bright cloud mist, so pits show clouds below. No major object touching lateral edges.",
+    "kind": "background",
+    "status": "generated",
+    "refs": [
+      "D:\\AI_projects\\Games\\Glue\\docs\\референсы\\reference.png",
+      "D:\\AI_projects\\Games\\Glue\\assets\\backgrounds\\world_01\\v2\\source\\w01_v2_far_valley.png"
+    ],
+    "final_prompt_location": "prompts.txt"
+  },
+  {
+    "name": "w01_v2_lm10_ridge_gate",
+    "prompt": "Attached image 1: concept sheet for my game \"Hold On!\" / \"Forgotten Bridges\", STYLE REFERENCE ONLY: bright hand-painted cartoon game art, chunky ancient grey-brown stone ruins, thick green moss, rounded trees, thin waterfalls, turquoise water, soft shading, daylight from upper left. Attached image 2: the approved far valley background. Same world as image 2, match palette and lighting. Do NOT copy sheet layouts, text, logos, interface, characters or frames. Neutral white balance, no yellow/sepia tint.\nCreate ONE isolated background landmark for a 2D side-scrolling platformer. Genuine TRANSPARENT BACKGROUND PNG with alpha, nothing else. Strict side view, centered with transparent padding. Medium detail, clean readable chunky forms, no hard black outlines; base fades into soft white mist fading to alpha zero. No sky backdrop, no solid background, no checkerboard. Open arch holes are transparent so the background can show through. No people, animals, characters, text, logos, interface, crates, flags, dark doorways or ropes in the foreground. This is scenery, not a playable platform. The game adds atmospheric haze, so retain the reference's clear cartoon forms without over-washing them out.\nObject: a ruined stone gatehouse tower standing on a sharp mountain ridge, a broken wall following the crest down to BOTH sides, thin streamers of mist blowing past. Clearly one gatehouse and angular ridge silhouette. Open arch through tower transparent, no dark doorway. Landscape 3:2.",
+    "kind": "background",
+    "status": "generated",
+    "refs": [
+      "D:\\AI_projects\\Games\\Glue\\docs\\референсы\\reference.png",
+      "D:\\AI_projects\\Games\\Glue\\assets\\backgrounds\\world_01\\v2\\source\\w01_v2_far_valley.png"
+    ],
+    "final_prompt_location": "prompts.txt"
+  },
+  {
+    "name": "w01_stone_fill",
+    "kind": "texture",
+    "prompt": "Attached image 1: concept sheet for my game \"Hold On!\" / \"Forgotten Bridges\", STYLE REFERENCE ONLY: bright hand-painted cartoon game art, chunky ancient grey-brown stone ruins, thick green moss, rounded trees, thin waterfalls, turquoise water, soft shading, daylight from upper left. Attached image 2: the approved far valley background. Same world as image 2, match palette and lighting. Do NOT copy sheet layouts, text, logos, interface, characters or frames. Neutral white balance, no yellow/sepia tint.\nThis is a FOREGROUND PLATFORM MATERIAL, same art world. No atmospheric haze or background scenery. No text, labels, objects, border, vignette or perspective. Create a SEAMLESS TILEABLE TEXTURE, square 1:1, tileable on all four sides. Strict front orthographic view. Ancient masonry: chunky rounded grey-brown stone blocks of slightly different sizes in uneven interlocking rows, thin dark joints, a few cracks and chips. Soft hand-painted shading from upper left on individual stones; even overall lighting, no gradient across tile. Medium-dark values, LOW contrast, so small bright colored players remain readable. No moss, grass, plants, holes or doors. Opaque edge-to-edge material, no transparency. Avoid one distinctive central stone or dramatic crack that exposes repetition; balanced distribution and consistent stone scale. Neutral white balance, no yellow tint.",
+    "status": "generated",
+    "refs": [
+      "D:\\AI_projects\\Games\\Glue\\docs\\референсы\\reference.png",
+      "D:\\AI_projects\\Games\\Glue\\assets\\backgrounds\\world_01\\v2\\source\\w01_v2_far_valley.png"
+    ],
+    "final_prompt_location": "assets/tiles/world_01/source/prompts.txt"
+  },
+  {
+    "name": "w01_moss_top",
+    "kind": "texture",
+    "prompt": "Attached image 1: concept sheet for my game \"Hold On!\" / \"Forgotten Bridges\", STYLE REFERENCE ONLY: bright hand-painted cartoon game art, chunky ancient grey-brown stone ruins, thick green moss, rounded trees, thin waterfalls, turquoise water, soft shading, daylight from upper left. Attached image 2: the approved far valley background. Same world as image 2, match palette and lighting. Do NOT copy sheet layouts, text, logos, interface, characters or frames. Neutral white balance, no yellow/sepia tint.\nThis is a FOREGROUND PLATFORM MATERIAL, same art world. No atmospheric haze or background scenery. No text, labels, objects, border, vignette or perspective. Create ONE horizontal material strip, aspect ratio 4:1, genuine TRANSPARENT BACKGROUND PNG, tileable horizontally. Thick soft cushion of moss and short grass on the flat top edge of a stone platform seen STRICTLY FROM THE SIDE. The top of the moss is a fairly flat slightly wavy continuous line about 30% from the top of the image, where characters walk. Small tufts and just a few tiny white flowers above it. Below that line moss hangs down in short rounded drips and a few longer strands. Everything below the moss is transparent for stone fill beneath, and above plants transparent. Olive-green and subdued yellow-green, NOT bright emerald or lime player-green. Hand-painted chunky cartoon foliage, upper-left light. NO STONES, no dirt, no landscape, no text, no objects, no sky. Left and right edges continue at exactly matching height and thickness; moss reaches both horizontal borders without end caps. Keep transparent lower padding. No painted checkerboard. Prefer actual 2048x512 or any true 4:1 output.",
+    "status": "generated",
+    "refs": [
+      "D:\\AI_projects\\Games\\Glue\\docs\\референсы\\reference.png",
+      "D:\\AI_projects\\Games\\Glue\\assets\\backgrounds\\world_01\\v2\\source\\w01_v2_far_valley.png"
+    ],
+    "final_prompt_location": "assets/tiles/world_01/source/prompts.txt"
+  },
+  {
+    "name": "w01_stone_side",
+    "kind": "texture",
+    "prompt": "Attached image 1: concept sheet for my game \"Hold On!\" / \"Forgotten Bridges\", STYLE REFERENCE ONLY: bright hand-painted cartoon game art, chunky ancient grey-brown stone ruins, thick green moss, rounded trees, thin waterfalls, turquoise water, soft shading, daylight from upper left. Attached image 2: the approved far valley background. Same world as image 2, match palette and lighting. Do NOT copy sheet layouts, text, logos, interface, characters or frames. Neutral white balance, no yellow/sepia tint.\nThis is a FOREGROUND PLATFORM MATERIAL, same art world. No atmospheric haze or background scenery. No text, labels, objects, border, vignette or perspective. Create ONE vertical material strip, aspect ratio 1:4, genuine TRANSPARENT BACKGROUND PNG, tileable vertically. The LEFT SIDE EDGE of a stone platform, seen strictly front-on in a 2D side-view game: a NARROW column of slightly rounded medium-dark grey-brown edge stones with a slightly darker contour on the outer LEFT side, a few thin ivy strands and small olive leaves hanging along it. RIGHT HALF of the entire canvas completely transparent alpha zero, because stone fill will continue there in the game. Upper and lower ends of the stone column continue across image boundaries at the same x-position and width, NO top grass cap or bottom end cap. Soft hand-painted cartoon shading, light from upper left; match masonry palette. No haze, sky, ground, objects, text or painted checkerboard. Prefer actual 512x2048 or any true 1:4 output.",
+    "status": "generated",
+    "refs": [
+      "D:\\AI_projects\\Games\\Glue\\docs\\референсы\\reference.png",
+      "D:\\AI_projects\\Games\\Glue\\assets\\backgrounds\\world_01\\v2\\source\\w01_v2_far_valley.png"
+    ],
+    "final_prompt_location": "assets/tiles/world_01/source/prompts.txt"
+  },
+  {
+    "name": "w01_cliff_fill",
+    "kind": "texture",
+    "prompt": "Attached image 1: concept sheet for my game \"Hold On!\" / \"Forgotten Bridges\", STYLE REFERENCE ONLY: bright hand-painted cartoon game art, chunky ancient grey-brown stone ruins, thick green moss, rounded trees, thin waterfalls, turquoise water, soft shading, daylight from upper left. Attached image 2: the approved far valley background. Same world as image 2, match palette and lighting. Do NOT copy sheet layouts, text, logos, interface, characters or frames. Neutral white balance, no yellow/sepia tint.\nThis is a FOREGROUND PLATFORM MATERIAL, same art world. No atmospheric haze or background scenery. No text, labels, objects, border, vignette or perspective. Create a SEAMLESS TILEABLE TEXTURE, square 1:1, tileable on all four sides. Strict front orthographic view. Natural dark grey-brown cliff rock with LARGE soft rounded rock masses and deep cracks, a little darker and calmer than masonry, occasional thin roots and TINY scattered moss spots. Hand-painted cartoon style, soft upper-left shading on rock facets, even lighting across whole tile, no vignette or overall gradient. Opaque edge-to-edge material, no transparency. Low contrast, no black cavern holes, no waterfalls, no large distinctive central feature or bright moss patch, no regular brick rows. Neutral white balance; avoid purple-blue or yellow color cast.",
+    "status": "generated",
+    "refs": [
+      "D:\\AI_projects\\Games\\Glue\\docs\\референсы\\reference.png",
+      "D:\\AI_projects\\Games\\Glue\\assets\\backgrounds\\world_01\\v2\\source\\w01_v2_far_valley.png"
+    ],
+    "final_prompt_location": "assets/tiles/world_01/source/prompts.txt"
+  }
+]

@@ -42,6 +42,12 @@ func _draw() -> void:
 	var size := size_tiles * GreyboxLevel.TILE
 	var rect := Rect2(Vector2(-size.x / 2.0, -size.y), size)
 	var done := needed > 0 and inside >= needed
+	if Art.enabled and size_tiles == Vector2(2, 3):
+		# Спрайт 184×224, середина низа проёма — точка (92, 224).
+		draw_texture_rect(Art.tex("finish_complete" if done else "finish"),
+				Rect2(-92, -224, 184, 224), false)
+		_draw_counter(size, done)
+		return
 	# Каменный проём с жёлтой аркой, как двери выхода на концепт-листе.
 	draw_rect(rect.grow(10.0), Color("7c7f86"))
 	draw_rect(rect, Color("2b2118"))
@@ -49,8 +55,13 @@ func _draw() -> void:
 	draw_circle(Vector2(0, -size.y + radius), radius + 10.0, Color("f2c230") if not done else Color("7fdc5a"))
 	draw_circle(Vector2(0, -size.y + radius), radius, Color("2b2118"))
 	draw_rect(Rect2(rect.position + Vector2(0, radius), Vector2(size.x, size.y - radius)), Color("2b2118"))
+	_draw_counter(size, done)
+
+
+## «Внутри / нужно» над дверью.
+func _draw_counter(size: Vector2, done: bool) -> void:
 	if needed > 0 and not Engine.is_editor_hint():
 		var font := ThemeDB.fallback_font
 		var text := "%d / %d" % [inside, needed]
-		draw_string(font, Vector2(-40, -size.y - 24), text, HORIZONTAL_ALIGNMENT_CENTER, 80, 28,
+		draw_string(font, Vector2(-40, -size.y - 40), text, HORIZONTAL_ALIGNMENT_CENTER, 80, 28,
 				Color("7fdc5a") if done else Color(0.1, 0.1, 0.12))

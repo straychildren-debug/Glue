@@ -117,6 +117,13 @@ func _outline() -> PackedVector2Array:
 
 
 func _draw() -> void:
+	if Art.enabled:
+		var kind := "latch" if latch else "plate"
+		var state := "on" if active else "off"
+		var width := width_tiles * GreyboxLevel.TILE
+		Art.draw_strip_h(self, Rect2(-width / 2.0, -16.0, width, 16.0),
+				"%s_mid_%s" % [kind, state], "%s_end_%s" % [kind, state])
+		return
 	var color := Color("f2994a") if active else Color("c2410c")
 	if latch:
 		color = Color("a78bfa") if active else Color("6d28d9")

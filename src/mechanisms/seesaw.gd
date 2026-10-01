@@ -158,6 +158,17 @@ func load_state(state: Variant) -> void:
 
 func _draw() -> void:
 	var height := pivot_height_tiles * GreyboxLevel.TILE
+	if Art.enabled:
+		# Козлы 96×76: шарнир — точка (48, 12), низ — пол; под другую высоту тянутся по вертикали.
+		draw_texture_rect(Art.tex("seesaw_base"), Rect2(-48, -12, 96, 12 + height), false)
+		var half_length := length_tiles * GreyboxLevel.TILE / 2.0
+		draw_set_transform(Vector2.ZERO, angle)
+		Art.draw_strip_h(self, Rect2(-half_length, -BEAM_THICKNESS / 2.0, half_length * 2.0, BEAM_THICKNESS),
+				"beam_mid", "beam_end")
+		draw_set_transform(Vector2.ZERO)
+		draw_circle(Vector2.ZERO, 6.0, PlayerSprite.OUTLINE_COLOR)
+		draw_circle(Vector2.ZERO, 4.0, Color("9aa3ad"))
+		return
 	draw_colored_polygon(PackedVector2Array([Vector2(0, 0), Vector2(-40, height), Vector2(40, height)]),
 			Color("5b6470"))
 	var half := length_tiles * GreyboxLevel.TILE / 2.0

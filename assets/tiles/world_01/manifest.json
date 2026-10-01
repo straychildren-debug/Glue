@@ -1,0 +1,63 @@
+{
+  "generator": "built-in image_gen",
+  "date": "2026-10-02",
+  "source_policy": "Original generated PNGs preserved. Aspect-specific strips are AtlasTexture regions; no stretching.",
+  "textures": [
+    {
+      "file": "source/w01_stone_fill.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "stone_fill",
+      "repeat": "xy",
+      "alpha": false
+    },
+    {
+      "file": "source/w01_moss_top.png",
+      "size": [
+        2172,
+        724
+      ],
+      "role": "moss_top",
+      "repeat": "x",
+      "alpha": true,
+      "atlas": "w01_moss_top_4x1.tres",
+      "region": [
+        0,
+        100,
+        2172,
+        543
+      ],
+      "walk_line_y_approx": 163
+    },
+    {
+      "file": "source/w01_stone_side.png",
+      "size": [
+        887,
+        1774
+      ],
+      "role": "stone_side",
+      "repeat": "y",
+      "alpha": true,
+      "atlas": "w01_stone_side_1x4.tres",
+      "region": [
+        48,
+        1,
+        443,
+        1772
+      ],
+      "note": "Region trims transparent sides plus one row at top and bottom. Right half has no visible stone."
+    },
+    {
+      "file": "source/w01_cliff_fill.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "cliff_fill",
+      "repeat": "xy",
+      "alpha": false
+    }
+  ]
+}

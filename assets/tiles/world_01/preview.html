@@ -1,0 +1,18 @@
+<!doctype html><html lang="ru"><meta charset="utf-8"><title>Текстуры «Забытые мосты» — проверка</title><style>
+*{box-sizing:border-box}body{margin:24px;background:#172536;color:#edf4fc;font:16px/1.5 system-ui}h1{font-size:25px}p{color:#b7c8dd;max-width:1000px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:1280px}section{background:#223449;padding:18px;border-radius:12px}h2{font-size:18px;margin:0 0 12px}canvas{max-width:100%;height:auto;display:block;background-color:#a7b2bf;background-image:conic-gradient(#cbd3dd 25%,transparent 0 50%,#cbd3dd 0 75%,transparent 0);background-size:24px 24px}.wide{grid-column:1/-1}a{color:#9bd5ff}small{color:#b7c8dd}
+</style><h1>Текстуры платформ · «Забытые мосты»</h1><p>Исходники image_gen. Кладка и скала показаны в повторении 3 × 3. Швы ещё не сведены — это делает игра. Прозрачные полосы показаны через области импорта без растягивания.</p>
+<div class="grid"><section><h2>T1 · Кладка — 3 × 3</h2><canvas id="stone" width="660" height="660"></canvas></section><section><h2>T4 · Скала — 3 × 3</h2><canvas id="cliff" width="660" height="660"></canvas></section>
+<section class="wide"><h2>T2 · Мох — область 4:1, повтор × 2</h2><canvas id="moss" width="1200" height="190"></canvas><small>Область: x=0, y=100, 2172 × 543. Линия поверхности примерно на 30% её высоты.</small></section>
+<section><h2>T3 · Левый край — область 1:4, повтор × 2</h2><canvas id="side" width="330" height="800"></canvas><small>Область: x=48, y=1, 443 × 1772. Справа — прозрачность.</small></section>
+<section><h2>Пример сочетания материалов</h2><canvas id="assembly" width="660" height="430"></canvas><small>Только просмотр материалов: масштаб и реальные коллизии задаются в игре.</small></section></div>
+<p><a href="README.md">Инструкция</a> · <a href="manifest.json">Размеры и области импорта</a> · <a href="source/prompts.txt">Промпты</a></p><p id="status">Загрузка PNG…</p>
+<script>
+const load=name=>new Promise((resolve,reject)=>{const im=new Image();im.onload=()=>resolve(im);im.onerror=reject;im.src='source/'+name+'.png'});
+Promise.all(['w01_stone_fill','w01_cliff_fill','w01_moss_top','w01_stone_side'].map(load)).then(([stone,cliff,moss,side])=>{
+for(const [id,im] of [['stone',stone],['cliff',cliff]]){const c=document.getElementById(id),g=c.getContext('2d');for(let y=0;y<3;y++)for(let x=0;x<3;x++)g.drawImage(im,x*220,y*220,220,220)}
+let g=document.getElementById('moss').getContext('2d');for(let x=0;x<2;x++)g.drawImage(moss,0,100,2172,543,x*600,15,600,150);
+g=document.getElementById('side').getContext('2d');for(let y=0;y<2;y++)g.drawImage(side,48,1,443,1772,10,y*400,100,400);
+g=document.getElementById('assembly').getContext('2d');for(let y=0;y<2;y++)for(let x=0;x<3;x++)g.drawImage(stone,0,0,1254,1254,55+x*185,130+y*185,185,185);for(let x=0;x<2;x++)g.drawImage(moss,0,100,2172,543,55+x*277.5,109,277.5,69.375);g.drawImage(side,48,1,443,1772,46,130,75,300);
+document.getElementById('status').textContent='Все 4 PNG загружены. Превью не изменяет исходники.';
+}).catch(e=>{document.getElementById('status').textContent='Ошибка загрузки PNG';console.error(e)});
+</script></html>

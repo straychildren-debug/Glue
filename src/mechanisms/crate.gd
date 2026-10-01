@@ -150,6 +150,11 @@ func load_state(state: Variant) -> void:
 
 
 func _draw() -> void:
+	if Art.enabled:
+		var sprite_size := size_tiles * GreyboxLevel.TILE
+		draw_texture_rect(Art.tex("crate_heavy" if mass > 1.0 else "crate"),
+				Rect2(-sprite_size / 2.0, sprite_size), false)
+		return
 	var size := size_tiles * GreyboxLevel.TILE - Vector2(2, 2)
 	var rect := Rect2(-size / 2.0, size)
 	var wood := Color("b07a45") if mass <= 1.0 else Color("7a5230")

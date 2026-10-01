@@ -1,0 +1,382 @@
+[
+  {
+    "file": "assets/backgrounds/world_01/v2/source/w01_v2_far_pass.png",
+    "width": 1536,
+    "height": 1024,
+    "mode": "RGB",
+    "alpha_range": [
+      255,
+      255
+    ],
+    "transparent_pixels": 0,
+    "partial_pixels": 0,
+    "top_half_alpha_max": 255,
+    "visible_bounds_alpha_gt20": [
+      0,
+      0,
+      1536,
+      1024
+    ],
+    "mean_luminance": 207.23
+  },
+  {
+    "file": "assets/backgrounds/world_01/v2/source/w01_v2_far_town.png",
+    "width": 1536,
+    "height": 1024,
+    "mode": "RGB",
+    "alpha_range": [
+      255,
+      255
+    ],
+    "transparent_pixels": 0,
+    "partial_pixels": 0,
+    "top_half_alpha_max": 255,
+    "visible_bounds_alpha_gt20": [
+      0,
+      0,
+      1536,
+      1024
+    ],
+    "mean_luminance": 197.69
+  },
+  {
+    "file": "assets/backgrounds/world_01/v2/source/w01_v2_far_valley.png",
+    "width": 1536,
+    "height": 1024,
+    "mode": "RGB",
+    "alpha_range": [
+      255,
+      255
+    ],
+    "transparent_pixels": 0,
+    "partial_pixels": 0,
+    "top_half_alpha_max": 255,
+    "visible_bounds_alpha_gt20": [
+      0,
+      0,
+      1536,
+      1024
+    ],
+    "mean_luminance": 195.17
+  },
+  {
+    "file": "assets/backgrounds/world_01/v2/source/w01_v2_lm01_round_tower.png",
+    "width": 1024,
+    "height": 1536,
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      254
+    ],
+    "transparent_pixels": 547857,
+    "partial_pixels": 1025007,
+    "top_half_alpha_max": 254,
+    "visible_bounds_alpha_gt20": [
+      65,
+      96,
+      983,
+      1480
+    ],
+    "mean_luminance": 119.38
+  },
+  {
+    "file": "assets/backgrounds/world_01/v2/source/w01_v2_lm02_arcade.png",
+    "width": 1536,
+    "height": 1024,
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      254
+    ],
+    "transparent_pixels": 647255,
+    "partial_pixels": 925609,
+    "top_half_alpha_max": 254,
+    "visible_bounds_alpha_gt20": [
+      11,
+      19,
+      1536,
+      1021
+    ],
+    "mean_luminance": 103.23
+  },
+  {
+    "file": "assets/backgrounds/world_01/v2/source/w01_v2_lm03_cascade.png",
+    "width": 1024,
+    "height": 1536,
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      254
+    ],
+    "transparent_pixels": 467714,
+    "partial_pixels": 1105150,
+    "top_half_alpha_max": 254,
+    "visible_bounds_alpha_gt20": [
+      30,
+      62,
+      995,
+      1493
+    ],
+    "mean_luminance": 122.32
+  },
+  {
+    "file": "assets/backgrounds/world_01/v2/source/w01_v2_lm04_pillars.png",
+    "width": 1024,
+    "height": 1536,
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      254
+    ],
+    "transparent_pixels": 642078,
+    "partial_pixels": 930786,
+    "top_half_alpha_max": 254,
+    "visible_bounds_alpha_gt20": [
+      21,
+      82,
+      1013,
+      1484
+    ],
+    "mean_luminance": 117.23
+  },
+  {
+    "file": "assets/backgrounds/world_01/v2/source/w01_v2_lm05_aqueduct_end.png",
+    "width": 1536,
+    "height": 1024,
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      254
+    ],
+    "transparent_pixels": 464109,
+    "partial_pixels": 1108755,
+    "top_half_alpha_max": 254,
+    "visible_bounds_alpha_gt20": [
+      0,
+      66,
+      1494,
+      1004
+    ],
+    "mean_luminance": 131.23
+  },
+  {
+    "file": "assets/backgrounds/world_01/v2/source/w01_v2_lm06_storehouse.png",
+    "width": 1536,
+    "height": 1024,
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      254
+    ],
+    "transparent_pixels": 502552,
+    "partial_pixels": 1070312,
+    "top_half_alpha_max": 254,
+    "visible_bounds_alpha_gt20": [
+      15,
+      66,
+      1529,
+      992
+    ],
+    "mean_luminance": 120.53
+  },
+  {
+    "file": "assets/backgrounds/world_01/v2/source/w01_v2_lm07_gate_wall.png",
+    "width": 1536,
+    "height": 1024,
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      253
+    ],
+    "transparent_pixels": 508458,
+    "partial_pixels": 1064406,
+    "top_half_alpha_max": 253,
+    "visible_bounds_alpha_gt20": [
+      17,
+      105,
+      1518,
+      962
+    ],
+    "mean_luminance": 125.77
+  },
+  {
+    "file": "assets/backgrounds/world_01/v2/source/w01_v2_lm08_stone_yard.png",
+    "width": 1536,
+    "height": 1024,
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      254
+    ],
+    "transparent_pixels": 489967,
+    "partial_pixels": 1082897,
+    "top_half_alpha_max": 254,
+    "visible_bounds_alpha_gt20": [
+      23,
+      77,
+      1518,
+      977
+    ],
+    "mean_luminance": 123.25
+  },
+  {
+    "file": "assets/backgrounds/world_01/v2/source/w01_v2_lm09_watchtower.png",
+    "width": 1024,
+    "height": 1536,
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      254
+    ],
+    "transparent_pixels": 732176,
+    "partial_pixels": 840688,
+    "top_half_alpha_max": 254,
+    "visible_bounds_alpha_gt20": [
+      35,
+      10,
+      996,
+      1519
+    ],
+    "mean_luminance": 101.08
+  },
+  {
+    "file": "assets/backgrounds/world_01/v2/source/w01_v2_lm10_ridge_gate.png",
+    "width": 1536,
+    "height": 1024,
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      254
+    ],
+    "transparent_pixels": 688562,
+    "partial_pixels": 884302,
+    "top_half_alpha_max": 254,
+    "visible_bounds_alpha_gt20": [
+      16,
+      27,
+      1522,
+      993
+    ],
+    "mean_luminance": 108.82
+  },
+  {
+    "file": "assets/backgrounds/world_01/v2/source/w01_v2_mid_town.png",
+    "width": 1536,
+    "height": 1024,
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      254
+    ],
+    "transparent_pixels": 968991,
+    "partial_pixels": 603873,
+    "top_half_alpha_max": 1,
+    "visible_bounds_alpha_gt20": [
+      0,
+      526,
+      1536,
+      1002
+    ],
+    "mean_luminance": 73.56
+  },
+  {
+    "file": "assets/backgrounds/world_01/v2/source/w01_v2_mid_valley.png",
+    "width": 1536,
+    "height": 1024,
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      254
+    ],
+    "transparent_pixels": 976576,
+    "partial_pixels": 596288,
+    "top_half_alpha_max": 253,
+    "visible_bounds_alpha_gt20": [
+      0,
+      452,
+      1536,
+      910
+    ],
+    "mean_luminance": 79.63
+  },
+  {
+    "file": "assets/tiles/world_01/source/w01_cliff_fill.png",
+    "width": 1254,
+    "height": 1254,
+    "mode": "RGB",
+    "alpha_range": [
+      255,
+      255
+    ],
+    "transparent_pixels": 0,
+    "partial_pixels": 0,
+    "top_half_alpha_max": 255,
+    "visible_bounds_alpha_gt20": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "mean_luminance": 94.47
+  },
+  {
+    "file": "assets/tiles/world_01/source/w01_moss_top.png",
+    "width": 2172,
+    "height": 724,
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "transparent_pixels": 1277380,
+    "partial_pixels": 294883,
+    "top_half_alpha_max": 255,
+    "visible_bounds_alpha_gt20": [
+      0,
+      230,
+      2172,
+      485
+    ],
+    "mean_luminance": 20.51
+  },
+  {
+    "file": "assets/tiles/world_01/source/w01_stone_fill.png",
+    "width": 1254,
+    "height": 1254,
+    "mode": "RGB",
+    "alpha_range": [
+      255,
+      255
+    ],
+    "transparent_pixels": 0,
+    "partial_pixels": 0,
+    "top_half_alpha_max": 255,
+    "visible_bounds_alpha_gt20": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "mean_luminance": 110.71
+  },
+  {
+    "file": "assets/tiles/world_01/source/w01_stone_side.png",
+    "width": 887,
+    "height": 1774,
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "transparent_pixels": 1285432,
+    "partial_pixels": 287957,
+    "top_half_alpha_max": 255,
+    "visible_bounds_alpha_gt20": [
+      69,
+      0,
+      262,
+      1774
+    ],
+    "mean_luminance": 18.72
+  }
+]
