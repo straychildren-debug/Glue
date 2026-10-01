@@ -1,0 +1,87 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://src/level/greybox_level.gd" id="1"]
+[ext_resource type="Script" path="res://src/mechanisms/pressure_plate.gd" id="2"]
+[ext_resource type="Script" path="res://src/mechanisms/door.gd" id="3"]
+[ext_resource type="Script" path="res://src/mechanisms/finish.gd" id="4"]
+[ext_resource type="Script" path="res://src/mechanisms/crate.gd" id="5"]
+
+[node name="ThePass" type="Node2D"]
+script = ExtResource("1")
+title = "10 · Перевал"
+blocks = Array[Rect2]([Rect2(0, -8, 1, 26), Rect2(0, 12, 18, 6), Rect2(18, 8, 12, 10), Rect2(30, 8, 3, 0.25), Rect2(39, 9, 24, 9), Rect2(54, -8, 1, 14), Rect2(66, 5.5, 9, 12.5), Rect2(82, 6.5, 12, 11.5), Rect2(94, -8, 1, 26)])
+checkpoints = Array[Vector2]([Vector2(2, 12), Vector2(21, 8), Vector2(44, 9), Vector2(60, 9), Vector2(71, 5.5)])
+bounds_tiles = Rect2(0, -8, 95, 27)
+kill_y_tiles = 19.0
+
+[node name="Crate1" type="CharacterBody2D" parent="."]
+position = Vector2(480, 735)
+script = ExtResource("5")
+
+[node name="Latch2" type="AnimatableBody2D" parent="."]
+position = Vector2(2656, 576)
+script = ExtResource("2")
+latch = true
+
+[node name="Bridge2" type="AnimatableBody2D" parent="."]
+position = Vector2(2496, 576)
+script = ExtResource("3")
+size_tiles = Vector2(6, 0.5)
+triggers = Array[NodePath]([NodePath("../Latch2")])
+open_offset_tiles = Vector2(-6, 0)
+
+[node name="HeavyCrate3" type="CharacterBody2D" parent="."]
+position = Vector2(2912, 543)
+script = ExtResource("5")
+mass = 2.0
+
+[node name="Plate3" type="AnimatableBody2D" parent="."]
+position = Vector2(3200, 576)
+script = ExtResource("2")
+width_tiles = 3.0
+threshold = 3.0
+
+[node name="Door3" type="AnimatableBody2D" parent="."]
+position = Vector2(3456, 384)
+script = ExtResource("3")
+triggers = Array[NodePath]([NodePath("../Plate3"), NodePath("../Latch3")])
+
+[node name="Latch3" type="AnimatableBody2D" parent="."]
+position = Vector2(3648, 576)
+script = ExtResource("2")
+latch = true
+
+[node name="Latch4" type="AnimatableBody2D" parent="."]
+position = Vector2(4384, 352)
+script = ExtResource("2")
+latch = true
+
+[node name="Bridge4" type="AnimatableBody2D" parent="."]
+position = Vector2(4224, 576)
+script = ExtResource("3")
+size_tiles = Vector2(3, 0.5)
+triggers = Array[NodePath]([NodePath("../Latch4")])
+open_offset_tiles = Vector2(-3, 0)
+
+[node name="Step4" type="AnimatableBody2D" parent="."]
+position = Vector2(4224, 464)
+script = ExtResource("3")
+size_tiles = Vector2(1, 0.5)
+triggers = Array[NodePath]([NodePath("../Latch4")])
+open_offset_tiles = Vector2(-1, 0)
+
+[node name="Latch5" type="AnimatableBody2D" parent="."]
+position = Vector2(5440, 416)
+script = ExtResource("2")
+latch = true
+
+[node name="Bridge5" type="AnimatableBody2D" parent="."]
+position = Vector2(5248, 416)
+script = ExtResource("3")
+size_tiles = Vector2(7, 0.5)
+triggers = Array[NodePath]([NodePath("../Latch5")])
+open_offset_tiles = Vector2(-7, 0)
+
+[node name="Finish" type="Node2D" parent="."]
+position = Vector2(5760, 416)
+script = ExtResource("4")

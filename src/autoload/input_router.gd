@@ -6,6 +6,8 @@ extends Node
 
 signal player_joined(slot: int)
 signal player_left(slot: int)
+## Подключённый игрок нажал Start на геймпаде — игра открывает паузу.
+signal pause_requested
 
 const MAX_PLAYERS := 4
 const STICK_DEADZONE := 0.25
@@ -31,6 +33,9 @@ const PAD_GRAB := JOY_BUTTON_RIGHT_SHOULDER  # и правый курок
 var _devices: Array[int] = [NO_DEVICE, NO_DEVICE, NO_DEVICE, NO_DEVICE]
 var _jump_pressed: Array[bool] = [false, false, false, false]
 var _freeze_pressed: Array[bool] = [false, false, false, false]
+## Устройство -> номер кадра, в котором оно подключилось: это нажатие не должно ещё и выбрать
+## пункт меню.
+var _join_frame := {}
 
 
 func _ready() -> void:
@@ -73,6 +78,8 @@ func _input(event: InputEvent) -> void:
 	match action:
 		"leave":
 			_leave(slot)
+		"join":
+			pause_requested.emit()
 		"jump":
 			_jump_pressed[slot] = true
 		"freeze":
@@ -89,6 +96,27 @@ func joined_slots() -> Array[int]:
 		if is_joined(slot):
 			result.append(slot)
 	return result
+
+
+## Устройство, от которого пришло событие: id геймпада, раскладка клавиатуры или NO_DEVICE.
+func device_of_event(event: InputEvent) -> int:
+	if event is InputEventJoypadButton or event is InputEventJoypadMotion:
+		return event.device
+	if event is InputEventKey:
+		for kb in KEYBOARD_KEYS:
+			for keys: Array in KEYBOARD_KEYS[kb].values():
+				if event.physical_keycode in keys:
+					return kb
+	return NO_DEVICE
+
+
+func is_device_joined(device: int) -> bool:
+	return device != NO_DEVICE and device in _devices
+
+
+## Устройство подключилось в этом кадре (его нажатие уже потрачено на подключение).
+func just_joined(device: int) -> bool:
+	return _join_frame.get(device, -1) == Engine.get_process_frames()
 
 
 func device_name(slot: int) -> String:
@@ -160,6 +188,7 @@ func _join(device: int) -> void:
 	if slot == -1:
 		return
 	_devices[slot] = device
+	_join_frame[device] = Engine.get_process_frames()
 	_jump_pressed[slot] = false
 	_freeze_pressed[slot] = false
 	player_joined.emit(slot)

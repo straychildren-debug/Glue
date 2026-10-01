@@ -8,5 +8,7 @@ if not exist "%GODOT%" (
     pause
     exit /b 1
 )
-if not exist ".godot" "%GODOT%" --headless --path "%~dp0." --import
+rem Re-import every time: after git pull new scripts (class_name) must get into the class cache,
+rem otherwise the game fails with "Could not find type".
+"%GODOT%" --headless --path "%~dp0." --import
 start "" "%GODOT%" --path "%~dp0."

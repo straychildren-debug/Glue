@@ -1,0 +1,40 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://src/level/greybox_level.gd" id="1"]
+[ext_resource type="Script" path="res://src/mechanisms/pressure_plate.gd" id="2"]
+[ext_resource type="Script" path="res://src/mechanisms/door.gd" id="3"]
+[ext_resource type="Script" path="res://src/mechanisms/finish.gd" id="4"]
+[ext_resource type="Script" path="res://src/mechanisms/crate.gd" id="5"]
+
+[node name="TheCrate" type="Node2D"]
+script = ExtResource("1")
+title = "06 · Ящик"
+blocks = Array[Rect2]([Rect2(0, -8, 1, 26), Rect2(0, 12, 18, 6), Rect2(18, 9, 22, 9), Rect2(30, -8, 1, 14), Rect2(40, 5, 12, 13), Rect2(52, -8, 1, 26)])
+checkpoints = Array[Vector2]([Vector2(2, 12), Vector2(20, 9), Vector2(32, 9)])
+bounds_tiles = Rect2(0, -8, 53, 27)
+kill_y_tiles = 19.0
+
+[node name="Crate1" type="CharacterBody2D" parent="."]
+position = Vector2(544, 735)
+script = ExtResource("5")
+
+[node name="Crate2" type="CharacterBody2D" parent="."]
+position = Vector2(1440, 543)
+script = ExtResource("5")
+
+[node name="Plate" type="AnimatableBody2D" parent="."]
+position = Vector2(1664, 576)
+script = ExtResource("2")
+
+[node name="Door" type="AnimatableBody2D" parent="."]
+position = Vector2(1920, 384)
+script = ExtResource("3")
+triggers = Array[NodePath]([NodePath("../Plate")])
+
+[node name="Crate3" type="CharacterBody2D" parent="."]
+position = Vector2(2784, 287)
+script = ExtResource("5")
+
+[node name="Finish" type="Node2D" parent="."]
+position = Vector2(3136, 320)
+script = ExtResource("4")

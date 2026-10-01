@@ -1,0 +1,58 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://src/level/greybox_level.gd" id="1"]
+[ext_resource type="Script" path="res://src/mechanisms/pressure_plate.gd" id="2"]
+[ext_resource type="Script" path="res://src/mechanisms/door.gd" id="3"]
+[ext_resource type="Script" path="res://src/mechanisms/finish.gd" id="4"]
+[ext_resource type="Script" path="res://src/mechanisms/crate.gd" id="5"]
+
+[node name="HeavyLoad" type="Node2D"]
+script = ExtResource("1")
+title = "08 · Тяжёлый груз"
+blocks = Array[Rect2]([Rect2(0, -8, 1, 26), Rect2(0, 12, 20, 6), Rect2(20, 9, 34, 9), Rect2(34, -8, 1, 14), Rect2(46, -8, 1, 14), Rect2(54, 5, 10, 13), Rect2(64, -8, 1, 26)])
+checkpoints = Array[Vector2]([Vector2(2, 12), Vector2(22, 9), Vector2(36, 9)])
+bounds_tiles = Rect2(0, -8, 65, 27)
+kill_y_tiles = 19.0
+
+[node name="HeavyCrate1" type="CharacterBody2D" parent="."]
+position = Vector2(608, 735)
+script = ExtResource("5")
+mass = 2.0
+
+[node name="HeavyCrate2" type="CharacterBody2D" parent="."]
+position = Vector2(1632, 543)
+script = ExtResource("5")
+mass = 2.0
+
+[node name="Plate2" type="AnimatableBody2D" parent="."]
+position = Vector2(1920, 576)
+script = ExtResource("2")
+threshold = 2.0
+
+[node name="Door2" type="AnimatableBody2D" parent="."]
+position = Vector2(2176, 384)
+script = ExtResource("3")
+triggers = Array[NodePath]([NodePath("../Plate2")])
+
+[node name="HeavyCrate3" type="CharacterBody2D" parent="."]
+position = Vector2(2464, 543)
+script = ExtResource("5")
+mass = 2.0
+
+[node name="Plate3" type="AnimatableBody2D" parent="."]
+position = Vector2(2688, 576)
+script = ExtResource("2")
+
+[node name="Door3" type="AnimatableBody2D" parent="."]
+position = Vector2(2944, 384)
+script = ExtResource("3")
+triggers = Array[NodePath]([NodePath("../Plate3"), NodePath("../Latch3")])
+
+[node name="Latch3" type="AnimatableBody2D" parent="."]
+position = Vector2(3136, 576)
+script = ExtResource("2")
+latch = true
+
+[node name="Finish" type="Node2D" parent="."]
+position = Vector2(3840, 320)
+script = ExtResource("4")

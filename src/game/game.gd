@@ -1,46 +1,59 @@
+class_name Game
 extends Node2D
 ## Корень игры: загружает уровень, создаёт игроков по мере подключения геймпадов,
-## ведёт общий чекпоинт команды и респавн.
+## ведёт общий чекпоинт команды и респавн. Пройденный уровень записывается в прогресс
+## и открывает следующий; после последнего собранного уровня мира — возврат в меню.
 
 const PLAYER_SCENE := preload("res://src/player/player.tscn")
-## Уровни по порядку, затем комнаты прототипа. F2 переключает по кругу; пройденный уровень
-## открывает следующий.
-const LEVELS: Array[String] = [
-	"res://levels/w01_l01_first_steps.tscn",
-	"res://levels/w01_l02_lend_a_shoulder.tscn",
-	"res://levels/w01_l03_dont_let_go.tscn",
-	"res://levels/sandbox.tscn",
-	"res://levels/test_room.tscn",
-]
+const MENU_SCENE := "res://src/menu/level_select.tscn"
+const GAME_SCENE := "res://src/game/game.tscn"
 ## Пауза между прохождением и загрузкой следующего уровня.
 const NEXT_LEVEL_DELAY := 2.0
 
 signal level_completed
 
-## Номер комнаты из LEVELS; переживает перезапуск сцены по F2/F5.
+## Что играем: мир и номер уровня в нём (Levels.EXTRAS_WORLD — комнаты прототипа).
+## Переживает перезапуск сцены.
+static var world := 0
 static var level_index := 0
 
-## Если задано (автотесты), грузится эта сцена вместо комнаты из LEVELS.
+## Если задано (автотесты), грузится эта сцена вместо уровня из каталога.
 @export var level_scene: PackedScene
 
 var level: GreyboxLevel
 var players := {}  # slot -> Player
 var completed := false
-## Грузить ли следующий уровень после финиша (нет, если уровень задан автотестом).
-var _advance_after_finish := false
+## Записывать прогресс и грузить следующий уровень после финиша (нет, если уровень задан автотестом).
+var _from_catalog := false
 var _team_respawning := false
 var _title := Label.new()
 
 @onready var _players_root: Node2D = $Players
 @onready var _camera: SharedCamera = $SharedCamera
 @onready var _hint: Label = $HUD/Hint
+@onready var _pause: PauseMenu = $PauseMenu
+
+
+## Запускает уровень из каталога (из меню или по F2).
+static func play(tree: SceneTree, p_world: int, p_index: int) -> void:
+	world = p_world
+	level_index = p_index
+	tree.paused = false
+	tree.change_scene_to_file(GAME_SCENE)
+
+
+static func open_menu(tree: SceneTree) -> void:
+	tree.paused = false
+	tree.change_scene_to_file(MENU_SCENE)
 
 
 func _ready() -> void:
-	var from_list := level_scene == null
-	if from_list:
-		level_scene = load(LEVELS[level_index])
-	_advance_after_finish = from_list
+	_from_catalog = level_scene == null
+	if _from_catalog:
+		if not Levels.is_built(world, level_index):
+			world = 0
+			level_index = 0
+		level_scene = load(Levels.scene_path(world, level_index))
 	level = level_scene.instantiate()
 	add_child(level)
 	move_child(level, 0)
@@ -51,9 +64,11 @@ func _ready() -> void:
 
 	InputRouter.player_joined.connect(_on_player_joined)
 	InputRouter.player_left.connect(_on_player_left)
+	InputRouter.pause_requested.connect(_open_pause)
 	for slot in InputRouter.joined_slots():
 		_on_player_joined(slot)
 	_update_hint()
+	_pause.chosen.connect(_on_pause_chosen)
 
 	_title.text = level.title
 	_title.add_theme_font_size_override("font_size", 40)
@@ -101,23 +116,50 @@ func _check_finish() -> void:
 	completed = true
 	_title.text = "%s — пройден!" % level.title
 	level_completed.emit()
-	if not _advance_after_finish:
+	if not _from_catalog:
 		return
+	Progress.mark_completed(world, level_index)
 	await get_tree().create_timer(NEXT_LEVEL_DELAY).timeout
-	level_index = (level_index + 1) % LEVELS.size()
-	get_tree().reload_current_scene()
+	var next := Levels.next_built(world, level_index) if world != Levels.EXTRAS_WORLD else -1
+	if next == -1:
+		open_menu(get_tree())
+	else:
+		play(get_tree(), world, next)
 
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventKey and event.pressed and not event.echo:
 		match event.physical_keycode:
 			KEY_ESCAPE:
-				get_tree().quit()
+				_open_pause()
 			KEY_F5:
 				get_tree().reload_current_scene()
 			KEY_F2:
-				level_index = (level_index + 1) % LEVELS.size()
-				get_tree().reload_current_scene()
+				var next := Levels.debug_next(world, level_index)
+				play(get_tree(), next.x, next.y)
+
+
+func _open_pause() -> void:
+	if not _pause.visible and _from_catalog:
+		_pause.open()
+
+
+func _on_pause_chosen(action: PauseMenu.Action) -> void:
+	match action:
+		PauseMenu.Action.CHECKPOINT:
+			restart_from_checkpoint()
+		PauseMenu.Action.RESTART:
+			get_tree().reload_current_scene()
+		PauseMenu.Action.MENU:
+			open_menu(get_tree())
+		PauseMenu.Action.QUIT:
+			get_tree().quit()
+
+
+## Команда сама возвращается к чекпоинту (если застряла) — как общий респавн, но без паузы.
+func restart_from_checkpoint() -> void:
+	if not _team_respawning and not completed:
+		_respawn_team(0.0)
 
 
 func _alive_players() -> Array:
@@ -154,12 +196,17 @@ func _join_position(slot: int) -> Vector2:
 ## Гибель любого игрока — общий респавн команды: упавший исчезает, остальные замирают,
 ## через respawn_delay все появляются у активного чекпоинта.
 func _on_player_died(player: Player) -> void:
+	_respawn_team(player.respawn_delay)
+
+
+func _respawn_team(delay: float) -> void:
 	if _team_respawning:
 		return
 	_team_respawning = true
 	for other: Player in players.values():
 		other.pause_for_respawn()
-	await get_tree().create_timer(player.respawn_delay).timeout
+	if delay > 0.0:
+		await get_tree().create_timer(delay).timeout
 	# Сначала камера: стены кадра переезжают к чекпоинту. Физика видит их новое место только
 	# со следующего кадра, иначе старая стена вытолкнет появившихся игроков.
 	_camera.snap_to(level.get_spawn_position(level.active_checkpoint, 0))
@@ -179,5 +226,5 @@ func _update_hint() -> void:
 	if players.size() < InputRouter.MAX_PLAYERS:
 		lines.append("Подключиться: A на геймпаде · W/Пробел или ↑/Enter на клавиатуре")
 	lines.append("Геймпад: A — прыжок · X или LB — замри · RB или RT (держать) — хват · стик у замершего — наклон/катапульта")
-	lines.append("Back — выйти из игры игроку · F2 — следующий уровень · F5 — перезапуск · Esc — выход")
+	lines.append("Start или Esc — пауза: рестарт с чекпоинта, выбор уровня · Back — выйти игроку · F2 — следующий уровень · F5 — заново")
 	_hint.text = "\n".join(lines)

@@ -7,7 +7,7 @@ config_version=5
 
 config/name="Держись! (Glue)"
 config/description="Кооперативный платформер-головоломка для 2–4 игроков на одном экране."
-run/main_scene="res://src/game/game.tscn"
+run/main_scene="res://src/menu/level_select.tscn"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 
 [autoload]

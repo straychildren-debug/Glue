@@ -19,6 +19,10 @@ var targets_source := func() -> Array: return []
 var _wall_left := _make_wall(Vector2.RIGHT)
 var _wall_right := _make_wall(Vector2.LEFT)
 var _wall_top := _make_wall(Vector2.DOWN)
+## Стены включаются только через пару физических кадров после появления камеры. Физика видит
+## новое место стены лишь со следующего кадра, а до того стены стоят в начале координат:
+## правая выталкивала бы влево игроков, появившихся вместе с уровнем.
+var _walls_delay := 2
 
 
 func _ready() -> void:
@@ -68,6 +72,11 @@ func _physics_process(delta: float) -> void:
 		zoom = zoom.lerp(Vector2(target_zoom, target_zoom), 1.0 - exp(-zoom_speed * delta))
 		global_position = global_position.lerp(box.get_center(), 1.0 - exp(-follow_speed * delta))
 	_update_walls()
+	if _walls_delay > 0:
+		_walls_delay -= 1
+		if _walls_delay == 0:
+			for wall in [_wall_left, _wall_right, _wall_top]:
+				wall.collision_layer = Player.LAYER_CAMERA_WALLS
 
 
 func _update_walls() -> void:
@@ -81,7 +90,7 @@ func _update_walls() -> void:
 static func _make_wall(normal: Vector2) -> StaticBody2D:
 	var body := StaticBody2D.new()
 	body.top_level = true
-	body.collision_layer = Player.LAYER_CAMERA_WALLS
+	body.collision_layer = 0  # включается в _physics_process, см. _walls_delay
 	body.collision_mask = 0
 	var shape := WorldBoundaryShape2D.new()
 	shape.normal = normal

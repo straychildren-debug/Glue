@@ -1,0 +1,67 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://src/level/greybox_level.gd" id="1"]
+[ext_resource type="Script" path="res://src/mechanisms/pressure_plate.gd" id="2"]
+[ext_resource type="Script" path="res://src/mechanisms/door.gd" id="3"]
+[ext_resource type="Script" path="res://src/mechanisms/finish.gd" id="4"]
+[ext_resource type="Script" path="res://src/mechanisms/crate.gd" id="5"]
+
+[node name="HoldIt" type="Node2D"]
+script = ExtResource("1")
+title = "07 · Удерживай!"
+blocks = Array[Rect2]([Rect2(0, -8, 1, 26), Rect2(0, 12, 60, 6), Rect2(14, -8, 1, 17), Rect2(31, -8, 1, 17), Rect2(40, 9, 4, 0.5), Rect2(48, -8, 1, 17), Rect2(59, -8, 1, 26)])
+checkpoints = Array[Vector2]([Vector2(2, 12), Vector2(20, 12), Vector2(37, 12)])
+bounds_tiles = Rect2(0, -8, 60, 27)
+kill_y_tiles = 19.0
+
+[node name="Plate1" type="AnimatableBody2D" parent="."]
+position = Vector2(512, 768)
+script = ExtResource("2")
+
+[node name="Door1" type="AnimatableBody2D" parent="."]
+position = Vector2(896, 576)
+script = ExtResource("3")
+triggers = Array[NodePath]([NodePath("../Plate1"), NodePath("../Latch1")])
+
+[node name="Latch1" type="AnimatableBody2D" parent="."]
+position = Vector2(1152, 768)
+script = ExtResource("2")
+latch = true
+
+[node name="Crate2" type="CharacterBody2D" parent="."]
+position = Vector2(1504, 735)
+script = ExtResource("5")
+
+[node name="Plate2" type="AnimatableBody2D" parent="."]
+position = Vector2(1728, 768)
+script = ExtResource("2")
+width_tiles = 3.0
+threshold = 2.0
+
+[node name="Door2" type="AnimatableBody2D" parent="."]
+position = Vector2(1984, 576)
+script = ExtResource("3")
+triggers = Array[NodePath]([NodePath("../Plate2"), NodePath("../Latch2")])
+
+[node name="Latch2" type="AnimatableBody2D" parent="."]
+position = Vector2(2240, 768)
+script = ExtResource("2")
+latch = true
+
+[node name="Plate3" type="AnimatableBody2D" parent="."]
+position = Vector2(2688, 576)
+script = ExtResource("2")
+
+[node name="Door3" type="AnimatableBody2D" parent="."]
+position = Vector2(3072, 576)
+script = ExtResource("3")
+triggers = Array[NodePath]([NodePath("../Plate3"), NodePath("../Latch3")])
+
+[node name="Latch3" type="AnimatableBody2D" parent="."]
+position = Vector2(3328, 768)
+script = ExtResource("2")
+latch = true
+
+[node name="Finish" type="Node2D" parent="."]
+position = Vector2(3584, 768)
+script = ExtResource("4")
