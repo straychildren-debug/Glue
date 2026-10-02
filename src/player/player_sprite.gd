@@ -31,6 +31,9 @@ static var _shader: Shader
 var _player: Player
 var _landing := false
 var _cell := 256.0
+var _base_scale := Vector2.ONE
+## Появление у чекпоинта: «выпрыгивает» с перебором; -1 — не идёт.
+var _pop_time := -1.0
 
 
 func setup(player: Player) -> void:
@@ -43,6 +46,7 @@ func setup(player: Player) -> void:
 	var head_top: Array = manifest.head_top
 	var size := Player.SIZE.y / (float(feet[1]) - float(head_top[1]))
 	scale = Vector2(size, size)
+	_base_scale = scale
 	position = Vector2((_cell / 2.0 - float(feet[0])) * size,
 			Player.SIZE.y / 2.0 - (float(feet[1]) - _cell / 2.0) * size)
 	texture_filter = CanvasItem.TEXTURE_FILTER_LINEAR_WITH_MIPMAPS
@@ -57,6 +61,27 @@ func setup(player: Player) -> void:
 	play("idle")
 
 
+## Появление у чекпоинта: вырасти из точки с перебором, как упругий мармелад.
+func pop_in() -> void:
+	_pop_time = 0.0
+
+
+func _update_pop(delta: float) -> void:
+	if _pop_time < 0.0:
+		return
+	_pop_time += delta
+	var t := _pop_time
+	var k := 1.0
+	if t < 0.16:
+		k = 0.2 + t / 0.16 * 1.0  # 0,2 → 1,2
+	elif t < 0.34:
+		k = 1.2 - (t - 0.16) / 0.18 * 0.2
+	else:
+		_pop_time = -1.0
+	# Растёт от ступней: ширина чуть отстаёт от высоты — упругий «выпрыг».
+	scale = _base_scale * Vector2(lerpf(1.0, k, 0.8), k)
+
+
 ## Плечо дальней руки в координатах игрока — отсюда Player рисует руку хвата.
 func shoulder_local() -> Vector2:
 	var info: Dictionary = _load_manifest().states[animation.trim_suffix("_noarm")]
@@ -68,7 +93,8 @@ func shoulder_local() -> Vector2:
 	return position + local
 
 
-func _physics_process(_delta: float) -> void:
+func _physics_process(delta: float) -> void:
+	_update_pop(delta)
 	visible = Art.enabled
 	if not Art.enabled or _player == null:
 		return

@@ -443,6 +443,8 @@ func push(offset: Vector2) -> void:
 func die() -> void:
 	if not alive:
 		return
+	if visible:
+		JellyBurst.burst(self)  # лопнул брызгами
 	alive = false
 	visible = false
 	velocity = Vector2.ZERO
@@ -477,6 +479,9 @@ func respawn(at: Vector2) -> void:
 	_enable_collisions(true)
 	alive = true
 	visible = true
+	if _sprite:
+		_sprite.pop_in()
+	JellyBurst.pop(self)
 
 
 func _enable_collisions(enabled: bool) -> void:
