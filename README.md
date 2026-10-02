@@ -16,7 +16,7 @@
 
 Автономный exe: `build_exe.bat` собирает `build/windows/Glue.exe` — один файл, запускается на любом Windows x64 без Godot. Нужны шаблоны экспорта Godot 4.7 в `%APPDATA%\Godot\export_templates\4.7.stable\`. Папка `build/` не хранится в git.
 
-Автотесты: `tools\godot\Godot_v4.7-stable_win64_console.exe --headless --path . res://tests/stage1_smoke.tscn` (и `stage2_smoke.tscn` … `stage5_smoke.tscn`, `stage7_smoke.tscn`, `stage7_levels_smoke.tscn`, `menu_smoke.tscn`). Превью уровней в PNG: `tests/preview.tscn` (как запускать — в шапке `tests/preview.gd`). В игре: Start или Esc — пауза (рестарт с чекпоинта, выбор уровня); F2 — следующий уровень, F3 — персонажи или серые прямоугольники с хитбоксом, F5 — заново; в меню F9 открывает все уровни для отладки.
+Автотесты: `tools\godot\Godot_v4.7-stable_win64_console.exe --headless --path . res://tests/stage1_smoke.tscn` (и `stage2_smoke.tscn` … `stage5_smoke.tscn`, `stage7_smoke.tscn`, `stage7_levels_smoke.tscn`, `hazards_smoke.tscn`, `menu_smoke.tscn`). Превью уровней в PNG: `tests/preview.tscn` (как запускать — в шапке `tests/preview.gd`). В игре: Start или Esc — пауза (рестарт с чекпоинта, выбор уровня); F2 — следующий уровень, F3 — персонажи или серые прямоугольники с хитбоксом, F5 — заново; в меню F9 открывает все уровни для отладки.
 
 Графика (этап 6): персонаж — `tools/blender/character.py` → `assets/characters/v2/` ([как устроено](docs/03_визуал_и_производство.md#персонаж-v2-02102026--правка-дефектов-v1)); механизмы — `tools/blender/props.py`; платформы — `src/level/ground.gd` с текстурами из `tools/blender/make_tiles.py` ([как устроено](docs/03_визуал_и_производство.md#платформы-02102026)); задники — `levels/backdrops/` и слой `Landmark` в каждом уровне.
 

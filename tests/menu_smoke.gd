@@ -36,7 +36,7 @@ func _catalog() -> void:
 	check(Levels.next_built(0, 2) == 3, "после 03 идёт 04")
 	check(Levels.next_built(0, built - 1) == -1, "после последнего собранного (%02d) — возврат в меню" % built)
 	check(Levels.debug_next(0, built - 1) == Vector2i(Levels.EXTRAS_WORLD, 0), "F2 после последнего — комнаты прототипа")
-	check(Levels.debug_next(Levels.EXTRAS_WORLD, 1) == Vector2i(0, 0), "F2 после комнат — снова уровень 01")
+	check(Levels.debug_next(Levels.EXTRAS_WORLD, Levels.EXTRAS.size() - 1) == Vector2i(0, 0), "F2 после комнат — снова уровень 01")
 
 
 func _progress() -> void:

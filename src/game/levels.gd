@@ -35,6 +35,7 @@ const WORLDS: Array[Dictionary] = [
 ## Комнаты прототипа: открыты всегда, в прогресс не входят.
 const EXTRAS: Array[Dictionary] = [
 	{"title": "Песочница", "scene": "res://levels/sandbox.tscn"},
+	{"title": "Опасности", "scene": "res://levels/hazards.tscn"},
 	{"title": "Комната этапа 1", "scene": "res://levels/test_room.tscn"},
 ]
 ## Номер мира для комнат прототипа.
