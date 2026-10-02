@@ -20,7 +20,7 @@ import sys
 import bmesh
 import bpy
 import numpy as np
-from mathutils import Vector
+from mathutils import Matrix, Vector
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import character as toon  # noqa: E402  (общие материал, контур, сцена)
@@ -37,6 +37,12 @@ WOOD_HEAVY = "7a5230"
 WOOD_HEAVY_DARK = "5c3d22"
 PLANK = "a0703f"
 IRON = "4b5563"
+# Шипы: кованое железо (светлая и тёмная грани, блик) на пороге из тёплого камня кладки.
+SPIKE_LIGHT = "9aa1ab"
+SPIKE_DARK = "4f5662"
+SPIKE_GLINT = "d6dbe1"
+SILL = "6e6253"
+SILL_TOP = "9a8b77"
 RIVET = "9aa3ad"
 STONE = "8b919a"
 STONE_DARK = "6f757e"
@@ -306,6 +312,35 @@ def flag(active: bool) -> Canvas:
     return c
 
 
+def spike(x: float, base_y: float, width: float, height: float, front: float = 0.0):
+    """Кованый четырёхгранный кол остриём вверх, ребром к камере: левая грань светлая,
+    правая тёмная (две плоские половины), тёмный контур вокруг всего кола."""
+    tip = (x, base_y - height)
+    left, right = (x - width / 2.0, base_y), (x + width / 2.0, base_y)
+    polygon_prism([left, tip, right], 6, SPIKE_DARK, front=front, bevel=0.6, outline=0.8, kind="flat")
+    polygon_prism([left, tip, (x, base_y)], 1, SPIKE_LIGHT, front=front + 0.5, bevel=0, outline=0, kind="flat")
+    # Тонкий блик по левому ребру.
+    polygon_prism([(left[0] + 1.2, base_y - 1.0), (tip[0] - 0.3, tip[1] + 3.0), (tip[0] - 1.6, tip[1] + 6.5),
+                   (left[0] + 3.2, base_y - 1.0)], 1, SPIKE_GLINT, front=front + 0.8, bevel=0, outline=0, kind="flat")
+
+
+def spikes(part: str) -> Canvas:
+    """Шипы: каменный порог высотой 8 px (тёплый камень, как кладка уровня) и на нём два
+    кованых кола на кусок 32 px. Игра рисует холст 36 px высотой, низ порога утоплен в землю
+    на 4 px. mid — бесшовный кусок 32 px, end — левый торец порога 10 px без кола."""
+    if part == "mid":
+        c = Canvas(32, 36)
+        box(-20, 28, 52, 37, 20, SILL, bevel=1.5)
+        box(-20, 28, 52, 30.5, 20.5, SILL_TOP, bevel=0.8, outline=0)
+        for x in (8, 24):
+            spike(x, 29, 12, 26, front=4)
+        return c
+    c = Canvas(10, 36)
+    box(1.5, 28, 40, 37, 20, SILL, bevel=3.0)
+    box(3, 28, 40, 30.5, 20.5, SILL_TOP, bevel=0.8, outline=0)
+    return c
+
+
 def seesaw_base() -> Canvas:
     """Опора качелей: деревянные козлы высотой 1 тайл и железная ступица.
     Шарнир игры — точка (48, 12) холста 96×76; пол — низ холста."""
@@ -342,6 +377,8 @@ ASSETS = {
     "flag_off": lambda: flag(False),
     "flag_on": lambda: flag(True),
     "seesaw_base": seesaw_base,
+    "spikes_mid": lambda: spikes("mid"),
+    "spikes_end": lambda: spikes("end"),
 }
 
 
