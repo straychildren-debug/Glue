@@ -6,6 +6,7 @@ extends LevelBot
 const LEVELS := {
 	"11": preload("res://levels/w01_l11_seesaw.tscn"),
 	"12": preload("res://levels/w01_l12_seesaw_throw.tscn"),
+	"13": preload("res://levels/w01_l13_lift.tscn"),
 }
 
 
@@ -199,7 +200,125 @@ func _level_12() -> void:
 	await _both_to_finish()
 
 
+## 13 «Подъёмник». Комната 1: тормоз-рычаг, 2 против 1 поднимает одного; потом вниз уезжает
+## груз, а не человек. Комната 2: «чехарда» — прыжок вес с площадки не снимает, а замерший в
+## воздухе не весит: площадка поднимается под ним; второго поднимает ящик-противовес.
+func _level_13() -> void:
+	var level: GreyboxLevel = game.level
+	var lift1: Lift = level.get_node("Lift1")
+	var c1: Crate = level.get_node("Crate1")
+	var c2: Crate = level.get_node("Crate2")
+	var c3: Crate = level.get_node("Crate3")
+	var left1: AnimatableBody2D = lift1.get_platforms()[0]
+	var right1: AnimatableBody2D = lift1.get_platforms()[1]
+	var lever1: Lever = level.get_node("Lever1")
+	# Подъёмник на тормозе: загружаемся спокойно. Б справа, А закатывает ящик на левую площадку.
+	await _run_to(b, 17.0 * TILE)
+	await frames(30)
+	check(Weight.floor_below(b) == right1 and absf(lift1.offset) < 1.0, "на тормозе один на площадке не уезжает")
+	await _push_crate(a, c1, 13.0 * TILE)
+	await _hop_exact(a, 14.1 * TILE)
+	check(Weight.floor_below(a) == left1 and Weight.floor_below(c1) == left1,
+			"А и ящик на левой площадке (a %s ящик %s)" % [a.global_position, c1.global_position])
+	# А отпускает тормоз рычагом на перегородке: 2 против 1 — Б едет наверх.
+	await _toggle_lever(a, KEYS_1, lever1)
+	check(lever1.active and not lift1.is_locked() and a.grab_target == null,
+			"А отпустил тормоз рычагом (и не схватил Б)")
+	await frames(260)
+	check(lift1.offset > 6.7 * TILE, "А и ящик слева перевесили — Б наверху (ход %.0f)" % lift1.offset)
+	await _walk_to(b, KEYS_2, 20.0 * TILE)
+	check(b.is_on_floor() and b.global_position.y < 5.25 * TILE, "Б сошёл на уступ")
+	# Б грузит на свою площадку два ящика с уступа: 2 против 2 — стоит.
+	await _hop_exact(b, 23.25 * TILE)
+	await _push_crate(b, c2, 16.4 * TILE)
+	await _walk_to(b, KEYS_2, 23.2 * TILE)
+	await _hop_exact(b, 25.8 * TILE)
+	await _push_crate(b, c3, 17.7 * TILE)
+	await _walk_to(b, KEYS_2, 20.0 * TILE)
+	await frames(30)
+	check(Weight.floor_below(c2) == right1 and Weight.floor_below(c3) == right1 and lift1.offset > 6.0 * TILE,
+			"два ящика на площадке Б — 2 против 2, стоит (ход %.0f, ящики %s %s)" % [lift1.offset, c2.global_position, c3.global_position])
+	# А сталкивает свой ящик в тоннель: внизу остаётся только он, 1 против 2 — А едет наверх.
+	await _push_crate(a, c1, 11.7 * TILE)
+	await frames(450)
+	check(lift1.offset < -6.7 * TILE and Weight.floor_below(a) == left1,
+			"А столкнул ящик в тоннель и уехал наверх, ящики вниз (ход %.0f, a %s)" % [lift1.offset, a.global_position])
+	await _walk_to(a, KEYS_1, 12.6 * TILE)
+	await _run_jump(a, KEYS_1, 14.75 * TILE)
+	await frames(30)
+	check(a.is_on_floor() and a.global_position.y < 5.25 * TILE and a.global_position.x > 18.0 * TILE,
+			"А с разбега перепрыгнул на уступ — оба наверху (%s)" % a.global_position)
+
+	# --- Комната 2: «Чехарда».
+	var lift2: Lift = level.get_node("Lift2")
+	var c4: Crate = level.get_node("Crate4")
+	var left2: AnimatableBody2D = lift2.get_platforms()[0]
+	var right2: AnimatableBody2D = lift2.get_platforms()[1]
+	var lever2: Lever = level.get_node("Lever2")
+	await _run_to(b, 34.0 * TILE)
+	await _run_to(a, 31.0 * TILE)
+	await _walk_to(a, KEYS_1, 31.4 * TILE)
+	await _toggle_lever(a, KEYS_1, lever2)
+	await frames(30)
+	check(lever2.active and Weight.floor_below(a) == left2 and Weight.floor_below(b) == right2 and absf(lift2.offset) < 4.0,
+			"А и Б на площадках, тормоз отпущен: 1 против 1 — стоит (a %s b %s)" % [a.global_position, b.global_position])
+	# Ложный путь: простой прыжок вес не снимает — площадка не едет.
+	await _jump_up(b, KEYS_2)
+	await frames(20)
+	check(absf(lift2.offset) < 4.0, "Б подпрыгнул — подъёмник стоит (ход %.0f)" % lift2.offset)
+	# Б поднимается чехардой: противовес — А внизу.
+	await _chehard(b, KEYS_2, lift2, func() -> bool: return lift2.offset >= 6.0 * TILE - 1.0)
+	check(lift2.offset >= 6.0 * TILE - 1.0 and Weight.floor_below(b) == right2,
+			"Б чехардой поднялся до верха (ход %.0f)" % lift2.offset)
+	# Б с выходного уступа сталкивает ящик на свою площадку — теперь противовес у А ящик.
+	await _hop_exact(b, 37.4 * TILE)
+	await _push_crate(b, c4, 34.0 * TILE)
+	await _hop_exact(b, 36.6 * TILE)
+	await frames(20)
+	check(Weight.floor_below(c4) == right2 and b.global_position.y < 0.0,
+			"Б положил ящик на поднятую площадку и вернулся на уступ (ход %.0f)" % lift2.offset)
+	await _chehard(a, KEYS_1, lift2, func() -> bool: return lift2.offset <= -6.0 * TILE + 1.0)
+	check(lift2.offset <= -6.0 * TILE + 1.0 and Weight.floor_below(a) == left2,
+			"А чехардой поднялся до верха, ящик уехал вниз (ход %.0f)" % lift2.offset)
+	await _walk_to(a, KEYS_1, 30.3 * TILE)
+	await _run_jump(a, KEYS_1, 32.0 * TILE)
+	await frames(30)
+	check(a.is_on_floor() and a.global_position.y < 0.0 and a.global_position.x > 35.0 * TILE,
+			"А с разбега на выходном уступе (%s)" % a.global_position)
+	await _both_to_finish()
+
+
 # --- Приёмы --------------------------------------------------------------------------------
+
+## Нажать хват у рычага — переключить.
+func _toggle_lever(p: Player, k: Array[Key], lever: Lever) -> void:
+	var before := lever.active
+	await hold(k[GRAB], 3)
+	await frames(3)
+	if lever.active == before:
+		print("    рычаг не переключился: игрок %s, рычаг %s" % [p.global_position, lever.global_position])
+
+
+## «Чехарда» на подъёмнике: прыжок, «Замри» на вершине (замерший не весит), площадка
+## поднимается под ногами и встаёт; ожить, повторить — пока done() не скажет «наверху».
+func _chehard(p: Player, k: Array[Key], lift: Lift, done: Callable) -> void:
+	for cycle in 12:
+		if done.call():
+			return
+		press(k[JUMP], true)
+		for i in 60:
+			await get_tree().physics_frame
+			if i > 3 and p.velocity.y >= -30.0:
+				break
+		tap(k[FREEZE])
+		press(k[JUMP], false)
+		await frames(8)
+		for i in 300:
+			await get_tree().physics_frame
+			if i > 20 and is_zero_approx(lift.speed):
+				break
+		tap(k[FREEZE])
+		await frames(25)
 
 ## Полный прыжок на месте; ждёт приземления.
 func _jump_up(p: Player, k: Array[Key]) -> void:

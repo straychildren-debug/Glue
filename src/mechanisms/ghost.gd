@@ -13,8 +13,8 @@ const RADIUS := 26.0
 const SCALE := 1.35
 
 ## Скорость и разгон, когда никто не смотрит; с места трогается медленно — успеешь обернуться.
-@export var max_speed := 150.0
-@export var accel := 220.0
+@export var max_speed := 230.0
+@export var accel := 420.0
 ## Дальше этого (px) призрак не видит игроков и не чувствует их взгляда — висит на месте.
 @export var range_px := 1400.0
 

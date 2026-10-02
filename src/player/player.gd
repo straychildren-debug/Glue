@@ -339,6 +339,9 @@ func _update_grab() -> void:
 		release_grab()
 	if grab_target != null or _grab_blocked:
 		return
+	if Lever.try_toggle(self):
+		_grab_blocked = true  # нажатие ушло рычагу; до отпускания кнопки никого не хватаем
+		return
 	var nearest: Node2D = null
 	var nearest_distance := grab_range
 	var candidates := get_tree().get_nodes_in_group(GROUP) + get_tree().get_nodes_in_group(Hook.GROUP)

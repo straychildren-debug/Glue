@@ -21,7 +21,7 @@ const WORLDS: Array[Dictionary] = [
 			{"title": "Перевал", "scene": "res://levels/w01_l10_the_pass.tscn"},
 			{"title": "Качели", "scene": "res://levels/w01_l11_seesaw.tscn"},
 			{"title": "Бросок качелей", "scene": "res://levels/w01_l12_seesaw_throw.tscn"},
-			{"title": "Подъёмник", "scene": ""},
+			{"title": "Подъёмник", "scene": "res://levels/w01_l13_lift.tscn"},
 			{"title": "Цепь", "scene": ""},
 			{"title": "Над бездной", "scene": ""},
 			{"title": "Груз через пропасть", "scene": ""},

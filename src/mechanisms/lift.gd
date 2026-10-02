@@ -6,10 +6,17 @@ extends Node2D
 ## Упоры сверху и снизу — пределы хода; фиксатор (lock, обычно защёлка) держит площадки на месте.
 ## Не давит: если площадка или стоящие на ней во что-то упираются (потолок, замерший в воздухе,
 ## игрок под площадкой), подъёмник останавливается.
+## Прыжок с площадки вес не снимает: подпрыгнувший над своей площадкой весит на ней, пока не
+## приземлится, не уйдёт в сторону или не замрёт. Снять вес в воздухе может только «Замри» —
+## на этом держится «чехарда»; иначе подъёмник раскачивали бы простыми прыжками.
+## Едущий вверх, который задевает головой угол потолка на несколько пикселей, сдвигается вбок
+## (как в платформерах), а не останавливает подъёмник.
 ## Положение узла — середина верха левой площадки при нулевом ходе; правая — на span_tiles правее.
 ## Ход offset > 0 — левая ниже, правая выше на столько же.
 
 const DECK := 0.5 * GreyboxLevel.TILE
+## Насколько можно сдвинуть едущего вбок, чтобы он не зацепился за угол (px).
+const NUDGE_MAX := 24.0
 
 @export var width_tiles := 2.0:
 	set(value):
@@ -38,11 +45,20 @@ const DECK := 0.5 * GreyboxLevel.TILE
 @export var accel := 900.0
 ## Фиксатор: пока этот триггер активен, площадки стоят.
 @export var lock: NodePath
+## Тормоз наоборот: площадки стоят, пока триггер (обычно рычаг) НЕ активен — игроки спокойно
+## загружаются и только потом отпускают тормоз.
+@export var lock_inverted := false
+## Пустой подъёмник (ни на одной площадке нет веса) сам возвращается в исходное положение —
+## так не бывает тупика, когда пустая площадка уехала туда, где её не достать.
+@export var rest_speed := 90.0
 
 var offset := 0.0
 var speed := 0.0
 var _left: AnimatableBody2D
 var _right: AnimatableBody2D
+var _airborne := {}  # Player -> площадка, с которой он подпрыгнул (его вес ещё на ней)
+var _standing := {}  # Player -> площадка, на которой он стоял в прошлом кадре
+var _nudges := {}  # едущий -> сдвиг по x в обход угла (собирает _can_move)
 
 
 func _ready() -> void:
@@ -86,15 +102,23 @@ func is_locked() -> bool:
 	if lock.is_empty():
 		return false
 	var trigger := get_node_or_null(lock)
-	return trigger != null and trigger.active
+	if trigger == null:
+		return false
+	return trigger.active != lock_inverted
 
 
 func _physics_process(delta: float) -> void:
 	if Engine.is_editor_hint():
 		return
 	queue_redraw()
-	var diff := Weight.total_on(_left) - Weight.total_on(_right)
+	_track_jumpers()
+	var left_load := _load_on(_left)
+	var right_load := _load_on(_right)
+	var diff := left_load - right_load
 	var target := 0.0 if is_locked() else clampf(diff * speed_per_mass, -max_speed, max_speed)
+	var rest := start_offset_tiles * GreyboxLevel.TILE
+	if not is_locked() and left_load <= 0.0 and right_load <= 0.0 and absf(offset - rest) > 0.5:
+		target = signf(rest - offset) * minf(rest_speed, absf(rest - offset) * 8.0)
 	speed = move_toward(speed, target, accel * delta)
 	var low := min_offset_tiles * GreyboxLevel.TILE
 	var high := max_offset_tiles * GreyboxLevel.TILE
@@ -103,17 +127,51 @@ func _physics_process(delta: float) -> void:
 		speed = 0.0  # на упоре
 		return
 	# Левая едет на step, правая — на −step. Если хоть одна упрётся — стоят обе (один трос).
+	_nudges.clear()
 	if not _can_move(_left, step) or not _can_move(_right, -step):
 		speed = 0.0
 		return
+	for body: Node2D in _nudges:
+		body.global_position.x += _nudges[body]
 	offset += step
 	_place_platforms()
 	Player.follow_carrier(_left)
 	Player.follow_carrier(_right)
 
 
-## Может ли площадка сдвинуться на dy: сама — не въезжая в чужие тела, стоящие на ней — не
-## упираясь головой (их пробный сдвиг; столкновения внутри своей стопки не считаются).
+## Вес на площадке: стоящие на ней (Weight) и подпрыгнувшие с неё.
+func _load_on(platform: AnimatableBody2D) -> float:
+	var total := Weight.total_on(platform)
+	for player: Player in _airborne:
+		if _airborne[player] == platform:
+			total += player.mass
+			for body: Node in Weight.stack_on(player):
+				total += body.mass
+	return total
+
+
+## Кто подпрыгнул со своей площадки и ещё висит над ней (не замер, не приземлился).
+func _track_jumpers() -> void:
+	var standing := {}
+	for platform: AnimatableBody2D in [_left, _right]:
+		for body: Node in Weight.stack_on(platform):
+			if body is Player:
+				standing[body] = platform
+	var half := width_tiles * GreyboxLevel.TILE / 2.0 + Player.SIZE.x / 2.0
+	for player: Player in get_tree().get_nodes_in_group(Player.GROUP):
+		var platform: AnimatableBody2D = _airborne.get(player, _standing.get(player))
+		var airborne := player.alive and not player.frozen and not player.is_on_floor() 				and not standing.has(player) and platform != null 				and absf(player.global_position.x - platform.global_position.x) < half 				and player.global_position.y < platform.global_position.y
+		if airborne:
+			_airborne[player] = platform
+		else:
+			_airborne.erase(player)
+	_standing = standing
+
+
+## Может ли площадка сдвинуться на dy: сама — не въезжая в чужие тела; стоящие на ней — не
+## упираясь в чужое (их пробный сдвиг без своей площадки и своей стопки). Задевший угол краем
+## сдвигается вбок. Вверх: не обойти угол — подъёмник стоит. Вниз: кто стоит на краю уступа
+## больше, чем на площадке, остаётся на уступе (площадка уходит из-под него).
 func _can_move(platform: AnimatableBody2D, dy: float) -> bool:
 	var riders := Weight.stack_on(platform)
 	var size := Vector2(width_tiles * GreyboxLevel.TILE, DECK)
@@ -121,20 +179,51 @@ func _can_move(platform: AnimatableBody2D, dy: float) -> bool:
 	for player: Player in get_tree().get_nodes_in_group(Player.GROUP):
 		# Замерший в воздухе над площадкой — упор, а не седок, хоть и висит над ней вплотную.
 		var rides := riders.has(player) and (not player.frozen or player.carrier == platform)
-		if player.alive and not rides \
-				and next.intersects(Rect2(player.global_position - Player.SIZE / 2.0, Player.SIZE)):
+		if player.alive and not rides 				and next.intersects(Rect2(player.global_position - Player.SIZE / 2.0, Player.SIZE)):
 			return false
 	for crate: Crate in get_tree().get_nodes_in_group(Crate.GROUP):
 		if crate.visible and not riders.has(crate) and next.intersects(crate.get_rect()):
 			return false
-	if dy < 0.0:
-		var collision := KinematicCollision2D.new()
-		for body: PhysicsBody2D in riders:
-			if body.test_move(body.global_transform, Vector2(0, dy), collision):
-				var other := collision.get_collider()
-				if other != platform and not riders.has(other):
-					return false
+	for body: PhysicsBody2D in riders:
+		var hit := _hit(body, body.global_transform, Vector2(0, dy), platform, riders)
+		if hit == null:
+			continue
+		var nudge := _corner_nudge(body, dy, hit.get_position().x, platform, riders)
+		if not is_nan(nudge):
+			_nudges[body] = nudge
+		elif dy < 0.0 or (body is Player and body.frozen):
+			return false  # упёрся головой; замерший едет якорем — его площадка не бросает
 	return true
+
+
+## Столкновение едущего с чужим телом при сдвиге motion из положения from (null — свободно).
+## Своя площадка и своя стопка не считаются.
+func _hit(body: PhysicsBody2D, from: Transform2D, motion: Vector2, platform: Node, riders: Array) -> KinematicCollision2D:
+	var collision := KinematicCollision2D.new()
+	body.add_collision_exception_with(platform)
+	var hit := body.test_move(from, motion, collision)
+	body.remove_collision_exception_with(platform)
+	if not hit or riders.has(collision.get_collider()):
+		return null
+	return collision
+
+
+## Сдвиг вбок, после которого едущий проходит мимо угла (NAN — не выйдет): от угла, до NUDGE_MAX.
+## Замерших не сдвигаем — они держатся за площадку своим якорем.
+func _corner_nudge(body: PhysicsBody2D, dy: float, corner_x: float, platform: Node, riders: Array) -> float:
+	if body is Player and body.frozen:
+		return NAN
+	var away := signf(body.global_position.x - corner_x)
+	if away == 0.0:
+		return NAN
+	for n in range(2, int(NUDGE_MAX) + 1, 2):
+		var shift := Vector2(away * n, 0)
+		var side := _hit(body, body.global_transform, shift, platform, riders)
+		if side != null and absf(side.get_normal().x) > 0.7:
+			return NAN  # сбоку стена или сосед
+		if _hit(body, body.global_transform.translated(shift), Vector2(0, dy), platform, riders) == null:
+			return away * n
+	return NAN
 
 
 func save_state() -> Variant:
@@ -144,6 +233,8 @@ func save_state() -> Variant:
 func load_state(state: Variant) -> void:
 	offset = state
 	speed = 0.0
+	_airborne.clear()
+	_standing.clear()
 	if _left:
 		_place_platforms()
 	queue_redraw()

@@ -1,0 +1,65 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://src/level/greybox_level.gd" id="1"]
+[ext_resource type="PackedScene" path="res://levels/backdrops/w01_valley.tscn" id="bd"]
+[ext_resource type="Script" path="res://src/mechanisms/finish.gd" id="4"]
+[ext_resource type="Script" path="res://src/mechanisms/crate.gd" id="5"]
+[ext_resource type="Script" path="res://src/mechanisms/lift.gd" id="6"]
+[ext_resource type="Script" path="res://src/mechanisms/lever.gd" id="7"]
+
+[node name="Lift" type="Node2D"]
+script = ExtResource("1")
+title = "13 · Подъёмник"
+blocks = Array[Rect2]([Rect2(0, -8, 1, 31), Rect2(3, 12, 9.25, 1), Rect2(2, 16.5, 1, 6.5), Rect2(1, 14.25, 1, 8.75), Rect2(3, 18.75, 9.25, 4.25), Rect2(12.25, 19.25, 6, 3.75), Rect2(14.75, 12, 1, 4.75), Rect2(18.25, 5.25, 8.75, 17.75), Rect2(27, 7.25, 1.5, 15.75), Rect2(28.5, 9.25, 1.5, 13.75), Rect2(28.5, 5.25, 1.5, 0.5), Rect2(30, 11.75, 5, 11.25), Rect2(32, 5.25, 1, 4), Rect2(35, -0.75, 4, 23.75), Rect2(39, -8, 1, 31)])
+checkpoints = Array[Vector2]([Vector2(4, 12), Vector2(25, 5.25)])
+bounds_tiles = Rect2(0, -8, 40, 31)
+kill_y_tiles = 22.5
+
+[node name="Lift1" type="Node2D" parent="."]
+position = Vector2(864, 768)
+script = ExtResource("6")
+width_tiles = 2.5
+span_tiles = 3.5
+min_offset_tiles = -6.75
+max_offset_tiles = 6.75
+lock = NodePath("../Lever1")
+lock_inverted = true
+
+[node name="Lever1" type="Node2D" parent="."]
+position = Vector2(976, 768)
+script = ExtResource("7")
+
+[node name="Crate1" type="CharacterBody2D" parent="."]
+position = Vector2(448, 735)
+script = ExtResource("5")
+
+[node name="Crate2" type="CharacterBody2D" parent="."]
+position = Vector2(1408, 303)
+script = ExtResource("5")
+
+[node name="Crate3" type="CharacterBody2D" parent="."]
+position = Vector2(1568, 303)
+script = ExtResource("5")
+
+[node name="Lift2" type="Node2D" parent="."]
+position = Vector2(1984, 336)
+script = ExtResource("6")
+span_tiles = 3.0
+min_offset_tiles = -6.0
+max_offset_tiles = 6.0
+lock = NodePath("../Lever2")
+lock_inverted = true
+
+[node name="Lever2" type="Node2D" parent="."]
+position = Vector2(2080, 336)
+script = ExtResource("7")
+
+[node name="Crate4" type="CharacterBody2D" parent="."]
+position = Vector2(2304, -81)
+script = ExtResource("5")
+
+[node name="Finish" type="Node2D" parent="."]
+position = Vector2(2432, -48)
+script = ExtResource("4")
+
+[node name="Backdrop" parent="." instance=ExtResource("bd")]

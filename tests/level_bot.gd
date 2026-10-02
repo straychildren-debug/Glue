@@ -299,6 +299,33 @@ func _hop_to(p: Player, target_x: float, delay := 0) -> void:
 	await frames(5)
 
 
+## Прыжок к target_x с торможением в воздухе: приземляется точно (±10 px) — на узкое место.
+func _hop_exact(p: Player, target_x: float) -> void:
+	var k := _keys(p)
+	press(k[JUMP], true)
+	for i in 100:
+		await get_tree().physics_frame
+		if i == 30:
+			press(k[JUMP], false)
+		var dx := target_x - p.global_position.x
+		var v := p.velocity.x
+		var dir := 0
+		if absf(dx) > 4.0:
+			dir = 1 if dx > 0.0 else -1
+			var stopping := v * v / (2.0 * p.air_accel) + absf(v) / 30.0
+			if v * dir > 0.0 and absf(dx) <= stopping:
+				dir = -dir  # пора тормозить
+		elif absf(v) > 20.0:
+			dir = -1 if v > 0.0 else 1
+		press(k[RIGHT], dir > 0)
+		press(k[LEFT], dir < 0)
+		if i > 5 and (p.is_on_floor() or not p.alive):
+			break
+	for key in [k[JUMP], k[LEFT], k[RIGHT]]:
+		press(key, false)
+	await frames(5)
+
+
 ## Оба идут в дверь: первым — тот, кто ближе к ней.
 func _both_to_finish() -> void:
 	var door_x: float = game.level.get_finish().global_position.x
