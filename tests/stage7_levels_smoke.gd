@@ -7,7 +7,10 @@ const LEVELS := {
 	"11": preload("res://levels/w01_l11_seesaw.tscn"),
 	"12": preload("res://levels/w01_l12_seesaw_throw.tscn"),
 	"13": preload("res://levels/w01_l13_lift.tscn"),
+	"14": preload("res://levels/w01_l14_chain.tscn"),
 }
+## Черновики: бот ещё доводится — запускаются только явно (-- 14), в общий прогон не входят.
+const DRAFTS := ["14"]
 
 
 func _ready() -> void:
@@ -15,6 +18,8 @@ func _ready() -> void:
 	var first := true
 	for id: String in LEVELS:
 		if not only.is_empty() and id not in only:
+			continue
+		if only.is_empty() and id in DRAFTS:
 			continue
 		if first:
 			game = await start_game(LEVELS[id])
@@ -288,7 +293,163 @@ func _level_13() -> void:
 	await _both_to_finish()
 
 
+## 14 «Цепь». Комната 1: крюк над шипами — повиснуть, раскачаться, перелететь. Комната 2:
+## высокий крюк достают только с головы товарища, второй цепляется за руку — и цепь перелетает.
+## Комната 3: замерший — камень, шипы ему не страшны; кто стал мостом, тот выходит гибелью к
+## чекпоинту, который товарищ уже взял на том берегу.
+func _level_14() -> void:
+	var level: GreyboxLevel = game.level
+	var hook1: Hook = level.get_node("Hook1")
+	var hook2: Hook = level.get_node("Hook2")
+	# Комната 1: каждый сам — прыжок к крюку, раскачка, прыжок с хвата на тот берег.
+	await _walk_to(a, KEYS_1, 7.5 * TILE)
+	check(await _jump_to_hook(a, KEYS_1, hook1, 10.0 * TILE), "А в прыжке схватился за крюк над шипами")
+	await _swing_off(a, KEYS_1, 20.0 * TILE)
+	check(a.alive and a.is_on_floor() and a.global_position.x > 18.0 * TILE, "А перелетел шипы с крюка (%s)" % a.global_position)
+	await _walk_to(b, KEYS_2, 7.5 * TILE)
+	check(await _jump_to_hook(b, KEYS_2, hook1, 10.0 * TILE), "Б схватился за крюк")
+	await _swing_off(b, KEYS_2, 19.0 * TILE)
+	check(b.alive and b.is_on_floor() and b.global_position.x > 18.0 * TILE, "Б перелетел шипы (%s)" % b.global_position)
+
+	# Комната 2: высокий крюк. Ложный путь: с прыжка не достать.
+	await _walk_to(a, KEYS_1, 24.6 * TILE)
+	await _walk_to(b, KEYS_2, 23.6 * TILE)
+	await _walk_to(a, KEYS_1, 25.55 * TILE)
+	press(KEYS_1[GRAB], true)
+	await _jump_up(a, KEYS_1)
+	check(a.grab_target == null and a.is_on_floor(), "с прыжка высокий крюк не достать")
+	press(KEYS_1[GRAB], false)
+	await frames(5)
+	# Б с головы А прыгает к крюку, А в прыжке хватается за руку Б — цепь.
+	await _onto_head(b, a)
+	press(KEYS_2[GRAB], true)
+	await _hop_exact(b, hook2.global_position.x)
+	check(b.grab_target == hook2, "Б с головы А схватился за высокий крюк (%s)" % b.global_position)
+	press(KEYS_1[GRAB], true)
+	await _jump_up(a, KEYS_1)
+	check(a.grab_target == b, "А в прыжке схватился за руку Б — цепь (%s)" % a.global_position)
+	await _swing_off(a, KEYS_1, 39.0 * TILE, [KEYS_2])
+	check(a.alive and a.is_on_floor() and a.global_position.x > 36.0 * TILE, "нижний в цепи перелетел шипы (%s)" % a.global_position)
+	await _swing_off(b, KEYS_2, 38.0 * TILE)
+	check(b.alive and b.is_on_floor() and b.global_position.x > 36.0 * TILE, "Б один раскачался на крюке и перелетел (%s)" % b.global_position)
+
+	# Комната 3: широкие шипы. А прыгает в них и замирает — камень; Б по его голове на тот берег.
+	await _walk_to(a, KEYS_1, 41.0 * TILE)
+	await _walk_to(b, KEYS_2, 39.0 * TILE)
+	await _walk_to(a, KEYS_1, 43.0 * TILE)
+	press(KEYS_1[RIGHT], true)
+	for i in 120:
+		await get_tree().physics_frame
+		if a.global_position.x >= 44.8 * TILE:
+			break
+	press(KEYS_1[JUMP], true)
+	for i in 90:
+		await get_tree().physics_frame
+		if a.velocity.y > 0.0 and a.global_position.y + Player.SIZE.y / 2.0 >= 12.0 * TILE:
+			break
+	tap(KEYS_1[FREEZE])
+	press(KEYS_1[JUMP], false)
+	press(KEYS_1[RIGHT], false)
+	await frames(30)
+	check(a.alive and a.frozen, "А замер над шипами — камень (%s)" % a.global_position)
+	var landed := await _run_onto(b, KEYS_2, a, 44.8 * TILE)
+	check(landed, "Б с разбега на голове А над шипами (%s)" % b.global_position)
+	await _hop_exact(b, 53.5 * TILE)
+	await frames(10)
+	check(b.alive and b.is_on_floor() and b.global_position.x > 51.0 * TILE, "Б по голове А — на тот берег (%s)" % b.global_position)
+	# А оживает в шипах — погибает, и оба появляются у чекпоинта, который взял Б.
+	tap(KEYS_1[FREEZE])
+	await frames(150)
+	check(a.alive and a.global_position.x > 51.0 * TILE and b.global_position.x > 51.0 * TILE,
+			"А ожил в шипах — оба у чекпоинта за ними (a %s b %s)" % [a.global_position, b.global_position])
+	await _both_to_finish()
+
+
 # --- Приёмы --------------------------------------------------------------------------------
+
+## Разбег к краю edge_x и прыжок к крюку с зажатым хватом; true — повис на крюке.
+## Хват остаётся зажатым.
+func _jump_to_hook(p: Player, k: Array[Key], hook: Hook, edge_x: float) -> bool:
+	press(k[GRAB], true)
+	press(k[RIGHT], true)
+	var jumped := false
+	for i in 180:
+		await get_tree().physics_frame
+		if not jumped and p.global_position.x >= edge_x - 12.0:
+			press(k[JUMP], true)
+			jumped = true
+		if jumped:
+			var dx := hook.global_position.x - p.global_position.x
+			press(k[RIGHT], dx > 4.0)
+			press(k[LEFT], dx < -4.0)
+		if p.grab_target == hook or not p.alive:
+			break
+	for key in [k[JUMP], k[LEFT], k[RIGHT]]:
+		press(key, false)
+	return p.grab_target == hook
+
+
+## Раскачка на хвате (жмёт по ходу; helpers в цепи качают вместе) и прыжок с хвата вправо на
+## взлёте; в полёте правит к target_x с торможением. Ждёт приземления.
+func _swing_off(p: Player, k: Array[Key], target_x: float, helpers: Array = [], pump := 150) -> void:
+	for i in 900:
+		var right := p.velocity.x >= 0.0
+		for keys: Array in [k] + helpers:
+			press(keys[RIGHT], right)
+			press(keys[LEFT], not right)
+		await get_tree().physics_frame
+		if i > pump and p.velocity.x > 250.0 and p.velocity.y < 0.0:
+			break
+	for keys: Array in [k] + helpers:
+		press(keys[RIGHT], false)
+		press(keys[LEFT], false)
+	press(k[JUMP], true)
+	await frames(2)
+	press(k[GRAB], false)
+	for i in 240:
+		await get_tree().physics_frame
+		if i == 30:
+			press(k[JUMP], false)
+		var dx := target_x - p.global_position.x
+		var v := p.velocity.x
+		var dir := 0
+		if absf(dx) > 4.0:
+			dir = 1 if dx > 0.0 else -1
+			if v * dir > 0.0 and absf(dx) <= v * v / (2.0 * p.air_accel) + absf(v) / 30.0:
+				dir = -dir
+		press(k[RIGHT], dir > 0)
+		press(k[LEFT], dir < 0)
+		if i > 5 and (p.is_on_floor() or not p.alive):
+			break
+	for key in [k[JUMP], k[LEFT], k[RIGHT]]:
+		press(key, false)
+	await frames(10)
+
+
+## Разбег, прыжок у края edge_x и посадка на голову target; true — стоит на нём.
+func _run_onto(p: Player, k: Array[Key], target: Player, edge_x: float) -> bool:
+	press(k[RIGHT], true)
+	var jumped := false
+	var landed := false
+	for i in 200:
+		await get_tree().physics_frame
+		if not jumped and p.global_position.x >= edge_x - 12.0:
+			press(k[JUMP], true)
+			jumped = true
+		if jumped:
+			var dx := target.global_position.x - p.global_position.x
+			press(k[RIGHT], dx > 4.0)
+			press(k[LEFT], dx < -4.0)
+			if i > 5 and p.is_on_floor():
+				landed = p.standing_on() == target
+				break
+		if not p.alive:
+			break
+	for key in [k[JUMP], k[LEFT], k[RIGHT]]:
+		press(key, false)
+	await frames(5)
+	return landed
+
 
 ## Нажать хват у рычага — переключить.
 func _toggle_lever(p: Player, k: Array[Key], lever: Lever) -> void:
