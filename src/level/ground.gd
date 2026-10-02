@@ -6,17 +6,24 @@ extends Node2D
 ## глубже — скала; сверху по открытой кромке — мох; по открытым бокам — каменный край с плющом.
 ## Открытая — значит не прижата к соседнему блоку: на стыке блоков ни мха, ни края нет.
 ## Текстуры привязаны к миру, а не к блоку: соседние блоки продолжают друг друга без шва.
+##
+## Кладка или скала — решает не блок, а рельеф: карта глубины под поверхностью для всего уровня
+## (клетка — полтайла, сглажена), шейдер смешивает кладку и скалу по ней, и граница идёт по швам
+## между камнями. Если решал бы каждый блок от своего верха, на стыке блоков разной высоты
+## в одной строке встречались бы кладка и скала — прямые швы по границам блоков.
 ## Тонкие блоки (балки, насесты) рисует GreyboxLevel деревом. F3 — серые прямоугольники.
 
 const DIR := "res://assets/tiles/world_01/game/"
 ## Текстуры вдвое крупнее, чем на экране при масштабе камеры 1: период повтора = размер / 2.
 const TEXELS_PER_PX := 2.0
-## Кладка у поверхности блока на такую глубину, ниже — скала; нижние MASONRY_FEATHER растушёваны.
+## Кладка у поверхности на такую глубину, переход в скалу — последние MASONRY_FEATHER;
+## граница смещается на ±MASONRY_JITTER по рисунку кладки (швы режут раньше, камни — позже).
 const MASONRY_DEPTH := 2.0 * GreyboxLevel.TILE
 const MASONRY_FEATHER := 0.75 * GreyboxLevel.TILE
-## Узкий и высокий блок — стена уровня: целиком скала.
-const WALL_MAX_WIDTH := 1.5
-const WALL_MIN_HEIGHT := 6.0
+const MASONRY_JITTER := 0.6 * GreyboxLevel.TILE
+## Клетка карты глубины, px, и сколько раз её сглаживать (каждый проход — соседи 3 × 3).
+const DEPTH_CELL := GreyboxLevel.TILE / 2.0
+const DEPTH_BLUR_PASSES := 2
 ## Камень темнеет к низу уровня: последние SHADE_SPAN над линией гибели уходят в DEEP_SHADE.
 ## Тон зависит только от высоты в мире, поэтому соседние блоки не расходятся по тону.
 const DEEP_SHADE := Color(0.6, 0.6, 0.66)
@@ -32,13 +39,68 @@ const MOSS_OVERHANG := 5.0
 const SIDE_EDGE := 0.104
 const EPS := 0.001
 
+const FILL_SHADER := """
+shader_type canvas_item;
+uniform sampler2D stone_tex : repeat_enable, filter_linear_mipmap;
+uniform sampler2D cliff_tex : repeat_enable, filter_linear_mipmap;
+uniform sampler2D depth_map : repeat_disable, filter_linear;
+uniform vec2 stone_period;
+uniform vec2 cliff_period;
+uniform vec2 map_origin;
+uniform vec2 map_size_px;
+uniform float masonry_depth;
+uniform float masonry_feather;
+uniform float masonry_jitter;
+uniform float shade_from;
+uniform float shade_span;
+uniform vec4 deep_shade : source_color;
+varying vec2 world;
+
+void vertex() {
+	world = VERTEX;
+}
+
+void fragment() {
+	vec3 stone = texture(stone_tex, world / stone_period).rgb;
+	vec3 cliff = texture(cliff_tex, world / cliff_period).rgb;
+	float depth = texture(depth_map, (world - map_origin) / map_size_px).r;
+	// Светлые камни кладки держатся глубже, тёмные швы уступают скале раньше.
+	float jitter = (dot(stone, vec3(0.333)) - 0.42) * 2.0 * masonry_jitter;
+	float masonry = 1.0 - smoothstep(masonry_depth - masonry_feather, masonry_depth, depth - jitter);
+	vec3 color = mix(cliff, stone, masonry);
+	color *= mix(vec3(1.0), deep_shade.rgb, clamp((world.y - shade_from) / shade_span, 0.0, 1.0));
+	COLOR = vec4(color, 1.0);
+}
+"""
+
+static var _fill_shader: Shader
+
 var _textures := {}
-var _shade_from := 0.0
+var _fill: Node2D
+var _trim: Node2D
+var _material: ShaderMaterial
+## Блоки уровня, подготовленные к рисованию (без тонких, низ продлён под камеру), в тайлах.
+var _blocks: Array[Rect2] = []
+var _built_for := ""
 
 
 func _ready() -> void:
-	texture_repeat = CanvasItem.TEXTURE_REPEAT_ENABLED
-	texture_filter = CanvasItem.TEXTURE_FILTER_LINEAR_WITH_MIPMAPS
+	if _fill_shader == null:
+		_fill_shader = Shader.new()
+		_fill_shader.code = FILL_SHADER
+	_material = ShaderMaterial.new()
+	_material.shader = _fill_shader
+	_fill = Node2D.new()
+	_fill.name = "Fill"
+	_fill.material = _material
+	_fill.draw.connect(_draw_fill)
+	add_child(_fill, false, Node.INTERNAL_MODE_FRONT)
+	_trim = Node2D.new()
+	_trim.name = "Trim"
+	_trim.texture_repeat = CanvasItem.TEXTURE_REPEAT_ENABLED
+	_trim.texture_filter = CanvasItem.TEXTURE_FILTER_LINEAR_WITH_MIPMAPS
+	_trim.draw.connect(_draw_trim)
+	add_child(_trim, false, Node.INTERNAL_MODE_FRONT)
 
 
 func _tex(name: String) -> Texture2D:
@@ -47,42 +109,127 @@ func _tex(name: String) -> Texture2D:
 	return _textures[name]
 
 
+## Перестроить по блокам уровня. GreyboxLevel зовёт при каждой своей перерисовке (и при взятии
+## чекпоинта), поэтому карта глубины пересчитывается, только если изменились блоки или F3.
 func _draw() -> void:
 	var level := get_parent() as GreyboxLevel
-	if level == null or not Art.enabled:
+	var key := "%s|%s|%s" % [Art.enabled, level.blocks if level else null, level.bounds_tiles if level else null]
+	if key == _built_for:
 		return
-	_shade_from = level.get_kill_y() - SHADE_SPAN
-	var blocks: Array[Rect2] = []
-	var bottom := level.bounds_tiles.end.y
-	for rect in level.blocks:
-		if rect.size.y <= 0.5:
-			continue
-		if rect.end.y >= bottom - BOTTOM_REACH:
-			rect.size.y = bottom + BOTTOM_EXTRA - rect.position.y
-		blocks.append(rect)
-	for rect in blocks:
-		_draw_fill(rect)
-	for rect in blocks:
-		for span in _open_side(rect, blocks, true):
-			_draw_side(rect.position.x, span, true)
-		for span in _open_side(rect, blocks, false):
-			_draw_side(rect.end.x, span, false)
-	for rect in blocks:
-		for span in _open_top(rect, blocks):
+	_built_for = key
+	_blocks.clear()
+	if level != null and Art.enabled:
+		var bottom := level.bounds_tiles.end.y
+		for rect in level.blocks:
+			if rect.size.y <= 0.5:
+				continue
+			if rect.end.y >= bottom - BOTTOM_REACH:
+				rect.size.y = bottom + BOTTOM_EXTRA - rect.position.y
+			_blocks.append(rect)
+		_update_material(level)
+	_fill.queue_redraw()
+	_trim.queue_redraw()
+
+
+func _update_material(level: GreyboxLevel) -> void:
+	var area := level.bounds_tiles
+	area.size.y += BOTTOM_EXTRA
+	var origin := area.position * GreyboxLevel.TILE
+	var depth := _depth_map(area)
+	var stone := _tex("w01_stone_fill")
+	var cliff := _tex("w01_cliff_fill")
+	_material.set_shader_parameter("stone_tex", stone)
+	_material.set_shader_parameter("cliff_tex", cliff)
+	_material.set_shader_parameter("depth_map", ImageTexture.create_from_image(depth))
+	_material.set_shader_parameter("stone_period", stone.get_size() / TEXELS_PER_PX)
+	_material.set_shader_parameter("cliff_period", cliff.get_size() / TEXELS_PER_PX)
+	_material.set_shader_parameter("map_origin", origin)
+	_material.set_shader_parameter("map_size_px", Vector2(depth.get_size()) * DEPTH_CELL)
+	_material.set_shader_parameter("masonry_depth", MASONRY_DEPTH)
+	_material.set_shader_parameter("masonry_feather", MASONRY_FEATHER)
+	_material.set_shader_parameter("masonry_jitter", MASONRY_JITTER)
+	_material.set_shader_parameter("shade_from", level.get_kill_y() - SHADE_SPAN)
+	_material.set_shader_parameter("shade_span", SHADE_SPAN)
+	_material.set_shader_parameter("deep_shade", DEEP_SHADE)
+
+
+## Карта глубины под поверхностью рельефа (px) по клеткам DEPTH_CELL над областью area (тайлы).
+## В каждом столбце глубина считается от верха сплошного участка; сглаживание — только между
+## твёрдыми клетками (воздух не тянет глубину к нулю у открытых боков); клетка воздуха берёт
+## среднее соседних твёрдых, чтобы линейная фильтрация у края не проваливалась.
+func _depth_map(area: Rect2) -> Image:
+	var per_tile := GreyboxLevel.TILE / DEPTH_CELL
+	var w := int(ceil(area.size.x * per_tile))
+	var h := int(ceil(area.size.y * per_tile))
+	var solid := PackedByteArray()
+	solid.resize(w * h)
+	var depth := PackedFloat32Array()
+	depth.resize(w * h)
+	for x in w:
+		var run_top := -1.0
+		for y in h:
+			var center := area.position + Vector2(x + 0.5, y + 0.5) / per_tile
+			var inside := _blocks.any(func(rect: Rect2) -> bool: return rect.has_point(center))
+			solid[y * w + x] = 1 if inside else 0
+			if not inside:
+				run_top = -1.0
+				continue
+			if run_top < 0.0:
+				run_top = y
+			depth[y * w + x] = (y + 0.5 - run_top) * DEPTH_CELL
+	for pass_index in DEPTH_BLUR_PASSES:
+		var blurred := depth.duplicate()
+		for y in h:
+			for x in w:
+				if solid[y * w + x] == 0:
+					continue
+				var sum := 0.0
+				var count := 0
+				for dy in range(-1, 2):
+					for dx in range(-1, 2):
+						var nx := x + dx
+						var ny := y + dy
+						if nx >= 0 and ny >= 0 and nx < w and ny < h and solid[ny * w + nx] == 1:
+							sum += depth[ny * w + nx]
+							count += 1
+				blurred[y * w + x] = sum / count
+		depth = blurred
+	var image := Image.create(w, h, false, Image.FORMAT_RF)
+	for y in h:
+		for x in w:
+			var value := depth[y * w + x]
+			if solid[y * w + x] == 0:
+				var sum := 0.0
+				var count := 0
+				for offset: Vector2i in [Vector2i(-1, 0), Vector2i(1, 0), Vector2i(0, -1), Vector2i(0, 1)]:
+					var nx := x + offset.x
+					var ny := y + offset.y
+					if nx >= 0 and ny >= 0 and nx < w and ny < h and solid[ny * w + nx] == 1:
+						sum += depth[ny * w + nx]
+						count += 1
+				value = sum / count if count > 0 else 0.0
+			image.set_pixel(x, y, Color(value, 0, 0))
+	return image
+
+
+func _draw_fill() -> void:
+	for rect in _blocks:
+		_fill.draw_rect(Rect2(rect.position * GreyboxLevel.TILE, rect.size * GreyboxLevel.TILE), Color.WHITE)
+
+
+func _draw_trim() -> void:
+	var level := get_parent() as GreyboxLevel
+	if level == null:
+		return
+	var shade_from := level.get_kill_y() - SHADE_SPAN
+	for rect in _blocks:
+		for span in _open_side(rect, _blocks, true):
+			_draw_side(rect.position.x, span, true, shade_from)
+		for span in _open_side(rect, _blocks, false):
+			_draw_side(rect.end.x, span, false, shade_from)
+	for rect in _blocks:
+		for span in _open_top(rect, _blocks):
 			_draw_moss(rect.position.y, span)
-
-
-## Скала на весь блок, поверх — кладка у поверхности с растушёванным низом.
-func _draw_fill(rect: Rect2) -> void:
-	var px := Rect2(rect.position * GreyboxLevel.TILE, rect.size * GreyboxLevel.TILE)
-	_rows(_tex("w01_cliff_fill"), px, Vector2.ZERO, false)
-	if rect.size.x <= WALL_MAX_WIDTH and rect.size.y >= WALL_MIN_HEIGHT:
-		return
-	var solid := minf(px.size.y, MASONRY_DEPTH - MASONRY_FEATHER)
-	var masonry := Rect2(px.position, Vector2(px.size.x, minf(px.size.y, MASONRY_DEPTH)))
-	# Невысокий блок — кладка целиком, без растушёвки.
-	var fade := Vector2(px.position.y + solid, masonry.end.y) if masonry.size.y > solid + EPS else Vector2.ZERO
-	_rows(_tex("w01_stone_fill"), masonry, fade, false)
 
 
 ## Мох по открытому участку кромки [span.x, span.y] (тайлы) на высоте top (тайлы). Не темнеет:
@@ -96,55 +243,32 @@ func _draw_moss(top: float, span: Vector2) -> void:
 	var points := PackedVector2Array([Vector2(x0, y), Vector2(x1, y), Vector2(x1, y + size.y), Vector2(x0, y + size.y)])
 	var uvs := PackedVector2Array([Vector2(x0 / size.x, 0), Vector2(x1 / size.x, 0),
 			Vector2(x1 / size.x, 1), Vector2(x0 / size.x, 1)])
-	draw_polygon(points, PackedColorArray([Color.WHITE]), uvs, texture)
+	_trim.draw_polygon(points, PackedColorArray([Color.WHITE]), uvs, texture)
 
 
 ## Каменный край с плющом по открытому участку бока [span.x, span.y] (тайлы) на x (тайлы).
-## Правый край — зеркальная копия левого.
-func _draw_side(x: float, span: Vector2, left: bool) -> void:
+## Правый край — зеркальная копия левого. Темнеет к низу уровня, как кладка и скала.
+func _draw_side(x: float, span: Vector2, left: bool, shade_from: float) -> void:
 	var texture := _tex("w01_stone_side")
 	var size := texture.get_size() / TEXELS_PER_PX
 	var edge := x * GreyboxLevel.TILE
 	var x0 := edge - SIDE_EDGE * size.x if left else edge + SIDE_EDGE * size.x - size.x
-	var rect := Rect2(x0, span.x * GreyboxLevel.TILE, size.x, (span.y - span.x) * GreyboxLevel.TILE)
-	_rows(texture, rect, Vector2.ZERO, true, not left)
-
-
-## Текстура на прямоугольник мира полосами по высоте: в каждой полосе тон и прозрачность
-## меняются линейно. fade = (y начала, y конца) растушёвки до прозрачности; Vector2.ZERO — без неё.
-## strip — полоса края: по x текстура целиком (зеркально при flip), по y — повтор от мира;
-## иначе повтор по обеим осям от мира.
-func _rows(texture: Texture2D, px: Rect2, fade: Vector2, strip: bool, flip := false) -> void:
-	var period := texture.get_size() / TEXELS_PER_PX
-	var cuts: Array[float] = [px.position.y, px.end.y]
-	for y: float in [_shade_from, _shade_from + SHADE_SPAN, fade.x, fade.y]:
-		if y > px.position.y + EPS and y < px.end.y - EPS and not cuts.has(y):
-			cuts.append(y)
-	cuts.sort()
-	var u0 := px.position.x / period.x
-	var u1 := px.end.x / period.x
-	if strip:
-		u0 = 1.0 if flip else 0.0
-		u1 = 1.0 - u0
+	var x1 := x0 + size.x
+	var u0 := 0.0 if left else 1.0
+	var u1 := 1.0 - u0
+	var cuts: Array[float] = [span.x * GreyboxLevel.TILE, span.y * GreyboxLevel.TILE]
+	for y: float in [shade_from, shade_from + SHADE_SPAN]:
+		if y > cuts[0] + EPS and y < cuts[-1] - EPS:
+			cuts.insert(cuts.size() - 1, y)
 	for i in cuts.size() - 1:
 		var a := cuts[i]
 		var b := cuts[i + 1]
-		var ca := _color_at(a, fade)
-		var cb := _color_at(b, fade)
-		if ca.a <= 0.0 and cb.a <= 0.0:
-			continue
-		var points := PackedVector2Array([Vector2(px.position.x, a), Vector2(px.end.x, a),
-				Vector2(px.end.x, b), Vector2(px.position.x, b)])
-		var uvs := PackedVector2Array([Vector2(u0, a / period.y), Vector2(u1, a / period.y),
-				Vector2(u1, b / period.y), Vector2(u0, b / period.y)])
-		draw_polygon(points, PackedColorArray([ca, ca, cb, cb]), uvs, texture)
-
-
-func _color_at(y: float, fade: Vector2) -> Color:
-	var color := Color.WHITE.lerp(DEEP_SHADE, clampf((y - _shade_from) / SHADE_SPAN, 0.0, 1.0))
-	if fade != Vector2.ZERO:
-		color.a = 1.0 - clampf((y - fade.x) / (fade.y - fade.x), 0.0, 1.0)
-	return color
+		var points := PackedVector2Array([Vector2(x0, a), Vector2(x1, a), Vector2(x1, b), Vector2(x0, b)])
+		var uvs := PackedVector2Array([Vector2(u0, a / size.y), Vector2(u1, a / size.y),
+				Vector2(u1, b / size.y), Vector2(u0, b / size.y)])
+		var ca := Color.WHITE.lerp(DEEP_SHADE, clampf((a - shade_from) / SHADE_SPAN, 0.0, 1.0))
+		var cb := Color.WHITE.lerp(DEEP_SHADE, clampf((b - shade_from) / SHADE_SPAN, 0.0, 1.0))
+		_trim.draw_polygon(points, PackedColorArray([ca, ca, cb, cb]), uvs, texture)
 
 
 ## Участки верхней кромки, над которыми нет другого блока.
