@@ -1,12 +1,12 @@
 class_name PlayerSprite
 extends AnimatedSprite2D
-## Внешний вид игрока: кадры из Blender (tools/blender/character.py → assets/characters/v1).
+## Внешний вид игрока: кадры из Blender (tools/blender/character.py → assets/characters/v2).
 ## Физика и хитбокс остаются у Player — спрайт только выбирает анимацию по его состоянию.
 ## Вариант «_noarm» — без дальней руки: пока игрок держит товарища или тянется к нему,
 ## руку рисует Player, и она тянется под любым углом.
 
-const MANIFEST := "res://assets/characters/v1/character_sheets.json"
-const SHEET_DIR := "res://assets/characters/v1/"
+const MANIFEST := "res://assets/characters/v2/character_sheets.json"
+const SHEET_DIR := "res://assets/characters/v2/"
 const COLOR_KEYS: Array[String] = ["red", "blue", "yellow", "green"]
 const OUTLINE_COLOR := Color("1a1d33")
 ## Скорость падения, после которой приземление проигрывает сплющивание.

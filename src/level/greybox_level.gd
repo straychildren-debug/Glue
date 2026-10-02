@@ -38,6 +38,7 @@ var active_checkpoint := 0:
 ## Состояние механизмов на момент взятия активного чекпоинта: узел -> состояние.
 var _snapshot := {}
 var _sky: Node2D
+var _ground: Ground
 
 
 func _ready() -> void:
@@ -46,6 +47,10 @@ func _ready() -> void:
 	_sky.z_index = -2
 	_sky.draw.connect(_draw_sky)
 	add_child(_sky, false, Node.INTERNAL_MODE_FRONT)
+	# Платформы в графике мира — над небом и заслонками (z = -1), под механизмами и игроками.
+	_ground = Ground.new()
+	_ground.name = "Ground"
+	add_child(_ground, false, Node.INTERNAL_MODE_FRONT)
 	if Engine.is_editor_hint():
 		return
 	for rect in blocks:
@@ -130,6 +135,8 @@ func _draw_sky() -> void:
 
 
 func _draw() -> void:
+	if _ground:
+		_ground.queue_redraw()  # F3 и правка блоков в редакторе перерисовывают и платформы
 	for rect in blocks:
 		var px := Rect2(rect.position * TILE, rect.size * TILE)
 		if rect.size.y <= 0.5:
@@ -140,6 +147,8 @@ func _draw() -> void:
 			draw_rect(px, beam_color)
 			draw_rect(px, beam_color.darkened(0.4), false, 2.0)
 			continue
+		if Art.enabled:
+			continue  # толстые блоки в графике рисует Ground
 		draw_rect(px, block_color)
 		draw_rect(Rect2(px.position, Vector2(px.size.x, minf(10.0, px.size.y))), top_color)
 		draw_rect(px, block_color.darkened(0.3), false, 2.0)

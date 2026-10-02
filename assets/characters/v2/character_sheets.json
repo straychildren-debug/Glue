@@ -1,0 +1,196 @@
+{
+  "cell": 256,
+  "columns": 8,
+  "states": {
+    "idle": {
+      "row": 0,
+      "frames": 8,
+      "fps": 8,
+      "loop": true,
+      "shoulder": [
+        [
+          168.1,
+          118.2
+        ],
+        [
+          167.5,
+          116.6
+        ],
+        [
+          167.3,
+          116.0
+        ],
+        [
+          167.5,
+          116.6
+        ],
+        [
+          168.1,
+          118.2
+        ],
+        [
+          168.6,
+          119.7
+        ],
+        [
+          168.9,
+          120.3
+        ],
+        [
+          168.6,
+          119.7
+        ]
+      ]
+    },
+    "run": {
+      "row": 1,
+      "frames": 8,
+      "fps": 14,
+      "loop": true,
+      "shoulder": [
+        [
+          178.8,
+          119.4
+        ],
+        [
+          179.4,
+          123.3
+        ],
+        [
+          179.6,
+          128.3
+        ],
+        [
+          179.4,
+          123.3
+        ],
+        [
+          178.8,
+          119.4
+        ],
+        [
+          179.4,
+          123.3
+        ],
+        [
+          179.6,
+          128.3
+        ],
+        [
+          179.4,
+          123.3
+        ]
+      ]
+    },
+    "jump": {
+      "row": 2,
+      "frames": 1,
+      "fps": 1,
+      "loop": false,
+      "shoulder": [
+        [
+          169.6,
+          112.2
+        ]
+      ]
+    },
+    "fall": {
+      "row": 3,
+      "frames": 2,
+      "fps": 6,
+      "loop": true,
+      "shoulder": [
+        [
+          169.3,
+          119.6
+        ],
+        [
+          169.3,
+          119.6
+        ]
+      ]
+    },
+    "land": {
+      "row": 4,
+      "frames": 3,
+      "fps": 18,
+      "loop": false,
+      "shoulder": [
+        [
+          173.7,
+          132.5
+        ],
+        [
+          170.9,
+          125.3
+        ],
+        [
+          168.9,
+          120.3
+        ]
+      ]
+    },
+    "hang": {
+      "row": 5,
+      "frames": 4,
+      "fps": 6,
+      "loop": true,
+      "shoulder": [
+        [
+          166.9,
+          114.6
+        ],
+        [
+          166.9,
+          114.6
+        ],
+        [
+          166.9,
+          114.6
+        ],
+        [
+          166.9,
+          114.6
+        ]
+      ]
+    },
+    "freeze": {
+      "row": 6,
+      "frames": 1,
+      "fps": 1,
+      "loop": false,
+      "shoulder": [
+        [
+          170.5,
+          121.0
+        ]
+      ]
+    }
+  },
+  "sheets": {
+    "red": {
+      "full": "red_full.png",
+      "noarm": "red_noarm.png"
+    },
+    "blue": {
+      "full": "blue_full.png",
+      "noarm": "blue_noarm.png"
+    },
+    "yellow": {
+      "full": "yellow_full.png",
+      "noarm": "yellow_noarm.png"
+    },
+    "green": {
+      "full": "green_full.png",
+      "noarm": "green_noarm.png"
+    }
+  },
+  "feet": [
+    128.0,
+    221.5
+  ],
+  "head_top": [
+    128.0,
+    32.5
+  ]
+}

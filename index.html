@@ -235,7 +235,7 @@ footer a { margin-right: 14px; }
 </footer>
 
 <script>
-// --- Персонаж: кадры из листов assets/characters/v1 (раскладка — character_sheets.json) ---
+// --- Персонаж: кадры из листов assets/characters/v2 (раскладка — character_sheets.json) ---
 const SHEET = { cell: 256, feet: [128, 221.5], headTop: [128, 32.5] };
 const STATES = [
   ["idle", "Покой", 0, 8, 8, true], ["run", "Бег", 1, 8, 14, true], ["jump", "Прыжок", 2, 1, 1, false],
@@ -246,7 +246,7 @@ const COLORS = [["red", "Красный", "#e5484d"], ["blue", "Синий", "#3
 const SIZES = [["big", "Крупно"], ["game", "В игре"], ["all", "Все четыре"]];
 let state = "idle", color = "red", size = "big", start = performance.now();
 const sheets = {};
-for (const [key] of COLORS) { const img = new Image(); img.src = `assets/characters/v1/${key}_full.png`; sheets[key] = img; }
+for (const [key] of COLORS) { const img = new Image(); img.src = `assets/characters/v2/${key}_full.png`; sheets[key] = img; }
 
 function makeButtons(id, items, current, onPick, swatch) {
   const box = document.getElementById(id);

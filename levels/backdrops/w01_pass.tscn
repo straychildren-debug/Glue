@@ -1,0 +1,27 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://src/level/backdrop.gd" id="1"]
+[ext_resource type="Script" path="res://src/level/backdrop_layer.gd" id="2"]
+[ext_resource type="Texture2D" path="res://assets/backgrounds/world_01/v2/game/w01_v2_far_pass_tile.png" id="3"]
+[ext_resource type="Texture2D" path="res://assets/backgrounds/world_01/v2/game/w01_v2_mid_town_tile.png" id="4"]
+
+[node name="Backdrop" type="CanvasLayer"]
+script = ExtResource("1")
+
+[node name="Far" type="Node2D" parent="."]
+script = ExtResource("2")
+texture = ExtResource("3")
+parallax = 0.15
+parallax_y = 0.04
+height = 1.3
+center_y = 0.5
+
+[node name="Mid" type="Node2D" parent="."]
+script = ExtResource("2")
+texture = ExtResource("4")
+parallax = 0.45
+parallax_y = 0.12
+height = 0.95
+center_y = 0.64
+zoom_follow = 0.35
+haze = 0.28

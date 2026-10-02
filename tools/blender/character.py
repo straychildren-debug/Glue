@@ -1,13 +1,20 @@
 """Персонаж «Держись!»: модель, мультяшный материал и рендер превью.
 
 Запуск (без интерфейса Blender):
-    blender -b --factory-startup -P tools/blender/character.py -- --out assets/characters/v1
+    blender -b --factory-startup -P tools/blender/character.py -- --out assets/characters/v2
 
 Персонаж — мармеладный «боб» как на концепт-листе docs/референсы/reference.png:
 тело выше, чем шире, короткие руки и ноги, два вытянутых чёрных глаза, плоская заливка
 с одной тенью и бликом, толстый тёмный контур (вывернутая оболочка).
 Части — отдельные гладкие объекты на иерархии пустышек-«костей»: root → body → arm/leg.
 Единицы — метры. Ноги стоят на z = 0, лицо смотрит на камеру с поворотом вправо.
+
+Контур рисуется по готовому кадру, а не вывернутой оболочкой (v1): оболочка каждой части
+протыкала соседнюю на вогнутых стыках — тёмные зазубрины у плеч и серпик у ступни.
+Каждый кадр рендерится ещё служебным проходом «глубина + номер части». По нему:
+внешний контур — равномерная кайма вокруг силуэта; внутренняя линия — только там, где одна
+часть заметно ближе к камере, чем соседняя (рука перед телом, ближняя нога перед дальней).
+На стыке руки с телом глубина непрерывна — линии нет.
 """
 
 import math
@@ -42,6 +49,17 @@ BODY_SQUARENESS = 0.35  # 0 — эллипсоид, больше — бока п
 BODY_BOTTOM_FLARE = 1.04  # низ чуть шире — «боб», а не яйцо
 LEG_X = 0.22
 ARM_SHOULDER = (0.48, 0.0, 1.05)
+# Номера частей в служебном проходе: линия рисуется только между разными частями.
+# Ступня — та же часть, что нога: шва между ними нет.
+PART_BODY, PART_ARM_L, PART_ARM_R, PART_LEG_L, PART_LEG_R = 1, 2, 3, 4, 5
+# Внутренняя линия тоньше внешней. Её толщина растёт с разницей глубины соседних частей:
+# от нуля при DEPTH_STEP_MIN до полной при DEPTH_STEP_FULL (м) — линия сходит на нет кончиком,
+# а не обрывается ступенькой там, где рука выходит из тела.
+INNER_LINE_WIDTH = 0.045
+DEPTH_STEP_MIN = 0.03
+DEPTH_STEP_FULL = 0.12
+# Рендер в SUPERSAMPLE раз крупнее, линии считаются там же, потом кадр уменьшается — сглаживание.
+SUPERSAMPLE = 2
 
 
 def hex_color(value: str, alpha: float = 1.0) -> tuple:
@@ -212,27 +230,18 @@ def capsule_mesh(name: str, radius: float, length: float) -> bpy.types.Mesh:
     return mesh
 
 
-def add_part(name: str, mesh: bpy.types.Mesh, parent: bpy.types.Object, material,
-             outline_mat, location=(0, 0, 0), rotation=(0, 0, 0), outline=True) -> bpy.types.Object:
+def add_part(name: str, mesh: bpy.types.Mesh, parent: bpy.types.Object, material, part: int,
+             location=(0, 0, 0), rotation=(0, 0, 0)) -> bpy.types.Object:
     obj = bpy.data.objects.new(name, mesh)
     bpy.context.scene.collection.objects.link(obj)
     obj.parent = parent
     obj.location = location
     obj.rotation_euler = rotation
+    obj.pass_index = part
     mesh.materials.append(material)
     subsurf = obj.modifiers.new("Smooth", "SUBSURF")
     subsurf.levels = 1
     subsurf.render_levels = 2
-    if outline:
-        # Вывернутая оболочка: чуть больший силуэт с обратными нормалями, лицевые грани
-        # отсекаются — видна только тёмная кайма вокруг части.
-        mesh.materials.append(outline_mat)
-        solid = obj.modifiers.new("Outline", "SOLIDIFY")
-        solid.thickness = OUTLINE_WIDTH
-        solid.offset = 1.0
-        solid.use_flip_normals = True
-        solid.use_rim = False
-        solid.material_offset = 1
     return obj
 
 
@@ -247,7 +256,7 @@ def add_bone(name: str, parent, location) -> bpy.types.Object:
     return empty
 
 
-def build_character(body_mat, outline_mat, eye_mat) -> dict:
+def build_character(body_mat, eye_mat) -> dict:
     root = add_bone("root", None, (0, 0, 0))
     root.rotation_euler = (0, 0, math.radians(FACING_DEG))
 
@@ -255,7 +264,7 @@ def build_character(body_mat, outline_mat, eye_mat) -> dict:
     body_bone = add_bone("body", root, (0, 0, BODY_CENTER_Z - BODY_RADII[2]))
     body = add_part("Body", ellipsoid_mesh("Body", BODY_RADII, flare=BODY_BOTTOM_FLARE,
                                            squareness=BODY_SQUARENESS),
-                    body_bone, body_mat, outline_mat, location=(0, 0, BODY_RADII[2]))
+                    body_bone, body_mat, PART_BODY, location=(0, 0, BODY_RADII[2]))
 
     def on_face(x: float, z: float, lift: float) -> Vector:
         """Точка на передней поверхности тела (в координатах кости тела)."""
@@ -266,8 +275,7 @@ def build_character(body_mat, outline_mat, eye_mat) -> dict:
     eyes = []
     for side in (-1, 1):
         eye = add_part(f"Eye.{'L' if side < 0 else 'R'}", ellipsoid_mesh("Eye", (0.068, 0.035, 0.14)),
-                       body_bone, eye_mat, outline_mat, location=on_face(0.16 * side, 0.30, -0.012),
-                       outline=False)
+                       body_bone, eye_mat, PART_BODY, location=on_face(0.16 * side, 0.30, -0.012))
         eye.rotation_euler = (math.radians(-10.0), 0, math.radians(-side * 9.0))
         eyes.append(eye)
 
@@ -286,14 +294,17 @@ def build_character(body_mat, outline_mat, eye_mat) -> dict:
     smile = bpy.data.objects.new("Smile", curve)
     bpy.context.scene.collection.objects.link(smile)
     smile.parent = body_bone
+    smile.pass_index = PART_BODY
 
     parts = {"root": root, "body": body_bone, "eyes": eyes}
     for side, label in ((-1, "L"), (1, "R")):
-        # Нога: бедро у низа тела, стопа — сплюснутый шарик чуть вперёд.
+        # Нога: бедро у низа тела, стопа — сплюснутый шарик под ней. Стопа по центру ноги, а не
+        # вынесена вперёд: при повороте персонажа вынесенный носок торчал сбоку бугорком.
+        leg_part = PART_LEG_L if side < 0 else PART_LEG_R
         leg = add_bone(f"leg.{label}", root, (LEG_X * side, 0.0, 0.42))
-        add_part(f"Leg.{label}", capsule_mesh("Leg", 0.17, 0.2), leg, body_mat, outline_mat)
-        add_part(f"Foot.{label}", ellipsoid_mesh("Foot", (0.19, 0.25, 0.13)), leg, body_mat, outline_mat,
-                 location=(0.0, -0.06, -0.31))
+        add_part(f"Leg.{label}", capsule_mesh("Leg", 0.17, 0.2), leg, body_mat, leg_part)
+        add_part(f"Foot.{label}", ellipsoid_mesh("Foot", (0.2, 0.22, 0.13)), leg, body_mat, leg_part,
+                 location=(0.0, -0.02, -0.3))
         parts[f"leg.{label}"] = leg
 
         # Рука: короткая «сосиска» от плеча, опущена и разведена в стороны.
@@ -301,7 +312,7 @@ def build_character(body_mat, outline_mat, eye_mat) -> dict:
                        (ARM_SHOULDER[0] * side, ARM_SHOULDER[1], ARM_SHOULDER[2] - (BODY_CENTER_Z - BODY_RADII[2])))
         parts[f"arm.{label}"] = arm
         parts[f"arm_mesh.{label}"] = add_part(f"Arm.{label}", capsule_mesh("Arm", 0.135, 0.36), arm,
-                                              body_mat, outline_mat)
+                                              body_mat, PART_ARM_L if side < 0 else PART_ARM_R)
     for bone in [root, body_bone] + [parts[k] for k in ("leg.L", "leg.R", "arm.L", "arm.R")]:
         bone.rotation_mode = "QUATERNION"
         bone["rest_location"] = tuple(bone.location)
@@ -370,8 +381,10 @@ STATES = {
         bob=0.06 * abs(_wave(t, 0.25)),
         legs=(-38 * _wave(t), 38 * _wave(t)), arms_spread=(30, 30),
         arms_swing=(42 * _wave(t), -42 * _wave(t)))),
+    # Прыжок: тело вытянуто, руки вверх буквой V, дальняя нога вперёд, ближняя назад.
+    # Раньше ноги смотрели навстречу друг другу и перекрещивались — читалось как спотыкание.
     "jump": (1, 1, False, lambda p, t: set_pose(
-        p, body_scale=(0.92, 1.09), lean=5.0, legs=(-28, 18), arms_spread=(115, 105))),
+        p, body_scale=(0.9, 1.12), lean=4.0, legs=(16, -26), arms_spread=(145, 140))),
     "fall": (2, 6, True, lambda p, t: set_pose(
         p, body_scale=(1.03, 0.98), legs=(-12 + 6 * _wave(t, 0.25), 12 - 6 * _wave(t, 0.25)),
         arms_spread=(125 + 10 * _wave(t, 0.25), 125 + 10 * _wave(t, 0.25)))),
@@ -399,15 +412,128 @@ def set_body_color(material: bpy.types.Material, base_hex: str) -> None:
     mixes["glint"].inputs["B"].default_value = tuple(c + (1.0 - c) * 0.6 for c in base[:3]) + (1.0,)
 
 
-def _render_cell(scene: bpy.types.Scene, path: str) -> np.ndarray:
-    """Рендер одного кадра в файл и его пиксели (RGBA float, строки снизу вверх, как в Blender)."""
-    scene.render.filepath = path
-    bpy.ops.render.render(write_still=True)
+def id_material() -> bpy.types.Material:
+    """Служебный проход: красный канал — глубина от камеры (м), зелёный — номер части."""
+    mat = bpy.data.materials.new("PartDepth")
+    if hasattr(mat, "use_nodes"):
+        mat.use_nodes = True
+    nodes = mat.node_tree.nodes
+    links = mat.node_tree.links
+    nodes.clear()
+    out = nodes.new("ShaderNodeOutputMaterial")
+    emission = nodes.new("ShaderNodeEmission")
+    camera = nodes.new("ShaderNodeCameraData")
+    info = nodes.new("ShaderNodeObjectInfo")
+    combine = nodes.new("ShaderNodeCombineColor")
+    links.new(camera.outputs["View Z Depth"], combine.inputs["Red"])
+    links.new(info.outputs["Object Index"], combine.inputs["Green"])
+    links.new(combine.outputs["Color"], emission.inputs["Color"])
+    links.new(emission.outputs["Emission"], out.inputs["Surface"])
+    return mat
+
+
+def _load_pixels(path: str, size: int) -> np.ndarray:
+    """Пиксели файла (RGBA float, строки снизу вверх, как в Blender)."""
     image = bpy.data.images.load(path, check_existing=False)
-    pixels = np.empty(CELL * CELL * 4, dtype=np.float32)
+    pixels = np.empty(size * size * 4, dtype=np.float32)
     image.pixels.foreach_get(pixels)
     bpy.data.images.remove(image)
-    return pixels.reshape(CELL, CELL, 4)
+    return pixels.reshape(size, size, 4)
+
+
+def _render_color(scene: bpy.types.Scene, path: str) -> np.ndarray:
+    scene.render.filepath = path
+    bpy.ops.render.render(write_still=True)
+    return _load_pixels(path, scene.render.resolution_x)
+
+
+def _render_parts(scene: bpy.types.Scene, id_mat, path: str) -> tuple:
+    """Служебный проход без сглаживания: глубина (м, фон — inf) и номер части (фон — 0)."""
+    settings = scene.render.image_settings
+    eevee = scene.eevee
+    saved = (settings.file_format, settings.color_depth, eevee.taa_render_samples, scene.render.filter_size)
+    settings.file_format = "OPEN_EXR"
+    settings.color_depth = "32"
+    eevee.taa_render_samples = 1
+    scene.render.filter_size = 0.0
+    bpy.context.view_layer.material_override = id_mat
+    try:
+        pixels = _render_color(scene, path)
+    finally:
+        bpy.context.view_layer.material_override = None
+        settings.file_format, settings.color_depth, eevee.taa_render_samples, scene.render.filter_size = saved
+    inside = pixels[..., 3] > 0.5
+    depth = np.where(inside, pixels[..., 0], np.inf)
+    parts = np.where(inside, np.rint(pixels[..., 1]), 0).astype(np.int32)
+    return depth, parts
+
+
+def _disk(radius: float) -> list:
+    r = int(math.ceil(radius))
+    return [(dx, dy) for dy in range(-r, r + 1) for dx in range(-r, r + 1) if dx * dx + dy * dy <= radius * radius]
+
+
+def _shifted(a: np.ndarray, dx: int, dy: int, fill) -> np.ndarray:
+    """out[y, x] = a[y + dy, x + dx]; за краем — fill."""
+    out = np.full_like(a, fill)
+    h, w = a.shape
+    out[max(-dy, 0):h - max(dy, 0), max(-dx, 0):w - max(dx, 0)] = (
+        a[max(dy, 0):h - max(-dy, 0), max(dx, 0):w - max(-dx, 0)])
+    return out
+
+
+def line_masks(depth: np.ndarray, parts: np.ndarray, px_per_m: float) -> tuple:
+    """Маски контура. Внешний — всё в пределах OUTLINE_WIDTH от силуэта. Внутренний — пиксели
+    дальней части рядом с другой, более близкой частью; чем больше разница глубины, тем дальше
+    от края ближней части доходит линия (до INNER_LINE_WIDTH)."""
+    inside = parts > 0
+    outer = np.zeros_like(inside)
+    for dx, dy in _disk(OUTLINE_WIDTH * px_per_m):
+        outer |= _shifted(inside, dx, dy, False)
+    inner = np.zeros_like(inside)
+    width = INNER_LINE_WIDTH * px_per_m
+    for dx, dy in _disk(width):
+        need = DEPTH_STEP_MIN + (DEPTH_STEP_FULL - DEPTH_STEP_MIN) * math.hypot(dx, dy) / width
+        near_part = _shifted(parts, dx, dy, 0)
+        near_depth = _shifted(depth, dx, dy, np.inf)
+        inner |= inside & (near_part > 0) & (near_part != parts) & (near_depth < depth - need)
+    return outer, inner
+
+
+OUTLINE_RGB = np.array([int(OUTLINE[i:i + 2], 16) / 255.0 for i in (0, 2, 4)], dtype=np.float32)
+
+
+def compose(color: np.ndarray, outer: np.ndarray, inner: np.ndarray) -> np.ndarray:
+    """Кадр с контуром: кайма под персонажем, внутренние линии поверх; затем уменьшение
+    в SUPERSAMPLE раз (усреднение в premultiplied — края сглажены)."""
+    alpha = color[..., 3]
+    cover = outer.astype(np.float32)
+    premul = color[..., :3] * alpha[..., None] + OUTLINE_RGB * ((1.0 - alpha) * cover)[..., None]
+    alpha = alpha + (1.0 - alpha) * cover
+    premul[inner] = OUTLINE_RGB
+    alpha[inner] = 1.0
+    h, w = alpha.shape
+    k = SUPERSAMPLE
+    premul = premul.reshape(h // k, k, w // k, k, 3).mean(axis=(1, 3))
+    alpha = alpha.reshape(h // k, k, w // k, k).mean(axis=(1, 3))
+    rgb = np.where(alpha[..., None] > 1e-6, premul / np.maximum(alpha, 1e-6)[..., None], 0.0)
+    return np.concatenate([np.clip(rgb, 0.0, 1.0), alpha[..., None]], axis=-1).astype(np.float32)
+
+
+def render_frame(scene, camera, body_mat, id_mat, size: int, colors, tag: str) -> dict:
+    """Текущая поза во всех цветах: цвет -> кадр size×size с контуром."""
+    frames_dir = os.path.join(tempfile.gettempdir(), "glue_character_frames")
+    os.makedirs(frames_dir, exist_ok=True)
+    scene.render.resolution_x = scene.render.resolution_y = size * SUPERSAMPLE
+    bpy.context.view_layer.update()
+    depth, parts = _render_parts(scene, id_mat, os.path.join(frames_dir, f"{tag}_parts.exr"))
+    outer, inner = line_masks(depth, parts, size * SUPERSAMPLE / camera.data.ortho_scale)
+    result = {}
+    for color_name in colors:
+        set_body_color(body_mat, COLORS[color_name])
+        color = _render_color(scene, os.path.join(frames_dir, f"{tag}_{color_name}.png"))
+        result[color_name] = compose(color, outer, inner)
+    return result
 
 
 def _save_sheet(pixels: np.ndarray, path: str) -> None:
@@ -426,11 +552,9 @@ def _to_cell_px(scene, camera, point: Vector) -> list:
     return [round(ndc.x * CELL, 1), round((1.0 - ndc.y) * CELL, 1)]
 
 
-def render_sheets(scene, camera, parts, body_mat, out_dir: str) -> None:
+def render_sheets(scene, camera, parts, body_mat, id_mat, out_dir: str) -> None:
     """Листы спрайтов: строка — состояние, столбец — кадр; по листу на цвет и вариант руки.
     Рядом — character_sheets.json с раскладкой, скоростями и опорными точками для игры."""
-    frames_dir = os.path.join(tempfile.gettempdir(), "glue_character_frames")
-    os.makedirs(frames_dir, exist_ok=True)
     columns = max(state[0] for state in STATES.values())
     rows = len(STATES)
     back_arm = parts["arm_mesh.R"]
@@ -449,22 +573,22 @@ def render_sheets(scene, camera, parts, body_mat, out_dir: str) -> None:
     for row, (name, (count, fps, loop, _pose)) in enumerate(STATES.items()):
         manifest["states"][name] = {"row": row, "frames": count, "fps": fps, "loop": loop, "shoulder": []}
 
-    for color_name, color in COLORS.items():
-        set_body_color(body_mat, color)
-        for variant in VARIANTS:
-            back_arm.hide_render = variant == "noarm"
-            sheet = np.zeros((rows * CELL, columns * CELL, 4), dtype=np.float32)
-            for row, (name, (count, _fps, _loop, pose)) in enumerate(STATES.items()):
-                for frame in range(count):
-                    pose(parts, frame / count)
-                    bpy.context.view_layer.update()
-                    if color_name == "red" and variant == "full":
-                        shoulder = parts["arm.R"].matrix_world.translation
-                        manifest["states"][name]["shoulder"].append(_to_cell_px(scene, camera, shoulder))
-                    cell = _render_cell(scene, os.path.join(frames_dir, f"{name}_{frame}.png"))
-                    # Blender хранит строки снизу вверх: строка 0 листа — внизу массива.
-                    top = (rows - 1 - row) * CELL
-                    sheet[top:top + CELL, frame * CELL:(frame + 1) * CELL] = cell
+    for variant in VARIANTS:
+        back_arm.hide_render = variant == "noarm"
+        sheets = {name: np.zeros((rows * CELL, columns * CELL, 4), dtype=np.float32) for name in COLORS}
+        for row, (name, (count, _fps, _loop, pose)) in enumerate(STATES.items()):
+            for frame in range(count):
+                pose(parts, frame / count)
+                bpy.context.view_layer.update()
+                if variant == "full":
+                    shoulder = parts["arm.R"].matrix_world.translation
+                    manifest["states"][name]["shoulder"].append(_to_cell_px(scene, camera, shoulder))
+                cells = render_frame(scene, camera, body_mat, id_mat, CELL, COLORS, f"{name}_{frame}")
+                # Blender хранит строки снизу вверх: строка 0 листа — внизу массива.
+                top = (rows - 1 - row) * CELL
+                for color_name, cell in cells.items():
+                    sheets[color_name][top:top + CELL, frame * CELL:(frame + 1) * CELL] = cell
+        for color_name, sheet in sheets.items():
             filename = f"{color_name}_{variant}.png"
             _save_sheet(sheet, os.path.join(out_dir, filename))
             manifest["sheets"].setdefault(color_name, {})[variant] = filename
@@ -476,7 +600,7 @@ def render_sheets(scene, camera, parts, body_mat, out_dir: str) -> None:
 
 def main() -> None:
     argv = sys.argv[sys.argv.index("--") + 1:] if "--" in sys.argv else []
-    out_dir = "assets/characters/v1"
+    out_dir = "assets/characters/v2"
     if "--out" in argv:
         out_dir = argv[argv.index("--out") + 1]
     out_dir = os.path.abspath(out_dir)
@@ -486,21 +610,22 @@ def main() -> None:
     camera = add_camera(scene)
     add_light(scene)
     body_mat = toon_material("Body", COLORS["red"])
-    outline_mat = flat_material("Outline", OUTLINE, backface_culling=True)
     eye_mat = flat_material("Eye", "15161c")
-    parts = build_character(body_mat, outline_mat, eye_mat)
+    id_mat = id_material()
+    parts = build_character(body_mat, eye_mat)
 
-    # Превью: поза покоя крупно, по одному на цвет.
+    # Превью: поза покоя крупно, по одному на цвет; с флагом --states — по кадру каждого состояния.
     STATES["idle"][3](parts, 0.0)
-    for name, color in COLORS.items():
-        set_body_color(body_mat, color)
-        scene.render.filepath = os.path.join(out_dir, "preview", f"idle_{name}.png")
-        bpy.ops.render.render(write_still=True)
+    for name, cell in render_frame(scene, camera, body_mat, id_mat, 512, COLORS, "preview").items():
+        _save_sheet(cell, os.path.join(out_dir, "preview", f"idle_{name}.png"))
+    if "--states" in argv:
+        for state, (_count, _fps, _loop, pose) in STATES.items():
+            pose(parts, 0.0)
+            cell = render_frame(scene, camera, body_mat, id_mat, 512, ["red"], f"state_{state}")["red"]
+            _save_sheet(cell, os.path.join(out_dir, "preview", f"state_{state}.png"))
 
     if "--preview-only" not in argv:
-        scene.render.resolution_x = CELL
-        scene.render.resolution_y = CELL
-        render_sheets(scene, camera, parts, body_mat, out_dir)
+        render_sheets(scene, camera, parts, body_mat, id_mat, out_dir)
     reset_pose(parts)
     # .blend — в source/ с .gdignore: Godot не должен импортировать его как сцену.
     source_dir = os.path.join(out_dir, "source")

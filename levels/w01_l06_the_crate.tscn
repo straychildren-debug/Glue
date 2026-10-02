@@ -1,6 +1,9 @@
 [gd_scene format=3]
 
 [ext_resource type="Script" path="res://src/level/greybox_level.gd" id="1"]
+[ext_resource type="PackedScene" path="res://levels/backdrops/w01_town.tscn" id="bd"]
+[ext_resource type="Script" path="res://src/level/backdrop_layer.gd" id="bl"]
+[ext_resource type="Texture2D" path="res://assets/backgrounds/world_01/v2/source/w01_v2_lm06_storehouse.png" id="lm"]
 [ext_resource type="Script" path="res://src/mechanisms/pressure_plate.gd" id="2"]
 [ext_resource type="Script" path="res://src/mechanisms/door.gd" id="3"]
 [ext_resource type="Script" path="res://src/mechanisms/finish.gd" id="4"]
@@ -38,3 +41,17 @@ script = ExtResource("5")
 [node name="Finish" type="Node2D" parent="."]
 position = Vector2(3136, 320)
 script = ExtResource("4")
+
+[node name="Backdrop" parent="." instance=ExtResource("bd")]
+
+[node name="Landmark" type="Node2D" parent="Backdrop"]
+script = ExtResource("bl")
+texture = ExtResource("lm")
+parallax = 0.3
+parallax_y = 0.1
+height = 0.5
+center_y = 0.46
+zoom_follow = 0.3
+repeat = false
+world_x = 1018.0
+haze = 0.34
