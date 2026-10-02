@@ -41,7 +41,13 @@ const PIVOT_DEAD_ZONE := 20.0
 @export var impact_threshold := 1150.0
 @export var impact_mult := 1.6
 ## Подброс стоящих на поднявшемся конце: скорость = скорость конца × launch_mult.
-@export var launch_mult := 2.4
+@export var launch_mult := 1.6
+## Предел угловой скорости балки, рад/с: бросок не выше ≈ 5 тайлов, как бы высоко ни прыгали.
+## Без предела стоящий на конце отрывается от слишком быстрой балки раньше упора и улетает
+## с её скоростью — высота броска непредсказуема.
+@export var max_angular_speed := 3.75
+## Наклон броска наружу от вертикали, градусы.
+@export var throw_tilt_deg := 20.0
 ## Медленнее этого (скорость конца, px/с) качели не подбрасывают.
 @export var min_launch_speed := 250.0
 ## Фиксатор: пока этот триггер (обычно защёлка) активен, балка стоит в том наклоне, где её
@@ -53,6 +59,8 @@ var angular_velocity := 0.0
 var _beam: AnimatableBody2D
 ## Недавние седоки: тело -> сколько секунд ещё помнить.
 var _recent_riders := {}
+## Балка разогнана ударом сверху (падение с высоты): на упоре она бросит стоящих.
+var _thrown := false
 
 
 func max_angle() -> float:
@@ -122,7 +130,9 @@ func _physics_process(delta: float) -> void:
 	var torque := 0.0
 	for entry: Dictionary in loads:
 		var arm: float = entry.contact.global_position.x - global_position.x
-		inertia += entry.mass * arm * arm
+		# Как и вес, каждый груз — будто на конце своей половины: поведение не зависит от того,
+		# сколько пикселей до шарнира.
+		inertia += entry.mass * half * half
 		# Вес действует как на конце своей половины: важна сторона, а не плечо.
 		if absf(arm) > PIVOT_DEAD_ZONE:
 			torque += entry.mass * signf(arm) * half * gravity
@@ -131,15 +141,22 @@ func _physics_process(delta: float) -> void:
 		var speed: float = entry.body.landing_speed
 		if speed >= impact_threshold:
 			var arm: float = entry.contact.global_position.x - global_position.x
-			angular_velocity += impact_mult * entry.mass * speed * arm / inertia
+			if absf(arm) > PIVOT_DEAD_ZONE:
+				angular_velocity += impact_mult * entry.mass * speed * signf(arm) * half / inertia
+				_thrown = true
 
 	angular_velocity += torque / inertia * delta
 	angular_velocity *= exp(-damping * delta)
+	angular_velocity = clampf(angular_velocity, -max_angular_speed, max_angular_speed)
 	angle += angular_velocity * delta
 	var limit := max_angle()
 	if absf(angle) >= limit and signf(angular_velocity) == signf(angle):
 		angle = clampf(angle, -limit, limit)
-		_launch_rising_side(half)
+		# Бросает только удар сверху. Простой перевес (2 против 1) опускает балку, не швыряя
+		# груз с поднявшегося конца: противовес остаётся на месте.
+		if _thrown:
+			_launch_rising_side(half)
+		_thrown = false
 		angular_velocity = 0.0
 	_beam.rotation = angle
 	Player.follow_carrier(_beam)
@@ -165,9 +182,13 @@ func _launch_rising_side(half: float) -> void:
 		var height_above := global_position.y + tan(angle) * arm - body.global_position.y
 		if height_above < 0.0 or height_above > RIDER_REACH:
 			continue
-		var speed := absf(angular_velocity) * minf(absf(arm), half) * cos(angle) * launch_mult
-		if speed >= min_launch_speed and body.velocity.y > -speed:
-			body.launch(Vector2(body.velocity.x, -speed))
+		# Скорость конца балки, одна на всех на поднявшейся половине: игрок и ящик, у конца или
+		# ближе к шарниру, оторвавшийся раньше упора или нет — летят одинаково.
+		# Бросок — вверх и наружу, от шарнира, на throw_tilt_deg от вертикали: как рычаг катапульты.
+		# Груз летит дугой за конец балки; игрок в полёте ещё и рулит.
+		var speed := absf(angular_velocity) * half * cos(angle) * launch_mult
+		if speed >= min_launch_speed:
+			body.launch(Vector2(0, -speed).rotated(deg_to_rad(throw_tilt_deg) * rising))
 
 
 func save_state() -> Variant:
@@ -177,6 +198,7 @@ func save_state() -> Variant:
 func load_state(state: Variant) -> void:
 	angle = state
 	angular_velocity = 0.0
+	_thrown = false
 	if _beam:
 		_beam.rotation = angle
 

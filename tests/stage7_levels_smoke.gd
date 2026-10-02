@@ -5,6 +5,7 @@ extends LevelBot
 
 const LEVELS := {
 	"11": preload("res://levels/w01_l11_seesaw.tscn"),
+	"12": preload("res://levels/w01_l12_seesaw_throw.tscn"),
 }
 
 
@@ -111,7 +112,8 @@ func _level_11() -> void:
 	await frames(40)
 	await _walk_to(a, KEYS_1, end_x)
 	await frames(20)
-	check(seesaw2.angle < -seesaw2.max_angle() + 0.01 and Weight.floor_below(a) == beam2, "А снова на поднятом конце")
+	check(seesaw2.angle < -seesaw2.max_angle() + 0.01 and Weight.floor_below(a) == beam2,
+			"А снова на поднятом конце (a %s угол %.2f ящик %s)" % [a.global_position, seesaw2.angle, level.get_node("Crate").global_position])
 	# А прыгает и замирает в воздухе невысоко над концом.
 	var end_top := a.global_position.y + Player.SIZE.y / 2.0
 	await _freeze_in_air(a, KEYS_1, end_top - 60.0)
@@ -132,6 +134,68 @@ func _level_11() -> void:
 	await _walk_to(b, KEYS_2, 39.2 * TILE)
 	await _pull_up(b, a, RIGHT)
 	check(a.is_on_floor() and a.global_position.y < 3 * TILE, "Б вытянул А на стену")
+	await _both_to_finish()
+
+
+## 12 «Бросок качелей». Комната 1: прыжок с насеста на поднятый конец бросает товарища на башню.
+## Комната 2: плиту на полке держит закинутый туда ящик, а не игрок.
+func _level_12() -> void:
+	var level: GreyboxLevel = game.level
+	var seesaw1: Seesaw = level.get_node("Seesaw1")
+	var beam1 := seesaw1.get_beam()
+	var step: Door = level.get_node("Step")
+	var step_latch: PressurePlate = level.get_node("StepLatch")
+	# Б поднимается по лестнице на насест и сходит на пустые качели: конец опускается под ним.
+	await _run_to(b, 12.0 * TILE)
+	check(b.global_position.y < 6 * TILE, "Б на насесте (%s)" % b.global_position)
+	await _walk_to(b, KEYS_2, 13.6 * TILE)
+	await frames(40)
+	check(Weight.floor_below(b) == beam1, "Б сошёл с насеста на поднятый конец")
+	await _walk_to(b, KEYS_2, 19.0 * TILE)
+	await frames(30)
+	check(seesaw1.angle > seesaw1.max_angle() - 0.01 and Weight.floor_below(b) == beam1, "Б на правом конце — он внизу у башни")
+	# Ложный путь: с конца балки на башню не допрыгнуть.
+	await _jump_up(b, KEYS_2)
+	check(b.global_position.y > 8 * TILE, "с опущенного конца на башню не допрыгнуть")
+	# А с насеста прыгает на поднятый левый конец — Б летит вверх и рулит к башне.
+	await _run_to(a, 12.0 * TILE)
+	await _walk_to(a, KEYS_1, 13.6 * TILE, 30)
+	for i in 150:
+		await get_tree().physics_frame
+		press(KEYS_2[RIGHT], b.velocity.y < -200.0 or not b.is_on_floor())  # рулит в полёте
+		if i > 30 and b.is_on_floor():
+			break
+	press(KEYS_2[RIGHT], false)
+	await frames(10)
+	check(b.is_on_floor() and b.global_position.y < 7 * TILE, "А прыгнул с насеста — Б на башне (%s)" % b.global_position)
+	await _walk_to(b, KEYS_2, step_latch.global_position.x)
+	await frames(30)
+	check(step_latch.active and step.global_position.x < 21 * TILE, "Б выдвинул ступеньку")
+	# А по балке вниз к башне, на ступеньку, Б вытягивает его наверх.
+	await _walk_to(a, KEYS_1, 19.5 * TILE)
+	await frames(20)
+	await _hop_to(a, 21.2 * TILE, 14)  # вверх, а над ступенькой — к ней
+	check(Weight.floor_below(a) == step, "А на ступеньке (%s)" % a.global_position)
+	await _walk_to(b, KEYS_2, 22.35 * TILE)
+	await _pull_up(b, a, RIGHT)
+	check(a.is_on_floor() and a.global_position.y < 7 * TILE, "Б вытянул А на башню")
+
+	# --- Комната 2: «Груз вместо игрока».
+	var crate: Crate = level.get_node("Crate")
+	var plate: PressurePlate = level.get_node("ShelfPlate")
+	var door: Door = level.get_node("ExitDoor")
+	var seesaw2: Seesaw = level.get_node("Seesaw2")
+	check(seesaw2.angle > seesaw2.max_angle() - 0.01 and crate.global_position.x > 34 * TILE,
+			"ящик лежит на опущенном правом конце вторых качелей")
+	# А с колонны прыгает на поднятый левый конец — ящик летит на полку с плитой.
+	await _walk_to(a, KEYS_1, 25.6 * TILE)
+	await _hop_to(a, 27.0 * TILE)
+	await _walk_to(a, KEYS_1, 28.6 * TILE)
+	await frames(90)
+	check(plate.active, "ящик лёг на плиту на полке (ящик %s)" % crate.global_position)
+	check(door.global_position.y < 7 * TILE, "дверь выхода открыта")
+	await _run_to(b, 41.0 * TILE)
+	await _run_to(a, 41.0 * TILE)
 	await _both_to_finish()
 
 

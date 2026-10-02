@@ -22,7 +22,8 @@ const GROUP := "crates"
 @export var gravity := 2400.0
 @export var max_fall_speed := 1400.0
 @export var ground_friction := 3000.0
-@export var air_friction := 300.0
+## В воздухе ящик почти не тормозит: брошенный качелями, он летит дугой.
+@export var air_friction := 60.0
 ## Через сколько секунд упавший ящик появляется снова.
 @export var respawn_delay := 0.5
 
@@ -32,6 +33,7 @@ var landing_speed := 0.0
 var _push := {}
 var _home := Vector2.ZERO
 var _respawn_timer := -1.0
+var _launched := false
 
 
 func _ready() -> void:
@@ -49,6 +51,9 @@ func _ready() -> void:
 	collision_layer = LAYER_OBJECTS
 	collision_mask = Player.LAYER_WORLD | Player.LAYER_PLAYERS | LAYER_OBJECTS
 	floor_snap_length = 6.0
+	# Скорость опоры при отрыве не добавляется: бросок качелей задаёт скорость сам, иначе ящик
+	# получает её дважды и улетает вдвое выше игрока.
+	platform_on_leave = CharacterBody2D.PLATFORM_ON_LEAVE_DO_NOTHING
 	# После игроков: их толчки этого кадра уже собраны.
 	process_physics_priority = 5
 	_home = global_position
@@ -68,6 +73,7 @@ func get_rect() -> Rect2:
 ## Бросок катапультой или качелями.
 func launch(launch_velocity: Vector2) -> void:
 	velocity = launch_velocity
+	_launched = true
 
 
 func get_support() -> Node:
@@ -85,7 +91,9 @@ func _physics_process(delta: float) -> void:
 			_appear()
 		return
 
-	var on_floor := is_on_floor()
+	# Брошенный ящик уже в полёте, хоть движок ещё и считает его стоящим: без трения о пол.
+	var on_floor := is_on_floor() and not _launched
+	_launched = false
 	var direction := 0
 	if on_floor:
 		var right: float = _push.get(1, 0.0)
