@@ -36,6 +36,9 @@ const RIDER_REACH := 160.0
 @export var launch_mult := 2.4
 ## Медленнее этого (скорость конца, px/с) качели не подбрасывают.
 @export var min_launch_speed := 250.0
+## Фиксатор: пока этот триггер (обычно защёлка) активен, балка стоит в том наклоне, где её
+## застали, — вес на ней ничего не меняет.
+@export var lock: NodePath
 
 var angle := 0.0
 var angular_velocity := 0.0
@@ -102,6 +105,11 @@ func _physics_process(delta: float) -> void:
 	for body: Node2D in Weight.stack_on(_beam):
 		if not (body is Player and body.frozen):
 			_recent_riders[body] = RIDER_MEMORY
+	if is_locked():
+		angular_velocity = 0.0
+		Player.follow_carrier(_beam)
+		queue_redraw()
+		return
 	var inertia := beam_mass * pow(half * 2.0, 2) / 12.0
 	var torque := 0.0
 	for entry: Dictionary in loads:
@@ -126,6 +134,13 @@ func _physics_process(delta: float) -> void:
 	_beam.rotation = angle
 	Player.follow_carrier(_beam)
 	queue_redraw()
+
+
+func is_locked() -> bool:
+	if lock.is_empty():
+		return false
+	var trigger := get_node_or_null(lock)
+	return trigger != null and trigger.active
 
 
 ## Балка с разгона упёрлась в пол: поднявшийся конец останавливается, а стоящие на нём летят дальше.
@@ -168,6 +183,7 @@ func _draw() -> void:
 		draw_set_transform(Vector2.ZERO)
 		draw_circle(Vector2.ZERO, 6.0, PlayerSprite.OUTLINE_COLOR)
 		draw_circle(Vector2.ZERO, 4.0, Color("9aa3ad"))
+		_draw_lock()
 		return
 	draw_colored_polygon(PackedVector2Array([Vector2(0, 0), Vector2(-40, height), Vector2(40, height)]),
 			Color("5b6470"))
@@ -178,3 +194,13 @@ func _draw() -> void:
 	draw_rect(rect, Color("5a3a1c"), false, 3.0)
 	draw_set_transform(Vector2.ZERO)
 	draw_circle(Vector2.ZERO, 9.0, Color("3a3f47"))
+	_draw_lock()
+
+
+## Фиксатор у шарнира: фиолетовый, как защёлки; светится, когда держит балку.
+func _draw_lock() -> void:
+	if lock.is_empty() or Engine.is_editor_hint():
+		return
+	var locked := is_locked()
+	draw_arc(Vector2.ZERO, 14.0, 0.0, TAU, 24, PlayerSprite.OUTLINE_COLOR, 7.0)
+	draw_arc(Vector2.ZERO, 14.0, 0.0, TAU, 24, Color("a78bfa") if locked else Color("6d28d9"), 4.0)

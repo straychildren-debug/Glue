@@ -60,8 +60,9 @@ var color := Color.WHITE
 var alive := true
 ## «Замри»: игрок неподвижен в мире и служит твёрдой опорой и якорем для хвата.
 var frozen := false
-## За кого держится этот игрок (null — ни за кого) и максимальная длина связи.
-var grab_target: Player = null
+## За кого или за что держится этот игрок (товарищ или крюк, null — ни за что)
+## и максимальная длина связи.
+var grab_target: Node2D = null
 var grab_length := 0.0
 ## Механизм, на котором замер игрок (ящик, качели, плита): замерший едет вместе с ним.
 var carrier: Node2D = null
@@ -282,7 +283,7 @@ func get_support() -> Node:
 	return null
 
 
-func _hangs_from(other: Player, length: float) -> bool:
+func _hangs_from(other: Node2D, length: float) -> bool:
 	return other.alive and other.global_position.y < global_position.y - 8.0 \
 			and global_position.distance_to(other.global_position) >= length - 4.0
 
@@ -327,7 +328,8 @@ func launch(launch_velocity: Vector2) -> void:
 	_jump_buffer = 0.0
 
 
-## Хват держится, пока зажата кнопка; при зажатой кнопке рядом с товарищем — хватает ближайшего.
+## Хват держится, пока зажата кнопка; при зажатой кнопке рядом с товарищем или крюком —
+## хватает ближайшего.
 func _update_grab() -> void:
 	if not InputRouter.is_grab_held(slot):
 		_grab_blocked = false
@@ -337,9 +339,10 @@ func _update_grab() -> void:
 		release_grab()
 	if grab_target != null or _grab_blocked:
 		return
-	var nearest: Player = null
+	var nearest: Node2D = null
 	var nearest_distance := grab_range
-	for other: Player in get_tree().get_nodes_in_group(GROUP):
+	var candidates := get_tree().get_nodes_in_group(GROUP) + get_tree().get_nodes_in_group(Hook.GROUP)
+	for other: Node2D in candidates:
 		if other == self or not other.alive:
 			continue
 		var distance := global_position.distance_to(other.global_position)
@@ -379,7 +382,8 @@ func _holders() -> Array[Player]:
 ## Сквозь товарищей по связи игрок пролетает — так можно забраться им на голову (живая лестница).
 func _break_free(holders: Array[Player]) -> void:
 	if grab_target != null:
-		_pass_through(grab_target)
+		if grab_target is Player:
+			_pass_through(grab_target)
 		release_grab()
 		_grab_blocked = true
 	for holder in holders:
@@ -419,6 +423,14 @@ func _stop_passing(other: Player) -> void:
 	if is_instance_valid(other):
 		remove_collision_exception_with(other)
 		other.remove_collision_exception_with(self)
+
+
+## Механизм толкает замершего (выдвигающийся мост, заслонка): замерший остаётся замершим,
+## просто стоит теперь в другом месте. Проверить, свободно ли там, должен механизм (test_move).
+func shove(offset: Vector2) -> void:
+	global_position += offset
+	if carrier != null and is_instance_valid(carrier):
+		_carrier_local = carrier.global_transform.affine_inverse() * global_position
 
 
 ## Сдвиг от связи хвата: скользит вдоль препятствий, не проходит сквозь них.

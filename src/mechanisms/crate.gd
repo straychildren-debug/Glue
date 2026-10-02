@@ -59,6 +59,12 @@ func add_push(direction: int, pusher_mass: float) -> void:
 	_push[direction] = _push.get(direction, 0.0) + pusher_mass
 
 
+## Прямоугольник ящика в мире.
+func get_rect() -> Rect2:
+	var size := size_tiles * GreyboxLevel.TILE - Vector2(2, 2)
+	return Rect2(global_position - size / 2.0, size)
+
+
 ## Бросок катапультой или качелями.
 func launch(launch_velocity: Vector2) -> void:
 	velocity = launch_velocity

@@ -14,6 +14,8 @@ extends AnimatableBody2D
 @export var triggers: Array[NodePath] = []
 ## true — нужны все триггеры сразу, false — любой.
 @export var require_all := false
+## Обратная заслонка: открыта, пока условие триггеров НЕ выполнено (встал на плиту — закрылась).
+@export var invert := false
 ## Куда сдвигается открытая заслонка, в тайлах: (0, -3) — вверх на три тайла, (-5, 0) — мост влево.
 @export var open_offset_tiles := Vector2(0, -3)
 @export var open_speed := 480.0
@@ -50,22 +52,61 @@ func is_open_requested() -> bool:
 		var trigger := get_node_or_null(path)
 		if trigger != null and trigger.active:
 			count += 1
-	return count == triggers.size() if require_all else count > 0
+	var met := count == triggers.size() if require_all else count > 0
+	return met != invert
 
 
 func _physics_process(delta: float) -> void:
 	if Engine.is_editor_hint():
 		return
+	var target := _closed_position
+	var speed := close_speed
 	if is_open_requested():
-		var open_position := _closed_position + open_offset_tiles * GreyboxLevel.TILE
-		position = position.move_toward(open_position, open_speed * delta)
-		return
-	var step := (_closed_position - position).limit_length(close_speed * delta)
+		target = _closed_position + open_offset_tiles * GreyboxLevel.TILE
+		speed = open_speed
+	var step := (target - position).limit_length(speed * delta)
 	if step.is_zero_approx():
 		return
-	if test_move(global_transform, step):
-		return  # на пути заслонки кто-то есть
+	if not _clear_path(step, target == _closed_position):
+		return  # на пути кто-то, кого не сдвинуть: заслонка ждёт
 	position += step
+
+
+## Освобождает путь заслонки на шаг step. Замершего (он неподвижен и сам с дороги не уйдёт)
+## заслонка толкает перед собой, он остаётся замершим. Если толкать некуда (в стену) — false.
+## Закрываясь, заслонка не давит и живых: игрок или ящик на пути её останавливают.
+## Открываясь, живых не ждёт — их выталкивает их собственная физика.
+func _clear_path(step: Vector2, closing: bool) -> bool:
+	var next := Rect2(global_position + step, size_tiles * GreyboxLevel.TILE)
+	var shoves := []
+	for player: Player in get_tree().get_nodes_in_group(Player.GROUP):
+		if not player.alive:
+			continue
+		var body := Rect2(player.global_position - Player.SIZE / 2.0, Player.SIZE)
+		if not next.intersects(body):
+			continue
+		if not player.frozen:
+			if closing:
+				return false
+			continue
+		var offset := _push_out(next, body, step)
+		if player.test_move(player.global_transform, offset):
+			return false
+		shoves.append([player, offset])
+	if closing:
+		for crate: Crate in get_tree().get_nodes_in_group(Crate.GROUP):
+			if crate.visible and next.intersects(crate.get_rect()):
+				return false
+	for shove: Array in shoves:
+		shove[0].shove(shove[1])
+	return true
+
+
+## Сдвиг, выводящий body из rect по направлению движения step (с зазором в полпикселя).
+static func _push_out(rect: Rect2, body: Rect2, step: Vector2) -> Vector2:
+	if absf(step.x) >= absf(step.y):
+		return Vector2(rect.position.x - body.end.x - 0.5 if step.x < 0.0 else rect.end.x - body.position.x + 0.5, 0.0)
+	return Vector2(0.0, rect.position.y - body.end.y - 0.5 if step.y < 0.0 else rect.end.y - body.position.y + 0.5)
 
 
 func save_state() -> Variant:
