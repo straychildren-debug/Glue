@@ -1,0 +1,57 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://src/level/greybox_level.gd" id="1"]
+[ext_resource type="PackedScene" path="res://levels/backdrops/w01_valley.tscn" id="bd"]
+[ext_resource type="Script" path="res://src/mechanisms/pressure_plate.gd" id="2"]
+[ext_resource type="Script" path="res://src/mechanisms/door.gd" id="3"]
+[ext_resource type="Script" path="res://src/mechanisms/finish.gd" id="4"]
+[ext_resource type="Script" path="res://src/mechanisms/crate.gd" id="5"]
+[ext_resource type="Script" path="res://src/mechanisms/seesaw.gd" id="6"]
+[ext_resource type="Script" path="res://src/mechanisms/door_key.gd" id="7"]
+[ext_resource type="Script" path="res://src/mechanisms/key_lock.gd" id="8"]
+
+[node name="Seesaw" type="Node2D"]
+script = ExtResource("1")
+title = "11 · Качели"
+blocks = Array[Rect2]([Rect2(0, -8, 1, 26), Rect2(0, 12, 15, 6), Rect2(15, 8, 24, 10), Rect2(19, -8, 1, 13), Rect2(39, 2.5, 5, 15.5), Rect2(44, -8, 1, 26)])
+checkpoints = Array[Vector2]([Vector2(2, 12), Vector2(24, 8)])
+bounds_tiles = Rect2(0, -8, 45, 27)
+kill_y_tiles = 19.0
+
+[node name="Seesaw1" type="Node2D" parent="."]
+position = Vector2(704, 704)
+script = ExtResource("6")
+start_side = 1
+lock = NodePath("../LockLatch")
+
+[node name="Key" type="Node2D" parent="."]
+position = Vector2(512, 440)
+script = ExtResource("7")
+
+[node name="KeyDoor" type="AnimatableBody2D" parent="."]
+position = Vector2(1216, 320)
+script = ExtResource("3")
+triggers = Array[NodePath]([NodePath("Lock")])
+
+[node name="Lock" type="Node2D" parent="KeyDoor"]
+position = Vector2(32, 112)
+script = ExtResource("8")
+
+[node name="LockLatch" type="AnimatableBody2D" parent="."]
+position = Vector2(1408, 512)
+script = ExtResource("2")
+latch = true
+
+[node name="Seesaw2" type="Node2D" parent="."]
+position = Vector2(2240, 448)
+script = ExtResource("6")
+
+[node name="Crate" type="CharacterBody2D" parent="."]
+position = Vector2(2048, 430)
+script = ExtResource("5")
+
+[node name="Finish" type="Node2D" parent="."]
+position = Vector2(2688, 160)
+script = ExtResource("4")
+
+[node name="Backdrop" parent="." instance=ExtResource("bd")]

@@ -31,10 +31,11 @@ func _catalog() -> void:
 			check(level != null and level.title.ends_with(Levels.entry(0, i).title), "название %02d совпадает с каталогом" % (i + 1))
 			if level:
 				level.free()
-	check(built == 10, "собрано 10 уровней (%d)" % built)
+	# Уровни собираются по порядку: собранные — первые built штук.
+	check(built >= 10 and Levels.is_built(0, built - 1), "собрано %d уровней, подряд с первого" % built)
 	check(Levels.next_built(0, 2) == 3, "после 03 идёт 04")
-	check(Levels.next_built(0, 9) == -1, "после 10 собранных уровней нет — возврат в меню")
-	check(Levels.debug_next(0, 9) == Vector2i(Levels.EXTRAS_WORLD, 0), "F2 после 10 — комнаты прототипа")
+	check(Levels.next_built(0, built - 1) == -1, "после последнего собранного (%02d) — возврат в меню" % built)
+	check(Levels.debug_next(0, built - 1) == Vector2i(Levels.EXTRAS_WORLD, 0), "F2 после последнего — комнаты прототипа")
 	check(Levels.debug_next(Levels.EXTRAS_WORLD, 1) == Vector2i(0, 0), "F2 после комнат — снова уровень 01")
 
 

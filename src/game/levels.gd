@@ -19,7 +19,7 @@ const WORLDS: Array[Dictionary] = [
 			{"title": "Тяжёлый груз", "scene": "res://levels/w01_l08_heavy_load.tscn"},
 			{"title": "Живая лестница", "scene": "res://levels/w01_l09_living_staircase.tscn"},
 			{"title": "Перевал", "scene": "res://levels/w01_l10_the_pass.tscn"},
-			{"title": "Качели", "scene": ""},
+			{"title": "Качели", "scene": "res://levels/w01_l11_seesaw.tscn"},
 			{"title": "Бросок качелей", "scene": ""},
 			{"title": "Подъёмник", "scene": ""},
 			{"title": "Цепь", "scene": ""},

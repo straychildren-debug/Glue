@@ -1,8 +1,10 @@
 @tool
 class_name Seesaw
 extends Node2D
-## Качели: балка на шарнире. Поворачивается от веса стоящих на ней (момент = масса × плечо),
-## концом упирается в пол. Приземление на конец балки толкает её сильнее, чем простой вес;
+## Качели: балка на шарнире. Перевешивает сторона, на которой больше вес (как весы):
+## 2 против 1 — тяжёлая сторона опускается, 1 против 1 — балка стоит, где стояла. Где именно
+## на своей половине стоит груз, неважно: загадки решает вес, а не пиксели от шарнира.
+## Концом балка упирается в пол. Приземление на конец балки толкает её сильнее, чем простой вес;
 ## когда балка с разгона упирается в пол, стоящих на поднявшемся конце подбрасывает.
 ## Положение узла — шарнир (середина балки); пол — на pivot_height_tiles ниже.
 
@@ -11,6 +13,8 @@ const BEAM_THICKNESS := 16.0
 const RIDER_MEMORY := 0.25
 ## Бросает тех, чей центр не выше этого над балкой: стопку из двух-трёх тел.
 const RIDER_REACH := 160.0
+## Стоящий почти над шарниром (ближе этого, px) ни одну сторону не перевешивает.
+const PIVOT_DEAD_ZONE := 20.0
 
 @export var length_tiles := 7.0:
 	set(value):
@@ -30,7 +34,11 @@ const RIDER_REACH := 160.0
 @export var gravity := 2400.0
 ## Затухание угловой скорости, 1/с.
 @export var damping := 1.0
-## Во сколько раз удар приземления сильнее, чем при абсолютно неупругом ударе.
+## Удар приземления срабатывает, только если падали быстрее impact_threshold (px/с) — с высоты
+## больше ≈ 3,5 тайла. Запрыгнуть на балку, перепрыгнуть товарища, ступить, отпустить «Замри»
+## невысоко — балка не шелохнётся (1 против 1 стоит). Прыжок сверху с высоты — полноценный
+## бросок; impact_mult — сила удара относительно неупругого.
+@export var impact_threshold := 1150.0
 @export var impact_mult := 1.6
 ## Подброс стоящих на поднявшемся конце: скорость = скорость конца × launch_mult.
 @export var launch_mult := 2.4
@@ -115,11 +123,13 @@ func _physics_process(delta: float) -> void:
 	for entry: Dictionary in loads:
 		var arm: float = entry.contact.global_position.x - global_position.x
 		inertia += entry.mass * arm * arm
-		torque += entry.mass * arm * gravity
+		# Вес действует как на конце своей половины: важна сторона, а не плечо.
+		if absf(arm) > PIVOT_DEAD_ZONE:
+			torque += entry.mass * signf(arm) * half * gravity
 	# Приземление: момент импульса падающего передаётся балке.
 	for entry: Dictionary in loads:
 		var speed: float = entry.body.landing_speed
-		if speed > 0.0:
+		if speed >= impact_threshold:
 			var arm: float = entry.contact.global_position.x - global_position.x
 			angular_velocity += impact_mult * entry.mass * speed * arm / inertia
 
