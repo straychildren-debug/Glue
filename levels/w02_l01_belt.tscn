@@ -1,0 +1,74 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://src/level/greybox_level.gd" id="1"]
+[ext_resource type="Script" path="res://src/mechanisms/conveyor.gd" id="2"]
+[ext_resource type="Script" path="res://src/mechanisms/lever.gd" id="3"]
+[ext_resource type="Script" path="res://src/mechanisms/crate.gd" id="4"]
+[ext_resource type="Script" path="res://src/mechanisms/pressure_plate.gd" id="5"]
+[ext_resource type="Script" path="res://src/mechanisms/door.gd" id="6"]
+[ext_resource type="Script" path="res://src/mechanisms/finish.gd" id="7"]
+[ext_resource type="PackedScene" path="res://levels/backdrops/w02_yard.tscn" id="bd"]
+[ext_resource type="Script" path="res://src/level/backdrop_layer.gd" id="bl"]
+[ext_resource type="Texture2D" path="res://assets/backgrounds/world_02/source/w02_lm01_conveyor_gallery.png" id="lm"]
+
+[node name="W02L01" type="Node2D"]
+script = ExtResource("1")
+title = "01 · Лента"
+blocks = Array[Rect2]([Rect2(0, -8, 1, 26), Rect2(0, 12, 4, 6), Rect2(4, 12.375, 9, 5.625), Rect2(18, 12, 26, 6), Rect2(23, 9, 6, 1), Rect2(37, -8, 1, 17), Rect2(44, -8, 1, 26)])
+checkpoints = Array[Vector2]([Vector2(2, 12), Vector2(20, 12)])
+bounds_tiles = Rect2(0, -8, 45, 27)
+kill_y_tiles = 19.0
+ground_fill = "w02_fill"
+ground_deep = "w02_deep"
+ground_top = "w02_top"
+ground_side = "w02_side"
+
+[node name="RideBelt" type="StaticBody2D" parent="."]
+position = Vector2(256, 768)
+script = ExtResource("2")
+width_tiles = 9.0
+
+[node name="ShelfLever" type="Node2D" parent="."]
+position = Vector2(1494, 576)
+script = ExtResource("3")
+
+[node name="ShelfBelt" type="StaticBody2D" parent="."]
+position = Vector2(1523, 552)
+script = ExtResource("2")
+width_tiles = 5.2
+speed = 200.0
+control = NodePath("../ShelfLever")
+control_mode = 2
+
+[node name="HeavyCrate" type="CharacterBody2D" parent="."]
+position = Vector2(1600, 519)
+script = ExtResource("4")
+mass = 2.0
+
+[node name="Plate" type="AnimatableBody2D" parent="."]
+position = Vector2(1888, 768)
+script = ExtResource("5")
+
+[node name="Door" type="AnimatableBody2D" parent="."]
+position = Vector2(2368, 576)
+script = ExtResource("6")
+triggers = Array[NodePath]([NodePath("../Plate")])
+
+[node name="Finish" type="Node2D" parent="."]
+position = Vector2(2624, 768)
+script = ExtResource("7")
+
+[node name="Backdrop" parent="." instance=ExtResource("bd")]
+
+[node name="Landmark" type="Node2D" parent="Backdrop"]
+script = ExtResource("bl")
+texture = ExtResource("lm")
+parallax = 0.3
+parallax_y = 0.1
+height = 0.5
+center_y = 0.46
+zoom_follow = 0.3
+repeat = false
+world_x = 1152.0
+haze = 0.22
+haze_color = Color(0.860, 0.900, 0.960, 1)

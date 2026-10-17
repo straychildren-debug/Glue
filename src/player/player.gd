@@ -71,6 +71,9 @@ var landing_speed := 0.0
 ## Ящик, который игрок толкал в прошлом кадре (сам или через товарища впереди), и направление.
 var pushing: Crate = null
 var pushing_dir := 0
+## Ящик, за который держится хват (стоит вплотную, кнопка хвата зажата): уходя от ящика, игрок
+## тянет его за собой — так ящик, прижатый к стене, можно вытащить обратно.
+var pulling: Crate = null
 
 var _coyote := 0.0
 var _jump_buffer := 0.0
@@ -147,6 +150,7 @@ func _physics_process(delta: float) -> void:
 		_apply_carrier_transform()
 		return
 
+	_unstick()
 	var on_floor := is_on_floor()
 	var holders := _holders()
 	var hanging := not on_floor and (grab_target != null or not holders.is_empty())
@@ -194,6 +198,15 @@ func _physics_process(delta: float) -> void:
 		else:
 			rate = ground_friction if on_floor else air_friction
 		velocity.x = move_toward(velocity.x, input_x * run_speed, rate * delta)
+	if pulling != null:
+		# Держит ящик: смотрит на него; идёт прочь — тянет ящик со скоростью толкания.
+		var side := signi(roundi(signf(pulling.global_position.x - global_position.x)))
+		_facing = side
+		var dir := 0 if absf(input_x) < 0.01 else signi(roundi(signf(input_x)))
+		# Тянет, только если самому есть куда отступить: иначе прижал бы себя ящиком к стене.
+		if dir == -side and on_floor and not test_move(global_transform, Vector2(dir * 2.0, 0.0)):
+			pulling.add_push(dir, mass)
+			velocity.x = dir * minf(run_speed, pulling.push_speed)
 
 	# Стоящий на товарище едет вместе с ним: move_and_slide берёт скорость опоры сам.
 	var fall_speed := velocity.y
@@ -203,8 +216,45 @@ func _physics_process(delta: float) -> void:
 	if standing_on() != null:
 		global_position.y -= STACK_GAP
 	landing_speed = fall_speed if is_on_floor() and not on_floor else 0.0
+	_step_up(input_x, on_floor)
 	_update_push(input_x)
 	_update_pass_through(delta)
+
+
+## Наибольший уступ, на который игрок шагает сам (px): незаметен глазу. Без этого игрок
+## упирается в ребро ящика, вставшего в выемку вровень с полом, и в хвостики ворот.
+const STEP_HEIGHT := 5.0
+
+
+## Шёл по полу и упёрся — если впереди лишь крошечный уступ, шагнуть на него.
+func _step_up(input_x: float, was_on_floor: bool) -> void:
+	if not was_on_floor or absf(input_x) < 0.01 or not is_on_wall():
+		return
+	var ahead := Vector2(signf(input_x) * 2.0, 0.0)
+	var up := Vector2(0.0, -STEP_HEIGHT)
+	if test_move(global_transform, up) or test_move(global_transform.translated(up), ahead):
+		return
+	global_position += up + ahead
+
+
+## Игрок оказался внутри другого тела (ящик въехал, доска или дверь опустились на него) — выталкиваем в ближайшее свободное место, сначала вверх: сам он из такого
+## положения не выберется, движок не разводит тела, зажатые с двух сторон.
+const UNSTICK_STEPS: Array[Vector2] = [Vector2.UP, Vector2.LEFT, Vector2.RIGHT, Vector2(-1, -1), Vector2(1, -1), Vector2.DOWN]
+
+
+func _unstick() -> void:
+	# Касание (упёрся в ящик, стоит на полу) — не застревание: только погружение глубже 2 px.
+	var contact := KinematicCollision2D.new()
+	if not test_move(global_transform, Vector2.ZERO, contact) or contact.get_depth() < 2.0:
+		return
+	if contact.get_collider() is Player:
+		return  # наложение игроков законно (пролёт сквозь товарища) и расходится само
+	for distance in range(4, 97, 4):
+		for dir: Vector2 in UNSTICK_STEPS:
+			var offset := dir.normalized() * distance
+			if not test_move(global_transform.translated(offset), Vector2.ZERO):
+				global_position += offset
+				return
 
 
 ## Упёрся сбоку в ящик — толкает его. Упёрся в товарища, который толкает ящик, — толкает вместе
@@ -339,9 +389,25 @@ func _update_grab() -> void:
 		release_grab()
 	if grab_target != null or _grab_blocked:
 		return
+	if pulling != null:
+		if not _touches_crate(pulling, 14.0):
+			pulling = null  # ящик не поехал (тяжёлый) или упал — рука соскользнула
+		return
 	if Lever.try_toggle(self):
 		_grab_blocked = true  # нажатие ушло рычагу; до отпускания кнопки никого не хватаем
 		return
+	if Wheel.try_enter(self):
+		_grab_blocked = true  # встал в беличье колесо
+		return
+	if Lantern.try_take(self):
+		_grab_blocked = true  # взял фонарь
+		return
+	# Ящик вплотную сбоку — хват берётся за ящик (а не за товарища рядом).
+	if is_on_floor():
+		for crate: Crate in get_tree().get_nodes_in_group(Crate.GROUP):
+			if _touches_crate(crate, 6.0):
+				pulling = crate
+				return
 	var nearest: Node2D = null
 	var nearest_distance := grab_range
 	var candidates := get_tree().get_nodes_in_group(GROUP) + get_tree().get_nodes_in_group(Hook.GROUP)
@@ -359,6 +425,17 @@ func _update_grab() -> void:
 
 func release_grab() -> void:
 	grab_target = null
+	pulling = null
+
+
+## Ящик стоит вплотную сбоку (зазор не больше gap px) на одном уровне с игроком.
+func _touches_crate(crate: Crate, gap: float) -> bool:
+	if not crate.visible:
+		return false
+	var rect := crate.get_rect()
+	var dx := absf(crate.global_position.x - global_position.x) - rect.size.x / 2.0 - SIZE.x / 2.0
+	var overlap_y := absf(crate.global_position.y - global_position.y) < rect.size.y / 2.0 + SIZE.y / 2.0 - 12.0
+	return overlap_y and dx > -4.0 and dx <= gap
 
 
 ## Висит на руке: в воздухе и держит товарища или держат его.

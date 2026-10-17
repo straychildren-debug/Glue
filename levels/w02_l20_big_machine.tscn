@@ -1,0 +1,313 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://src/level/greybox_level.gd" id="1"]
+[ext_resource type="PackedScene" path="res://levels/backdrops/w02_machine.tscn" id="bd"]
+[ext_resource type="Script" path="res://src/level/backdrop_layer.gd" id="bl"]
+[ext_resource type="Texture2D" path="res://assets/backgrounds/world_02/source/w02_lm20_machine_core.png" id="lm"]
+[ext_resource type="Script" path="res://src/mechanisms/bellows.gd" id="bellows"]
+[ext_resource type="Script" path="res://src/mechanisms/big_machine.gd" id="big_machine"]
+[ext_resource type="Script" path="res://src/mechanisms/brittle_floor.gd" id="brittle"]
+[ext_resource type="Script" path="res://src/mechanisms/conveyor.gd" id="conveyor"]
+[ext_resource type="Script" path="res://src/mechanisms/crate.gd" id="crate"]
+[ext_resource type="Script" path="res://src/mechanisms/crusher.gd" id="crusher"]
+[ext_resource type="Script" path="res://src/mechanisms/door.gd" id="door"]
+[ext_resource type="Script" path="res://src/mechanisms/finish.gd" id="finish"]
+[ext_resource type="Script" path="res://src/mechanisms/fist.gd" id="fist"]
+[ext_resource type="Script" path="res://src/mechanisms/lever.gd" id="lever"]
+[ext_resource type="Script" path="res://src/mechanisms/machine_gate.gd" id="machine_gate"]
+[ext_resource type="Script" path="res://src/mechanisms/mover.gd" id="mover"]
+[ext_resource type="Script" path="res://src/mechanisms/pressure_plate.gd" id="plate"]
+[ext_resource type="Script" path="res://src/mechanisms/spikes.gd" id="spikes"]
+[ext_resource type="Script" path="res://src/mechanisms/wheel.gd" id="wheel"]
+
+[node name="W02L20" type="Node2D"]
+script = ExtResource("1")
+title = "20 · Большая машина"
+blocks = Array[Rect2]([Rect2(0, -8, 1, 30), Rect2(139, -8, 1, 30), Rect2(1, -8, 34, 7), Rect2(1, 12, 12, 6), Rect2(22, 12, 13, 6), Rect2(13, 16, 9, 2), Rect2(1, 8, 5.5, 1), Rect2(29.5, 8, 5, 1), Rect2(15.5, 8, 5, 1), Rect2(35, -8, 4, 16), Rect2(35, 12, 4, 6), Rect2(39, -8, 25, 1), Rect2(39, 5, 19, 1.5), Rect2(61, 5, 3, 1.5), Rect2(39, 12, 2, 6), Rect2(41, 12.375, 14, 5.625), Rect2(55, 12, 3, 6), Rect2(58, 12.5, 3, 5.5), Rect2(61, 12, 3, 6), Rect2(64, -8, 1, 9), Rect2(65, -8, 74, 7), Rect2(64, 5, 4, 13), Rect2(68, 12, 6, 6), Rect2(74, 16, 3, 2), Rect2(77, 12, 6, 6), Rect2(83, 16, 12, 2), Rect2(95, 12, 6, 6), Rect2(101, 16, 7, 2), Rect2(108, 12, 5, 6), Rect2(113, 16, 3, 2), Rect2(116, 12, 23, 6), Rect2(121, 11, 3, 1), Rect2(127, -8, 1, 16)])
+checkpoints = Array[Vector2]([Vector2(3, 12), Vector2(40, 12), Vector2(66, 5)])
+bounds_tiles = Rect2(0, -8, 140, 27)
+kill_y_tiles = 19
+ground_fill = "w02_fill"
+ground_deep = "w02_deep"
+ground_top = "w02_top"
+ground_side = "w02_side"
+
+[node name="PitArena" type="Node2D" parent="."]
+position = Vector2(1120, 1024)
+script = ExtResource("spikes")
+width_tiles = 9.0
+
+[node name="Gate2" type="Node" parent="."]
+script = ExtResource("machine_gate")
+machine = NodePath("../Machine")
+phase_at = 1
+wave_at = 2
+
+[node name="ArenaFloor" type="AnimatableBody2D" parent="."]
+position = Vector2(832, 768)
+script = ExtResource("door")
+size_tiles = Vector2(9, 1)
+triggers = Array[NodePath]([NodePath("../Gate2")])
+open_offset_tiles = Vector2(0, 4)
+open_speed = 120.0
+mark_color = Color(0.9, 0.3, 0.3, 1)
+
+[node name="WeakF1" type="AnimatableBody2D" parent="."]
+position = Vector2(512, 768)
+script = ExtResource("plate")
+width_tiles = 1.0
+pulse = 0.3
+mark_color = Color(0.9, 0.3, 0.3, 1)
+
+[node name="WeakF2" type="AnimatableBody2D" parent="."]
+position = Vector2(1728, 768)
+script = ExtResource("plate")
+width_tiles = 1.0
+pulse = 0.3
+mark_color = Color(0.9, 0.3, 0.3, 1)
+
+[node name="WeakF3" type="AnimatableBody2D" parent="."]
+position = Vector2(1536, 768)
+script = ExtResource("plate")
+width_tiles = 1.0
+pulse = 0.3
+mark_color = Color(0.9, 0.3, 0.3, 1)
+
+[node name="WeakH1" type="AnimatableBody2D" parent="."]
+position = Vector2(256, 512)
+script = ExtResource("plate")
+width_tiles = 1.0
+pulse = 0.3
+mark_color = Color(0.9, 0.3, 0.3, 1)
+
+[node name="WeakH2" type="AnimatableBody2D" parent="."]
+position = Vector2(2048, 512)
+script = ExtResource("plate")
+width_tiles = 1.0
+pulse = 0.3
+mark_color = Color(0.9, 0.3, 0.3, 1)
+
+[node name="WeakH3" type="AnimatableBody2D" parent="."]
+position = Vector2(1152, 512)
+script = ExtResource("plate")
+width_tiles = 1.0
+pulse = 0.3
+mark_color = Color(0.9, 0.3, 0.3, 1)
+
+[node name="FistA" type="AnimatableBody2D" parent="."]
+position = Vector2(512, 0)
+script = ExtResource("fist")
+x_min = 2.0
+x_max = 34.0
+floor_y = 12.0
+prey = 0
+phase = 1
+
+[node name="FistB" type="AnimatableBody2D" parent="."]
+position = Vector2(1600, 0)
+script = ExtResource("fist")
+x_min = 2.0
+x_max = 34.0
+floor_y = 12.0
+prey = 1
+phase = 1
+
+[node name="Mouth" type="AnimatableBody2D" parent="."]
+position = Vector2(2240, 512)
+script = ExtResource("door")
+size_tiles = Vector2(4, 4)
+triggers = Array[NodePath]([NodePath("../Machine")])
+open_offset_tiles = Vector2(0, -4)
+mark_color = Color(0.9, 0.3, 0.3, 1)
+
+[node name="Machine" type="Node2D" parent="."]
+position = Vector2(2368, 512)
+script = ExtResource("big_machine")
+face_tiles = Vector2(8, 6)
+weak_spots = Array[NodePath]([NodePath("../WeakF1"), NodePath("../WeakF2"), NodePath("../WeakF3"), NodePath("../WeakH2"), NodePath("../WeakH3"), NodePath("../WeakH2"), NodePath("../WeakH1"), NodePath("../WeakF2")])
+wave_sizes = Array[int]([2, 2, 2, 2])
+fists = Array[NodePath]([NodePath("../FistA"), NodePath("../FistB"), NodePath("../FistLow"), NodePath("../FistTop"), NodePath("../FistRun")])
+fist_rage = 0.2
+core = NodePath("../Core")
+
+[node name="Belt" type="StaticBody2D" parent="."]
+position = Vector2(2624, 768)
+script = ExtResource("conveyor")
+width_tiles = 14.0
+speed = -60.0
+
+[node name="Heavy" type="CharacterBody2D" parent="."]
+position = Vector2(2688, 713)
+script = ExtResource("crate")
+mass = 2.0
+
+[node name="FistLow" type="AnimatableBody2D" parent="."]
+position = Vector2(2944, 416)
+script = ExtResource("fist")
+x_min = 41.0
+x_max = 57.0
+floor_y = 12.0
+prey = -1
+phase = 2
+track_speed = 200.0
+stuck_time = 1.0
+
+[node name="Lift" type="AnimatableBody2D" parent="."]
+position = Vector2(3712, 768)
+script = ExtResource("door")
+size_tiles = Vector2(3, 0.5)
+triggers = Array[NodePath]([NodePath("../LiftDown"), NodePath("../LiftUp")])
+open_offset_tiles = Vector2(0, -7)
+open_speed = 150.0
+close_speed = 150.0
+mark_color = Color(0.4, 0.7, 0.95, 1)
+
+[node name="LiftDown" type="Node2D" parent="."]
+position = Vector2(4012.8, 768)
+script = ExtResource("lever")
+mark_color = Color(0.4, 0.7, 0.95, 1)
+
+[node name="LiftUp" type="Node2D" parent="."]
+position = Vector2(4012.8, 320)
+script = ExtResource("lever")
+mark_color = Color(0.4, 0.7, 0.95, 1)
+
+[node name="Core" type="AnimatableBody2D" parent="."]
+position = Vector2(2624, 320)
+script = ExtResource("plate")
+width_tiles = 2.0
+threshold = 2.0
+mark_color = Color(0.95, 0.85, 0.3, 1)
+
+[node name="FistTop" type="AnimatableBody2D" parent="."]
+position = Vector2(3200, -192)
+script = ExtResource("fist")
+x_min = 40.0
+x_max = 56.5
+floor_y = 5.0
+prey = -1
+phase = 2
+track_speed = 220.0
+
+[node name="Gut" type="AnimatableBody2D" parent="."]
+position = Vector2(4096, 64)
+script = ExtResource("door")
+size_tiles = Vector2(1, 4)
+triggers = Array[NodePath]([NodePath("../Core")])
+stay_open = true
+open_offset_tiles = Vector2(0, -4)
+mark_color = Color(0.95, 0.85, 0.3, 1)
+
+[node name="PitR1" type="Node2D" parent="."]
+position = Vector2(4832, 1024)
+script = ExtResource("spikes")
+width_tiles = 3.0
+
+[node name="CrumbleR1" type="StaticBody2D" parent="."]
+position = Vector2(4736, 768)
+script = ExtResource("brittle")
+width_tiles = 3.0
+crumble_time = 1.0
+
+[node name="PitR2" type="Node2D" parent="."]
+position = Vector2(5696, 1024)
+script = ExtResource("spikes")
+width_tiles = 12.0
+
+[node name="Trapeze" type="AnimatableBody2D" parent="."]
+position = Vector2(5312, 768)
+script = ExtResource("mover")
+size_tiles = Vector2(3, 0.5)
+path_tiles = Vector2(9, 0)
+speed = 260.0
+pause = 1.2
+
+[node name="PitR3" type="Node2D" parent="."]
+position = Vector2(6688, 1024)
+script = ExtResource("spikes")
+width_tiles = 7.0
+
+[node name="WindR" type="Node2D" parent="."]
+position = Vector2(6464, 608)
+script = ExtResource("bellows")
+length_tiles = 8.0
+height_tiles = 6.0
+gust_time = 1.0
+auto_period = 2.2
+
+[node name="WindL" type="Node2D" parent="."]
+position = Vector2(6912, 608)
+script = ExtResource("bellows")
+direction = -1
+length_tiles = 8.0
+height_tiles = 6.0
+gust_time = 1.0
+auto_period = 2.2
+auto_offset = 1.1
+
+[node name="PitR4" type="Node2D" parent="."]
+position = Vector2(7328, 1024)
+script = ExtResource("spikes")
+width_tiles = 3.0
+
+[node name="CrumbleR4" type="StaticBody2D" parent="."]
+position = Vector2(7232, 768)
+script = ExtResource("brittle")
+width_tiles = 3.0
+crumble_time = 1.0
+
+[node name="WheelGate" type="Node2D" parent="."]
+position = Vector2(7840, 704)
+script = ExtResource("wheel")
+mark_color = Color(0.35, 0.8, 0.4, 1)
+coast_time = 1.6
+
+[node name="ExitGate" type="AnimatableBody2D" parent="."]
+position = Vector2(8128, 512)
+script = ExtResource("door")
+size_tiles = Vector2(1, 4)
+triggers = Array[NodePath]([NodePath("../WheelGate")])
+open_offset_tiles = Vector2(0, -4)
+close_speed = 900.0
+mark_color = Color(0.35, 0.8, 0.4, 1)
+
+[node name="FistRun" type="AnimatableBody2D" parent="."]
+position = Vector2(4480, 0)
+script = ExtResource("fist")
+x_min = 66.0
+x_max = 126.0
+floor_y = 12.0
+prey = -1
+phase = 3
+track_speed = 300.0
+stuck_time = 0.8
+wind_time = 0.5
+
+[node name="Finish" type="Node2D" parent="."]
+position = Vector2(8576, 768)
+script = ExtResource("finish")
+
+[node name="Crusher" type="Node2D" parent="."]
+position = Vector2(4096, -512)
+script = ExtResource("crusher")
+height_tiles = 27.0
+speed = 110.0
+start_x_tiles = 78.0
+stop_x_tiles = 117.0
+catch_up_tiles = 12.0
+catch_up_speed = 220.0
+
+[node name="Backdrop" parent="." instance=ExtResource("bd")]
+
+[node name="Landmark" type="Node2D" parent="Backdrop"]
+script = ExtResource("bl")
+texture = ExtResource("lm")
+parallax = 0.3
+parallax_y = 0.1
+height = 0.72
+center_y = 0.6
+zoom_follow = 0.3
+repeat = false
+world_x = 3136.0
+haze = 0.22
+haze_color = Color(0.860, 0.900, 0.960, 1)

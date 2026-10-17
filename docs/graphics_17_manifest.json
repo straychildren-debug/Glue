@@ -1,0 +1,1880 @@
+{
+  "date": "2026-10-04",
+  "assignment": "docs/17_графика_мира_2_задание.md",
+  "method": "built-in image_gen",
+  "jobs": [
+    {
+      "id": "P31",
+      "kind": "sprite",
+      "priority": 0,
+      "path": "assets/props/v2/source/p31_finish_workshop.png",
+      "prompt": "Attached image 1: the concept sheet of world 2 \"Workshops\" of my game \"Hold On!\" — style and materials reference. Attached image 2: close-ups of the level exit door from the game's concept sheet — the design to follow. Attached image 3: the APPROVED exit door of world 1 — copy its size, proportions, layout of the two states, outline and rendering EXACTLY; change only the materials. Attached image 4: the approved brick texture of the world 2 platforms — match its colors and painting style. Do NOT copy layouts, text or UI from the attachments.\n\nDraw the LEVEL EXIT DOOR of the workshops world as a GAME SPRITE for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict orthographic side view, no perspective, no cast shadow, centered with empty space around it. Hand-painted cartoon style with soft visible texture and soft shading, light from the upper left. A clean, slightly thin, painted dark brown-navy outline around the whole silhouette (not pure black).\nObject: a small standalone arched doorway: a short thick arch of warm red workshop bricks with a polished brass trim and small rivets along the arch, a small brass gear as the keystone, standing on a flat stone threshold; inside it a door of dark wooden planks bound with two copper straps, a rounded top following the arch, a small round brass knob.\nStates: closed door (waiting for the team); the same doorway with the door swung open inward against the side of the frame and warm golden light inside (everyone is in). Side by side in one row, same scale, same baseline, evenly spaced.\nProportions: exactly as in image 3 — each doorway 1.6 units wide and 2.2 units tall; the door itself 1 unit wide and 1.5 units tall.\nNo text, letters, numbers, symbols, logos or watermark.\nPreserve the two compact silhouettes, their identical height and common threshold baseline of image 3. Closed state on the LEFT, open state on the RIGHT with the leaf fully inward and edge-on at the LEFT jamb. Brass gear is small and fits into the keystone instead of adding a tall tower. No glow outside the doorway opening.",
+      "refs": [
+        "D:\\Cluade projects\\games\\Glue\\docs\\референсы\\world2_workshops.png",
+        "D:\\Cluade projects\\games\\Glue\\docs\\референсы\\gate_reference.png",
+        "D:\\Cluade projects\\games\\Glue\\assets\\props\\v2\\source\\p17_finish.png",
+        "D:\\Cluade projects\\games\\Glue\\assets\\tiles\\world_02\\source\\w02_fill.png"
+      ],
+      "transparent": true,
+      "status": "reviewed",
+      "edits": [
+        {
+          "prompt": "Edit image 1 only: the two-state workshop doorway sprite sheet. Image 2 is the APPROVED world 1 doorway, exact silhouette proportions reference. Keep the workshop design and painting of image 1: warm red bricks with some grey base stones, riveted brass trim, small brass keystone gear, dark wood door with two copper straps and small brass knob, closed state left, open state right with leaf edge-on at left jamb and warm light INSIDE.\nRemove ALL brown glow, fog, halo, shadows and translucent stains OUTSIDE the doorway silhouettes. Outside the two arches and thresholds must be empty transparent alpha=0. In particular the closed left doorway emits NO surrounding light at all; right light is confined to the interior opening.\nAlso narrow each complete doorway slightly: match image 2 proportions and scale, width about 500 pixels for a total height about 700 pixels, including the threshold and keystone. Both arches must have IDENTICAL geometry and stand on the same baseline. The gear fits inside the arch top and does not increase total height. Reduce side pillar width and threshold overhang to achieve the compact proportions; preserve the inner door height and plank rendering. No additional scenery, no floor beyond the threshold, no text, no labels, true transparent PNG, generous alpha margins.",
+          "refs": [
+            "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-2792d498-253a-4f41-8b18-3743ce19de4b.png",
+            "D:\\Cluade projects\\games\\Glue\\assets\\props\\v2\\source\\p17_finish.png"
+          ],
+          "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-c788f4d8-3673-4dfe-8f01-e230cf040f35.png"
+        }
+      ],
+      "first_generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-2792d498-253a-4f41-8b18-3743ce19de4b.png",
+      "validation": {
+        "native_size": [
+          1536,
+          1024
+        ],
+        "mode": "RGBA",
+        "sha256": "89046924afdbd2856072fb8bdb1af5a131ea137d9ec5da684b72fce35dbaeecc",
+        "native_generator_bytes_preserved": true,
+        "alpha_extrema": [
+          0,
+          254
+        ],
+        "alpha_bbox": [
+          0,
+          115,
+          1328,
+          1024
+        ],
+        "visible_bbox_alpha_32": [
+          205,
+          150,
+          1323,
+          857
+        ],
+        "border_alpha_max": 1,
+        "true_transparency": true,
+        "x_groups_alpha_32": [
+          [
+            205,
+            150,
+            716,
+            857
+          ],
+          [
+            810,
+            150,
+            1323,
+            857
+          ]
+        ]
+      },
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-c788f4d8-3673-4dfe-8f01-e230cf040f35.png",
+      "review_notes": "Два состояния кирпично-латунных ворот: закрытое слева, открытое справа; медные полосы на двери, шестерня в замковом камне. Порог общий, створка у левого косяка. Исходник прозрачен; слабый остаток alpha по краям отмечен в проверке. В игре масштаб как у P17, 102,4 × 140,8 px.",
+      "saved_at_utc": "2026-10-03T21:14:16.209880+00:00"
+    },
+    {
+      "id": "P21",
+      "kind": "sprite",
+      "priority": 1,
+      "path": "assets/props/v2/source/p21_conveyor.png",
+      "prompt": "Attached image 1: the concept sheet of world 2 \"Workshops\" of my game \"Hold On!\" — style and materials reference (warm wood, copper, brass, red brick, grey stone, soft steam). Attached image 2: a screenshot of the game as it looks now: painted backgrounds and platforms; the machines in it are cut out of a reference sheet, look rough, inconsistent in scale and partly drawn in perspective. Attached image 3: the current version of the object — keep its function and general shape. Attached image 4: the approved brick-and-stone texture of the world 2 platforms — match its painting style and level of detail. Attached image 5: already approved objects of the same sprite set — match their rendering exactly. Do NOT copy layouts, text or UI from the attachments.\n\nDraw this interactive object as a GAME SPRITE for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict orthographic side view — no top faces, no perspective, no cast shadow on the ground — centered with empty space around it. Hand-painted cartoon style that belongs to the painted world: soft but visible material texture (wood grain, worn edges, small dents and scratches on metal, a little soot), soft shading with light from the upper left, muted natural colors with warm copper and brass accents. It must read at once as an interactive object: a clean, slightly thin, painted dark brown-navy outline around the silhouette (not pure black), and a bit more contrast than the background behind it. Long objects: both ends finished, the middle part uniform so it can repeat. If several states or parts are listed, draw them side by side in one row, at the same scale, on the same baseline, evenly spaced. No text, letters, numbers, symbols, logos or watermark.\nObject: a workshop conveyor belt lying on the floor: a thick dark-brown canvas belt with small wooden cleats across it, running over a low frame of wood and riveted iron, with a round brass roller drum at each end. The top of the belt is flat — characters walk on it.\nStates: the belt strip with both drum ends; one drum alone (perfectly round, so the game can spin it); one short uniform piece of the belt surface (so the game can scroll it).\nProportions: the strip 6 tiles long and 0.4 tile tall; the drum 0.4 tile across.\nCRITICAL: a very LOW floor belt, not a tall factory conveyor with legs. Draw exactly THREE separate parts in one row left to right: complete long belt strip; detached perfectly round drum; short scrolling surface segment. Use one consistent scale. The long strip silhouette is about 960 pixels long and only 64 pixels tall, INCLUDING the end rollers and low frame, width:height 15:1. Detached drum diameter 64 pixels; surface segment height follows the belt surface. No top surface visible: strictly side-on, the cleats seen in profile. Canvas has generous clear alpha margins.",
+      "refs": [
+        "D:\\Cluade projects\\games\\Glue\\docs\\референсы\\world2_workshops.png",
+        "D:\\Cluade projects\\games\\Glue\\docs\\progress\\w2_now_spark_wires_keg.jpg",
+        "D:\\Cluade projects\\games\\Glue\\docs\\референсы\\mechanisms\\mech_w2_conveyor.png",
+        "D:\\Cluade projects\\games\\Glue\\assets\\tiles\\world_02\\source\\w02_fill.png",
+        "D:\\Cluade projects\\games\\Glue\\assets\\props\\v2\\source\\p01_crate.png"
+      ],
+      "transparent": true,
+      "status": "reviewed",
+      "edits": [
+        {
+          "refs": [
+            "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-605f2f69-0c3e-4ee2-b2a8-9498be85e4cf.png"
+          ],
+          "prompt": "Edit image 1, a transparent conveyor sprite sheet, keep the same muted hand-painted brown wood, dark brown canvas, riveted iron, brass rollers and thin brown-navy outlines. Exactly three separate parts in one row: LEFT complete conveyor strip with two rollers; CENTER detached round roller; RIGHT short belt SURFACE segment for scrolling.\nCRITICAL CORRECTION: the current main belt is about 6 times wider than tall, but it must be FIFTEEN TIMES wider than tall. Keep the main strip about 1300 pixels LONG and redraw it only 87 pixels TOTAL HEIGHT. Each round roller at its ends has diameter 87 pixels, fitting the low silhouette. The wooden/iron support frame is very shallow and low, inside the same 87 pixel height, no legs. The upper walking edge is straight, the wooden cleats are small and low. NO TOP FACE: pure orthographic SIDE ELEVATION, no slanted receding faces.\nThe detached CENTER drum is a PERFECT CIRCLE of diameter 87 pixels, exactly matching the two belt end rollers. Do not squash a circle into an ellipse. It should be much smaller than it currently is.\nThe RIGHT part is only a short dark canvas BELT SURFACE with low cleats, not another wood/iron conveyor frame. Remove its entire wooden under-frame and iron plates. Its visible material matches the thin upper belt of the main strip, its height about 25 pixels, same scale.\nKeep native 2172x724 landscape canvas, generous empty transparent margins, consistent scale, common bottom baseline, clearly separated pieces, no labels, text, characters, arrows, shadows, haze, glow or scenery. Every pixel outside the isolated three parts is transparent alpha=0.",
+          "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-f6b427b2-eb42-4a49-93f7-dcd6f051e899.png"
+        },
+        {
+          "refs": [
+            "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-f6b427b2-eb42-4a49-93f7-dcd6f051e899.png"
+          ],
+          "prompt": "Edit image 1, preserve native 2172x724 transparent canvas, the horizontal positions of all three parts, the long main belt width and the style/materials. Make only the total silhouette HEIGHTS smaller.\nThe LEFT long conveyor must be 15 times wider than tall: keep its current width about 1470 pixels, reduce its complete height to 98 pixels. Lower the upper cleats and belt and make the wooden/iron base shallower. The two end drums must remain perfectly round, diameter exactly 98 pixels; REDRAW smaller circles, do not stretch them as ellipses. The end drums set the total strip height.\nCENTER isolated drum: redraw as the same perfect 98-pixel circle as the main end drums, identical scale.\nRIGHT scrolling surface segment: keep its width, reduce height to about 28 pixels; no supporting wooden frame or iron plates underneath. Small wooden cleats on a thin dark canvas belt.\nAll three rest on the SAME bottom baseline; main belt upper walking edge is perfectly horizontal. NO top-face perspective, strict side elevation. Match painted wood/metal colors and clean brown-navy outline. Transparent alpha=0 outside the isolated objects, no text, no labels, no symbols, no shadows or haze. Do not change the widths of LEFT and RIGHT pieces.",
+          "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-b2abf07c-5561-4873-bb51-a56628992fce.png"
+        }
+      ],
+      "reference_note": "Built-in tool accepts at most 5 reference paths. P21 uses the approved crate as image 5; following mechanisms use the reviewed conveyor as image 5.",
+      "first_generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-605f2f69-0c3e-4ee2-b2a8-9498be85e4cf.png",
+      "validation": {
+        "native_size": [
+          2172,
+          724
+        ],
+        "mode": "RGBA",
+        "sha256": "350de2e28c62b60e060550612291dc8faffd8f0e69ac48ccff4a2c1aaa9e5d48",
+        "native_generator_bytes_preserved": true,
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_bbox": [
+          22,
+          246,
+          2147,
+          668
+        ],
+        "visible_bbox_alpha_32": [
+          27,
+          343,
+          2145,
+          473
+        ],
+        "border_alpha_max": 0,
+        "true_transparency": true,
+        "x_groups_alpha_32": [
+          [
+            27,
+            346,
+            1511,
+            468
+          ],
+          [
+            1579,
+            343,
+            1710,
+            473
+          ],
+          [
+            1771,
+            393,
+            2145,
+            430
+          ]
+        ]
+      },
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-b2abf07c-5561-4873-bb51-a56628992fce.png",
+      "review_notes": "Три детали слева направо: низкая полоса с двумя барабанами, отдельный круглый барабан, короткая поверхность для прокрутки. Без высоких ножек и перспективы пола. Пропорции приблизительные; в игре полоса 384 × 25,6 px, барабан диаметром 25,6 px. После нарезки проверить повтор середины и сохранить круглость отдельного барабана.",
+      "saved_at_utc": "2026-10-03T21:20:27.695354+00:00"
+    },
+    {
+      "id": "P26",
+      "kind": "sprite",
+      "priority": 1,
+      "path": "assets/props/v2/source/p26_wires.png",
+      "prompt": "Attached image 1: the concept sheet of world 2 \"Workshops\" of my game \"Hold On!\" — style and materials reference (warm wood, copper, brass, red brick, grey stone, soft steam). Attached image 2: a screenshot of the game as it looks now: painted backgrounds and platforms; the machines in it are cut out of a reference sheet, look rough, inconsistent in scale and partly drawn in perspective. Attached image 3: the current version of the object — keep its function and general shape. Attached image 4: the approved brick-and-stone texture of the world 2 platforms — match its painting style and level of detail. Attached image 5: already approved objects of the same sprite set — match their rendering exactly. Do NOT copy layouts, text or UI from the attachments.\n\nDraw this interactive object as a GAME SPRITE for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict orthographic side view — no top faces, no perspective, no cast shadow on the ground — centered with empty space around it. Hand-painted cartoon style that belongs to the painted world: soft but visible material texture (wood grain, worn edges, small dents and scratches on metal, a little soot), soft shading with light from the upper left, muted natural colors with warm copper and brass accents. It must read at once as an interactive object: a clean, slightly thin, painted dark brown-navy outline around the silhouette (not pure black), and a bit more contrast than the background behind it. Long objects: both ends finished, the middle part uniform so it can repeat. If several states or parts are listed, draw them side by side in one row, at the same scale, on the same baseline, evenly spaced. No text, letters, numbers, symbols, logos or watermark.\nObject: copper wiring of the workshops that a living spark runs along: a straight copper wire with a thin dark braid and small white porcelain insulators on short brackets; a 90-degree corner piece with an insulator; a small brass junction box where the wire splits in two, with a pointer arrow on its face; a wire end plugged into a small brass terminal; a grounded wire end going down into a small iron ground stake.\nStates: straight wire (the middle uniform so it can repeat); corner; junction box with the pointer to the left; the same box with the pointer to the right; end terminal; ground stake.\nProportions: the wire 4 tiles long and 0.1 tile thick; insulators and terminal 0.25 tile; the junction box 0.5 tile.\nAttached image 5 is the visually reviewed new conveyor sprite; match its painted material texture, muted colors and thin brown-navy outline. Additional screenshot and crate references were inspected in this chat; the tool allows at most five attached paths.\nCRITICAL layout: exactly SIX separate parts in one row, left to right: straight wire; 90-degree corner; junction box pointing LEFT; identical junction box pointing RIGHT; brass end terminal; grounded end with small iron stake. A consistent scale, generous alpha gaps and margins. The straight copper core is very thin, width:thickness 40:1 (800px long by 20px thick is a useful drawing scale); porcelain insulators can be taller. Junction boxes are 100px square at this scale. The LEFT and RIGHT POINTER ARROWS on the two junction boxes are functional mechanical indicators and are REQUIRED exceptions to the no-symbol rule. They must be obvious opposites. No other labels, diamonds or symbols. The 90-degree corner is an L, no perspective.",
+      "refs": [
+        "D:\\Cluade projects\\games\\Glue\\docs\\референсы\\world2_workshops.png",
+        "D:\\Cluade projects\\games\\Glue\\docs\\progress\\w2_now_spark_wires_keg.jpg",
+        "D:\\Cluade projects\\games\\Glue\\docs\\референсы\\mechanisms\\mech_w2_wires_switch.png",
+        "D:\\Cluade projects\\games\\Glue\\assets\\tiles\\world_02\\source\\w02_fill.png",
+        "D:\\Cluade projects\\games\\Glue\\assets\\props\\v2\\source\\p21_conveyor.png"
+      ],
+      "transparent": true,
+      "status": "reviewed",
+      "edits": [],
+      "reference_note": "Built-in tool accepts at most 5 reference paths. P21 uses the approved crate as image 5; following mechanisms use the reviewed conveyor as image 5.",
+      "validation": {
+        "native_size": [
+          2172,
+          724
+        ],
+        "mode": "RGBA",
+        "sha256": "b937e24a741def23ee98a4f68f6a45e71fbd9f008f181a0c4dc24b30df6a3c78",
+        "native_generator_bytes_preserved": true,
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_bbox": [
+          47,
+          112,
+          2168,
+          724
+        ],
+        "visible_bbox_alpha_32": [
+          53,
+          221,
+          2117,
+          606
+        ],
+        "border_alpha_max": 1,
+        "true_transparency": true,
+        "x_groups_alpha_32": [
+          [
+            53,
+            352,
+            742,
+            444
+          ],
+          [
+            799,
+            223,
+            973,
+            448
+          ],
+          [
+            1008,
+            221,
+            1302,
+            479
+          ],
+          [
+            1340,
+            221,
+            1635,
+            479
+          ],
+          [
+            1694,
+            349,
+            1890,
+            460
+          ],
+          [
+            1945,
+            352,
+            2117,
+            606
+          ]
+        ]
+      },
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-a3c022e2-0002-4a89-97a7-f2e5aa90ba59.png",
+      "review_notes": "Шесть отдельных деталей: прямой провод с изоляторами, угол 90°, две развилки со стрелками влево/вправо, клемма, заземление. Направления стрелок различаются; коробки совпадают по масштабу. При подключении толщину провода и размеры коробок задать по заданию.",
+      "saved_at_utc": "2026-10-03T21:26:36.998606+00:00"
+    },
+    {
+      "id": "P28",
+      "kind": "sprite",
+      "priority": 1,
+      "path": "assets/props/v2/source/p28_cracked.png",
+      "prompt": "Attached image 1: the concept sheet of world 2 \"Workshops\" of my game \"Hold On!\" — style and materials reference (warm wood, copper, brass, red brick, grey stone, soft steam). Attached image 2: a screenshot of the game as it looks now: painted backgrounds and platforms; the machines in it are cut out of a reference sheet, look rough, inconsistent in scale and partly drawn in perspective. Attached image 3: the current version of the object — keep its function and general shape. Attached image 4: the approved brick-and-stone texture of the world 2 platforms — match its painting style and level of detail. Attached image 5: already approved objects of the same sprite set — match their rendering exactly. Do NOT copy layouts, text or UI from the attachments.\n\nDraw this interactive object as a GAME SPRITE for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict orthographic side view — no top faces, no perspective, no cast shadow on the ground — centered with empty space around it. Hand-painted cartoon style that belongs to the painted world: soft but visible material texture (wood grain, worn edges, small dents and scratches on metal, a little soot), soft shading with light from the upper left, muted natural colors with warm copper and brass accents. It must read at once as an interactive object: a clean, slightly thin, painted dark brown-navy outline around the silhouette (not pure black), and a bit more contrast than the background behind it. Long objects: both ends finished, the middle part uniform so it can repeat. If several states or parts are listed, draw them side by side in one row, at the same scale, on the same baseline, evenly spaced. No text, letters, numbers, symbols, logos or watermark.\nObject: weak masonry of the workshops that a keg blast breaks: a vertical wall section of red brick and grey stone like the platform texture, crossed by big cracks; a horizontal stone slab bridge across a gap with the same cracks; rubble.\nStates: the wall (top and bottom ends finished, the middle uniform so it can repeat vertically); the slab bridge (both ends finished, the middle uniform); six separate broken pieces — bricks and stone chunks — for the falling animation.\nProportions: the wall 1 tile wide and 3 tiles tall; the slab 6 tiles long and 1 tile thick; the pieces 0.3–0.5 tile.\nAttached image 5 is the visually reviewed new conveyor sprite; match its painted material texture, muted colors and thin brown-navy outline. Additional screenshot and crate references were inspected in this chat; the tool allows at most five attached paths.\nCRITICAL: exactly EIGHT separate cuttable parts in ONE ROW: a vertical cracked wall, a horizontal cracked slab bridge, then exactly SIX individual rubble pieces separated by clear alpha gaps. Same material and scale throughout. Useful relative drawing dimensions: wall 120px wide by 360px tall; slab 720px wide by 120px tall; each chunk 36–60px across. Both ends of the wall and slab are finished; interior masonry rhythm consistent for later repetition. Cracks are clear on the visible side. No keg, fire, arrows, explosion cloud or characters in this sheet; image 3 is only shape reference.",
+      "refs": [
+        "D:\\Cluade projects\\games\\Glue\\docs\\референсы\\world2_workshops.png",
+        "D:\\Cluade projects\\games\\Glue\\docs\\progress\\w2_now_spark_wires_keg.jpg",
+        "D:\\Cluade projects\\games\\Glue\\docs\\референсы\\mechanisms\\mech_w2_fuse_keg.png",
+        "D:\\Cluade projects\\games\\Glue\\assets\\tiles\\world_02\\source\\w02_fill.png",
+        "D:\\Cluade projects\\games\\Glue\\assets\\props\\v2\\source\\p21_conveyor.png"
+      ],
+      "transparent": true,
+      "status": "reviewed",
+      "edits": [],
+      "reference_note": "Built-in tool accepts at most 5 reference paths. P21 uses the approved crate as image 5; following mechanisms use the reviewed conveyor as image 5.",
+      "validation": {
+        "native_size": [
+          2172,
+          724
+        ],
+        "mode": "RGBA",
+        "sha256": "fbf8e392a291a8d0355d1c3f3ec02fb4cb856d3927ba2b1203dc1467e30d09c5",
+        "native_generator_bytes_preserved": true,
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_bbox": [
+          78,
+          109,
+          2152,
+          700
+        ],
+        "visible_bbox_alpha_32": [
+          82,
+          111,
+          2106,
+          585
+        ],
+        "border_alpha_max": 0,
+        "true_transparency": true,
+        "x_groups_alpha_32": [
+          [
+            82,
+            111,
+            299,
+            585
+          ],
+          [
+            348,
+            446,
+            1337,
+            585
+          ],
+          [
+            1375,
+            459,
+            1498,
+            585
+          ],
+          [
+            1513,
+            509,
+            1610,
+            584
+          ],
+          [
+            1629,
+            479,
+            1761,
+            585
+          ],
+          [
+            1785,
+            486,
+            1888,
+            584
+          ],
+          [
+            1910,
+            491,
+            1988,
+            572
+          ],
+          [
+            2010,
+            509,
+            2106,
+            585
+          ]
+        ]
+      },
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-354149ad-bc6b-4076-8887-764e0e69f103.png",
+      "review_notes": "Вертикальная треснувшая стена, горизонтальный пролёт и ровно шесть отдельных обломков кирпича и камня. Все детали внутри кадра, края закончены. После нарезки проверить повтор кладки и трещин; игровая стена 64 × 192 px, пролёт 384 × 64 px.",
+      "saved_at_utc": "2026-10-03T21:26:37.941271+00:00"
+    },
+    {
+      "id": "P30",
+      "kind": "sprite",
+      "priority": 1,
+      "path": "assets/props/v2/source/p30_beetle.png",
+      "prompt": "Attached image 1: the concept sheet of world 2 \"Workshops\" of my game \"Hold On!\" — style and materials reference (warm wood, copper, brass, red brick, grey stone, soft steam). Attached image 2: a screenshot of the game as it looks now: painted backgrounds and platforms; the machines in it are cut out of a reference sheet, look rough, inconsistent in scale and partly drawn in perspective. Attached image 3: the current version of the object — keep its function and general shape. Attached image 4: the approved brick-and-stone texture of the world 2 platforms — match its painting style and level of detail. Attached image 5: already approved objects of the same sprite set — match their rendering exactly. Do NOT copy layouts, text or UI from the attachments.\n\nDraw this interactive object as a GAME SPRITE for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict orthographic side view — no top faces, no perspective, no cast shadow on the ground — centered with empty space around it. Hand-painted cartoon style that belongs to the painted world: soft but visible material texture (wood grain, worn edges, small dents and scratches on metal, a little soot), soft shading with light from the upper left, muted natural colors with warm copper and brass accents. It must read at once as an interactive object: a clean, slightly thin, painted dark brown-navy outline around the silhouette (not pure black), and a bit more contrast than the background behind it. Long objects: both ends finished, the middle part uniform so it can repeat. If several states or parts are listed, draw them side by side in one row, at the same scale, on the same baseline, evenly spaced. No text, letters, numbers, symbols, logos or watermark.\nObject: the pusher beetle — a sturdy clockwork beetle of copper and brass with a rounded riveted shell, six short legs and a flat shovel-like head that pushes things; the top of the shell is broad and nearly flat — characters ride on it; a bit grumpy but friendly, NOT scary.\nStates: walking to the right, two leg poses; pushing (head lowered, legs braced).\nProportions: each 1.1 tiles wide and 0.9 tile tall.\nAttached image 5 is the visually reviewed new conveyor sprite; match its painted material texture, muted colors and thin brown-navy outline. Additional screenshot and crate references were inspected in this chat; the tool allows at most five attached paths.\nExactly THREE beetles in one horizontal row facing RIGHT: walking pose A; walking pose B with legs shifted; pushing pose with shovel head lowered and legs braced. Same shell size, same baseline, clear alpha gaps. Six mechanical legs total per beetle (three near and three far side), no wheels in place of legs. A broad nearly flat shell top suitable for a player to stand on. Only the beetles: no rider, crate, floor, steam puffs, vibration marks or symbols.",
+      "refs": [
+        "D:\\Cluade projects\\games\\Glue\\docs\\референсы\\world2_workshops.png",
+        "D:\\Cluade projects\\games\\Glue\\docs\\progress\\w2_now_spark_wires_keg.jpg",
+        "D:\\Cluade projects\\games\\Glue\\docs\\референсы\\enemies\\enemy_w2_pusher_beetle.png",
+        "D:\\Cluade projects\\games\\Glue\\assets\\tiles\\world_02\\source\\w02_fill.png",
+        "D:\\Cluade projects\\games\\Glue\\assets\\props\\v2\\source\\p21_conveyor.png"
+      ],
+      "transparent": true,
+      "status": "reviewed",
+      "edits": [],
+      "reference_note": "Built-in tool accepts at most 5 reference paths. P21 uses the approved crate as image 5; following mechanisms use the reviewed conveyor as image 5.",
+      "validation": {
+        "native_size": [
+          2172,
+          724
+        ],
+        "mode": "RGBA",
+        "sha256": "62e3db6c57537af24bc336a38cd98f17c89583a9fae98373139c14e4f8ef9bb4",
+        "native_generator_bytes_preserved": true,
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_bbox": [
+          29,
+          9,
+          2120,
+          724
+        ],
+        "visible_bbox_alpha_32": [
+          75,
+          186,
+          2101,
+          553
+        ],
+        "border_alpha_max": 1,
+        "true_transparency": true,
+        "x_groups_alpha_32": [
+          [
+            75,
+            186,
+            716,
+            544
+          ],
+          [
+            788,
+            186,
+            1391,
+            553
+          ],
+          [
+            1439,
+            216,
+            2101,
+            550
+          ]
+        ]
+      },
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-02973292-4cd2-41d8-9de7-fdabfedcb924.png",
+      "review_notes": "Три позы жука вправо: два шага и толкание с опущенной головой-лопатой. Широкая площадка на панцире, медь и латунь, ноги в разных положениях. При подключении выровнять рамки и опорную точку, целевой размер 70,4 × 57,6 px.",
+      "saved_at_utc": "2026-10-03T21:31:45.703909+00:00"
+    },
+    {
+      "id": "P29",
+      "kind": "sprite",
+      "priority": 1,
+      "path": "assets/props/v2/source/p29_spark.png",
+      "prompt": "Attached image 1: the concept sheet of world 2 \"Workshops\" of my game \"Hold On!\" — style and materials reference (warm wood, copper, brass, red brick, grey stone, soft steam). Attached image 2: a screenshot of the game as it looks now: painted backgrounds and platforms; the machines in it are cut out of a reference sheet, look rough, inconsistent in scale and partly drawn in perspective. Attached image 3: the current version of the object — keep its function and general shape. Attached image 4: the approved brick-and-stone texture of the world 2 platforms — match its painting style and level of detail. Attached image 5: already approved objects of the same sprite set — match their rendering exactly. Do NOT copy layouts, text or UI from the attachments.\n\nDraw this interactive object as a GAME SPRITE for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict orthographic side view — no top faces, no perspective, no cast shadow on the ground — centered with empty space around it. Hand-painted cartoon style that belongs to the painted world: soft but visible material texture (wood grain, worn edges, small dents and scratches on metal, a little soot), soft shading with light from the upper left, muted natural colors with warm copper and brass accents. It must read at once as an interactive object: a clean, slightly thin, painted dark brown-navy outline around the silhouette (not pure black), and a bit more contrast than the background behind it. Long objects: both ends finished, the middle part uniform so it can repeat. If several states or parts are listed, draw them side by side in one row, at the same scale, on the same baseline, evenly spaced. No text, letters, numbers, symbols, logos or watermark.\nObject: the spark — a small living fire spark that runs along copper wires: a round bright orange-yellow core with flickering flame tongues, two little dark eyes, cheeky and cute, NOT scary.\nStates: running to the right (leaning forward, tongues trailing behind); bouncing back (surprised round eyes, tongues blown forward); fading out (a small grey puff of smoke with two tiny embers).\nProportions: the core 0.4 tile across; with the flames about 0.6 tile.\nAttached image 5 is the visually reviewed new conveyor sprite; match its painted material texture, muted colors and thin brown-navy outline. Additional screenshot and crate references were inspected in this chat; the tool allows at most five attached paths.\nExactly THREE separate small spark states in one row: rightward running with flame tongues trailing LEFT; bouncing back with surprised round eyes and flame tongues swept FORWARD to the RIGHT; fading as a small grey smoke puff with exactly two tiny embers. Same scale, clear alpha gaps. Only the cute round fire core with two little dark eyes and flame tongues, no arms, legs, hands or feet, no wire segment, no floor, no fuse, no arrows or motion marks. Painted warm flame edges, no large surrounding halo.",
+      "refs": [
+        "D:\\Cluade projects\\games\\Glue\\docs\\референсы\\world2_workshops.png",
+        "D:\\Cluade projects\\games\\Glue\\docs\\progress\\w2_now_spark_wires_keg.jpg",
+        "D:\\Cluade projects\\games\\Glue\\docs\\референсы\\enemies\\enemy_w2_spark.png",
+        "D:\\Cluade projects\\games\\Glue\\assets\\tiles\\world_02\\source\\w02_fill.png",
+        "D:\\Cluade projects\\games\\Glue\\assets\\props\\v2\\source\\p21_conveyor.png"
+      ],
+      "transparent": true,
+      "status": "reviewed",
+      "edits": [
+        {
+          "refs": [
+            "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-7c155c3c-46d6-4e8e-9a2d-19892c566f73.png"
+          ],
+          "prompt": "Edit image 1 only. Preserve native 2172x724 transparent sprite sheet, and leave LEFT running spark and RIGHT grey fading smoke with its two embers exactly unchanged. Correct ONLY the MIDDLE bouncing-back spark: MIRROR that middle spark HORIZONTALLY, so its surprised round-eyed FACE is on its LEFT side looking LEFT, and all its flame tongues and trailing droplets point toward the RIGHT. This is the opposite travel direction of the left running spark. Preserve its surprised eyes, painted flame texture, size and position and separate alpha margins. Nothing else changes; no text, arrows, extra flames, legs, characters, floor or background. True transparent PNG.",
+          "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-440dd8a0-df4d-4fb7-bd3b-ce229cd321a1.png"
+        }
+      ],
+      "reference_note": "Built-in tool accepts at most 5 reference paths. P21 uses the approved crate as image 5; following mechanisms use the reviewed conveyor as image 5.",
+      "first_generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-7c155c3c-46d6-4e8e-9a2d-19892c566f73.png",
+      "validation": {
+        "native_size": [
+          2172,
+          724
+        ],
+        "mode": "RGBA",
+        "sha256": "671f87d38fb3a893978cc55b5b3c03a87c243b2ef30f2b77c0d75337ddcebf8d",
+        "native_generator_bytes_preserved": true,
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_bbox": [
+          226,
+          89,
+          2088,
+          700
+        ],
+        "visible_bbox_alpha_32": [
+          229,
+          182,
+          1951,
+          573
+        ],
+        "border_alpha_max": 0,
+        "true_transparency": true,
+        "x_groups_alpha_32": [
+          [
+            229,
+            220,
+            726,
+            569
+          ],
+          [
+            899,
+            198,
+            1429,
+            573
+          ],
+          [
+            1579,
+            182,
+            1892,
+            571
+          ],
+          [
+            1901,
+            356,
+            1951,
+            404
+          ]
+        ]
+      },
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-440dd8a0-df4d-4fb7-bd3b-ce229cd321a1.png",
+      "review_notes": "Три состояния: бег вправо с пламенем влево; отскок влево с удивлёнными глазами и пламенем вправо; затухание — серый дым с двумя угольками. Рук и ног нет. При нарезке включить отдельные язычки пламени в рамку соответствующего состояния; целевой диаметр ядра 25,6 px, с пламенем около 38,4 px.",
+      "saved_at_utc": "2026-10-03T21:37:05.962543+00:00"
+    },
+    {
+      "id": "P27",
+      "kind": "sprite",
+      "priority": 1,
+      "path": "assets/props/v2/source/p27_keg.png",
+      "prompt": "Attached image 1: the concept sheet of world 2 \"Workshops\" of my game \"Hold On!\" — style and materials reference (warm wood, copper, brass, red brick, grey stone, soft steam). Attached image 2: a screenshot of the game as it looks now: painted backgrounds and platforms; the machines in it are cut out of a reference sheet, look rough, inconsistent in scale and partly drawn in perspective. Attached image 3: the current version of the object — keep its function and general shape. Attached image 4: the approved brick-and-stone texture of the world 2 platforms — match its painting style and level of detail. Attached image 5: already approved objects of the same sprite set — match their rendering exactly. Do NOT copy layouts, text or UI from the attachments.\n\nDraw this interactive object as a GAME SPRITE for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict orthographic side view — no top faces, no perspective, no cast shadow on the ground — centered with empty space around it. Hand-painted cartoon style that belongs to the painted world: soft but visible material texture (wood grain, worn edges, small dents and scratches on metal, a little soot), soft shading with light from the upper left, muted natural colors with warm copper and brass accents. It must read at once as an interactive object: a clean, slightly thin, painted dark brown-navy outline around the silhouette (not pure black), and a bit more contrast than the background behind it. Long objects: both ends finished, the middle part uniform so it can repeat. If several states or parts are listed, draw them side by side in one row, at the same scale, on the same baseline, evenly spaced. No text, letters, numbers, symbols, logos or watermark.\nObject: a small powder keg of dark wood with iron hoops and a short fuse on top, a faded painted band without any symbols.\nStates: the keg; the keg with the fuse burning (a small bright spark at the fuse tip).\nProportions: each 0.65 tile wide and 0.7 tile tall.\nAttached image 5 is the visually reviewed new conveyor sprite; match its painted material texture, muted colors and thin brown-navy outline. Additional screenshot and crate references were inspected in this chat; the tool allows at most five attached paths.\nExactly TWO matching keg states side by side, same size and baseline. Left fuse UNLIT; right fuse tip has only a SMALL bright painted spark. The wooden faded band is plain, with no danger icon, letters or symbols. Dark wood, iron hoops, short fuse. No explosion, large fire cloud, background or cast shadow.",
+      "refs": [
+        "D:\\Cluade projects\\games\\Glue\\docs\\референсы\\world2_workshops.png",
+        "D:\\Cluade projects\\games\\Glue\\docs\\progress\\w2_now_spark_wires_keg.jpg",
+        "D:\\Cluade projects\\games\\Glue\\docs\\референсы\\mechanisms\\mech_w2_fuse_keg.png",
+        "D:\\Cluade projects\\games\\Glue\\assets\\tiles\\world_02\\source\\w02_fill.png",
+        "D:\\Cluade projects\\games\\Glue\\assets\\props\\v2\\source\\p21_conveyor.png"
+      ],
+      "transparent": true,
+      "status": "reviewed",
+      "edits": [
+        {
+          "refs": [
+            "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-2cda9d99-bf5b-4a0c-b126-f2252e518fb5.png"
+          ],
+          "prompt": "Edit image 1 only. Preserve the two identical powder keg states, dark painted wooden staves, two iron hoops, faded plain red band, short fuse, left unlit and right with a small bright spark, same scale and bottom baseline, transparent background. Correct ONLY the view of each barrel's TOP. Strict orthographic SIDE ELEVATION: remove the visible elliptical TOP FACE and top wood disk. The top is a simple straight horizontal narrow rim, no visible top-plane depth, with the short fuse emerging at its center. Preserve the barrel body width, height, rounded side bulge, iron hoop texture and painted outline. No other changes, no labels, symbols, shadows or scenery, no extra smoke. True transparent PNG.",
+          "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-1d42874a-5ada-4afb-89da-c549d46bfd4b.png"
+        }
+      ],
+      "reference_note": "Built-in tool accepts at most 5 reference paths. P21 uses the approved crate as image 5; following mechanisms use the reviewed conveyor as image 5.",
+      "first_generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-2cda9d99-bf5b-4a0c-b126-f2252e518fb5.png",
+      "validation": {
+        "native_size": [
+          1774,
+          887
+        ],
+        "mode": "RGBA",
+        "sha256": "a341bb8ab16216dc95b75097922eb526ffcc1db7d1780ba91d941c922e8ea719",
+        "native_generator_bytes_preserved": true,
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_bbox": [
+          229,
+          150,
+          1486,
+          863
+        ],
+        "visible_bbox_alpha_32": [
+          422,
+          208,
+          1355,
+          758
+        ],
+        "border_alpha_max": 0,
+        "true_transparency": true,
+        "x_groups_alpha_32": [
+          [
+            422,
+            280,
+            812,
+            758
+          ],
+          [
+            963,
+            208,
+            1355,
+            758
+          ]
+        ]
+      },
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-1d42874a-5ada-4afb-89da-c549d46bfd4b.png",
+      "review_notes": "Два одинаковых бочонка с обычным и горящим фитилём. Верх исправлен на вид строго сбоку; полоса пустая, без знаков. У состояний общий низ корпуса. Целевой размер тела 41,6 × 44,8 px, искру учесть отдельно при нарезке.",
+      "saved_at_utc": "2026-10-03T21:37:06.884998+00:00"
+    },
+    {
+      "id": "P22",
+      "kind": "sprite",
+      "priority": 2,
+      "path": "assets/props/v2/source/p22_rotating_beam.png",
+      "prompt": "Attached image 1: the concept sheet of world 2 \"Workshops\" of my game \"Hold On!\" — style and materials reference (warm wood, copper, brass, red brick, grey stone, soft steam). Attached image 2: a screenshot of the game as it looks now: painted backgrounds and platforms; the machines in it are cut out of a reference sheet, look rough, inconsistent in scale and partly drawn in perspective. Attached image 3: the current version of the object — keep its function and general shape. Attached image 4: the approved brick-and-stone texture of the world 2 platforms — match its painting style and level of detail. Attached image 5: already approved objects of the same sprite set — match their rendering exactly. Do NOT copy layouts, text or UI from the attachments.\n\nDraw this interactive object as a GAME SPRITE for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict orthographic side view — no top faces, no perspective, no cast shadow on the ground — centered with empty space around it. Hand-painted cartoon style that belongs to the painted world: soft but visible material texture (wood grain, worn edges, small dents and scratches on metal, a little soot), soft shading with light from the upper left, muted natural colors with warm copper and brass accents. It must read at once as an interactive object: a clean, slightly thin, painted dark brown-navy outline around the silhouette (not pure black), and a bit more contrast than the background behind it. Long objects: both ends finished, the middle part uniform so it can repeat. If several states or parts are listed, draw them side by side in one row, at the same scale, on the same baseline, evenly spaced. No text, letters, numbers, symbols, logos or watermark.\nObject: a long rotating bridge beam of the workshops: one thick timber reinforced with iron strips and rivets along both edges, iron caps on both ends; and its pivot — a round iron-and-brass hub with a big central bolt.\nStates: the beam; the hub alone.\nProportions: the beam 8 tiles long and 0.4 tile thick; the hub 0.9 tile across.\nAttached image 5 is the visually reviewed new conveyor sprite; match its painted material texture, muted colors and thin brown-navy outline. Additional screenshot and crate references were inspected in this chat; the tool allows at most five attached paths.\nExactly TWO separate parts in one row: a single horizontal beam; a detached round pivot hub. The long beam is extremely thin, width:height 20:1 (1200px long by 60px thick at a consistent drawing scale). Hub diameter 135px at that scale. The beam itself has no attached central hub, no pedestal, pole or stand. Iron caps on both finished ends; uniform timber and iron reinforcement rhythm through the middle. Orthographic side view, no visible top face, no rotation variants, no labels.",
+      "refs": [
+        "D:\\Cluade projects\\games\\Glue\\docs\\референсы\\world2_workshops.png",
+        "D:\\Cluade projects\\games\\Glue\\docs\\progress\\w2_now_spark_wires_keg.jpg",
+        "D:\\Cluade projects\\games\\Glue\\docs\\референсы\\mechanisms\\mech_w2_rotating_platform.png",
+        "D:\\Cluade projects\\games\\Glue\\assets\\tiles\\world_02\\source\\w02_fill.png",
+        "D:\\Cluade projects\\games\\Glue\\assets\\props\\v2\\source\\p21_conveyor.png"
+      ],
+      "transparent": true,
+      "status": "reviewed",
+      "edits": [
+        {
+          "refs": [
+            "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-f45e5ee8-bf48-4612-a0ef-cb1477f64d1a.png"
+          ],
+          "prompt": "Edit image 1, preserve the native 2172x724 transparent sprite sheet, its long horizontal timber beam and the separate round pivot hub on the RIGHT. Preserve the hand-painted worn wood, riveted iron edge reinforcement, thin brown-navy outlines and muted metals.\nCorrect the LEFT beam: this is a ROTATING BRIDGE BEAM, not a conveyor. REMOVE both large ROUND BRASS ROLLER ASSEMBLIES from its ends. Replace them with simple thin RECTANGULAR IRON END CAPS, exactly the same height as the beam. No circular wheels or hubs are attached anywhere on the beam; only small round rivet heads remain. Beam uniform total thickness about 93 pixels for a length about 1850 pixels, width:height 20:1. Both ends flat cut and finished. No visible top face.\nKeep the RIGHT detached round iron-brass pivot hub separate and perfectly circular; make it about 208 pixels diameter at the same scale, with a big central bolt. Exactly TWO separate parts with a clear alpha gap, same bottom baseline, fully inside canvas with alpha margins. No pedestal, supports, rollers, chain, text, labels, shadow or scenery. Transparent alpha=0 outside the silhouettes.",
+          "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-5dec5b7b-4363-48dc-889d-559abc262071.png"
+        }
+      ],
+      "reference_note": "Built-in tool accepts at most 5 reference paths. P21 uses the approved crate as image 5; following mechanisms use the reviewed conveyor as image 5.",
+      "first_generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-f45e5ee8-bf48-4612-a0ef-cb1477f64d1a.png",
+      "validation": {
+        "native_size": [
+          2172,
+          724
+        ],
+        "mode": "RGBA",
+        "sha256": "a1f0e40f506f30406d7dfdb67a0db05b61441d76a97be29de8572cf7355a3021",
+        "native_generator_bytes_preserved": true,
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_bbox": [
+          49,
+          198,
+          2144,
+          562
+        ],
+        "visible_bbox_alpha_32": [
+          53,
+          271,
+          2141,
+          453
+        ],
+        "border_alpha_max": 0,
+        "true_transparency": true,
+        "x_groups_alpha_32": [
+          [
+            53,
+            294,
+            1895,
+            429
+          ],
+          [
+            1961,
+            271,
+            2141,
+            453
+          ]
+        ]
+      },
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-5dec5b7b-4363-48dc-889d-559abc262071.png",
+      "review_notes": "Одна горизонтальная балка с железными накладками и отдельная круглая ось с центральным болтом. Круглые ролики на концах удалены. Ритм середины однородный; при нарезке привести балку к 512 × 25,6 px, ось к диаметру 57,6 px. Пропорции исходника приблизительные.",
+      "saved_at_utc": "2026-10-03T21:43:30.861684+00:00"
+    },
+    {
+      "id": "P23",
+      "kind": "sprite",
+      "priority": 2,
+      "path": "assets/props/v2/source/p23_brittle_floor.png",
+      "prompt": "Attached image 1: the concept sheet of world 2 \"Workshops\" of my game \"Hold On!\" — style and materials reference (warm wood, copper, brass, red brick, grey stone, soft steam). Attached image 2: a screenshot of the game as it looks now: painted backgrounds and platforms; the machines in it are cut out of a reference sheet, look rough, inconsistent in scale and partly drawn in perspective. Attached image 3: the current version of the object — keep its function and general shape. Attached image 4: the approved brick-and-stone texture of the world 2 platforms — match its painting style and level of detail. Attached image 5: already approved objects of the same sprite set — match their rendering exactly. Do NOT copy layouts, text or UI from the attachments.\n\nDraw this interactive object as a GAME SPRITE for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict orthographic side view — no top faces, no perspective, no cast shadow on the ground — centered with empty space around it. Hand-painted cartoon style that belongs to the painted world: soft but visible material texture (wood grain, worn edges, small dents and scratches on metal, a little soot), soft shading with light from the upper left, muted natural colors with warm copper and brass accents. It must read at once as an interactive object: a clean, slightly thin, painted dark brown-navy outline around the silhouette (not pure black), and a bit more contrast than the background behind it. Long objects: both ends finished, the middle part uniform so it can repeat. If several states or parts are listed, draw them side by side in one row, at the same scale, on the same baseline, evenly spaced. No text, letters, numbers, symbols, logos or watermark.\nObject: a thin rickety walkway of old grey-brown planks laid across a gap, held by a few bent nails and a sagging rope underneath.\nStates: whole; cracked (split planks, sagging, about to break); broken — five separate plank splinters for the falling animation.\nProportions: the walkway 4 tiles long and a quarter of a tile thick.\nAttached image 5 is the visually reviewed new conveyor sprite; match its painted material texture, muted colors and thin brown-navy outline. Additional screenshot and crate references were inspected in this chat; the tool allows at most five attached paths.\nExactly SEVEN separate parts in ONE ROW at consistent scale: intact thin walkway; cracked/sagging walkway of the same width; then exactly FIVE separate long plank splinters, spaced apart for cutting. The intact walkway is 16 times wider than thick, about 480px wide by 30px thick INCLUDING its small bent nails and sagging rope. Cracked state the same width with a modest split and sag. No big support legs, no top faces, no characters, no assembled broken bridge among the five fragments. Clearly finished walkway ends and clean alpha gaps.",
+      "refs": [
+        "D:\\Cluade projects\\games\\Glue\\docs\\референсы\\world2_workshops.png",
+        "D:\\Cluade projects\\games\\Glue\\docs\\progress\\w2_now_spark_wires_keg.jpg",
+        "D:\\Cluade projects\\games\\Glue\\docs\\референсы\\mechanisms\\mech_w2_breakable_floor.png",
+        "D:\\Cluade projects\\games\\Glue\\assets\\tiles\\world_02\\source\\w02_fill.png",
+        "D:\\Cluade projects\\games\\Glue\\assets\\props\\v2\\source\\p21_conveyor.png"
+      ],
+      "transparent": true,
+      "status": "reviewed",
+      "edits": [
+        {
+          "refs": [
+            "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-e49f3de7-2cd3-40ec-9549-d7a72a8f8f81.png"
+          ],
+          "prompt": "Edit image 1, preserve native 2172x724 transparent canvas, painted grey-brown worn planks, small bent nails, rope, exactly SEVEN separate parts: intact walkway, cracked walkway, five separate splinters, all in one row. Correct ONLY vertical thickness and margins.\nThe two complete walkway states must be VERY THIN, each 16 times wider than tall. Keep the intact walkway about 570 pixels wide but reduce TOTAL height INCLUDING nails and rope to only 36 pixels. Same width for cracked state; its cracked/sagging silhouette is also low, about 40 pixels total. Make boards only about 22 pixels thick, bent nails tiny, rope a shallow arc hugging the underside with about 8 pixels sag, no deep rope loops or big end bindings. Five separate fragments are thin splintered planks of matching scale, not thick beams.\nKeep both whole walkway states on exactly the same bottom baseline; no change of horizontal width. Give the first and last objects at least 40px of genuinely transparent margin by adjusting spacing slightly if necessary; every part fully contained. Strict side elevation, no top face, no extra supports, characters, text or shadows. Transparent alpha=0 outside the isolated parts.",
+          "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-ff80cce6-42f0-4aaa-a651-b0122dd96eae.png"
+        }
+      ],
+      "reference_note": "Built-in tool accepts at most 5 reference paths. P21 uses the approved crate as image 5; following mechanisms use the reviewed conveyor as image 5.",
+      "first_generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-e49f3de7-2cd3-40ec-9549-d7a72a8f8f81.png",
+      "validation": {
+        "native_size": [
+          2172,
+          724
+        ],
+        "mode": "RGBA",
+        "sha256": "f483f9e384fcabb44e92e2acd644ef9e70807fe97840a99cd75122c00e3fba5d",
+        "native_generator_bytes_preserved": true,
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_bbox": [
+          18,
+          216,
+          2154,
+          571
+        ],
+        "visible_bbox_alpha_32": [
+          27,
+          342,
+          2143,
+          425
+        ],
+        "border_alpha_max": 0,
+        "true_transparency": true,
+        "x_groups_alpha_32": [
+          [
+            27,
+            342,
+            589,
+            411
+          ],
+          [
+            616,
+            344,
+            1142,
+            425
+          ],
+          [
+            1174,
+            346,
+            1344,
+            402
+          ],
+          [
+            1368,
+            348,
+            1564,
+            403
+          ],
+          [
+            1595,
+            348,
+            1742,
+            404
+          ],
+          [
+            1772,
+            344,
+            1967,
+            401
+          ],
+          [
+            1982,
+            345,
+            2143,
+            404
+          ]
+        ]
+      },
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-ff80cce6-42f0-4aaa-a651-b0122dd96eae.png",
+      "review_notes": "Целый и треснувший тонкий настил, затем ровно пять щепок. Уменьшены толщина досок и провис верёвки. Все части внутри кадра; при нарезке целый настил привести к 256 × 16 px, у треснувшего сохранить тот же пролёт и точку привязки.",
+      "saved_at_utc": "2026-10-03T21:47:28.062700+00:00"
+    },
+    {
+      "id": "P24",
+      "kind": "sprite",
+      "priority": 2,
+      "path": "assets/props/v2/source/p24_bellows.png",
+      "prompt": "Attached image 1: the concept sheet of world 2 \"Workshops\" of my game \"Hold On!\" — style and materials reference (warm wood, copper, brass, red brick, grey stone, soft steam). Attached image 2: a screenshot of the game as it looks now: painted backgrounds and platforms; the machines in it are cut out of a reference sheet, look rough, inconsistent in scale and partly drawn in perspective. Attached image 3: the current version of the object — keep its function and general shape. Attached image 4: the approved brick-and-stone texture of the world 2 platforms — match its painting style and level of detail. Attached image 5: already approved objects of the same sprite set — match their rendering exactly. Do NOT copy layouts, text or UI from the attachments.\n\nDraw this interactive object as a GAME SPRITE for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict orthographic side view — no top faces, no perspective, no cast shadow on the ground — centered with empty space around it. Hand-painted cartoon style that belongs to the painted world: soft but visible material texture (wood grain, worn edges, small dents and scratches on metal, a little soot), soft shading with light from the upper left, muted natural colors with warm copper and brass accents. It must read at once as an interactive object: a clean, slightly thin, painted dark brown-navy outline around the silhouette (not pure black), and a bit more contrast than the background behind it. Long objects: both ends finished, the middle part uniform so it can repeat. If several states or parts are listed, draw them side by side in one row, at the same scale, on the same baseline, evenly spaced. No text, letters, numbers, symbols, logos or watermark.\nObject: big forge bellows on a short wooden stand: two wooden boards with a pleated leather side, iron rivets, a brass nozzle pointing RIGHT.\nStates: open (resting); squeezed flat (blowing, a small puff of air at the nozzle).\nProportions: each 1.6 tiles wide and 1.8 tiles tall; the nozzle tip at about 60% of the height.\nAttached image 5 is the visually reviewed new conveyor sprite; match its painted material texture, muted colors and thin brown-navy outline. Additional screenshot and crate references were inspected in this chat; the tool allows at most five attached paths.\nExactly TWO states of the SAME bellows, equal scale and same fixed wooden stand/bottom baseline. LEFT expanded leather folds, top and bottom boards apart. RIGHT compressed folds and boards squeezed close, small white puff of air ONLY at the brass nozzle. Nozzle points RIGHT in both states and is roughly 60 percent of the total object height. Preserve the stand geometry and nozzle support; only bellows compression changes. No huge wind trails, motion marks or characters, no perspective top planes. Painted dark worn leather rather than glossy plastic.",
+      "refs": [
+        "D:\\Cluade projects\\games\\Glue\\docs\\референсы\\world2_workshops.png",
+        "D:\\Cluade projects\\games\\Glue\\docs\\progress\\w2_now_spark_wires_keg.jpg",
+        "D:\\Cluade projects\\games\\Glue\\docs\\референсы\\mechanisms\\mech_w2_bellows.png",
+        "D:\\Cluade projects\\games\\Glue\\assets\\tiles\\world_02\\source\\w02_fill.png",
+        "D:\\Cluade projects\\games\\Glue\\assets\\props\\v2\\source\\p21_conveyor.png"
+      ],
+      "transparent": true,
+      "status": "reviewed",
+      "edits": [
+        {
+          "refs": [
+            "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-bab31a8a-0291-4741-b8ad-aab441f8824f.png"
+          ],
+          "prompt": "Edit image 1 only. Keep the LEFT open forge bellows exactly as is, including its tall wooden support frame, painted materials, nozzle pointing RIGHT and full height. Correct ONLY the RIGHT compressed state.\nThe RIGHT wooden support stand and posts must be IDENTICAL in geometry, height and scale to the LEFT state. Both fixed stands have the same bottom baseline and same top post height; do not shrink the entire right object.\nIn the RIGHT bellows squeeze the pleated LEATHER body nearly flat by bringing its two wooden side boards close together: compress its horizontal accordion depth to about one THIRD of the open state. Fold lines close together, leather narrow, not another open cone. Move the brass nozzle toward the left support accordingly, keeping it pointing RIGHT and mounted near 60 percent of the full object height. A SMALL white puff at nozzle only. The fixed wooden stand remains full size and its lower lever can be raised to represent blowing. Preserve same painted dark leather, wood grain, riveted iron, brass accents and thin brown-navy outline. No extra geometry, labels, motion marks, characters, ground or shadow. Fully contained with transparent margins, true transparent PNG.",
+          "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-3765784d-fecc-4e9f-8f18-2f9c5da6a269.png"
+        }
+      ],
+      "reference_note": "Built-in tool accepts at most 5 reference paths. P21 uses the approved crate as image 5; following mechanisms use the reviewed conveyor as image 5.",
+      "first_generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-bab31a8a-0291-4741-b8ad-aab441f8824f.png",
+      "validation": {
+        "native_size": [
+          1672,
+          941
+        ],
+        "mode": "RGBA",
+        "sha256": "e04f44a4e5c118b264b1c20f5984672afc36c2a42509ab4064b40d3a68b02b4f",
+        "native_generator_bytes_preserved": true,
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_bbox": [
+          0,
+          39,
+          1577,
+          884
+        ],
+        "visible_bbox_alpha_32": [
+          146,
+          112,
+          1574,
+          856
+        ],
+        "border_alpha_max": 1,
+        "true_transparency": true,
+        "x_groups_alpha_32": [
+          [
+            146,
+            112,
+            807,
+            856
+          ],
+          [
+            957,
+            201,
+            1574,
+            856
+          ]
+        ]
+      },
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-3765784d-fecc-4e9f-8f18-2f9c5da6a269.png",
+      "review_notes": "Два состояния мехов с соплом вправо: раскрытое слева, сжатое справа с небольшим воздушным облачком и поднятым рычагом. Складки сжатого состояния заметно сближены, основания на общей линии. Стойки в исходнике отличаются по высоте: при подключении согласовать их масштаб и привязку сопла, целевой рисунок 102,4 × 115,2 px.",
+      "saved_at_utc": "2026-10-03T21:47:29.026819+00:00"
+    },
+    {
+      "id": "P25",
+      "kind": "sprite",
+      "priority": 2,
+      "path": "assets/props/v2/source/p25_crane.png",
+      "prompt": "Attached image 1: the concept sheet of world 2 \"Workshops\" of my game \"Hold On!\" — style and materials reference (warm wood, copper, brass, red brick, grey stone, soft steam). Attached image 2: a screenshot of the game as it looks now: painted backgrounds and platforms; the machines in it are cut out of a reference sheet, look rough, inconsistent in scale and partly drawn in perspective. Attached image 3: the current version of the object — keep its function and general shape. Attached image 4: the approved brick-and-stone texture of the world 2 platforms — match its painting style and level of detail. Attached image 5: already approved objects of the same sprite set — match their rendering exactly. Do NOT copy layouts, text or UI from the attachments.\n\nDraw this interactive object as a GAME SPRITE for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict orthographic side view — no top faces, no perspective, no cast shadow on the ground — centered with empty space around it. Hand-painted cartoon style that belongs to the painted world: soft but visible material texture (wood grain, worn edges, small dents and scratches on metal, a little soot), soft shading with light from the upper left, muted natural colors with warm copper and brass accents. It must read at once as an interactive object: a clean, slightly thin, painted dark brown-navy outline around the silhouette (not pure black), and a bit more contrast than the background behind it. Long objects: both ends finished, the middle part uniform so it can repeat. If several states or parts are listed, draw them side by side in one row, at the same scale, on the same baseline, evenly spaced. No text, letters, numbers, symbols, logos or watermark.\nObject: parts of an overhead workshop crane: a horizontal iron rail (an I-beam with rivets), a small trolley of iron and brass with two wheels sitting on the rail, a rigid iron rod hanging from the trolley ending with a big iron hook a hand can grab.\nStates: the rail (both ends finished, the middle uniform); the trolley; the rod (the middle uniform so it can repeat vertically) with the hook at its bottom.\nProportions: the rail 6 tiles long and 0.37 tile thick; the trolley 1.3 tiles wide and 0.8 tile tall; the rod 0.12 tile thick, the hook 0.5 tile.\nAttached image 5 is the visually reviewed new conveyor sprite; match its painted material texture, muted colors and thin brown-navy outline. Additional screenshot and crate references were inspected in this chat; the tool allows at most five attached paths.\nExactly THREE detached components in ONE ROW left to right: complete long riveted I-beam rail; detached trolley with two round wheels; a vertical thin rigid iron rod with a big open hook at its bottom. No trolley is drawn on the separate rail in this sheet. Trolley can be assembled on that rail by the game. At one consistent scale the rail is 840px long and 52px thick, trolley 182px wide and 112px tall, rod about 17px thick and hook about 70px across. Rod straight, middle uniform for repetition, no chain or rope, clear empty hand-grab opening in the hook. Orthographic side elevation, all ends finished, no labels or characters.",
+      "refs": [
+        "D:\\Cluade projects\\games\\Glue\\docs\\референсы\\world2_workshops.png",
+        "D:\\Cluade projects\\games\\Glue\\docs\\progress\\w2_now_spark_wires_keg.jpg",
+        "D:\\Cluade projects\\games\\Glue\\docs\\референсы\\mechanisms\\mech_w2_crane_trolley.png",
+        "D:\\Cluade projects\\games\\Glue\\assets\\tiles\\world_02\\source\\w02_fill.png",
+        "D:\\Cluade projects\\games\\Glue\\assets\\props\\v2\\source\\p21_conveyor.png"
+      ],
+      "transparent": true,
+      "status": "reviewed",
+      "edits": [],
+      "reference_note": "Built-in tool accepts at most 5 reference paths. P21 uses the approved crate as image 5; following mechanisms use the reviewed conveyor as image 5.",
+      "validation": {
+        "native_size": [
+          1755,
+          896
+        ],
+        "mode": "RGBA",
+        "sha256": "7d397717e3b32c34adb8bc3aad1b425a3559890439778416fc1114beba2f6e4e",
+        "native_generator_bytes_preserved": true,
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_bbox": [
+          22,
+          20,
+          1737,
+          806
+        ],
+        "visible_bbox_alpha_32": [
+          28,
+          285,
+          1731,
+          695
+        ],
+        "border_alpha_max": 0,
+        "true_transparency": true,
+        "x_groups_alpha_32": [
+          [
+            28,
+            460,
+            1188,
+            587
+          ],
+          [
+            1213,
+            434,
+            1595,
+            607
+          ],
+          [
+            1606,
+            285,
+            1731,
+            695
+          ]
+        ]
+      },
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-12485729-02a7-42cb-a9e6-eb1aac091fdb.png",
+      "review_notes": "Три отдельные детали: рельс, двухколёсная тележка, прямая тяга с большим открытым крюком. Тяга без цепи, середина однородная. При нарезке рельс 384 × 23,68 px, тележка 83,2 × 51,2 px, тяга толщиной 7,68 px и крюк около 32 px.",
+      "saved_at_utc": "2026-10-03T21:43:31.797623+00:00"
+    },
+    {
+      "id": "W2L04",
+      "kind": "landmark",
+      "priority": 3,
+      "zone": "yard",
+      "path": "assets/backgrounds/world_02/source/w02_lm04_sorting_yard.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" (world 2 \"Workshops\") — style reference only. Attached image 2: the approved far background of THIS zone — match its colors and light. Do NOT copy the sheet's layout, text, UI or characters.\n\nCreate ONE isolated landmark object for the background of a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, with empty transparent space around it. The object stands in the middle distance: slightly hazy and softer than a foreground, medium detail, no hard black outlines. Its base fades into soft white mist. No characters, text, logo, UI, crates, doors with dark openings, flags, hooks, keys, ropes or chains hanging in front. Neutral white balance, no yellow tint.\nObject: a tall wooden sorting rack of the workshops: several chutes and small colored gates (soft orange, blue, green, purple) dropping stone blocks into separate wooden bins below, morning light. Landscape 3:2.\nOne single decorative landmark / specified connected grouping, isolated, centered, fully contained with generous transparent margins. Actual alpha transparency with no painted black/white/checkerboard background. No dark silhouette outline. The object is background scenery, never a foreground interactive prop; soften contrast and edges. Preserve the explicit Object description: a requested distant crane hook, lever, wires or furnace opening is part of that static landmark only, an exception to generic exclusions. No extra hooks, levers, crates, characters, faces, letters, emblems or UI.",
+      "refs": [
+        "D:\\Cluade projects\\games\\Glue\\docs\\референсы\\world2_workshops.png",
+        "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_02\\source\\w02_far_yard.png"
+      ],
+      "transparent": true,
+      "status": "reviewed",
+      "edits": [
+        {
+          "refs": [
+            "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-ad7b5902-cd82-4fa3-88f8-78961dc59f7d.png"
+          ],
+          "prompt": "Edit image 1. Keep the ONE connected wooden sorting rack, its four chutes, four small colored gates (orange, blue, green, purple), falling stone blocks and four wooden collection bins, its supporting posts and attached masonry piers, morning painted light, soft haze and fading mist at the base. Remove ALL unrelated far-background VIADUCT TOWERS, ARCHES, distant buildings and clouds BEHIND the sorting rack, especially across the upper left and upper right. The space through and around the rack must be transparent. Do not fill the newly empty space with new scenery. The landmark is ONLY the sorting rack and its directly connected structural supports, no whole landscape. Keep all ends complete and inside with generous alpha margins. Medium-distance soft hand-painted rendering, no dark outline, no text or characters, true transparent PNG.",
+          "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-2c8e7be2-a494-4860-a3fb-a5fae0cd24f8.png"
+        },
+        {
+          "refs": [
+            "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-2c8e7be2-a494-4860-a3fb-a5fae0cd24f8.png"
+          ],
+          "prompt": "Edit image 1 only, keep exactly the same connected four-chute sorting rack, its four colored gates and bins, stones and directly attached supports. No distant background structures. Correct only framing and BASE FADE: make the entire rack about 12 percent smaller within the existing 1536x1024 canvas so the full left and right ends have clear transparent margins. Add a thin soft WHITE MIST layer around the very bottom of the stone piers and wooden bin supports. The lower ends of supports gently fade into this mist; mist itself fades out into alpha transparency before reaching any canvas edge. Upper rack, colored gates, blocks and bins remain clearly visible. Medium-distance hand-painted softness, morning light, no dark outline. True transparent PNG, no painted backdrop, no new scene or objects, no text or characters.",
+          "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-f055b547-c8a0-4fde-b960-3b1c4c8072e4.png"
+        }
+      ],
+      "first_generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-ad7b5902-cd82-4fa3-88f8-78961dc59f7d.png",
+      "validation": {
+        "native_size": [
+          1536,
+          1024
+        ],
+        "mode": "RGBA",
+        "sha256": "711f84516abd007c4bf12ed2ec6103828178c6cb8bfd96a64b8f8716eb47d21c",
+        "native_generator_bytes_preserved": true,
+        "alpha_extrema": [
+          0,
+          254
+        ],
+        "alpha_bbox": [
+          0,
+          15,
+          1536,
+          1024
+        ],
+        "visible_bbox_alpha_32": [
+          15,
+          53,
+          1522,
+          998
+        ],
+        "border_alpha_max": 8,
+        "true_transparency": true,
+        "x_groups_alpha_32": [
+          [
+            15,
+            53,
+            1522,
+            998
+          ]
+        ]
+      },
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-f055b547-c8a0-4fde-b960-3b1c4c8072e4.png",
+      "review_notes": "Сортировочный двор: четыре желоба, оранжевые, синие, зелёные и фиолетовые ворота, каменные блоки и отдельные деревянные бункеры. Лишний дальний виадук удалён, у основания восстановлен мягкий белый туман.",
+      "saved_at_utc": "2026-10-03T22:10:39.321270+00:00"
+    },
+    {
+      "id": "W2L05",
+      "kind": "landmark",
+      "priority": 3,
+      "zone": "yard",
+      "path": "assets/backgrounds/world_02/source/w02_lm05_windmill_bellows.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" (world 2 \"Workshops\") — style reference only. Attached image 2: the approved far background of THIS zone — match its colors and light. Do NOT copy the sheet's layout, text, UI or characters.\n\nCreate ONE isolated landmark object for the background of a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, with empty transparent space around it. The object stands in the middle distance: slightly hazy and softer than a foreground, medium detail, no hard black outlines. Its base fades into soft white mist. No characters, text, logo, UI, crates, doors with dark openings, flags, hooks, keys, ropes or chains hanging in front. Neutral white balance, no yellow tint.\nObject: a big windmill on a round brick tower with four wooden sail arms, a huge leather bellows at its foot driven by the mill, soft white puffs of air from its brass nozzle, morning light. Portrait 2:3.\nOne single decorative landmark / specified connected grouping, isolated, centered, fully contained with generous transparent margins. Actual alpha transparency with no painted black/white/checkerboard background. No dark silhouette outline. The object is background scenery, never a foreground interactive prop; soften contrast and edges. Preserve the explicit Object description: a requested distant crane hook, lever, wires or furnace opening is part of that static landmark only, an exception to generic exclusions. No extra hooks, levers, crates, characters, faces, letters, emblems or UI.",
+      "refs": [
+        "D:\\Cluade projects\\games\\Glue\\docs\\референсы\\world2_workshops.png",
+        "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_02\\source\\w02_far_yard.png"
+      ],
+      "transparent": true,
+      "status": "reviewed",
+      "edits": [],
+      "validation": {
+        "native_size": [
+          1024,
+          1536
+        ],
+        "mode": "RGBA",
+        "sha256": "18d953324bfc4541c8cc98d15f28b2ccd6815ec970289d7515715187e3f4b252",
+        "native_generator_bytes_preserved": true,
+        "alpha_extrema": [
+          0,
+          254
+        ],
+        "alpha_bbox": [
+          0,
+          17,
+          1024,
+          1536
+        ],
+        "visible_bbox_alpha_32": [
+          42,
+          57,
+          1020,
+          1499
+        ],
+        "border_alpha_max": 2,
+        "true_transparency": true,
+        "x_groups_alpha_32": [
+          [
+            42,
+            57,
+            1020,
+            1499
+          ]
+        ]
+      },
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-97aa85b3-1706-4412-9b59-e10b26dd6f50.png",
+      "review_notes": "Ветряк с четырьмя деревянными парусными крыльями на круглой башне, большие мехи у основания и белый воздух из латунного сопла. Силуэт целиком внутри кадра, утренний свет двора и мягкий туман.",
+      "saved_at_utc": "2026-10-03T21:54:35.292497+00:00"
+    },
+    {
+      "id": "W2L06",
+      "kind": "landmark",
+      "priority": 3,
+      "zone": "forge",
+      "path": "assets/backgrounds/world_02/source/w02_lm06_switch_tower.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" (world 2 \"Workshops\") — style reference only. Attached image 2: the approved far background of THIS zone — match its colors and light. Do NOT copy the sheet's layout, text, UI or characters.\n\nCreate ONE isolated landmark object for the background of a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, with empty transparent space around it. The object stands in the middle distance: slightly hazy and softer than a foreground, medium detail, no hard black outlines. Its base fades into soft white mist. No characters, text, logo, UI, crates, doors with dark openings, flags, hooks, keys, ropes or chains hanging in front. Neutral white balance, no yellow tint.\nObject: a big switch tower: a brick tower with a giant brass lever on its side and copper wires going out of it in two directions over porcelain insulators, warm orange forge light. Portrait 2:3.\nOne single decorative landmark / specified connected grouping, isolated, centered, fully contained with generous transparent margins. Actual alpha transparency with no painted black/white/checkerboard background. No dark silhouette outline. The object is background scenery, never a foreground interactive prop; soften contrast and edges. Preserve the explicit Object description: a requested distant crane hook, lever, wires or furnace opening is part of that static landmark only, an exception to generic exclusions. No extra hooks, levers, crates, characters, faces, letters, emblems or UI.",
+      "refs": [
+        "D:\\Cluade projects\\games\\Glue\\docs\\референсы\\world2_workshops.png",
+        "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_02\\source\\w02_far_forge.png"
+      ],
+      "transparent": true,
+      "status": "reviewed",
+      "edits": [
+        {
+          "refs": [
+            "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-2cb7b5af-cad7-4510-b8f3-66ec28032a52.png"
+          ],
+          "prompt": "Edit image 1. Keep the central brick switch tower, its giant brass lever on the side, copper wires in two directions over white porcelain insulators, chimney and connected timber supports, warm forge light and soft mist. Remove ALL detached distant viaduct ARCHES, other towers and extra background masonry BEHIND the main tower on either side. The gaps and outside surroundings must be empty alpha transparency. SHORTEN the LEFT and RIGHT outgoing copper wires so each wire is fully contained and ends visibly in a small copper termination near its outermost porcelain insulator, with at least 8 percent of the image width of EMPTY transparent margin between any wire end and canvas edge. No wire cut by either edge. Preserve a tall portrait composition with main tower centered and complete. No characters, text, symbols, new scenery, foreground outline or hard shadow. True transparent PNG.",
+          "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-99301d0a-e877-4f52-8589-78d277f2a19e.png"
+        }
+      ],
+      "first_generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-2cb7b5af-cad7-4510-b8f3-66ec28032a52.png",
+      "validation": {
+        "native_size": [
+          1024,
+          1536
+        ],
+        "mode": "RGBA",
+        "sha256": "7ec2a6bd7d688ca72eb860e7108caa01ec99479dd5b5d698eb24d8a00651074b",
+        "native_generator_bytes_preserved": true,
+        "alpha_extrema": [
+          0,
+          254
+        ],
+        "alpha_bbox": [
+          65,
+          0,
+          1010,
+          1536
+        ],
+        "visible_bbox_alpha_32": [
+          73,
+          8,
+          948,
+          1492
+        ],
+        "border_alpha_max": 4,
+        "true_transparency": true,
+        "x_groups_alpha_32": [
+          [
+            73,
+            8,
+            948,
+            1492
+          ]
+        ]
+      },
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-99301d0a-e877-4f52-8589-78d277f2a19e.png",
+      "review_notes": "Стрелочная башня с большим латунным рычагом, медными проводами в обе стороны и фарфоровыми изоляторами. Лишние дальние арки удалены; провода закончены внутри кадра, по бокам прозрачное поле. Свет кузни и туман у основания.",
+      "saved_at_utc": "2026-10-03T22:01:08.968990+00:00"
+    },
+    {
+      "id": "W2L07",
+      "kind": "landmark",
+      "priority": 3,
+      "zone": "forge",
+      "path": "assets/backgrounds/world_02/source/w02_lm07_shift_bell.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" (world 2 \"Workshops\") — style reference only. Attached image 2: the approved far background of THIS zone — match its colors and light. Do NOT copy the sheet's layout, text, UI or characters.\n\nCreate ONE isolated landmark object for the background of a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, with empty transparent space around it. The object stands in the middle distance: slightly hazy and softer than a foreground, medium detail, no hard black outlines. Its base fades into soft white mist. No characters, text, logo, UI, crates, doors with dark openings, flags, hooks, keys, ropes or chains hanging in front. Neutral white balance, no yellow tint.\nObject: a brick shift tower of the forge: a big round clock face WITHOUT numbers or hands markings, only simple ticks, a bronze bell in an open belfry on top, two conveyor galleries leaving the tower at different heights, soft steam, warm light. Portrait 2:3.\nOne single decorative landmark / specified connected grouping, isolated, centered, fully contained with generous transparent margins. Actual alpha transparency with no painted black/white/checkerboard background. No dark silhouette outline. The object is background scenery, never a foreground interactive prop; soften contrast and edges. Preserve the explicit Object description: a requested distant crane hook, lever, wires or furnace opening is part of that static landmark only, an exception to generic exclusions. No extra hooks, levers, crates, characters, faces, letters, emblems or UI.\nIsolation is CRITICAL: attached image 2 is ONLY a color/light reference. Do NOT reproduce its far viaduct, arches, sky, clouds, distant towers, ground or landscape behind this landmark. Draw only the Object description and its directly attached structural supports, no separate background scenery. Complete all requested ends and appendages inside the canvas with at least 6 percent clear alpha margins.\nThe clock face has ONLY simple tick marks: no numerals, letters, written marks or clock hands.",
+      "refs": [
+        "D:\\Cluade projects\\games\\Glue\\docs\\референсы\\world2_workshops.png",
+        "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_02\\source\\w02_far_forge.png"
+      ],
+      "transparent": true,
+      "status": "reviewed",
+      "edits": [],
+      "validation": {
+        "native_size": [
+          1024,
+          1536
+        ],
+        "mode": "RGBA",
+        "sha256": "f22d86900d089529ab37ca70c3946a59409e6c6294a59ba6e03337aef541a470",
+        "native_generator_bytes_preserved": true,
+        "alpha_extrema": [
+          0,
+          254
+        ],
+        "alpha_bbox": [
+          0,
+          9,
+          1010,
+          1536
+        ],
+        "visible_bbox_alpha_32": [
+          21,
+          20,
+          1002,
+          1488
+        ],
+        "border_alpha_max": 2,
+        "true_transparency": true,
+        "x_groups_alpha_32": [
+          [
+            21,
+            20,
+            1002,
+            1488
+          ]
+        ]
+      },
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-d2e1a226-f56b-4bf6-8d24-9ae749f29c97.png",
+      "review_notes": "Башня смены с бронзовым колоколом, циферблатом только с делениями и двумя конвейерными галереями на разных высотах. Чисел и стрелок на циферблате нет; башня целиком в кадре, мягкий пар у основания.",
+      "saved_at_utc": "2026-10-03T22:01:09.930764+00:00"
+    },
+    {
+      "id": "W2L08",
+      "kind": "landmark",
+      "priority": 3,
+      "zone": "forge",
+      "path": "assets/backgrounds/world_02/source/w02_lm08_gantry_crane.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" (world 2 \"Workshops\") — style reference only. Attached image 2: the approved far background of THIS zone — match its colors and light. Do NOT copy the sheet's layout, text, UI or characters.\n\nCreate ONE isolated landmark object for the background of a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, with empty transparent space around it. The object stands in the middle distance: slightly hazy and softer than a foreground, medium detail, no hard black outlines. Its base fades into soft white mist. No characters, text, logo, UI, crates, doors with dark openings, flags, hooks, keys, ropes or chains hanging in front. Neutral white balance, no yellow tint.\nObject: a tall wooden gantry crane with a trolley and a big hook on a long rail between two brick towers, a wooden scaffold walkway below with a few missing planks, warm light. Landscape 3:2.\nOne single decorative landmark / specified connected grouping, isolated, centered, fully contained with generous transparent margins. Actual alpha transparency with no painted black/white/checkerboard background. No dark silhouette outline. The object is background scenery, never a foreground interactive prop; soften contrast and edges. Preserve the explicit Object description: a requested distant crane hook, lever, wires or furnace opening is part of that static landmark only, an exception to generic exclusions. No extra hooks, levers, crates, characters, faces, letters, emblems or UI.\nIsolation is CRITICAL: attached image 2 is ONLY a color/light reference. Do NOT reproduce its far viaduct, arches, sky, clouds, distant towers, ground or landscape behind this landmark. Draw only the Object description and its directly attached structural supports, no separate background scenery. Complete all requested ends and appendages inside the canvas with at least 6 percent clear alpha margins.",
+      "refs": [
+        "D:\\Cluade projects\\games\\Glue\\docs\\референсы\\world2_workshops.png",
+        "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_02\\source\\w02_far_forge.png"
+      ],
+      "transparent": true,
+      "status": "reviewed",
+      "edits": [],
+      "validation": {
+        "native_size": [
+          1536,
+          1024
+        ],
+        "mode": "RGBA",
+        "sha256": "bc0d95fbf5d100d669aa215f9e5270a459e84f4791e992bf50481662452db4d3",
+        "native_generator_bytes_preserved": true,
+        "alpha_extrema": [
+          0,
+          254
+        ],
+        "alpha_bbox": [
+          0,
+          9,
+          1532,
+          1024
+        ],
+        "visible_bbox_alpha_32": [
+          99,
+          61,
+          1468,
+          977
+        ],
+        "border_alpha_max": 2,
+        "true_transparency": true,
+        "x_groups_alpha_32": [
+          [
+            99,
+            61,
+            1468,
+            977
+          ]
+        ]
+      },
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-6f5c006c-fbdf-4911-a266-623530fdc249.png",
+      "review_notes": "Портальный кран между двумя башнями: тележка, большой подвесной крюк, нижний деревянный проход с отсутствующими досками. Один связанный ориентир, мягкий свет кузни; весь кран внутри кадра.",
+      "saved_at_utc": "2026-10-03T22:10:40.292706+00:00"
+    },
+    {
+      "id": "W2L09",
+      "kind": "landmark",
+      "priority": 3,
+      "zone": "forge",
+      "path": "assets/backgrounds/world_02/source/w02_lm09_powder_store.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" (world 2 \"Workshops\") — style reference only. Attached image 2: the approved far background of THIS zone — match its colors and light. Do NOT copy the sheet's layout, text, UI or characters.\n\nCreate ONE isolated landmark object for the background of a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, with empty transparent space around it. The object stands in the middle distance: slightly hazy and softer than a foreground, medium detail, no hard black outlines. Its base fades into soft white mist. No characters, text, logo, UI, crates, doors with dark openings, flags, hooks, keys, ropes or chains hanging in front. Neutral white balance, no yellow tint.\nObject: a small stone powder store with a big hole blown in its wall, a long fuse line on short wooden poles leading to it, a few old powder barrels nearby, thin smoke, warm light. Landscape 3:2.\nOne single decorative landmark / specified connected grouping, isolated, centered, fully contained with generous transparent margins. Actual alpha transparency with no painted black/white/checkerboard background. No dark silhouette outline. The object is background scenery, never a foreground interactive prop; soften contrast and edges. Preserve the explicit Object description: a requested distant crane hook, lever, wires or furnace opening is part of that static landmark only, an exception to generic exclusions. No extra hooks, levers, crates, characters, faces, letters, emblems or UI.\nIsolation is CRITICAL: attached image 2 is ONLY a color/light reference. Do NOT reproduce its far viaduct, arches, sky, clouds, distant towers, ground or landscape behind this landmark. Draw only the Object description and its directly attached structural supports, no separate background scenery. Complete all requested ends and appendages inside the canvas with at least 6 percent clear alpha margins.",
+      "refs": [
+        "D:\\Cluade projects\\games\\Glue\\docs\\референсы\\world2_workshops.png",
+        "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_02\\source\\w02_far_forge.png"
+      ],
+      "transparent": true,
+      "status": "reviewed",
+      "edits": [],
+      "validation": {
+        "native_size": [
+          1536,
+          1024
+        ],
+        "mode": "RGBA",
+        "sha256": "f8da4caaa498a1caf25351365f113b802e3a6bbf07a5b50bab1eba1ac961cd29",
+        "native_generator_bytes_preserved": true,
+        "alpha_extrema": [
+          0,
+          254
+        ],
+        "alpha_bbox": [
+          0,
+          21,
+          1536,
+          1024
+        ],
+        "visible_bbox_alpha_32": [
+          27,
+          68,
+          1499,
+          925
+        ],
+        "border_alpha_max": 1,
+        "true_transparency": true,
+        "x_groups_alpha_32": [
+          [
+            27,
+            68,
+            1499,
+            925
+          ]
+        ]
+      },
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-36772dba-88ce-48f2-a87a-f832c7c74260.png",
+      "review_notes": "Пороховой склад с большим проломом, бочками, длинной линией фитиля на деревянных столбиках и дымом. Тёплый свет кузни, мягкое основание в тумане; линия фитиля внутри кадра.",
+      "saved_at_utc": "2026-10-03T22:10:41.251086+00:00"
+    },
+    {
+      "id": "W2L10",
+      "kind": "landmark",
+      "priority": 3,
+      "zone": "forge",
+      "path": "assets/backgrounds/world_02/source/w02_lm10_weighing_tower.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" (world 2 \"Workshops\") — style reference only. Attached image 2: the approved far background of THIS zone — match its colors and light. Do NOT copy the sheet's layout, text, UI or characters.\n\nCreate ONE isolated landmark object for the background of a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, with empty transparent space around it. The object stands in the middle distance: slightly hazy and softer than a foreground, medium detail, no hard black outlines. Its base fades into soft white mist. No characters, text, logo, UI, crates, doors with dark openings, flags, hooks, keys, ropes or chains hanging in front. Neutral white balance, no yellow tint.\nObject: an old weighing scale as big as a tower, with two huge brass pans on chains and a beam on a brick pillar; one pan loaded with stone blocks, the other with a big iron weight, warm light. Portrait 2:3.\nOne single decorative landmark / specified connected grouping, isolated, centered, fully contained with generous transparent margins. Actual alpha transparency with no painted black/white/checkerboard background. No dark silhouette outline. The object is background scenery, never a foreground interactive prop; soften contrast and edges. Preserve the explicit Object description: a requested distant crane hook, lever, wires or furnace opening is part of that static landmark only, an exception to generic exclusions. No extra hooks, levers, crates, characters, faces, letters, emblems or UI.\nIsolation is CRITICAL: attached image 2 is ONLY a color/light reference. Do NOT reproduce its far viaduct, arches, sky, clouds, distant towers, ground or landscape behind this landmark. Draw only the Object description and its directly attached structural supports, no separate background scenery. Complete all requested ends and appendages inside the canvas with at least 6 percent clear alpha margins.",
+      "refs": [
+        "D:\\Cluade projects\\games\\Glue\\docs\\референсы\\world2_workshops.png",
+        "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_02\\source\\w02_far_forge.png"
+      ],
+      "transparent": true,
+      "status": "reviewed",
+      "edits": [],
+      "validation": {
+        "native_size": [
+          1024,
+          1536
+        ],
+        "mode": "RGBA",
+        "sha256": "13fa3b34403c81d98e45af3c7bc93e44ecbb528354708e88ebea8f68872bec72",
+        "native_generator_bytes_preserved": true,
+        "alpha_extrema": [
+          0,
+          254
+        ],
+        "alpha_bbox": [
+          0,
+          15,
+          1024,
+          1536
+        ],
+        "visible_bbox_alpha_32": [
+          15,
+          150,
+          1011,
+          1449
+        ],
+        "border_alpha_max": 1,
+        "true_transparency": true,
+        "x_groups_alpha_32": [
+          [
+            15,
+            150,
+            1011,
+            1449
+          ]
+        ]
+      },
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-7ab7898a-3527-4777-ad70-2f932845ec2a.png",
+      "review_notes": "Высокие весы с двумя латунными чашами на цепях: слева каменные блоки, справа большая железная гиря. Обе чаши и балка целиком внутри кадра, туман у основания.",
+      "saved_at_utc": "2026-10-03T22:10:42.200296+00:00"
+    },
+    {
+      "id": "W2L11",
+      "kind": "landmark",
+      "priority": 3,
+      "zone": "scaffolds",
+      "path": "assets/backgrounds/world_02/source/w02_lm11_beetle_statue.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" (world 2 \"Workshops\") — style reference only. Attached image 2: the approved far background of THIS zone — match its colors and light. Do NOT copy the sheet's layout, text, UI or characters.\n\nCreate ONE isolated landmark object for the background of a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, with empty transparent space around it. The object stands in the middle distance: slightly hazy and softer than a foreground, medium detail, no hard black outlines. Its base fades into soft white mist. No characters, text, logo, UI, crates, doors with dark openings, flags, hooks, keys, ropes or chains hanging in front. Neutral white balance, no yellow tint.\nObject: a giant decorative copper beetle statue on a stone plinth among timber scaffolding, the emblem of the workshops, polished brass shell catching the light. Landscape 3:2.\nOne single decorative landmark / specified connected grouping, isolated, centered, fully contained with generous transparent margins. Actual alpha transparency with no painted black/white/checkerboard background. No dark silhouette outline. The object is background scenery, never a foreground interactive prop; soften contrast and edges. Preserve the explicit Object description: a requested distant crane hook, lever, wires or furnace opening is part of that static landmark only, an exception to generic exclusions. No extra hooks, levers, crates, characters, faces, letters, emblems or UI.\nIsolation is CRITICAL: attached image 2 is ONLY a color/light reference. Do NOT reproduce its far viaduct, arches, sky, clouds, distant towers, ground or landscape behind this landmark. Draw only the Object description and its directly attached structural supports, no separate background scenery. Complete all requested ends and appendages inside the canvas with at least 6 percent clear alpha margins.",
+      "refs": [
+        "D:\\Cluade projects\\games\\Glue\\docs\\референсы\\world2_workshops.png",
+        "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_02\\source\\w02_far_scaffolds.png"
+      ],
+      "transparent": true,
+      "status": "reviewed",
+      "edits": [],
+      "validation": {
+        "native_size": [
+          1536,
+          1024
+        ],
+        "mode": "RGBA",
+        "sha256": "b0fd6b3fe0a573a724a7992a97dbb6606fec4db61e91969042575f89d35526c3",
+        "native_generator_bytes_preserved": true,
+        "alpha_extrema": [
+          0,
+          254
+        ],
+        "alpha_bbox": [
+          0,
+          8,
+          1536,
+          1024
+        ],
+        "visible_bbox_alpha_32": [
+          49,
+          34,
+          1491,
+          1006
+        ],
+        "border_alpha_max": 11,
+        "true_transparency": true,
+        "x_groups_alpha_32": [
+          [
+            49,
+            34,
+            1491,
+            1006
+          ]
+        ]
+      },
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-bd3965c4-8985-48f4-8d53-2fca90b83cbd.png",
+      "review_notes": "Большая декоративная медно-латунная статуя жука на каменном постаменте среди связанных деревянных лесов. Полированный панцирь, мягкий свет зоны и туман у основания; без надписей.",
+      "saved_at_utc": "2026-10-03T22:23:10.704944+00:00"
+    },
+    {
+      "id": "W2L12",
+      "kind": "landmark",
+      "priority": 3,
+      "zone": "scaffolds",
+      "path": "assets/backgrounds/world_02/source/w02_lm12_collapsed_hall.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" (world 2 \"Workshops\") — style reference only. Attached image 2: the approved far background of THIS zone — match its colors and light. Do NOT copy the sheet's layout, text, UI or characters.\n\nCreate ONE isolated landmark object for the background of a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, with empty transparent space around it. The object stands in the middle distance: slightly hazy and softer than a foreground, medium detail, no hard black outlines. Its base fades into soft white mist. No characters, text, logo, UI, crates, doors with dark openings, flags, hooks, keys, ropes or chains hanging in front. Neutral white balance, no yellow tint.\nObject: a workshop hall with a collapsed roof: broken timber beams hanging down, a pile of stones and bricks spilled through the gap, wooden props holding up the rest, dust in the sunbeams, NOT scary. Landscape 3:2.\nOne single decorative landmark / specified connected grouping, isolated, centered, fully contained with generous transparent margins. Actual alpha transparency with no painted black/white/checkerboard background. No dark silhouette outline. The object is background scenery, never a foreground interactive prop; soften contrast and edges. Preserve the explicit Object description: a requested distant crane hook, lever, wires or furnace opening is part of that static landmark only, an exception to generic exclusions. No extra hooks, levers, crates, characters, faces, letters, emblems or UI.\nIsolation is CRITICAL: attached image 2 is ONLY a color/light reference. Do NOT reproduce its far viaduct, arches, sky, clouds, distant towers, ground or landscape behind this landmark. Draw only the Object description and its directly attached structural supports, no separate background scenery. Complete all requested ends and appendages inside the canvas with at least 6 percent clear alpha margins.",
+      "refs": [
+        "D:\\Cluade projects\\games\\Glue\\docs\\референсы\\world2_workshops.png",
+        "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_02\\source\\w02_far_scaffolds.png"
+      ],
+      "transparent": true,
+      "status": "reviewed",
+      "edits": [],
+      "validation": {
+        "native_size": [
+          1536,
+          1024
+        ],
+        "mode": "RGBA",
+        "sha256": "732353b2cab0669cfc038c809fadeb916909cf12c26e83042915f17d0b3ffdca",
+        "native_generator_bytes_preserved": true,
+        "alpha_extrema": [
+          0,
+          254
+        ],
+        "alpha_bbox": [
+          0,
+          0,
+          1520,
+          1024
+        ],
+        "visible_bbox_alpha_32": [
+          42,
+          66,
+          1494,
+          937
+        ],
+        "border_alpha_max": 1,
+        "true_transparency": true,
+        "x_groups_alpha_32": [
+          [
+            42,
+            66,
+            1494,
+            937
+          ]
+        ]
+      },
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-75ca7161-31ce-416a-9939-bb7d1945137c.png",
+      "review_notes": "Цех с рухнувшей кровлей: сломанные и свисающие балки, завал из камня и кирпича, подпорки и пыль в лучах света. Проём крыши и завал читаются, рисунок не страшный.",
+      "saved_at_utc": "2026-10-03T22:23:11.669686+00:00"
+    },
+    {
+      "id": "W2L13",
+      "kind": "landmark",
+      "priority": 3,
+      "zone": "scaffolds",
+      "path": "assets/backgrounds/world_02/source/w02_lm13_lock_gate.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" (world 2 \"Workshops\") — style reference only. Attached image 2: the approved far background of THIS zone — match its colors and light. Do NOT copy the sheet's layout, text, UI or characters.\n\nCreate ONE isolated landmark object for the background of a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, with empty transparent space around it. The object stands in the middle distance: slightly hazy and softer than a foreground, medium detail, no hard black outlines. Its base fades into soft white mist. No characters, text, logo, UI, crates, doors with dark openings, flags, hooks, keys, ropes or chains hanging in front. Neutral white balance, no yellow tint.\nObject: a giant round mechanical vault gate of wood and brass with interlocking gears, sliding bolts and three big levers beside it, standing in a timber frame. Landscape 3:2.\nOne single decorative landmark / specified connected grouping, isolated, centered, fully contained with generous transparent margins. Actual alpha transparency with no painted black/white/checkerboard background. No dark silhouette outline. The object is background scenery, never a foreground interactive prop; soften contrast and edges. Preserve the explicit Object description: a requested distant crane hook, lever, wires or furnace opening is part of that static landmark only, an exception to generic exclusions. No extra hooks, levers, crates, characters, faces, letters, emblems or UI.\nIsolation is CRITICAL: attached image 2 is ONLY a color/light reference. Do NOT reproduce its far viaduct, arches, sky, clouds, distant towers, ground or landscape behind this landmark. Draw only the Object description and its directly attached structural supports, no separate background scenery. Complete all requested ends and appendages inside the canvas with at least 6 percent clear alpha margins.",
+      "refs": [
+        "D:\\Cluade projects\\games\\Glue\\docs\\референсы\\world2_workshops.png",
+        "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_02\\source\\w02_far_scaffolds.png"
+      ],
+      "transparent": true,
+      "status": "reviewed",
+      "edits": [],
+      "validation": {
+        "native_size": [
+          1536,
+          1024
+        ],
+        "mode": "RGBA",
+        "sha256": "ee8fcdc0ad5a5f1dd71569eaa027e33c871e28724e0519d1890e1f231ad4c29f",
+        "native_generator_bytes_preserved": true,
+        "alpha_extrema": [
+          0,
+          254
+        ],
+        "alpha_bbox": [
+          0,
+          0,
+          1535,
+          1024
+        ],
+        "visible_bbox_alpha_32": [
+          79,
+          53,
+          1454,
+          986
+        ],
+        "border_alpha_max": 2,
+        "true_transparency": true,
+        "x_groups_alpha_32": [
+          [
+            79,
+            53,
+            1454,
+            986
+          ]
+        ]
+      },
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-8248cb64-6576-426c-a519-2bda6f77615b.png",
+      "review_notes": "Круглые механические ворота из дерева и латуни, связанные шестерни и засовы, ровно три больших рычага справа. Один связанный ориентир в деревянной раме, без тёмного проёма.",
+      "saved_at_utc": "2026-10-03T22:23:12.683768+00:00"
+    },
+    {
+      "id": "W2L14",
+      "kind": "landmark",
+      "priority": 3,
+      "zone": "scaffolds",
+      "path": "assets/backgrounds/world_02/source/w02_lm14_spring_arena.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" (world 2 \"Workshops\") — style reference only. Attached image 2: the approved far background of THIS zone — match its colors and light. Do NOT copy the sheet's layout, text, UI or characters.\n\nCreate ONE isolated landmark object for the background of a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, with empty transparent space around it. The object stands in the middle distance: slightly hazy and softer than a foreground, medium detail, no hard black outlines. Its base fades into soft white mist. No characters, text, logo, UI, crates, doors with dark openings, flags, hooks, keys, ropes or chains hanging in front. Neutral white balance, no yellow tint.\nObject: a cheerful test arena of the spring makers like a small circus: a striped canvas roof on a timber frame, springboards and big coiled springs on display stands, little plain pennants without symbols. Landscape 3:2.\nOne single decorative landmark / specified connected grouping, isolated, centered, fully contained with generous transparent margins. Actual alpha transparency with no painted black/white/checkerboard background. No dark silhouette outline. The object is background scenery, never a foreground interactive prop; soften contrast and edges. Preserve the explicit Object description: a requested distant crane hook, lever, wires or furnace opening is part of that static landmark only, an exception to generic exclusions. No extra hooks, levers, crates, characters, faces, letters, emblems or UI.\nIsolation is CRITICAL: attached image 2 is ONLY a color/light reference. Do NOT reproduce its far viaduct, arches, sky, clouds, distant towers, ground or landscape behind this landmark. Draw only the Object description and its directly attached structural supports, no separate background scenery. Complete all requested ends and appendages inside the canvas with at least 6 percent clear alpha margins.\nThe little plain decorative pennants specifically requested in Object ARE allowed; no symbols on them.",
+      "refs": [
+        "D:\\Cluade projects\\games\\Glue\\docs\\референсы\\world2_workshops.png",
+        "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_02\\source\\w02_far_scaffolds.png"
+      ],
+      "transparent": true,
+      "status": "reviewed",
+      "edits": [],
+      "validation": {
+        "native_size": [
+          1536,
+          1024
+        ],
+        "mode": "RGBA",
+        "sha256": "ef81326577cd1c218363d19f15d1ad462bea00e837defb1570c9ee271bf8fcf9",
+        "native_generator_bytes_preserved": true,
+        "alpha_extrema": [
+          0,
+          254
+        ],
+        "alpha_bbox": [
+          0,
+          0,
+          1535,
+          1024
+        ],
+        "visible_bbox_alpha_32": [
+          52,
+          28,
+          1504,
+          1003
+        ],
+        "border_alpha_max": 3,
+        "true_transparency": true,
+        "x_groups_alpha_32": [
+          [
+            52,
+            28,
+            1504,
+            1003
+          ]
+        ]
+      },
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-db034f06-d377-45dc-9d7b-34872271c867.png",
+      "review_notes": "Испытательный манеж пружинщиков: полосатый навес, большие пружины и батуты на выставочных подставках, маленькие пустые вымпелы. Без персонажей, знаков и надписей, мягкий туман у основания.",
+      "saved_at_utc": "2026-10-03T22:23:13.691052+00:00"
+    },
+    {
+      "id": "W2L15",
+      "kind": "landmark",
+      "priority": 3,
+      "zone": "scaffolds",
+      "path": "assets/backgrounds/world_02/source/w02_lm15_twin_halls.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" (world 2 \"Workshops\") — style reference only. Attached image 2: the approved far background of THIS zone — match its colors and light. Do NOT copy the sheet's layout, text, UI or characters.\n\nCreate ONE isolated landmark object for the background of a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, with empty transparent space around it. The object stands in the middle distance: slightly hazy and softer than a foreground, medium detail, no hard black outlines. Its base fades into soft white mist. No characters, text, logo, UI, crates, doors with dark openings, flags, hooks, keys, ropes or chains hanging in front. Neutral white balance, no yellow tint.\nObject: two twin workshop halls side by side with a narrow gap between them, joined high above by one long driving shaft with leather belts and pulleys running into both roofs. Landscape 3:2.\nOne single decorative landmark / specified connected grouping, isolated, centered, fully contained with generous transparent margins. Actual alpha transparency with no painted black/white/checkerboard background. No dark silhouette outline. The object is background scenery, never a foreground interactive prop; soften contrast and edges. Preserve the explicit Object description: a requested distant crane hook, lever, wires or furnace opening is part of that static landmark only, an exception to generic exclusions. No extra hooks, levers, crates, characters, faces, letters, emblems or UI.\nIsolation is CRITICAL: attached image 2 is ONLY a color/light reference. Do NOT reproduce its far viaduct, arches, sky, clouds, distant towers, ground or landscape behind this landmark. Draw only the Object description and its directly attached structural supports, no separate background scenery. Complete all requested ends and appendages inside the canvas with at least 6 percent clear alpha margins.",
+      "refs": [
+        "D:\\Cluade projects\\games\\Glue\\docs\\референсы\\world2_workshops.png",
+        "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_02\\source\\w02_far_scaffolds.png"
+      ],
+      "transparent": true,
+      "status": "reviewed",
+      "edits": [],
+      "validation": {
+        "native_size": [
+          1536,
+          1024
+        ],
+        "mode": "RGBA",
+        "sha256": "d0252748739d2efb9bc7ae0bbecd364676c50dda7a1ab6f3189e4ffad595a28e",
+        "native_generator_bytes_preserved": true,
+        "alpha_extrema": [
+          0,
+          254
+        ],
+        "alpha_bbox": [
+          0,
+          0,
+          1536,
+          1024
+        ],
+        "visible_bbox_alpha_32": [
+          20,
+          135,
+          1508,
+          904
+        ],
+        "border_alpha_max": 7,
+        "true_transparency": true,
+        "x_groups_alpha_32": [
+          [
+            20,
+            135,
+            1508,
+            904
+          ]
+        ]
+      },
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-b1395799-5e8a-48d7-9681-0952b10c19ef.png",
+      "review_notes": "Два цеха-близнеца, соединённые высоко над промежутком длинным приводным валом, ремнями и шкивами, входящими в обе крыши. Два здания читаются отдельно, связанная группа в тумане.",
+      "saved_at_utc": "2026-10-03T22:31:39.792688+00:00"
+    },
+    {
+      "id": "W2L16",
+      "kind": "landmark",
+      "priority": 3,
+      "zone": "machine",
+      "path": "assets/backgrounds/world_02/source/w02_lm16_wind_tunnel.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" (world 2 \"Workshops\") — style reference only. Attached image 2: the approved far background of THIS zone — match its colors and light. Do NOT copy the sheet's layout, text, UI or characters.\n\nCreate ONE isolated landmark object for the background of a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, with empty transparent space around it. The object stands in the middle distance: slightly hazy and softer than a foreground, medium detail, no hard black outlines. Its base fades into soft white mist. No characters, text, logo, UI, crates, doors with dark openings, flags, hooks, keys, ropes or chains hanging in front. Neutral white balance, no yellow tint.\nObject: a wind tunnel of the bridge builders: a long wooden tube on trestles with a huge fan at one end and bellows beside it, sunset light. Landscape 3:2.\nOne single decorative landmark / specified connected grouping, isolated, centered, fully contained with generous transparent margins. Actual alpha transparency with no painted black/white/checkerboard background. No dark silhouette outline. The object is background scenery, never a foreground interactive prop; soften contrast and edges. Preserve the explicit Object description: a requested distant crane hook, lever, wires or furnace opening is part of that static landmark only, an exception to generic exclusions. No extra hooks, levers, crates, characters, faces, letters, emblems or UI.\nIsolation is CRITICAL: attached image 2 is ONLY a color/light reference. Do NOT reproduce its far viaduct, arches, sky, clouds, distant towers, ground or landscape behind this landmark. Draw only the Object description and its directly attached structural supports, no separate background scenery. Complete all requested ends and appendages inside the canvas with at least 6 percent clear alpha margins.",
+      "refs": [
+        "D:\\Cluade projects\\games\\Glue\\docs\\референсы\\world2_workshops.png",
+        "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_02\\source\\w02_far_machine.png"
+      ],
+      "transparent": true,
+      "status": "reviewed",
+      "edits": [],
+      "validation": {
+        "native_size": [
+          1536,
+          1024
+        ],
+        "mode": "RGBA",
+        "sha256": "9606c3557bb5307260666e53cb941c0d6527529651fb0eaf413da63dc9bc22ba",
+        "native_generator_bytes_preserved": true,
+        "alpha_extrema": [
+          0,
+          254
+        ],
+        "alpha_bbox": [
+          0,
+          21,
+          1536,
+          1024
+        ],
+        "visible_bbox_alpha_32": [
+          27,
+          143,
+          1502,
+          883
+        ],
+        "border_alpha_max": 2,
+        "true_transparency": true,
+        "x_groups_alpha_32": [
+          [
+            27,
+            143,
+            1502,
+            883
+          ]
+        ]
+      },
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-1a8c8d2e-6c0b-4c04-92c8-226c61e0ccb9.png",
+      "review_notes": "Длинная деревянная аэродинамическая труба на опорах, огромный вентилятор слева и мехи справа. Без воды и водопадов; цельный силуэт, закатный свет большой машины.",
+      "saved_at_utc": "2026-10-03T22:31:40.727431+00:00"
+    },
+    {
+      "id": "W2L17",
+      "kind": "landmark",
+      "priority": 3,
+      "zone": "machine",
+      "path": "assets/backgrounds/world_02/source/w02_lm17_loading_dock.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" (world 2 \"Workshops\") — style reference only. Attached image 2: the approved far background of THIS zone — match its colors and light. Do NOT copy the sheet's layout, text, UI or characters.\n\nCreate ONE isolated landmark object for the background of a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, with empty transparent space around it. The object stands in the middle distance: slightly hazy and softer than a foreground, medium detail, no hard black outlines. Its base fades into soft white mist. No characters, text, logo, UI, crates, doors with dark openings, flags, hooks, keys, ropes or chains hanging in front. Neutral white balance, no yellow tint.\nObject: a loading dock: a huge iron-bound crate hanging from a big wooden crane over a stone quay, a weighing platform and a short conveyor below it, warm lanterns, sunset light. Landscape 3:2.\nOne single decorative landmark / specified connected grouping, isolated, centered, fully contained with generous transparent margins. Actual alpha transparency with no painted black/white/checkerboard background. No dark silhouette outline. The object is background scenery, never a foreground interactive prop; soften contrast and edges. Preserve the explicit Object description: a requested distant crane hook, lever, wires or furnace opening is part of that static landmark only, an exception to generic exclusions. No extra hooks, levers, crates, characters, faces, letters, emblems or UI.\nIsolation is CRITICAL: attached image 2 is ONLY a color/light reference. Do NOT reproduce its far viaduct, arches, sky, clouds, distant towers, ground or landscape behind this landmark. Draw only the Object description and its directly attached structural supports, no separate background scenery. Complete all requested ends and appendages inside the canvas with at least 6 percent clear alpha margins.\nThe ONE huge suspended iron-bound crate specifically requested in Object IS required, an exception to the generic no-crates rule. No other crates.",
+      "refs": [
+        "D:\\Cluade projects\\games\\Glue\\docs\\референсы\\world2_workshops.png",
+        "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_02\\source\\w02_far_machine.png"
+      ],
+      "transparent": true,
+      "status": "reviewed",
+      "edits": [],
+      "validation": {
+        "native_size": [
+          1536,
+          1024
+        ],
+        "mode": "RGBA",
+        "sha256": "0180e0deee685f7864633db30a39b2a76433fd034d72d654c7fcb57e0e8b7ec2",
+        "native_generator_bytes_preserved": true,
+        "alpha_extrema": [
+          0,
+          254
+        ],
+        "alpha_bbox": [
+          0,
+          13,
+          1536,
+          1024
+        ],
+        "visible_bbox_alpha_32": [
+          69,
+          26,
+          1464,
+          989
+        ],
+        "border_alpha_max": 2,
+        "true_transparency": true,
+        "x_groups_alpha_32": [
+          [
+            69,
+            26,
+            1464,
+            989
+          ]
+        ]
+      },
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-cc3d6d97-900a-4ac7-a7d9-8cef7b59aba3.png",
+      "review_notes": "Погрузочный причал: один огромный окованный ящик подвешен к деревянному крану, под ним весовая площадка и короткий конвейер. Каменная пристань и тёплые фонари, закатный свет.",
+      "saved_at_utc": "2026-10-03T22:31:41.686780+00:00"
+    },
+    {
+      "id": "W2L18",
+      "kind": "landmark",
+      "priority": 3,
+      "zone": "machine",
+      "path": "assets/backgrounds/world_02/source/w02_lm18_lightning_tower.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" (world 2 \"Workshops\") — style reference only. Attached image 2: the approved far background of THIS zone — match its colors and light. Do NOT copy the sheet's layout, text, UI or characters.\n\nCreate ONE isolated landmark object for the background of a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, with empty transparent space around it. The object stands in the middle distance: slightly hazy and softer than a foreground, medium detail, no hard black outlines. Its base fades into soft white mist. No characters, text, logo, UI, crates, doors with dark openings, flags, hooks, keys, ropes or chains hanging in front. Neutral white balance, no yellow tint.\nObject: a tall copper lightning rod tower with spiral wires and a softly glowing coil on top, a faint friendly ghostly glow in one of its round windows, sunset light, NOT scary. Portrait 2:3.\nOne single decorative landmark / specified connected grouping, isolated, centered, fully contained with generous transparent margins. Actual alpha transparency with no painted black/white/checkerboard background. No dark silhouette outline. The object is background scenery, never a foreground interactive prop; soften contrast and edges. Preserve the explicit Object description: a requested distant crane hook, lever, wires or furnace opening is part of that static landmark only, an exception to generic exclusions. No extra hooks, levers, crates, characters, faces, letters, emblems or UI.\nIsolation is CRITICAL: attached image 2 is ONLY a color/light reference. Do NOT reproduce its far viaduct, arches, sky, clouds, distant towers, ground or landscape behind this landmark. Draw only the Object description and its directly attached structural supports, no separate background scenery. Complete all requested ends and appendages inside the canvas with at least 6 percent clear alpha margins.",
+      "refs": [
+        "D:\\Cluade projects\\games\\Glue\\docs\\референсы\\world2_workshops.png",
+        "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_02\\source\\w02_far_machine.png"
+      ],
+      "transparent": true,
+      "status": "reviewed",
+      "edits": [
+        {
+          "refs": [
+            "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-b204e32d-2916-40f2-b322-c1738efadb31.png"
+          ],
+          "prompt": "Edit image 1 only. Preserve the tall copper lightning-rod tower, spiral wires, softly glowing top coil, all architecture and connected supports, sunset painting, composition and mist. Change ONLY the light INSIDE the central large ROUND WINDOW, about halfway up the stone building below the tall rod. It is currently ordinary warm yellow forge light. Replace it with a FAINT FRIENDLY GHOSTLY pale white-blue glow: a small soft translucent wisp of bluish light behind the window glass, mysterious but gentle, no scary face, no visible person or character, no eyes, no hard outline. Window frame and glass divisions unchanged. This blue-white glimmer must be distinct from the warm orange sunset and furnace lights elsewhere, but subtle, not a bright neon spot. No glow spills far outside the window. Everything else unchanged; true transparent PNG, no text or symbols.",
+          "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-e57f3a78-de24-488f-8fdc-6e95a08609c7.png"
+        },
+        {
+          "refs": [
+            "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-e57f3a78-de24-488f-8fdc-6e95a08609c7.png"
+          ],
+          "prompt": "Edit this image only. Preserve the copper lightning-rod tower, spiral wires, glowing top coil, architecture, all attached supports, warm sunset light, the faint friendly white-blue ghostly wisp INSIDE the round window, and the painted rendering. Fix transparent containment only: fit the WHOLE landmark slightly smaller and centered with at least 7 percent fully transparent empty margin on ALL FOUR sides of the canvas. Currently its base mist reaches the bottom canvas edge and is abruptly cropped. Include the entire softly fading base mist inside the frame: all mist and soft glow must gradually reach ZERO alpha before ANY canvas edge. No rectangular hazy backdrop. Building silhouette and soft mist remain complete, not cropped. TRUE transparent PNG, no painted black/white background, portrait 2:3. No new details, text, symbols or characters. Keep ghost window glow visible but faint; soften strong outline/contrast very slightly as distant background scenery.",
+          "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-0ec02015-ccc2-4efc-8ae0-f42f6c833c57.png"
+        }
+      ],
+      "first_generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-b204e32d-2916-40f2-b322-c1738efadb31.png",
+      "validation": {
+        "native_size": [
+          1024,
+          1536
+        ],
+        "mode": "RGBA",
+        "sha256": "2104d68b1de66d5774ba655e5e7ab0be9f7fefef2f06e9e4d64f58ba39fdc606",
+        "native_generator_bytes_preserved": true,
+        "alpha_extrema": [
+          0,
+          254
+        ],
+        "alpha_bbox": [
+          0,
+          17,
+          1024,
+          1536
+        ],
+        "visible_bbox_alpha_32": [
+          38,
+          47,
+          986,
+          1495
+        ],
+        "border_alpha_max": 2,
+        "true_transparency": true,
+        "x_groups_alpha_32": [
+          [
+            38,
+            47,
+            986,
+            1495
+          ]
+        ]
+      },
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-0ec02015-ccc2-4efc-8ae0-f42f6c833c57.png",
+      "review_notes": "Башня, спиральные провода и светящаяся катушка; в круглом окне слабый дружелюбный бело-голубой призрачный свет. После правки основание и пар целиком внутри кадра; максимальная альфа по границе 2/255. Поля меньше запрошенных 7%, поэтому выбирать масштаб по видимой архитектуре.",
+      "saved_at_utc": "2026-10-03T22:50:42.613079+00:00"
+    },
+    {
+      "id": "W2L19",
+      "kind": "landmark",
+      "priority": 3,
+      "zone": "machine",
+      "path": "assets/backgrounds/world_02/source/w02_lm19_crossing.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" (world 2 \"Workshops\") — style reference only. Attached image 2: the approved far background of THIS zone — match its colors and light. Do NOT copy the sheet's layout, text, UI or characters.\n\nCreate ONE isolated landmark object for the background of a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, with empty transparent space around it. The object stands in the middle distance: slightly hazy and softer than a foreground, medium detail, no hard black outlines. Its base fades into soft white mist. No characters, text, logo, UI, crates, doors with dark openings, flags, hooks, keys, ropes or chains hanging in front. Neutral white balance, no yellow tint.\nObject: a crossing of the workshop conveyors: four conveyor galleries meeting at a big round wooden turntable with a switch rail and a signal post, sunset light. Landscape 3:2.\nOne single decorative landmark / specified connected grouping, isolated, centered, fully contained with generous transparent margins. Actual alpha transparency with no painted black/white/checkerboard background. No dark silhouette outline. The object is background scenery, never a foreground interactive prop; soften contrast and edges. Preserve the explicit Object description: a requested distant crane hook, lever, wires or furnace opening is part of that static landmark only, an exception to generic exclusions. No extra hooks, levers, crates, characters, faces, letters, emblems or UI.\nIsolation is CRITICAL: attached image 2 is ONLY a color/light reference. Do NOT reproduce its far viaduct, arches, sky, clouds, distant towers, ground or landscape behind this landmark. Draw only the Object description and its directly attached structural supports, no separate background scenery. Complete all requested ends and appendages inside the canvas with at least 6 percent clear alpha margins.",
+      "refs": [
+        "D:\\Cluade projects\\games\\Glue\\docs\\референсы\\world2_workshops.png",
+        "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_02\\source\\w02_far_machine.png"
+      ],
+      "transparent": true,
+      "status": "reviewed",
+      "edits": [
+        {
+          "refs": [
+            "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-3897b4d0-61d4-4f32-80fc-a323b070ba13.png",
+            "D:\\Cluade projects\\games\\Glue\\docs\\референсы\\world2_workshops.png",
+            "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_02\\source\\w02_far_machine.png"
+          ],
+          "prompt": "Revise image 1 into a strict ORTHOGRAPHIC SIDE-ELEVATION decorative landmark for a 2D side-scrolling game. The current high oblique top view is wrong. Show a crossing of FOUR workshop conveyor galleries meeting at a big ROUND WOODEN TURNTABLE with a switch rail and a signal post. Move the camera down to belt height: the galleries and turntable must show their VERTICAL SIDE FACES, not broad visible plank top surfaces. Long primary left and right galleries are horizontal in the image; two secondary galleries can be indicated in overlapping side silhouettes behind the central circular switching mechanism, never diagonally foreshortened toward the viewer. The center is recognizably a round turntable housing viewed at belt height, with a curved wooden rim and a small switch rail. Keep all four complete gallery ends, wooden trestle supports, brass rollers and the signal post, all fully contained, 8 percent empty alpha margins. It is static MIDDLE-DISTANCE scenery, NOT a foreground interactive sprite: reduce detail and contrast, soft hazy painted edges, muted wood/copper/grey stone, no dark outline, neutral white balance, subtle sunset highlights; base dissolves in soft white steam. Attached image 2 is only style reference; attached image 3 only palette/light reference, no scene copied. One isolated connected landmark with TRUE TRANSPARENT PNG background, no sky/ground/black backdrop, no letters/numbers/characters/crates/flags. Landscape 3:2.",
+          "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-6a9aab05-8481-4ebc-b364-7748cca75bbd.png"
+        },
+        {
+          "refs": [
+            "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-6a9aab05-8481-4ebc-b364-7748cca75bbd.png"
+          ],
+          "prompt": "Edit this image only, preserve the current SIDE-ELEVATION view, all four conveyor galleries, central wooden turntable, switch rail, signal post, wooden trestles, composition and materials. Fix containment/margins: draw the same COMPLETE connected landmark slightly smaller and centered so there is at least 7 percent fully transparent empty margin along ALL FOUR sides of the canvas. Currently the left and right gallery ends almost touch the side edges. Every end must remain finished and fully inside, no cropping or extending gallery offscreen. Mist/glow must also fade to zero alpha before reaching any canvas edge; no rectangular haze boundary. Because this is MIDDLE-DISTANCE scenery, gently soften the strongest contrast and tiny details, retain a painterly soft finish, no dark outline, neutral white balance with localized sunset highlights, base fading in soft WHITE steam. TRUE TRANSPARENT PNG background, no painted black/white/checkerboard background. No text/characters/UI. Keep landscape 3:2 native composition. Do not change the side camera to an oblique top view.",
+          "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-76c95537-f5ac-4cde-bb72-19fb813dc373.png"
+        }
+      ],
+      "first_generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-3897b4d0-61d4-4f32-80fc-a323b070ba13.png",
+      "validation": {
+        "native_size": [
+          1536,
+          1024
+        ],
+        "mode": "RGBA",
+        "sha256": "bb9ebad5f8af75b9fa25cacd20cc69e5b52c2fcbf78fdbe116bc79ea9cebbd32",
+        "native_generator_bytes_preserved": true,
+        "alpha_extrema": [
+          0,
+          254
+        ],
+        "alpha_bbox": [
+          0,
+          0,
+          1536,
+          1024
+        ],
+        "visible_bbox_alpha_32": [
+          3,
+          160,
+          1527,
+          859
+        ],
+        "border_alpha_max": 28,
+        "true_transparency": true,
+        "x_groups_alpha_32": [
+          [
+            3,
+            160,
+            1527,
+            859
+          ]
+        ]
+      },
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-76c95537-f5ac-4cde-bb72-19fb813dc373.png",
+      "review_notes": "Четыре галереи, поворотный круг, стрелка и сигнальный столб. Высокий ракурс исправлен на боковой; дополнительные галереи показаны позади. Все концы внутри кадра. Круг виден с небольшим верхним ребром; мягкое свечение по бокам доходит до границы (альфа до 28/255), поля уже заданных. При установке смягчить контраст и подобрать дымку.",
+      "saved_at_utc": "2026-10-03T22:50:43.571946+00:00"
+    },
+    {
+      "id": "W2L20",
+      "kind": "landmark",
+      "priority": 3,
+      "zone": "machine",
+      "path": "assets/backgrounds/world_02/source/w02_lm20_machine_core.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" (world 2 \"Workshops\") — style reference only. Attached image 2: the approved far background of THIS zone — match its colors and light. Do NOT copy the sheet's layout, text, UI or characters.\n\nCreate ONE isolated landmark object for the background of a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, with empty transparent space around it. The object stands in the middle distance: slightly hazy and softer than a foreground, medium detail, no hard black outlines. Its base fades into soft white mist. No characters, text, logo, UI, crates, doors with dark openings, flags, hooks, keys, ropes or chains hanging in front. Neutral white balance, no yellow tint.\nObject: the heart of the great machine: an enormous gear wall with pistons, brass pipes and a glowing furnace core, sunset light. Portrait 2:3.\nOne single decorative landmark / specified connected grouping, isolated, centered, fully contained with generous transparent margins. Actual alpha transparency with no painted black/white/checkerboard background. No dark silhouette outline. The object is background scenery, never a foreground interactive prop; soften contrast and edges. Preserve the explicit Object description: a requested distant crane hook, lever, wires or furnace opening is part of that static landmark only, an exception to generic exclusions. No extra hooks, levers, crates, characters, faces, letters, emblems or UI.\nIsolation is CRITICAL: attached image 2 is ONLY a color/light reference. Do NOT reproduce its far viaduct, arches, sky, clouds, distant towers, ground or landscape behind this landmark. Draw only the Object description and its directly attached structural supports, no separate background scenery. Complete all requested ends and appendages inside the canvas with at least 6 percent clear alpha margins.",
+      "refs": [
+        "D:\\Cluade projects\\games\\Glue\\docs\\референсы\\world2_workshops.png",
+        "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_02\\source\\w02_far_machine.png"
+      ],
+      "transparent": true,
+      "status": "reviewed",
+      "edits": [],
+      "validation": {
+        "native_size": [
+          1024,
+          1536
+        ],
+        "mode": "RGBA",
+        "sha256": "cc3a2d422d4bbf166d26295c177b8a1cc109d1a70d4718b82178ccb678ed3594",
+        "native_generator_bytes_preserved": true,
+        "alpha_extrema": [
+          0,
+          254
+        ],
+        "alpha_bbox": [
+          0,
+          9,
+          1014,
+          1536
+        ],
+        "visible_bbox_alpha_32": [
+          36,
+          142,
+          993,
+          1370
+        ],
+        "border_alpha_max": 1,
+        "true_transparency": true,
+        "x_groups_alpha_32": [
+          [
+            36,
+            142,
+            993,
+            1370
+          ]
+        ]
+      },
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-98505182-54fe-40d4-96c3-742b65c2b30a.png",
+      "review_notes": "Сердце машины: большая стена шестерён, поршни, латунные трубы и яркое ядро печи. Портретный формат; основание в паре. При установке подобрать дымку, чтобы свечение не спорило с героями.",
+      "saved_at_utc": "2026-10-03T22:43:33.329265+00:00"
+    },
+    {
+      "id": "W2M2",
+      "kind": "menu",
+      "priority": 4,
+      "path": "assets/backgrounds/menu/source/menu_panorama_w02.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" (world 2 \"Workshops\"). Use it ONLY as a style reference: bright, cheerful hand-painted cartoon game art; warm wood, copper and brass, grey stone, glowing forges, soft steam, big gears and wooden cranes; warm light; soft shading, clean readable shapes. Do NOT copy the sheet's layout, text, logo, UI panels, frames or characters.\n\nCreate a FAR BACKGROUND parallax layer for a 2D side-scrolling co-op platformer. Landscape panorama 16:9. Strict side view, level horizon, no perspective floor, no isometric view. No characters, animals or people. No text, letters, logo, UI, frame or watermark. Nothing that looks interactive or walkable: no crates, doors, levers, buttons, flags, hooks, keys, no ropes or chains across the image, no flat platforms in front. Everything is far away and small in scale. Gentle atmospheric haze; colors a bit softer and less contrasty than a foreground, so small bright red, blue, yellow and green characters stay readable in front of it. Neutral white balance, no yellow or sepia tint.\nThe band between 40% and 80% of the height is only soft haze and distant silhouettes — no bright details there; put the details near the horizon line and in the bottom haze. The bottom edge is soft mist or steam, not ground. No large object touches the left or right edge, so the image can repeat horizontally.\nScene: a wide panorama of world 2 Workshops: a morning open yard with wooden cranes beside an unfinished stone viaduct at the left, a cosy forge with chimneys in the middle, a gigantic timber workshop on scaffolds and an enormous clockwork machine tower with giant gears at the right in sunset light. A gentle transition of light across the whole scene, cohesive hand-painted cartoon art. Composition: empty clear sky at the top center for a title to be added later; the lower third is very soft steam for the level-selection grid to be added later. No title or grid drawn, no text, no symbols, no silhouettes of characters, no hard navy outlines. Keep distant towers clear of both side edges. Preserve native 16:9 panorama composition.",
+      "refs": [
+        "D:\\Cluade projects\\games\\Glue\\docs\\референсы\\world2_workshops.png",
+        "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_02\\source\\w02_far_yard.png",
+        "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_02\\source\\w02_far_machine.png"
+      ],
+      "transparent": false,
+      "status": "reviewed",
+      "edits": [
+        {
+          "refs": [
+            "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-24a0e798-3977-46c5-bd53-60aa251b11a9.png"
+          ],
+          "prompt": "Edit this game menu panorama. Preserve its hand-painted style, native 16:9 composition, cheerful transition from cool morning workshop yard on the left through a cosy forge in the middle to sunset giant timber workshop and clockwork gear tower on the right. Preserve the large clear sky in the top center for a title later. Make these targeted composition corrections: (1) The large LEFT viaduct currently meets/crosses the very left canvas edge. Recompose ONLY its left end and attached cranes so the COMPLETE large viaduct silhouette ends inside the canvas with at least 5 percent clear atmospheric space at the left edge. No large structure touches either side edge; edge regions are just sky and soft haze/distant tiny indistinct silhouettes. (2) The entire LOWER THIRD must be VERY SOFT STEAM for a level selection grid to be added later. Gradually fade the lower scenery into denser pale neutral white-blue mist so no sharp arches, platforms, trees, forge details or waterfalls remain below 67 percent of the image height. Remove distinct bright waterfall bands by merging them into soft steam. Soften the middle 40-67 percent band too: distant hazy low-contrast architecture only, no bright busy small details. Keep workshop/forge/machine silhouettes recognizable mainly above the mist, no foreground objects or interactive props. No UI/title/grid/text/letters/symbols/characters. OPAQUE panorama background, not transparent. Maintain neutral white balance with only localized warm sunset/forge light, no global yellow tint.",
+          "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-7303f824-f908-4c63-844b-24beee743023.png"
+        }
+      ],
+      "first_generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-24a0e798-3977-46c5-bd53-60aa251b11a9.png",
+      "validation": {
+        "native_size": [
+          1672,
+          941
+        ],
+        "mode": "RGB",
+        "sha256": "4d76f9f8e6f54f6b5e79b3b4e5ce10bf2a4749ced9c67cc828f8b5bfdf62e38e",
+        "native_generator_bytes_preserved": true,
+        "true_transparency": false
+      },
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-7303f824-f908-4c63-844b-24beee743023.png",
+      "review_notes": "Панорама без интерфейса: утренний двор слева, кузня в центре, большая машина справа в закатном свете. После правки арка отделена от левого края; верхний центр оставлен под заголовок, нижняя треть смягчена паром под сетку уровней. Нативный формат 1672 × 941, приблизительно 16:9.",
+      "saved_at_utc": "2026-10-03T22:46:55.003220+00:00"
+    }
+  ],
+  "saved_count": 29,
+  "remaining_required_generation": [],
+  "delivery_status": "29 of 29 PNG deliverables generated, visually reviewed and saved; game integration pending.",
+  "integration_pending": true,
+  "integration_notes": "Нарезка, установка, проверка масштаба и кадры в игре — этап приёмки по заданию. P21 подготовить первым среди механизмов для проверки стиля в игре."
+}

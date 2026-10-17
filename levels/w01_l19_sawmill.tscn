@@ -1,0 +1,145 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://src/level/greybox_level.gd" id="1"]
+[ext_resource type="PackedScene" path="res://levels/backdrops/w01_pass.tscn" id="bd"]
+[ext_resource type="Script" path="res://src/level/backdrop_layer.gd" id="bl"]
+[ext_resource type="Texture2D" path="res://assets/backgrounds/world_01/v2/source/w01_v2_lm11_watermill.png" id="lm"]
+[ext_resource type="Script" path="res://src/mechanisms/pressure_plate.gd" id="plate"]
+[ext_resource type="Script" path="res://src/mechanisms/door.gd" id="door"]
+[ext_resource type="Script" path="res://src/mechanisms/saw.gd" id="saw"]
+[ext_resource type="Script" path="res://src/mechanisms/spikes.gd" id="spikes"]
+[ext_resource type="Script" path="res://src/mechanisms/finish.gd" id="finish"]
+
+[node name="W01L19" type="Node2D"]
+script = ExtResource("1")
+title = "19 · Сквозь пилы"
+blocks = Array[Rect2]([Rect2(0, -8, 1, 26), Rect2(86, -8, 1, 26), Rect2(0, 12, 20, 6), Rect2(20, 14.5, 2.2, 3.5), Rect2(22.2, 12, 13.8, 6), Rect2(30, 8.5, 6, 3.5), Rect2(36, 12, 9, 6), Rect2(45, 15, 4.6, 3), Rect2(49.6, 12, 36.4, 6), Rect2(78, -8, 1, 16)])
+checkpoints = Array[Vector2]([Vector2(3, 12), Vector2(38.5, 12)])
+bounds_tiles = Rect2(0, -8, 87, 27)
+kill_y_tiles = 19.0
+
+[node name="Saw1" type="Node2D" parent="."]
+position = Vector2(320, 718)
+script = ExtResource("saw")
+radius_tiles = 0.4
+path_tiles = Vector2(2.5, 0)
+speed = 240.0
+start_at = 0.0
+start_forward = true
+
+[node name="Saw2" type="Node2D" parent="."]
+position = Vector2(640, 718)
+script = ExtResource("saw")
+radius_tiles = 0.4
+path_tiles = Vector2(2.5, 0)
+speed = 240.0
+start_at = 0.0
+start_forward = true
+
+[node name="Saw3" type="Node2D" parent="."]
+position = Vector2(960, 718)
+script = ExtResource("saw")
+radius_tiles = 0.4
+path_tiles = Vector2(2.5, 0)
+speed = 240.0
+start_at = 0.0
+start_forward = true
+
+[node name="SpikesPit" type="Node2D" parent="."]
+position = Vector2(1350.4, 928)
+script = ExtResource("spikes")
+width_tiles = 2.2
+
+[node name="SawPit" type="Node2D" parent="."]
+position = Vector2(1299.2, 672)
+script = ExtResource("saw")
+radius_tiles = 0.45
+path_tiles = Vector2(1.6, 0)
+speed = 150.0
+
+[node name="SawWall" type="Node2D" parent="."]
+position = Vector2(2041.6, 494)
+script = ExtResource("saw")
+radius_tiles = 0.4
+path_tiles = Vector2(3.6, 0)
+speed = 220.0
+start_at = 0.0
+start_forward = true
+
+[node name="SpikesGap" type="Node2D" parent="."]
+position = Vector2(3027.2, 960)
+script = ExtResource("spikes")
+width_tiles = 4.6
+
+[node name="SawDrop1" type="Node2D" parent="."]
+position = Vector2(2969.6, 384)
+script = ExtResource("saw")
+radius_tiles = 0.45
+path_tiles = Vector2(0, 2.6)
+speed = 200.0
+
+[node name="SawDrop2" type="Node2D" parent="."]
+position = Vector2(3110.4, 384)
+script = ExtResource("saw")
+radius_tiles = 0.45
+path_tiles = Vector2(0, 2.6)
+speed = 200.0
+start_at = 1.0
+start_forward = false
+
+[node name="ExitA" type="AnimatableBody2D" parent="."]
+position = Vector2(4480, 768)
+script = ExtResource("plate")
+width_tiles = 1.0
+pulse = 0.35
+mark_color = Color(0.9, 0.3, 0.3, 1)
+
+[node name="ExitB" type="AnimatableBody2D" parent="."]
+position = Vector2(4736, 768)
+script = ExtResource("plate")
+width_tiles = 1.0
+pulse = 0.35
+mark_color = Color(0.9, 0.3, 0.3, 1)
+
+[node name="SawExitA" type="Node2D" parent="."]
+position = Vector2(4480, 537.6)
+script = ExtResource("saw")
+radius_tiles = 0.45
+path_tiles = Vector2(0, 2.2)
+speed = 180.0
+
+[node name="SawExitB" type="Node2D" parent="."]
+position = Vector2(4736, 537.6)
+script = ExtResource("saw")
+radius_tiles = 0.45
+path_tiles = Vector2(0, 2.2)
+speed = 180.0
+start_at = 0.6
+
+[node name="Exit" type="AnimatableBody2D" parent="."]
+position = Vector2(4992, 512)
+script = ExtResource("door")
+size_tiles = Vector2(1, 4)
+triggers = Array[NodePath]([NodePath("../ExitA"), NodePath("../ExitB")])
+require_all = true
+stay_open = true
+open_offset_tiles = Vector2(0, -3.5)
+mark_color = Color(0.9, 0.3, 0.3, 1)
+
+[node name="Finish" type="Node2D" parent="."]
+position = Vector2(5248, 768)
+script = ExtResource("finish")
+
+[node name="Backdrop" parent="." instance=ExtResource("bd")]
+
+[node name="Landmark" type="Node2D" parent="Backdrop"]
+script = ExtResource("bl")
+texture = ExtResource("lm")
+parallax = 0.3
+parallax_y = 0.1
+height = 0.5
+center_y = 0.46
+zoom_follow = 0.3
+repeat = false
+world_x = 1949.0
+haze = 0.3

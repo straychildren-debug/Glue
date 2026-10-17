@@ -9,6 +9,8 @@ signal moved(direction: Vector2i)
 signal confirmed(device: int)
 signal cancelled
 signal start_pressed(device: int)
+## Листать миры: -1 — предыдущий, 1 — следующий (Q/E, PageUp/PageDown, LB/RB).
+signal paged(direction: int)
 
 const STICK_THRESHOLD := 0.55
 const REPEAT_DELAY := 0.35
@@ -55,6 +57,12 @@ func _input(event: InputEvent) -> void:
 		elif key == KEY_ESCAPE:
 			_handled()
 			cancelled.emit()
+		elif key in [KEY_Q, KEY_PAGEUP]:
+			_handled()
+			paged.emit(-1)
+		elif key in [KEY_E, KEY_PAGEDOWN]:
+			_handled()
+			paged.emit(1)
 	elif event is InputEventJoypadButton and event.pressed:
 		if PAD_DIRECTIONS.has(event.button_index):
 			_handled()
@@ -68,6 +76,12 @@ func _input(event: InputEvent) -> void:
 		elif event.button_index == JOY_BUTTON_START:
 			_handled()
 			start_pressed.emit(event.device)
+		elif event.button_index == JOY_BUTTON_LEFT_SHOULDER:
+			_handled()
+			paged.emit(-1)
+		elif event.button_index == JOY_BUTTON_RIGHT_SHOULDER:
+			_handled()
+			paged.emit(1)
 
 
 func _process(delta: float) -> void:

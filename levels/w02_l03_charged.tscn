@@ -1,0 +1,60 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://src/level/greybox_level.gd" id="1"]
+[ext_resource type="Script" path="res://src/mechanisms/spring_pad.gd" id="2"]
+[ext_resource type="Script" path="res://src/mechanisms/finish.gd" id="3"]
+[ext_resource type="Script" path="res://src/mechanisms/pressure_plate.gd" id="4"]
+[ext_resource type="Script" path="res://src/mechanisms/door.gd" id="5"]
+[ext_resource type="PackedScene" path="res://levels/backdrops/w02_yard.tscn" id="bd"]
+[ext_resource type="Script" path="res://src/level/backdrop_layer.gd" id="bl"]
+[ext_resource type="Texture2D" path="res://assets/backgrounds/world_02/source/w02_lm03_launch_tower.png" id="lm"]
+
+[node name="W02L03" type="Node2D"]
+script = ExtResource("1")
+title = "03 · Взведённая пружина"
+blocks = Array[Rect2]([Rect2(0, -8, 1, 26), Rect2(0, 12, 10, 6), Rect2(10, 6, 6, 12), Rect2(16, 12, 20, 6), Rect2(19.5, 3.5, 4, 1), Rect2(21, 4.5, 1, 4.5), Rect2(36, -8, 1, 26)])
+checkpoints = Array[Vector2]([Vector2(2, 12), Vector2(12, 6), Vector2(18.4, 12)])
+bounds_tiles = Rect2(0, -8, 37, 27)
+kill_y_tiles = 19.0
+ground_fill = "w02_fill"
+ground_deep = "w02_deep"
+ground_top = "w02_top"
+ground_side = "w02_side"
+
+[node name="Pad" type="StaticBody2D" parent="."]
+position = Vector2(544, 768)
+script = ExtResource("2")
+
+[node name="Pad2" type="StaticBody2D" parent="."]
+position = Vector2(1088, 768)
+script = ExtResource("2")
+
+[node name="Latch" type="AnimatableBody2D" parent="."]
+position = Vector2(1446, 224)
+script = ExtResource("4")
+width_tiles = 1.5
+latch = true
+
+[node name="Door" type="AnimatableBody2D" parent="."]
+position = Vector2(1344, 576)
+script = ExtResource("5")
+triggers = Array[NodePath]([NodePath("../Latch")])
+
+[node name="Finish" type="Node2D" parent="."]
+position = Vector2(1920, 768)
+script = ExtResource("3")
+
+[node name="Backdrop" parent="." instance=ExtResource("bd")]
+
+[node name="Landmark" type="Node2D" parent="Backdrop"]
+script = ExtResource("bl")
+texture = ExtResource("lm")
+parallax = 0.3
+parallax_y = 0.1
+height = 0.62
+center_y = 0.6
+zoom_follow = 0.3
+repeat = false
+world_x = 947.2
+haze = 0.22
+haze_color = Color(0.860, 0.900, 0.960, 1)

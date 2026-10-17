@@ -1,0 +1,160 @@
+
+
+=== GRAPHICS 09 / 2026-10-02 / BUILT-IN IMAGE_GEN ===
+Original generator PNG files. No upscaling or image postprocessing.
+
+D1 | w01_decal_grass.png
+References:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/assets/tiles/world_01/source/w01_moss_top.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the approved moss texture of the same game — match its colors and painting style exactly. Do NOT copy layouts, text, UI or characters.
+
+Create ONE isolated decorative plant sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no objects.
+Plant:
+a wide low tuft of lush rounded grass blades with two or three tiny white and yellow flowers, flat bottom edge (it stands on a ledge). Landscape 2:1.
+Genuine alpha transparency, not a checkerboard pattern. Olive-green and yellow-green foliage exactly like the moss reference; preserve hand-painted soft shapes. One single plant sprite, no sheet.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fdbc-85f8-7471-90e2-82bd74996636\exec-dc7ef2d8-8ddd-4d9f-a20e-0a9c5dea45a8.png
+
+D1_2 | w01_decal_grass_2.png
+References:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/assets/tiles/world_01/source/w01_moss_top.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the approved moss texture of the same game — match its colors and painting style exactly. Do NOT copy layouts, text, UI or characters.
+
+Create ONE isolated decorative plant sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no objects.
+Plant:
+a wide low tuft of lush rounded grass blades with two or three tiny white and yellow flowers, flat bottom edge (it stands on a ledge). Landscape 2:1.
+Genuine alpha transparency, not a checkerboard pattern. Olive-green and yellow-green foliage exactly like the moss reference; preserve hand-painted soft shapes. One single plant sprite, no sheet.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fdbc-85f8-7471-90e2-82bd74996636\exec-aadfc312-5ed3-41f1-a6e5-2587122678df.png
+
+D2 | w01_decal_ivy_hang.png
+References:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/assets/tiles/world_01/source/w01_moss_top.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the approved moss texture of the same game — match its colors and painting style exactly. Do NOT copy layouts, text, UI or characters.
+
+Create ONE isolated decorative plant sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no objects.
+Plant:
+a long strand of hanging ivy with rounded leaves, attached at the top edge and hanging straight down, thinning towards the bottom. Portrait 1:3.
+Genuine alpha transparency, not a checkerboard pattern. Olive-green and yellow-green foliage exactly like the moss reference; preserve hand-painted soft shapes. One single plant sprite, no sheet.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fdbc-85f8-7471-90e2-82bd74996636\exec-027af27e-ac8d-4d58-b3d7-3c673c0d466d.png
+
+D2_2 | w01_decal_ivy_hang_2.png
+References:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/assets/tiles/world_01/source/w01_moss_top.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the approved moss texture of the same game — match its colors and painting style exactly. Do NOT copy layouts, text, UI or characters.
+
+Create ONE isolated decorative plant sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no objects.
+Plant:
+a long strand of hanging ivy with rounded leaves, attached at the top edge and hanging straight down, thinning towards the bottom. Portrait 1:3.
+Genuine alpha transparency, not a checkerboard pattern. Olive-green and yellow-green foliage exactly like the moss reference; preserve hand-painted soft shapes. One single plant sprite, no sheet.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fdbc-85f8-7471-90e2-82bd74996636\exec-236f05b4-05a7-438e-8a9f-eeafd526d5fe.png
+
+D3 | w01_decal_flowers.png
+References:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/assets/tiles/world_01/source/w01_moss_top.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the approved moss texture of the same game — match its colors and painting style exactly. Do NOT copy layouts, text, UI or characters.
+
+Create ONE isolated decorative plant sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no objects.
+Plant:
+a small cluster of wild flowers (pink, white, yellow) with leaves, flat bottom edge. Square 1:1.
+Genuine alpha transparency, not a checkerboard pattern. Olive-green and yellow-green foliage exactly like the moss reference; preserve hand-painted soft shapes. One single plant sprite, no sheet.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fdbc-85f8-7471-90e2-82bd74996636\exec-45f8c42b-89e0-4491-ade5-94b91ef24241.png
+
+D3_2 | w01_decal_flowers_2.png
+References:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/assets/tiles/world_01/source/w01_moss_top.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the approved moss texture of the same game — match its colors and painting style exactly. Do NOT copy layouts, text, UI or characters.
+
+Create ONE isolated decorative plant sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no objects.
+Plant:
+a small cluster of wild flowers (pink, white, yellow) with leaves, flat bottom edge. Square 1:1.
+Genuine alpha transparency, not a checkerboard pattern. Olive-green and yellow-green foliage exactly like the moss reference; preserve hand-painted soft shapes. One single plant sprite, no sheet.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fdbc-85f8-7471-90e2-82bd74996636\exec-05ce2173-4d26-49d8-89df-e7f79d1d4059.png
+
+D4 | w01_decal_bush.png
+References:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/assets/tiles/world_01/source/w01_moss_top.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the approved moss texture of the same game — match its colors and painting style exactly. Do NOT copy layouts, text, UI or characters.
+
+Create ONE isolated decorative plant sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no objects.
+Plant:
+a small round leafy bush, flat bottom edge, soft rounded shapes. Landscape 3:2.
+Genuine alpha transparency, not a checkerboard pattern. Olive-green and yellow-green foliage exactly like the moss reference; preserve hand-painted soft shapes. One single plant sprite, no sheet.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fdbc-85f8-7471-90e2-82bd74996636\exec-3159351f-4f2e-4f07-be60-9cf0792dfe57.png
+
+D4_2 | w01_decal_bush_2.png
+References:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/assets/tiles/world_01/source/w01_moss_top.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the approved moss texture of the same game — match its colors and painting style exactly. Do NOT copy layouts, text, UI or characters.
+
+Create ONE isolated decorative plant sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no objects.
+Plant:
+a small round leafy bush, flat bottom edge, soft rounded shapes. Landscape 3:2.
+Genuine alpha transparency, not a checkerboard pattern. Olive-green and yellow-green foliage exactly like the moss reference; preserve hand-painted soft shapes. One single plant sprite, no sheet.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fdbc-85f8-7471-90e2-82bd74996636\exec-371d7d59-81fa-48a2-bd0a-809cc5e3bc5e.png
+
+D5 | w01_decal_front_branch.png
+References:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/assets/tiles/world_01/source/w01_moss_top.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the approved moss texture of the same game — match its colors and painting style exactly. Do NOT copy layouts, text, UI or characters.
+
+Create ONE isolated decorative plant sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no objects.
+Plant:
+a leafy tree branch entering from the left edge of the image, big soft leaves, slightly blurred like it is very close to the camera (foreground frame). Landscape 3:2.
+Genuine alpha transparency, not a checkerboard pattern. Olive-green and yellow-green foliage exactly like the moss reference; preserve hand-painted soft shapes. One single plant sprite, no sheet.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fdbc-85f8-7471-90e2-82bd74996636\exec-6cc1a27a-2705-499e-8425-2daa329d92b1.png
+
+D5_2 | w01_decal_front_branch_2.png
+References:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/assets/tiles/world_01/source/w01_moss_top.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the approved moss texture of the same game — match its colors and painting style exactly. Do NOT copy layouts, text, UI or characters.
+
+Create ONE isolated decorative plant sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no objects.
+Plant:
+a leafy tree branch entering from the left edge of the image, big soft leaves, slightly blurred like it is very close to the camera (foreground frame). Landscape 3:2.
+Genuine alpha transparency, not a checkerboard pattern. Olive-green and yellow-green foliage exactly like the moss reference; preserve hand-painted soft shapes. One single plant sprite, no sheet.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fdbc-85f8-7471-90e2-82bd74996636\exec-26317adf-4990-481e-a1fa-26e6a04ec724.png
+
+D6 | w01_decal_roots.png
+References:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/assets/tiles/world_01/source/w01_moss_top.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the approved moss texture of the same game — match its colors and painting style exactly. Do NOT copy layouts, text, UI or characters.
+
+Create ONE isolated decorative plant sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no objects.
+Plant:
+tangled tree roots and a few hanging moss strands hanging down from a top edge, as if under an overhang. Landscape 2:1.
+Genuine alpha transparency, not a checkerboard pattern. Olive-green and yellow-green foliage exactly like the moss reference; preserve hand-painted soft shapes. One single plant sprite, no sheet.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fdbc-85f8-7471-90e2-82bd74996636\exec-bf7fbfd9-4aaf-4ad0-8fba-0e6397b912ec.png
+
+D6_2 | w01_decal_roots_2.png
+References:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/assets/tiles/world_01/source/w01_moss_top.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the approved moss texture of the same game — match its colors and painting style exactly. Do NOT copy layouts, text, UI or characters.
+
+Create ONE isolated decorative plant sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no objects.
+Plant:
+tangled tree roots and a few hanging moss strands hanging down from a top edge, as if under an overhang. Landscape 2:1.
+Genuine alpha transparency, not a checkerboard pattern. Olive-green and yellow-green foliage exactly like the moss reference; preserve hand-painted soft shapes. One single plant sprite, no sheet.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fdbc-85f8-7471-90e2-82bd74996636\exec-18e71930-b0d4-47a0-8c4f-08288b5cfdd6.png

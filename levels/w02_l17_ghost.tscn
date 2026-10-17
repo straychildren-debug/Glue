@@ -1,0 +1,43 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://src/level/greybox_level.gd" id="1"]
+[ext_resource type="Script" path="res://src/mechanisms/conveyor.gd" id="2"]
+[ext_resource type="Script" path="res://src/mechanisms/lever.gd" id="3"]
+[ext_resource type="Script" path="res://src/mechanisms/ghost.gd" id="4"]
+[ext_resource type="Script" path="res://src/mechanisms/finish.gd" id="5"]
+[ext_resource type="PackedScene" path="res://levels/backdrops/w02_machine.tscn" id="bd"]
+
+[node name="W02L17" type="Node2D"]
+script = ExtResource("1")
+title = "17 · Призрак в цеху"
+blocks = Array[Rect2]([Rect2(0, -8, 1, 26), Rect2(0, 12, 12, 6), Rect2(12, 12.375, 18, 5.625), Rect2(30, 12, 10, 6), Rect2(40, -8, 1, 26)])
+checkpoints = Array[Vector2]([Vector2(8, 12)])
+bounds_tiles = Rect2(0, -8, 41, 27)
+kill_y_tiles = 19.0
+ground_fill = "w02_fill"
+ground_deep = "w02_deep"
+ground_top = "w02_top"
+ground_side = "w02_side"
+
+[node name="Ghost" type="Node2D" parent="."]
+position = Vector2(192, 608)
+script = ExtResource("4")
+area_tiles = Rect2(1, 4, 39, 8)
+
+[node name="Belt" type="StaticBody2D" parent="."]
+position = Vector2(768, 768)
+script = ExtResource("2")
+width_tiles = 18.0
+speed = -300.0
+control = NodePath("../Lever")
+control_mode = 1
+
+[node name="Lever" type="Node2D" parent="."]
+position = Vector2(2016, 768)
+script = ExtResource("3")
+
+[node name="Finish" type="Node2D" parent="."]
+position = Vector2(2368, 768)
+script = ExtResource("5")
+
+[node name="Backdrop" parent="." instance=ExtResource("bd")]

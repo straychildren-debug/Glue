@@ -1,0 +1,746 @@
+{
+  "date": "2026-10-03",
+  "assignment": "docs/15_графика_после_перестройки_задание.md",
+  "method": "built-in image_gen",
+  "jobs": [
+    {
+      "id": "P17",
+      "kind": "sprite",
+      "path": "assets/props/v2/source/p17_finish.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" — style reference. Attached image 2: close-ups of the level exit door cut out of that concept sheet — THIS is the design to follow: a small door only a little taller than the characters, a short arch of big warm golden-yellow stones, a dark navy-brown wooden plank door with a rounded top and a small golden knob. Attached image 3: how the exit looks in the game now — too big and ugly, do NOT copy it. Attached image 4: the approved stone texture of the platforms — match its painting style. Attached image 5: an approved object of the same sprite set — match its rendering exactly. Do NOT copy layouts, text or UI from the attachments.\r\n\r\nDraw the LEVEL EXIT DOOR as a GAME SPRITE for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict orthographic side view, no perspective, no cast shadow, centered with empty space around it. Hand-painted cartoon style of the painted world: soft visible texture (stone grain, small chips, a few moss specks on the top of the arch, wood grain and plank seams on the door), soft shading with light from the upper left. A clean, slightly thin, painted dark brown-navy outline around the whole silhouette (not pure black). The door must read at once as the cheerful goal of the level.\r\nObject: a small standalone arched doorway: a short thick arch of big warm golden-yellow stones (keystone and side stones slightly darker and worn) standing on a flat stone threshold, with a wooden door inside it — vertical dark navy-brown planks, a rounded top following the arch, two dark iron hinges and a small round golden knob.\r\nStates: closed door (waiting for the team); the same doorway with the door swung open inward against the side of the frame and warm golden light inside (everyone is in). Side by side in one row, same scale, same baseline, evenly spaced.\r\nProportions: each doorway 1.6 units wide and 2.2 units tall in total; the door itself 1 unit wide and 1.5 units tall. A character standing next to it would reach just below the top of the door.\r\nNo text, letters, numbers, symbols, logos or watermark.",
+      "refs": [
+        "D:\\Cluade projects\\games\\Glue\\docs\\референсы\\reference.png",
+        "D:\\Cluade projects\\games\\Glue\\docs\\референсы\\gate_reference.png",
+        "D:\\Cluade projects\\games\\Glue\\docs\\progress\\finish_v1.jpg",
+        "D:\\Cluade projects\\games\\Glue\\assets\\tiles\\world_01\\source\\w01_stone_fill.png",
+        "D:\\Cluade projects\\games\\Glue\\assets\\props\\v2\\source\\p01_crate.png"
+      ],
+      "transparent": true,
+      "status": "reviewed",
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-ad718ad1-25ac-4c92-b9fc-fb6433484ac6.png",
+      "validation": {
+        "native_size": [
+          1510,
+          1041
+        ],
+        "mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_bbox": [
+          25,
+          19,
+          1446,
+          1041
+        ],
+        "visible_bbox_alpha_32": [
+          207,
+          166,
+          1295,
+          868
+        ],
+        "upper_half_alpha_max": 255,
+        "border_alpha_max": 1,
+        "true_transparency": true,
+        "sha256": "c1cd14ffc62934f7925cb712cdf1e0f384e7af8989af5d11fee331c10f53c690",
+        "native_generator_bytes_preserved": true,
+        "states": [
+          {
+            "state": "closed",
+            "bbox_alpha_32": [
+              207,
+              166,
+              707,
+              868
+            ],
+            "width": 500,
+            "height": 702,
+            "ratio": 0.7123,
+            "target_tile_size": [
+              1.6,
+              2.2
+            ],
+            "crop_rect_xywh": [
+              207,
+              166,
+              500,
+              702
+            ]
+          },
+          {
+            "state": "open",
+            "bbox_alpha_32": [
+              800,
+              166,
+              1295,
+              868
+            ],
+            "width": 495,
+            "height": 702,
+            "ratio": 0.7051,
+            "target_tile_size": [
+              1.6,
+              2.2
+            ],
+            "crop_rect_xywh": [
+              800,
+              166,
+              500,
+              702
+            ]
+          }
+        ],
+        "target_door_tile_size": [
+          1,
+          1.5
+        ],
+        "target_game_display_px": [
+          102.4,
+          140.8
+        ],
+        "target_door_display_px": [
+          64,
+          96
+        ],
+        "proportions_approximate": true,
+        "baseline_y": 868
+      },
+      "saved_at_utc": "2026-10-03 19:40:07 UTC",
+      "review_notes": "Два состояния: закрытое слева, открытое со створкой у левого косяка и тёплым светом справа. Общая линия порога y=868; прозрачный фон. Пропорции близки к заданным: видимый рисунок 500 / 495 × 702 px. При установке использовать одинаковые рамки 500 × 702 px и размер ворот 102,4 × 140,8 px; дверь целевая 64 × 96 px.",
+      "edits": [
+        {
+          "prompt": "Edit attached image 1: the two-state transparent PNG sheet of a golden stone exit doorway. Keep its hand-painted style, golden-yellow worn stones, a few moss specks, dark navy-brown vertical wooden planks, two dark iron hinges, small gold round knob, closed state on the left and warmly glowing open state on the right. Keep both states the SAME size, exactly the SAME arch geometry and the SAME flat threshold baseline. Preserve empty transparent margins and a clear gap between the states.\nCorrect only the OUTER PROPORTIONS and open leaf angle. The present doorway is much too wide (about 615 wide by 670 tall). Each complete doorway silhouette INCLUDING threshold must instead be 487 pixels wide by 670 pixels tall, width/height 0.727, matching 1.6 tiles wide by 2.2 tiles tall. Do NOT make the door taller. Keep the inner wooden door about 305 pixels wide and 457 pixels tall, matching 1 tile wide by 1.5 tiles tall. Make the side masonry narrower and shorten the threshold overhang so the overall arch is a compact vertical doorway, still big simple warm stones. The door height is about 68 percent of the total arch height. These numbers are drawing instructions, not labels.\nIn the right state swing the wooden leaf fully INWARD about 90 degrees and press it against the inside LEFT jamb. It is seen as a narrow strip at the jamb, at most about 10 percent of the clear doorway width. The leaf does not project outside the arch and does not obstruct the warm light. The frame remains strictly orthographic front/side game view; only the rotating door leaf is seen edge-on. No background scenery outside the opening, no characters, no floor beyond the threshold, no text or numbers. True transparent PNG, nothing outside the two clean silhouettes, no cast shadow, no halo.",
+          "refs": [
+            "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-9cc65d8a-8fdf-46b8-891d-52acb492b47c.png"
+          ],
+          "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-2161c7d2-85a7-4316-8938-7fb0fd76dbb2.png",
+          "review_notes": "Уменьшена ширина обрамления; открытая створка поставлена у левого косяка."
+        },
+        {
+          "refs": [
+            "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-2161c7d2-85a7-4316-8938-7fb0fd76dbb2.png"
+          ],
+          "prompt": "Edit attached image 1, a transparent two-state golden stone door sprite sheet. Preserve all painting, colors, materials, closed dark navy plank door on the left, right door leaf fully inward and edge-on at left jamb, warm interior light, two iron hinges, gold knob, identical stone frame in both states, same scale and baseline, clean flat threshold, no perspective of the arch.\nONLY REDUCE THE OVERALL WIDTH of both complete doorway silhouettes from about 560 pixels to about 505 pixels. Preserve total height about 694 pixels. Exact target complete silhouette width:height is 1.6:2.2 = 0.7273. Narrow the side stone columns and the stone arch bands by about one quarter; shorten the threshold so it overhangs the columns only a tiny amount. Do NOT narrow the inner dark wooden door itself: keep inner door about 315 wide and 470 tall, the inner door is 1:1.5. Do NOT add extra tall stone courses and do NOT stretch height. The stone frame remains chunky golden blocks but columns take only about 95 pixels width each including outline and tiny threshold overhang. Both frames must have precisely the same total width and height.\nFully isolated on transparent background, generous transparent margins, one row with clear gap, native image resolution, no cast shadow, no glow outside the opening, no labels, text or symbols. Keep everything else the same.",
+          "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-ad718ad1-25ac-4c92-b9fc-fb6433484ac6.png",
+          "review_notes": "Финальное сужение обрамления и порога."
+        }
+      ],
+      "first_generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-9cc65d8a-8fdf-46b8-891d-52acb492b47c.png"
+    },
+    {
+      "id": "L21",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" — style reference only (bright hand-painted cartoon game art, grey-brown stone ruins with thick green moss, lush rounded trees, thin waterfalls, turquoise water, warm light from the upper left). Attached image 2: the approved far background of the same zone — match its colors and light. Do NOT copy the sheet's layout, text, UI or characters.\n\nCreate ONE isolated landmark object for the background of a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, with empty transparent space around it. The object stands in the middle distance: slightly hazy and softer than a foreground, medium detail, no hard black outlines. Its base fades into soft white mist. No characters, text, logo, UI, crates, doors with dark openings, flags, hooks, keys, ropes or chains hanging in front. Neutral white balance, no yellow tint.\nObject: a ruined stone wall of the old viaduct with a big round rose window of colored glass divided into four parts — soft orange, blue, green and purple, gently faded by time, moss and ivy along the top, warm golden-hour light. Landscape 3:2.\nThe rose window has exactly four readable colored quadrants. Keep the whole wall and its mist fully inside the canvas with generous empty transparent margins on all sides; no background landscape. True PNG alpha transparency.",
+      "refs": [
+        "D:\\Cluade projects\\games\\Glue\\docs\\референсы\\reference.png",
+        "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_01\\v2\\source\\w01_v2_far_viaduct.png"
+      ],
+      "transparent": true,
+      "path": "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_01\\v2\\source\\w01_v2_lm21_rose_window.png",
+      "kind": "landmark",
+      "status": "reviewed",
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-c56b204a-dafc-4845-aae0-e706fd305cfe.png",
+      "validation": {
+        "native_size": [
+          1536,
+          1024
+        ],
+        "mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          254
+        ],
+        "alpha_bbox": [
+          0,
+          0,
+          1536,
+          1024
+        ],
+        "visible_bbox_alpha_32": [
+          124,
+          114,
+          1427,
+          963
+        ],
+        "upper_half_alpha_max": 254,
+        "border_alpha_max": 3,
+        "true_transparency": true,
+        "sha256": "12b5c7cdbc172b0e1a75b9c010a94ff28083932f220f07b270add9a4eaf12302",
+        "native_generator_bytes_preserved": true
+      },
+      "saved_at_utc": "2026-10-03T18:12:45.091267+00:00",
+      "review_notes": "Четыре сектора витража: оранжевый, синий, зелёный, фиолетовый; основание в тумане."
+    },
+    {
+      "id": "L22",
+      "kind": "landmark",
+      "path": "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_01\\v2\\source\\w01_v2_lm22_stone_press.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" — style reference only (bright hand-painted cartoon game art, grey-brown stone ruins with thick green moss, lush rounded trees, thin waterfalls, turquoise water, warm light from the upper left). Attached image 2: the approved far background of the same zone — match its colors and light. Do NOT copy the sheet's layout, text, UI or characters.\n\nCreate ONE isolated landmark object for the background of a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, with empty transparent space around it. The object stands in the middle distance: slightly hazy and softer than a foreground, medium detail, no hard black outlines. Its base fades into soft white mist. No characters, text, logo, UI, crates, doors with dark openings, flags, hooks, keys, ropes or chains hanging in front. Neutral white balance, no yellow tint.\nObject: an ancient stone crushing mill of the bridge builders: three huge square stone hammers hanging in a tall frame of stone pillars and thick wooden beams above a long stone trough, one hammer fallen and cracked on the ground, moss and ivy, cool evening light, friendly, NOT scary. Landscape 3:2.\nOne connected landmark, fully contained, with generous empty transparent margins on all sides. Actual PNG alpha transparency, no backdrop scenery, no painted checkerboard. Native stated aspect ratio.",
+      "refs": [
+        "D:\\Cluade projects\\games\\Glue\\docs\\референсы\\reference.png",
+        "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_01\\v2\\source\\w01_v2_far_shrine.png"
+      ],
+      "transparent": true,
+      "status": "reviewed",
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-5fe0313e-b471-49dc-ab61-cb63fe6b483a.png",
+      "validation": {
+        "native_size": [
+          1536,
+          1024
+        ],
+        "mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          254
+        ],
+        "alpha_bbox": [
+          0,
+          0,
+          1536,
+          1024
+        ],
+        "visible_bbox_alpha_32": [
+          20,
+          133,
+          1521,
+          931
+        ],
+        "upper_half_alpha_max": 254,
+        "border_alpha_max": 4,
+        "true_transparency": true,
+        "sha256": "63ee4f5758b4b6765ec6ca68b24aa116d98715c71f180652bf57b2b6d59160c1",
+        "native_generator_bytes_preserved": true
+      },
+      "saved_at_utc": "2026-10-03T18:12:45.244345+00:00",
+      "review_notes": "Три каменных молота: два подвешены, третий упал и разбит; прохладный свет святилища."
+    },
+    {
+      "id": "L23",
+      "kind": "landmark",
+      "path": "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_01\\v2\\source\\w01_v2_lm23_landslide.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" — style reference only (bright hand-painted cartoon game art, grey-brown stone ruins with thick green moss, lush rounded trees, thin waterfalls, turquoise water, warm light from the upper left). Attached image 2: the approved far background of the same zone — match its colors and light. Do NOT copy the sheet's layout, text, UI or characters.\n\nCreate ONE isolated landmark object for the background of a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, with empty transparent space around it. The object stands in the middle distance: slightly hazy and softer than a foreground, medium detail, no hard black outlines. Its base fades into soft white mist. No characters, text, logo, UI, crates, doors with dark openings, flags, hooks, keys, ropes or chains hanging in front. Neutral white balance, no yellow tint.\nObject: a tall mossy quarry cliff with old carved stone steps, caught in the middle of a collapse: a big slab breaking away from the top, boulders tumbling down its face, soft dust clouds, small trees still standing on the top edge, bright afternoon light, dramatic but friendly. Portrait 2:3.\nOne connected landmark, fully contained, with generous empty transparent margins on all sides. Actual PNG alpha transparency, no backdrop scenery, no painted checkerboard. Native stated aspect ratio.",
+      "refs": [
+        "D:\\Cluade projects\\games\\Glue\\docs\\референсы\\reference.png",
+        "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_01\\v2\\source\\w01_v2_far_canyon.png"
+      ],
+      "transparent": true,
+      "status": "reviewed",
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-c9d1f34c-6560-44d8-bedd-ca259299b1ea.png",
+      "validation": {
+        "native_size": [
+          1024,
+          1536
+        ],
+        "mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          254
+        ],
+        "alpha_bbox": [
+          0,
+          17,
+          1008,
+          1536
+        ],
+        "visible_bbox_alpha_32": [
+          64,
+          24,
+          964,
+          1518
+        ],
+        "upper_half_alpha_max": 254,
+        "border_alpha_max": 6,
+        "true_transparency": true,
+        "sha256": "30139854ca11b83ff6f6f4b5f291616c26e8dac5f60f14185a2b7788201a1a01",
+        "native_generator_bytes_preserved": true
+      },
+      "saved_at_utc": "2026-10-03T18:31:57.511781+00:00",
+      "edits": [
+        {
+          "prompt": "Image 1 is the edit target, a transparent portrait landmark of a collapsing quarry cliff. Image 2 is the approved far canyon, palette reference only.\nKeep the same native portrait dimensions, hand-painted style, lighting, transparent margins, stone steps, moss, small trees, falling slab, tumbling boulders and dust. Change ONLY two unrequested motifs: remove ALL waterfalls and blue water streams, replacing them with dry grey-brown stone and pale dust clouds; replace the upper arched opening with solid cracked natural quarry stone while keeping the big breaking slab next to it. This is a dry quarry rockslide. No flowing water, no additional ruin arches. Preserve genuine PNG alpha transparency and the base's soft dust fade, no backdrop, characters, text or symbols.",
+          "refs": [
+            "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_01\\v2\\source\\w01_v2_lm23_landslide.png",
+            "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_01\\v2\\source\\w01_v2_far_canyon.png"
+          ],
+          "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-c9d1f34c-6560-44d8-bedd-ca259299b1ea.png",
+          "previous_generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-ae9a6bbb-3ba8-4285-a82e-037de12788a8.png"
+        }
+      ],
+      "review_notes": "Сухая каменоломня: ступени, отрывающаяся плита, падающие камни и пыль. Лишние водопады удалены."
+    },
+    {
+      "id": "L24",
+      "kind": "landmark",
+      "path": "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_01\\v2\\source\\w01_v2_lm24_buried_shrine.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" — style reference only (bright hand-painted cartoon game art, grey-brown stone ruins with thick green moss, lush rounded trees, thin waterfalls, turquoise water, warm light from the upper left). Attached image 2: the approved far background of the same zone — match its colors and light. Do NOT copy the sheet's layout, text, UI or characters.\n\nCreate ONE isolated landmark object for the background of a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, with empty transparent space around it. The object stands in the middle distance: slightly hazy and softer than a foreground, medium detail, no hard black outlines. Its base fades into soft white mist. No characters, text, logo, UI, crates, doors with dark openings, flags, hooks, keys, ropes or chains hanging in front. Neutral white balance, no yellow tint.\nObject: a small domed stone chapel of the shrine half buried under a fresh rockslide: boulders piled high against one side, its arched doorway filled with stones (no dark opening), two old stone lanterns without fire, ivy, a few fireflies, cool evening light, mysterious but friendly, NOT scary. Landscape 3:2.\nOne connected landmark, fully contained, with generous empty transparent margins on all sides. Actual PNG alpha transparency, no backdrop scenery, no painted checkerboard. Native stated aspect ratio.",
+      "refs": [
+        "D:\\Cluade projects\\games\\Glue\\docs\\референсы\\reference.png",
+        "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_01\\v2\\source\\w01_v2_far_shrine.png"
+      ],
+      "transparent": true,
+      "status": "reviewed",
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-c9042962-ad89-42d2-90ff-e94c8396496a.png",
+      "validation": {
+        "native_size": [
+          1536,
+          1024
+        ],
+        "mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          253
+        ],
+        "alpha_bbox": [
+          0,
+          8,
+          1535,
+          1024
+        ],
+        "visible_bbox_alpha_32": [
+          81,
+          81,
+          1479,
+          975
+        ],
+        "upper_half_alpha_max": 253,
+        "border_alpha_max": 1,
+        "true_transparency": true,
+        "sha256": "73f68f78571f8dc701f963ee464bee77082c53e86ebb4c2a9df50b25c2d37831",
+        "native_generator_bytes_preserved": true
+      },
+      "saved_at_utc": "2026-10-03T18:19:47.930324+00:00",
+      "review_notes": "Купольная часовня с заваленным камнями входом, двумя каменными фонарями и светлячками."
+    },
+    {
+      "id": "L25",
+      "kind": "landmark",
+      "path": "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_01\\v2\\source\\w01_v2_lm25_pass_towers.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" — style reference only (bright hand-painted cartoon game art, grey-brown stone ruins with thick green moss, lush rounded trees, thin waterfalls, turquoise water, warm light from the upper left). Attached image 2: the approved far background of the same zone — match its colors and light. Do NOT copy the sheet's layout, text, UI or characters.\n\nCreate ONE isolated landmark object for the background of a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, with empty transparent space around it. The object stands in the middle distance: slightly hazy and softer than a foreground, medium detail, no hard black outlines. Its base fades into soft white mist. No characters, text, logo, UI, crates, doors with dark openings, flags, hooks, keys, ropes or chains hanging in front. Neutral white balance, no yellow tint.\nObject: two tall old stone watchtowers on a mountain pass joined by two broken stone walkways, one above the other; the right tower cracked and leaning, a few stones falling from it, mountain haze, afternoon light. Landscape 3:2.\nOne connected landmark, fully contained, with generous empty transparent margins on all sides. Actual PNG alpha transparency, no backdrop scenery, no painted checkerboard. Native stated aspect ratio.",
+      "refs": [
+        "D:\\Cluade projects\\games\\Glue\\docs\\референсы\\reference.png",
+        "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_01\\v2\\source\\w01_v2_far_pass.png"
+      ],
+      "transparent": true,
+      "status": "reviewed",
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-0c055461-7c4f-4e8e-a762-897fd4661c80.png",
+      "validation": {
+        "native_size": [
+          1536,
+          1024
+        ],
+        "mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          254
+        ],
+        "alpha_bbox": [
+          0,
+          0,
+          1533,
+          1024
+        ],
+        "visible_bbox_alpha_32": [
+          63,
+          67,
+          1469,
+          975
+        ],
+        "upper_half_alpha_max": 254,
+        "border_alpha_max": 1,
+        "true_transparency": true,
+        "sha256": "1dd367aa36d17aa78f52fa826cd8a11a9c04a3001c44d2be8ea29073ab0bbbd3",
+        "native_generator_bytes_preserved": true
+      },
+      "saved_at_utc": "2026-10-03T18:19:48.077551+00:00",
+      "review_notes": "Две башни и два сломанных перехода; правая башня треснула, под ней падают камни."
+    },
+    {
+      "id": "P18",
+      "kind": "sprite",
+      "path": "D:\\Cluade projects\\games\\Glue\\assets\\props\\v2\\source\\p18_rockfall.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" — style reference. Attached image 2: a screenshot of the game as it looks now: painted backgrounds and painted stone platforms; the wooden and metal objects in it look too bright, flat and toy-like and stand out from the painted world. Attached image 3: the current version of the object to redesign — keep its shape, proportions and function, change only the rendering. Attached image 4: the approved stone texture of the platforms — match its painting style and level of detail. Attached image 5: an already approved object of the new set — match it exactly. Do NOT copy layouts, text or UI from the attachments.\n\nRedesign this interactive object as a GAME SPRITE for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict orthographic side view, no perspective, no cast shadow on the ground, centered with empty space around it. Hand-painted cartoon style that belongs to the painted world: soft but visible material texture (wood grain and plank seams, worn edges, small chips, a little dirt and a few tiny moss specks), soft shading with light from the upper left, muted natural colors — clearly less saturated than the current version. It must still read at once as an interactive object: a clean, slightly thinner, painted dark brown-navy outline around the silhouette (not pure black), and a bit more contrast than the background behind it. If several states are listed, draw them side by side in one row, at the same scale, standing on the same baseline, evenly spaced. No text, letters, numbers, symbols, logos or watermark.\nObject: the front of a rolling rockfall that chases the players: a tall vertical wall of tumbling grey-brown boulders and broken masonry blocks with puffs of dust between them; its front (right) edge bristles with sharp broken stone shards with small red warning tips — it is deadly. Both the top and bottom ends are finished, the middle is uniform so it can repeat vertically.\nStates: one.\nProportions: a tall vertical strip, 2 tiles wide and 8 tiles tall.\nImage 3: redesign ONLY the chasing wall on the LEFT of the screenshot. No part of the level, players, ground or backdrop included. Entire vertical rockfall strip isolated with right-facing red-tipped stone shards. Object width-to-height exactly 1:4. Portrait canvas with generous transparent space surrounding the strip.",
+      "refs": [
+        "D:\\Cluade projects\\games\\Glue\\docs\\референсы\\reference.png",
+        "D:\\Cluade projects\\games\\Glue\\docs\\progress\\props_v1_in_world.jpg",
+        "D:\\Cluade projects\\games\\Glue\\docs\\progress\\rockfall_v1.jpg",
+        "D:\\Cluade projects\\games\\Glue\\assets\\tiles\\world_01\\source\\w01_stone_fill.png",
+        "D:\\Cluade projects\\games\\Glue\\assets\\props\\v2\\source\\p01_crate.png"
+      ],
+      "transparent": true,
+      "status": "reviewed",
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-4cfec923-339c-4990-9981-d9ad1e43fc8b.png",
+      "validation": {
+        "native_size": [
+          793,
+          1983
+        ],
+        "mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_bbox": [
+          25,
+          39,
+          769,
+          1937
+        ],
+        "visible_bbox_alpha_32": [
+          190,
+          79,
+          603,
+          1903
+        ],
+        "upper_half_alpha_max": 255,
+        "border_alpha_max": 0,
+        "true_transparency": true,
+        "sha256": "a91889ec27714b0aeeda1562df7ca7131eaf4528a39630cdb9df4cddfce09d4b",
+        "native_generator_bytes_preserved": true
+      },
+      "saved_at_utc": "2026-10-03T18:25:09.910692+00:00",
+      "review_notes": "Опасный передний край справа, каменные осколки с красными кончиками; середина в одном ритме для последующей нарезки."
+    },
+    {
+      "id": "P19",
+      "kind": "sprite",
+      "path": "D:\\Cluade projects\\games\\Glue\\assets\\props\\v2\\source\\p19_hint_sign.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" — style reference. Attached image 2: a screenshot of the game as it looks now: painted backgrounds and painted stone platforms; the wooden and metal objects in it look too bright, flat and toy-like and stand out from the painted world. Attached image 3: the current version of the object to redesign — keep its shape, proportions and function, change only the rendering. Attached image 4: the approved stone texture of the platforms — match its painting style and level of detail. Attached image 5: an already approved object of the new set — match it exactly. Do NOT copy layouts, text or UI from the attachments.\n\nRedesign this interactive object as a GAME SPRITE for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict orthographic side view, no perspective, no cast shadow on the ground, centered with empty space around it. Hand-painted cartoon style that belongs to the painted world: soft but visible material texture (wood grain and plank seams, worn edges, small chips, a little dirt and a few tiny moss specks), soft shading with light from the upper left, muted natural colors — clearly less saturated than the current version. It must still read at once as an interactive object: a clean, slightly thinner, painted dark brown-navy outline around the silhouette (not pure black), and a bit more contrast than the background behind it. If several states are listed, draw them side by side in one row, at the same scale, standing on the same baseline, evenly spaced. No text, letters, numbers, symbols, logos or watermark.\nObject: a small wooden signpost stuck in the ground: a short squared post with a blank light wooden board nailed on top, a little moss at the foot. The board is EMPTY — the game draws a question mark on it.\nStates: one.\nProportions: 1 tile wide and 1.6 tiles tall; the board 0.8 tile wide and 0.6 tile tall.\nImage 3: redraw only the SIGNPOST; the spring pad to its right is unrelated. Blank board, no question mark, no carving, no symbol. Portrait canvas, fully isolated with generous transparent margins. Match the requested proportions above even if the code-drawn sign differs.",
+      "refs": [
+        "D:\\Cluade projects\\games\\Glue\\docs\\референсы\\reference.png",
+        "D:\\Cluade projects\\games\\Glue\\docs\\progress\\props_v1_in_world.jpg",
+        "D:\\Cluade projects\\games\\Glue\\docs\\progress\\hint_sign_v1.jpg",
+        "D:\\Cluade projects\\games\\Glue\\assets\\tiles\\world_01\\source\\w01_stone_fill.png",
+        "D:\\Cluade projects\\games\\Glue\\assets\\props\\v2\\source\\p01_crate.png"
+      ],
+      "transparent": true,
+      "status": "reviewed",
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-836817a6-e5af-4c25-a53e-8172b42bbbd5.png",
+      "validation": {
+        "native_size": [
+          992,
+          1586
+        ],
+        "mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_bbox": [
+          0,
+          32,
+          936,
+          1546
+        ],
+        "visible_bbox_alpha_32": [
+          209,
+          335,
+          794,
+          1251
+        ],
+        "upper_half_alpha_max": 255,
+        "border_alpha_max": 1,
+        "true_transparency": true,
+        "sha256": "08b84772399be49557ddf6e29a4f9bd7d44acf1cb26c6bd0298c6e447e061ae2",
+        "native_generator_bytes_preserved": true
+      },
+      "saved_at_utc": "2026-10-03T18:25:10.824851+00:00",
+      "review_notes": "Пустая светлая доска, короткий деревянный столб; знак вопроса добавляет игра."
+    },
+    {
+      "id": "P20",
+      "kind": "sprite",
+      "path": "D:\\Cluade projects\\games\\Glue\\assets\\props\\v2\\source\\p20_spring_pad.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" — style reference. Attached image 2: a screenshot of the game as it looks now: painted backgrounds and painted stone platforms; the wooden and metal objects in it look too bright, flat and toy-like and stand out from the painted world. Attached image 3: the current version of the object to redesign — keep its shape, proportions and function, change only the rendering. Attached image 4: the approved stone texture of the platforms — match its painting style and level of detail. Attached image 5: an already approved object of the new set — match it exactly. Do NOT copy layouts, text or UI from the attachments.\n\nRedesign this interactive object as a GAME SPRITE for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict orthographic side view, no perspective, no cast shadow on the ground, centered with empty space around it. Hand-painted cartoon style that belongs to the painted world: soft but visible material texture (wood grain and plank seams, worn edges, small chips, a little dirt and a few tiny moss specks), soft shading with light from the upper left, muted natural colors — clearly less saturated than the current version. It must still read at once as an interactive object: a clean, slightly thinner, painted dark brown-navy outline around the silhouette (not pure black), and a bit more contrast than the background behind it. If several states are listed, draw them side by side in one row, at the same scale, standing on the same baseline, evenly spaced. No text, letters, numbers, symbols, logos or watermark.\nObject: a springboard pad set into the floor, from the workshops world: a low wooden frame with a stretched canvas top resting on big coiled iron springs, short sloped ends so one can walk onto it.\nStates: relaxed; fully compressed (charged — springs squeezed flat, the canvas pressed down).\nProportions: each 2.5 tiles wide including the slopes; relaxed 0.35 tile tall, compressed 0.2 tile tall.\nImage 3: redraw only the LOW SPRING PAD on the RIGHT of the screenshot. The signpost is unrelated. CRITICAL: exceptionally low and wide pad, relaxed width/height 7.14:1, compressed width/height 12.5:1. Two states side by side in one horizontal row at exactly the same width and scale, same bottom baseline, clear transparent gap. Keep canvas top and sloped ends strictly side-on, no top face perspective. Landscape 3:2 canvas. No labels or arrows.",
+      "refs": [
+        "D:\\Cluade projects\\games\\Glue\\docs\\референсы\\reference.png",
+        "D:\\Cluade projects\\games\\Glue\\docs\\progress\\props_v1_in_world.jpg",
+        "D:\\Cluade projects\\games\\Glue\\docs\\progress\\hint_sign_v1.jpg",
+        "D:\\Cluade projects\\games\\Glue\\assets\\tiles\\world_01\\source\\w01_stone_fill.png",
+        "D:\\Cluade projects\\games\\Glue\\assets\\props\\v2\\source\\p01_crate.png"
+      ],
+      "transparent": true,
+      "status": "reviewed",
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-bfc47a5b-1394-48c1-8f5d-69c88ad58a9a.png",
+      "validation": {
+        "native_size": [
+          2172,
+          724
+        ],
+        "mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_bbox": [
+          46,
+          171,
+          2126,
+          672
+        ],
+        "visible_bbox_alpha_32": [
+          49,
+          373,
+          2124,
+          504
+        ],
+        "upper_half_alpha_max": 1,
+        "border_alpha_max": 0,
+        "true_transparency": true,
+        "sha256": "8fcc8831641640c1a2b91ed49d32566071227770f246cf6ff57a45248953175b",
+        "native_generator_bytes_preserved": true,
+        "states": [
+          {
+            "state": "relaxed",
+            "bbox_alpha_32": [
+              49,
+              373,
+              1039,
+              504
+            ],
+            "width": 990,
+            "height": 131,
+            "ratio": 7.557,
+            "target_tile_size": [
+              2.5,
+              0.35
+            ]
+          },
+          {
+            "state": "charged",
+            "bbox_alpha_32": [
+              1130,
+              418,
+              2124,
+              504
+            ],
+            "width": 994,
+            "height": 86,
+            "ratio": 11.558,
+            "target_tile_size": [
+              2.5,
+              0.2
+            ]
+          }
+        ]
+      },
+      "saved_at_utc": "2026-10-03T19:06:12.353041+00:00",
+      "edits": [
+        {
+          "prompt": "Image 1 is the edit target: a transparent landscape sheet with relaxed and compressed spring-pad states. Image 2 is the approved painted crate style reference. Image 3 is the in-game code-drawn low spring pad, proportions reference.\nCorrect ONLY the HEIGHTS, baseline and unwanted surrounding haze. Keep both pads the same width, material, thin navy-brown outline, muted wood, iron springs, canvas, strict orthographic side view and original 1536x1024 canvas. Make the left relaxed pad width-to-height 7.14:1 INCLUDING its sloped ends and frame: reduce its current total height to about TWO THIRDS. Make the right fully compressed pad width-to-height 12.5:1: reduce its current total height to HALF. Both have exactly the same width and stand on exactly the same bottom baseline. Lower the canvas and squash the springs almost flat in the right state. This is an extremely LOW wide pad, not a raised platform.\nKeep each whole pad inside the canvas with at least 5 percent clear alpha margins at the outer left and right edges and a generous gap between the two. The silhouette itself is painted, but everything outside each silhouette is completely empty alpha=0: remove all brown haze, glow, shadow and blurred background. Native original resolution, true transparent PNG, no text, symbols, labels, characters or level scenery.",
+          "refs": [
+            "D:\\Cluade projects\\games\\Glue\\assets\\props\\v2\\source\\p20_spring_pad.png",
+            "D:\\Cluade projects\\games\\Glue\\assets\\props\\v2\\source\\p01_crate.png",
+            "D:\\Cluade projects\\games\\Glue\\docs\\progress\\hint_sign_v1.jpg"
+          ],
+          "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-0f810c85-a9b7-479b-bf79-482e37fa4869.png",
+          "previous_generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-afaee3e9-a5d4-4b06-81e8-f655e6e66491.png"
+        },
+        {
+          "prompt": "Create a TRANSPARENT PNG GAME SPRITE SHEET for a hand-painted 2D side-scrolling platformer, two very low spring pads side by side. Image 1 is an approved crate: match its painted wood grain, muted brown colors and thin brown-navy outline. Image 2 shows the low code-drawn spring pad on the RIGHT: match its flat proportions, not the sign or characters.\nEXTREMELY LOW AND WIDE. Each pad is 7 to 13 times WIDER THAN TALL, like a shallow speed bump.\nLandscape canvas 1536x1024. Put both pads in one row, same bottom baseline and same width, fully inside with transparent margins. LEFT pad: relaxed, 640 px wide and ONLY 90 px tall, including the outline and sloped ends. RIGHT pad: fully compressed/charged, exactly the same 640 px width and ONLY 51 px tall. Clear 100px transparent gap. These pixel dimensions describe the silhouette to draw, not text to print.\nA low wooden frame with a stretched pale canvas strip on tiny coiled iron springs; short shallow sloped ends can be walked onto. The relaxed state reveals the small springs. In the charged state, iron springs are squashed almost flat and canvas lowered. Fixed wood frame also follows the much lower specified total silhouette; it must not form a tall box.\nStrict ORTHOGRAPHIC SIDE VIEW: zero top-face perspective. Soft hand-painted material texture, worn wood, tiny moss specks, upper-left light, thin dark brown-navy painted silhouette outline, muted natural colors. No visible floor, no shadow, no haze or glow outside the objects. Every pixel outside the two isolated silhouettes is true empty alpha=0. No letters, numbers, labels, arrows, question marks, text, symbols, characters or UI.",
+          "refs": [
+            "D:\\Cluade projects\\games\\Glue\\assets\\props\\v2\\source\\p01_crate.png",
+            "D:\\Cluade projects\\games\\Glue\\docs\\progress\\hint_sign_v1.jpg"
+          ],
+          "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-57d8b842-8c17-4dfa-9da8-08345b50fbb9.png",
+          "previous_generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-0f810c85-a9b7-479b-bf79-482e37fa4869.png"
+        },
+        {
+          "prompt": "Image 1 is the ONLY edit target. This is a transparent two-state sprite sheet, native 2172x724 pixels.\nKeep the same two spring pads, same painted style, wood, canvas, springs, thin dark outline, transparent background, horizontal positions and widths. Correct ONLY their VERTICAL PROPORTIONS. The LEFT pad is currently about 985 pixels wide and 155 pixels tall: redraw it to keep 985 pixels width but reduce total height to 138 pixels. The RIGHT fully compressed pad currently has the same 985 pixel width but is 116 pixels tall: redraw it with 985 pixels width and only 79 pixels TOTAL HEIGHT. The charged/right pad must be just 57 percent as tall as the relaxed/left one.\nKeep the lower baseline for both exactly the same. Lower the right pad's upper wood frame, canvas and slope peaks together; squash all its iron coils almost flat. Its top wooden strip and bottom wooden strip are thinner too. No tall end posts left in the right state. Preserve the left relaxed readable small coils. Do not change either WIDTH, and do not add ground, shadow, glow, haze or surroundings. Every pixel outside the isolated sprites is transparent alpha=0. Preserve native 2172x724 canvas. No text or labels.",
+          "refs": [
+            "D:\\Cluade projects\\games\\Glue\\assets\\props\\v2\\source\\p20_spring_pad.png"
+          ],
+          "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-11cac6b2-a846-4ff1-92eb-97b06adb5525.png",
+          "previous_generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-57d8b842-8c17-4dfa-9da8-08345b50fbb9.png"
+        },
+        {
+          "prompt": "Edit image 1 only, preserve the native 2172x724 transparent PNG canvas, the two spring-pad states side by side, the same widths, horizontal positions, material painting, thin dark outlines and same bottom baseline.\nRemove the unnecessary THICK UPPER HORIZONTAL WOODEN CROSSBAR from BOTH pads. The stretched pale canvas itself should be the top surface, with the iron coils directly beneath it and the thin wooden base below the coils. Lower each side ramp peak and its end posts to the canvas height; no wood or post extends above the canvas top. Keep the canvas at its existing vertical level when removing the bar, do NOT move it up to fill the empty space. This removal must make both whole silhouettes considerably LOWER. Left state: small relaxed iron coils visible. Right state: coils completely flattened and canvas near the base; the right whole silhouette is only about HALF the total height of the left one. On the right keep only a very thin bottom base and a thin canvas strip, no tall enclosing box or upper wooden beam.\nKeep both pads isolated with transparent space, no halo, shadow, haze, text or labels. Preserve the same strict side view.",
+          "refs": [
+            "D:\\Cluade projects\\games\\Glue\\assets\\props\\v2\\source\\p20_spring_pad.png"
+          ],
+          "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-bfc47a5b-1394-48c1-8f5d-69c88ad58a9a.png",
+          "previous_generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-11cac6b2-a846-4ff1-92eb-97b06adb5525.png"
+        }
+      ],
+      "review_notes": "Два низких состояния на общей линии основания. При ширине 160 px высота рисунка примерно 21,2 / 13,8 px; целевые размеры игры — 22,4 / 12,8 px. При подключении выставить эти размеры явно."
+    },
+    {
+      "id": "W2Z4",
+      "kind": "edit",
+      "path": "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_02\\source\\w02_mid_forge.png",
+      "prompt": "Image 1 is the middle forge layer to edit. Images 2 and 3 are style references. Keep everything the same, but correct ONLY the content and band placement: make the foreground of this distant decorative band include two clearly recognizable big dark iron ANVIL silhouettes and two round wide QUENCH TUBS with pale steam rising, nestled among the lower forge hall arches and brick pillars. Replace the two glowing pouring streams with quiet steaming quench tubs; no molten streams or waterfall. Keep orange forge light as a faint reflected glow, no black outlines. Lower the entire scenery band so its tallest point is below 55 percent of image height. The whole upper half must be empty alpha=0, including haze. Bottom fades into soft steam. Actual transparent PNG, no backdrop. Preserve native dimensions, existing hall palette, no characters, lettering, labels or UI.",
+      "refs": [
+        "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_02\\source\\w02_mid_forge.png",
+        "D:\\Cluade projects\\games\\Glue\\docs\\референсы\\world2_workshops.png",
+        "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_02\\source\\w02_far_forge.png"
+      ],
+      "transparent": true,
+      "status": "reviewed",
+      "original_before_edit": "D:\\Cluade projects\\games\\Glue\\docs\\progress\\graphics15_originals\\w02_mid_forge.png",
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-a0ceb518-1ea7-4401-850a-f9cb4da5ec24.png",
+      "validation": {
+        "native_size": [
+          1536,
+          1024
+        ],
+        "mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          254
+        ],
+        "alpha_bbox": [
+          0,
+          21,
+          1536,
+          1024
+        ],
+        "visible_bbox_alpha_32": [
+          0,
+          586,
+          1536,
+          1024
+        ],
+        "upper_half_alpha_max": 1,
+        "border_alpha_max": 253,
+        "true_transparency": true,
+        "sha256": "8b94464fcc0a07e1ce8400b5a8454c2269d965bb0c6418a6553b9f6d575153fe",
+        "native_generator_bytes_preserved": true
+      },
+      "saved_at_utc": "2026-10-03T18:52:29.157693+00:00",
+      "edits": [
+        {
+          "prompt": "Edit image 1 ONLY. Preserve the native 1536x1024 canvas, genuine transparent PNG, painted materials, forge lighting and all existing objects including both anvils and both steaming quench tubs.\nChange ONLY the vertical scale and placement of the ENTIRE scenery band, including all pillars, arches, forges, steam, glow and haze. Compress its height and move it down so EVERY visible element lies within the BOTTOM 35 PERCENT of the canvas (rows 666–1023). The upper 65 percent, rows 0–665, must be entirely empty exact alpha=0. No translucent haze, specks, outlines or color anywhere in that empty area. Retain soft fading steam at the bottom. Keep the same horizontal composition and width. No text or extra objects.",
+          "refs": [
+            "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_02\\source\\w02_mid_forge.png"
+          ],
+          "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-a0ceb518-1ea7-4401-850a-f9cb4da5ec24.png",
+          "previous_generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-c82f3380-7ad7-4e11-ba9e-78a2c8e5cc2e.png"
+        }
+      ],
+      "review_notes": "Две наковальни и две закалочные ванны; потоки заменены паром. Заметный рисунок начинается с y=586, ниже середины. В верхней половине невидимый остаток alpha ≤ 1/255."
+    },
+    {
+      "id": "W2Z8",
+      "kind": "edit",
+      "path": "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_02\\source\\w02_mid_machine.png",
+      "prompt": "Image 1 is the edit target: the middle-distance machine background layer. Image 2 is the world 2 concept sheet, style reference only. Image 3 is the approved far machine layer, palette and lighting reference only.\nKeep the native landscape 3:2 canvas, painted style, warm sunset light and gentle haze. Correct only the machine band's objects and placement: remove the unrequested water streams, waterfall and water-wheel appearance. Replace those forms with clearly readable enormous WOODEN AND BRASS GEARS with solid teeth, brass pipes and short industrial pistons mounted in timber frames, and a few warm lanterns. No flowing liquid. This is a distant decorative machine band, not an interactive platform or prop, with soft edges and low contrast and no dark silhouette outline.\nLower the entire scenery band so every element and every bit of haze is BELOW 55 percent of canvas height. The entire upper half must be completely empty true alpha=0. Fade the bottom into pale steam. Preserve the original dimensions and genuine PNG transparency. No characters, text, symbols, UI, hooks, crates or backdrop.",
+      "refs": [
+        "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_02\\source\\w02_mid_machine.png",
+        "D:\\Cluade projects\\games\\Glue\\docs\\референсы\\world2_workshops.png",
+        "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_02\\source\\w02_far_machine.png"
+      ],
+      "transparent": true,
+      "status": "reviewed",
+      "edits": [
+        {
+          "prompt": "Image 1 is the edit target: the middle-distance machine background layer. Image 2 is the world 2 concept sheet, style reference only. Image 3 is the approved far machine layer, palette and lighting reference only.\nKeep the native landscape 3:2 canvas, painted style, warm sunset light and gentle haze. Correct only the machine band's objects and placement: remove the unrequested water streams, waterfall and water-wheel appearance. Replace those forms with clearly readable enormous WOODEN AND BRASS GEARS with solid teeth, brass pipes and short industrial pistons mounted in timber frames, and a few warm lanterns. No flowing liquid. This is a distant decorative machine band, not an interactive platform or prop, with soft edges and low contrast and no dark silhouette outline.\nLower the entire scenery band so every element and every bit of haze is BELOW 55 percent of canvas height. The entire upper half must be completely empty true alpha=0. Fade the bottom into pale steam. Preserve the original dimensions and genuine PNG transparency. No characters, text, symbols, UI, hooks, crates or backdrop.\nCRITICAL canvas placement: the upper TWO THIRDS of the canvas are completely empty, alpha=0, including no haze. Scale and lower the whole machine grouping into the BOTTOM THIRD only. True transparent PNG.",
+          "refs": [
+            "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_02\\source\\w02_mid_machine.png",
+            "D:\\Cluade projects\\games\\Glue\\docs\\референсы\\world2_workshops.png",
+            "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_02\\source\\w02_far_machine.png"
+          ],
+          "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-5a37d4a4-0ef6-49f4-8ffc-b59005045faa.png",
+          "previous_generated_source": null
+        }
+      ],
+      "original_before_edit": "D:\\Cluade projects\\games\\Glue\\docs\\progress\\graphics15_originals\\w02_mid_machine.png",
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-5a37d4a4-0ef6-49f4-8ffc-b59005045faa.png",
+      "validation": {
+        "native_size": [
+          1536,
+          1024
+        ],
+        "mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          254
+        ],
+        "alpha_bbox": [
+          0,
+          32,
+          1536,
+          1024
+        ],
+        "visible_bbox_alpha_32": [
+          0,
+          539,
+          1536,
+          1024
+        ],
+        "upper_half_alpha_max": 1,
+        "border_alpha_max": 253,
+        "true_transparency": true,
+        "sha256": "33f7f770776c7036fababaca365dc64c6f3b8fdf517a795278786a4c9437e46d",
+        "native_generator_bytes_preserved": true
+      },
+      "saved_at_utc": "2026-10-03T18:45:37.481390+00:00",
+      "review_notes": "Вода и водяное колесо заменены зубчатыми шестернями, латунными трубами и механизмами. Заметный рисунок начинается с y=539. В верхней половине невидимый остаток alpha ≤ 1/255."
+    },
+    {
+      "id": "W2L01",
+      "kind": "edit",
+      "path": "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_02\\source\\w02_lm01_conveyor_gallery.png",
+      "prompt": "Image 1 is the edit target: the existing conveyor-gallery landmark. Image 2 is the world 2 concept sheet, style reference only. Image 3 is the approved far yard layer, palette and lighting reference only.\nKeep the same entire connected conveyor gallery with stone legs, ascending timber conveyor carrying stone blocks, arches, moss, morning light, materials and painted style. Change ONLY its framing: fit the WHOLE gallery inside the native 3:2 canvas without any clipped beam, stone, foliage or arch, leaving at least 8 percent clear transparent canvas on the RIGHT and LEFT and visible transparent margins above and below. Keep it one isolated connected landmark and keep its base fading into soft white mist. Do not extend a viaduct beyond the gallery, add background scenery or add extra objects. No opaque color backdrop or checkerboard. Genuine transparent PNG, original dimensions, no characters, text, logo or UI.",
+      "refs": [
+        "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_02\\source\\w02_lm01_conveyor_gallery.png",
+        "D:\\Cluade projects\\games\\Glue\\docs\\референсы\\world2_workshops.png",
+        "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_02\\source\\w02_far_yard.png"
+      ],
+      "transparent": true,
+      "status": "reviewed",
+      "edits": [
+        {
+          "prompt": "Image 1 is the edit target: the existing conveyor-gallery landmark. Image 2 is the world 2 concept sheet, style reference only. Image 3 is the approved far yard layer, palette and lighting reference only.\nKeep the same entire connected conveyor gallery with stone legs, ascending timber conveyor carrying stone blocks, arches, moss, morning light, materials and painted style. Change ONLY its framing: fit the WHOLE gallery inside the native 3:2 canvas without any clipped beam, stone, foliage or arch, leaving at least 8 percent clear transparent canvas on the RIGHT and LEFT and visible transparent margins above and below. Keep it one isolated connected landmark and keep its base fading into soft white mist. Do not extend a viaduct beyond the gallery, add background scenery or add extra objects. No opaque color backdrop or checkerboard. Genuine transparent PNG, original dimensions, no characters, text, logo or UI.\nCRITICAL: scale the entire gallery down to fit inside 75 percent of the canvas width and 75 percent of its height, centered; reconstruct the previously clipped right end as a finished stone pier. Clear empty alpha margin around every part, especially to the right.",
+          "refs": [
+            "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_02\\source\\w02_lm01_conveyor_gallery.png",
+            "D:\\Cluade projects\\games\\Glue\\docs\\референсы\\world2_workshops.png",
+            "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_02\\source\\w02_far_yard.png"
+          ],
+          "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-5d804dad-dd80-4fc1-85be-ee4c58017c10.png",
+          "previous_generated_source": null
+        }
+      ],
+      "original_before_edit": "D:\\Cluade projects\\games\\Glue\\docs\\progress\\graphics15_originals\\w02_lm01_conveyor_gallery.png",
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fff4-751d-75b1-aa81-5afaf42c086c\\exec-5d804dad-dd80-4fc1-85be-ee4c58017c10.png",
+      "validation": {
+        "native_size": [
+          1536,
+          1024
+        ],
+        "mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          254
+        ],
+        "alpha_bbox": [
+          23,
+          9,
+          1522,
+          990
+        ],
+        "visible_bbox_alpha_32": [
+          77,
+          166,
+          1462,
+          877
+        ],
+        "upper_half_alpha_max": 254,
+        "border_alpha_max": 0,
+        "true_transparency": true,
+        "sha256": "03407178023fadae82627fd51d477ee629a6267a8f6a81c9fd046ec85310a91d",
+        "native_generator_bytes_preserved": true
+      },
+      "saved_at_utc": "2026-10-03T18:45:38.881573+00:00",
+      "review_notes": "Галерея целиком внутри кадра; правый конец закончен каменной опорой, по краям прозрачное поле."
+    }
+  ],
+  "optional_not_started": [],
+  "deferred_by_assignment": [
+    "W2L04–W2L20",
+    "W2M2"
+  ],
+  "saved_count": 12,
+  "delivery_status": "All 12 required PNG deliverables generated, reviewed and saved, including the added P17 exit gates. P17 and P20 proportions are approximate; explicit game display sizes, crop frames and alpha notes are documented.",
+  "finished_at_utc": "2026-10-03 19:40:07 UTC",
+  "remaining_required_generation": [],
+  "remaining_integration": "Нарезка и установка в игру по разделу «Как Claude принимает и ставит» задания."
+}

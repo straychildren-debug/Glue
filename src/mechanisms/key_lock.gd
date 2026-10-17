@@ -43,6 +43,10 @@ func load_state(state: Variant) -> void:
 
 
 func _draw() -> void:
+	if Art.enabled:
+		# Спрайт 46×56: левый низ накладки — точка (2, 54); у открытого скоба поднята.
+		draw_texture_rect(Art.tex("lock_open" if active else "lock_closed"), Rect2(-19, -30, 46, 56), false)
+		return
 	var outline := Color("1a1d33")
 	if active:
 		# Открытый замок: пустая скоба.

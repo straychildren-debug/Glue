@@ -1,0 +1,199 @@
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+D2.1 | w02_decal_lantern.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world2_workshops.png
+D:/Cluade projects/games/Glue/assets/tiles/world_02/source/w02_top.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the approved world 2 workshop concept sheet — match its palette and light. Attached image 3: the approved world 2 floor top strip — match its colors and painting style exactly. Do NOT copy layouts, text, UI or characters.
+
+Create ONE isolated decorative sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no unrelated objects.
+Object: a warm glowing wall lantern of brass and glass on a short wall bracket.
+
+Neutral white balance. Genuine PNG alpha transparency, no painted checkerboard, no ground plane, no backdrop, no cast shadow outside the object. Landscape 3:2.
+The object is a background decoration, hand-painted WITHOUT any black/navy contour around its silhouette or parts. No broad cast shadow and no wall slab behind the object. Match muted tones of the floor cap, neutral white balance, not photorealistic.
+The short bracket is a flat horizontal brass wall plate and arm, not a curved hook. Lantern is softly rounded square, modest warm glass glow contained near glass, no giant halo.
+No crates, barrels, kegs, fuse cords, copper wires, gears, saws, wooden planks or boards, hooks, chains, ropes, wheels, levers, springs.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-162dd644-6d7a-400f-a924-4c93eef03e87.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+D2.1.2 | w02_decal_lantern_2.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world2_workshops.png
+D:/Cluade projects/games/Glue/assets/tiles/world_02/source/w02_top.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the approved world 2 workshop concept sheet — match its palette and light. Attached image 3: the approved world 2 floor top strip — match its colors and painting style exactly. Do NOT copy layouts, text, UI or characters.
+
+Create ONE isolated decorative sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no unrelated objects.
+Object: a warm glowing wall lantern of brass and glass on a short wall bracket.
+
+Neutral white balance. Genuine PNG alpha transparency, no painted checkerboard, no ground plane, no backdrop, no cast shadow outside the object. Landscape 3:2.
+Create a second independent variant of this one object, with a modestly different silhouette and details, matching the same materials, scale and style. ONE object only, not a pair or comparison sheet.
+The object is a background decoration, hand-painted WITHOUT any black/navy contour around its silhouette or parts. No broad cast shadow and no wall slab behind the object. Match muted tones of the floor cap, neutral white balance, not photorealistic.
+Variant: a slightly taller narrow lantern with a domed brass top and frosted amber glass on a plain short L-shaped metal bracket. No hooks, chains, rods or rope.
+No crates, barrels, kegs, fuse cords, copper wires, gears, saws, wooden planks or boards, hooks, chains, ropes, wheels, levers, springs.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-c6ebca10-a941-4531-89bf-4a8e69c9d8fd.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+D2.2 | w02_decal_steam.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world2_workshops.png
+D:/Cluade projects/games/Glue/assets/tiles/world_02/source/w02_top.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the approved world 2 workshop concept sheet — match its palette and light. Attached image 3: the approved world 2 floor top strip — match its colors and painting style exactly. Do NOT copy layouts, text, UI or characters.
+
+Create ONE isolated decorative sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no unrelated objects.
+Object: a soft white puff of steam rising, wispy and transparent at the edges.
+
+Neutral white balance. Genuine PNG alpha transparency, no painted checkerboard, no ground plane, no backdrop, no cast shadow outside the object. Landscape 3:2.
+The object is a background decoration, hand-painted WITHOUT any black/navy contour around its silhouette or parts. No broad cast shadow and no wall slab behind the object. Match muted tones of the floor cap, neutral white balance, not photorealistic.
+ONE irregular rising cloud of faint off-white translucent steam, narrow at bottom, widening softly near middle, tapering into wisps; no source device. Entire cloud floats isolated with empty alpha margins on all four sides. No black outline.
+No crates, barrels, kegs, fuse cords, copper wires, gears, saws, wooden planks or boards, hooks, chains, ropes, wheels, levers, springs.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-4c72d35a-1ae5-47bb-80e4-be3150293d7c.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+D2.2.2 | w02_decal_steam_2.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world2_workshops.png
+D:/Cluade projects/games/Glue/assets/tiles/world_02/source/w02_top.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the approved world 2 workshop concept sheet — match its palette and light. Attached image 3: the approved world 2 floor top strip — match its colors and painting style exactly. Do NOT copy layouts, text, UI or characters.
+
+Create ONE isolated decorative sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no unrelated objects.
+Object: a soft white puff of steam rising, wispy and transparent at the edges.
+
+Neutral white balance. Genuine PNG alpha transparency, no painted checkerboard, no ground plane, no backdrop, no cast shadow outside the object. Landscape 3:2.
+Create a second independent variant of this one object, with a modestly different silhouette and details, matching the same materials, scale and style. ONE object only, not a pair or comparison sheet.
+The object is a background decoration, hand-painted WITHOUT any black/navy contour around its silhouette or parts. No broad cast shadow and no wall slab behind the object. Match muted tones of the floor cap, neutral white balance, not photorealistic.
+Second variant: ONE soft wispy puff of off-white steam, a little broader and drifting slightly to the right, isolated with generous alpha margins. No device or scenery.
+No crates, barrels, kegs, fuse cords, copper wires, gears, saws, wooden planks or boards, hooks, chains, ropes, wheels, levers, springs.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-4735f264-a8d6-40f6-854a-de9dce49e356.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+D2.3 | w02_decal_pipes.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world2_workshops.png
+D:/Cluade projects/games/Glue/assets/tiles/world_02/source/w02_top.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the approved world 2 workshop concept sheet — match its palette and light. Attached image 3: the approved world 2 floor top strip — match its colors and painting style exactly. Do NOT copy layouts, text, UI or characters.
+
+Create ONE isolated decorative sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no unrelated objects.
+Object: a few vertical copper pipes with joints mounted on a wall (vertical only).
+
+Neutral white balance. Genuine PNG alpha transparency, no painted checkerboard, no ground plane, no backdrop, no cast shadow outside the object. Landscape 3:2.
+The object is a background decoration, hand-painted WITHOUT any black/navy contour around its silhouette or parts. No broad cast shadow and no wall slab behind the object. Match muted tones of the floor cap, neutral white balance, not photorealistic.
+Three separate VERTICAL copper pipes, different lengths and modest widths, close together as one decorative grouping, with short collars/joints and tiny wall mounts. Absolutely no horizontal pipe runs, lever, valve wheel, wire or glow. No wall background.
+No crates, barrels, kegs, fuse cords, copper wires, gears, saws, wooden planks or boards, hooks, chains, ropes, wheels, levers, springs.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-3bf065ba-55c1-42c1-bef3-bcd491b8468c.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+D2.3.2 | w02_decal_pipes_2.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world2_workshops.png
+D:/Cluade projects/games/Glue/assets/tiles/world_02/source/w02_top.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the approved world 2 workshop concept sheet — match its palette and light. Attached image 3: the approved world 2 floor top strip — match its colors and painting style exactly. Do NOT copy layouts, text, UI or characters.
+
+Create ONE isolated decorative sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no unrelated objects.
+Object: a few vertical copper pipes with joints mounted on a wall (vertical only).
+
+Neutral white balance. Genuine PNG alpha transparency, no painted checkerboard, no ground plane, no backdrop, no cast shadow outside the object. Landscape 3:2.
+Create a second independent variant of this one object, with a modestly different silhouette and details, matching the same materials, scale and style. ONE object only, not a pair or comparison sheet.
+The object is a background decoration, hand-painted WITHOUT any black/navy contour around its silhouette or parts. No broad cast shadow and no wall slab behind the object. Match muted tones of the floor cap, neutral white balance, not photorealistic.
+Second variant: a group of TWO upright copper pipes of different heights with a few rounded connecting collars and tiny plain mounting tabs, all pipes vertical. No horizontal crossbar, nozzle, tap, valve or wall.
+No crates, barrels, kegs, fuse cords, copper wires, gears, saws, wooden planks or boards, hooks, chains, ropes, wheels, levers, springs.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-bf941bde-b674-4dc6-94d4-f19024e57954.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+D2.4 | w02_decal_banner.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world2_workshops.png
+D:/Cluade projects/games/Glue/assets/tiles/world_02/source/w02_top.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the approved world 2 workshop concept sheet — match its palette and light. Attached image 3: the approved world 2 floor top strip — match its colors and painting style exactly. Do NOT copy layouts, text, UI or characters.
+
+Create ONE isolated decorative sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no unrelated objects.
+Object: a hanging cloth banner, plain warm red with a simple border, no symbols.
+
+Neutral white balance. Genuine PNG alpha transparency, no painted checkerboard, no ground plane, no backdrop, no cast shadow outside the object. Landscape 3:2.
+The object is a background decoration, hand-painted WITHOUT any black/navy contour around its silhouette or parts. No broad cast shadow and no wall slab behind the object. Match muted tones of the floor cap, neutral white balance, not photorealistic.
+ONE plain warm red cloth banner with a thin muted cream border, hanging by a simple folded cloth upper hem with two tiny metal wall studs, cloth only. No pole or support bar of any material, no ropes or hooks, no emblem. Straight simple bottom hem.
+No glow, no bloom, no light halo, no fog or smoky haze around the object. This object does not emit light. All exterior pixels are transparent; softly lit matte materials with subdued highlights.
+No crates, barrels, kegs, fuse cords, copper wires, gears, saws, wooden planks or boards, hooks, chains, ropes, wheels, levers, springs.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-c834be5a-f156-49f6-9b82-df23c9ef400f.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+D2.4.2 | w02_decal_banner_2.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world2_workshops.png
+D:/Cluade projects/games/Glue/assets/tiles/world_02/source/w02_top.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the approved world 2 workshop concept sheet — match its palette and light. Attached image 3: the approved world 2 floor top strip — match its colors and painting style exactly. Do NOT copy layouts, text, UI or characters.
+
+Create ONE isolated decorative sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no unrelated objects.
+Object: a hanging cloth banner, plain warm red with a simple border, no symbols.
+
+Neutral white balance. Genuine PNG alpha transparency, no painted checkerboard, no ground plane, no backdrop, no cast shadow outside the object. Landscape 3:2.
+Create a second independent variant of this one object, with a modestly different silhouette and details, matching the same materials, scale and style. ONE object only, not a pair or comparison sheet.
+The object is a background decoration, hand-painted WITHOUT any black/navy contour around its silhouette or parts. No broad cast shadow and no wall slab behind the object. Match muted tones of the floor cap, neutral white balance, not photorealistic.
+Second variant: ONE plain warm red cloth banner with a muted golden narrow border, wider softer fabric folds and a gently pointed lower edge. Only cloth and two tiny attachment studs at the top, no pole or rod, no symbol.
+No glow, no bloom, no light halo, no fog or smoky haze around the object. This object does not emit light. All exterior pixels are transparent; softly lit matte materials with subdued highlights.
+No crates, barrels, kegs, fuse cords, copper wires, gears, saws, wooden planks or boards, hooks, chains, ropes, wheels, levers, springs.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-57ec06c5-a813-44b8-8c20-f6a841aad687.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+D2.5 | w02_decal_soot_moss.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world2_workshops.png
+D:/Cluade projects/games/Glue/assets/tiles/world_02/source/w02_top.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the approved world 2 workshop concept sheet — match its palette and light. Attached image 3: the approved world 2 floor top strip — match its colors and painting style exactly. Do NOT copy layouts, text, UI or characters.
+
+Create ONE isolated decorative sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no unrelated objects.
+Object: a small tuft of dark green moss with a few dry grass blades and soot specks.
+
+Neutral white balance. Genuine PNG alpha transparency, no painted checkerboard, no ground plane, no backdrop, no cast shadow outside the object. Landscape 3:2.
+The object is a background decoration, hand-painted WITHOUT any black/navy contour around its silhouette or parts. No broad cast shadow and no wall slab behind the object. Match muted tones of the floor cap, neutral white balance, not photorealistic.
+ONE compact LOW tuft of muted DARK olive-green moss, short sparse dry beige grass, a few tiny charcoal-grey soot specks. No bright yellow/lime/red flowers. Flat bottom to sit on a floor ledge, no soil mound or stone base.
+No glow, no bloom, no light halo, no fog or smoky haze around the object. This object does not emit light. All exterior pixels are transparent; softly lit matte materials with subdued highlights.
+No crates, barrels, kegs, fuse cords, copper wires, gears, saws, wooden planks or boards, hooks, chains, ropes, wheels, levers, springs.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-306eed2d-fe93-40c8-95c6-9dcdff68fc76.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+D2.5.2 | w02_decal_soot_moss_2.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world2_workshops.png
+D:/Cluade projects/games/Glue/assets/tiles/world_02/source/w02_top.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the approved world 2 workshop concept sheet — match its palette and light. Attached image 3: the approved world 2 floor top strip — match its colors and painting style exactly. Do NOT copy layouts, text, UI or characters.
+
+Create ONE isolated decorative sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no unrelated objects.
+Object: a small tuft of dark green moss with a few dry grass blades and soot specks.
+
+Neutral white balance. Genuine PNG alpha transparency, no painted checkerboard, no ground plane, no backdrop, no cast shadow outside the object. Landscape 3:2.
+Create a second independent variant of this one object, with a modestly different silhouette and details, matching the same materials, scale and style. ONE object only, not a pair or comparison sheet.
+The object is a background decoration, hand-painted WITHOUT any black/navy contour around its silhouette or parts. No broad cast shadow and no wall slab behind the object. Match muted tones of the floor cap, neutral white balance, not photorealistic.
+Second variant: ONE smaller asymmetrical LOW mound of muted dark olive moss with three or four bent beige dry grass blades and soot flecks. No bright green or yellow, no red blossoms, no soil or rock base.
+No glow, no bloom, no light halo, no fog or smoky haze around the object. This object does not emit light. All exterior pixels are transparent; softly lit matte materials with subdued highlights.
+No crates, barrels, kegs, fuse cords, copper wires, gears, saws, wooden planks or boards, hooks, chains, ropes, wheels, levers, springs.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-2d7c61e6-6ec8-458c-b40d-e2a4fe1f581d.png

@@ -1,0 +1,644 @@
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+M2.1 | mech_w2_conveyor.png
+References:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world2_workshops.png
+D:/Cluade projects/games/Glue/assets/props/v1/crate.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the concept sheet of the world where this mechanism is used — match its materials, palette and light. Attached image 3: an existing interactive prop of the game rendered in Blender — match its art style: chunky readable shapes, a thick dark navy outline, flat toon shading, light from the upper left. Do NOT copy layouts, text or UI from the attachments.
+
+Create ONE model sheet of an interactive MECHANISM for a 2D side-scrolling co-op platformer. Landscape 3:2. Plain flat light grey background (#E6E8EC), no scenery. On the left: the mechanism large, in strict side view (orthographic, no perspective). To its right, in one row, smaller and evenly spaced: the same mechanism in each state listed below, strict side view, same design and scale. A tiny simple red bean-shaped character stands next to the large view for scale (see Size). The mechanism has a thick dark navy outline around its silhouette and moving parts; dangerous parts have a small red warning accent. Clear, chunky, cartoon, readable as a small game sprite. No text, letters, numbers, labels, arrows, frames, logos or watermark.
+Mechanism: a conveyor belt platform of wood and iron: a long belt with small wooden cleats running over big rollers at both ends, on a sturdy iron frame, with a small direction lever on its side.
+States: stopped (lever in the middle); running right (soft motion streaks, lever right); carrying a wooden crate and a tiny frozen stone-still character as cargo.
+Size: five tiles long (about six character widths), half a tile thick.
+Neutral white balance. Keep all requested poses or states distinct, complete and fully visible, with generous spacing. All miniature states share one scale; the left primary view is larger. Frozen characters are stone-grey versions of the bean character, with identical limbs and outline. No extra scenery.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-4df9bed8-b6f7-43bd-b012-1184882e300a.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+M2.2 | mech_w2_spring_pad.png
+References:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world2_workshops.png
+D:/Cluade projects/games/Glue/assets/props/v1/crate.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the concept sheet of the world where this mechanism is used — match its materials, palette and light. Attached image 3: an existing interactive prop of the game rendered in Blender — match its art style: chunky readable shapes, a thick dark navy outline, flat toon shading, light from the upper left. Do NOT copy layouts, text or UI from the attachments.
+
+Create ONE model sheet of an interactive MECHANISM for a 2D side-scrolling co-op platformer. Landscape 3:2. Plain flat light grey background (#E6E8EC), no scenery. On the left: the mechanism large, in strict side view (orthographic, no perspective). To its right, in one row, smaller and evenly spaced: the same mechanism in each state listed below, strict side view, same design and scale. A tiny simple red bean-shaped character stands next to the large view for scale (see Size). The mechanism has a thick dark navy outline around its silhouette and moving parts; dangerous parts have a small red warning accent. Clear, chunky, cartoon, readable as a small game sprite. No text, letters, numbers, labels, arrows, frames, logos or watermark.
+Mechanism: a spring launch pad — a square iron plate on top of a big coiled spring inside a short wooden frame.
+States: at rest; squeezed flat under a tiny frozen character (loaded); launching (spring fully extended, a character flying up).
+Size: one and a half tiles wide.
+Neutral white balance. Keep all requested poses or states distinct, complete and fully visible, with generous spacing. All miniature states share one scale; the left primary view is larger. Frozen characters are stone-grey versions of the bean character, with identical limbs and outline. No extra scenery.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-ae0c939c-9338-4b37-b2dd-32db943999e1.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+M2.3 | mech_w2_rotating_platform.png
+References:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world2_workshops.png
+D:/Cluade projects/games/Glue/assets/props/v1/crate.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the concept sheet of the world where this mechanism is used — match its materials, palette and light. Attached image 3: an existing interactive prop of the game rendered in Blender — match its art style: chunky readable shapes, a thick dark navy outline, flat toon shading, light from the upper left. Do NOT copy layouts, text or UI from the attachments.
+
+Create ONE model sheet of an interactive MECHANISM for a 2D side-scrolling co-op platformer. Landscape 3:2. Plain flat light grey background (#E6E8EC), no scenery. On the left: the mechanism large, in strict side view (orthographic, no perspective). To its right, in one row, smaller and evenly spaced: the same mechanism in each state listed below, strict side view, same design and scale. A tiny simple red bean-shaped character stands next to the large view for scale (see Size). The mechanism has a thick dark navy outline around its silhouette and moving parts; dangerous parts have a small red warning accent. Clear, chunky, cartoon, readable as a small game sprite. No text, letters, numbers, labels, arrows, frames, logos or watermark.
+Mechanism: a rotating plank platform — a thick wooden beam with iron bands, mounted at its middle on a big iron hub with a gear box.
+States: horizontal; tilted 45 degrees; vertical; horizontal with a tiny frozen character stuck on one end turning with it.
+Size: three tiles long.
+Neutral white balance. Keep all requested poses or states distinct, complete and fully visible, with generous spacing. All miniature states share one scale; the left primary view is larger. Frozen characters are stone-grey versions of the bean character, with identical limbs and outline. No extra scenery.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-5bcfffbe-a487-431c-8f38-df228447c6d7.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+M2.4 | mech_w2_breakable_floor.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world2_workshops.png
+D:/Cluade projects/games/Glue/assets/props/v1/crate.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the concept sheet of the world where this mechanism is used — match its materials, palette and light. Attached image 3: an existing interactive prop of the game rendered in Blender — match its art style: chunky readable shapes, a thick dark navy outline, flat toon shading, light from the upper left. Do NOT copy layouts, text or UI from the attachments.
+
+Create ONE model sheet of an interactive MECHANISM for a 2D side-scrolling co-op platformer. Landscape 3:2. Plain flat light grey background (#E6E8EC), no scenery. On the left: the mechanism large, in strict side view (orthographic, no perspective). To its right, in one row, smaller and evenly spaced: the same mechanism in each state listed below, strict side view, same design and scale. A tiny simple red bean-shaped character stands next to the large view for scale (see Size). The mechanism has a thick dark navy outline around its silhouette and moving parts; dangerous parts have a small red warning accent. Clear, chunky, cartoon, readable as a small game sprite. No text, letters, numbers, labels, arrows, frames, logos or watermark.
+Mechanism: a fragile wooden floor — old pale worn planks with visible cracks and a few missing nails, clearly weaker than normal planks; it holds one character and breaks under two.
+States: intact with one character on it; cracking under two characters (planks bending, splinters); broken (planks falling apart).
+Size: three tiles wide, half a tile thick.
+Neutral white balance. Keep all requested poses or states distinct, complete and fully visible, with generous spacing. All miniature states share one scale; the left primary view is larger. Frozen characters are stone-grey versions of the bean character, with identical limbs and outline. No extra scenery.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-ba9741a7-e530-4e2c-896e-b3dc8a78c053.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+M2.5 | mech_w2_bellows.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world2_workshops.png
+D:/Cluade projects/games/Glue/assets/props/v1/crate.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the concept sheet of the world where this mechanism is used — match its materials, palette and light. Attached image 3: an existing interactive prop of the game rendered in Blender — match its art style: chunky readable shapes, a thick dark navy outline, flat toon shading, light from the upper left. Do NOT copy layouts, text or UI from the attachments.
+
+Create ONE model sheet of an interactive MECHANISM for a 2D side-scrolling co-op platformer. Landscape 3:2. Plain flat light grey background (#E6E8EC), no scenery. On the left: the mechanism large, in strict side view (orthographic, no perspective). To its right, in one row, smaller and evenly spaced: the same mechanism in each state listed below, strict side view, same design and scale. A tiny simple red bean-shaped character stands next to the large view for scale (see Size). The mechanism has a thick dark navy outline around its silhouette and moving parts; dangerous parts have a small red warning accent. Clear, chunky, cartoon, readable as a small game sprite. No text, letters, numbers, labels, arrows, frames, logos or watermark.
+Mechanism: big workshop bellows on a wooden frame with a brass nozzle and a wide foot pedal; stepping or jumping on the pedal blows a strong gust of wind.
+States: idle; a character jumping on the pedal (bellows squeezed); blowing (soft wind streaks from the nozzle pushing a jumping character sideways).
+Size: two tiles high, the pedal one tile wide.
+Neutral white balance. Keep all requested poses or states distinct, complete and fully visible, with generous spacing. All miniature states share one scale; the left primary view is larger. Frozen characters are stone-grey versions of the bean character, with identical limbs and outline. No extra scenery.
+Show the complete main bellows and exactly THREE complete small states to its right: idle, compressed by a jumping player, and blowing with a visible wind puff pushing a different airborne player. Bellows are about 2.3 player heights, the foot pedal about 1.15 player heights wide. The nozzle points horizontally right. No three-quarter view, no rectangular floor patch.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-66aaf0ef-d3a0-426d-a6f4-fdcde7160d37.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+M2.6 | mech_w2_crane_trolley.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world2_workshops.png
+D:/Cluade projects/games/Glue/assets/props/v1/crate.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the concept sheet of the world where this mechanism is used — match its materials, palette and light. Attached image 3: an existing interactive prop of the game rendered in Blender — match its art style: chunky readable shapes, a thick dark navy outline, flat toon shading, light from the upper left. Do NOT copy layouts, text or UI from the attachments.
+
+Create ONE model sheet of an interactive MECHANISM for a 2D side-scrolling co-op platformer. Landscape 3:2. Plain flat light grey background (#E6E8EC), no scenery. On the left: the mechanism large, in strict side view (orthographic, no perspective). To its right, in one row, smaller and evenly spaced: the same mechanism in each state listed below, strict side view, same design and scale. A tiny simple red bean-shaped character stands next to the large view for scale (see Size). The mechanism has a thick dark navy outline around its silhouette and moving parts; dangerous parts have a small red warning accent. Clear, chunky, cartoon, readable as a small game sprite. No text, letters, numbers, labels, arrows, frames, logos or watermark.
+Mechanism: a crane trolley — a small iron trolley with wheels running along an overhead iron rail, with a big iron hook hanging below it on a short rigid bar (no rope); players hang on the hook and ride across.
+States: trolley parked at the left end of the rail; moving (motion streaks) with a character hanging from the hook; carrying a chain of two characters (one holds the hook, the other holds the first one's hand).
+Size: the rail is many tiles long (show a part of it), the hook hangs one tile below the rail.
+Neutral white balance. Keep all requested poses or states distinct, complete and fully visible, with generous spacing. All miniature states share one scale; the left primary view is larger. Frozen characters are stone-grey versions of the bean character, with identical limbs and outline. No extra scenery.
+The last small state must clearly show TWO players in a vertical hand-holding chain beneath the hook. Upper player's raised hand grips the metal hook; upper player's other lowered hand grips lower player's raised hand. The players' bodies do NOT merge. Every hook hangs from a short straight solid metal bar, never a rope, cable or chain. All rail segments and all players fit within the canvas. Primary plus exactly THREE complete small states. Flat uniform #E6E8EC background.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-9f658bfa-289a-491f-a3aa-7ec2d4b07834.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+M2.7 | mech_w2_wires_switch.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world2_workshops.png
+D:/Cluade projects/games/Glue/assets/props/v1/crate.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the concept sheet of the world where this mechanism is used — match its materials, palette and light. Attached image 3: an existing interactive prop of the game rendered in Blender — match its art style: chunky readable shapes, a thick dark navy outline, flat toon shading, light from the upper left. Do NOT copy layouts, text or UI from the attachments.
+
+Create ONE model sheet of an interactive MECHANISM for a 2D side-scrolling co-op platformer. Landscape 3:2. Plain flat light grey background (#E6E8EC), no scenery. On the left: the mechanism large, in strict side view (orthographic, no perspective). To its right, in one row, smaller and evenly spaced: the same mechanism in each state listed below, strict side view, same design and scale. A tiny simple red bean-shaped character stands next to the large view for scale (see Size). The mechanism has a thick dark navy outline around its silhouette and moving parts; dangerous parts have a small red warning accent. Clear, chunky, cartoon, readable as a small game sprite. No text, letters, numbers, labels, arrows, frames, logos or watermark.
+Mechanism: a copper wire track mounted on small brass posts along the floor and walls, with a junction box and a switch lever that sends sparks to one of two branches.
+States: a straight wire piece and a corner piece; a junction with the switch lever left; the same junction with the lever right; a wire with a tiny frozen stone-still character standing on it (it blocks the spark).
+Size: the wire is a thin line at ankle height; the junction box is half a character tall.
+Neutral white balance. Keep all requested poses or states distinct, complete and fully visible, with generous spacing. All miniature states share one scale; the left primary view is larger. Frozen characters are stone-grey versions of the bean character, with identical limbs and outline. No extra scenery.
+Primary assembly at left and exactly FOUR separate smaller diagrams to its right: straight plus corner wire pieces, junction lever LEFT, matching junction lever RIGHT, and copper track blocked by a stone-grey bean. The two junction boxes are identical except their lever angle. Show a small red player beside the primary box at the SAME rendering scale; junction box half that player's height, copper wires ankle-high. Circuit wires are thick copper tubes/tracks, not electric glow. No diagrams with arrows or words. Uniform light-grey canvas, no gradient.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-53f82a9e-b377-47ac-a6ae-fcf9baa64cd8.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+M2.8 | mech_w2_fuse_keg.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world2_workshops.png
+D:/Cluade projects/games/Glue/assets/props/v1/crate.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the concept sheet of the world where this mechanism is used — match its materials, palette and light. Attached image 3: an existing interactive prop of the game rendered in Blender — match its art style: chunky readable shapes, a thick dark navy outline, flat toon shading, light from the upper left. Do NOT copy layouts, text or UI from the attachments.
+
+Create ONE model sheet of an interactive MECHANISM for a 2D side-scrolling co-op platformer. Landscape 3:2. Plain flat light grey background (#E6E8EC), no scenery. On the left: the mechanism large, in strict side view (orthographic, no perspective). To its right, in one row, smaller and evenly spaced: the same mechanism in each state listed below, strict side view, same design and scale. A tiny simple red bean-shaped character stands next to the large view for scale (see Size). The mechanism has a thick dark navy outline around its silhouette and moving parts; dangerous parts have a small red warning accent. Clear, chunky, cartoon, readable as a small game sprite. No text, letters, numbers, labels, arrows, frames, logos or watermark.
+Mechanism: a fuse cord running from the end of a copper wire to a small powder keg standing next to a cracked stone wall.
+States: fuse unlit; fuse burning (a bright spark travelling along it); cartoon puff explosion of the keg (no fire damage, just a big dusty puff); the wall broken open with rubble.
+Size: the keg is half a character tall, the wall three tiles tall.
+Neutral white balance. Keep all requested poses or states distinct, complete and fully visible, with generous spacing. All miniature states share one scale; the left primary view is larger. Frozen characters are stone-grey versions of the bean character, with identical limbs and outline. No extra scenery.
+Primary unlit keg-and-fuse assembly at left plus exactly FOUR complete small scenes at right, arranged in ONE horizontal row: unlit fuse; traveling orange spark on burning fuse; soft dusty puff bursting from keg beside cracked wall; collapsed stone wall with rubble. Clearly keep powder keg only half the height of the red player beside the large view, and wall about 3.4 player heights. Keep dangerous red accents small. All states fully fit, no circles, frames or labels, no black smoke cloud, no fireball.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-f7257691-4f32-4071-81bc-9e84df2383a6.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+M3.1 | mech_w3_mirrors.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world3_guardians.png
+D:/Cluade projects/games/Glue/assets/props/v1/crate.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the concept sheet of the world where this mechanism is used — match its materials, palette and light. Attached image 3: an existing interactive prop of the game rendered in Blender — match its art style: chunky readable shapes, a thick dark navy outline, flat toon shading, light from the upper left. Do NOT copy layouts, text or UI from the attachments.
+
+Create ONE model sheet of an interactive MECHANISM for a 2D side-scrolling co-op platformer. Landscape 3:2. Plain flat light grey background (#E6E8EC), no scenery. On the left: the mechanism large, in strict side view (orthographic, no perspective). To its right, in one row, smaller and evenly spaced: the same mechanism in each state listed below, strict side view, same design and scale. A tiny simple red bean-shaped character stands next to the large view for scale (see Size). The mechanism has a thick dark navy outline around its silhouette and moving parts; dangerous parts have a small red warning accent. Clear, chunky, cartoon, readable as a small game sprite. No text, letters, numbers, labels, arrows, frames, logos or watermark.
+Mechanism: light-bending pieces of bronze and glass: a round mirror on a pivot stand with a grab handle, a pushable mirror block (a white stone cube with a mirror face), and a clear crystal prism on a small stand that splits a beam in two.
+States: the stand mirror tilted up, straight and down, each bouncing a golden beam; the mirror block bouncing a beam; the prism splitting one beam into two.
+Size: the stand mirror one and a half character heights; the block one tile; the prism half a character tall.
+Neutral white balance. All listed states/poses must be complete and distinctly readable. Same design and consistent scale in every miniature. The main view is larger than the miniature views. Follow Size: the main red scale figure and the main subject share the SAME rendering scale; do not make the player arbitrarily tiny. Frozen players are stone-grey versions of the bean; normal active players are red or blue. No extra scenery, no decorative punctuation or symbols. Perfectly uniform opaque light-grey canvas; strict side orthographic silhouettes. Every supporting character or object explicitly required by a pose/state MUST be visibly drawn inside that scene; do not replace the interaction with only a facial expression. Fit every complete scene inside the canvas.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-90ac04be-da0c-44ef-93ff-075ea301efc9.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+M3.2 | mech_w3_light_receiver.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world3_guardians.png
+D:/Cluade projects/games/Glue/assets/props/v1/crate.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the concept sheet of the world where this mechanism is used — match its materials, palette and light. Attached image 3: an existing interactive prop of the game rendered in Blender — match its art style: chunky readable shapes, a thick dark navy outline, flat toon shading, light from the upper left. Do NOT copy layouts, text or UI from the attachments.
+
+Create ONE model sheet of an interactive MECHANISM for a 2D side-scrolling co-op platformer. Landscape 3:2. Plain flat light grey background (#E6E8EC), no scenery. On the left: the mechanism large, in strict side view (orthographic, no perspective). To its right, in one row, smaller and evenly spaced: the same mechanism in each state listed below, strict side view, same design and scale. A tiny simple red bean-shaped character stands next to the large view for scale (see Size). The mechanism has a thick dark navy outline around its silhouette and moving parts; dangerous parts have a small red warning accent. Clear, chunky, cartoon, readable as a small game sprite. No text, letters, numbers, labels, arrows, frames, logos or watermark.
+Mechanism: a sun crystal on a bronze pedestal that shines a golden beam, and a round bronze receiver socket in a wall that opens a gate while the beam hits it.
+States: the crystal shining a beam through a narrow slit in a stone wall; a tiny character standing in the beam and blocking it (a shadow behind it); the receiver dark; the receiver lit and glowing.
+Size: pedestal one character tall, receiver one tile wide.
+Neutral white balance. All listed states/poses must be complete and distinctly readable. Same design and consistent scale in every miniature. The main view is larger than the miniature views. Follow Size: the main red scale figure and the main subject share the SAME rendering scale; do not make the player arbitrarily tiny. Frozen players are stone-grey versions of the bean; normal active players are red or blue. No extra scenery, no decorative punctuation or symbols. Perfectly uniform opaque light-grey canvas; strict side orthographic silhouettes. Every supporting character or object explicitly required by a pose/state MUST be visibly drawn inside that scene; do not replace the interaction with only a facial expression. Fit every complete scene inside the canvas.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-6363aaff-f0fb-41ef-b8b1-c36c15bb6ae7.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+M3.3 | mech_w3_statue_pedestal.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world3_guardians.png
+D:/Cluade projects/games/Glue/assets/props/v1/crate.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the concept sheet of the world where this mechanism is used — match its materials, palette and light. Attached image 3: an existing interactive prop of the game rendered in Blender — match its art style: chunky readable shapes, a thick dark navy outline, flat toon shading, light from the upper left. Do NOT copy layouts, text or UI from the attachments.
+
+Create ONE model sheet of an interactive MECHANISM for a 2D side-scrolling co-op platformer. Landscape 3:2. Plain flat light grey background (#E6E8EC), no scenery. On the left: the mechanism large, in strict side view (orthographic, no perspective). To its right, in one row, smaller and evenly spaced: the same mechanism in each state listed below, strict side view, same design and scale. A tiny simple red bean-shaped character stands next to the large view for scale (see Size). The mechanism has a thick dark navy outline around its silhouette and moving parts; dangerous parts have a small red warning accent. Clear, chunky, cartoon, readable as a small game sprite. No text, letters, numbers, labels, arrows, frames, logos or watermark.
+Mechanism: a statue pedestal plate — a low white stone pedestal with a bronze ring that activates only when a statue (or a frozen, stone-still character) stands on it.
+States: empty (ring dark); a small stone statue on it (ring glowing); a frozen character on it (ring glowing); a normal moving character on it (ring stays dark).
+Size: two tiles wide.
+Neutral white balance. All listed states/poses must be complete and distinctly readable. Same design and consistent scale in every miniature. The main view is larger than the miniature views. Follow Size: the main red scale figure and the main subject share the SAME rendering scale; do not make the player arbitrarily tiny. Frozen players are stone-grey versions of the bean; normal active players are red or blue. No extra scenery, no decorative punctuation or symbols. Perfectly uniform opaque light-grey canvas; strict side orthographic silhouettes. Every supporting character or object explicitly required by a pose/state MUST be visibly drawn inside that scene; do not replace the interaction with only a facial expression. Fit every complete scene inside the canvas.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-65e2470d-d216-4855-8763-f1b861dbc68c.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+M3.4 | mech_w3_count_gate.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world3_guardians.png
+D:/Cluade projects/games/Glue/assets/props/v1/crate.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the concept sheet of the world where this mechanism is used — match its materials, palette and light. Attached image 3: an existing interactive prop of the game rendered in Blender — match its art style: chunky readable shapes, a thick dark navy outline, flat toon shading, light from the upper left. Do NOT copy layouts, text or UI from the attachments.
+
+Create ONE model sheet of an interactive MECHANISM for a 2D side-scrolling co-op platformer. Landscape 3:2. Plain flat light grey background (#E6E8EC), no scenery. On the left: the mechanism large, in strict side view (orthographic, no perspective). To its right, in one row, smaller and evenly spaced: the same mechanism in each state listed below, strict side view, same design and scale. A tiny simple red bean-shaped character stands next to the large view for scale (see Size). The mechanism has a thick dark navy outline around its silhouette and moving parts; dangerous parts have a small red warning accent. Clear, chunky, cartoon, readable as a small game sprite. No text, letters, numbers, labels, arrows, frames, logos or watermark.
+Mechanism: a tall bronze gate with a row of four round lamps in its arch; the lamps light up one by one, and the gate opens when all are lit.
+States: no lamps lit, closed; two lamps lit; all four lit and the gate open.
+Size: three tiles tall.
+Neutral white balance. All listed states/poses must be complete and distinctly readable. Same design and consistent scale in every miniature. The main view is larger than the miniature views. Follow Size: the main red scale figure and the main subject share the SAME rendering scale; do not make the player arbitrarily tiny. Frozen players are stone-grey versions of the bean; normal active players are red or blue. No extra scenery, no decorative punctuation or symbols. Perfectly uniform opaque light-grey canvas; strict side orthographic silhouettes. Every supporting character or object explicitly required by a pose/state MUST be visibly drawn inside that scene; do not replace the interaction with only a facial expression. Fit every complete scene inside the canvas.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-43eb1425-c293-4d52-bbb8-32a2931532ac.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+M3.5 | mech_w3_rockfall.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world3_guardians.png
+D:/Cluade projects/games/Glue/assets/props/v1/crate.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the concept sheet of the world where this mechanism is used — match its materials, palette and light. Attached image 3: an existing interactive prop of the game rendered in Blender — match its art style: chunky readable shapes, a thick dark navy outline, flat toon shading, light from the upper left. Do NOT copy layouts, text or UI from the attachments.
+
+Create ONE model sheet of an interactive MECHANISM for a 2D side-scrolling co-op platformer. Landscape 3:2. Plain flat light grey background (#E6E8EC), no scenery. On the left: the mechanism large, in strict side view (orthographic, no perspective). To its right, in one row, smaller and evenly spaced: the same mechanism in each state listed below, strict side view, same design and scale. A tiny simple red bean-shaped character stands next to the large view for scale (see Size). The mechanism has a thick dark navy outline around its silhouette and moving parts; dangerous parts have a small red warning accent. Clear, chunky, cartoon, readable as a small game sprite. No text, letters, numbers, labels, arrows, frames, logos or watermark.
+Mechanism: a cracked ceiling section with loose round boulders held by an old stone lip; they fall when a plate is pressed; a frozen character works like a roof.
+States: boulders hanging in the cracked ceiling; falling; boulders bouncing off a frozen character standing under them with another character safe below.
+Size: three tiles wide.
+Neutral white balance. All listed states/poses must be complete and distinctly readable. Same design and consistent scale in every miniature. The main view is larger than the miniature views. Follow Size: the main red scale figure and the main subject share the SAME rendering scale; do not make the player arbitrarily tiny. Frozen players are stone-grey versions of the bean; normal active players are red or blue. No extra scenery, no decorative punctuation or symbols. Perfectly uniform opaque light-grey canvas; strict side orthographic silhouettes. Every supporting character or object explicitly required by a pose/state MUST be visibly drawn inside that scene; do not replace the interaction with only a facial expression. Fit every complete scene inside the canvas.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-f15bc6dd-6c2e-4161-858f-b8f0f253ad81.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+M3.6 | mech_w3_movable_statue.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world3_guardians.png
+D:/Cluade projects/games/Glue/assets/props/v1/crate.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the concept sheet of the world where this mechanism is used — match its materials, palette and light. Attached image 3: an existing interactive prop of the game rendered in Blender — match its art style: chunky readable shapes, a thick dark navy outline, flat toon shading, light from the upper left. Do NOT copy layouts, text or UI from the attachments.
+
+Create ONE model sheet of an interactive MECHANISM for a 2D side-scrolling co-op platformer. Landscape 3:2. Plain flat light grey background (#E6E8EC), no scenery. On the left: the mechanism large, in strict side view (orthographic, no perspective). To its right, in one row, smaller and evenly spaced: the same mechanism in each state listed below, strict side view, same design and scale. A tiny simple red bean-shaped character stands next to the large view for scale (see Size). The mechanism has a thick dark navy outline around its silhouette and moving parts; dangerous parts have a small red warning accent. Clear, chunky, cartoon, readable as a small game sprite. No text, letters, numbers, labels, arrows, frames, logos or watermark.
+Mechanism: a heavy movable statue — a small chunky white stone guardian statue on a square base, so heavy that two characters push it together.
+States: standing; pushed by two characters in a row (one pushes the statue, the other pushes the first); standing on a statue pedestal with a glowing bronze ring.
+Size: one and a half character heights, one tile wide.
+Neutral white balance. All listed states/poses must be complete and distinctly readable. Same design and consistent scale in every miniature. The main view is larger than the miniature views. Follow Size: the main red scale figure and the main subject share the SAME rendering scale; do not make the player arbitrarily tiny. Frozen players are stone-grey versions of the bean; normal active players are red or blue. No extra scenery, no decorative punctuation or symbols. Perfectly uniform opaque light-grey canvas; strict side orthographic silhouettes. Every supporting character or object explicitly required by a pose/state MUST be visibly drawn inside that scene; do not replace the interaction with only a facial expression. Fit every complete scene inside the canvas.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-31d200f6-8d0d-48f9-9803-9e558c20ae55.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+M3.1 | mech_w3_mirrors.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/mechanisms/mech_w3_mirrors.png
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world3_guardians.png
+D:/Cluade projects/games/Glue/assets/props/v1/crate.png
+Edit prompt:
+Image 1 is the existing model sheet to edit. Images 2–4 are style references only. Keep everything the same, but change ONLY the beam of the small WHITE STONE MIRROR BLOCK (second scene from the right): the incoming golden beam comes horizontally from the left, touches the mirrored face, then visibly REFLECTS diagonally UP toward the left. Delete the incorrect outgoing horizontal beam to its right. Keep the prism's separate incoming ray and two outgoing rays unchanged. Preserve every other object, pose and primary scale figure. Preserve the flat light-grey background and the original art style. No text, letters, numbers, labels, arrows, frames or punctuation. Fit all complete scenes within the canvas.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-76a56241-4128-4a98-a9a8-840482da59e1.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+M3.5 | mech_w3_rockfall.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/mechanisms/mech_w3_rockfall.png
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world3_guardians.png
+D:/Cluade projects/games/Glue/assets/props/v1/crate.png
+Edit prompt:
+Image 1 is the existing model sheet to edit. Images 2–4 are style references only. Keep everything the same, but change ONLY the last rightmost rockfall scene: put the blue player BELOW the shelter of the frozen stone-grey player's extended rigid arm, visibly crouching safely beneath it. The frozen player remains upright and rigid; falling boulders bounce OFF its top and arms. Remove the orange decorative exclamation strokes above the frozen player. Keep the cracked ceiling, falling and bouncing boulders, pressure plate and stone floor. Preserve the primary scene and earlier miniature scenes entirely. Preserve the flat light-grey background and the original art style. No text, letters, numbers, labels, arrows, frames or punctuation. Fit all complete scenes within the canvas.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-8f2f4309-996e-4c3e-a9e4-06bc4319fa90.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+M3.6 | mech_w3_movable_statue.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/mechanisms/mech_w3_movable_statue.png
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world3_guardians.png
+D:/Cluade projects/games/Glue/assets/props/v1/crate.png
+Edit prompt:
+Image 1 is the existing model sheet to edit. Images 2–4 are style references only. Keep everything the same, but add a small STANDING IDLE statue as the FIRST miniature to the right of the primary statue, followed by the existing two-player pushing scene and the pedestal scene. There must be THREE miniature states in one row: standing; pushed by two characters in a row; standing on a separate statue pedestal with a glowing bronze ring. Match all THREE statues to the same miniature scale. Reduce and space the miniatures uniformly to fit. Preserve the large primary statue and its red player scale figure, the statue design, moss and white stone, bronze and navy outlines. Preserve the flat light-grey background and the original art style. No text, letters, numbers, labels, arrows, frames or punctuation. Fit all complete scenes within the canvas.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-dd0abfb1-ae4e-42bc-be41-21c30d0f7dae.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+M4.1 | mech_w4_sluice_gate.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world4_sunken_city.png
+D:/Cluade projects/games/Glue/assets/props/v1/crate.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the concept sheet of the world where this mechanism is used — match its materials, palette and light. Attached image 3: an existing interactive prop of the game rendered in Blender — match its art style: chunky readable shapes, a thick dark navy outline, flat toon shading, light from the upper left. Do NOT copy layouts, text or UI from the attachments.
+
+Create ONE model sheet of an interactive MECHANISM for a 2D side-scrolling co-op platformer. Landscape 3:2. Plain flat light grey background (#E6E8EC), no scenery. On the left: the mechanism large, in strict side view (orthographic, no perspective). To its right, in one row, smaller and evenly spaced: the same mechanism in each state listed below, strict side view, same design and scale. A tiny simple red bean-shaped character stands next to the large view for scale (see Size). The mechanism has a thick dark navy outline around its silhouette and moving parts; dangerous parts have a small red warning accent. Clear, chunky, cartoon, readable as a small game sprite. No text, letters, numbers, labels, arrows, frames, logos or watermark.
+Mechanism: a sluice gate of thick wooden boards in a stone water channel, with a big iron wheel valve beside it that players turn by grabbing.
+States: closed (water held back); half open; fully open (water rushing through); the wheel valve alone, close-up.
+Size: three tiles tall.
+Neutral white balance. All listed states/poses must be complete and distinctly readable. Same design and consistent scale in every miniature. The main view is larger than the miniature views. Follow Size: the main red scale figure and the main subject share the SAME rendering scale; do not make the player arbitrarily tiny. Frozen players are stone-grey versions of the bean; normal active players are red or blue. No extra scenery, no decorative punctuation or symbols. Perfectly uniform opaque light-grey canvas; strict side orthographic silhouettes. Every supporting character or object explicitly required by a pose/state MUST be visibly drawn inside that scene; do not replace the interaction with only a facial expression. Fit every complete scene inside the canvas.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-2cb2d6be-5655-4c9d-b101-d1c81cdf011a.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+M4.2 | mech_w4_float_crate.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world4_sunken_city.png
+D:/Cluade projects/games/Glue/assets/props/v1/crate.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the concept sheet of the world where this mechanism is used — match its materials, palette and light. Attached image 3: an existing interactive prop of the game rendered in Blender — match its art style: chunky readable shapes, a thick dark navy outline, flat toon shading, light from the upper left. Do NOT copy layouts, text or UI from the attachments.
+
+Create ONE model sheet of an interactive MECHANISM for a 2D side-scrolling co-op platformer. Landscape 3:2. Plain flat light grey background (#E6E8EC), no scenery. On the left: the mechanism large, in strict side view (orthographic, no perspective). To its right, in one row, smaller and evenly spaced: the same mechanism in each state listed below, strict side view, same design and scale. A tiny simple red bean-shaped character stands next to the large view for scale (see Size). The mechanism has a thick dark navy outline around its silhouette and moving parts; dangerous parts have a small red warning accent. Clear, chunky, cartoon, readable as a small game sprite. No text, letters, numbers, labels, arrows, frames, logos or watermark.
+Mechanism: a floating crate — a wooden crate with two cork floats strapped to its sides; it floats up to the water surface.
+States: resting on the bottom out of water; floating at the surface with a character standing on it; half under water.
+Size: one tile.
+Neutral white balance. All listed states/poses must be complete and distinctly readable. Same design and consistent scale in every miniature. The main view is larger than the miniature views. Follow Size: the main red scale figure and the main subject share the SAME rendering scale; do not make the player arbitrarily tiny. Frozen players are stone-grey versions of the bean; normal active players are red or blue. No extra scenery, no decorative punctuation or symbols. Perfectly uniform opaque light-grey canvas; strict side orthographic silhouettes. Every supporting character or object explicitly required by a pose/state MUST be visibly drawn inside that scene; do not replace the interaction with only a facial expression. Fit every complete scene inside the canvas.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-12830c4a-6151-4734-b1e1-50113372b4ee.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+M4.3 | mech_w4_water_jet.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world4_sunken_city.png
+D:/Cluade projects/games/Glue/assets/props/v1/crate.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the concept sheet of the world where this mechanism is used — match its materials, palette and light. Attached image 3: an existing interactive prop of the game rendered in Blender — match its art style: chunky readable shapes, a thick dark navy outline, flat toon shading, light from the upper left. Do NOT copy layouts, text or UI from the attachments.
+
+Create ONE model sheet of an interactive MECHANISM for a 2D side-scrolling co-op platformer. Landscape 3:2. Plain flat light grey background (#E6E8EC), no scenery. On the left: the mechanism large, in strict side view (orthographic, no perspective). To its right, in one row, smaller and evenly spaced: the same mechanism in each state listed below, strict side view, same design and scale. A tiny simple red bean-shaped character stands next to the large view for scale (see Size). The mechanism has a thick dark navy outline around its silhouette and moving parts; dangerous parts have a small red warning accent. Clear, chunky, cartoon, readable as a small game sprite. No text, letters, numbers, labels, arrows, frames, logos or watermark.
+Mechanism: a stone fish-head nozzle in a wall that shoots a strong water current.
+States: off; on (a wide current stream with bubbles pushing a tiny swimming character); a tiny frozen stone-still character standing in the stream, not moved.
+Size: one tile, the stream four tiles long.
+Neutral white balance. All listed states/poses must be complete and distinctly readable. Same design and consistent scale in every miniature. The main view is larger than the miniature views. Follow Size: the main red scale figure and the main subject share the SAME rendering scale; do not make the player arbitrarily tiny. Frozen players are stone-grey versions of the bean; normal active players are red or blue. No extra scenery, no decorative punctuation or symbols. Perfectly uniform opaque light-grey canvas; strict side orthographic silhouettes. Every supporting character or object explicitly required by a pose/state MUST be visibly drawn inside that scene; do not replace the interaction with only a facial expression. Fit every complete scene inside the canvas.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-8541045b-aa06-4b3e-9a17-e74c9d506925.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+M4.4 | mech_w4_bubble_lift.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world4_sunken_city.png
+D:/Cluade projects/games/Glue/assets/props/v1/crate.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the concept sheet of the world where this mechanism is used — match its materials, palette and light. Attached image 3: an existing interactive prop of the game rendered in Blender — match its art style: chunky readable shapes, a thick dark navy outline, flat toon shading, light from the upper left. Do NOT copy layouts, text or UI from the attachments.
+
+Create ONE model sheet of an interactive MECHANISM for a 2D side-scrolling co-op platformer. Landscape 3:2. Plain flat light grey background (#E6E8EC), no scenery. On the left: the mechanism large, in strict side view (orthographic, no perspective). To its right, in one row, smaller and evenly spaced: the same mechanism in each state listed below, strict side view, same design and scale. A tiny simple red bean-shaped character stands next to the large view for scale (see Size). The mechanism has a thick dark navy outline around its silhouette and moving parts; dangerous parts have a small red warning accent. Clear, chunky, cartoon, readable as a small game sprite. No text, letters, numbers, labels, arrows, frames, logos or watermark.
+Mechanism: a bubble vent in the floor — a round bronze grate that makes a big soap-like air bubble carrying characters up.
+States: vent idle; a big bubble forming; the bubble rising with two characters inside; the bubble popping.
+Size: the bubble is two character heights.
+Neutral white balance. All listed states/poses must be complete and distinctly readable. Same design and consistent scale in every miniature. The main view is larger than the miniature views. Follow Size: the main red scale figure and the main subject share the SAME rendering scale; do not make the player arbitrarily tiny. Frozen players are stone-grey versions of the bean; normal active players are red or blue. No extra scenery, no decorative punctuation or symbols. Perfectly uniform opaque light-grey canvas; strict side orthographic silhouettes. Every supporting character or object explicitly required by a pose/state MUST be visibly drawn inside that scene; do not replace the interaction with only a facial expression. Fit every complete scene inside the canvas. Repeat EVERY listed state as a separate miniature to the RIGHT of the large primary view, INCLUDING idle even when identical to the large view. The large primary view does NOT substitute for any miniature state.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-17dc339e-3463-44bd-85b6-7910f40203d8.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+M4.5 | mech_w4_raft.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world4_sunken_city.png
+D:/Cluade projects/games/Glue/assets/props/v1/crate.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the concept sheet of the world where this mechanism is used — match its materials, palette and light. Attached image 3: an existing interactive prop of the game rendered in Blender — match its art style: chunky readable shapes, a thick dark navy outline, flat toon shading, light from the upper left. Do NOT copy layouts, text or UI from the attachments.
+
+Create ONE model sheet of an interactive MECHANISM for a 2D side-scrolling co-op platformer. Landscape 3:2. Plain flat light grey background (#E6E8EC), no scenery. On the left: the mechanism large, in strict side view (orthographic, no perspective). To its right, in one row, smaller and evenly spaced: the same mechanism in each state listed below, strict side view, same design and scale. A tiny simple red bean-shaped character stands next to the large view for scale (see Size). The mechanism has a thick dark navy outline around its silhouette and moving parts; dangerous parts have a small red warning accent. Clear, chunky, cartoon, readable as a small game sprite. No text, letters, numbers, labels, arrows, frames, logos or watermark.
+Mechanism: a small wooden raft of logs tied with iron bands that floats on the water surface and rises and sinks with the water level.
+States: floating empty; slightly pressed down with two characters on it; sitting on the dry bottom when the water is gone.
+Size: three tiles wide.
+Neutral white balance. All listed states/poses must be complete and distinctly readable. Same design and consistent scale in every miniature. The main view is larger than the miniature views. Follow Size: the main red scale figure and the main subject share the SAME rendering scale; do not make the player arbitrarily tiny. Frozen players are stone-grey versions of the bean; normal active players are red or blue. No extra scenery, no decorative punctuation or symbols. Perfectly uniform opaque light-grey canvas; strict side orthographic silhouettes. Every supporting character or object explicitly required by a pose/state MUST be visibly drawn inside that scene; do not replace the interaction with only a facial expression. Fit every complete scene inside the canvas. Repeat EVERY listed state as a separate miniature to the RIGHT of the large primary view, INCLUDING idle even when identical to the large view. The large primary view does NOT substitute for any miniature state.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-c8eb70df-ae74-412b-ad90-0f2d79f5b7a0.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+M4.2 | mech_w4_float_crate.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/mechanisms/mech_w4_float_crate.png
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world4_sunken_city.png
+D:/Cluade projects/games/Glue/assets/props/v1/crate.png
+Edit prompt:
+Image 1 is the existing floating crate model sheet to edit; images 2–4 are style references. Keep everything the same, but add a dry crate resting out of water as the FIRST small miniature to the right of the large primary view. There must be THREE smaller miniature states in ONE ROW: dry on the bottom; floating at the surface with a red player standing on it; half under water. Preserve both existing water states, wooden crate design, two cork floats, rope straps and red scale player by the large crate. Make the THREE miniature crates the same smaller scale and space them to fit with margins. Preserve navy outlines, toon shading, light-grey background. No text, letters, numbers, labels, arrows or frames.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-97961190-f3b0-4a99-a72e-df3a878cbeeb.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+M5.1 | mech_w5_ice_block.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world5_ice_peaks.png
+D:/Cluade projects/games/Glue/assets/props/v1/crate.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the concept sheet of the world where this mechanism is used — match its materials, palette and light. Attached image 3: an existing interactive prop of the game rendered in Blender — match its art style: chunky readable shapes, a thick dark navy outline, flat toon shading, light from the upper left. Do NOT copy layouts, text or UI from the attachments.
+
+Create ONE model sheet of an interactive MECHANISM for a 2D side-scrolling co-op platformer. Landscape 3:2. Plain flat light grey background (#E6E8EC), no scenery. On the left: the mechanism large, in strict side view (orthographic, no perspective). To its right, in one row, smaller and evenly spaced: the same mechanism in each state listed below, strict side view, same design and scale. A tiny simple red bean-shaped character stands next to the large view for scale (see Size). The mechanism has a thick dark navy outline around its silhouette and moving parts; dangerous parts have a small red warning accent. Clear, chunky, cartoon, readable as a small game sprite. No text, letters, numbers, labels, arrows, frames, logos or watermark.
+Mechanism: a pushable sliding ice block — a chunky clear blue ice cube with frosty edges and a few bubbles inside; it slides far on ice.
+States: standing still; sliding (motion streaks); a frozen character riding on top like a sled; a long version two tiles by one.
+Size: one tile.
+Neutral white balance. All listed states/poses must be complete and distinctly readable. Same design and consistent scale in every miniature. The main view is larger than the miniature views. Follow Size: the main red scale figure and the main subject share the SAME rendering scale; do not make the player arbitrarily tiny. Frozen players are stone-grey versions of the bean; normal active players are red or blue. No extra scenery, no decorative punctuation or symbols. Perfectly uniform opaque light-grey canvas; strict side orthographic silhouettes. Every supporting character or object explicitly required by a pose/state MUST be visibly drawn inside that scene; do not replace the interaction with only a facial expression. Fit every complete scene inside the canvas. Repeat EVERY listed state as a separate miniature to the RIGHT of the large primary view, INCLUDING idle even when identical to the large view. The large primary view does NOT substitute for any miniature state.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-376d1d94-7e5b-4565-86ba-98804081cabf.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+M5.2 | mech_w5_icicle.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world5_ice_peaks.png
+D:/Cluade projects/games/Glue/assets/props/v1/crate.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the concept sheet of the world where this mechanism is used — match its materials, palette and light. Attached image 3: an existing interactive prop of the game rendered in Blender — match its art style: chunky readable shapes, a thick dark navy outline, flat toon shading, light from the upper left. Do NOT copy layouts, text or UI from the attachments.
+
+Create ONE model sheet of an interactive MECHANISM for a 2D side-scrolling co-op platformer. Landscape 3:2. Plain flat light grey background (#E6E8EC), no scenery. On the left: the mechanism large, in strict side view (orthographic, no perspective). To its right, in one row, smaller and evenly spaced: the same mechanism in each state listed below, strict side view, same design and scale. A tiny simple red bean-shaped character stands next to the large view for scale (see Size). The mechanism has a thick dark navy outline around its silhouette and moving parts; dangerous parts have a small red warning accent. Clear, chunky, cartoon, readable as a small game sprite. No text, letters, numbers, labels, arrows, frames, logos or watermark.
+Mechanism: a big falling icicle hanging from a rocky ceiling, sharp tip with a small red warning accent.
+States: hanging; trembling (small cracks, snow crumbs falling); falling; shattered into ice shards on the ground; bouncing off a frozen character standing under it.
+Size: one and a half tiles long.
+Neutral white balance. All listed states/poses must be complete and distinctly readable. Same design and consistent scale in every miniature. The main view is larger than the miniature views. Follow Size: the main red scale figure and the main subject share the SAME rendering scale; do not make the player arbitrarily tiny. Frozen players are stone-grey versions of the bean; normal active players are red or blue. No extra scenery, no decorative punctuation or symbols. Perfectly uniform opaque light-grey canvas; strict side orthographic silhouettes. Every supporting character or object explicitly required by a pose/state MUST be visibly drawn inside that scene; do not replace the interaction with only a facial expression. Fit every complete scene inside the canvas. Repeat EVERY listed state as a separate miniature to the RIGHT of the large primary view, INCLUDING idle even when identical to the large view. The large primary view does NOT substitute for any miniature state.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-451f2e9b-229a-45d3-8c62-24217c1fe971.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+M5.3 | mech_w5_snowball_roll.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world5_ice_peaks.png
+D:/Cluade projects/games/Glue/assets/props/v1/crate.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the concept sheet of the world where this mechanism is used — match its materials, palette and light. Attached image 3: an existing interactive prop of the game rendered in Blender — match its art style: chunky readable shapes, a thick dark navy outline, flat toon shading, light from the upper left. Do NOT copy layouts, text or UI from the attachments.
+
+Create ONE model sheet of an interactive MECHANISM for a 2D side-scrolling co-op platformer. Landscape 3:2. Plain flat light grey background (#E6E8EC), no scenery. On the left: the mechanism large, in strict side view (orthographic, no perspective). To its right, in one row, smaller and evenly spaced: the same mechanism in each state listed below, strict side view, same design and scale. A tiny simple red bean-shaped character stands next to the large view for scale (see Size). The mechanism has a thick dark navy outline around its silhouette and moving parts; dangerous parts have a small red warning accent. Clear, chunky, cartoon, readable as a small game sprite. No text, letters, numbers, labels, arrows, frames, logos or watermark.
+Mechanism: a rolling snowball that grows as it rolls down a slope.
+States: small; medium with a snow trail; huge (two character heights) with a character running away from it; stopped against a frozen stone-still character; burst into a snow pile.
+Size: from half a character to two character heights.
+Neutral white balance. All listed states/poses must be complete and distinctly readable. Same design and consistent scale in every miniature. The main view is larger than the miniature views. Follow Size: the main red scale figure and the main subject share the SAME rendering scale; do not make the player arbitrarily tiny. Frozen players are stone-grey versions of the bean; normal active players are red or blue. No extra scenery, no decorative punctuation or symbols. Perfectly uniform opaque light-grey canvas; strict side orthographic silhouettes. Every supporting character or object explicitly required by a pose/state MUST be visibly drawn inside that scene; do not replace the interaction with only a facial expression. Fit every complete scene inside the canvas. Repeat EVERY listed state as a separate miniature to the RIGHT of the large primary view, INCLUDING idle even when identical to the large view. The large primary view does NOT substitute for any miniature state.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-059af1f4-fb9a-4b82-9268-87a31b56bff3.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+M5.4 | mech_w5_thin_ice.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world5_ice_peaks.png
+D:/Cluade projects/games/Glue/assets/props/v1/crate.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the concept sheet of the world where this mechanism is used — match its materials, palette and light. Attached image 3: an existing interactive prop of the game rendered in Blender — match its art style: chunky readable shapes, a thick dark navy outline, flat toon shading, light from the upper left. Do NOT copy layouts, text or UI from the attachments.
+
+Create ONE model sheet of an interactive MECHANISM for a 2D side-scrolling co-op platformer. Landscape 3:2. Plain flat light grey background (#E6E8EC), no scenery. On the left: the mechanism large, in strict side view (orthographic, no perspective). To its right, in one row, smaller and evenly spaced: the same mechanism in each state listed below, strict side view, same design and scale. A tiny simple red bean-shaped character stands next to the large view for scale (see Size). The mechanism has a thick dark navy outline around its silhouette and moving parts; dangerous parts have a small red warning accent. Clear, chunky, cartoon, readable as a small game sprite. No text, letters, numbers, labels, arrows, frames, logos or watermark.
+Mechanism: thin ice over icy water and a cracked ice wall: a pale translucent ice sheet with fine cracks, clearly thinner and lighter than solid ground, and a wall of cracked blue ice.
+States: thin ice intact with one character on it; cracking under two characters; broken with dark icy water below; the cracked ice wall; the ice wall smashed by a huge snowball.
+Size: thin ice three tiles wide; ice wall three tiles tall.
+Neutral white balance. All listed states/poses must be complete and distinctly readable. Same design and consistent scale in every miniature. The main view is larger than the miniature views. Follow Size: the main red scale figure and the main subject share the SAME rendering scale; do not make the player arbitrarily tiny. Frozen players are stone-grey versions of the bean; normal active players are red or blue. No extra scenery, no decorative punctuation or symbols. Perfectly uniform opaque light-grey canvas; strict side orthographic silhouettes. Every supporting character or object explicitly required by a pose/state MUST be visibly drawn inside that scene; do not replace the interaction with only a facial expression. Fit every complete scene inside the canvas. Repeat EVERY listed state as a separate miniature to the RIGHT of the large primary view, INCLUDING idle even when identical to the large view. The large primary view does NOT substitute for any miniature state.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-4341b79a-95f1-416b-9fe0-d721bbcb1f64.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+M5.2 | mech_w5_icicle.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/mechanisms/mech_w5_icicle.png
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world5_ice_peaks.png
+D:/Cluade projects/games/Glue/assets/props/v1/crate.png
+Edit prompt:
+Image 1 is the existing falling icicle model sheet to edit; images 2–4 are style references. Keep everything the same, but change ONLY the LAST rightmost miniature: rotate and lift the icicle away from the frozen grey player's head, show a clear gap and the icicle DEFLECTED sideways/upwards after harmlessly bouncing off. The grey player stands rigid and entirely unharmed, intact head. Preserve the icicle's design, red warning tip, every other five poses including the large view, all rocks, scale player, navy outline, light-grey canvas. No text, letters, numbers, labels, arrows or frames.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-d24319f6-f51e-4bad-a1e1-d5d7530fa35b.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+M5.4 | mech_w5_thin_ice.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/mechanisms/mech_w5_thin_ice.png
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world5_ice_peaks.png
+D:/Cluade projects/games/Glue/assets/props/v1/crate.png
+Edit prompt:
+Image 1 is the existing thin-ice model sheet to edit; images 2–4 are style references. Keep everything the same, but make the horizontal ice sheets in the PRIMARY view and first TWO miniature scenes much THINNER: each walking surface is a delicate pale translucent almost-white ice film, only a narrow sliver of thickness, bridging the water. Remove the chunky thick blue-block bridge above the water and replace it with this very thin sheet. Single-player sheet intact; two-player sheet visibly cracks. Keep side supports and dark icy water under each sheet. Preserve broken-water scene and BOTH cracked vertical wall scenes including huge snowball smashing the wall. Preserve players, design, navy outlines and grey background. No text, labels, numbers, arrows or frames.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-fddf113a-6b0e-415c-ba55-32b27f75ea21.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+M6.1 | mech_w6_portals.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world6_sky_forge.png
+D:/Cluade projects/games/Glue/assets/props/v1/crate.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the concept sheet of the world where this mechanism is used — match its materials, palette and light. Attached image 3: an existing interactive prop of the game rendered in Blender — match its art style: chunky readable shapes, a thick dark navy outline, flat toon shading, light from the upper left. Do NOT copy layouts, text or UI from the attachments.
+
+Create ONE model sheet of an interactive MECHANISM for a 2D side-scrolling co-op platformer. Landscape 3:2. Plain flat light grey background (#E6E8EC), no scenery. On the left: the mechanism large, in strict side view (orthographic, no perspective). To its right, in one row, smaller and evenly spaced: the same mechanism in each state listed below, strict side view, same design and scale. A tiny simple red bean-shaped character stands next to the large view for scale (see Size). The mechanism has a thick dark navy outline around its silhouette and moving parts; dangerous parts have a small red warning accent. Clear, chunky, cartoon, readable as a small game sprite. No text, letters, numbers, labels, arrows, frames, logos or watermark.
+Mechanism: a pair of stone-and-bronze ring portals with swirling light, one orange and one blue.
+States: both idle; both active and swirling; a wooden crate halfway through the orange one and coming out of the blue one; a character flying out of the blue one.
+Size: each ring one and a half character heights.
+Neutral white balance. All listed states/poses must be complete and distinctly readable. Same design and consistent scale in every miniature. The main view is larger than the miniature views. Follow Size: the main red scale figure and the main subject share the SAME rendering scale; do not make the player arbitrarily tiny. Frozen players are stone-grey versions of the bean; normal active players are red or blue. No extra scenery, no decorative punctuation or symbols. Perfectly uniform opaque light-grey canvas; strict side orthographic silhouettes. Every supporting character or object explicitly required by a pose/state MUST be visibly drawn inside that scene; do not replace the interaction with only a facial expression. Fit every complete scene inside the canvas. Repeat EVERY listed state as a separate miniature to the RIGHT of the large primary view, INCLUDING idle even when identical to the large view. The large primary view does NOT substitute for any miniature state.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-6acc0ca3-f086-4646-ad24-8ebee77c3097.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+M6.2 | mech_w6_magnet.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world6_sky_forge.png
+D:/Cluade projects/games/Glue/assets/props/v1/crate.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the concept sheet of the world where this mechanism is used — match its materials, palette and light. Attached image 3: an existing interactive prop of the game rendered in Blender — match its art style: chunky readable shapes, a thick dark navy outline, flat toon shading, light from the upper left. Do NOT copy layouts, text or UI from the attachments.
+
+Create ONE model sheet of an interactive MECHANISM for a 2D side-scrolling co-op platformer. Landscape 3:2. Plain flat light grey background (#E6E8EC), no scenery. On the left: the mechanism large, in strict side view (orthographic, no perspective). To its right, in one row, smaller and evenly spaced: the same mechanism in each state listed below, strict side view, same design and scale. A tiny simple red bean-shaped character stands next to the large view for scale (see Size). The mechanism has a thick dark navy outline around its silhouette and moving parts; dangerous parts have a small red warning accent. Clear, chunky, cartoon, readable as a small game sprite. No text, letters, numbers, labels, arrows, frames, logos or watermark.
+Mechanism: a big forged horseshoe magnet on a bronze pivot arm, red and iron colored.
+States: off; on (soft pull lines); pulling a wooden crate and a frozen character toward it.
+Size: two tiles.
+Neutral white balance. All listed states/poses must be complete and distinctly readable. Same design and consistent scale in every miniature. The main view is larger than the miniature views. Follow Size: the main red scale figure and the main subject share the SAME rendering scale; do not make the player arbitrarily tiny. Frozen players are stone-grey versions of the bean; normal active players are red or blue. No extra scenery, no decorative punctuation or symbols. Perfectly uniform opaque light-grey canvas; strict side orthographic silhouettes. Every supporting character or object explicitly required by a pose/state MUST be visibly drawn inside that scene; do not replace the interaction with only a facial expression. Fit every complete scene inside the canvas. Repeat EVERY listed state as a separate miniature to the RIGHT of the large primary view, INCLUDING idle even when identical to the large view. The large primary view does NOT substitute for any miniature state.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-af8cd431-1c96-4d0d-9b44-5b98474ba5f1.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+M6.3 | mech_w6_vanishing_cloud.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world6_sky_forge.png
+D:/Cluade projects/games/Glue/assets/props/v1/crate.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the concept sheet of the world where this mechanism is used — match its materials, palette and light. Attached image 3: an existing interactive prop of the game rendered in Blender — match its art style: chunky readable shapes, a thick dark navy outline, flat toon shading, light from the upper left. Do NOT copy layouts, text or UI from the attachments.
+
+Create ONE model sheet of an interactive MECHANISM for a 2D side-scrolling co-op platformer. Landscape 3:2. Plain flat light grey background (#E6E8EC), no scenery. On the left: the mechanism large, in strict side view (orthographic, no perspective). To its right, in one row, smaller and evenly spaced: the same mechanism in each state listed below, strict side view, same design and scale. A tiny simple red bean-shaped character stands next to the large view for scale (see Size). The mechanism has a thick dark navy outline around its silhouette and moving parts; dangerous parts have a small red warning accent. Clear, chunky, cartoon, readable as a small game sprite. No text, letters, numbers, labels, arrows, frames, logos or watermark.
+Mechanism: a vanishing cloud platform — a fluffy firm cloud you can stand on, with a clear dark outline (unlike background clouds).
+States: solid; fading with a character on it (thin, blinking); gone (only a faint dotted outline where it will return).
+Size: three tiles wide, one tile thick.
+Neutral white balance. All listed states/poses must be complete and distinctly readable. Same design and consistent scale in every miniature. The main view is larger than the miniature views. Follow Size: the main red scale figure and the main subject share the SAME rendering scale; do not make the player arbitrarily tiny. Frozen players are stone-grey versions of the bean; normal active players are red or blue. No extra scenery, no decorative punctuation or symbols. Perfectly uniform opaque light-grey canvas; strict side orthographic silhouettes. Every supporting character or object explicitly required by a pose/state MUST be visibly drawn inside that scene; do not replace the interaction with only a facial expression. Fit every complete scene inside the canvas. Repeat EVERY listed state as a separate miniature to the RIGHT of the large primary view, INCLUDING idle even when identical to the large view. The large primary view does NOT substitute for any miniature state.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-a2770c15-19af-4ba1-84be-bc58ea6b2705.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+M6.4 | mech_w6_launch_cannon.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world6_sky_forge.png
+D:/Cluade projects/games/Glue/assets/props/v1/crate.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the concept sheet of the world where this mechanism is used — match its materials, palette and light. Attached image 3: an existing interactive prop of the game rendered in Blender — match its art style: chunky readable shapes, a thick dark navy outline, flat toon shading, light from the upper left. Do NOT copy layouts, text or UI from the attachments.
+
+Create ONE model sheet of an interactive MECHANISM for a 2D side-scrolling co-op platformer. Landscape 3:2. Plain flat light grey background (#E6E8EC), no scenery. On the left: the mechanism large, in strict side view (orthographic, no perspective). To its right, in one row, smaller and evenly spaced: the same mechanism in each state listed below, strict side view, same design and scale. A tiny simple red bean-shaped character stands next to the large view for scale (see Size). The mechanism has a thick dark navy outline around its silhouette and moving parts; dangerous parts have a small red warning accent. Clear, chunky, cartoon, readable as a small game sprite. No text, letters, numbers, labels, arrows, frames, logos or watermark.
+Mechanism: a bronze launch cannon on a swivel base with an aim lever that shoots a player across gaps.
+States: idle aimed low; aimed high; loaded (a character's head peeking out of the barrel); firing (cartoon puff, the character flying out).
+Size: two tiles long.
+Neutral white balance. All listed states/poses must be complete and distinctly readable. Same design and consistent scale in every miniature. The main view is larger than the miniature views. Follow Size: the main red scale figure and the main subject share the SAME rendering scale; do not make the player arbitrarily tiny. Frozen players are stone-grey versions of the bean; normal active players are red or blue. No extra scenery, no decorative punctuation or symbols. Perfectly uniform opaque light-grey canvas; strict side orthographic silhouettes. Every supporting character or object explicitly required by a pose/state MUST be visibly drawn inside that scene; do not replace the interaction with only a facial expression. Fit every complete scene inside the canvas. Repeat EVERY listed state as a separate miniature to the RIGHT of the large primary view, INCLUDING idle even when identical to the large view. The large primary view does NOT substitute for any miniature state.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-8baca497-ca85-49b1-8526-11bd19ca20a7.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+M6.5 | mech_w6_lantern.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world6_sky_forge.png
+D:/Cluade projects/games/Glue/assets/props/v1/crate.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the concept sheet of the world where this mechanism is used — match its materials, palette and light. Attached image 3: an existing interactive prop of the game rendered in Blender — match its art style: chunky readable shapes, a thick dark navy outline, flat toon shading, light from the upper left. Do NOT copy layouts, text or UI from the attachments.
+
+Create ONE model sheet of an interactive MECHANISM for a 2D side-scrolling co-op platformer. Landscape 3:2. Plain flat light grey background (#E6E8EC), no scenery. On the left: the mechanism large, in strict side view (orthographic, no perspective). To its right, in one row, smaller and evenly spaced: the same mechanism in each state listed below, strict side view, same design and scale. A tiny simple red bean-shaped character stands next to the large view for scale (see Size). The mechanism has a thick dark navy outline around its silhouette and moving parts; dangerous parts have a small red warning accent. Clear, chunky, cartoon, readable as a small game sprite. No text, letters, numbers, labels, arrows, frames, logos or watermark.
+Mechanism: a forge lantern of brass and glass that shadow ghosts are afraid of; it can hang on a hook or be carried.
+States: unlit on a hook; lit with a warm round light glow on a hook; floating behind a walking character like a carried key (lit).
+Size: half a character tall.
+Neutral white balance. All listed states/poses must be complete and distinctly readable. Same design and consistent scale in every miniature. The main view is larger than the miniature views. Follow Size: the main red scale figure and the main subject share the SAME rendering scale; do not make the player arbitrarily tiny. Frozen players are stone-grey versions of the bean; normal active players are red or blue. No extra scenery, no decorative punctuation or symbols. Perfectly uniform opaque light-grey canvas; strict side orthographic silhouettes. Every supporting character or object explicitly required by a pose/state MUST be visibly drawn inside that scene; do not replace the interaction with only a facial expression. Fit every complete scene inside the canvas. Repeat EVERY listed state as a separate miniature to the RIGHT of the large primary view, INCLUDING idle even when identical to the large view. The large primary view does NOT substitute for any miniature state.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-6639dc2c-1d57-4aea-bd3e-61a74251d9a3.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+M6.6 | mech_w6_gravity_crystal.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world6_sky_forge.png
+D:/Cluade projects/games/Glue/assets/props/v1/crate.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the concept sheet of the world where this mechanism is used — match its materials, palette and light. Attached image 3: an existing interactive prop of the game rendered in Blender — match its art style: chunky readable shapes, a thick dark navy outline, flat toon shading, light from the upper left. Do NOT copy layouts, text or UI from the attachments.
+
+Create ONE model sheet of an interactive MECHANISM for a 2D side-scrolling co-op platformer. Landscape 3:2. Plain flat light grey background (#E6E8EC), no scenery. On the left: the mechanism large, in strict side view (orthographic, no perspective). To its right, in one row, smaller and evenly spaced: the same mechanism in each state listed below, strict side view, same design and scale. A tiny simple red bean-shaped character stands next to the large view for scale (see Size). The mechanism has a thick dark navy outline around its silhouette and moving parts; dangerous parts have a small red warning accent. Clear, chunky, cartoon, readable as a small game sprite. No text, letters, numbers, labels, arrows, frames, logos or watermark.
+Mechanism: a floating violet gravity crystal in a bronze cradle that makes a zone of low gravity around it; inside the zone tiny pebbles and sparks float.
+States: off (crystal dull, resting in the cradle); on (crystal hovering and glowing, a soft round zone around it); a character jumping high inside the zone.
+Size: the crystal is half a character tall, the zone six tiles wide.
+Neutral white balance. All listed states/poses must be complete and distinctly readable. Same design and consistent scale in every miniature. The main view is larger than the miniature views. Follow Size: the main red scale figure and the main subject share the SAME rendering scale; do not make the player arbitrarily tiny. Frozen players are stone-grey versions of the bean; normal active players are red or blue. No extra scenery, no decorative punctuation or symbols. Perfectly uniform opaque light-grey canvas; strict side orthographic silhouettes. Every supporting character or object explicitly required by a pose/state MUST be visibly drawn inside that scene; do not replace the interaction with only a facial expression. Fit every complete scene inside the canvas. Repeat EVERY listed state as a separate miniature to the RIGHT of the large primary view, INCLUDING idle even when identical to the large view. The large primary view does NOT substitute for any miniature state.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-2c598601-6fed-4052-bfd2-ac43fc960870.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+M6.7 | mech_w6_swinging_island.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world6_sky_forge.png
+D:/Cluade projects/games/Glue/assets/props/v1/crate.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the concept sheet of the world where this mechanism is used — match its materials, palette and light. Attached image 3: an existing interactive prop of the game rendered in Blender — match its art style: chunky readable shapes, a thick dark navy outline, flat toon shading, light from the upper left. Do NOT copy layouts, text or UI from the attachments.
+
+Create ONE model sheet of an interactive MECHANISM for a 2D side-scrolling co-op platformer. Landscape 3:2. Plain flat light grey background (#E6E8EC), no scenery. On the left: the mechanism large, in strict side view (orthographic, no perspective). To its right, in one row, smaller and evenly spaced: the same mechanism in each state listed below, strict side view, same design and scale. A tiny simple red bean-shaped character stands next to the large view for scale (see Size). The mechanism has a thick dark navy outline around its silhouette and moving parts; dangerous parts have a small red warning accent. Clear, chunky, cartoon, readable as a small game sprite. No text, letters, numbers, labels, arrows, frames, logos or watermark.
+Mechanism: a small swinging island platform — a chunk of mossy stone hanging from two thick iron chains attached to a bronze beam above.
+States: hanging still; swinging to the left; swinging to the right with a character on it.
+Size: three tiles wide, chains four tiles long.
+Neutral white balance. All listed states/poses must be complete and distinctly readable. Same design and consistent scale in every miniature. The main view is larger than the miniature views. Follow Size: the main red scale figure and the main subject share the SAME rendering scale; do not make the player arbitrarily tiny. Frozen players are stone-grey versions of the bean; normal active players are red or blue. No extra scenery, no decorative punctuation or symbols. Perfectly uniform opaque light-grey canvas; strict side orthographic silhouettes. Every supporting character or object explicitly required by a pose/state MUST be visibly drawn inside that scene; do not replace the interaction with only a facial expression. Fit every complete scene inside the canvas. Repeat EVERY listed state as a separate miniature to the RIGHT of the large primary view, INCLUDING idle even when identical to the large view. The large primary view does NOT substitute for any miniature state.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-a469da52-ca2e-454e-8f16-7ff692bf6d33.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+M6.8 | mech_w6_updraft_vent.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world6_sky_forge.png
+D:/Cluade projects/games/Glue/assets/props/v1/crate.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the concept sheet of the world where this mechanism is used — match its materials, palette and light. Attached image 3: an existing interactive prop of the game rendered in Blender — match its art style: chunky readable shapes, a thick dark navy outline, flat toon shading, light from the upper left. Do NOT copy layouts, text or UI from the attachments.
+
+Create ONE model sheet of an interactive MECHANISM for a 2D side-scrolling co-op platformer. Landscape 3:2. Plain flat light grey background (#E6E8EC), no scenery. On the left: the mechanism large, in strict side view (orthographic, no perspective). To its right, in one row, smaller and evenly spaced: the same mechanism in each state listed below, strict side view, same design and scale. A tiny simple red bean-shaped character stands next to the large view for scale (see Size). The mechanism has a thick dark navy outline around its silhouette and moving parts; dangerous parts have a small red warning accent. Clear, chunky, cartoon, readable as a small game sprite. No text, letters, numbers, labels, arrows, frames, logos or watermark.
+Mechanism: an updraft vent — a round bronze grate in the floor that blows a strong column of warm air upward.
+States: off; on (a soft rising air column with small sparks); a character floating up in the column.
+Size: the grate is two tiles wide, the column six tiles high.
+Neutral white balance. All listed states/poses must be complete and distinctly readable. Same design and consistent scale in every miniature. The main view is larger than the miniature views. Follow Size: the main red scale figure and the main subject share the SAME rendering scale; do not make the player arbitrarily tiny. Frozen players are stone-grey versions of the bean; normal active players are red or blue. No extra scenery, no decorative punctuation or symbols. Perfectly uniform opaque light-grey canvas; strict side orthographic silhouettes. Every supporting character or object explicitly required by a pose/state MUST be visibly drawn inside that scene; do not replace the interaction with only a facial expression. Fit every complete scene inside the canvas. Repeat EVERY listed state as a separate miniature to the RIGHT of the large primary view, INCLUDING idle even when identical to the large view. The large primary view does NOT substitute for any miniature state.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-dcdfede9-da18-4f09-8ff6-c61681e429e9.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+M6.9 | mech_w6_molten_pour.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world6_sky_forge.png
+D:/Cluade projects/games/Glue/assets/props/v1/crate.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the concept sheet of the world where this mechanism is used — match its materials, palette and light. Attached image 3: an existing interactive prop of the game rendered in Blender — match its art style: chunky readable shapes, a thick dark navy outline, flat toon shading, light from the upper left. Do NOT copy layouts, text or UI from the attachments.
+
+Create ONE model sheet of an interactive MECHANISM for a 2D side-scrolling co-op platformer. Landscape 3:2. Plain flat light grey background (#E6E8EC), no scenery. On the left: the mechanism large, in strict side view (orthographic, no perspective). To its right, in one row, smaller and evenly spaced: the same mechanism in each state listed below, strict side view, same design and scale. A tiny simple red bean-shaped character stands next to the large view for scale (see Size). The mechanism has a thick dark navy outline around its silhouette and moving parts; dangerous parts have a small red warning accent. Clear, chunky, cartoon, readable as a small game sprite. No text, letters, numbers, labels, arrows, frames, logos or watermark.
+Mechanism: a forge spout high on a wall that pours a stream of molten glowing metal into a stone basin on a timed cycle.
+States: dry (spout glowing faintly); starting to pour; full stream pouring into the basin; a frozen stone-still character standing in the stream unharmed.
+Size: the stream is four tiles long.
+Neutral white balance. All listed states/poses must be complete and distinctly readable. Same design and consistent scale in every miniature. The main view is larger than the miniature views. Follow Size: the main red scale figure and the main subject share the SAME rendering scale; do not make the player arbitrarily tiny. Frozen players are stone-grey versions of the bean; normal active players are red or blue. No extra scenery, no decorative punctuation or symbols. Perfectly uniform opaque light-grey canvas; strict side orthographic silhouettes. Every supporting character or object explicitly required by a pose/state MUST be visibly drawn inside that scene; do not replace the interaction with only a facial expression. Fit every complete scene inside the canvas. Repeat EVERY listed state as a separate miniature to the RIGHT of the large primary view, INCLUDING idle even when identical to the large view. The large primary view does NOT substitute for any miniature state.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-fe4429d9-455c-4466-b5f6-fba5303e77a3.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+M6.7 | mech_w6_swinging_island.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/mechanisms/mech_w6_swinging_island.png
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world6_sky_forge.png
+D:/Cluade projects/games/Glue/assets/props/v1/crate.png
+Edit prompt:
+Image 1 is the existing swinging island sheet to edit. Images 2–4 are style references. Keep everything the same, but recolor ONLY every hanging chain in every scene to dark cool iron-grey metal with muted steel-grey highlights. The chains are IRON, not bronze or gold. Keep the top beams, fasteners and brackets bronze, preserve three miniature positions, blue rider, large primary island and red scale player, all stone, moss, navy outlines and grey background. No text, numbers, labels, arrows or frames.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-afae7706-51d6-46d9-a913-d90017c01c64.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+M6.6 | mech_w6_gravity_crystal.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/mechanisms/mech_w6_gravity_crystal.png
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world6_sky_forge.png
+D:/Cluade projects/games/Glue/assets/props/v1/crate.png
+Edit prompt:
+Image 1 is the existing gravity crystal model sheet to edit; images 2–4 are style references. Keep everything the same, but change ONLY the FIRST small miniature immediately to the right of the large view: this is OFF, so make its crystal dull muted violet without glow, remove pink light from underneath it and place its pointed bottom directly touching/resting in the bronze cradle. Preserve both ON miniatures and their round gravity zones, hovering pebbles and jumping player exactly. Preserve the primary view, red scale player, crystal design, navy outlines and light-grey background. No text, labels, numbers, arrows or frames.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-b139253b-87dc-43d3-8e71-55fbc09f6512.png

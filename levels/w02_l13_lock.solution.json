@@ -1,0 +1,2113 @@
+{
+ "rooms": [
+  {
+   "x": 1.0,
+   "w": 3,
+   "floor": 12.0,
+   "kind": "f",
+   "chamber": 0
+  },
+  {
+   "x": 5.0,
+   "w": 4,
+   "floor": 12.0,
+   "kind": "b",
+   "chamber": 0
+  },
+  {
+   "x": 9.0,
+   "w": 3,
+   "floor": 12.0,
+   "kind": "f",
+   "chamber": 0
+  },
+  {
+   "x": 13.0,
+   "w": 4,
+   "floor": 12.0,
+   "kind": "f",
+   "chamber": 0
+  },
+  {
+   "x": 17.0,
+   "w": 3,
+   "floor": 10.5,
+   "kind": "f",
+   "chamber": 1
+  },
+  {
+   "x": 21.0,
+   "w": 4,
+   "floor": 10.5,
+   "kind": "b",
+   "chamber": 1
+  },
+  {
+   "x": 26.0,
+   "w": 3,
+   "floor": 10.5,
+   "kind": "f",
+   "chamber": 1
+  },
+  {
+   "x": 30.0,
+   "w": 3,
+   "floor": 10.5,
+   "kind": "f",
+   "chamber": 1
+  },
+  {
+   "x": 34.0,
+   "w": 3,
+   "floor": 10.5,
+   "kind": "f",
+   "chamber": 1
+  },
+  {
+   "x": 38.0,
+   "w": 4,
+   "floor": 10.5,
+   "kind": "f",
+   "chamber": 1
+  },
+  {
+   "x": 42.0,
+   "w": 3,
+   "floor": 9.0,
+   "kind": "f",
+   "chamber": 2
+  },
+  {
+   "x": 46.0,
+   "w": 3,
+   "floor": 9.0,
+   "kind": "f",
+   "chamber": 2
+  },
+  {
+   "x": 50.0,
+   "w": 3,
+   "floor": 9.0,
+   "kind": "f",
+   "chamber": 2
+  },
+  {
+   "x": 54.0,
+   "w": 3,
+   "floor": 9.0,
+   "kind": "f",
+   "chamber": 2
+  },
+  {
+   "x": 58.0,
+   "w": 3,
+   "floor": 9.0,
+   "kind": "f",
+   "chamber": 2
+  },
+  {
+   "x": 62.0,
+   "w": 4,
+   "floor": 9.0,
+   "kind": "b",
+   "chamber": 2
+  },
+  {
+   "x": 67.0,
+   "w": 4,
+   "floor": 9.0,
+   "kind": "f",
+   "chamber": 2
+  },
+  {
+   "x": 71.0,
+   "w": 5,
+   "floor": 7.5,
+   "kind": "f",
+   "chamber": 3
+  },
+  {
+   "x": 77.0,
+   "w": 3,
+   "floor": 7.5,
+   "kind": "f",
+   "chamber": 3
+  },
+  {
+   "x": 81.0,
+   "w": 3,
+   "floor": 7.5,
+   "kind": "f",
+   "chamber": 3
+  },
+  {
+   "x": 85.0,
+   "w": 5,
+   "floor": 7.5,
+   "kind": "f",
+   "chamber": 3
+  },
+  {
+   "x": 91.0,
+   "w": 3,
+   "floor": 7.5,
+   "kind": "f",
+   "chamber": 3
+  },
+  {
+   "x": 95.0,
+   "w": 3,
+   "floor": 7.5,
+   "kind": "f",
+   "chamber": 3
+  },
+  {
+   "x": 99.0,
+   "w": 4,
+   "floor": 7.5,
+   "kind": "b",
+   "chamber": 3
+  },
+  {
+   "x": 104.0,
+   "w": 3,
+   "floor": 7.5,
+   "kind": "f",
+   "chamber": 3
+  }
+ ],
+ "doorways": [
+  {
+   "x": 4.0,
+   "floor": 12.0
+  },
+  {
+   "x": 8.5,
+   "floor": 12.0
+  },
+  {
+   "x": 12.0,
+   "floor": 12.0
+  },
+  {
+   "x": 20.0,
+   "floor": 10.5
+  },
+  {
+   "x": 25.0,
+   "floor": 10.5
+  },
+  {
+   "x": 29.0,
+   "floor": 10.5
+  },
+  {
+   "x": 33.0,
+   "floor": 10.5
+  },
+  {
+   "x": 37.0,
+   "floor": 10.5
+  },
+  {
+   "x": 45.0,
+   "floor": 9.0
+  },
+  {
+   "x": 49.0,
+   "floor": 9.0
+  },
+  {
+   "x": 53.0,
+   "floor": 9.0
+  },
+  {
+   "x": 57.0,
+   "floor": 9.0
+  },
+  {
+   "x": 61.0,
+   "floor": 9.0
+  },
+  {
+   "x": 66.0,
+   "floor": 9.0
+  },
+  {
+   "x": 76.0,
+   "floor": 7.5
+  },
+  {
+   "x": 80.0,
+   "floor": 7.5
+  },
+  {
+   "x": 84.0,
+   "floor": 7.5
+  },
+  {
+   "x": 90.0,
+   "floor": 7.5
+  },
+  {
+   "x": 94.0,
+   "floor": 7.5
+  },
+  {
+   "x": 98.0,
+   "floor": 7.5
+  },
+  {
+   "x": 103.0,
+   "floor": 7.5
+  }
+ ],
+ "steps": [
+  {
+   "do": "chamber",
+   "n": 0
+  },
+  {
+   "p": 1,
+   "do": "go",
+   "room": 1,
+   "after": [
+    0,
+    1
+   ],
+   "lever": [
+    "Lever1",
+    false
+   ]
+  },
+  {
+   "p": 1,
+   "do": "go",
+   "room": 2,
+   "after": [
+    0,
+    2
+   ],
+   "lever": [
+    "Lever1",
+    false
+   ]
+  },
+  {
+   "p": 0,
+   "do": "lever",
+   "name": "Lever1",
+   "after": [
+    0,
+    2
+   ],
+   "lever": [
+    "Lever1",
+    true
+   ]
+  },
+  {
+   "p": 1,
+   "do": "push_in",
+   "door": 2,
+   "after": [
+    0,
+    2
+   ],
+   "lever": [
+    "Lever1",
+    true
+   ]
+  },
+  {
+   "p": 0,
+   "do": "lever",
+   "name": "Lever1",
+   "after": [
+    0,
+    2
+   ],
+   "lever": [
+    "Lever1",
+    false
+   ]
+  },
+  {
+   "p": 0,
+   "do": "go",
+   "room": 1,
+   "after": [
+    1,
+    2
+   ],
+   "lever": [
+    "Lever1",
+    false
+   ]
+  },
+  {
+   "p": 1,
+   "do": "go",
+   "room": 3,
+   "after": [
+    1,
+    3
+   ],
+   "lever": [
+    "Lever1",
+    false
+   ]
+  },
+  {
+   "p": 0,
+   "do": "go",
+   "room": 2,
+   "after": [
+    2,
+    3
+   ],
+   "lever": [
+    "Lever1",
+    false
+   ]
+  },
+  {
+   "p": 0,
+   "do": "go",
+   "room": 3,
+   "after": [
+    3,
+    3
+   ],
+   "lever": [
+    "Lever1",
+    false
+   ]
+  },
+  {
+   "do": "chamber",
+   "n": 1
+  },
+  {
+   "p": 1,
+   "do": "go",
+   "room": 4,
+   "after": [
+    3,
+    4
+   ]
+  },
+  {
+   "p": 0,
+   "do": "go",
+   "room": 4,
+   "after": [
+    4,
+    4
+   ]
+  },
+  {
+   "p": 0,
+   "do": "lever",
+   "name": "Lever2",
+   "after": [
+    4,
+    4
+   ],
+   "lever": [
+    "Lever2",
+    true
+   ]
+  },
+  {
+   "p": 1,
+   "do": "go",
+   "room": 5,
+   "after": [
+    4,
+    5
+   ],
+   "lever": [
+    "Lever2",
+    true
+   ]
+  },
+  {
+   "p": 1,
+   "do": "push_out",
+   "door": 4,
+   "room": 6,
+   "after": [
+    4,
+    5
+   ],
+   "lever": [
+    "Lever2",
+    true
+   ]
+  },
+  {
+   "p": 1,
+   "do": "go",
+   "room": 6,
+   "after": [
+    4,
+    6
+   ],
+   "lever": [
+    "Lever2",
+    true
+   ]
+  },
+  {
+   "p": 1,
+   "do": "push_in",
+   "door": 5,
+   "after": [
+    4,
+    6
+   ],
+   "lever": [
+    "Lever2",
+    true
+   ]
+  },
+  {
+   "p": 1,
+   "do": "go",
+   "room": 7,
+   "after": [
+    4,
+    7
+   ],
+   "lever": [
+    "Lever2",
+    true
+   ]
+  },
+  {
+   "p": 0,
+   "do": "lever",
+   "name": "Lever2",
+   "after": [
+    4,
+    7
+   ],
+   "lever": [
+    "Lever2",
+    false
+   ]
+  },
+  {
+   "p": 1,
+   "do": "push_in",
+   "door": 6,
+   "after": [
+    4,
+    7
+   ],
+   "lever": [
+    "Lever2",
+    false
+   ]
+  },
+  {
+   "p": 1,
+   "do": "push_out",
+   "door": 6,
+   "room": 8,
+   "after": [
+    4,
+    7
+   ],
+   "lever": [
+    "Lever2",
+    false
+   ]
+  },
+  {
+   "p": 1,
+   "do": "pull",
+   "door": 5,
+   "room": 7,
+   "after": [
+    4,
+    7
+   ],
+   "lever": [
+    "Lever2",
+    false
+   ]
+  },
+  {
+   "p": 1,
+   "do": "push_in",
+   "door": 6,
+   "after": [
+    4,
+    7
+   ],
+   "lever": [
+    "Lever2",
+    false
+   ]
+  },
+  {
+   "p": 1,
+   "do": "go",
+   "room": 8,
+   "after": [
+    4,
+    8
+   ],
+   "lever": [
+    "Lever2",
+    false
+   ]
+  },
+  {
+   "p": 1,
+   "do": "push_in",
+   "door": 7,
+   "after": [
+    4,
+    8
+   ],
+   "lever": [
+    "Lever2",
+    false
+   ]
+  },
+  {
+   "p": 0,
+   "do": "lever",
+   "name": "Lever2",
+   "after": [
+    4,
+    8
+   ],
+   "lever": [
+    "Lever2",
+    true
+   ]
+  },
+  {
+   "p": 0,
+   "do": "go",
+   "room": 5,
+   "after": [
+    5,
+    8
+   ],
+   "lever": [
+    "Lever2",
+    true
+   ]
+  },
+  {
+   "p": 1,
+   "do": "go",
+   "room": 9,
+   "after": [
+    5,
+    9
+   ],
+   "lever": [
+    "Lever2",
+    true
+   ]
+  },
+  {
+   "p": 0,
+   "do": "go",
+   "room": 6,
+   "after": [
+    6,
+    9
+   ],
+   "lever": [
+    "Lever2",
+    true
+   ]
+  },
+  {
+   "p": 0,
+   "do": "go",
+   "room": 7,
+   "after": [
+    7,
+    9
+   ],
+   "lever": [
+    "Lever2",
+    true
+   ]
+  },
+  {
+   "p": 1,
+   "do": "go",
+   "room": 8,
+   "after": [
+    7,
+    8
+   ],
+   "lever": [
+    "Lever2",
+    true
+   ]
+  },
+  {
+   "p": 1,
+   "do": "go",
+   "room": 7,
+   "after": [
+    7,
+    7
+   ],
+   "lever": [
+    "Lever2",
+    true
+   ]
+  },
+  {
+   "p": 1,
+   "do": "go",
+   "room": 6,
+   "after": [
+    7,
+    6
+   ],
+   "lever": [
+    "Lever2",
+    true
+   ]
+  },
+  {
+   "p": 0,
+   "do": "go",
+   "room": 8,
+   "after": [
+    8,
+    6
+   ],
+   "lever": [
+    "Lever2",
+    true
+   ]
+  },
+  {
+   "p": 0,
+   "do": "go",
+   "room": 9,
+   "after": [
+    9,
+    6
+   ],
+   "lever": [
+    "Lever2",
+    true
+   ]
+  },
+  {
+   "p": 1,
+   "do": "go",
+   "room": 7,
+   "after": [
+    9,
+    7
+   ],
+   "lever": [
+    "Lever2",
+    true
+   ]
+  },
+  {
+   "p": 1,
+   "do": "go",
+   "room": 8,
+   "after": [
+    9,
+    8
+   ],
+   "lever": [
+    "Lever2",
+    true
+   ]
+  },
+  {
+   "p": 1,
+   "do": "go",
+   "room": 9,
+   "after": [
+    9,
+    9
+   ],
+   "lever": [
+    "Lever2",
+    true
+   ]
+  },
+  {
+   "do": "chamber",
+   "n": 2
+  },
+  {
+   "p": 1,
+   "do": "go",
+   "room": 10,
+   "after": [
+    9,
+    10
+   ]
+  },
+  {
+   "p": 0,
+   "do": "go",
+   "room": 10,
+   "after": [
+    10,
+    10
+   ]
+  },
+  {
+   "p": 1,
+   "do": "go",
+   "room": 11,
+   "after": [
+    10,
+    11
+   ],
+   "lever": [
+    "Lever3",
+    false
+   ]
+  },
+  {
+   "p": 0,
+   "do": "lever",
+   "name": "Lever3",
+   "after": [
+    10,
+    11
+   ],
+   "lever": [
+    "Lever3",
+    true
+   ]
+  },
+  {
+   "p": 1,
+   "do": "go",
+   "room": 12,
+   "after": [
+    10,
+    12
+   ],
+   "lever": [
+    "Lever3",
+    true
+   ]
+  },
+  {
+   "p": 1,
+   "do": "push_in",
+   "door": 9,
+   "after": [
+    10,
+    12
+   ],
+   "lever": [
+    "Lever3",
+    true
+   ]
+  },
+  {
+   "p": 0,
+   "do": "lever",
+   "name": "Lever3",
+   "after": [
+    10,
+    12
+   ],
+   "lever": [
+    "Lever3",
+    false
+   ]
+  },
+  {
+   "p": 0,
+   "do": "go",
+   "room": 11,
+   "after": [
+    11,
+    12
+   ],
+   "lever": [
+    "Lever3",
+    false
+   ]
+  },
+  {
+   "p": 1,
+   "do": "go",
+   "room": 13,
+   "after": [
+    11,
+    13
+   ],
+   "lever": [
+    "Lever3",
+    false
+   ]
+  },
+  {
+   "p": 1,
+   "do": "go",
+   "room": 14,
+   "after": [
+    11,
+    14
+   ],
+   "lever": [
+    "Lever3",
+    false
+   ]
+  },
+  {
+   "p": 0,
+   "do": "go",
+   "room": 10,
+   "after": [
+    10,
+    14
+   ],
+   "lever": [
+    "Lever3",
+    false
+   ]
+  },
+  {
+   "p": 0,
+   "do": "lever",
+   "name": "Lever3",
+   "after": [
+    10,
+    14
+   ],
+   "lever": [
+    "Lever3",
+    true
+   ]
+  },
+  {
+   "p": 1,
+   "do": "go",
+   "room": 15,
+   "after": [
+    10,
+    15
+   ],
+   "lever": [
+    "Lever3",
+    true
+   ]
+  },
+  {
+   "p": 1,
+   "do": "push_out",
+   "door": 13,
+   "room": 16,
+   "after": [
+    10,
+    15
+   ],
+   "lever": [
+    "Lever3",
+    true
+   ]
+  },
+  {
+   "p": 1,
+   "do": "go",
+   "room": 16,
+   "after": [
+    10,
+    16
+   ],
+   "lever": [
+    "Lever3",
+    true
+   ]
+  },
+  {
+   "p": 1,
+   "do": "push_in",
+   "door": 13,
+   "after": [
+    10,
+    16
+   ],
+   "lever": [
+    "Lever3",
+    true
+   ]
+  },
+  {
+   "p": 0,
+   "do": "lever",
+   "name": "Lever3",
+   "after": [
+    10,
+    16
+   ],
+   "lever": [
+    "Lever3",
+    false
+   ]
+  },
+  {
+   "p": 0,
+   "do": "go",
+   "room": 11,
+   "after": [
+    11,
+    16
+   ],
+   "lever": [
+    "Lever3",
+    false
+   ]
+  },
+  {
+   "p": 0,
+   "do": "go",
+   "room": 12,
+   "after": [
+    12,
+    16
+   ],
+   "lever": [
+    "Lever3",
+    false
+   ]
+  },
+  {
+   "p": 0,
+   "do": "go",
+   "room": 13,
+   "after": [
+    13,
+    16
+   ],
+   "lever": [
+    "Lever3",
+    false
+   ]
+  },
+  {
+   "p": 0,
+   "do": "go",
+   "room": 14,
+   "after": [
+    14,
+    16
+   ],
+   "lever": [
+    "Lever3",
+    false
+   ]
+  },
+  {
+   "p": 1,
+   "do": "push_out",
+   "door": 13,
+   "room": 15,
+   "after": [
+    14,
+    15
+   ],
+   "lever": [
+    "Lever3",
+    false
+   ]
+  },
+  {
+   "p": 0,
+   "do": "pull",
+   "door": 12,
+   "room": 14,
+   "after": [
+    14,
+    15
+   ],
+   "lever": [
+    "Lever3",
+    false
+   ]
+  },
+  {
+   "p": 0,
+   "do": "push_in",
+   "door": 11,
+   "after": [
+    14,
+    15
+   ],
+   "lever": [
+    "Lever3",
+    false
+   ]
+  },
+  {
+   "p": 0,
+   "do": "go",
+   "room": 13,
+   "after": [
+    13,
+    15
+   ],
+   "lever": [
+    "Lever3",
+    false
+   ]
+  },
+  {
+   "p": 0,
+   "do": "go",
+   "room": 12,
+   "after": [
+    12,
+    15
+   ],
+   "lever": [
+    "Lever3",
+    false
+   ]
+  },
+  {
+   "p": 0,
+   "do": "go",
+   "room": 11,
+   "after": [
+    11,
+    15
+   ],
+   "lever": [
+    "Lever3",
+    false
+   ]
+  },
+  {
+   "p": 0,
+   "do": "pull",
+   "door": 9,
+   "room": 11,
+   "after": [
+    11,
+    15
+   ],
+   "lever": [
+    "Lever3",
+    false
+   ]
+  },
+  {
+   "p": 0,
+   "do": "push_in",
+   "door": 8,
+   "after": [
+    11,
+    15
+   ],
+   "lever": [
+    "Lever3",
+    false
+   ]
+  },
+  {
+   "p": 0,
+   "do": "go",
+   "room": 10,
+   "after": [
+    10,
+    15
+   ],
+   "lever": [
+    "Lever3",
+    false
+   ]
+  },
+  {
+   "p": 0,
+   "do": "lever",
+   "name": "Lever3",
+   "after": [
+    10,
+    15
+   ],
+   "lever": [
+    "Lever3",
+    true
+   ]
+  },
+  {
+   "p": 1,
+   "do": "go",
+   "room": 16,
+   "after": [
+    10,
+    16
+   ],
+   "lever": [
+    "Lever3",
+    true
+   ]
+  },
+  {
+   "p": 0,
+   "do": "go",
+   "room": 11,
+   "after": [
+    11,
+    16
+   ],
+   "lever": [
+    "Lever3",
+    true
+   ]
+  },
+  {
+   "p": 0,
+   "do": "go",
+   "room": 12,
+   "after": [
+    12,
+    16
+   ],
+   "lever": [
+    "Lever3",
+    true
+   ]
+  },
+  {
+   "p": 0,
+   "do": "go",
+   "room": 13,
+   "after": [
+    13,
+    16
+   ],
+   "lever": [
+    "Lever3",
+    true
+   ]
+  },
+  {
+   "p": 0,
+   "do": "go",
+   "room": 14,
+   "after": [
+    14,
+    16
+   ],
+   "lever": [
+    "Lever3",
+    true
+   ]
+  },
+  {
+   "p": 0,
+   "do": "go",
+   "room": 15,
+   "after": [
+    15,
+    16
+   ],
+   "lever": [
+    "Lever3",
+    true
+   ]
+  },
+  {
+   "p": 0,
+   "do": "go",
+   "room": 16,
+   "after": [
+    16,
+    16
+   ],
+   "lever": [
+    "Lever3",
+    true
+   ]
+  },
+  {
+   "do": "chamber",
+   "n": 3
+  },
+  {
+   "p": 1,
+   "do": "go",
+   "room": 17,
+   "after": [
+    16,
+    17
+   ]
+  },
+  {
+   "p": 0,
+   "do": "go",
+   "room": 17,
+   "after": [
+    17,
+    17
+   ]
+  },
+  {
+   "p": 1,
+   "do": "go",
+   "room": 18,
+   "after": [
+    17,
+    18
+   ],
+   "lever": [
+    "Lever4",
+    false
+   ]
+  },
+  {
+   "p": 0,
+   "do": "lever",
+   "name": "Lever4",
+   "after": [
+    17,
+    18
+   ],
+   "lever": [
+    "Lever4",
+    true
+   ]
+  },
+  {
+   "p": 1,
+   "do": "go",
+   "room": 19,
+   "after": [
+    17,
+    19
+   ],
+   "lever": [
+    "Lever4",
+    true
+   ]
+  },
+  {
+   "p": 0,
+   "do": "lever",
+   "name": "Lever4",
+   "after": [
+    17,
+    19
+   ],
+   "lever": [
+    "Lever4",
+    false
+   ]
+  },
+  {
+   "p": 1,
+   "do": "go",
+   "room": 20,
+   "after": [
+    17,
+    20
+   ],
+   "lever": [
+    "Lever4",
+    false
+   ]
+  },
+  {
+   "p": 0,
+   "do": "lever",
+   "name": "Lever4",
+   "after": [
+    17,
+    20
+   ],
+   "lever": [
+    "Lever4",
+    true
+   ]
+  },
+  {
+   "p": 1,
+   "do": "go",
+   "room": 21,
+   "after": [
+    17,
+    21
+   ],
+   "lever": [
+    "Lever4",
+    true
+   ]
+  },
+  {
+   "p": 1,
+   "do": "go",
+   "room": 22,
+   "after": [
+    17,
+    22
+   ],
+   "lever": [
+    "Lever4",
+    true
+   ]
+  },
+  {
+   "p": 1,
+   "do": "pull",
+   "door": 19,
+   "room": 22,
+   "after": [
+    17,
+    22
+   ],
+   "lever": [
+    "Lever4",
+    true
+   ]
+  },
+  {
+   "p": 1,
+   "do": "push_in",
+   "door": 18,
+   "after": [
+    17,
+    22
+   ],
+   "lever": [
+    "Lever4",
+    true
+   ]
+  },
+  {
+   "p": 1,
+   "do": "go",
+   "room": 21,
+   "after": [
+    17,
+    21
+   ],
+   "lever": [
+    "Lever4",
+    true
+   ]
+  },
+  {
+   "p": 1,
+   "do": "push_in",
+   "door": 17,
+   "after": [
+    17,
+    21
+   ],
+   "lever": [
+    "Lever4",
+    true
+   ]
+  },
+  {
+   "p": 1,
+   "do": "push_out",
+   "door": 17,
+   "room": 20,
+   "after": [
+    17,
+    21
+   ],
+   "lever": [
+    "Lever4",
+    true
+   ]
+  },
+  {
+   "p": 1,
+   "do": "pull",
+   "door": 18,
+   "room": 21,
+   "after": [
+    17,
+    21
+   ],
+   "lever": [
+    "Lever4",
+    true
+   ]
+  },
+  {
+   "p": 1,
+   "do": "push_in",
+   "door": 17,
+   "after": [
+    17,
+    21
+   ],
+   "lever": [
+    "Lever4",
+    true
+   ]
+  },
+  {
+   "p": 0,
+   "do": "lever",
+   "name": "Lever4",
+   "after": [
+    17,
+    21
+   ],
+   "lever": [
+    "Lever4",
+    false
+   ]
+  },
+  {
+   "p": 0,
+   "do": "go",
+   "room": 18,
+   "after": [
+    18,
+    21
+   ],
+   "lever": [
+    "Lever4",
+    false
+   ]
+  },
+  {
+   "p": 1,
+   "do": "go",
+   "room": 20,
+   "after": [
+    18,
+    20
+   ],
+   "lever": [
+    "Lever4",
+    false
+   ]
+  },
+  {
+   "p": 1,
+   "do": "push_in",
+   "door": 16,
+   "after": [
+    18,
+    20
+   ],
+   "lever": [
+    "Lever4",
+    false
+   ]
+  },
+  {
+   "p": 1,
+   "do": "push_out",
+   "door": 16,
+   "room": 19,
+   "after": [
+    18,
+    20
+   ],
+   "lever": [
+    "Lever4",
+    false
+   ]
+  },
+  {
+   "p": 1,
+   "do": "pull",
+   "door": 17,
+   "room": 20,
+   "after": [
+    18,
+    20
+   ],
+   "lever": [
+    "Lever4",
+    false
+   ]
+  },
+  {
+   "p": 1,
+   "do": "push_in",
+   "door": 16,
+   "after": [
+    18,
+    20
+   ],
+   "lever": [
+    "Lever4",
+    false
+   ]
+  },
+  {
+   "p": 1,
+   "do": "go",
+   "room": 19,
+   "after": [
+    18,
+    19
+   ],
+   "lever": [
+    "Lever4",
+    false
+   ]
+  },
+  {
+   "p": 0,
+   "do": "go",
+   "room": 17,
+   "after": [
+    17,
+    19
+   ],
+   "lever": [
+    "Lever4",
+    false
+   ]
+  },
+  {
+   "p": 0,
+   "do": "lever",
+   "name": "Lever4",
+   "after": [
+    17,
+    19
+   ],
+   "lever": [
+    "Lever4",
+    true
+   ]
+  },
+  {
+   "p": 1,
+   "do": "push_in",
+   "door": 15,
+   "after": [
+    17,
+    19
+   ],
+   "lever": [
+    "Lever4",
+    true
+   ]
+  },
+  {
+   "p": 0,
+   "do": "lever",
+   "name": "Lever4",
+   "after": [
+    17,
+    19
+   ],
+   "lever": [
+    "Lever4",
+    false
+   ]
+  },
+  {
+   "p": 0,
+   "do": "go",
+   "room": 18,
+   "after": [
+    18,
+    19
+   ],
+   "lever": [
+    "Lever4",
+    false
+   ]
+  },
+  {
+   "p": 0,
+   "do": "pull",
+   "door": 15,
+   "room": 18,
+   "after": [
+    18,
+    19
+   ],
+   "lever": [
+    "Lever4",
+    false
+   ]
+  },
+  {
+   "p": 0,
+   "do": "push_in",
+   "door": 14,
+   "after": [
+    18,
+    19
+   ],
+   "lever": [
+    "Lever4",
+    false
+   ]
+  },
+  {
+   "p": 0,
+   "do": "go",
+   "room": 17,
+   "after": [
+    17,
+    19
+   ],
+   "lever": [
+    "Lever4",
+    false
+   ]
+  },
+  {
+   "p": 0,
+   "do": "lever",
+   "name": "Lever4",
+   "after": [
+    17,
+    19
+   ],
+   "lever": [
+    "Lever4",
+    true
+   ]
+  },
+  {
+   "p": 0,
+   "do": "go",
+   "room": 18,
+   "after": [
+    18,
+    19
+   ],
+   "lever": [
+    "Lever4",
+    true
+   ]
+  },
+  {
+   "p": 1,
+   "do": "go",
+   "room": 20,
+   "after": [
+    18,
+    20
+   ],
+   "lever": [
+    "Lever4",
+    true
+   ]
+  },
+  {
+   "p": 1,
+   "do": "go",
+   "room": 21,
+   "after": [
+    18,
+    21
+   ],
+   "lever": [
+    "Lever4",
+    true
+   ]
+  },
+  {
+   "p": 1,
+   "do": "go",
+   "room": 22,
+   "after": [
+    18,
+    22
+   ],
+   "lever": [
+    "Lever4",
+    true
+   ]
+  },
+  {
+   "p": 0,
+   "do": "go",
+   "room": 19,
+   "after": [
+    19,
+    22
+   ],
+   "lever": [
+    "Lever4",
+    true
+   ]
+  },
+  {
+   "p": 0,
+   "do": "go",
+   "room": 20,
+   "after": [
+    20,
+    22
+   ],
+   "lever": [
+    "Lever4",
+    true
+   ]
+  },
+  {
+   "p": 0,
+   "do": "pull",
+   "door": 16,
+   "room": 20,
+   "after": [
+    20,
+    22
+   ],
+   "lever": [
+    "Lever4",
+    true
+   ]
+  },
+  {
+   "p": 0,
+   "do": "push_in",
+   "door": 17,
+   "after": [
+    20,
+    22
+   ],
+   "lever": [
+    "Lever4",
+    true
+   ]
+  },
+  {
+   "p": 0,
+   "do": "go",
+   "room": 21,
+   "after": [
+    21,
+    22
+   ],
+   "lever": [
+    "Lever4",
+    true
+   ]
+  },
+  {
+   "p": 0,
+   "do": "pull",
+   "door": 17,
+   "room": 21,
+   "after": [
+    21,
+    22
+   ],
+   "lever": [
+    "Lever4",
+    true
+   ]
+  },
+  {
+   "p": 0,
+   "do": "push_in",
+   "door": 18,
+   "after": [
+    21,
+    22
+   ],
+   "lever": [
+    "Lever4",
+    true
+   ]
+  },
+  {
+   "p": 0,
+   "do": "push_out",
+   "door": 18,
+   "room": 22,
+   "after": [
+    21,
+    22
+   ],
+   "lever": [
+    "Lever4",
+    true
+   ]
+  },
+  {
+   "p": 1,
+   "do": "push_in",
+   "door": 19,
+   "after": [
+    21,
+    22
+   ],
+   "lever": [
+    "Lever4",
+    true
+   ]
+  },
+  {
+   "p": 1,
+   "do": "go",
+   "room": 21,
+   "after": [
+    21,
+    21
+   ],
+   "lever": [
+    "Lever4",
+    true
+   ]
+  },
+  {
+   "p": 1,
+   "do": "go",
+   "room": 20,
+   "after": [
+    21,
+    20
+   ],
+   "lever": [
+    "Lever4",
+    true
+   ]
+  },
+  {
+   "p": 1,
+   "do": "lever",
+   "name": "Lever4M",
+   "after": [
+    21,
+    20
+   ],
+   "lever": [
+    "Lever4",
+    true
+   ]
+  },
+  {
+   "p": 1,
+   "do": "go",
+   "room": 21,
+   "after": [
+    21,
+    21
+   ],
+   "lever": [
+    "Lever4",
+    true
+   ]
+  },
+  {
+   "p": 1,
+   "do": "go",
+   "room": 22,
+   "after": [
+    21,
+    22
+   ],
+   "lever": [
+    "Lever4",
+    true
+   ]
+  },
+  {
+   "p": 1,
+   "do": "push_out",
+   "door": 19,
+   "room": 23,
+   "after": [
+    21,
+    23
+   ],
+   "lever": [
+    "Lever4",
+    true
+   ]
+  },
+  {
+   "p": 1,
+   "do": "push_out",
+   "door": 20,
+   "room": 24,
+   "after": [
+    21,
+    23
+   ],
+   "lever": [
+    "Lever4",
+    true
+   ]
+  },
+  {
+   "p": 1,
+   "do": "go",
+   "room": 24,
+   "after": [
+    21,
+    24
+   ],
+   "lever": [
+    "Lever4",
+    true
+   ]
+  },
+  {
+   "p": 0,
+   "do": "go",
+   "room": 20,
+   "after": [
+    20,
+    24
+   ],
+   "lever": [
+    "Lever4",
+    true
+   ]
+  },
+  {
+   "p": 1,
+   "do": "push_in",
+   "door": 20,
+   "after": [
+    20,
+    24
+   ],
+   "lever": [
+    "Lever4",
+    true
+   ]
+  },
+  {
+   "p": 0,
+   "do": "lever",
+   "name": "Lever4M",
+   "after": [
+    20,
+    24
+   ],
+   "lever": [
+    "Lever4",
+    true
+   ]
+  },
+  {
+   "p": 1,
+   "do": "push_out",
+   "door": 20,
+   "room": 23,
+   "after": [
+    20,
+    23
+   ],
+   "lever": [
+    "Lever4",
+    true
+   ]
+  },
+  {
+   "p": 0,
+   "do": "lever",
+   "name": "Lever4M",
+   "after": [
+    20,
+    23
+   ],
+   "lever": [
+    "Lever4",
+    true
+   ]
+  },
+  {
+   "p": 1,
+   "do": "go",
+   "room": 24,
+   "after": [
+    20,
+    24
+   ],
+   "lever": [
+    "Lever4",
+    true
+   ]
+  },
+  {
+   "p": 0,
+   "do": "go",
+   "room": 21,
+   "after": [
+    21,
+    24
+   ],
+   "lever": [
+    "Lever4",
+    true
+   ]
+  },
+  {
+   "p": 0,
+   "do": "go",
+   "room": 22,
+   "after": [
+    22,
+    24
+   ],
+   "lever": [
+    "Lever4",
+    true
+   ]
+  },
+  {
+   "p": 0,
+   "do": "push_out",
+   "door": 19,
+   "room": 23,
+   "after": [
+    23,
+    24
+   ],
+   "lever": [
+    "Lever4",
+    true
+   ]
+  },
+  {
+   "p": 0,
+   "do": "push_out",
+   "door": 20,
+   "room": 24,
+   "after": [
+    23,
+    24
+   ],
+   "lever": [
+    "Lever4",
+    true
+   ]
+  },
+  {
+   "p": 0,
+   "do": "go",
+   "room": 24,
+   "after": [
+    24,
+    24
+   ],
+   "lever": [
+    "Lever4",
+    true
+   ]
+  }
+ ]
+}

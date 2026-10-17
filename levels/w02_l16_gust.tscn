@@ -1,0 +1,322 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://src/level/greybox_level.gd" id="1"]
+[ext_resource type="PackedScene" path="res://levels/backdrops/w02_machine.tscn" id="bd"]
+[ext_resource type="Script" path="res://src/level/backdrop_layer.gd" id="bl"]
+[ext_resource type="Texture2D" path="res://assets/backgrounds/world_02/source/w02_lm16_wind_tunnel.png" id="lm"]
+[ext_resource type="Script" path="res://src/mechanisms/bellows.gd" id="bellows"]
+[ext_resource type="Script" path="res://src/mechanisms/brittle_floor.gd" id="brittle"]
+[ext_resource type="Script" path="res://src/mechanisms/finish.gd" id="finish"]
+[ext_resource type="Script" path="res://src/mechanisms/hook.gd" id="hook"]
+[ext_resource type="Script" path="res://src/mechanisms/spikes.gd" id="spikes"]
+
+[node name="W02L16" type="Node2D"]
+script = ExtResource("1")
+title = "16 · Порыв"
+blocks = Array[Rect2]([Rect2(0, -8, 1, 30), Rect2(105, -8, 1, 30), Rect2(1, -8, 6.5, 6), Rect2(7.5, -8, 21.5, 2), Rect2(7.5, 2, 3, 16), Rect2(1, 15, 17, 3), Rect2(6, 12, 1.5, 3), Rect2(10.5, 12, 1.5, 3), Rect2(17, 2, 10.5, 16), Rect2(29, -8, 33, 7.5), Rect2(29, 2, 2, 2.5), Rect2(27.5, 8, 3.5, 2.5), Rect2(31, 4.5, 27, 1), Rect2(58, 2, 2, 3.5), Rect2(31, 10.5, 68, 7.5), Rect2(58, 8, 8, 2.5), Rect2(62, -8, 44, 13.5), Rect2(99, 8, 7, 10)])
+checkpoints = Array[Vector2]([Vector2(6.75, 12), Vector2(24, 2), Vector2(63, 8)])
+slot_spawns = Array[Vector2]([Vector2(6.75, 12), Vector2(11.25, 12)])
+bounds_tiles = Rect2(0, -8, 106, 30)
+kill_y_tiles = 22
+ground_fill = "w02_fill"
+ground_deep = "w02_deep"
+ground_top = "w02_top"
+ground_side = "w02_side"
+
+[node name="SpikesA" type="Node2D" parent="."]
+position = Vector2(272, 960)
+script = ExtResource("spikes")
+width_tiles = 6.5
+
+[node name="SpikesB" type="Node2D" parent="."]
+position = Vector2(880, 960)
+script = ExtResource("spikes")
+width_tiles = 6.5
+
+[node name="LedgeA1" type="StaticBody2D" parent="."]
+position = Vector2(64, 640)
+script = ExtResource("brittle")
+width_tiles = 1.5
+crumble_time = 2.6
+
+[node name="LedgeA2" type="StaticBody2D" parent="."]
+position = Vector2(384, 512)
+script = ExtResource("brittle")
+width_tiles = 1.5
+crumble_time = 2.6
+
+[node name="LedgeA3" type="StaticBody2D" parent="."]
+position = Vector2(64, 384)
+script = ExtResource("brittle")
+width_tiles = 1.5
+crumble_time = 2.6
+
+[node name="LedgeA4" type="StaticBody2D" parent="."]
+position = Vector2(384, 256)
+script = ExtResource("brittle")
+width_tiles = 1.5
+crumble_time = 2.6
+
+[node name="WindAR" type="Node2D" parent="."]
+position = Vector2(64, 448)
+script = ExtResource("bellows")
+length_tiles = 6.5
+height_tiles = 10.0
+gust_time = 1.0
+auto_period = 2.0
+auto_offset = 0.4
+
+[node name="WindAL" type="Node2D" parent="."]
+position = Vector2(480, 448)
+script = ExtResource("bellows")
+direction = -1
+length_tiles = 6.5
+height_tiles = 10.0
+gust_time = 1.0
+auto_period = 2.0
+auto_offset = 1.4
+
+[node name="LedgeB1" type="StaticBody2D" parent="."]
+position = Vector2(992, 640)
+script = ExtResource("brittle")
+width_tiles = 1.5
+crumble_time = 2.2
+
+[node name="LedgeB2" type="StaticBody2D" parent="."]
+position = Vector2(672, 512)
+script = ExtResource("brittle")
+width_tiles = 1.5
+crumble_time = 2.2
+
+[node name="LedgeB3" type="StaticBody2D" parent="."]
+position = Vector2(992, 384)
+script = ExtResource("brittle")
+width_tiles = 1.5
+crumble_time = 2.2
+
+[node name="LedgeB4" type="StaticBody2D" parent="."]
+position = Vector2(672, 256)
+script = ExtResource("brittle")
+width_tiles = 1.5
+crumble_time = 2.2
+
+[node name="WindBR" type="Node2D" parent="."]
+position = Vector2(672, 448)
+script = ExtResource("bellows")
+length_tiles = 6.5
+height_tiles = 10.0
+gust_time = 0.8
+auto_period = 1.6
+auto_offset = 0.4
+
+[node name="WindBL" type="Node2D" parent="."]
+position = Vector2(1088, 448)
+script = ExtResource("bellows")
+direction = -1
+length_tiles = 6.5
+height_tiles = 10.0
+gust_time = 0.8
+auto_period = 1.6
+auto_offset = 1.2
+
+[node name="Hook" type="Node2D" parent="."]
+position = Vector2(704, -192)
+script = ExtResource("hook")
+
+[node name="SpikesU" type="Node2D" parent="."]
+position = Vector2(2848, 288)
+script = ExtResource("spikes")
+width_tiles = 27.0
+
+[node name="SpikesL" type="Node2D" parent="."]
+position = Vector2(2848, 672)
+script = ExtResource("spikes")
+width_tiles = 27.0
+
+[node name="StoneU1" type="StaticBody2D" parent="."]
+position = Vector2(2176, 128)
+script = ExtResource("brittle")
+width_tiles = 3
+crumble_time = 2.6
+
+[node name="StoneU2" type="StaticBody2D" parent="."]
+position = Vector2(2560, 128)
+script = ExtResource("brittle")
+width_tiles = 3
+crumble_time = 2.6
+
+[node name="StoneU3" type="StaticBody2D" parent="."]
+position = Vector2(2944, 128)
+script = ExtResource("brittle")
+width_tiles = 3
+crumble_time = 2.6
+
+[node name="StoneU4" type="StaticBody2D" parent="."]
+position = Vector2(3328, 128)
+script = ExtResource("brittle")
+width_tiles = 3
+crumble_time = 2.6
+
+[node name="WindUR" type="Node2D" parent="."]
+position = Vector2(1984, 48)
+script = ExtResource("bellows")
+length_tiles = 27
+height_tiles = 2.4
+gust_time = 1.0
+auto_period = 2.2
+auto_offset = 0
+strength = 0.65
+
+[node name="WindUL" type="Node2D" parent="."]
+position = Vector2(3712, 48)
+script = ExtResource("bellows")
+direction = -1
+length_tiles = 27
+height_tiles = 2.4
+gust_time = 1.0
+auto_period = 2.2
+auto_offset = 1.1
+strength = 0.65
+
+[node name="StoneL1" type="StaticBody2D" parent="."]
+position = Vector2(2176, 512)
+script = ExtResource("brittle")
+width_tiles = 3
+crumble_time = 2.1
+
+[node name="StoneL2" type="StaticBody2D" parent="."]
+position = Vector2(2560, 512)
+script = ExtResource("brittle")
+width_tiles = 3
+crumble_time = 2.1
+
+[node name="StoneL3" type="StaticBody2D" parent="."]
+position = Vector2(2944, 512)
+script = ExtResource("brittle")
+width_tiles = 3
+crumble_time = 2.1
+
+[node name="StoneL4" type="StaticBody2D" parent="."]
+position = Vector2(3328, 512)
+script = ExtResource("brittle")
+width_tiles = 3
+crumble_time = 2.1
+
+[node name="WindLR" type="Node2D" parent="."]
+position = Vector2(1984, 432)
+script = ExtResource("bellows")
+length_tiles = 27
+height_tiles = 2.4
+gust_time = 0.8
+auto_period = 1.7
+auto_offset = 0.3
+strength = 0.65
+
+[node name="WindLL" type="Node2D" parent="."]
+position = Vector2(3712, 432)
+script = ExtResource("bellows")
+direction = -1
+length_tiles = 27
+height_tiles = 2.4
+gust_time = 0.8
+auto_period = 1.7
+auto_offset = 1.15
+strength = 0.65
+
+[node name="StoneJ1" type="StaticBody2D" parent="."]
+position = Vector2(4416, 512)
+script = ExtResource("brittle")
+width_tiles = 3.0
+crumble_time = 2.4
+
+[node name="StoneJ2" type="StaticBody2D" parent="."]
+position = Vector2(4800, 512)
+script = ExtResource("brittle")
+width_tiles = 3.0
+crumble_time = 2.4
+
+[node name="StoneJ3" type="StaticBody2D" parent="."]
+position = Vector2(5184, 512)
+script = ExtResource("brittle")
+width_tiles = 3.0
+crumble_time = 2.4
+
+[node name="StoneJ4" type="StaticBody2D" parent="."]
+position = Vector2(5568, 512)
+script = ExtResource("brittle")
+width_tiles = 3.0
+crumble_time = 1.9
+
+[node name="StoneJ5" type="StaticBody2D" parent="."]
+position = Vector2(5952, 512)
+script = ExtResource("brittle")
+width_tiles = 3.0
+crumble_time = 1.9
+
+[node name="SpikesJ" type="Node2D" parent="."]
+position = Vector2(5280, 672)
+script = ExtResource("spikes")
+width_tiles = 33.0
+
+[node name="WindJ1R" type="Node2D" parent="."]
+position = Vector2(4224, 432)
+script = ExtResource("bellows")
+direction = 1
+length_tiles = 18
+height_tiles = 2.4
+gust_time = 0.9
+auto_period = 2.0
+auto_offset = 0
+strength = 0.65
+
+[node name="WindJ1L" type="Node2D" parent="."]
+position = Vector2(5376, 432)
+script = ExtResource("bellows")
+direction = -1
+length_tiles = 18
+height_tiles = 2.4
+gust_time = 0.9
+auto_period = 2.0
+auto_offset = 1
+strength = 0.65
+
+[node name="WindJ2R" type="Node2D" parent="."]
+position = Vector2(5376, 432)
+script = ExtResource("bellows")
+direction = 1
+length_tiles = 15
+height_tiles = 2.4
+gust_time = 0.7
+auto_period = 1.5
+auto_offset = 0.2
+strength = 0.65
+
+[node name="WindJ2L" type="Node2D" parent="."]
+position = Vector2(6336, 432)
+script = ExtResource("bellows")
+direction = -1
+length_tiles = 15
+height_tiles = 2.4
+gust_time = 0.7
+auto_period = 1.5
+auto_offset = 0.95
+strength = 0.65
+
+[node name="Finish" type="Node2D" parent="."]
+position = Vector2(6592, 512)
+script = ExtResource("finish")
+
+[node name="Backdrop" parent="." instance=ExtResource("bd")]
+
+[node name="Landmark" type="Node2D" parent="Backdrop"]
+script = ExtResource("bl")
+texture = ExtResource("lm")
+parallax = 0.3
+parallax_y = 0.1
+height = 0.6
+center_y = 0.55
+zoom_follow = 0.3
+repeat = false
+world_x = 2374.0
+haze = 0.22
+haze_color = Color(0.860, 0.900, 0.960, 1)

@@ -148,4 +148,382 @@ Attached image 1: concept sheet for my game "Hold On!" / "Forgotten Bridges", ST
 Create ONE isolated background landmark for a 2D side-scrolling platformer. Genuine TRANSPARENT BACKGROUND PNG with alpha, nothing else. Strict side view, centered with transparent padding. Medium detail, clean readable chunky forms, no hard black outlines; base fades into soft white mist fading to alpha zero. No sky backdrop, no solid background, no checkerboard. Open arch holes are transparent so the background can show through. No people, animals, characters, text, logos, interface, crates, flags, dark doorways or ropes in the foreground. This is scenery, not a playable platform. The game adds atmospheric haze, so retain the reference's clear cartoon forms without over-washing them out.
 Object: a ruined stone gatehouse tower standing on a sharp mountain ridge, a broken wall following the crest down to BOTH sides, thin streamers of mist blowing past. Clearly one gatehouse and angular ridge silhouette. Open arch through tower transparent, no dark doorway. Landscape 3:2.
 
+=== GRAPHICS 09 / 2026-10-02 / BUILT-IN IMAGE_GEN ===
+Original generator PNG files. No upscaling or image postprocessing.
 
+Z1 | w01_v2_far_river.png
+References:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/assets/backgrounds/world_01/v2/source/w01_v2_far_valley.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" (world "Forgotten Bridges"). Use it ONLY as a style reference: bright, cheerful hand-painted cartoon game art; saturated sky with big soft clouds; ancient grey-brown stone ruins with thick green moss on the top edges; lush rounded trees; many thin waterfalls; turquoise water; warm sunlight from the upper left; soft shading, clean readable shapes. Attached image 2: the approved far background of the same world — same palette, same level of detail, same painting style. Do NOT copy the sheet's layout, text, logo, UI panels, frames or characters.
+
+Create a FAR BACKGROUND parallax layer for a 2D side-scrolling co-op platformer. Landscape 3:2. Strict side view, level horizon, no perspective floor, no isometric view. No characters, animals or people. No text, letters, logo, UI, frame or watermark. Nothing that looks interactive or walkable: no crates, doors, levers, buttons, flags, hooks, keys, no ropes or chains across the image, no flat platforms in front. Everything is far away and small in scale. Gentle atmospheric haze; colors a bit softer and less contrasty than a foreground, so small bright red, blue, yellow and green characters stay readable in front of it. Neutral white balance, no yellow or sepia tint.
+The band between 40% and 80% of the height is only soft haze and distant silhouettes — no waterfalls, islands or bright details there; put the details near the horizon line and in the bottom mist. The bottom edge is mist or water depth, not ground. No large object touches the left or right edge, so the image can repeat horizontally.
+
+Scene: AFTERNOON. A wide calm turquoise river basin of the bridge builders: ancient watermills with big wooden water wheels on mossy stone mill houses, small weirs and waterfalls, old stone bridge piers standing in the water, reeds and willow-like trees on the banks, distant soft blue hills. Warm afternoon light from the upper left.
+Composition: top 40% sky with big clouds; the river valley as a calm hazy silhouette across the middle; the lower part is bright water mist and spray.
+Final targeted edit prompt (edit target = preceding generated version):
+Use case: precise-object-edit. Attached image 1 is the edit target, the river background. Keep the same painting style, palette, sky and river setting, but make the band from 40% to 80% of the image height only soft blue-white haze and faint distant silhouettes. Remove all distinct waterfalls, large islands, sharp masonry, bright highlights and saturated foliage from this middle band. Put the recognizable small watermills and water wheels very low in the scene at 82–90% height, partially veiled by mist. Bottom edge remains soft water mist. No large scenery clipped by left or right edges. Opaque landscape PNG, 3:2. No text or characters.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fdbc-85f8-7471-90e2-82bd74996636\exec-498b0461-d4cc-4ac7-bbf9-5d720623e3a0.png
+
+Z2 | w01_v2_mid_river.png
+References:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/assets/backgrounds/world_01/v2/source/w01_v2_far_river.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only (bright hand-painted cartoon game art, grey-brown stone ruins with thick green moss, lush rounded trees, thin waterfalls, turquoise water, warm light from the upper left). Attached image 2: the approved far background of THIS zone — match its colors and light. Do NOT copy the sheet's layout, text, UI or characters.
+
+Create a MIDDLE-DISTANCE parallax layer for a 2D side-scrolling co-op platformer. TRANSPARENT BACKGROUND PNG. Landscape 3:2. Strict side view. No characters, animals, text, logo, UI, frame or watermark. No crates, doors, levers, buttons, flags, hooks, keys, no ropes or chains across the image.
+The highest point of the scenery is below the middle of the image; the upper half is completely empty and transparent. The band is clearly in the middle distance: slightly hazy, lighter and bluer than a foreground, medium detail. The tops are irregular and broken, never flat walkable ledges. The bottom fades into soft white mist instead of a hard ground line. Neutral white balance, no yellow tint. Left and right edges should continue each other for horizontal repeating; no big object cut by the edges.
+
+Content: a river bank band: small mossy stone mill houses with wooden water wheels, old wooden piles in the water, willow-like trees and reeds, one or two small waterfalls over weirs.
+PNG must have genuine alpha transparency, not a checkerboard painting. Every visible pixel including trees and mist must remain below 52% of image height. No sky or background plane.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fdbc-85f8-7471-90e2-82bd74996636\exec-335b9031-7029-46dd-b543-bfdee5bbd441.png
+
+L11 | w01_v2_lm11_watermill.png
+References:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/assets/backgrounds/world_01/v2/source/w01_v2_far_river.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only (bright hand-painted cartoon game art, grey-brown stone ruins with thick green moss, lush rounded trees, thin waterfalls, turquoise water, warm light from the upper left). Attached image 2: the approved far background of the same zone — match its colors and light. Do NOT copy the sheet's layout, text, UI or characters.
+
+Create ONE isolated landmark object for the background of a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, with empty transparent space around it. The object stands in the middle distance: slightly hazy and softer than a foreground, medium detail, no hard black outlines. Its base fades into soft white mist. No characters, text, logo, UI, crates, doors with dark openings, flags, hooks, keys, ropes or chains hanging in front. Neutral white balance, no yellow tint.
+Object:
+
+a big old watermill: a mossy stone mill house with a large wooden water wheel, water spilling from a broken wooden chute, two rounded trees. Landscape 3:2.
+PNG with genuine alpha transparency; no checkerboard painted into the pixels. All empty openings through arches are transparent, no dark doorways.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fdbc-85f8-7471-90e2-82bd74996636\exec-abb9d2ed-2cfc-4a08-aa5b-e79dbd7c4789.png
+
+L12 | w01_v2_lm12_trebuchet.png
+References:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/assets/backgrounds/world_01/v2/source/w01_v2_far_river.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only (bright hand-painted cartoon game art, grey-brown stone ruins with thick green moss, lush rounded trees, thin waterfalls, turquoise water, warm light from the upper left). Attached image 2: the approved far background of the same zone — match its colors and light. Do NOT copy the sheet's layout, text, UI or characters.
+
+Create ONE isolated landmark object for the background of a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, with empty transparent space around it. The object stands in the middle distance: slightly hazy and softer than a foreground, medium detail, no hard black outlines. Its base fades into soft white mist. No characters, text, logo, UI, crates, doors with dark openings, flags, hooks, keys, ropes or chains hanging in front. Neutral white balance, no yellow tint.
+Object:
+
+the ruin of a giant ancient wooden-and-stone throwing machine (a trebuchet) on a stone base, its long wooden arm raised and broken, moss and ivy on the base. Landscape 3:2.
+PNG with genuine alpha transparency; no checkerboard painted into the pixels. All empty openings through arches are transparent, no dark doorways.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fdbc-85f8-7471-90e2-82bd74996636\exec-a8c27ca3-151c-46e0-be6d-6f542e4761eb.png
+
+Z3 | w01_v2_far_canyon.png
+References:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/assets/backgrounds/world_01/v2/source/w01_v2_far_valley.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" (world "Forgotten Bridges"). Use it ONLY as a style reference: bright, cheerful hand-painted cartoon game art; saturated sky with big soft clouds; ancient grey-brown stone ruins with thick green moss on the top edges; lush rounded trees; many thin waterfalls; turquoise water; warm sunlight from the upper left; soft shading, clean readable shapes. Attached image 2: the approved far background of the same world — same palette, same level of detail, same painting style. Do NOT copy the sheet's layout, text, logo, UI panels, frames or characters.
+
+Create a FAR BACKGROUND parallax layer for a 2D side-scrolling co-op platformer. Landscape 3:2. Strict side view, level horizon, no perspective floor, no isometric view. No characters, animals or people. No text, letters, logo, UI, frame or watermark. Nothing that looks interactive or walkable: no crates, doors, levers, buttons, flags, hooks, keys, no ropes or chains across the image, no flat platforms in front. Everything is far away and small in scale. Gentle atmospheric haze; colors a bit softer and less contrasty than a foreground, so small bright red, blue, yellow and green characters stay readable in front of it. Neutral white balance, no yellow or sepia tint.
+The band between 40% and 80% of the height is only soft haze and distant silhouettes — no waterfalls, islands or bright details there; put the details near the horizon line and in the bottom mist. The bottom edge is mist or water depth, not ground. No large object touches the left or right edge, so the image can repeat horizontally.
+
+Scene: AFTERNOON. A deep narrow quarry canyon of the bridge builders: tall mossy cliff walls with carved stone steps and square quarry cuts, ancient stone lifting towers and wooden galleries attached to the far walls (small, far away), thin waterfalls falling into misty depths; sunlight from above on the upper walls, cooler blue shadows lower down, still bright and friendly.
+Composition: a strip of sky at the top 30%; the far canyon walls frame the middle softly; the lower part is deep blue-white mist (pits in these levels must look like a deep canyon).
+Priority composition: in the 40–80% height band render ONLY very faint blue-grey silhouettes under dense soft haze, no crisp waterfall streaks, bright highlights or detailed islands. Recognizable scenery details stay near the upper horizon (30–40%) or very low (82–92%), dissolved in mist. Background, not a foreground scene.
+Final targeted edit prompt (edit target = preceding generated version):
+Use case: precise-object-edit. Image 1 is the edit target. Keep everything the same, including sky, palette, mountains and the exact arrangement of ruins, but veil the entire band between 40% and 80% of image height in MUCH stronger soft atmospheric mist. Within this band, all stonework, trees and waterfall streaks must become very faint low-contrast silhouettes; no crisp white waterfall strokes, dark tree blobs, or detailed islands. The characteristic upper silhouette of the canyon/viaduct should remain legible near the horizon, then dissolve into mist below. Preserve the image's time of day. Opaque landscape 3:2, no text.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fdbc-85f8-7471-90e2-82bd74996636\exec-0ce6b0e1-dfaf-4312-8767-5519b5ae6afa.png
+
+Z4 | w01_v2_mid_canyon.png
+References:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/assets/backgrounds/world_01/v2/source/w01_v2_far_canyon.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only (bright hand-painted cartoon game art, grey-brown stone ruins with thick green moss, lush rounded trees, thin waterfalls, turquoise water, warm light from the upper left). Attached image 2: the approved far background of THIS zone — match its colors and light. Do NOT copy the sheet's layout, text, UI or characters.
+
+Create a MIDDLE-DISTANCE parallax layer for a 2D side-scrolling co-op platformer. TRANSPARENT BACKGROUND PNG. Landscape 3:2. Strict side view. No characters, animals, text, logo, UI, frame or watermark. No crates, doors, levers, buttons, flags, hooks, keys, no ropes or chains across the image.
+The highest point of the scenery is below the middle of the image; the upper half is completely empty and transparent. The band is clearly in the middle distance: slightly hazy, lighter and bluer than a foreground, medium detail. The tops are irregular and broken, never flat walkable ledges. The bottom fades into soft white mist instead of a hard ground line. Neutral white balance, no yellow tint. Left and right edges should continue each other for horizontal repeating; no big object cut by the edges.
+
+Content: the lower parts of quarry cliff walls: carved stone steps, square cut-outs, old wooden galleries and beams on the walls, moss and hanging ivy, a thin waterfall; the band is cooler and bluer, like it stands in canyon shade.
+PNG must have genuine alpha transparency, not a checkerboard painting. Every visible pixel including trees and mist must remain below 52% of image height. No sky or background plane.
+Final targeted edit prompt (edit target = preceding generated version):
+Use case: precise-object-edit. Image 1 is the edit target. Keep everything the same, but make the entire scenery band shorter so the highest leaf or ruin begins strictly below 53% of image height. The upper half must be completely transparent alpha=0. All scenery is in the lower 47%, with no cut-off scenery at top. Keep landscape 3:2, actual alpha transparency.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fdbc-85f8-7471-90e2-82bd74996636\exec-9d0f24d3-8300-4d20-babd-c21dedd7e7a9.png
+
+L13 | w01_v2_lm13_lift_tower.png
+References:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/assets/backgrounds/world_01/v2/source/w01_v2_far_canyon.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only (bright hand-painted cartoon game art, grey-brown stone ruins with thick green moss, lush rounded trees, thin waterfalls, turquoise water, warm light from the upper left). Attached image 2: the approved far background of the same zone — match its colors and light. Do NOT copy the sheet's layout, text, UI or characters.
+
+Create ONE isolated landmark object for the background of a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, with empty transparent space around it. The object stands in the middle distance: slightly hazy and softer than a foreground, medium detail, no hard black outlines. Its base fades into soft white mist. No characters, text, logo, UI, crates, doors with dark openings, flags, hooks, keys, ropes or chains hanging in front. Neutral white balance, no yellow tint.
+Object:
+
+a tall ancient stone lifting tower on a quarry cliff edge with a big wooden wheel on top and a wooden cage platform hanging inside the frame (no ropes in front), moss on the stones. Portrait 2:3.
+PNG with genuine alpha transparency; no checkerboard painted into the pixels. All empty openings through arches are transparent, no dark doorways.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fdbc-85f8-7471-90e2-82bd74996636\exec-0f1dfb70-83e9-4f72-b7c1-2e419e77a00f.png
+
+L14 | w01_v2_lm14_quarry_arch.png
+References:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/assets/backgrounds/world_01/v2/source/w01_v2_far_canyon.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only (bright hand-painted cartoon game art, grey-brown stone ruins with thick green moss, lush rounded trees, thin waterfalls, turquoise water, warm light from the upper left). Attached image 2: the approved far background of the same zone — match its colors and light. Do NOT copy the sheet's layout, text, UI or characters.
+
+Create ONE isolated landmark object for the background of a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, with empty transparent space around it. The object stands in the middle distance: slightly hazy and softer than a foreground, medium detail, no hard black outlines. Its base fades into soft white mist. No characters, text, logo, UI, crates, doors with dark openings, flags, hooks, keys, ropes or chains hanging in front. Neutral white balance, no yellow tint.
+Object:
+
+a great broken stone archway spanning a narrow quarry gorge, half of the arch fallen, a ruined stone gallery on top with small trees, a thin waterfall falling through the gap. Landscape 3:2.
+PNG with genuine alpha transparency; no checkerboard painted into the pixels. All empty openings through arches are transparent, no dark doorways.
+Final targeted edit prompt (edit target = preceding generated version):
+Use case: precise-object-edit. Image 1 is the edit target. Keep everything the same, but remove the entire right half of the central large arch, leaving a visibly broken half-arch projecting from the left cliff and a large open transparent gap to the right cliff. The narrow waterfall falls through this broken arch gap. Keep the ruined gallery and little trees, the painterly style and true transparent background.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fdbc-85f8-7471-90e2-82bd74996636\exec-533a620e-ea83-4b95-8210-b5391143f3af.png
+
+Z8 | w01_v2_far_shrine.png
+References:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/assets/backgrounds/world_01/v2/source/w01_v2_far_valley.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" (world "Forgotten Bridges"). Use it ONLY as a style reference: bright, cheerful hand-painted cartoon game art; saturated sky with big soft clouds; ancient grey-brown stone ruins with thick green moss on the top edges; lush rounded trees; many thin waterfalls; turquoise water; warm sunlight from the upper left; soft shading, clean readable shapes. Attached image 2: the approved far background of the same world — same palette, same level of detail, same painting style. Do NOT copy the sheet's layout, text, logo, UI panels, frames or characters.
+
+Create a FAR BACKGROUND parallax layer for a 2D side-scrolling co-op platformer. Landscape 3:2. Strict side view, level horizon, no perspective floor, no isometric view. No characters, animals or people. No text, letters, logo, UI, frame or watermark. Nothing that looks interactive or walkable: no crates, doors, levers, buttons, flags, hooks, keys, no ropes or chains across the image, no flat platforms in front. Everything is far away and small in scale. Gentle atmospheric haze; colors a bit softer and less contrasty than a foreground, so small bright red, blue, yellow and green characters stay readable in front of it. Neutral white balance, no yellow or sepia tint.
+The band between 40% and 80% of the height is only soft haze and distant silhouettes — no waterfalls, islands or bright details there; put the details near the horizon line and in the bottom mist. The bottom edge is mist or water depth, not ground. No large object touches the left or right edge, so the image can repeat horizontally.
+
+Scene: EARLY EVENING in the shade of tall cliffs. A quiet ancient shrine of the bridge builders: ruined stone arches and colonnades, a small domed chapel, old stone lanterns without fire, tall cypress-like trees, ivy everywhere, a few soft fireflies, a pale moon in a light blue-violet sky. Cool soft light, gentle and mysterious but bright and friendly, NOT scary, NOT dark.
+Composition: top 40% calm evening sky with a few pink clouds; the shrine ruins as soft hazy silhouettes near the horizon; the lower part is pale blue mist.
+Priority composition: in the 40–80% height band render ONLY very faint blue-grey silhouettes under dense soft haze, no crisp waterfall streaks, bright highlights or detailed islands. Recognizable scenery details stay near the upper horizon (30–40%) or very low (82–92%), dissolved in mist. Background, not a foreground scene.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fdbc-85f8-7471-90e2-82bd74996636\exec-b0253caf-fe00-42df-863b-5225839ca6b5.png
+
+Z9 | w01_v2_mid_shrine.png
+References:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/assets/backgrounds/world_01/v2/source/w01_v2_far_shrine.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only (bright hand-painted cartoon game art, grey-brown stone ruins with thick green moss, lush rounded trees, thin waterfalls, turquoise water, warm light from the upper left). Attached image 2: the approved far background of THIS zone — match its colors and light. Do NOT copy the sheet's layout, text, UI or characters.
+
+Create a MIDDLE-DISTANCE parallax layer for a 2D side-scrolling co-op platformer. TRANSPARENT BACKGROUND PNG. Landscape 3:2. Strict side view. No characters, animals, text, logo, UI, frame or watermark. No crates, doors, levers, buttons, flags, hooks, keys, no ropes or chains across the image.
+The highest point of the scenery is below the middle of the image; the upper half is completely empty and transparent. The band is clearly in the middle distance: slightly hazy, lighter and bluer than a foreground, medium detail. The tops are irregular and broken, never flat walkable ledges. The bottom fades into soft white mist instead of a hard ground line. Neutral white balance, no yellow tint. Left and right edges should continue each other for horizontal repeating; no big object cut by the edges.
+
+Content: the lower parts of a ruined shrine: broken colonnades and arches, stone lanterns without fire, cypress-like trees, thick ivy, a few soft fireflies; cool evening light, friendly, not scary.
+PNG must have genuine alpha transparency, not a checkerboard painting. Every visible pixel including trees and mist must remain below 52% of image height. No sky or background plane.
+Final targeted edit prompt (edit target = preceding generated version):
+Use case: precise-object-edit. Image 1 is the edit target. Keep everything the same, but lower the whole scenery band so the highest cypress, stone or leaf starts at 55% of image height. The upper half must be entirely transparent, alpha=0. Preserve landscape 3:2, cool colors and genuine alpha.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fdbc-85f8-7471-90e2-82bd74996636\exec-3da7c99d-047e-4d42-87e1-5376acffde91.png
+
+L15 | w01_v2_lm15_bell_crypt.png
+References:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/assets/backgrounds/world_01/v2/source/w01_v2_far_shrine.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only (bright hand-painted cartoon game art, grey-brown stone ruins with thick green moss, lush rounded trees, thin waterfalls, turquoise water, warm light from the upper left). Attached image 2: the approved far background of the same zone — match its colors and light. Do NOT copy the sheet's layout, text, UI or characters.
+
+Create ONE isolated landmark object for the background of a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, with empty transparent space around it. The object stands in the middle distance: slightly hazy and softer than a foreground, medium detail, no hard black outlines. Its base fades into soft white mist. No characters, text, logo, UI, crates, doors with dark openings, flags, hooks, keys, ropes or chains hanging in front. Neutral white balance, no yellow tint.
+Object:
+
+a small ancient stone crypt-chapel with a tall arched bell gable on top holding an old bronze bell, ivy and moss all over, two cypress-like trees beside it, cool evening light, cute and mysterious, NOT scary. Portrait 2:3.
+PNG with genuine alpha transparency; no checkerboard painted into the pixels. All empty openings through arches are transparent, no dark doorways.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fdbc-85f8-7471-90e2-82bd74996636\exec-665f61ad-3d91-465b-b2d9-01781766dd98.png
+
+L18 | w01_v2_lm18_twin_towers.png
+References:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/assets/backgrounds/world_01/v2/source/w01_v2_far_shrine.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only (bright hand-painted cartoon game art, grey-brown stone ruins with thick green moss, lush rounded trees, thin waterfalls, turquoise water, warm light from the upper left). Attached image 2: the approved far background of the same zone — match its colors and light. Do NOT copy the sheet's layout, text, UI or characters.
+
+Create ONE isolated landmark object for the background of a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, with empty transparent space around it. The object stands in the middle distance: slightly hazy and softer than a foreground, medium detail, no hard black outlines. Its base fades into soft white mist. No characters, text, logo, UI, crates, doors with dark openings, flags, hooks, keys, ropes or chains hanging in front. Neutral white balance, no yellow tint.
+Object:
+
+two identical slender old stone towers standing far apart, each with an unlit stone lantern on top, the remains of a broken stone bridge between them, ivy and small trees, cool evening light, friendly. Landscape 3:2.
+PNG with genuine alpha transparency; no checkerboard painted into the pixels. All empty openings through arches are transparent, no dark doorways.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fdbc-85f8-7471-90e2-82bd74996636\exec-1fc69466-0c10-43ff-91c9-267037bf3d88.png
+
+Z5 | w01_v2_far_viaduct.png
+References:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/assets/backgrounds/world_01/v2/source/w01_v2_far_valley.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" (world "Forgotten Bridges"). Use it ONLY as a style reference: bright, cheerful hand-painted cartoon game art; saturated sky with big soft clouds; ancient grey-brown stone ruins with thick green moss on the top edges; lush rounded trees; many thin waterfalls; turquoise water; warm sunlight from the upper left; soft shading, clean readable shapes. Attached image 2: the approved far background of the same world — same palette, same level of detail, same painting style. Do NOT copy the sheet's layout, text, logo, UI panels, frames or characters.
+
+Create a FAR BACKGROUND parallax layer for a 2D side-scrolling co-op platformer. Landscape 3:2. Strict side view, level horizon, no perspective floor, no isometric view. No characters, animals or people. No text, letters, logo, UI, frame or watermark. Nothing that looks interactive or walkable: no crates, doors, levers, buttons, flags, hooks, keys, no ropes or chains across the image, no flat platforms in front. Everything is far away and small in scale. Gentle atmospheric haze; colors a bit softer and less contrasty than a foreground, so small bright red, blue, yellow and green characters stay readable in front of it. Neutral white balance, no yellow or sepia tint.
+The band between 40% and 80% of the height is only soft haze and distant silhouettes — no waterfalls, islands or bright details there; put the details near the horizon line and in the bottom mist. The bottom edge is mist or water depth, not ground. No large object touches the left or right edge, so the image can repeat horizontally.
+
+Scene: GOLDEN HOUR. A huge broken ancient stone viaduct with many tall arches crossing a vast misty valley; several spans have collapsed; waterfalls pour from the broken ends; distant mountains; warm low sunlight from the left, long soft shadows, the valley still clear and readable.
+Composition: top 40% warm sky with golden clouds; the viaduct as a long silhouette across the upper middle; the lower part is golden mist.
+Priority composition: in the 40–80% height band render ONLY very faint blue-grey silhouettes under dense soft haze, no crisp waterfall streaks, bright highlights or detailed islands. Recognizable scenery details stay near the upper horizon (30–40%) or very low (82–92%), dissolved in mist. Background, not a foreground scene.
+Final targeted edit prompt (edit target = preceding generated version):
+Use case: precise-object-edit. Image 1 is the edit target. Keep everything the same, including sky, palette, mountains and the exact arrangement of ruins, but veil the entire band between 40% and 80% of image height in MUCH stronger soft atmospheric mist. Within this band, all stonework, trees and waterfall streaks must become very faint low-contrast silhouettes; no crisp white waterfall strokes, dark tree blobs, or detailed islands. The characteristic upper silhouette of the canyon/viaduct should remain legible near the horizon, then dissolve into mist below. Preserve the image's time of day. Opaque landscape 3:2, no text.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fdbc-85f8-7471-90e2-82bd74996636\exec-032c9306-4544-4070-b551-10847ef8938a.png
+
+Z6 | w01_v2_mid_viaduct.png
+References:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/assets/backgrounds/world_01/v2/source/w01_v2_far_viaduct.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only (bright hand-painted cartoon game art, grey-brown stone ruins with thick green moss, lush rounded trees, thin waterfalls, turquoise water, warm light from the upper left). Attached image 2: the approved far background of THIS zone — match its colors and light. Do NOT copy the sheet's layout, text, UI or characters.
+
+Create a MIDDLE-DISTANCE parallax layer for a 2D side-scrolling co-op platformer. TRANSPARENT BACKGROUND PNG. Landscape 3:2. Strict side view. No characters, animals, text, logo, UI, frame or watermark. No crates, doors, levers, buttons, flags, hooks, keys, no ropes or chains across the image.
+The highest point of the scenery is below the middle of the image; the upper half is completely empty and transparent. The band is clearly in the middle distance: slightly hazy, lighter and bluer than a foreground, medium detail. The tops are irregular and broken, never flat walkable ledges. The bottom fades into soft white mist instead of a hard ground line. Neutral white balance, no yellow tint. Left and right edges should continue each other for horizontal repeating; no big object cut by the edges.
+
+Content: massive bases of the viaduct piers and the lower parts of tall stone arches with sky visible through them, broken arch stones, moss and ivy, small trees growing on the ruins, golden-hour light.
+PNG must have genuine alpha transparency, not a checkerboard painting. Every visible pixel including trees and mist must remain below 52% of image height. No sky or background plane.
+Final targeted edit prompt (edit target = preceding generated version):
+Use case: precise-object-edit. Image 1 is the edit target. Keep everything the same, but lower and shrink the entire scenery band so its highest leaf or stone begins strictly below 54% of image height. Upper 52% must be entirely transparent alpha=0. Keep actual PNG alpha and landscape 3:2.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fdbc-85f8-7471-90e2-82bd74996636\exec-9d73cc32-6164-45fb-b0c5-21a7bd7cdc10.png
+
+Z7 | w01_v2_far_viaduct_sunset.png
+References:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/assets/backgrounds/world_01/v2/source/w01_v2_far_valley.png
+D:/Cluade projects/games/Glue/assets/backgrounds/world_01/v2/source/w01_v2_far_viaduct.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" (world "Forgotten Bridges"). Use it ONLY as a style reference: bright, cheerful hand-painted cartoon game art; saturated sky with big soft clouds; ancient grey-brown stone ruins with thick green moss on the top edges; lush rounded trees; many thin waterfalls; turquoise water; warm sunlight from the upper left; soft shading, clean readable shapes. Attached image 2: the approved far background of the same world — same palette, same level of detail, same painting style. Do NOT copy the sheet's layout, text, logo, UI panels, frames or characters.
+
+Create a FAR BACKGROUND parallax layer for a 2D side-scrolling co-op platformer. Landscape 3:2. Strict side view, level horizon, no perspective floor, no isometric view. No characters, animals or people. No text, letters, logo, UI, frame or watermark. Nothing that looks interactive or walkable: no crates, doors, levers, buttons, flags, hooks, keys, no ropes or chains across the image, no flat platforms in front. Everything is far away and small in scale. Gentle atmospheric haze; colors a bit softer and less contrasty than a foreground, so small bright red, blue, yellow and green characters stay readable in front of it. Neutral white balance, no yellow or sepia tint.
+The band between 40% and 80% of the height is only soft haze and distant silhouettes — no waterfalls, islands or bright details there; put the details near the horizon line and in the bottom mist. The bottom edge is mist or water depth, not ground. No large object touches the left or right edge, so the image can repeat horizontally.
+
+Scene: SUNSET, the same broken stone viaduct as image 3 (attach the approved Z5 as image 3): orange and pink sky, the sun low on the left behind the viaduct, the valley in soft purple-blue haze — not dark, the scene stays friendly and readable.
+Composition: same as image 3.
+Use image 3 as the exact composition and structure to preserve. Keep everything the same, changing ONLY lighting and sky colors to sunset. Preserve all arch positions, collapsed spans, mountain silhouettes and mist bands.
+Final targeted edit prompt (edit target = preceding generated version):
+Use case: precise-object-edit. Image 1 is the edit target. Keep everything the same, including sky, palette, mountains and the exact arrangement of ruins, but veil the entire band between 40% and 80% of image height in MUCH stronger soft atmospheric mist. Within this band, all stonework, trees and waterfall streaks must become very faint low-contrast silhouettes; no crisp white waterfall strokes, dark tree blobs, or detailed islands. The characteristic upper silhouette of the canyon/viaduct should remain legible near the horizon, then dissolve into mist below. Preserve the image's time of day. Opaque landscape 3:2, no text.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fdbc-85f8-7471-90e2-82bd74996636\exec-f35151fb-fc47-40bd-9cc0-0dd2a9694a5a.png
+
+L16 | w01_v2_lm16_cargo_pier.png
+References:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/assets/backgrounds/world_01/v2/source/w01_v2_far_river.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only (bright hand-painted cartoon game art, grey-brown stone ruins with thick green moss, lush rounded trees, thin waterfalls, turquoise water, warm light from the upper left). Attached image 2: the approved far background of the same zone — match its colors and light. Do NOT copy the sheet's layout, text, UI or characters.
+
+Create ONE isolated landmark object for the background of a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, with empty transparent space around it. The object stands in the middle distance: slightly hazy and softer than a foreground, medium detail, no hard black outlines. Its base fades into soft white mist. No characters, text, logo, UI, crates, doors with dark openings, flags, hooks, keys, ropes or chains hanging in front. Neutral white balance, no yellow tint.
+Object:
+
+a stone river pier with the stump of a broken bridge span and old wooden cargo pulleys and beams on top, water flowing around its base. Landscape 3:2.
+PNG with genuine alpha transparency; no checkerboard painted into the pixels. All empty openings through arches are transparent, no dark doorways.
+Final targeted edit prompt (edit target = preceding generated version):
+Use case: precise-object-edit. Image 1 is the edit target. Keep everything the same, but remove every visible rope and cable from this cargo pier, including all loops over the wooden beam and all hanging vertical lines. Keep the bare antique pulley wheels, timber beams, broken bridge, masonry, water and foliage. Genuine transparent PNG, same composition and colors.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fdbc-85f8-7471-90e2-82bd74996636\exec-0863af70-b22f-43e2-9c59-7cbb65236296.png
+
+L17 | w01_v2_lm17_twin_gates.png
+References:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/assets/backgrounds/world_01/v2/source/w01_v2_far_viaduct.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only (bright hand-painted cartoon game art, grey-brown stone ruins with thick green moss, lush rounded trees, thin waterfalls, turquoise water, warm light from the upper left). Attached image 2: the approved far background of the same zone — match its colors and light. Do NOT copy the sheet's layout, text, UI or characters.
+
+Create ONE isolated landmark object for the background of a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, with empty transparent space around it. The object stands in the middle distance: slightly hazy and softer than a foreground, medium detail, no hard black outlines. Its base fades into soft white mist. No characters, text, logo, UI, crates, doors with dark openings, flags, hooks, keys, ropes or chains hanging in front. Neutral white balance, no yellow tint.
+Object:
+
+an old gatehouse on the viaduct with two tall arched gateways side by side, one blocked with fallen stones, moss and ivy, golden-hour light. Landscape 3:2.
+PNG with genuine alpha transparency; no checkerboard painted into the pixels. All empty openings through arches are transparent, no dark doorways.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fdbc-85f8-7471-90e2-82bd74996636\exec-32dfd7ac-c666-4742-b627-e0099360ddb6.png
+
+L19 | w01_v2_lm19_drawbridge.png
+References:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/assets/backgrounds/world_01/v2/source/w01_v2_far_viaduct.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only (bright hand-painted cartoon game art, grey-brown stone ruins with thick green moss, lush rounded trees, thin waterfalls, turquoise water, warm light from the upper left). Attached image 2: the approved far background of the same zone — match its colors and light. Do NOT copy the sheet's layout, text, UI or characters.
+
+Create ONE isolated landmark object for the background of a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, with empty transparent space around it. The object stands in the middle distance: slightly hazy and softer than a foreground, medium detail, no hard black outlines. Its base fades into soft white mist. No characters, text, logo, UI, crates, doors with dark openings, flags, hooks, keys, ropes or chains hanging in front. Neutral white balance, no yellow tint.
+Object:
+
+an old drawbridge tower on a river: a square stone tower with a wooden bridge span raised up vertically beside it, the other half of the bridge missing, golden-hour light. Landscape 3:2.
+PNG with genuine alpha transparency; no checkerboard painted into the pixels. All empty openings through arches are transparent, no dark doorways.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fdbc-85f8-7471-90e2-82bd74996636\exec-78de5004-d7b1-42b6-a534-b7c1321f0b6b.png
+
+L20 | w01_v2_lm20_viaduct_keep.png
+References:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/assets/backgrounds/world_01/v2/source/w01_v2_far_viaduct_sunset.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only (bright hand-painted cartoon game art, grey-brown stone ruins with thick green moss, lush rounded trees, thin waterfalls, turquoise water, warm light from the upper left). Attached image 2: the approved far background of the same zone — match its colors and light. Do NOT copy the sheet's layout, text, UI or characters.
+
+Create ONE isolated landmark object for the background of a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, with empty transparent space around it. The object stands in the middle distance: slightly hazy and softer than a foreground, medium detail, no hard black outlines. Its base fades into soft white mist. No characters, text, logo, UI, crates, doors with dark openings, flags, hooks, keys, ropes or chains hanging in front. Neutral white balance, no yellow tint.
+Object:
+
+the tall central keep of the great broken viaduct, arches on both sides breaking off into the air, a waterfall from the top, warm sunset light from the left. Portrait 2:3.
+PNG with genuine alpha transparency; no checkerboard painted into the pixels. All empty openings through arches are transparent, no dark doorways.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fdbc-85f8-7471-90e2-82bd74996636\exec-2b499912-6c26-4f37-b912-50ef5f1c129a.png
+
+=== GRAPHICS 11 / 2026-10-03 / Z3 ACCEPTANCE CORRECTION ===
+Z3 | w01_v2_far_canyon.png
+References: existing canyon (edit target), reference.png, w01_v2_far_valley.png
+Edit prompt:
+Image 1 is the edit target, the approved far canyon background. Images 2 and 3 are the original style references only. Keep everything the same, but move the two lifting towers away from the left and right edges and lower them so they stand near the horizon line, not in the top corners; leave the left and right edges simple, only sky, haze and distant cliffs. Preserve the palette, sky, neutral white balance, existing soft mist in the 40–80% height band, aspect ratio and original hand-painted style. No text.
+Final generator output: C:/Users/Марат/.codex/generated_images/01a0fe7f-089d-7071-9b6f-2f5687fa78c2/exec-2d838a98-79c0-40c7-ba4c-01d4ca8563c2.png
+
+
+=== GRAPHICS 15 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+L21 | w01_v2_lm21_rose_window.png
+References, in attachment order:
+D:\Cluade projects\games\Glue\docs\референсы\reference.png
+D:\Cluade projects\games\Glue\assets\backgrounds\world_01\v2\source\w01_v2_far_viaduct.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only (bright hand-painted cartoon game art, grey-brown stone ruins with thick green moss, lush rounded trees, thin waterfalls, turquoise water, warm light from the upper left). Attached image 2: the approved far background of the same zone — match its colors and light. Do NOT copy the sheet's layout, text, UI or characters.
+
+Create ONE isolated landmark object for the background of a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, with empty transparent space around it. The object stands in the middle distance: slightly hazy and softer than a foreground, medium detail, no hard black outlines. Its base fades into soft white mist. No characters, text, logo, UI, crates, doors with dark openings, flags, hooks, keys, ropes or chains hanging in front. Neutral white balance, no yellow tint.
+Object: a ruined stone wall of the old viaduct with a big round rose window of colored glass divided into four parts — soft orange, blue, green and purple, gently faded by time, moss and ivy along the top, warm golden-hour light. Landscape 3:2.
+The rose window has exactly four readable colored quadrants. Keep the whole wall and its mist fully inside the canvas with generous empty transparent margins on all sides; no background landscape. True PNG alpha transparency.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fff4-751d-75b1-aa81-5afaf42c086c\exec-c56b204a-dafc-4845-aae0-e706fd305cfe.png
+
+
+=== GRAPHICS 15 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+L22 | w01_v2_lm22_stone_press.png
+References, in attachment order:
+D:\Cluade projects\games\Glue\docs\референсы\reference.png
+D:\Cluade projects\games\Glue\assets\backgrounds\world_01\v2\source\w01_v2_far_shrine.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only (bright hand-painted cartoon game art, grey-brown stone ruins with thick green moss, lush rounded trees, thin waterfalls, turquoise water, warm light from the upper left). Attached image 2: the approved far background of the same zone — match its colors and light. Do NOT copy the sheet's layout, text, UI or characters.
+
+Create ONE isolated landmark object for the background of a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, with empty transparent space around it. The object stands in the middle distance: slightly hazy and softer than a foreground, medium detail, no hard black outlines. Its base fades into soft white mist. No characters, text, logo, UI, crates, doors with dark openings, flags, hooks, keys, ropes or chains hanging in front. Neutral white balance, no yellow tint.
+Object: an ancient stone crushing mill of the bridge builders: three huge square stone hammers hanging in a tall frame of stone pillars and thick wooden beams above a long stone trough, one hammer fallen and cracked on the ground, moss and ivy, cool evening light, friendly, NOT scary. Landscape 3:2.
+One connected landmark, fully contained, with generous empty transparent margins on all sides. Actual PNG alpha transparency, no backdrop scenery, no painted checkerboard. Native stated aspect ratio.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fff4-751d-75b1-aa81-5afaf42c086c\exec-5fe0313e-b471-49dc-ab61-cb63fe6b483a.png
+
+
+=== GRAPHICS 15 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+L23 | w01_v2_lm23_landslide.png
+References, in attachment order:
+D:\Cluade projects\games\Glue\docs\референсы\reference.png
+D:\Cluade projects\games\Glue\assets\backgrounds\world_01\v2\source\w01_v2_far_canyon.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only (bright hand-painted cartoon game art, grey-brown stone ruins with thick green moss, lush rounded trees, thin waterfalls, turquoise water, warm light from the upper left). Attached image 2: the approved far background of the same zone — match its colors and light. Do NOT copy the sheet's layout, text, UI or characters.
+
+Create ONE isolated landmark object for the background of a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, with empty transparent space around it. The object stands in the middle distance: slightly hazy and softer than a foreground, medium detail, no hard black outlines. Its base fades into soft white mist. No characters, text, logo, UI, crates, doors with dark openings, flags, hooks, keys, ropes or chains hanging in front. Neutral white balance, no yellow tint.
+Object: a tall mossy quarry cliff with old carved stone steps, caught in the middle of a collapse: a big slab breaking away from the top, boulders tumbling down its face, soft dust clouds, small trees still standing on the top edge, bright afternoon light, dramatic but friendly. Portrait 2:3.
+One connected landmark, fully contained, with generous empty transparent margins on all sides. Actual PNG alpha transparency, no backdrop scenery, no painted checkerboard. Native stated aspect ratio.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fff4-751d-75b1-aa81-5afaf42c086c\exec-ae9a6bbb-3ba8-4285-a82e-037de12788a8.png
+
+
+=== GRAPHICS 15 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+L24 | w01_v2_lm24_buried_shrine.png
+References, in attachment order:
+D:\Cluade projects\games\Glue\docs\референсы\reference.png
+D:\Cluade projects\games\Glue\assets\backgrounds\world_01\v2\source\w01_v2_far_shrine.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only (bright hand-painted cartoon game art, grey-brown stone ruins with thick green moss, lush rounded trees, thin waterfalls, turquoise water, warm light from the upper left). Attached image 2: the approved far background of the same zone — match its colors and light. Do NOT copy the sheet's layout, text, UI or characters.
+
+Create ONE isolated landmark object for the background of a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, with empty transparent space around it. The object stands in the middle distance: slightly hazy and softer than a foreground, medium detail, no hard black outlines. Its base fades into soft white mist. No characters, text, logo, UI, crates, doors with dark openings, flags, hooks, keys, ropes or chains hanging in front. Neutral white balance, no yellow tint.
+Object: a small domed stone chapel of the shrine half buried under a fresh rockslide: boulders piled high against one side, its arched doorway filled with stones (no dark opening), two old stone lanterns without fire, ivy, a few fireflies, cool evening light, mysterious but friendly, NOT scary. Landscape 3:2.
+One connected landmark, fully contained, with generous empty transparent margins on all sides. Actual PNG alpha transparency, no backdrop scenery, no painted checkerboard. Native stated aspect ratio.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fff4-751d-75b1-aa81-5afaf42c086c\exec-c9042962-ad89-42d2-90ff-e94c8396496a.png
+
+
+=== GRAPHICS 15 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+L25 | w01_v2_lm25_pass_towers.png
+References, in attachment order:
+D:\Cluade projects\games\Glue\docs\референсы\reference.png
+D:\Cluade projects\games\Glue\assets\backgrounds\world_01\v2\source\w01_v2_far_pass.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only (bright hand-painted cartoon game art, grey-brown stone ruins with thick green moss, lush rounded trees, thin waterfalls, turquoise water, warm light from the upper left). Attached image 2: the approved far background of the same zone — match its colors and light. Do NOT copy the sheet's layout, text, UI or characters.
+
+Create ONE isolated landmark object for the background of a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, with empty transparent space around it. The object stands in the middle distance: slightly hazy and softer than a foreground, medium detail, no hard black outlines. Its base fades into soft white mist. No characters, text, logo, UI, crates, doors with dark openings, flags, hooks, keys, ropes or chains hanging in front. Neutral white balance, no yellow tint.
+Object: two tall old stone watchtowers on a mountain pass joined by two broken stone walkways, one above the other; the right tower cracked and leaning, a few stones falling from it, mountain haze, afternoon light. Landscape 3:2.
+One connected landmark, fully contained, with generous empty transparent margins on all sides. Actual PNG alpha transparency, no backdrop scenery, no painted checkerboard. Native stated aspect ratio.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fff4-751d-75b1-aa81-5afaf42c086c\exec-0c055461-7c4f-4e8e-a762-897fd4661c80.png
+
+
+=== GRAPHICS 15 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+L23 | w01_v2_lm23_landslide.png
+References, in attachment order:
+D:\Cluade projects\games\Glue\assets\backgrounds\world_01\v2\source\w01_v2_lm23_landslide.png
+D:\Cluade projects\games\Glue\assets\backgrounds\world_01\v2\source\w01_v2_far_canyon.png
+Prompt:
+Image 1 is the edit target, a transparent portrait landmark of a collapsing quarry cliff. Image 2 is the approved far canyon, palette reference only.
+Keep the same native portrait dimensions, hand-painted style, lighting, transparent margins, stone steps, moss, small trees, falling slab, tumbling boulders and dust. Change ONLY two unrequested motifs: remove ALL waterfalls and blue water streams, replacing them with dry grey-brown stone and pale dust clouds; replace the upper arched opening with solid cracked natural quarry stone while keeping the big breaking slab next to it. This is a dry quarry rockslide. No flowing water, no additional ruin arches. Preserve genuine PNG alpha transparency and the base's soft dust fade, no backdrop, characters, text or symbols.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fff4-751d-75b1-aa81-5afaf42c086c\exec-c9d1f34c-6560-44d8-bedd-ca259299b1ea.png

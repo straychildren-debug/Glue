@@ -1,0 +1,31 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://src/level/backdrop.gd" id="1"]
+[ext_resource type="Script" path="res://src/level/backdrop_layer.gd" id="2"]
+[ext_resource type="Texture2D" path="res://assets/backgrounds/world_02/game/w02_far_machine_tile.png" id="3"]
+[ext_resource type="Texture2D" path="res://assets/backgrounds/world_02/game/w02_mid_machine_tile.png" id="4"]
+
+[node name="Backdrop" type="CanvasLayer"]
+script = ExtResource("1")
+
+[node name="Far" type="Node2D" parent="."]
+script = ExtResource("2")
+texture = ExtResource("3")
+parallax = 0.15
+parallax_y = 0.04
+height = 1.3
+center_y = 0.5
+haze = 0.10
+haze_color = Color(0.970, 0.850, 0.770, 1)
+
+[node name="Mid" type="Node2D" parent="."]
+script = ExtResource("2")
+texture = ExtResource("4")
+parallax = 0.45
+parallax_y = 0.12
+height = 0.95
+center_y = 0.685
+zoom_follow = 0.35
+tint = Color(1.000, 0.950, 0.900, 1)
+haze = 0.25
+haze_color = Color(0.970, 0.850, 0.770, 1)

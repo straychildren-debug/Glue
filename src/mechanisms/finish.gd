@@ -63,6 +63,15 @@ func _draw() -> void:
 	var size := size_tiles * GreyboxLevel.TILE
 	var rect := Rect2(Vector2(-size.x / 2.0, -size.y), size)
 	var done := needed > 0 and inside >= needed
+	if Art.enabled and size_tiles == Vector2(2, 3) and Art.has("finish_closed"):
+		# Ворота P17: небольшая дверь в арке; открыта, когда внутри все. Зона входа — прежняя.
+		# в мастерских (кладка мира 2) — кирпичные ворота с латунью (P31)
+		var kind := "finish_w2" if _workshop() and Art.has("finish_w2_closed") else "finish"
+		var sprite := Art.tex(kind + ("_open" if done else "_closed"))
+		var gate := Vector2(sprite.get_size()) / 4.0
+		draw_texture_rect(sprite, Rect2(Vector2(-gate.x / 2.0, -gate.y + 0.75), gate), false)
+		_draw_counter(Vector2(size.x, gate.y - 22.0), done)
+		return
 	if Art.enabled and size_tiles == Vector2(2, 3):
 		_draw_gate(done)
 		_draw_counter(size, done)
@@ -82,7 +91,7 @@ func _draw() -> void:
 ## мох на замковом камне, проём уходит в темноту. Тонкая кайма вокруг проёма — знак цели:
 ## жёлтая, зелёная, когда пришли все.
 func _draw_gate(done: bool) -> void:
-	var stone: Texture2D = load(GATE_STONE)
+	var stone: Texture2D = load(_gate_stone())
 	var period := stone.get_size() / 2.0  # как у платформ: текстура вдвое крупнее экрана
 	var center := Vector2(0, -GATE_SPRING)
 	var trim_in := GATE_OPENING / 2.0
@@ -126,7 +135,7 @@ func _draw_gate(done: bool) -> void:
 			_stone(stone, period, points, 91.0 * r + (0.0 if side < 0 else 53.0), 1.0 if side < 0 else 0.86)
 	# Мох изгибается по верху арки (полоса мха платформ, согнутая по дуге): подушка лежит на камнях,
 	# капли свисают по клиньям.
-	var moss: Texture2D = load(GATE_MOSS)
+	var moss: Texture2D = load(_gate_moss())
 	var moss_size := moss.get_size() / 2.0
 	var r_top := outer + GATE_OUTLINE + moss_size.y * 0.17 - 3.0
 	var r_bottom := r_top - moss_size.y
@@ -141,6 +150,24 @@ func _draw_gate(done: bool) -> void:
 		draw_polygon(PackedVector2Array([center + d0 * r_top, center + d1 * r_top,
 				center + d1 * r_bottom, center + d0 * r_bottom]), PackedColorArray([Color.WHITE]),
 				PackedVector2Array([Vector2(-u0, 0), Vector2(-u1, 0), Vector2(-u1, 1), Vector2(-u0, 1)]), moss)
+
+
+## Кладка ворот — та же, что у платформ зоны уровня (без уровня — общая кладка мира).
+func _gate_stone() -> String:
+	var node := get_parent()
+	while node != null and not node is GreyboxLevel:
+		node = node.get_parent()
+	if node != null:
+		return Ground.path(node.ground_fill)
+	return GATE_STONE
+
+
+## Мох (бордюр) по арке — тот же, что у кромок платформ уровня.
+func _gate_moss() -> String:
+	var node := get_parent()
+	while node != null and not node is GreyboxLevel:
+		node = node.get_parent()
+	return Ground.path(node.ground_top) if node != null else GATE_MOSS
 
 
 ## Камень ворот: многоугольник с текстурой кладки (сдвиг shift — у каждого камня свой узор).
@@ -174,6 +201,12 @@ static func _ring(center: Vector2, inner: float, outer: float, a0: float, a1: fl
 
 
 ## «Внутри / нужно» над дверью.
+## Уровень мастерских (мира 2): кладка уровня — текстуры w02.
+func _workshop() -> bool:
+	var level := get_parent()
+	return level != null and str(level.get("ground_fill")).begins_with("w02")
+
+
 func _draw_counter(size: Vector2, done: bool) -> void:
 	if needed > 0 and not Engine.is_editor_hint():
 		var font := ThemeDB.fallback_font

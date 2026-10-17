@@ -1,0 +1,112 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://src/level/greybox_level.gd" id="1"]
+[ext_resource type="PackedScene" path="res://levels/backdrops/w02_yard.tscn" id="bd"]
+[ext_resource type="Script" path="res://src/level/backdrop_layer.gd" id="bl"]
+[ext_resource type="Texture2D" path="res://assets/backgrounds/world_02/source/w02_lm02_spring_press.png" id="lm"]
+[ext_resource type="Script" path="res://src/mechanisms/bellows.gd" id="bellows"]
+[ext_resource type="Script" path="res://src/mechanisms/crane.gd" id="crane"]
+[ext_resource type="Script" path="res://src/mechanisms/finish.gd" id="finish"]
+[ext_resource type="Script" path="res://src/mechanisms/pressure_plate.gd" id="plate"]
+[ext_resource type="Script" path="res://src/mechanisms/spikes.gd" id="spikes"]
+[ext_resource type="Script" path="res://src/mechanisms/spinner.gd" id="spinner"]
+
+[node name="W02L02" type="Node2D"]
+script = ExtResource("1")
+title = "02 · Ветер и кран"
+blocks = Array[Rect2]([Rect2(0, -8, 1, 26), Rect2(92, -8, 1, 26), Rect2(0, 12, 10, 6), Rect2(18, 12, 18, 6), Rect2(36, 13, 10, 5), Rect2(46, 12, 13.5, 6), Rect2(65.5, 12, 8.5, 6), Rect2(83, 12, 9, 6)])
+checkpoints = Array[Vector2]([Vector2(2, 12), Vector2(20, 12), Vector2(47, 12), Vector2(66.5, 12)])
+bounds_tiles = Rect2(0, -8, 93, 27)
+kill_y_tiles = 19
+ground_fill = "w02_fill"
+ground_deep = "w02_deep"
+ground_top = "w02_top"
+ground_side = "w02_side"
+
+[node name="Pedal1" type="AnimatableBody2D" parent="."]
+position = Vector2(384, 768)
+script = ExtResource("plate")
+width_tiles = 1.5
+mark_color = Color(0.3, 0.8, 0.75, 1)
+
+[node name="Bellows" type="Node2D" parent="."]
+position = Vector2(640, 704)
+script = ExtResource("bellows")
+length_tiles = 10.0
+height_tiles = 5.0
+pedal = NodePath("../Pedal1")
+pedals = Array[NodePath]([NodePath("../Pedal2")])
+
+[node name="Pedal2" type="AnimatableBody2D" parent="."]
+position = Vector2(1408, 768)
+script = ExtResource("plate")
+width_tiles = 1.5
+mark_color = Color(0.3, 0.8, 0.75, 1)
+
+[node name="CranePlate1" type="AnimatableBody2D" parent="."]
+position = Vector2(2048, 768)
+script = ExtResource("plate")
+width_tiles = 1.5
+mark_color = Color(0.95, 0.6, 0.2, 1)
+
+[node name="Crane" type="Node2D" parent="."]
+position = Vector2(2208, 320)
+script = ExtResource("crane")
+length_tiles = 13.0
+hang_tiles = 3.5
+trigger = NodePath("../CranePlate1")
+triggers = Array[NodePath]([NodePath("../CranePlate2")])
+
+[node name="Spikes" type="Node2D" parent="."]
+position = Vector2(2624, 832)
+script = ExtResource("spikes")
+width_tiles = 10.0
+
+[node name="CranePlate2" type="AnimatableBody2D" parent="."]
+position = Vector2(3328, 768)
+script = ExtResource("plate")
+width_tiles = 1.5
+mark_color = Color(0.95, 0.6, 0.2, 1)
+
+[node name="BridgePlate1" type="AnimatableBody2D" parent="."]
+position = Vector2(3648, 768)
+script = ExtResource("plate")
+mark_color = Color(0.4, 0.7, 0.95, 1)
+
+[node name="Bridge" type="AnimatableBody2D" parent="."]
+position = Vector2(4000, 780)
+script = ExtResource("spinner")
+length_tiles = 6.0
+base_deg = 90.0
+step_deg = -90.0
+triggers = Array[NodePath]([NodePath("../BridgePlate1"), NodePath("../BridgePlate2")])
+
+[node name="BridgePlate2" type="AnimatableBody2D" parent="."]
+position = Vector2(4352, 768)
+script = ExtResource("plate")
+mark_color = Color(0.4, 0.7, 0.95, 1)
+
+[node name="Wheel" type="AnimatableBody2D" parent="."]
+position = Vector2(5024, 780)
+script = ExtResource("spinner")
+length_tiles = 7.0
+spin_speed = 25.0
+
+[node name="Finish" type="Node2D" parent="."]
+position = Vector2(5696, 768)
+script = ExtResource("finish")
+
+[node name="Backdrop" parent="." instance=ExtResource("bd")]
+
+[node name="Landmark" type="Node2D" parent="Backdrop"]
+script = ExtResource("bl")
+texture = ExtResource("lm")
+parallax = 0.3
+parallax_y = 0.1
+height = 0.6
+center_y = 0.55
+zoom_follow = 0.3
+repeat = false
+world_x = 2083.0
+haze = 0.22
+haze_color = Color(0.860, 0.900, 0.960, 1)

@@ -1,0 +1,44 @@
+
+
+=== GRAPHICS 09 / 2026-10-02 / BUILT-IN IMAGE_GEN ===
+Original generator PNG files. No upscaling or image postprocessing.
+
+W2 | world2_workshops.png
+References:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+Prompt:
+Use case: stylized-concept. Create ONE concept style sheet for a new world of the 2D co-op platformer "Hold On!". Attached image 1 is the existing world concept sheet: match its cheerful hand-painted cartoon art, chunky stone shapes, soft shading, and strict side-view platformer genre, but use the new place, lighting and palette specified below. Do not copy the reference text, logo, UI or layout. Landscape 3:2. Compose 3–4 small distinct side-view level fragments on one polished cohesive sheet, showing platforms, background environment, themed mechanisms, and tiny simple bright red, blue, yellow and green character silhouettes only for scale. Decorative scenery has no hard black outlines; interactive mechanisms and tiny character silhouettes have dark outlines. Include an unlabeled horizontal palette swatch strip. Absolutely no text, letters, numerals, captions, logos, watermark or menu UI anywhere.
+World: Bridge builders' workshops: gears, bellows, winches, copper and wood, warm furnace light and steam.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fdbc-85f8-7471-90e2-82bd74996636\exec-89c8a520-0024-43d1-b2dd-547d7a42e459.png
+
+W3 | world3_guardians.png
+References:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+Prompt:
+Use case: stylized-concept. Create ONE concept style sheet for a new world of the 2D co-op platformer "Hold On!". Attached image 1 is the existing world concept sheet: match its cheerful hand-painted cartoon art, chunky stone shapes, soft shading, and strict side-view platformer genre, but use the new place, lighting and palette specified below. Do not copy the reference text, logo, UI or layout. Landscape 3:2. Compose 3–4 small distinct side-view level fragments on one polished cohesive sheet, showing platforms, background environment, themed mechanisms, and tiny simple bright red, blue, yellow and green character silhouettes only for scale. Decorative scenery has no hard black outlines; interactive mechanisms and tiny character silhouettes have dark outlines. Include an unlabeled horizontal palette swatch strip. Absolutely no text, letters, numerals, captions, logos, watermark or menu UI anywhere.
+World: Guardians: shrines and statue gardens, sunbeams through narrow gaps, mirrors, white stone and bronze.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fdbc-85f8-7471-90e2-82bd74996636\exec-02fe80db-6eec-46b1-95fc-c7e511f32ca0.png
+
+W4 | world4_sunken_city.png
+References:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+Prompt:
+Use case: stylized-concept. Create ONE concept style sheet for a new world of the 2D co-op platformer "Hold On!". Attached image 1 is the existing world concept sheet: match its cheerful hand-painted cartoon art, chunky stone shapes, soft shading, and strict side-view platformer genre, but use the new place, lighting and palette specified below. Do not copy the reference text, logo, UI or layout. Landscape 3:2. Compose 3–4 small distinct side-view level fragments on one polished cohesive sheet, showing platforms, background environment, themed mechanisms, and tiny simple bright red, blue, yellow and green character silhouettes only for scale. Decorative scenery has no hard black outlines; interactive mechanisms and tiny character silhouettes have dark outlines. Include an unlabeled horizontal palette swatch strip. Absolutely no text, letters, numerals, captions, logos, watermark or menu UI anywhere.
+World: Sunken city: underwater streets, sluices, turquoise water, algae, submerged arches, sparkling sunlight through water.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fdbc-85f8-7471-90e2-82bd74996636\exec-bbea5cad-911a-4d71-be8a-338a87e25b15.png
+
+W5 | world5_ice_peaks.png
+References:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+Prompt:
+Use case: stylized-concept. Create ONE concept style sheet for a new world of the 2D co-op platformer "Hold On!". Attached image 1 is the existing world concept sheet: match its cheerful hand-painted cartoon art, chunky stone shapes, soft shading, and strict side-view platformer genre, but use the new place, lighting and palette specified below. Do not copy the reference text, logo, UI or layout. Landscape 3:2. Compose 3–4 small distinct side-view level fragments on one polished cohesive sheet, showing platforms, background environment, themed mechanisms, and tiny simple bright red, blue, yellow and green character silhouettes only for scale. Decorative scenery has no hard black outlines; interactive mechanisms and tiny character silhouettes have dark outlines. Include an unlabeled horizontal palette swatch strip. Absolutely no text, letters, numerals, captions, logos, watermark or menu UI anywhere.
+World: Ice peaks: snow, glaciers, mountain passes, blue ice, icicles, snowy pine trees, bright sunshine.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fdbc-85f8-7471-90e2-82bd74996636\exec-5169beef-688d-48da-be2a-863676241f10.png
+
+W6 | world6_sky_forge.png
+References:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+Prompt:
+Use case: stylized-concept. Create ONE concept style sheet for a new world of the 2D co-op platformer "Hold On!". Attached image 1 is the existing world concept sheet: match its cheerful hand-painted cartoon art, chunky stone shapes, soft shading, and strict side-view platformer genre, but use the new place, lighting and palette specified below. Do not copy the reference text, logo, UI or layout. Landscape 3:2. Compose 3–4 small distinct side-view level fragments on one polished cohesive sheet, showing platforms, background environment, themed mechanisms, and tiny simple bright red, blue, yellow and green character silhouettes only for scale. Decorative scenery has no hard black outlines; interactive mechanisms and tiny character silhouettes have dark outlines. Include an unlabeled horizontal palette swatch strip. Absolutely no text, letters, numerals, captions, logos, watermark or menu UI anywhere.
+World: Sky forge: clouds and floating islands, smithing furnaces in the sky, sunset gold and purple, chains linking islands.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fdbc-85f8-7471-90e2-82bd74996636\exec-3fe7bd19-b44d-46ba-82f8-ac72a47d1059.png

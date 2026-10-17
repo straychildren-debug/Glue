@@ -1,0 +1,71 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://src/level/greybox_level.gd" id="1"]
+[ext_resource type="Script" path="res://src/mechanisms/conveyor.gd" id="2"]
+[ext_resource type="Script" path="res://src/mechanisms/spring_pad.gd" id="3"]
+[ext_resource type="Script" path="res://src/mechanisms/bellows.gd" id="4"]
+[ext_resource type="Script" path="res://src/mechanisms/pressure_plate.gd" id="5"]
+[ext_resource type="Script" path="res://src/mechanisms/spinner.gd" id="6"]
+[ext_resource type="Script" path="res://src/mechanisms/finish.gd" id="7"]
+[ext_resource type="PackedScene" path="res://levels/backdrops/w02_forge.tscn" id="bd"]
+
+[node name="W02L10" type="Node2D"]
+script = ExtResource("1")
+title = "10 · Цех"
+blocks = Array[Rect2]([Rect2(0, -8, 1, 26), Rect2(0, 12, 4, 6), Rect2(4, 12.375, 8, 5.625), Rect2(17, 12, 6.5, 6), Rect2(23.5, 6, 10.5, 12), Rect2(42, 6, 12, 12), Rect2(54, 12, 6, 6), Rect2(66, 12, 10, 6), Rect2(76, -8, 1, 26)])
+checkpoints = Array[Vector2]([Vector2(2, 12), Vector2(26, 6), Vector2(55.5, 12)])
+bounds_tiles = Rect2(0, -8, 77, 27)
+kill_y_tiles = 19.0
+ground_fill = "w02_fill"
+ground_deep = "w02_deep"
+ground_top = "w02_top"
+ground_side = "w02_side"
+
+[node name="Belt" type="StaticBody2D" parent="."]
+position = Vector2(256, 768)
+script = ExtResource("2")
+width_tiles = 8.0
+
+[node name="Pad" type="StaticBody2D" parent="."]
+position = Vector2(1408, 768)
+script = ExtResource("3")
+
+[node name="Pedal1" type="AnimatableBody2D" parent="."]
+position = Vector2(1920, 384)
+script = ExtResource("5")
+width_tiles = 1.5
+
+[node name="Pedal2" type="AnimatableBody2D" parent="."]
+position = Vector2(2944, 384)
+script = ExtResource("5")
+width_tiles = 1.5
+
+[node name="Bellows" type="Node2D" parent="."]
+position = Vector2(2176, 320)
+script = ExtResource("4")
+length_tiles = 10.0
+height_tiles = 5.0
+pedal = NodePath("../Pedal1")
+pedals = Array[NodePath]([NodePath("../Pedal2")])
+
+[node name="Plate1" type="AnimatableBody2D" parent="."]
+position = Vector2(3648, 768)
+script = ExtResource("5")
+
+[node name="Plate2" type="AnimatableBody2D" parent="."]
+position = Vector2(4416, 768)
+script = ExtResource("5")
+
+[node name="Bridge" type="AnimatableBody2D" parent="."]
+position = Vector2(4032, 780)
+script = ExtResource("6")
+length_tiles = 6.0
+base_deg = 90.0
+step_deg = -90.0
+triggers = Array[NodePath]([NodePath("../Plate1"), NodePath("../Plate2")])
+
+[node name="Finish" type="Node2D" parent="."]
+position = Vector2(4672, 768)
+script = ExtResource("7")
+
+[node name="Backdrop" parent="." instance=ExtResource("bd")]

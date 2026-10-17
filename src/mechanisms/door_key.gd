@@ -90,6 +90,9 @@ func _draw() -> void:
 	var gold := Color("f2c230")
 	var shine := Color("ffe58a")
 	var o := Vector2(0, lift)
+	if Art.enabled:
+		draw_texture_rect(Art.tex("key"), Rect2(o - Vector2(22, 12), Vector2(44, 24)), false)
+		return
 	# Контур (интерактивное обведено), затем заливка: кольцо головки, стержень, бородка.
 	for pass_index in 2:
 		var grow := 3.0 if pass_index == 0 else 0.0

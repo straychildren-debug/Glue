@@ -1,0 +1,378 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://src/level/greybox_level.gd" id="1"]
+[ext_resource type="PackedScene" path="res://levels/backdrops/w02_machine.tscn" id="bd"]
+[ext_resource type="Script" path="res://src/level/backdrop_layer.gd" id="bl"]
+[ext_resource type="Texture2D" path="res://assets/backgrounds/world_02/source/w02_lm18_lightning_tower.png" id="lm"]
+[ext_resource type="Script" path="res://src/mechanisms/brittle_floor.gd" id="brittle"]
+[ext_resource type="Script" path="res://src/mechanisms/clock.gd" id="clock"]
+[ext_resource type="Script" path="res://src/mechanisms/crusher.gd" id="crusher"]
+[ext_resource type="Script" path="res://src/level/darkness.gd" id="darkness"]
+[ext_resource type="Script" path="res://src/mechanisms/door.gd" id="door"]
+[ext_resource type="Script" path="res://src/mechanisms/finish.gd" id="finish"]
+[ext_resource type="Script" path="res://src/mechanisms/ghost.gd" id="ghost"]
+[ext_resource type="Script" path="res://src/mechanisms/lantern.gd" id="lantern"]
+[ext_resource type="Script" path="res://src/mechanisms/spark.gd" id="spark"]
+[ext_resource type="Script" path="res://src/mechanisms/spikes.gd" id="spikes"]
+[ext_resource type="Script" path="res://src/mechanisms/wire.gd" id="wire"]
+
+[node name="W02L18" type="Node2D"]
+script = ExtResource("1")
+title = "18 · Искры и призрак"
+blocks = Array[Rect2]([Rect2(0, -8, 1, 30), Rect2(222, -8, 1, 30), Rect2(0, 12, 43, 6), Rect2(43, 16, 1.5, 2), Rect2(44.5, 12, 1.5, 6), Rect2(46, 16, 3, 2), Rect2(49, 12, 9, 6), Rect2(50, -8, 1, 17), Rect2(58, -8, 49, 13.5), Rect2(58, 12, 19, 6), Rect2(77, 16, 2, 2), Rect2(79, 12, 16.5, 6), Rect2(95.5, 16, 2, 2), Rect2(97.5, 12, 9.5, 6), Rect2(63, 8.5, 14, 0.5), Rect2(79, 8.5, 16.5, 0.5), Rect2(97.5, 8.5, 7.5, 0.5), Rect2(61.5, 10.25, 1.5, 0.5), Rect2(107, -8, 42, 17.6), Rect2(107, 12, 42, 6), Rect2(149, -8, 74, 7), Rect2(149, 12, 5, 6), Rect2(154, 16, 2, 2), Rect2(156, 12, 9, 6), Rect2(165, 16, 4.5, 2), Rect2(169.5, 12, 3.5, 6), Rect2(173, 16, 2, 2), Rect2(175, 12, 11, 6), Rect2(186, 16, 2.5, 2), Rect2(188.5, 12, 2, 6), Rect2(190.5, 16, 4.5, 2), Rect2(195, 12, 4, 6), Rect2(199, 16, 2, 2), Rect2(201, 12, 10, 6), Rect2(211, 16, 4.5, 2), Rect2(215.5, 12, 1, 6), Rect2(216.5, 16, 2, 2), Rect2(218.5, 12, 4.5, 6)])
+checkpoints = Array[Vector2]([Vector2(4, 12), Vector2(55, 12), Vector2(105, 12)])
+bounds_tiles = Rect2(0, -8, 223, 27)
+kill_y_tiles = 19
+ground_fill = "w02_fill"
+ground_deep = "w02_deep"
+ground_top = "w02_top"
+ground_side = "w02_side"
+
+[node name="Darkness" type="Node2D" parent="."]
+script = ExtResource("darkness")
+
+[node name="Pit10" type="Node2D" parent="."]
+position = Vector2(2800, 1024)
+script = ExtResource("spikes")
+width_tiles = 1.5
+
+[node name="Pit11" type="Node2D" parent="."]
+position = Vector2(3040, 1024)
+script = ExtResource("spikes")
+width_tiles = 3
+
+[node name="Crumble1" type="StaticBody2D" parent="."]
+position = Vector2(2944, 768)
+script = ExtResource("brittle")
+width_tiles = 3.0
+crumble_time = 0.8
+
+[node name="Lantern" type="Node2D" parent="."]
+position = Vector2(288, 716.8)
+script = ExtResource("lantern")
+draft_tiles = Rect2(107, 5, 42, 8)
+
+[node name="Ghost" type="Node2D" parent="."]
+position = Vector2(96, 608)
+script = ExtResource("ghost")
+area_tiles = Rect2(1, 2, 49, 10)
+needs_light = true
+max_speed = 290.0
+
+[node name="Wire1" type="Node2D" parent="."]
+script = ExtResource("wire")
+points = PackedVector2Array(9, 11.6, 17, 11.6)
+
+[node name="Spark1" type="Node2D" parent="."]
+script = ExtResource("spark")
+wire = NodePath("../Wire1")
+speed = 300.0
+
+[node name="Wire2" type="Node2D" parent="."]
+script = ExtResource("wire")
+points = PackedVector2Array(20, 11.6, 29.5, 11.6)
+
+[node name="Spark2" type="Node2D" parent="."]
+script = ExtResource("spark")
+wire = NodePath("../Wire2")
+speed = 340.0
+
+[node name="Wire3" type="Node2D" parent="."]
+script = ExtResource("wire")
+points = PackedVector2Array(33, 11.6, 42, 11.6)
+
+[node name="Spark3" type="Node2D" parent="."]
+script = ExtResource("spark")
+wire = NodePath("../Wire3")
+speed = 380.0
+
+[node name="Pit20" type="Node2D" parent="."]
+position = Vector2(4992, 1024)
+script = ExtResource("spikes")
+width_tiles = 2
+
+[node name="Pit21" type="Node2D" parent="."]
+position = Vector2(6176, 1024)
+script = ExtResource("spikes")
+width_tiles = 2
+
+[node name="Wire4" type="Node2D" parent="."]
+script = ExtResource("wire")
+points = PackedVector2Array(63, 11.6, 73, 11.6)
+
+[node name="Spark4" type="Node2D" parent="."]
+script = ExtResource("spark")
+wire = NodePath("../Wire4")
+speed = 300.0
+
+[node name="Wire5" type="Node2D" parent="."]
+script = ExtResource("wire")
+points = PackedVector2Array(80, 11.6, 92, 11.6)
+
+[node name="Spark5" type="Node2D" parent="."]
+script = ExtResource("spark")
+wire = NodePath("../Wire5")
+speed = 360.0
+
+[node name="Wire6" type="Node2D" parent="."]
+script = ExtResource("wire")
+points = PackedVector2Array(66, 8.1, 76, 8.1)
+
+[node name="Spark6" type="Node2D" parent="."]
+script = ExtResource("spark")
+wire = NodePath("../Wire6")
+speed = 330.0
+
+[node name="Wire7" type="Node2D" parent="."]
+script = ExtResource("wire")
+points = PackedVector2Array(83, 8.1, 94, 8.1)
+
+[node name="Spark7" type="Node2D" parent="."]
+script = ExtResource("spark")
+wire = NodePath("../Wire7")
+speed = 390.0
+
+[node name="Wire8" type="Node2D" parent="."]
+script = ExtResource("wire")
+points = PackedVector2Array(98, 11.6, 104.5, 11.6)
+
+[node name="Spark8" type="Node2D" parent="."]
+script = ExtResource("spark")
+wire = NodePath("../Wire8")
+speed = 380.0
+
+[node name="Wire9" type="Node2D" parent="."]
+script = ExtResource("wire")
+points = PackedVector2Array(98.5, 8.1, 104.5, 8.1)
+
+[node name="Spark9" type="Node2D" parent="."]
+script = ExtResource("spark")
+wire = NodePath("../Wire9")
+speed = 400.0
+
+[node name="GhostU" type="Node2D" parent="."]
+position = Vector2(3744, 448)
+script = ExtResource("ghost")
+area_tiles = Rect2(58, 5.5, 49, 3)
+needs_light = true
+max_speed = 340.0
+wake_x_tiles = 65
+
+[node name="GhostL" type="Node2D" parent="."]
+position = Vector2(3744, 652.8)
+script = ExtResource("ghost")
+area_tiles = Rect2(58, 9, 49, 3)
+needs_light = true
+max_speed = 340.0
+wake_x_tiles = 65
+
+[node name="Wire10" type="Node2D" parent="."]
+script = ExtResource("wire")
+points = PackedVector2Array(108, 9.85, 122, 9.85)
+
+[node name="Spark10" type="Node2D" parent="."]
+script = ExtResource("spark")
+wire = NodePath("../Wire10")
+speed = 260.0
+
+[node name="Wire11" type="Node2D" parent="."]
+script = ExtResource("wire")
+points = PackedVector2Array(120, 9.85, 137, 9.85)
+
+[node name="Spark11" type="Node2D" parent="."]
+script = ExtResource("spark")
+wire = NodePath("../Wire11")
+speed = 300.0
+
+[node name="Wire12" type="Node2D" parent="."]
+script = ExtResource("wire")
+points = PackedVector2Array(135, 9.85, 148, 9.85)
+
+[node name="Spark12" type="Node2D" parent="."]
+script = ExtResource("spark")
+wire = NodePath("../Wire12")
+speed = 320.0
+
+[node name="Clock1" type="Node" parent="."]
+script = ExtResource("clock")
+period = 5.6
+open_time = 1.6
+offset = 0.0
+
+[node name="Gate1" type="AnimatableBody2D" parent="."]
+position = Vector2(7296, 614.4)
+script = ExtResource("door")
+size_tiles = Vector2(1, 2.4)
+triggers = Array[NodePath]([NodePath("../Clock1")])
+open_offset_tiles = Vector2(0, 2.4)
+close_speed = 600.0
+
+[node name="Clock2" type="Node" parent="."]
+script = ExtResource("clock")
+period = 5.6
+open_time = 1.6
+offset = 1.4
+
+[node name="Gate2" type="AnimatableBody2D" parent="."]
+position = Vector2(7744, 614.4)
+script = ExtResource("door")
+size_tiles = Vector2(1, 2.4)
+triggers = Array[NodePath]([NodePath("../Clock2")])
+open_offset_tiles = Vector2(0, 2.4)
+close_speed = 600.0
+
+[node name="Clock3" type="Node" parent="."]
+script = ExtResource("clock")
+period = 5.6
+open_time = 1.6
+offset = 2.8
+
+[node name="Gate3" type="AnimatableBody2D" parent="."]
+position = Vector2(8192, 614.4)
+script = ExtResource("door")
+size_tiles = Vector2(1, 2.4)
+triggers = Array[NodePath]([NodePath("../Clock3")])
+open_offset_tiles = Vector2(0, 2.4)
+close_speed = 600.0
+
+[node name="Clock4" type="Node" parent="."]
+script = ExtResource("clock")
+period = 5.6
+open_time = 1.6
+offset = 4.2
+
+[node name="Gate4" type="AnimatableBody2D" parent="."]
+position = Vector2(8640, 614.4)
+script = ExtResource("door")
+size_tiles = Vector2(1, 2.4)
+triggers = Array[NodePath]([NodePath("../Clock4")])
+open_offset_tiles = Vector2(0, 2.4)
+close_speed = 600.0
+
+[node name="Ghost3" type="Node2D" parent="."]
+position = Vector2(6880, 652.8)
+script = ExtResource("ghost")
+area_tiles = Rect2(107, 9.6, 30, 2.4)
+needs_light = true
+max_speed = 250.0
+wake_x_tiles = 110
+
+[node name="Pit40" type="Node2D" parent="."]
+position = Vector2(9920, 1024)
+script = ExtResource("spikes")
+width_tiles = 2
+
+[node name="Pit41" type="Node2D" parent="."]
+position = Vector2(10704, 1024)
+script = ExtResource("spikes")
+width_tiles = 4.5
+
+[node name="Pit42" type="Node2D" parent="."]
+position = Vector2(11136, 1024)
+script = ExtResource("spikes")
+width_tiles = 2
+
+[node name="Pit43" type="Node2D" parent="."]
+position = Vector2(11984, 1024)
+script = ExtResource("spikes")
+width_tiles = 2.5
+
+[node name="Pit44" type="Node2D" parent="."]
+position = Vector2(12336, 1024)
+script = ExtResource("spikes")
+width_tiles = 4.5
+
+[node name="Pit45" type="Node2D" parent="."]
+position = Vector2(12800, 1024)
+script = ExtResource("spikes")
+width_tiles = 2
+
+[node name="Pit46" type="Node2D" parent="."]
+position = Vector2(13648, 1024)
+script = ExtResource("spikes")
+width_tiles = 4.5
+
+[node name="Pit47" type="Node2D" parent="."]
+position = Vector2(13920, 1024)
+script = ExtResource("spikes")
+width_tiles = 2
+
+[node name="Crumble4a" type="StaticBody2D" parent="."]
+position = Vector2(10560, 768)
+script = ExtResource("brittle")
+width_tiles = 4.5
+crumble_time = 0.9
+
+[node name="Crumble4b" type="StaticBody2D" parent="."]
+position = Vector2(12192, 768)
+script = ExtResource("brittle")
+width_tiles = 4.5
+crumble_time = 0.9
+
+[node name="Crumble4c" type="StaticBody2D" parent="."]
+position = Vector2(13504, 768)
+script = ExtResource("brittle")
+width_tiles = 4.5
+crumble_time = 0.8
+
+[node name="Wire13" type="Node2D" parent="."]
+script = ExtResource("wire")
+points = PackedVector2Array(164, 6, 164, 11.6, 157, 11.6)
+grounded = true
+
+[node name="Spark13" type="Node2D" parent="."]
+script = ExtResource("spark")
+wire = NodePath("../Wire13")
+speed = 380.0
+respawn_time = 0.7
+
+[node name="Wire14" type="Node2D" parent="."]
+script = ExtResource("wire")
+points = PackedVector2Array(184.5, 6, 184.5, 11.6, 175.5, 11.6)
+grounded = true
+
+[node name="Spark14" type="Node2D" parent="."]
+script = ExtResource("spark")
+wire = NodePath("../Wire14")
+speed = 420.0
+respawn_time = 0.6
+
+[node name="Wire15" type="Node2D" parent="."]
+script = ExtResource("wire")
+points = PackedVector2Array(209, 6, 209, 11.6, 202, 11.6)
+grounded = true
+
+[node name="Spark15" type="Node2D" parent="."]
+script = ExtResource("spark")
+wire = NodePath("../Wire15")
+speed = 450.0
+respawn_time = 0.5
+
+[node name="Crusher" type="Node2D" parent="."]
+position = Vector2(9344, -512)
+script = ExtResource("crusher")
+height_tiles = 27.0
+speed = 290.0
+start_x_tiles = 151
+stop_x_tiles = 219
+catch_up_tiles = 7.0
+catch_up_speed = 330.0
+
+[node name="Finish" type="Node2D" parent="."]
+position = Vector2(14080, 768)
+script = ExtResource("finish")
+
+[node name="Backdrop" parent="." instance=ExtResource("bd")]
+
+[node name="Landmark" type="Node2D" parent="Backdrop"]
+script = ExtResource("bl")
+texture = ExtResource("lm")
+parallax = 0.3
+parallax_y = 0.1
+height = 0.72
+center_y = 0.6
+zoom_follow = 0.3
+repeat = false
+world_x = 4995.0
+haze = 0.22
+haze_color = Color(0.860, 0.900, 0.960, 1)

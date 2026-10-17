@@ -15,6 +15,11 @@ const REACH := 80.0
 	set(value):
 		active = value
 		queue_redraw()
+## Цветная метка (ромб над рычагом): тем же цветом помечено то, чем он управляет (развилка провода).
+@export var mark_color := Color(0, 0, 0, 0):
+	set(value):
+		mark_color = value
+		queue_redraw()
 
 var _swing := 0.0  # для анимации ручки: -1 выкл, 1 вкл
 
@@ -26,6 +31,12 @@ static func try_toggle(player: Player) -> bool:
 			lever.active = not lever.active
 			return true
 	return false
+
+
+## Цветной ромб с тёмным контуром (как у плит) — метка «чем управляет».
+static func draw_mark(item: CanvasItem, c: Vector2, color: Color) -> void:
+	item.draw_colored_polygon(PackedVector2Array([c + Vector2(0, -14), c + Vector2(14, 0), c + Vector2(0, 14), c + Vector2(-14, 0)]), OUTLINE)
+	item.draw_colored_polygon(PackedVector2Array([c + Vector2(0, -9), c + Vector2(9, 0), c + Vector2(0, 9), c + Vector2(-9, 0)]), color)
 
 
 func _ready() -> void:
@@ -54,6 +65,12 @@ func load_state(state: Variant) -> void:
 
 
 func _draw() -> void:
+	if mark_color.a > 0.0:
+		draw_mark(self, Vector2(0, -80), mark_color)
+	if Art.enabled:
+		# Спрайт 80×32: середина низа каменного основания — точка (40, 31).
+		draw_texture_rect(Art.tex("lever_on" if active else "lever_off"), Rect2(-40, -31, 80, 32), false)
+		return
 	# Основание — каменная колодка; ручка с набалдашником наклонена влево (выкл) или вправо (вкл);
 	# набалдашник: зелёный — вкл, красный — выкл.
 	var angle := deg_to_rad(35.0) * _swing

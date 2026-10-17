@@ -31,3 +31,77 @@ Attached image 1: concept sheet for my game "Hold On!" / "Forgotten Bridges", ST
 This is a FOREGROUND PLATFORM MATERIAL, same art world. No atmospheric haze or background scenery. No text, labels, objects, border, vignette or perspective. Create a SEAMLESS TILEABLE TEXTURE, square 1:1, tileable on all four sides. Strict front orthographic view. Natural dark grey-brown cliff rock with LARGE soft rounded rock masses and deep cracks, a little darker and calmer than masonry, occasional thin roots and TINY scattered moss spots. Hand-painted cartoon style, soft upper-left shading on rock facets, even lighting across whole tile, no vignette or overall gradient. Opaque edge-to-edge material, no transparency. Low contrast, no black cavern holes, no waterfalls, no large distinctive central feature or bright moss patch, no regular brick rows. Neutral white balance; avoid purple-blue or yellow color cast.
 Attached image 3 is the finished masonry texture; use it to match brush style and neutral grey-brown hue, while making this natural rock darker and less orderly. Fully opaque RGB image, every pixel alpha 255.
 
+=== GRAPHICS 09 / 2026-10-02 / BUILT-IN IMAGE_GEN ===
+Original generator PNG files. No upscaling or image postprocessing.
+
+T5 | w01_canyon_fill.png
+References:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/assets/backgrounds/world_01/v2/source/w01_v2_far_canyon.png
+D:/Cluade projects/games/Glue/assets/tiles/world_01/source/w01_stone_fill.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the approved far background of this zone — match its palette. Attached image 3: the approved stone masonry texture of the same game — match its painting style, stone scale and level of detail. Do NOT copy layouts, text, UI or characters.
+
+Create a SEAMLESS TILEABLE TEXTURE, square 1:1, tileable on all four sides. Strict front orthographic view, no perspective. Hand-painted cartoon style, soft shading, light from the upper left. Medium-dark values and low contrast, so small bright red, blue, yellow and green characters read clearly in front of it. No moss, no grass, no plants, no holes, no doors, no objects, no text. Even lighting across the whole tile — no vignette, no gradient from one side to the other. Neutral white balance, no yellow tint.
+Surface:
+
+quarry rock wall: horizontal layers of pale grey-beige sedimentary stone of different thickness, flat chisel marks and square cut steps here and there, thin cracks; cooler and lighter than the masonry of image 3.
+Final targeted edit prompt (edit target = preceding generated version):
+Use case: precise-object-edit. Image 1 is the edit target. Keep the same hand-painted style, grey-beige palette, stone scale, even lighting and square texture format, but change the surface structure from stacked masonry bricks to ONE continuous natural sedimentary quarry rock face: long irregular horizontal strata of varying thickness running across the tile, shallow flat chisel scars, occasional square quarry cut notches, fine cracks. No separate rounded bricks, no mortar grid, no staggered brick joints. Cool medium-dark grey-beige rock, subdued contrast. Seamless tileable on all four edges. Opaque square 1:1.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fdbc-85f8-7471-90e2-82bd74996636\exec-19a23146-a50e-49b9-a1f1-a5690a1a17ad.png
+
+T6 | w01_canyon_deep.png
+References:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/assets/backgrounds/world_01/v2/source/w01_v2_far_canyon.png
+D:/Cluade projects/games/Glue/assets/tiles/world_01/source/w01_stone_fill.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the approved far background of this zone — match its palette. Attached image 3: the approved stone masonry texture of the same game — match its painting style, stone scale and level of detail. Do NOT copy layouts, text, UI or characters.
+
+Create a SEAMLESS TILEABLE TEXTURE, square 1:1, tileable on all four sides. Strict front orthographic view, no perspective. Hand-painted cartoon style, soft shading, light from the upper left. Medium-dark values and low contrast, so small bright red, blue, yellow and green characters read clearly in front of it. No moss, no grass, no plants, no holes, no doors, no objects, no text. Even lighting across the whole tile — no vignette, no gradient from one side to the other. Neutral white balance, no yellow tint.
+Surface:
+
+deep canyon rock: large rounded dark blue-grey boulders and rock masses with deep shadowed cracks, calmer and darker than T5.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fdbc-85f8-7471-90e2-82bd74996636\exec-efb009e9-288d-49fc-a894-2b7a40383283.png
+
+T7 | w01_viaduct_fill.png
+References:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/assets/backgrounds/world_01/v2/source/w01_v2_far_viaduct.png
+D:/Cluade projects/games/Glue/assets/tiles/world_01/source/w01_stone_fill.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the approved far background of this zone — match its palette. Attached image 3: the approved stone masonry texture of the same game — match its painting style, stone scale and level of detail. Do NOT copy layouts, text, UI or characters.
+
+Create a SEAMLESS TILEABLE TEXTURE, square 1:1, tileable on all four sides. Strict front orthographic view, no perspective. Hand-painted cartoon style, soft shading, light from the upper left. Medium-dark values and low contrast, so small bright red, blue, yellow and green characters read clearly in front of it. No moss, no grass, no plants, no holes, no doors, no objects, no text. Even lighting across the whole tile — no vignette, no gradient from one side to the other. Neutral white balance, no yellow tint.
+Surface:
+
+ancient viaduct masonry: large regular rectangular dressed stone blocks in neat rows with thin joints, a few chipped corners, warm golden-grey stone lit by low evening light.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fdbc-85f8-7471-90e2-82bd74996636\exec-e852b3ba-12c1-4f68-af33-dacb8d38550e.png
+
+T8 | w01_river_fill.png
+References:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/assets/backgrounds/world_01/v2/source/w01_v2_far_river.png
+D:/Cluade projects/games/Glue/assets/tiles/world_01/source/w01_stone_fill.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the approved far background of this zone — match its palette. Attached image 3: the approved stone masonry texture of the same game — match its painting style, stone scale and level of detail. Do NOT copy layouts, text, UI or characters.
+
+Create a SEAMLESS TILEABLE TEXTURE, square 1:1, tileable on all four sides. Strict front orthographic view, no perspective. Hand-painted cartoon style, soft shading, light from the upper left. Medium-dark values and low contrast, so small bright red, blue, yellow and green characters read clearly in front of it. No moss, no grass, no plants, no holes, no doors, no objects, no text. Even lighting across the whole tile — no vignette, no gradient from one side to the other. Neutral white balance, no yellow tint.
+Surface:
+
+riverside mill masonry: rounded medium stones in uneven rows, slightly lighter and cooler than image 3, with faint darker water stains running down in a few places.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fdbc-85f8-7471-90e2-82bd74996636\exec-7b67fd11-138d-415e-a3d1-9bbd22f1e16d.png
+
+T9 | w01_shrine_fill.png
+References:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/assets/backgrounds/world_01/v2/source/w01_v2_far_shrine.png
+D:/Cluade projects/games/Glue/assets/tiles/world_01/source/w01_stone_fill.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the approved far background of this zone — match its palette. Attached image 3: the approved stone masonry texture of the same game — match its painting style, stone scale and level of detail. Do NOT copy layouts, text, UI or characters.
+
+Create a SEAMLESS TILEABLE TEXTURE, square 1:1, tileable on all four sides. Strict front orthographic view, no perspective. Hand-painted cartoon style, soft shading, light from the upper left. Medium-dark values and low contrast, so small bright red, blue, yellow and green characters read clearly in front of it. No moss, no grass, no plants, no holes, no doors, no objects, no text. Even lighting across the whole tile — no vignette, no gradient from one side to the other. Neutral white balance, no yellow tint.
+Surface:
+
+old shrine masonry: large flat rectangular and square stone slabs, cool blue-grey stone, softly worn edges, a few faint carved grooves (no symbols, no letters, no faces).
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fdbc-85f8-7471-90e2-82bd74996636\exec-f3756b1f-0b14-42ce-98ab-90c38542bd0b.png

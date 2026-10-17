@@ -37,6 +37,28 @@ func _ready() -> void:
 	check(crate.global_position.x > crate_x + 100.0,
 			"игрок толкнул ящик на %.0f px" % (crate.global_position.x - crate_x))
 
+	# --- Хват за ящик: стоя вплотную, зажать хват и идти прочь — ящик едет следом
+	# (ящик, прижатый к стене, вытаскивают обратно).
+	await _teleport(p1, Vector2(crate.global_position.x + 54.0, FLOOR_Y), p2, Vector2(3 * TILE, FLOOR_Y))
+	crate_x = crate.global_position.x
+	press(KEY_E, true)
+	await frames(3)
+	check(p1.pulling == crate, "хват взялся за ящик вплотную")
+	await hold(KEY_D, 40)
+	press(KEY_E, false)
+	check(crate.global_position.x > crate_x + 80.0, "игрок вытянул ящик хватом на %.0f px" % (crate.global_position.x - crate_x))
+	await frames(15)  # ящик доскальзывает по трению
+	crate_x = crate.global_position.x
+	await hold(KEY_D, 20)
+	check(absf(crate.global_position.x - crate_x) < 2.0, "отпустил хват — ящик стоит")
+
+	# --- Игрок внутри ящика (ящик въехал или его затолкали в игрока) — выталкивается сам.
+	place(p1, crate.global_position + Vector2(-20.0, 0.0))
+	await frames(3)
+	var p1_rect := Rect2(p1.global_position - Player.SIZE / 2.0, Player.SIZE)
+	check(not p1_rect.intersects(crate.get_rect().grow(-2.0)), "игрока, застрявшего в ящике, вытолкнуло (%s)" % p1.global_position)
+	await frames(30)
+
 	# --- Тяжёлый ящик: одному не сдвинуть, вдвоём паровозиком — можно.
 	await _teleport(p1, Vector2(heavy.global_position.x - 60.0, FLOOR_Y), p2, Vector2(heavy.global_position.x - 120.0, FLOOR_Y))
 	var heavy_x := heavy.global_position.x
@@ -89,20 +111,18 @@ func _ready() -> void:
 	place(p2, Vector2(18 * TILE, FLOOR_Y))
 	await frames(10)
 
-	# --- Дверь не давит: закрываясь, останавливается над игроком.
+	# --- Дверь не давит: опускаясь, выталкивает игрока из проёма в ближнюю сторону.
 	await frames(30)
 	check(plate.active, "игрок 1 держит плиту")
-	place(p2, Vector2(door.global_position.x + TILE / 2.0, FLOOR_Y))
+	place(p2, Vector2(door.global_position.x + TILE / 2.0 + 10.0, FLOOR_Y))
 	await frames(10)
 	place(p1, Vector2(18 * TILE - 60.0, FLOOR_Y))
 	await frames(60)
-	var door_bottom := door.global_position.y + 3 * TILE
-	check(p2.alive and door_bottom <= p2.global_position.y - Player.SIZE.y / 2.0 + 1.0
-			and door.global_position.y > door_closed_y - 3 * TILE + 10.0,
-			"дверь опустилась до игрока под ней и остановилась")
+	check(p2.alive and p2.global_position.x - Player.SIZE.x / 2.0 >= door.global_position.x + TILE - 1.0,
+			"дверь вытолкнула игрока из проёма в ближнюю сторону (%s)" % p2.global_position)
+	check(is_equal_approx(door.global_position.y, door_closed_y), "дверь закрылась до конца")
 	place(p2, Vector2(28 * TILE, FLOOR_Y))
-	await frames(60)
-	check(is_equal_approx(door.global_position.y, door_closed_y), "игрок ушёл — дверь закрылась до конца")
+	await frames(10)
 
 	# --- Качели: игрок на поднятом конце перевешивает балку.
 	var pivot := seesaw.global_position

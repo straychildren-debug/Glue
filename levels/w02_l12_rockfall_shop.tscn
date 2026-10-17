@@ -1,0 +1,377 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://src/level/greybox_level.gd" id="1"]
+[ext_resource type="PackedScene" path="res://levels/backdrops/w02_scaffolds.tscn" id="bd"]
+[ext_resource type="Script" path="res://src/level/backdrop_layer.gd" id="bl"]
+[ext_resource type="Texture2D" path="res://assets/backgrounds/world_02/source/w02_lm12_collapsed_hall.png" id="lm"]
+[ext_resource type="Script" path="res://src/mechanisms/beetle.gd" id="beetle"]
+[ext_resource type="Script" path="res://src/mechanisms/brittle_floor.gd" id="brittle"]
+[ext_resource type="Script" path="res://src/mechanisms/crusher.gd" id="crusher"]
+[ext_resource type="Script" path="res://src/mechanisms/door.gd" id="door"]
+[ext_resource type="Script" path="res://src/mechanisms/finish.gd" id="finish"]
+[ext_resource type="Script" path="res://src/mechanisms/pressure_plate.gd" id="plate"]
+[ext_resource type="Script" path="res://src/mechanisms/saw.gd" id="saw"]
+[ext_resource type="Script" path="res://src/mechanisms/spikes.gd" id="spikes"]
+[ext_resource type="Script" path="res://src/mechanisms/spring_pad.gd" id="spring"]
+
+[node name="W02L12" type="Node2D"]
+script = ExtResource("1")
+title = "12 · Цех под обвалом"
+blocks = Array[Rect2]([Rect2(0, -8, 1, 30), Rect2(105, -8, 1, 30), Rect2(1, -8, 104, 11), Rect2(1, 7, 22, 1), Rect2(26, 7, 11, 1), Rect2(46, 7, 10.5, 1), Rect2(59, 7, 6.5, 1), Rect2(68.5, 7, 12, 1), Rect2(83.5, 7, 12.5, 1), Rect2(1, 13, 7, 5), Rect2(8, 16, 3, 2), Rect2(11, 13, 19, 5), Rect2(30, 16, 2, 2), Rect2(32, 13, 26, 5), Rect2(58, 16, 2, 2), Rect2(60, 13, 22, 5), Rect2(82, 16, 2.5, 2), Rect2(84.5, 13, 14.5, 5), Rect2(99, 16, 2, 2), Rect2(101, 13, 4, 5), Rect2(26, 6.5, 0.5, 0.5), Rect2(51, 12.5, 0.5, 0.5), Rect2(86, 6.5, 0.5, 0.5)])
+checkpoints = Array[Vector2]([Vector2(2.5, 13), Vector2(41.5, 13), Vector2(65, 13)])
+slot_spawns = Array[Vector2]([Vector2(2.5, 7), Vector2(2.5, 13)])
+bounds_tiles = Rect2(0, -8, 106, 27)
+kill_y_tiles = 19
+ground_fill = "w02_fill"
+ground_deep = "w02_deep"
+ground_top = "w02_top"
+ground_side = "w02_side"
+
+[node name="CrumbleU1" type="StaticBody2D" parent="."]
+position = Vector2(1472, 448)
+script = ExtResource("brittle")
+width_tiles = 3
+crumble_time = 0.8
+
+[node name="CrumbleU2" type="StaticBody2D" parent="."]
+position = Vector2(2368, 448)
+script = ExtResource("brittle")
+width_tiles = 6
+crumble_time = 0.35
+
+[node name="CrumbleU3" type="StaticBody2D" parent="."]
+position = Vector2(3616, 448)
+script = ExtResource("brittle")
+width_tiles = 2.5
+crumble_time = 0.7
+
+[node name="CrumbleU5" type="StaticBody2D" parent="."]
+position = Vector2(5152, 448)
+script = ExtResource("brittle")
+width_tiles = 3
+crumble_time = 0.6
+
+[node name="PitL1" type="Node2D" parent="."]
+position = Vector2(608, 1024)
+script = ExtResource("spikes")
+width_tiles = 3
+
+[node name="CrumbleL1" type="StaticBody2D" parent="."]
+position = Vector2(512, 832)
+script = ExtResource("brittle")
+width_tiles = 3
+crumble_time = 0.8
+
+[node name="PitL2" type="Node2D" parent="."]
+position = Vector2(1984, 1024)
+script = ExtResource("spikes")
+width_tiles = 2
+
+[node name="CrumbleL2" type="StaticBody2D" parent="."]
+position = Vector2(1920, 832)
+script = ExtResource("brittle")
+width_tiles = 2
+crumble_time = 0.6
+
+[node name="PitL3" type="Node2D" parent="."]
+position = Vector2(3776, 1024)
+script = ExtResource("spikes")
+width_tiles = 2
+
+[node name="PitL5" type="Node2D" parent="."]
+position = Vector2(5328, 1024)
+script = ExtResource("spikes")
+width_tiles = 2.5
+
+[node name="CrumbleL5" type="StaticBody2D" parent="."]
+position = Vector2(5248, 832)
+script = ExtResource("brittle")
+width_tiles = 2.5
+crumble_time = 0.5
+
+[node name="PitL6" type="Node2D" parent="."]
+position = Vector2(6400, 1024)
+script = ExtResource("spikes")
+width_tiles = 2
+
+[node name="SawU1" type="Node2D" parent="."]
+position = Vector2(512, 412.8)
+script = ExtResource("saw")
+path_tiles = Vector2(4, 0)
+speed = 240.0
+
+[node name="PlateU1" type="AnimatableBody2D" parent="."]
+position = Vector2(992, 448)
+script = ExtResource("plate")
+release_delay = 1.0
+mark_color = Color(0.95, 0.85, 0.3, 1)
+
+[node name="PlateL1" type="AnimatableBody2D" parent="."]
+position = Vector2(896, 832)
+script = ExtResource("plate")
+release_delay = 1.0
+mark_color = Color(0.95, 0.85, 0.3, 1)
+
+[node name="DoorU1" type="AnimatableBody2D" parent="."]
+position = Vector2(1216, 192)
+script = ExtResource("door")
+size_tiles = Vector2(1, 4)
+triggers = Array[NodePath]([NodePath("../PlateL1")])
+open_offset_tiles = Vector2(0, -4)
+mark_color = Color(0.95, 0.85, 0.3, 1)
+
+[node name="DoorL1" type="AnimatableBody2D" parent="."]
+position = Vector2(1120, 512)
+script = ExtResource("door")
+size_tiles = Vector2(1, 5)
+triggers = Array[NodePath]([NodePath("../PlateU1")])
+open_offset_tiles = Vector2(0, 5)
+mark_color = Color(0.95, 0.85, 0.3, 1)
+
+[node name="BumpU" type="CharacterBody2D" parent="."]
+position = Vector2(1920, 420)
+script = ExtResource("beetle")
+direction = -1
+speed = 200.0
+aggressive = true
+knockback = true
+mass = 0.0
+sight_tiles = 7.0
+
+[node name="SawL" type="Node2D" parent="."]
+position = Vector2(1472, 796.8)
+script = ExtResource("saw")
+path_tiles = Vector2(5.5, 0)
+speed = 220.0
+
+[node name="PlateU2" type="AnimatableBody2D" parent="."]
+position = Vector2(2048, 448)
+script = ExtResource("plate")
+release_delay = 1.0
+mark_color = Color(0.4, 0.7, 0.95, 1)
+
+[node name="PlateL2" type="AnimatableBody2D" parent="."]
+position = Vector2(2144, 832)
+script = ExtResource("plate")
+release_delay = 1.0
+mark_color = Color(0.4, 0.7, 0.95, 1)
+
+[node name="DoorU2" type="AnimatableBody2D" parent="."]
+position = Vector2(2240, 192)
+script = ExtResource("door")
+size_tiles = Vector2(1, 4)
+triggers = Array[NodePath]([NodePath("../PlateL2")])
+open_offset_tiles = Vector2(0, -4)
+mark_color = Color(0.4, 0.7, 0.95, 1)
+
+[node name="DoorL2" type="AnimatableBody2D" parent="."]
+position = Vector2(2336, 512)
+script = ExtResource("door")
+size_tiles = Vector2(1, 5)
+triggers = Array[NodePath]([NodePath("../PlateU2")])
+open_offset_tiles = Vector2(0, 5)
+mark_color = Color(0.4, 0.7, 0.95, 1)
+
+[node name="Pad" type="StaticBody2D" parent="."]
+position = Vector2(2816, 832)
+script = ExtResource("spring")
+
+[node name="PlateU3" type="AnimatableBody2D" parent="."]
+position = Vector2(3020.8, 448)
+script = ExtResource("plate")
+release_delay = 1.0
+mark_color = Color(0.35, 0.8, 0.4, 1)
+
+[node name="PlateL3" type="AnimatableBody2D" parent="."]
+position = Vector2(2976, 832)
+script = ExtResource("plate")
+release_delay = 1.0
+mark_color = Color(0.35, 0.8, 0.4, 1)
+
+[node name="DoorU3" type="AnimatableBody2D" parent="."]
+position = Vector2(3155.2, 192)
+script = ExtResource("door")
+size_tiles = Vector2(1, 4)
+triggers = Array[NodePath]([NodePath("../PlateL3")])
+open_offset_tiles = Vector2(0, -4)
+mark_color = Color(0.35, 0.8, 0.4, 1)
+
+[node name="DoorL3" type="AnimatableBody2D" parent="."]
+position = Vector2(3136, 512)
+script = ExtResource("door")
+size_tiles = Vector2(1, 5)
+triggers = Array[NodePath]([NodePath("../PlateU3")])
+open_offset_tiles = Vector2(0, 5)
+mark_color = Color(0.35, 0.8, 0.4, 1)
+
+[node name="BumpL" type="CharacterBody2D" parent="."]
+position = Vector2(3488, 804)
+script = ExtResource("beetle")
+direction = 1
+speed = 200.0
+aggressive = true
+knockback = true
+mass = 0.0
+sight_tiles = 7.0
+
+[node name="SawU2" type="Node2D" parent="."]
+position = Vector2(3379.2, 412.8)
+script = ExtResource("saw")
+path_tiles = Vector2(2.4, 0)
+speed = 240.0
+
+[node name="PlateU4" type="AnimatableBody2D" parent="."]
+position = Vector2(3891.2, 448)
+script = ExtResource("plate")
+release_delay = 1.0
+mark_color = Color(0.7, 0.45, 0.95, 1)
+
+[node name="PlateL4" type="AnimatableBody2D" parent="."]
+position = Vector2(3936, 832)
+script = ExtResource("plate")
+release_delay = 1.0
+mark_color = Color(0.7, 0.45, 0.95, 1)
+
+[node name="DoorU4" type="AnimatableBody2D" parent="."]
+position = Vector2(4032, 192)
+script = ExtResource("door")
+size_tiles = Vector2(1, 4)
+triggers = Array[NodePath]([NodePath("../PlateL4")])
+open_offset_tiles = Vector2(0, -4)
+mark_color = Color(0.7, 0.45, 0.95, 1)
+
+[node name="DoorL4" type="AnimatableBody2D" parent="."]
+position = Vector2(4064, 512)
+script = ExtResource("door")
+size_tiles = Vector2(1, 5)
+triggers = Array[NodePath]([NodePath("../PlateU4")])
+open_offset_tiles = Vector2(0, 5)
+mark_color = Color(0.7, 0.45, 0.95, 1)
+
+[node name="Pad2" type="StaticBody2D" parent="."]
+position = Vector2(4288, 832)
+script = ExtResource("spring")
+
+[node name="SawU5" type="Node2D" parent="."]
+position = Vector2(4704, 412.8)
+script = ExtResource("saw")
+path_tiles = Vector2(6, 0)
+speed = 300.0
+
+[node name="SawL5" type="Node2D" parent="."]
+position = Vector2(4672, 796.8)
+script = ExtResource("saw")
+path_tiles = Vector2(6.5, 0)
+speed = 280.0
+start_at = 0.5
+
+[node name="PlateU5" type="AnimatableBody2D" parent="."]
+position = Vector2(4928, 448)
+script = ExtResource("plate")
+release_delay = 1.0
+mark_color = Color(0.95, 0.5, 0.7, 1)
+
+[node name="PlateL5" type="AnimatableBody2D" parent="."]
+position = Vector2(4960, 832)
+script = ExtResource("plate")
+release_delay = 1.0
+mark_color = Color(0.95, 0.5, 0.7, 1)
+
+[node name="DoorU5" type="AnimatableBody2D" parent="."]
+position = Vector2(5152, 192)
+script = ExtResource("door")
+size_tiles = Vector2(1, 4)
+triggers = Array[NodePath]([NodePath("../PlateL5")])
+open_offset_tiles = Vector2(0, -4)
+mark_color = Color(0.95, 0.5, 0.7, 1)
+
+[node name="DoorL5" type="AnimatableBody2D" parent="."]
+position = Vector2(5184, 512)
+script = ExtResource("door")
+size_tiles = Vector2(1, 5)
+triggers = Array[NodePath]([NodePath("../PlateU5")])
+open_offset_tiles = Vector2(0, 5)
+mark_color = Color(0.95, 0.5, 0.7, 1)
+
+[node name="BumpU6" type="CharacterBody2D" parent="."]
+position = Vector2(5696, 420)
+script = ExtResource("beetle")
+direction = -1
+speed = 200.0
+aggressive = true
+knockback = true
+mass = 0.0
+sight_tiles = 7.0
+
+[node name="SawL6" type="Node2D" parent="."]
+position = Vector2(5536, 796.8)
+script = ExtResource("saw")
+path_tiles = Vector2(6, 0)
+speed = 320.0
+
+[node name="PlateU6" type="AnimatableBody2D" parent="."]
+position = Vector2(5792, 448)
+script = ExtResource("plate")
+release_delay = 0.6
+mark_color = Color(0.3, 0.8, 0.75, 1)
+
+[node name="PlateL6" type="AnimatableBody2D" parent="."]
+position = Vector2(5792, 832)
+script = ExtResource("plate")
+release_delay = 0.6
+mark_color = Color(0.3, 0.8, 0.75, 1)
+
+[node name="DoorU6" type="AnimatableBody2D" parent="."]
+position = Vector2(5952, 192)
+script = ExtResource("door")
+size_tiles = Vector2(1, 4)
+triggers = Array[NodePath]([NodePath("../PlateL6")])
+open_offset_tiles = Vector2(0, -4)
+mark_color = Color(0.3, 0.8, 0.75, 1)
+
+[node name="DoorL6" type="AnimatableBody2D" parent="."]
+position = Vector2(5984, 512)
+script = ExtResource("door")
+size_tiles = Vector2(1, 5)
+triggers = Array[NodePath]([NodePath("../PlateU6")])
+open_offset_tiles = Vector2(0, 5)
+mark_color = Color(0.3, 0.8, 0.75, 1)
+
+[node name="Finish" type="Node2D" parent="."]
+position = Vector2(6592, 832)
+script = ExtResource("finish")
+
+[node name="Crusher" type="Node2D" parent="."]
+position = Vector2(-160, -512)
+script = ExtResource("crusher")
+height_tiles = 27.0
+speed = 220.0
+start_x_tiles = 6.0
+stop_x_tiles = 64.0
+catch_up_tiles = 6.0
+catch_up_speed = 300.0
+
+[node name="Crusher2" type="Node2D" parent="."]
+position = Vector2(4864, -512)
+script = ExtResource("crusher")
+height_tiles = 27.0
+speed = 210.0
+start_x_tiles = 82.0
+stop_x_tiles = 100.0
+catch_up_tiles = 6.0
+catch_up_speed = 290.0
+
+[node name="Backdrop" parent="." instance=ExtResource("bd")]
+
+[node name="Landmark" type="Node2D" parent="Backdrop"]
+script = ExtResource("bl")
+texture = ExtResource("lm")
+parallax = 0.3
+parallax_y = 0.1
+height = 0.6
+center_y = 0.55
+zoom_follow = 0.3
+repeat = false
+world_x = 2374.0
+haze = 0.22
+haze_color = Color(0.860, 0.900, 0.960, 1)

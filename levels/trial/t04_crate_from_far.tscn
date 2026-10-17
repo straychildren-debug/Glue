@@ -1,0 +1,70 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://src/level/greybox_level.gd" id="1"]
+[ext_resource type="PackedScene" path="res://levels/backdrops/w02_machine.tscn" id="bd"]
+[ext_resource type="Script" path="res://src/mechanisms/crate.gd" id="2"]
+[ext_resource type="Script" path="res://src/mechanisms/pressure_plate.gd" id="3"]
+[ext_resource type="Script" path="res://src/mechanisms/door.gd" id="4"]
+[ext_resource type="Script" path="res://src/mechanisms/finish.gd" id="5"]
+
+[node name="T04" type="Node2D"]
+script = ExtResource("1")
+title = "04 · Ящик с той стороны"
+blocks = Array[Rect2]([Rect2(0, -8, 1, 26), Rect2(0, 12, 38, 6), Rect2(1, -8, 36, 17), Rect2(37, -8, 1, 26)])
+checkpoints = Array[Vector2]([Vector2(10, 12)])
+bounds_tiles = Rect2(0, -8, 38, 27)
+kill_y_tiles = 19.0
+ground_fill = "w02_fill"
+ground_deep = "w02_deep"
+ground_top = "w02_top"
+ground_side = "w02_side"
+
+[node name="PlateOrange" type="AnimatableBody2D" parent="."]
+position = Vector2(192, 768)
+script = ExtResource("3")
+width_tiles = 1.5
+mark_color = Color(0.95, 0.6, 0.2, 1)
+
+[node name="PlateBlue" type="AnimatableBody2D" parent="."]
+position = Vector2(416, 768)
+script = ExtResource("3")
+width_tiles = 1.5
+mark_color = Color(0.4, 0.7, 0.95, 1)
+
+[node name="Door0" type="AnimatableBody2D" parent="."]
+position = Vector2(832, 576)
+script = ExtResource("4")
+open_offset_tiles = Vector2(0, -2.5)
+triggers = Array[NodePath]([NodePath("../PlateOrange")])
+mark_color = Color(0.95, 0.6, 0.2, 1)
+
+[node name="Door1" type="AnimatableBody2D" parent="."]
+position = Vector2(1216, 576)
+script = ExtResource("4")
+open_offset_tiles = Vector2(0, -2.5)
+triggers = Array[NodePath]([NodePath("../PlateBlue"), NodePath("../PlateBlueFar")])
+mark_color = Color(0.4, 0.7, 0.95, 1)
+
+[node name="Door2" type="AnimatableBody2D" parent="."]
+position = Vector2(1600, 576)
+script = ExtResource("4")
+open_offset_tiles = Vector2(0, -2.5)
+triggers = Array[NodePath]([NodePath("../PlateBlue"), NodePath("../PlateBlueFar")])
+invert = true
+mark_color = Color(0.4, 0.7, 0.95, 1)
+
+[node name="PlateBlueFar" type="AnimatableBody2D" parent="."]
+position = Vector2(2048, 768)
+script = ExtResource("3")
+width_tiles = 1.5
+mark_color = Color(0.4, 0.7, 0.95, 1)
+
+[node name="Crate" type="CharacterBody2D" parent="."]
+position = Vector2(1792, 737)
+script = ExtResource("2")
+
+[node name="Finish" type="Node2D" parent="."]
+position = Vector2(2240, 768)
+script = ExtResource("5")
+
+[node name="Backdrop" parent="." instance=ExtResource("bd")]

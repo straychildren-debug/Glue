@@ -1,16 +1,17 @@
 extends LevelBot
-## Автопроверка уровней 11–20: пара проходит каждый задуманным путём от старта до двери.
+## Автопроверка уровней «Качели» и «Подъёмник» (сейчас 08 и 09 мира 1; ключи — старые номера 12, 13): пара проходит каждый задуманным путём от старта до двери.
 ## Проверяет и ложные пути — что без главной догадки не пройти.
 ## Запуск: Godot_console --headless --path . res://tests/stage7_levels_smoke.tscn [-- 11]
 
 const LEVELS := {
-	"11": preload("res://levels/w01_l11_seesaw.tscn"),
-	"12": preload("res://levels/w01_l12_seesaw_throw.tscn"),
-	"13": preload("res://levels/w01_l13_lift.tscn"),
-	"14": preload("res://levels/w01_l14_chain.tscn"),
+	"12": preload("res://levels/w01_l08_seesaw_throw.tscn"),
+	"13": preload("res://levels/w01_l09_lift.tscn"),
 }
-## Черновики: бот ещё доводится — запускаются только явно (-- 14), в общий прогон не входят.
-const DRAFTS := ["14"]
+## Черновики: бот ещё доводится — запускаются только явно (-- 15), в общий прогон не входят.
+const DRAFTS: Array[String] = []
+
+## Сколько раз погибали игроки на текущем уровне.
+var deaths := 0
 
 
 func _ready() -> void:
@@ -28,119 +29,19 @@ func _ready() -> void:
 			await _load(LEVELS[id])
 		a = game.players[0]
 		b = game.players[1]
+		deaths = 0
+		for p: Player in [a, b]:
+			p.died.connect(func(who: Player) -> void:
+				deaths += 1
+				var near := ""
+				for node in game.level.get_children():
+					if node is Ghost:
+						near += " %s%s" % [node.name, node.global_position.round()]
+				print("    гибель %s в %s%s" % [who.name, who.global_position.round(), near]))
 		print("— ", game.level.title)
 		await call("_level_" + id)
 		check(game.completed, "оба в двери — уровень пройден (a %s b %s)" % [a.global_position, b.global_position])
 	finish()
-
-
-# --- Уровни ---------------------------------------------------------------------------------
-
-## 11 «Качели». Комната 1: ключ над поднятым концом, противовес 1 против 1, носитель ключа идёт
-## первым, фиксатор жмут, пока противовес на месте. Комната 2: замерший в воздухе ничего не весит.
-func _level_11() -> void:
-	var level: GreyboxLevel = game.level
-	var seesaw1: Seesaw = level.get_node("Seesaw1")
-	var key: DoorKey = level.get_node("Key")
-	var lock: KeyLock = level.get_node("KeyDoor/Lock")
-	var latch: PressurePlate = level.get_node("LockLatch")
-	var beam1 := seesaw1.get_beam()
-	var pivot1 := seesaw1.global_position.x
-
-	# Ложный путь: один на поднятый конец — и конец под ним опускается. (Б стоит впереди.)
-	await _walk_to(b, KEYS_2, pivot1 - 5.5 * TILE)
-	await _hop_to(b, pivot1 - 3.1 * TILE)
-	await frames(40)
-	check(Weight.floor_below(b) == beam1 and seesaw1.angle < -seesaw1.max_angle() + 0.01,
-			"один запрыгнул на поднятый конец — и опустил его")
-	check(key.carrier == null, "с опущенного конца ключ не достать")
-	# Б уходит по балке на правый конец (теперь он внизу), А запрыгивает на поднятый левый.
-	await _walk_to(b, KEYS_2, pivot1 + 3.1 * TILE)
-	await frames(30)
-	check(seesaw1.angle > seesaw1.max_angle() - 0.01, "Б на правом конце — он внизу")
-	await _walk_to(a, KEYS_1, pivot1 - 5.5 * TILE)
-	await _hop_to(a, pivot1 - 3.1 * TILE)
-	await frames(40)
-	check(Weight.floor_below(a) == beam1 and seesaw1.angle > seesaw1.max_angle() - 0.01,
-			"А на поднятом левом конце, Б противовесом справа: 1 против 1 — стоит (a %s b %s угол %.2f)"
-			% [a.global_position, b.global_position, seesaw1.angle])
-	await _walk_to(a, KEYS_1, pivot1 - 3.05 * TILE)
-	await _jump_up(a, KEYS_1)
-	check(key.carrier == a, "А снял ключ с поднятого конца (a %s ключ %s)" % [a.global_position, key.global_position])
-
-	# Б переходит на левую сторону: 2 против 0 — левый конец вниз, правый поднят.
-	await _walk_to(b, KEYS_2, pivot1 - 0.8 * TILE)
-	await frames(40)
-	check(seesaw1.angle < -seesaw1.max_angle() + 0.01, "оба слева — правый конец поднялся")
-	# А с ключом перепрыгивает через Б на правую половину (1 против 1) и идёт на поднятый конец.
-	await _hop_to(a, pivot1 + 1.5 * TILE)
-	await _walk_to(a, KEYS_1, pivot1 + 3.1 * TILE)
-	await frames(20)
-	check(seesaw1.angle < -seesaw1.max_angle() + 0.01, "А дошёл до поднятого конца, балка стоит")
-	await _hop_to(a, 16.5 * TILE)
-	check(a.is_on_floor() and a.global_position.y < 8 * TILE, "А на уступе")
-	await _walk_to(a, KEYS_1, 18.6 * TILE)
-	await frames(40)
-	check(lock.active, "носитель ключа открыл замок двери")
-	await _walk_to(a, KEYS_1, latch.global_position.x)
-	await frames(10)
-	check(latch.active and seesaw1.is_locked(), "А нажал фиксатор, пока Б стоит противовесом")
-
-	# Б идёт по зафиксированной балке на поднятый конец и на уступ.
-	await _walk_to(b, KEYS_2, pivot1 + 3.1 * TILE)
-	await frames(20)
-	check(seesaw1.angle < -seesaw1.max_angle() + 0.01, "зафиксированная балка не опрокинулась под Б")
-	await _hop_to(b, 16.5 * TILE)
-	check(b.is_on_floor() and b.global_position.y < 8 * TILE, "Б на уступе — оба наверху")
-
-	# --- Комната 2: «Лёгкий шаг».
-	var seesaw2: Seesaw = level.get_node("Seesaw2")
-	var beam2 := seesaw2.get_beam()
-	var pivot2 := seesaw2.global_position.x
-	var end_x := pivot2 + 3.0 * TILE
-	await _walk_to(a, KEYS_1, 30.0 * TILE)
-	await _walk_to(b, KEYS_2, 28.0 * TILE)
-	await _hop_to(a, pivot2 + 0.8 * TILE)
-	await _walk_to(a, KEYS_1, end_x)
-	check(Weight.floor_below(a) == beam2 and seesaw2.angle < -seesaw2.max_angle() + 0.01,
-			"А на поднятом конце: ящик 1 против А 1 — стоит")
-	# Ложный путь 1: с поднятого конца одному на стену не допрыгнуть.
-	await _jump_up(a, KEYS_1)
-	check(a.global_position.y > 4 * TILE and Weight.floor_below(a) == beam2, "с поднятого конца одному на стену не допрыгнуть")
-	# Ложный путь 2: Б на голову стоящему А — 2 против 1, балка опрокидывается.
-	await _onto_head(b, a)
-	await frames(60)
-	check(seesaw2.angle > seesaw2.max_angle() - 0.01, "Б на голове стоящего А: 2 против 1 — балка опрокинулась")
-	# Выход без рестарта: Б спрыгивает, А уходит влево (2 против 0) и возвращается на поднятый конец.
-	place(b, Vector2(28.0 * TILE, _stand_y(8)))
-	await frames(20)
-	await _walk_to(a, KEYS_1, pivot2 - 0.8 * TILE)
-	await frames(40)
-	await _walk_to(a, KEYS_1, end_x)
-	await frames(20)
-	check(seesaw2.angle < -seesaw2.max_angle() + 0.01 and Weight.floor_below(a) == beam2,
-			"А снова на поднятом конце (a %s угол %.2f ящик %s)" % [a.global_position, seesaw2.angle, level.get_node("Crate").global_position])
-	# А прыгает и замирает в воздухе невысоко над концом.
-	var end_top := a.global_position.y + Player.SIZE.y / 2.0
-	await _freeze_in_air(a, KEYS_1, end_top - 60.0)
-	check(a.frozen, "А замер в воздухе над концом балки")
-	await _walk_to(b, KEYS_2, 30.0 * TILE)  # вплотную к ящику на опущенном конце
-	await _hop_to(b, pivot2 + 0.8 * TILE)
-	await _walk_to(b, KEYS_2, end_x - 0.9 * TILE)
-	check(seesaw2.angle < -seesaw2.max_angle() + 0.01, "Б на правом конце, замерший А ничего не весит — стоит")
-	var landed := await _jump_onto(b, KEYS_2, a)
-	check(landed and seesaw2.angle < -seesaw2.max_angle() + 0.01, "Б на голове замершего А — балка всё ещё стоит (a %s b %s)" % [a.global_position, b.global_position])
-	await _hop_to(b, 40.5 * TILE)
-	check(b.is_on_floor() and b.global_position.y < 3 * TILE, "Б с головы А — на стену 5,5 тайла")
-	# А оживает, мягко падает на конец (балка стоит), прыгает — Б ловит его за руку.
-	tap(KEYS_1[FREEZE])
-	await frames(30)
-	check(seesaw2.angle < -seesaw2.max_angle() + 0.01 and Weight.floor_below(a) == beam2,
-			"А мягко опустился на конец балки — она стоит")
-	await _walk_to(b, KEYS_2, 39.2 * TILE)
-	await _pull_up(b, a, RIGHT)
-	check(a.is_on_floor() and a.global_position.y < 3 * TILE, "Б вытянул А на стену")
-	await _both_to_finish()
 
 
 ## 12 «Бросок качелей». Комната 1: прыжок с насеста на поднятый конец бросает товарища на башню.
@@ -293,84 +194,154 @@ func _level_13() -> void:
 	await _both_to_finish()
 
 
-## 14 «Цепь». Комната 1: крюк над шипами — повиснуть, раскачаться, перелететь. Комната 2:
-## высокий крюк достают только с головы товарища, второй цепляется за руку — и цепь перелетает.
-## Комната 3: замерший — камень, шипы ему не страшны; кто стал мостом, тот выходит гибелью к
-## чекпоинту, который товарищ уже взял на том берегу.
-func _level_14() -> void:
-	var level: GreyboxLevel = game.level
-	var hook1: Hook = level.get_node("Hook1")
-	var hook2: Hook = level.get_node("Hook2")
-	# Комната 1: каждый сам — прыжок к крюку, раскачка, прыжок с хвата на тот берег.
-	await _walk_to(a, KEYS_1, 7.5 * TILE)
-	check(await _jump_to_hook(a, KEYS_1, hook1, 10.0 * TILE), "А в прыжке схватился за крюк над шипами")
-	await _swing_off(a, KEYS_1, 20.0 * TILE)
-	check(a.alive and a.is_on_floor() and a.global_position.x > 18.0 * TILE, "А перелетел шипы с крюка (%s)" % a.global_position)
-	await _walk_to(b, KEYS_2, 7.5 * TILE)
-	check(await _jump_to_hook(b, KEYS_2, hook1, 10.0 * TILE), "Б схватился за крюк")
-	await _swing_off(b, KEYS_2, 19.0 * TILE)
-	check(b.alive and b.is_on_floor() and b.global_position.x > 18.0 * TILE, "Б перелетел шипы (%s)" % b.global_position)
-
-	# Комната 2: высокий крюк. Ложный путь: с прыжка не достать.
-	await _walk_to(a, KEYS_1, 24.6 * TILE)
-	await _walk_to(b, KEYS_2, 23.6 * TILE)
-	await _walk_to(a, KEYS_1, 25.55 * TILE)
-	press(KEYS_1[GRAB], true)
-	await _jump_up(a, KEYS_1)
-	check(a.grab_target == null and a.is_on_floor(), "с прыжка высокий крюк не достать")
-	press(KEYS_1[GRAB], false)
-	await frames(5)
-	# Б с головы А прыгает к крюку, А в прыжке хватается за руку Б — цепь.
-	await _onto_head(b, a)
-	press(KEYS_2[GRAB], true)
-	await _hop_exact(b, hook2.global_position.x)
-	check(b.grab_target == hook2, "Б с головы А схватился за высокий крюк (%s)" % b.global_position)
-	press(KEYS_1[GRAB], true)
-	await _jump_up(a, KEYS_1)
-	check(a.grab_target == b, "А в прыжке схватился за руку Б — цепь (%s)" % a.global_position)
-	await _swing_off(a, KEYS_1, 39.0 * TILE, [KEYS_2])
-	check(a.alive and a.is_on_floor() and a.global_position.x > 36.0 * TILE, "нижний в цепи перелетел шипы (%s)" % a.global_position)
-	await _swing_off(b, KEYS_2, 38.0 * TILE)
-	check(b.alive and b.is_on_floor() and b.global_position.x > 36.0 * TILE, "Б один раскачался на крюке и перелетел (%s)" % b.global_position)
-
-	# Комната 3: широкие шипы. А прыгает в них и замирает — камень; Б по его голове на тот берег.
-	await _walk_to(a, KEYS_1, 41.0 * TILE)
-	await _walk_to(b, KEYS_2, 39.0 * TILE)
-	await _walk_to(a, KEYS_1, 43.0 * TILE)
-	press(KEYS_1[RIGHT], true)
-	for i in 120:
-		await get_tree().physics_frame
-		if a.global_position.x >= 44.8 * TILE:
+## Ждёт, пока пресс снова поднимется до верха: начало стоянки наверху.
+func _press_up(crusher: Press) -> void:
+	for i in 400:
+		if not crusher.is_up():
 			break
-	press(KEYS_1[JUMP], true)
-	for i in 90:
 		await get_tree().physics_frame
-		if a.velocity.y > 0.0 and a.global_position.y + Player.SIZE.y / 2.0 >= 12.0 * TILE:
+	for i in 400:
+		if crusher.is_up():
 			break
-	tap(KEYS_1[FREEZE])
-	press(KEYS_1[JUMP], false)
-	press(KEYS_1[RIGHT], false)
-	await frames(30)
-	check(a.alive and a.frozen, "А замер над шипами — камень (%s)" % a.global_position)
-	var landed := await _run_onto(b, KEYS_2, a, 44.8 * TILE)
-	check(landed, "Б с разбега на голове А над шипами (%s)" % b.global_position)
-	await _hop_exact(b, 53.5 * TILE)
+		await get_tree().physics_frame
+
+## top стоит у края пропасти с зажатым хватом; low с разбега прыгает с края edge_x, не долетает —
+## top ловит его за руку и отходит от края, вытягивая. anchor — top ловит замерев: замерший —
+## неподвижный якорь, рывок пойманного не стащит его с края; пойманный выпрыгивает с хвата
+## сквозь него наверх (как с балки в 03), потом top оживает.
+func _catch_jump(top: Player, low: Player, edge_x: float, anchor := false) -> void:
+	var kt := _keys(top)
+	var kl := _keys(low)
+	if anchor:
+		tap(kt[FREEZE])
+		await frames(2)
+	press(kt[GRAB], true)
+	press(kl[RIGHT], true)
+	var jumped := false
+	for i in 200:
+		await get_tree().physics_frame
+		if not jumped and low.global_position.x >= edge_x - 12.0:
+			press(kl[JUMP], true)
+			jumped = true
+		if top.grab_target == low or not low.alive:
+			break
+	press(kl[JUMP], false)
+	press(kl[RIGHT], false)
+	check(top.grab_target == low, "%s поймал %s за руку над пропастью (low %s)" % [top.name, low.name, low.global_position])
+	if anchor:
+		await frames(10)
+		press(kl[RIGHT], true)
+		await hold(kl[JUMP], 30)
+		for i in 60:
+			await get_tree().physics_frame
+			if low.is_on_floor() or not low.alive:
+				break
+		press(kl[RIGHT], false)
+		press(kt[GRAB], false)
+		await frames(10)
+		tap(kt[FREEZE])
+		await frames(25)
+		return
+	await hold(kt[RIGHT], 60)
+	press(kt[GRAB], false)
+	await frames(25)
+
+## Рука об руку: front держит back (поворачивается к нему лицом — смотрит назад) и пятится
+## вправо до target_x; back идёт вперёд, глядя вперёд. Проверяет, что призраки под взглядом.
+func _walk_hand_in_hand(front: Player, back: Player, target_x: float, ghosts: Array) -> void:
+	var kf := _keys(front)
+	var kb := _keys(back)
+	await _walk_to(back, kb, front.global_position.x - 60.0)
+	press(kf[GRAB], true)
+	await frames(3)
+	if front.grab_target != back:
+		print("    рука об руку: %s не схватил %s" % [front.name, back.name])
+	press(kf[RIGHT], true)
+	press(kb[RIGHT], true)
+	var unwatched := 0
+	for i in 900:
+		await get_tree().physics_frame
+		for g: Ghost in ghosts:
+			if not g.watched and g.global_position.distance_to(front.global_position) < 1400.0:
+				unwatched += 1
+		if front.global_position.x >= target_x or not (a.alive and b.alive):
+			break
+	press(kf[RIGHT], false)
+	press(kb[RIGHT], false)
+	press(kf[GRAB], false)
 	await frames(10)
-	check(b.alive and b.is_on_floor() and b.global_position.x > 51.0 * TILE, "Б по голове А — на тот берег (%s)" % b.global_position)
-	# А оживает в шипах — погибает, и оба появляются у чекпоинта, который взял Б.
-	tap(KEYS_1[FREEZE])
-	await frames(150)
-	check(a.alive and a.global_position.x > 51.0 * TILE and b.global_position.x > 51.0 * TILE,
-			"А ожил в шипах — оба у чекпоинта за ними (a %s b %s)" % [a.global_position, b.global_position])
-	await _both_to_finish()
+	if unwatched > 10:
+		print("    рука об руку: призраки без взгляда %d кадров" % unwatched)
 
 
-# --- Приёмы --------------------------------------------------------------------------------
+## Повернуться лицом в сторону side: короткое касание направления.
+func _face(p: Player, side: int) -> void:
+	var k := _keys(p)
+	press(k[side], true)
+	await frames(1)
+	press(k[side], false)
+	await frames(2)
 
-## Разбег к краю edge_x и прыжок к крюку с зажатым хватом; true — повис на крюке.
-## Хват остаётся зажатым.
+
+## С разбега перепрыгнуть призрака, глядя на него; ждёт приземления.
+func _jump_over(p: Player, ghost: Ghost) -> void:
+	var k := _keys(p)
+	press(k[RIGHT], true)
+	var jumped_at := -1
+	for i in 240:
+		await get_tree().physics_frame
+		if jumped_at < 0 and p.global_position.x >= ghost.global_position.x - 120.0:
+			press(k[JUMP], true)
+			jumped_at = i
+		if jumped_at >= 0 and i - jumped_at == 30:
+			press(k[JUMP], false)
+		if jumped_at >= 0 and i - jumped_at > 5 and p.is_on_floor() or not p.alive:
+			break
+	press(k[RIGHT], false)
+	press(k[JUMP], false)
+	await frames(5)
+
+
+## Тяжёлый ящик паровозиком рывками: оба идут к ящику и толкают, а когда призрак подлетает
+## ближе safe, каждый оборачивается к нему — призрак замирает, — и потом рывок в burst кадров
+## без оглядки: с места призрак за рывок пролетит ≈ 23 px, ящик проедет ≈ 67. safe < 0 —
+## толкать, не оглядываясь (ложный путь). Прерывается гибелью.
+func _push_heavy_watched(crate: Crate, target_x: float, ghost: Ghost, safe := 150.0, burst := 20) -> void:
+	var dir := 1 if target_x > crate.global_position.x else -1
+	var front := b if (b.global_position.x - a.global_position.x) * dir > 0.0 else a
+	var back := a if front == b else b
+	var push := [_keys(front)[RIGHT if dir > 0 else LEFT], _keys(back)[RIGHT if dir > 0 else LEFT]]
+	var free := 0
+	for i in 2400:
+		if (crate.global_position.x - target_x) * dir >= 0.0 or not (a.alive and b.alive):
+			break
+		var near := minf(ghost.global_position.distance_to(a.global_position), ghost.global_position.distance_to(b.global_position))
+		if free <= 0 and near < safe:
+			for key in push:
+				press(key, false)
+			for p: Player in [back, front]:
+				await _face(p, LEFT if ghost.global_position.x < p.global_position.x else RIGHT)
+			await frames(4)
+			free = burst
+		for key in push:
+			press(key, true)
+		await get_tree().physics_frame
+		free -= 1
+	for key in push:
+		press(key, false)
+	await frames(10)
+
+
+## Подняться по ящику у стены на уступ с верхом top_y.
+func _climb_crate(p: Player, crate: Crate, top_y: float) -> void:
+	await _walk_to(p, _keys(p), crate.global_position.x - 70.0)
+	await _jump(p, _keys(p), RIGHT, 18)
+	await _jump(p, _keys(p), RIGHT, 40)
+	check(p.is_on_floor() and p.global_position.y < top_y, "%s поднялся по ящику (%s)" % [p.name, p.global_position])
+
+## Разбег к краю edge_x и прыжок к крюку; хват зажимается, когда крюк рядом (_reach_for).
+## true — повис на крюке. Хват остаётся зажатым.
 func _jump_to_hook(p: Player, k: Array[Key], hook: Hook, edge_x: float) -> bool:
-	press(k[GRAB], true)
 	press(k[RIGHT], true)
 	var jumped := false
 	for i in 180:
@@ -382,6 +353,7 @@ func _jump_to_hook(p: Player, k: Array[Key], hook: Hook, edge_x: float) -> bool:
 			var dx := hook.global_position.x - p.global_position.x
 			press(k[RIGHT], dx > 4.0)
 			press(k[LEFT], dx < -4.0)
+			_reach_for(p, k, hook)
 		if p.grab_target == hook or not p.alive:
 			break
 	for key in [k[JUMP], k[LEFT], k[RIGHT]]:
@@ -389,16 +361,60 @@ func _jump_to_hook(p: Player, k: Array[Key], hook: Hook, edge_x: float) -> bool:
 	return p.grab_target == hook
 
 
-## Раскачка на хвате (жмёт по ходу; helpers в цепи качают вместе) и прыжок с хвата вправо на
-## взлёте; в полёте правит к target_x с торможением. Ждёт приземления.
-func _swing_off(p: Player, k: Array[Key], target_x: float, helpers: Array = [], pump := 150) -> void:
+## Прыжок с места (с головы товарища) к крюку с подруливанием; true — повис на крюке.
+## Хват остаётся зажатым.
+func _hop_to_hook(p: Player, k: Array[Key], hook: Hook) -> bool:
+	press(k[JUMP], true)
+	for i in 90:
+		await get_tree().physics_frame
+		var dx := hook.global_position.x - p.global_position.x
+		press(k[RIGHT], dx > 4.0)
+		press(k[LEFT], dx < -4.0)
+		_reach_for(p, k, hook)
+		if p.grab_target == hook or not p.alive or (i > 5 and p.is_on_floor()):
+			break
+	for key in [k[JUMP], k[LEFT], k[RIGHT]]:
+		press(key, false)
+	return p.grab_target == hook
+
+
+## Прыжок вверх к висящему товарищу и хват за руку. Хват остаётся зажатым.
+func _jump_to_hand(p: Player, k: Array[Key], target: Player) -> void:
+	press(k[JUMP], true)
+	for i in 60:
+		await get_tree().physics_frame
+		_reach_for(p, k, target)
+		if p.grab_target == target or (i > 5 and p.is_on_floor()):
+			break
+	press(k[JUMP], false)
+	await frames(5)
+
+
+## Зажимает хват, когда target в досягаемости и ближе товарища: хват берёт ближайшего,
+## поэтому зажатый заранее рядом с товарищем схватил бы товарища, а не крюк.
+func _reach_for(p: Player, k: Array[Key], target: Node2D) -> void:
+	var to_target := p.global_position.distance_to(target.global_position)
+	if to_target > p.grab_range:
+		return
+	for other: Player in [a, b]:
+		if other != p and other != target and other.alive \
+				and p.global_position.distance_to(other.global_position) <= to_target:
+			return
+	press(k[GRAB], true)
+
+
+## Раскачка на хвате (жмёт по ходу; helpers в цепи качают вместе) и прыжок с хвата вправо
+## на взлёте, не раньше pump кадров и не левее release_x; в полёте правит к target_x
+## с торможением. Ждёт приземления.
+func _swing_off(p: Player, k: Array[Key], target_x: float, helpers: Array = [], pump := 150,
+		release_x := -INF) -> void:
 	for i in 900:
 		var right := p.velocity.x >= 0.0
 		for keys: Array in [k] + helpers:
 			press(keys[RIGHT], right)
 			press(keys[LEFT], not right)
 		await get_tree().physics_frame
-		if i > pump and p.velocity.x > 250.0 and p.velocity.y < 0.0:
+		if i > pump and p.global_position.x >= release_x and p.velocity.x > 250.0 and p.velocity.y < 0.0:
 			break
 	for keys: Array in [k] + helpers:
 		press(keys[RIGHT], false)
@@ -426,21 +442,38 @@ func _swing_off(p: Player, k: Array[Key], target_x: float, helpers: Array = [], 
 	await frames(10)
 
 
+## Успокоиться на хвате: жать против хода (трения на хвате нет), пока не повиснет неподвижно
+## внизу. После чужого рывка размах бывает «рваным» — рука то провисает, то дёргается и гасит
+## раскачку; из покоя раскачка ровная (как в tests/lab/lab_swing).
+func _calm_on_grab(p: Player, k: Array[Key]) -> void:
+	var still := 0
+	for i in 600:
+		var v := p.velocity
+		press(k[RIGHT], v.x < -10.0)
+		press(k[LEFT], v.x > 10.0)
+		await get_tree().physics_frame
+		still = still + 1 if v.length() < 20.0 else 0
+		if still > 10:
+			break
+	press(k[RIGHT], false)
+	press(k[LEFT], false)
+
+
 ## Разбег, прыжок у края edge_x и посадка на голову target; true — стоит на нём.
 func _run_onto(p: Player, k: Array[Key], target: Player, edge_x: float) -> bool:
 	press(k[RIGHT], true)
-	var jumped := false
+	var jumped_at := -1
 	var landed := false
 	for i in 200:
 		await get_tree().physics_frame
-		if not jumped and p.global_position.x >= edge_x - 12.0:
+		if jumped_at < 0 and p.global_position.x >= edge_x - 12.0:
 			press(k[JUMP], true)
-			jumped = true
-		if jumped:
+			jumped_at = i
+		if jumped_at >= 0:
 			var dx := target.global_position.x - p.global_position.x
 			press(k[RIGHT], dx > 4.0)
 			press(k[LEFT], dx < -4.0)
-			if i > 5 and p.is_on_floor():
+			if i - jumped_at > 5 and p.is_on_floor():
 				landed = p.standing_on() == target
 				break
 		if not p.alive:

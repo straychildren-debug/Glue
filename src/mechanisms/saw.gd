@@ -2,8 +2,9 @@
 class_name Saw
 extends Node2D
 ## Циркулярная пила на рельсе: ездит туда-сюда между началом (положение узла) и концом
-## (path_tiles от начала). Касание — гибель. Замерший — камень: пила упирается в него (и в ящик)
-## и едет назад, так замерший укорачивает ей путь. Сквозь блоки уровня рельс проложен уровнем.
+## (path_tiles от начала). Касание — гибель, и замершему тоже: «Замри» от пилы не спасает (решение
+## пользователя 10.10.2026). Ящик — стопор: пила упирается в него и едет назад, так ящик укорачивает
+## ей путь. Сквозь блоки уровня рельс проложен уровнем.
 
 const OUTLINE := Color("1a1d33")
 ## Насколько тело должно зайти под диск, чтобы порезаться (px).
@@ -56,9 +57,18 @@ func _physics_process(delta: float) -> void:
 	if length > 0.0:
 		var next := clampf(progress + (1.0 if forward else -1.0) * speed * delta / length, 0.0, 1.0)
 		var next_center := global_position + path_tiles * GreyboxLevel.TILE * next
-		# Упёрлась в замершего или ящик — назад. Если диск уже касается тела (замер вплотную),
-		# от него не отскакивает, а выезжает: иначе застрял бы, зажатый с обеих сторон.
-		if _blocked(next_center) and not _blocked(blade_position()):
+		var depth := _overlap(blade_position())
+		if depth > 0.0:
+			# Ящик въехал в диск сбоку (на кране, на ленте) — уходить от него, а не дёргаться на месте.
+			var back := clampf(progress - (1.0 if forward else -1.0) * speed * delta / length, 0.0, 1.0)
+			if _overlap(global_position + path_tiles * GreyboxLevel.TILE * back) < _overlap(next_center):
+				forward = not forward
+				next = back
+			progress = next
+			if progress <= 0.0 or progress >= 1.0:
+				forward = progress <= 0.0
+		# Упёрлась в ящик — назад.
+		elif _blocked(next_center):
 			forward = not forward
 		else:
 			progress = next
@@ -67,21 +77,28 @@ func _physics_process(delta: float) -> void:
 	var center := blade_position()
 	var cut := radius() - BITE
 	for player: Player in get_tree().get_nodes_in_group(Player.GROUP):
-		if player.alive and not player.frozen \
-				and _circle_hits(center, cut, Rect2(player.global_position - Player.SIZE / 2.0, Player.SIZE)):
+		# режет и замершего: «Замри» от пилы не спасает
+		if player.alive and _circle_hits(center, cut, Rect2(player.global_position - Player.SIZE / 2.0, Player.SIZE)):
 			player.die()
 	queue_redraw()
 
 
 func _blocked(center: Vector2) -> bool:
-	for player: Player in get_tree().get_nodes_in_group(Player.GROUP):
-		if player.alive and player.frozen \
-				and _circle_hits(center, radius(), Rect2(player.global_position - Player.SIZE / 2.0, Player.SIZE)):
-			return true
 	for crate: Crate in get_tree().get_nodes_in_group(Crate.GROUP):
 		if crate.visible and _circle_hits(center, radius(), crate.get_rect()):
 			return true
 	return false
+
+
+## Насколько диск с серединой center зашёл в ящики (px; 0 — не касается).
+func _overlap(center: Vector2) -> float:
+	var depth := 0.0
+	for crate: Crate in get_tree().get_nodes_in_group(Crate.GROUP):
+		if crate.visible:
+			var rect := crate.get_rect()
+			var nearest := Vector2(clampf(center.x, rect.position.x, rect.end.x), clampf(center.y, rect.position.y, rect.end.y))
+			depth += maxf(0.0, radius() - center.distance_to(nearest))
+	return depth
 
 
 static func _circle_hits(center: Vector2, r: float, rect: Rect2) -> bool:
@@ -101,7 +118,7 @@ func load_state(state: Variant) -> void:
 func _draw() -> void:
 	var end := path_tiles * GreyboxLevel.TILE
 	# Рельс: тёмный паз со светлой серединой и упорами на концах.
-	if end != Vector2.ZERO:
+	if end != Vector2.ZERO and not Art.enabled:
 		draw_line(Vector2.ZERO, end, OUTLINE, 10.0)
 		draw_line(Vector2.ZERO, end, Color("5b6470"), 4.0)
 		for point: Vector2 in [Vector2.ZERO, end]:
@@ -109,6 +126,9 @@ func _draw() -> void:
 			draw_circle(point, 4.0, Color("8a919c"))
 	var p := end * (start_at if Engine.is_editor_hint() else progress)
 	var r := radius()
+	if Art.enabled:
+		_draw_sprites(end, p, r)
+		return
 	# Диск с зубьями: контур, сталь, тёмное кольцо, ступица. Вращается.
 	var teeth := 14
 	var outer := PackedVector2Array()
@@ -124,3 +144,15 @@ func _draw() -> void:
 	draw_arc(p, r * 0.62, _spin, _spin + PI * 0.7, 10, Color("e6eaef"), 3.0)
 	draw_circle(p, r * 0.22, OUTLINE)
 	draw_circle(p, r * 0.12, Color("c3cad4"))
+
+
+## Спрайты: железный рельс с упорами вдоль пути (под любым углом) и вращающийся диск
+## (спрайт 76 px — под радиус 35 с зубьями; другой радиус — масштаб).
+func _draw_sprites(end: Vector2, p: Vector2, r: float) -> void:
+	if end != Vector2.ZERO:
+		draw_set_transform(Vector2.ZERO, end.angle())
+		Art.draw_strip_h(self, Rect2(-7, -5, end.length() + 14, 10), "saw_rail_mid", "saw_rail_end")
+	var k := r / 35.2
+	draw_set_transform(p, _spin, Vector2(k, k))
+	draw_texture_rect(Art.tex("saw_blade"), Rect2(-38, -38, 76, 76), false)
+	draw_set_transform(Vector2.ZERO)

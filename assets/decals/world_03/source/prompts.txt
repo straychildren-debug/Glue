@@ -1,0 +1,226 @@
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+D3.1 | w03_decal_ivy_flowers.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world3_guardians.png
+D:/Cluade projects/games/Glue/assets/tiles/world_03/source/w03_top.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the approved concept sheet of world 3 — match its palette and light. Attached image 3: the floor top strip of the same world — match its painting style and colors. Do NOT copy layouts, text, UI or characters.
+
+Create ONE isolated decorative sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no unrelated objects.
+Object: a long strand of hanging ivy with tiny white flowers, attached at the top.
+Neutral white balance. Genuine PNG alpha transparency, no painted checkerboard, no wall slab, ground plane or backdrop. Soft painted edges WITHOUT black/navy contour. Landscape 3:2. ONE centered object or specified decorative group with generous empty alpha margins. No broad cast shadow or glow outside the object.
+No mirrors, crystals, prisms, whole statues on pedestals, lamps in a row, loose boulders, birds, gates, keys.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-08ef378b-700b-4da8-b946-fbb2cabc0309.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+D3.1.2 | w03_decal_ivy_flowers_2.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world3_guardians.png
+D:/Cluade projects/games/Glue/assets/tiles/world_03/source/w03_top.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the approved concept sheet of world 3 — match its palette and light. Attached image 3: the floor top strip of the same world — match its painting style and colors. Do NOT copy layouts, text, UI or characters.
+
+Create ONE isolated decorative sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no unrelated objects.
+Object: a long strand of hanging ivy with tiny white flowers, attached at the top.
+Neutral white balance. Genuine PNG alpha transparency, no painted checkerboard, no wall slab, ground plane or backdrop. Soft painted edges WITHOUT black/navy contour. Landscape 3:2. ONE centered object or specified decorative group with generous empty alpha margins. No broad cast shadow or glow outside the object.
+A second independent variant of this ONE object: modestly different silhouette and details, same scale, colors and materials. No pair, grid or comparison sheet.
+No mirrors, crystals, prisms, whole statues on pedestals, lamps in a row, loose boulders, birds, gates, keys.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-ebd69763-2d9d-4545-8bb8-c25812e0210e.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+D3.2 | w03_decal_cypress_pot.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world3_guardians.png
+D:/Cluade projects/games/Glue/assets/tiles/world_03/source/w03_top.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the approved concept sheet of world 3 — match its palette and light. Attached image 3: the floor top strip of the same world — match its painting style and colors. Do NOT copy layouts, text, UI or characters.
+
+Create ONE isolated decorative sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no unrelated objects.
+Object: a small cypress tree in a white stone pot.
+Neutral white balance. Genuine PNG alpha transparency, no painted checkerboard, no wall slab, ground plane or backdrop. Soft painted edges WITHOUT black/navy contour. Landscape 3:2. ONE centered object or specified decorative group with generous empty alpha margins. No broad cast shadow or glow outside the object.
+No mirrors, crystals, prisms, whole statues on pedestals, lamps in a row, loose boulders, birds, gates, keys.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-be2070da-4280-41ad-a1a9-8de80fc1a1fa.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+D3.2.2 | w03_decal_cypress_pot_2.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world3_guardians.png
+D:/Cluade projects/games/Glue/assets/tiles/world_03/source/w03_top.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the approved concept sheet of world 3 — match its palette and light. Attached image 3: the floor top strip of the same world — match its painting style and colors. Do NOT copy layouts, text, UI or characters.
+
+Create ONE isolated decorative sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no unrelated objects.
+Object: a small cypress tree in a white stone pot.
+Neutral white balance. Genuine PNG alpha transparency, no painted checkerboard, no wall slab, ground plane or backdrop. Soft painted edges WITHOUT black/navy contour. Landscape 3:2. ONE centered object or specified decorative group with generous empty alpha margins. No broad cast shadow or glow outside the object.
+A second independent variant of this ONE object: modestly different silhouette and details, same scale, colors and materials. No pair, grid or comparison sheet.
+No mirrors, crystals, prisms, whole statues on pedestals, lamps in a row, loose boulders, birds, gates, keys.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-db30e130-104e-415f-9306-3dfee0a06dbe.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+D3.3 | w03_decal_statue_piece.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world3_guardians.png
+D:/Cluade projects/games/Glue/assets/tiles/world_03/source/w03_top.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the approved concept sheet of world 3 — match its palette and light. Attached image 3: the floor top strip of the same world — match its painting style and colors. Do NOT copy layouts, text, UI or characters.
+
+Create ONE isolated decorative sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no unrelated objects.
+Object: a broken fragment of an old white stone statue: a hand lying on the ground, overgrown with moss.
+Neutral white balance. Genuine PNG alpha transparency, no painted checkerboard, no wall slab, ground plane or backdrop. Soft painted edges WITHOUT black/navy contour. Landscape 3:2. ONE centered object or specified decorative group with generous empty alpha margins. No broad cast shadow or glow outside the object.
+No mirrors, crystals, prisms, whole statues on pedestals, lamps in a row, loose boulders, birds, gates, keys.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-83b0717e-79c7-4520-b7bb-aceba85c2783.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+D3.3.2 | w03_decal_statue_piece_2.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world3_guardians.png
+D:/Cluade projects/games/Glue/assets/tiles/world_03/source/w03_top.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the approved concept sheet of world 3 — match its palette and light. Attached image 3: the floor top strip of the same world — match its painting style and colors. Do NOT copy layouts, text, UI or characters.
+
+Create ONE isolated decorative sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no unrelated objects.
+Object: a broken fragment of an old white stone statue: a hand lying on the ground, overgrown with moss.
+Neutral white balance. Genuine PNG alpha transparency, no painted checkerboard, no wall slab, ground plane or backdrop. Soft painted edges WITHOUT black/navy contour. Landscape 3:2. ONE centered object or specified decorative group with generous empty alpha margins. No broad cast shadow or glow outside the object.
+A second independent variant of this ONE object: modestly different silhouette and details, same scale, colors and materials. No pair, grid or comparison sheet.
+No mirrors, crystals, prisms, whole statues on pedestals, lamps in a row, loose boulders, birds, gates, keys.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-ab4a4119-0549-47f6-81c4-bedc906b43d0.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+D3.4 | w03_decal_flowers.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world3_guardians.png
+D:/Cluade projects/games/Glue/assets/tiles/world_03/source/w03_top.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the approved concept sheet of world 3 — match its palette and light. Attached image 3: the floor top strip of the same world — match its painting style and colors. Do NOT copy layouts, text, UI or characters.
+
+Create ONE isolated decorative sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no unrelated objects.
+Object: a cluster of white and pale yellow flowers with leaves, flat bottom edge.
+Neutral white balance. Genuine PNG alpha transparency, no painted checkerboard, no wall slab, ground plane or backdrop. Soft painted edges WITHOUT black/navy contour. Landscape 3:2. ONE centered object or specified decorative group with generous empty alpha margins. No broad cast shadow or glow outside the object.
+No mirrors, crystals, prisms, whole statues on pedestals, lamps in a row, loose boulders, birds, gates, keys.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-efd0f5b4-792d-4355-935e-79ca4977fdb6.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+D3.4.2 | w03_decal_flowers_2.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world3_guardians.png
+D:/Cluade projects/games/Glue/assets/tiles/world_03/source/w03_top.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the approved concept sheet of world 3 — match its palette and light. Attached image 3: the floor top strip of the same world — match its painting style and colors. Do NOT copy layouts, text, UI or characters.
+
+Create ONE isolated decorative sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no unrelated objects.
+Object: a cluster of white and pale yellow flowers with leaves, flat bottom edge.
+Neutral white balance. Genuine PNG alpha transparency, no painted checkerboard, no wall slab, ground plane or backdrop. Soft painted edges WITHOUT black/navy contour. Landscape 3:2. ONE centered object or specified decorative group with generous empty alpha margins. No broad cast shadow or glow outside the object.
+A second independent variant of this ONE object: modestly different silhouette and details, same scale, colors and materials. No pair, grid or comparison sheet.
+No mirrors, crystals, prisms, whole statues on pedestals, lamps in a row, loose boulders, birds, gates, keys.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-a09b1a0d-a51d-48f2-a136-892aa604abb9.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+D3.5 | w03_decal_bronze_ornament.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world3_guardians.png
+D:/Cluade projects/games/Glue/assets/tiles/world_03/source/w03_top.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the approved concept sheet of world 3 — match its palette and light. Attached image 3: the floor top strip of the same world — match its painting style and colors. Do NOT copy layouts, text, UI or characters.
+
+Create ONE isolated decorative sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no unrelated objects.
+Object: a round bronze sun-disk ornament fixed to a wall, no letters.
+Neutral white balance. Genuine PNG alpha transparency, no painted checkerboard, no wall slab, ground plane or backdrop. Soft painted edges WITHOUT black/navy contour. Landscape 3:2. ONE centered object or specified decorative group with generous empty alpha margins. No broad cast shadow or glow outside the object.
+No mirrors, crystals, prisms, whole statues on pedestals, lamps in a row, loose boulders, birds, gates, keys.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-d0f847e6-2fed-4234-b8a6-90fa5171b7a8.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+D3.5.2 | w03_decal_bronze_ornament_2.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world3_guardians.png
+D:/Cluade projects/games/Glue/assets/tiles/world_03/source/w03_top.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the approved concept sheet of world 3 — match its palette and light. Attached image 3: the floor top strip of the same world — match its painting style and colors. Do NOT copy layouts, text, UI or characters.
+
+Create ONE isolated decorative sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no unrelated objects.
+Object: a round bronze sun-disk ornament fixed to a wall, no letters.
+Neutral white balance. Genuine PNG alpha transparency, no painted checkerboard, no wall slab, ground plane or backdrop. Soft painted edges WITHOUT black/navy contour. Landscape 3:2. ONE centered object or specified decorative group with generous empty alpha margins. No broad cast shadow or glow outside the object.
+A second independent variant of this ONE object: modestly different silhouette and details, same scale, colors and materials. No pair, grid or comparison sheet.
+No mirrors, crystals, prisms, whole statues on pedestals, lamps in a row, loose boulders, birds, gates, keys.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-965e40a0-b119-44ad-9558-46809ae29bd1.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+D3.6 | w03_decal_sunbeam.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world3_guardians.png
+D:/Cluade projects/games/Glue/assets/tiles/world_03/source/w03_top.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the approved concept sheet of world 3 — match its palette and light. Attached image 3: the floor top strip of the same world — match its painting style and colors. Do NOT copy layouts, text, UI or characters.
+
+Create ONE isolated decorative sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no unrelated objects.
+Object: a soft diagonal golden sunbeam with floating light motes, very transparent.
+Neutral white balance. Genuine PNG alpha transparency, no painted checkerboard, no wall slab, ground plane or backdrop. Soft painted edges WITHOUT black/navy contour. Landscape 3:2. ONE centered object or specified decorative group with generous empty alpha margins. No broad cast shadow or glow outside the object.
+This specified light/frost effect is the intended exception to no glow: faint wisps and motes are extremely transparent with actual low alpha, never an opaque yellow or white backdrop, never a solid object or scenery.
+No mirrors, crystals, prisms, whole statues on pedestals, lamps in a row, loose boulders, birds, gates, keys.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-21ce49fb-e0b6-4d12-ba12-7b2d016dcd89.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+D3.6.2 | w03_decal_sunbeam_2.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world3_guardians.png
+D:/Cluade projects/games/Glue/assets/tiles/world_03/source/w03_top.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the approved concept sheet of world 3 — match its palette and light. Attached image 3: the floor top strip of the same world — match its painting style and colors. Do NOT copy layouts, text, UI or characters.
+
+Create ONE isolated decorative sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no unrelated objects.
+Object: a soft diagonal golden sunbeam with floating light motes, very transparent.
+Neutral white balance. Genuine PNG alpha transparency, no painted checkerboard, no wall slab, ground plane or backdrop. Soft painted edges WITHOUT black/navy contour. Landscape 3:2. ONE centered object or specified decorative group with generous empty alpha margins. No broad cast shadow or glow outside the object.
+A second independent variant of this ONE object: modestly different silhouette and details, same scale, colors and materials. No pair, grid or comparison sheet.
+This specified light/frost effect is the intended exception to no glow: faint wisps and motes are extremely transparent with actual low alpha, never an opaque yellow or white backdrop, never a solid object or scenery.
+No mirrors, crystals, prisms, whole statues on pedestals, lamps in a row, loose boulders, birds, gates, keys.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-e5ea6e4f-0d3a-4b2c-a35b-ba2beafc2c91.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+D3.1 | w03_decal_ivy_flowers.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/assets/decals/world_03/source/w03_decal_ivy_flowers.png
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world3_guardians.png
+D:/Cluade projects/games/Glue/assets/tiles/world_03/source/w03_top.png
+Edit prompt:
+Image 1 is the current flowering ivy decoration to edit; images 2–4 are style references. Keep the leaf colors, tiny white flowers and hand-painted shading, but replace the wide horizontal garland by ONE LONG NARROW hanging strand of ivy, attached at its top and trailing vertically down. The single stem curves gently to the left. Center this one continuous strand on the same landscape canvas, with generous transparent margins all around. No horizontal garland, no many separate hanging ropes of foliage. No dark silhouette outline, text, ground, wall or opaque backdrop. Preserve real PNG alpha transparency; no broad painted halo.
+No mirrors, crystals, prisms, whole statues on pedestals, lamps in a row, loose boulders, birds, gates, keys.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-55fd3bfe-2c14-4732-bc6b-2c54adff0e51.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+D3.1.2 | w03_decal_ivy_flowers_2.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/assets/decals/world_03/source/w03_decal_ivy_flowers_2.png
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world3_guardians.png
+D:/Cluade projects/games/Glue/assets/tiles/world_03/source/w03_top.png
+Edit prompt:
+Image 1 is the current flowering ivy decoration to edit; images 2–4 are style references. Keep the leaf colors, tiny white flowers and hand-painted shading, but replace the wide horizontal garland by ONE LONG NARROW hanging strand of ivy, attached at its top and trailing vertically down. The single stem curves gently to the right with a modestly different leaf arrangement. Center this one continuous strand on the same landscape canvas, with generous transparent margins all around. No horizontal garland, no many separate hanging ropes of foliage. No dark silhouette outline, text, ground, wall or opaque backdrop. Preserve real PNG alpha transparency; no broad painted halo.
+No mirrors, crystals, prisms, whole statues on pedestals, lamps in a row, loose boulders, birds, gates, keys.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-7394f3c7-90be-40c3-9fe4-eb4b80fc3bf3.png

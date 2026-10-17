@@ -1,0 +1,333 @@
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+E2 | enemy_w2_pusher_beetle.png
+References:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world2_workshops.png
+D:/Cluade projects/games/Glue/assets/characters/v2/preview/idle_red.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the concept sheet of the world where this enemy lives — match its palette and light. Attached image 3: the player character of the game — match its art style exactly: chunky rounded shapes, a thick dark navy outline around the silhouette, flat cartoon toon shading with one soft shadow tone, light from the upper left, simple black oval eyes. Do NOT copy layouts, text or UI from the attachments.
+
+Create ONE character model sheet of an ENEMY for a 2D side-scrolling co-op platformer. Landscape 3:2. Plain flat light grey background (#E6E8EC), no scenery, no ground texture. On the left: the enemy large, full body, in strict side view facing right. To its right, in one row, smaller and evenly spaced: the same enemy in each pose listed below, all in strict side view, with exactly the same design, colors and scale. Next to the large view stands a tiny simple red bean-shaped character for scale (see Size). The enemy has a thick dark navy outline like the player character; cute, rounded, funny, readable as a small sprite — friendly cartoon, NOT scary, no gore. Dangerous parts (teeth, claws, spikes) have a small red warning accent. Its colors must not match the pure red, blue, yellow or green of the players. No text, letters, numbers, labels, arrows, frames, logos or watermark.
+Enemy: a stocky round workshop beetle with a copper-bronze shell and a wide flat top (a player can stand and ride on its back) and a big flat bulldozer-like plate on its head for pushing; short sturdy legs; it crawls along platforms and shoves players off edges.
+Poses: crawling; pushing hard (leaning forward, legs braced); stopped by a wooden crate in front of it (surprised); turning back at a ledge edge (one foot over the edge, startled); carrying the tiny red character standing on its back.
+Size: as tall as the player character, about two characters long.
+Neutral white balance. Keep all requested poses or states distinct, complete and fully visible, with generous spacing. All miniature states share one scale; the left primary view is larger. Frozen characters are stone-grey versions of the bean character, with identical limbs and outline. No extra scenery.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-685d41e3-df16-40f4-86e0-f70f1a927e5b.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+E2 | enemy_w2_pusher_beetle.png
+References:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world2_workshops.png
+D:/Cluade projects/games/Glue/assets/characters/v2/preview/idle_red.png
+Edit prompt:
+Keep everything the same, but correct ONLY these details: beside the large left beetle, enlarge the red scale character until its full height equals the beetle full height; the beetle is about two character widths long. Keep the smaller pose figures at their existing shared scale. In the fourth small pose (second from the right), add a tiny plain grey ledge ending immediately under its rightmost foot, which hangs over empty space, and make the beetle turn back to face LEFT, visibly startled. All other beetle views face right. Remove the floating red and navy exclamation-like marks above the poses. Keep plain FLAT light grey #E6E8EC background, no vignette or gradient. Preserve the beetle design, colors, thick navy contour, arrangement and all five poses. No text, labels, arrows or symbols.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-75dd7798-b749-4855-9ee5-6ee44e49fb55.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+E3 | enemy_w2_spark.png
+References:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world2_workshops.png
+D:/Cluade projects/games/Glue/assets/characters/v2/preview/idle_red.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the concept sheet of the world where this enemy lives — match its palette and light. Attached image 3: the player character of the game — match its art style exactly: chunky rounded shapes, a thick dark navy outline around the silhouette, flat cartoon toon shading with one soft shadow tone, light from the upper left, simple black oval eyes. Do NOT copy layouts, text or UI from the attachments.
+
+Create ONE character model sheet of an ENEMY for a 2D side-scrolling co-op platformer. Landscape 3:2. Plain flat light grey background (#E6E8EC), no scenery, no ground texture. On the left: the enemy large, full body, in strict side view facing right. To its right, in one row, smaller and evenly spaced: the same enemy in each pose listed below, all in strict side view, with exactly the same design, colors and scale. Next to the large view stands a tiny simple red bean-shaped character for scale (see Size). The enemy has a thick dark navy outline like the player character; cute, rounded, funny, readable as a small sprite — friendly cartoon, NOT scary, no gore. Dangerous parts (teeth, claws, spikes) have a small red warning accent. Its colors must not match the pure red, blue, yellow or green of the players. No text, letters, numbers, labels, arrows, frames, logos or watermark.
+Enemy: "the spark" — a tiny lively creature made of orange-yellow fire with a cheeky face, it runs along wires and fuse cords and lights them.
+Poses: running along a thin copper wire; bouncing back from a frozen stone-still character standing on the wire (surprised); jumping onto the end of a fuse cord and lighting it (fuse sparkling); fizzled out (a sad little smoke puff with eyes).
+Size: half the height of the player character.
+Neutral white balance. Keep all requested poses or states distinct, complete and fully visible, with generous spacing. All miniature states share one scale; the left primary view is larger. Frozen characters are stone-grey versions of the bean character, with identical limbs and outline. No extra scenery.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-d98846ec-53e7-4454-bf7b-a66d7dc054a3.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+E3 | enemy_w2_spark.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/enemies/enemy_w2_spark.png
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world2_workshops.png
+D:/Cluade projects/games/Glue/assets/characters/v2/preview/idle_red.png
+Edit prompt:
+Image 1 is the edit target. Images 2, 3 and 4 are style references. Keep everything the same, but correct the spark's scale: in the large left view the entire fire creature, including its floating flames, must be HALF the height of the adjacent red player. Enlarge the red player and shrink the large spark as necessary so they fit and the spark remains larger than the miniature spark poses. In the bounce pose the spark must be half the height of the stone-grey frozen player too. Preserve the four complete poses, wire, fuse, sad smoke puff, copper-orange-yellow palette, friendly design and thick navy outline. Remove the red exclamation marks above the bounce pose. Make the background a perfectly uniform solid light grey #E6E8EC, with no texture, gradient or vignette. No text, numbers or labels.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-52e885a9-5ebf-4f3a-80ec-82fe7903bcef.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+E4 | enemy_w3_stone_guardian.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world3_guardians.png
+D:/Cluade projects/games/Glue/assets/characters/v2/preview/idle_red.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the concept sheet of the world where this enemy lives — match its palette and light. Attached image 3: the player character of the game — match its art style exactly: chunky rounded shapes, a thick dark navy outline around the silhouette, flat cartoon toon shading with one soft shadow tone, light from the upper left, simple black oval eyes. Do NOT copy layouts, text or UI from the attachments.
+
+Create ONE character model sheet of an ENEMY for a 2D side-scrolling co-op platformer. Landscape 3:2. Plain flat light grey background (#E6E8EC), no scenery, no ground texture. On the left: the enemy large, full body, in strict side view facing right. To its right, in one row, smaller and evenly spaced: the same enemy in each pose listed below, all in strict side view, with exactly the same design, colors and scale. Next to the large view stands a tiny simple red bean-shaped character for scale (see Size). The enemy has a thick dark navy outline like the player character; cute, rounded, funny, readable as a small sprite — friendly cartoon, NOT scary, no gore. Dangerous parts (teeth, claws, spikes) have a small red warning accent. Its colors must not match the pure red, blue, yellow or green of the players. No text, letters, numbers, labels, arrows, frames, logos or watermark.
+Enemy: a chunky walking stone statue-guardian of white stone with a bronze helmet and one big round eye that casts a soft cone of light in front of it (its field of view); moving players inside the cone are spotted, a frozen player looks like a statue and is ignored.
+Poses: walking with the soft light cone ahead; turning around (cone swinging back); alert (eye and cone turn red, shocked); calmly ignoring a frozen statue-like character standing in its cone.
+Size: twice the height of the player character.
+Neutral white balance. All listed states/poses must be complete and distinctly readable. Same design and consistent scale in every miniature. The main view is larger than the miniature views. Follow Size: the main red scale figure and the main subject share the SAME rendering scale; do not make the player arbitrarily tiny. Frozen players are stone-grey versions of the bean; normal active players are red or blue. No extra scenery, no decorative punctuation or symbols. Perfectly uniform opaque light-grey canvas; strict side orthographic silhouettes.
+Exactly FOUR small poses: walking, turning back, red-eye alert, and ignoring a stone-grey frozen bean. Main guardian exactly twice the height of the adjacent red bean. One eye only. No mouth or text.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-8923c066-5507-465c-90e7-21ba2c28034d.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+E5 | enemy_w3_thief_bird.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world3_guardians.png
+D:/Cluade projects/games/Glue/assets/characters/v2/preview/idle_red.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the concept sheet of the world where this enemy lives — match its palette and light. Attached image 3: the player character of the game — match its art style exactly: chunky rounded shapes, a thick dark navy outline around the silhouette, flat cartoon toon shading with one soft shadow tone, light from the upper left, simple black oval eyes. Do NOT copy layouts, text or UI from the attachments.
+
+Create ONE character model sheet of an ENEMY for a 2D side-scrolling co-op platformer. Landscape 3:2. Plain flat light grey background (#E6E8EC), no scenery, no ground texture. On the left: the enemy large, full body, in strict side view facing right. To its right, in one row, smaller and evenly spaced: the same enemy in each pose listed below, all in strict side view, with exactly the same design, colors and scale. Next to the large view stands a tiny simple red bean-shaped character for scale (see Size). The enemy has a thick dark navy outline like the player character; cute, rounded, funny, readable as a small sprite — friendly cartoon, NOT scary, no gore. Dangerous parts (teeth, claws, spikes) have a small red warning accent. Its colors must not match the pure red, blue, yellow or green of the players. No text, letters, numbers, labels, arrows, frames, logos or watermark.
+Enemy: a round magpie-like thief bird with black-and-white-and-bronze feathers and a cheeky look; it snatches the golden key and flies to a high perch.
+Poses: flying with a golden key in its beak; perched on a bronze perch, guarding the key; startled and puffed up (caught by a hand); tumbling and dropping the key.
+Size: a little smaller than the player character.
+Neutral white balance. All listed states/poses must be complete and distinctly readable. Same design and consistent scale in every miniature. The main view is larger than the miniature views. Follow Size: the main red scale figure and the main subject share the SAME rendering scale; do not make the player arbitrarily tiny. Frozen players are stone-grey versions of the bean; normal active players are red or blue. No extra scenery, no decorative punctuation or symbols. Perfectly uniform opaque light-grey canvas; strict side orthographic silhouettes.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-57aefba2-6d92-4084-9ae0-56e7ab6b2173.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+E6 | enemy_w3_sleeping_golem.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world3_guardians.png
+D:/Cluade projects/games/Glue/assets/characters/v2/preview/idle_red.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the concept sheet of the world where this enemy lives — match its palette and light. Attached image 3: the player character of the game — match its art style exactly: chunky rounded shapes, a thick dark navy outline around the silhouette, flat cartoon toon shading with one soft shadow tone, light from the upper left, simple black oval eyes. Do NOT copy layouts, text or UI from the attachments.
+
+Create ONE character model sheet of an ENEMY for a 2D side-scrolling co-op platformer. Landscape 3:2. Plain flat light grey background (#E6E8EC), no scenery, no ground texture. On the left: the enemy large, full body, in strict side view facing right. To its right, in one row, smaller and evenly spaced: the same enemy in each pose listed below, all in strict side view, with exactly the same design, colors and scale. Next to the large view stands a tiny simple red bean-shaped character for scale (see Size). The enemy has a thick dark navy outline like the player character; cute, rounded, funny, readable as a small sprite — friendly cartoon, NOT scary, no gore. Dangerous parts (teeth, claws, spikes) have a small red warning accent. Its colors must not match the pure red, blue, yellow or green of the players. No text, letters, numbers, labels, arrows, frames, logos or watermark.
+Enemy: a huge mossy stone golem that sleeps curled up like a big mossy hill; when two players stand on it, it wakes up, walks forward and smashes through cracked walls.
+Poses: asleep (a long low mossy stone hill with closed eyes and a few small sleep bubbles — no letters) with two tiny characters standing on it; waking up (cracks, one eye opening); walking with a tiny character riding on its back; smashing a cracked stone wall with its fist.
+Size: asleep — two tiles high and long enough for two characters to stand on top; awake — three times the player height.
+Neutral white balance. All listed states/poses must be complete and distinctly readable. Same design and consistent scale in every miniature. The main view is larger than the miniature views. Follow Size: the main red scale figure and the main subject share the SAME rendering scale; do not make the player arbitrarily tiny. Frozen players are stone-grey versions of the bean; normal active players are red or blue. No extra scenery, no decorative punctuation or symbols. Perfectly uniform opaque light-grey canvas; strict side orthographic silhouettes.
+Exactly FOUR complete small poses. Sleeping pose is a low long mossy stone hill with TWO red/blue players on top. Walking pose carries one player on the back. Last pose clearly punches through a cracked wall. Awake main golem three times the adjacent red player's height.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-bdfc81d4-e2a4-4bd1-bbae-c9d63f4e9990.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+E7 | enemy_w3_bold_ghost.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world3_guardians.png
+D:/Cluade projects/games/Glue/assets/characters/v2/preview/idle_red.png
+D:/Cluade projects/games/Glue/assets/props/v2/source/p10_ghost.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the concept sheet of the world where this enemy lives — match its palette and light. Attached image 3: the player character of the game — match its art style exactly: chunky rounded shapes, a thick dark navy outline around the silhouette, flat cartoon toon shading with one soft shadow tone, light from the upper left, simple black oval eyes. Do NOT copy layouts, text or UI from the attachments.
+
+Create ONE character model sheet of an ENEMY for a 2D side-scrolling co-op platformer. Landscape 3:2. Plain flat light grey background (#E6E8EC), no scenery, no ground texture. On the left: the enemy large, full body, in strict side view facing right. To its right, in one row, smaller and evenly spaced: the same enemy in each pose listed below, all in strict side view, with exactly the same design, colors and scale. Next to the large view stands a tiny simple red bean-shaped character for scale (see Size). The enemy has a thick dark navy outline like the player character; cute, rounded, funny, readable as a small sprite — friendly cartoon, NOT scary, no gore. Dangerous parts (teeth, claws, spikes) have a small red warning accent. Its colors must not match the pure red, blue, yellow or green of the players. No text, letters, numbers, labels, arrows, frames, logos or watermark.
+Enemy: the "bold ghost" — a cousin of the shy ghost (image of the same family), lilac-pink with a cheeky grin and one raised eyebrow; it moves only while someone looks at it and freezes, pouting, when nobody looks.
+Poses: sliding forward with a big grin while being looked at; stopped and pouting with crossed arms when nobody looks; laughing.
+Size: about as tall as the player character.
+Neutral white balance. All listed states/poses must be complete and distinctly readable. Same design and consistent scale in every miniature. The main view is larger than the miniature views. Follow Size: the main red scale figure and the main subject share the SAME rendering scale; do not make the player arbitrarily tiny. Frozen players are stone-grey versions of the bean; normal active players are red or blue. No extra scenery, no decorative punctuation or symbols. Perfectly uniform opaque light-grey canvas; strict side orthographic silhouettes.
+Attached image 4: the game's accepted shy ghost sprite — family resemblance only. Make this cousin lilac-pink, cheeky and round, with the same soft wavy tail and simple little hands; preserve the thick navy interactive outline. Include a red player looking at it in the sliding pose, and a red player turned away in the stopped pose.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-d31824ac-e1d5-48de-9315-665baef27444.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+E4 | enemy_w3_stone_guardian.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/enemies/enemy_w3_stone_guardian.png
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world3_guardians.png
+D:/Cluade projects/games/Glue/assets/characters/v2/preview/idle_red.png
+Edit prompt:
+Image 1 is the edit target; images 2-4 are the same style references. Keep everything the same, but remove the two red punctuation strokes above the alert guardian, and enlarge only the red scale player beside the main guardian so the guardian is exactly twice its height. Preserve the four complete miniature poses, one-eyed helmet design, colors, outlines and light cones. Make the sheet background perfectly flat #E6E8EC without texture or gradient. No letters, numbers or punctuation.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-9dde1c1c-d051-48d1-b1bf-3177d361ccad.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+E5 | enemy_w3_thief_bird.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/enemies/enemy_w3_thief_bird.png
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world3_guardians.png
+D:/Cluade projects/games/Glue/assets/characters/v2/preview/idle_red.png
+Edit prompt:
+Image 1 is the edit target; images 2-4 are the same style references. Keep everything the same, but in the startled puffed-up third small pose, add one red bean-player's hand gripping the bird gently around its middle, so it clearly has been caught. Remove the floating red surprise punctuation marks there. Preserve the other three poses, key in beak, key on perch and dropped key, the bird's colors and rounded navy outline. Flat light grey #E6E8EC background. No text or punctuation.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-ef97de1e-de2e-4160-ae1f-7ce4247d535c.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+E7 | enemy_w3_bold_ghost.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/enemies/enemy_w3_bold_ghost.png
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world3_guardians.png
+D:/Cluade projects/games/Glue/assets/characters/v2/preview/idle_red.png
+D:/Cluade projects/games/Glue/assets/props/v2/source/p10_ghost.png
+Edit prompt:
+Image 1 is the edit target; images 2-5 are the same style and family references. Keep everything the same, but show a small RED ordinary player looking toward the ghost in the first sliding miniature pose, and change the grey player beside the pouting ghost to RED while keeping its back turned away. In the stopped pose give the ghost clearly crossed little arms. These ordinary observers are not frozen. Preserve the main ghost, lilac-pink palette, family shape, laughter pose, outline and scale. Make the background uniform flat #E6E8EC. No text, labels or symbols.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-e67d1e4a-5fa7-4693-85f2-72ab54b48a39.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+E4 | enemy_w3_stone_guardian.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/enemies/enemy_w3_stone_guardian.png
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world3_guardians.png
+D:/Cluade projects/games/Glue/assets/characters/v2/preview/idle_red.png
+Edit prompt:
+Image 1 is the edit target; images 2-4 are the same style references. Keep everything the same, but add one small FROZEN STONE-GREY bean player in front of the LAST, rightmost miniature guardian, inside its light cone. The grey player is motionless, about half that miniature guardian's height, fully visible within the right canvas margin. The guardian calmly ignores it. Preserve every existing guardian, every other pose, the red scale figure, all colors, outlines and background. Do not remove or replace any figure. No text or symbols.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-79a93361-4f10-49b6-99c7-44a87989be7e.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+E8 | enemy_w4_biter_fish.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world4_sunken_city.png
+D:/Cluade projects/games/Glue/assets/characters/v2/preview/idle_red.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the concept sheet of the world where this enemy lives — match its palette and light. Attached image 3: the player character of the game — match its art style exactly: chunky rounded shapes, a thick dark navy outline around the silhouette, flat cartoon toon shading with one soft shadow tone, light from the upper left, simple black oval eyes. Do NOT copy layouts, text or UI from the attachments.
+
+Create ONE character model sheet of an ENEMY for a 2D side-scrolling co-op platformer. Landscape 3:2. Plain flat light grey background (#E6E8EC), no scenery, no ground texture. On the left: the enemy large, full body, in strict side view facing right. To its right, in one row, smaller and evenly spaced: the same enemy in each pose listed below, all in strict side view, with exactly the same design, colors and scale. Next to the large view stands a tiny simple red bean-shaped character for scale (see Size). The enemy has a thick dark navy outline like the player character; cute, rounded, funny, readable as a small sprite — friendly cartoon, NOT scary, no gore. Dangerous parts (teeth, claws, spikes) have a small red warning accent. Its colors must not match the pure red, blue, yellow or green of the players. No text, letters, numbers, labels, arrows, frames, logos or watermark.
+Enemy: a round puffy biter fish, coral-orange with a big toothy mouth and small fins; it only lives in water and bites swimmers.
+Poses: swimming; biting (mouth wide open); bounced off a frozen stone-like character (dizzy).
+Size: two thirds of the player character height.
+Neutral white balance. All listed states/poses must be complete and distinctly readable. Same design and consistent scale in every miniature. The main view is larger than the miniature views. Follow Size: the main red scale figure and the main subject share the SAME rendering scale; do not make the player arbitrarily tiny. Frozen players are stone-grey versions of the bean; normal active players are red or blue. No extra scenery, no decorative punctuation or symbols. Perfectly uniform opaque light-grey canvas; strict side orthographic silhouettes.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-a3061f8e-4d08-4bfb-a39a-4a0700e43b13.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+E9 | enemy_w4_jellyfish.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world4_sunken_city.png
+D:/Cluade projects/games/Glue/assets/characters/v2/preview/idle_red.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the concept sheet of the world where this enemy lives — match its palette and light. Attached image 3: the player character of the game — match its art style exactly: chunky rounded shapes, a thick dark navy outline around the silhouette, flat cartoon toon shading with one soft shadow tone, light from the upper left, simple black oval eyes. Do NOT copy layouts, text or UI from the attachments.
+
+Create ONE character model sheet of an ENEMY for a 2D side-scrolling co-op platformer. Landscape 3:2. Plain flat light grey background (#E6E8EC), no scenery, no ground texture. On the left: the enemy large, full body, in strict side view facing right. To its right, in one row, smaller and evenly spaced: the same enemy in each pose listed below, all in strict side view, with exactly the same design, colors and scale. Next to the large view stands a tiny simple red bean-shaped character for scale (see Size). The enemy has a thick dark navy outline like the player character; cute, rounded, funny, readable as a small sprite — friendly cartoon, NOT scary, no gore. Dangerous parts (teeth, claws, spikes) have a small red warning accent. Its colors must not match the pure red, blue, yellow or green of the players. No text, letters, numbers, labels, arrows, frames, logos or watermark.
+Enemy: a translucent pink-violet jellyfish with a soft round bell and short stinging tentacles; it floats up and down in water.
+Poses: rising (bell contracted, tentacles trailing); sinking (bell open like an umbrella); stinging (tentacles glowing).
+Size: the bell is as wide as the player character, tentacles as long as one character.
+Neutral white balance. All listed states/poses must be complete and distinctly readable. Same design and consistent scale in every miniature. The main view is larger than the miniature views. Follow Size: the main red scale figure and the main subject share the SAME rendering scale; do not make the player arbitrarily tiny. Frozen players are stone-grey versions of the bean; normal active players are red or blue. No extra scenery, no decorative punctuation or symbols. Perfectly uniform opaque light-grey canvas; strict side orthographic silhouettes.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-804940c2-be83-4f66-ae5d-c33f950fb884.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+E10 | enemy_w4_pusher_crab.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world4_sunken_city.png
+D:/Cluade projects/games/Glue/assets/characters/v2/preview/idle_red.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the concept sheet of the world where this enemy lives — match its palette and light. Attached image 3: the player character of the game — match its art style exactly: chunky rounded shapes, a thick dark navy outline around the silhouette, flat cartoon toon shading with one soft shadow tone, light from the upper left, simple black oval eyes. Do NOT copy layouts, text or UI from the attachments.
+
+Create ONE character model sheet of an ENEMY for a 2D side-scrolling co-op platformer. Landscape 3:2. Plain flat light grey background (#E6E8EC), no scenery, no ground texture. On the left: the enemy large, full body, in strict side view facing right. To its right, in one row, smaller and evenly spaced: the same enemy in each pose listed below, all in strict side view, with exactly the same design, colors and scale. Next to the large view stands a tiny simple red bean-shaped character for scale (see Size). The enemy has a thick dark navy outline like the player character; cute, rounded, funny, readable as a small sprite — friendly cartoon, NOT scary, no gore. Dangerous parts (teeth, claws, spikes) have a small red warning accent. Its colors must not match the pure red, blue, yellow or green of the players. No text, letters, numbers, labels, arrows, frames, logos or watermark.
+Enemy: a sturdy coral-red crab with two big round claws that walks sideways and pushes players and crates off ledges.
+Poses: walking sideways; pushing with both claws forward; blocked by a crate (claws pressed against it, annoyed).
+Size: as tall as the player character, one and a half characters wide.
+Neutral white balance. All listed states/poses must be complete and distinctly readable. Same design and consistent scale in every miniature. The main view is larger than the miniature views. Follow Size: the main red scale figure and the main subject share the SAME rendering scale; do not make the player arbitrarily tiny. Frozen players are stone-grey versions of the bean; normal active players are red or blue. No extra scenery, no decorative punctuation or symbols. Perfectly uniform opaque light-grey canvas; strict side orthographic silhouettes.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-c711e9c9-9f85-472f-8201-3df44cc3df74.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+E8 | enemy_w4_biter_fish.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/enemies/enemy_w4_biter_fish.png
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world4_sunken_city.png
+D:/Cluade projects/games/Glue/assets/characters/v2/preview/idle_red.png
+Edit prompt:
+Image 1 is the existing fish model sheet to edit. Images 2–4 are style references only. Keep everything the same, but add a clearly visible frozen STONE-GREY bean-shaped player directly in front of the LAST, rightmost miniature fish, so this last scene clearly shows the fish bouncing harmlessly off the rigid frozen player. Keep the frozen player upright and the fish recoiling away. Make room by shifting that small scene slightly left if needed; preserve the large fish, red scale figure and all other miniature poses, original colors, thick navy outlines and light-grey background. No text, numbers, labels, arrows or punctuation. All silhouettes fully inside canvas.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-ec066a65-f976-4f01-8d26-c4535e8ce8d6.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+E11 | enemy_w5_yeti.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world5_ice_peaks.png
+D:/Cluade projects/games/Glue/assets/characters/v2/preview/idle_red.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the concept sheet of the world where this enemy lives — match its palette and light. Attached image 3: the player character of the game — match its art style exactly: chunky rounded shapes, a thick dark navy outline around the silhouette, flat cartoon toon shading with one soft shadow tone, light from the upper left, simple black oval eyes. Do NOT copy layouts, text or UI from the attachments.
+
+Create ONE character model sheet of an ENEMY for a 2D side-scrolling co-op platformer. Landscape 3:2. Plain flat light grey background (#E6E8EC), no scenery, no ground texture. On the left: the enemy large, full body, in strict side view facing right. To its right, in one row, smaller and evenly spaced: the same enemy in each pose listed below, all in strict side view, with exactly the same design, colors and scale. Next to the large view stands a tiny simple red bean-shaped character for scale (see Size). The enemy has a thick dark navy outline like the player character; cute, rounded, funny, readable as a small sprite — friendly cartoon, NOT scary, no gore. Dangerous parts (teeth, claws, spikes) have a small red warning accent. Its colors must not match the pure red, blue, yellow or green of the players. No text, letters, numbers, labels, arrows, frames, logos or watermark.
+Enemy: a big fluffy white yeti with a pale blue face and round belly; it throws snowballs that knock players off their grip.
+Poses: standing idle; winding up with a big snowball over its head; throwing (snowball flying); the snowball alone, round with a few snow crumbs.
+Size: two and a half times the player height.
+Neutral white balance. All listed states/poses must be complete and distinctly readable. Same design and consistent scale in every miniature. The main view is larger than the miniature views. Follow Size: the main red scale figure and the main subject share the SAME rendering scale; do not make the player arbitrarily tiny. Frozen players are stone-grey versions of the bean; normal active players are red or blue. No extra scenery, no decorative punctuation or symbols. Perfectly uniform opaque light-grey canvas; strict side orthographic silhouettes. Every supporting character or object explicitly required by a pose/state MUST be visibly drawn inside that scene; do not replace the interaction with only a facial expression. Fit every complete scene inside the canvas.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-d2648de0-78a5-4ded-b385-1f3509137a9a.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+E12 | enemy_w5_snow_owl.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world5_ice_peaks.png
+D:/Cluade projects/games/Glue/assets/characters/v2/preview/idle_red.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the concept sheet of the world where this enemy lives — match its palette and light. Attached image 3: the player character of the game — match its art style exactly: chunky rounded shapes, a thick dark navy outline around the silhouette, flat cartoon toon shading with one soft shadow tone, light from the upper left, simple black oval eyes. Do NOT copy layouts, text or UI from the attachments.
+
+Create ONE character model sheet of an ENEMY for a 2D side-scrolling co-op platformer. Landscape 3:2. Plain flat light grey background (#E6E8EC), no scenery, no ground texture. On the left: the enemy large, full body, in strict side view facing right. To its right, in one row, smaller and evenly spaced: the same enemy in each pose listed below, all in strict side view, with exactly the same design, colors and scale. Next to the large view stands a tiny simple red bean-shaped character for scale (see Size). The enemy has a thick dark navy outline like the player character; cute, rounded, funny, readable as a small sprite — friendly cartoon, NOT scary, no gore. Dangerous parts (teeth, claws, spikes) have a small red warning accent. Its colors must not match the pure red, blue, yellow or green of the players. No text, letters, numbers, labels, arrows, frames, logos or watermark.
+Enemy: a big round white snow owl with soft grey speckles and big amber eyes; it swoops down, grabs a player in its talons and carries them away.
+Poses: flying with wings spread; swooping down with wings swept back; carrying the tiny red character in its talons; dropping the character into a twig nest on a high ledge; perched, sleepy.
+Size: the body is one and a half player heights, wingspan four characters.
+Neutral white balance. All listed states/poses must be complete and distinctly readable. Same design and consistent scale in every miniature. The main view is larger than the miniature views. Follow Size: the main red scale figure and the main subject share the SAME rendering scale; do not make the player arbitrarily tiny. Frozen players are stone-grey versions of the bean; normal active players are red or blue. No extra scenery, no decorative punctuation or symbols. Perfectly uniform opaque light-grey canvas; strict side orthographic silhouettes. Every supporting character or object explicitly required by a pose/state MUST be visibly drawn inside that scene; do not replace the interaction with only a facial expression. Fit every complete scene inside the canvas.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-056ccaa2-820f-47c1-a413-45b2147df8e3.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+E13 | enemy_w6_shadow_ghost.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world6_sky_forge.png
+D:/Cluade projects/games/Glue/assets/characters/v2/preview/idle_red.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the concept sheet of the world where this enemy lives — match its palette and light. Attached image 3: the player character of the game — match its art style exactly: chunky rounded shapes, a thick dark navy outline around the silhouette, flat cartoon toon shading with one soft shadow tone, light from the upper left, simple black oval eyes. Do NOT copy layouts, text or UI from the attachments.
+
+Create ONE character model sheet of an ENEMY for a 2D side-scrolling co-op platformer. Landscape 3:2. Plain flat light grey background (#E6E8EC), no scenery, no ground texture. On the left: the enemy large, full body, in strict side view facing right. To its right, in one row, smaller and evenly spaced: the same enemy in each pose listed below, all in strict side view, with exactly the same design, colors and scale. Next to the large view stands a tiny simple red bean-shaped character for scale (see Size). The enemy has a thick dark navy outline like the player character; cute, rounded, funny, readable as a small sprite — friendly cartoon, NOT scary, no gore. Dangerous parts (teeth, claws, spikes) have a small red warning accent. Its colors must not match the pure red, blue, yellow or green of the players. No text, letters, numbers, labels, arrows, frames, logos or watermark.
+Enemy: a shadow ghost — a dark purple wisp with soft smoky edges and two glowing yellow eyes; it is afraid of lantern light.
+Poses: drifting toward the viewer; recoiling from warm lantern light (shrinking, eyes squinting, hands up); dissolving in strong light into small dark wisps.
+Size: about as tall as the player character.
+Neutral white balance. All listed states/poses must be complete and distinctly readable. Same design and consistent scale in every miniature. The main view is larger than the miniature views. Follow Size: the main red scale figure and the main subject share the SAME rendering scale; do not make the player arbitrarily tiny. Frozen players are stone-grey versions of the bean; normal active players are red or blue. No extra scenery, no decorative punctuation or symbols. Perfectly uniform opaque light-grey canvas; strict side orthographic silhouettes. Every supporting character or object explicitly required by a pose/state MUST be visibly drawn inside that scene; do not replace the interaction with only a facial expression. Fit every complete scene inside the canvas.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-4d92b119-f34f-499d-bda8-40ebed66349b.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+E14 | enemy_w6_great_guardian.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world6_sky_forge.png
+D:/Cluade projects/games/Glue/assets/characters/v2/preview/idle_red.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the concept sheet of the world where this enemy lives — match its palette and light. Attached image 3: the player character of the game — match its art style exactly: chunky rounded shapes, a thick dark navy outline around the silhouette, flat cartoon toon shading with one soft shadow tone, light from the upper left, simple black oval eyes. Do NOT copy layouts, text or UI from the attachments.
+
+Create ONE character model sheet of an ENEMY for a 2D side-scrolling co-op platformer. Landscape 3:2. Plain flat light grey background (#E6E8EC), no scenery, no ground texture. On the left: the enemy large, full body, in strict side view facing right. To its right, in one row, smaller and evenly spaced: the same enemy in each pose listed below, all in strict side view, with exactly the same design, colors and scale. Next to the large view stands a tiny simple red bean-shaped character for scale (see Size). The enemy has a thick dark navy outline like the player character; cute, rounded, funny, readable as a small sprite — friendly cartoon, NOT scary, no gore. Dangerous parts (teeth, claws, spikes) have a small red warning accent. Its colors must not match the pure red, blue, yellow or green of the players. No text, letters, numbers, labels, arrows, frames, logos or watermark.
+Enemy: the Great Guardian — the final boss, a giant guardian of stone and bronze from the sky forge, with two massive hammer-fists and a glowing orange forge core in its chest (its weak spot); heavy, slow, impressive but still cartoon-friendly.
+Poses: standing tall with the chest core closed behind bronze plates; raising one hammer-fist for a slam; slamming the ground (shockwave puff); stunned and kneeling with the chest plates open and the core exposed and blinking; hit in the core by a flying wooden crate (cartoon flash).
+Size: seven times the player height (it fills a whole screen).
+Neutral white balance. All listed states/poses must be complete and distinctly readable. Same design and consistent scale in every miniature. The main view is larger than the miniature views. Follow Size: the main red scale figure and the main subject share the SAME rendering scale; do not make the player arbitrarily tiny. Frozen players are stone-grey versions of the bean; normal active players are red or blue. No extra scenery, no decorative punctuation or symbols. Perfectly uniform opaque light-grey canvas; strict side orthographic silhouettes. Every supporting character or object explicitly required by a pose/state MUST be visibly drawn inside that scene; do not replace the interaction with only a facial expression. Fit every complete scene inside the canvas.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-52dbd615-18a1-44e1-9497-7d6f7f4f5ea1.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+E13 | enemy_w6_shadow_ghost.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/enemies/enemy_w6_shadow_ghost.png
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world6_sky_forge.png
+D:/Cluade projects/games/Glue/assets/characters/v2/preview/idle_red.png
+Edit prompt:
+Image 1 is the existing shadow ghost model sheet to edit; images 2–4 are style references. Keep everything the same, but make the PRIMARY red player scale figure on the far left as tall as the PRIMARY ghost (including its wispy body, excluding floating dots). Enlarge ONLY that red figure while keeping it entirely inside the canvas with margins and no overlaps. Preserve all three miniature poses, the lantern interaction and dispersal, every color, design, navy outlines and grey background. No text, letters, numbers, labels, arrows or decorative punctuation.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-20d956d7-cea4-4d32-89b3-d115c2a4cc39.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+E14 | enemy_w6_great_guardian.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/enemies/enemy_w6_great_guardian.png
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world6_sky_forge.png
+D:/Cluade projects/games/Glue/assets/characters/v2/preview/idle_red.png
+Edit prompt:
+Image 1 is the existing Great Guardian model sheet to edit; images 2–4 are style references. Keep everything the same, but add a SMALL STANDING IDLE Guardian with its bronze chest plates closed as the FIRST miniature scene, immediately before the raised-fist miniature. There must be FIVE distinct miniatures to the right of the large primary Guardian in one row: standing idle chest closed; raised fist; ground slam; stunned kneeling exposed core; flying wooden crate hitting exposed core. Preserve all FOUR existing miniature actions and all their supporting objects; reduce the miniature row uniformly just enough to fit the new standing miniature without overlap or cropping. All FIVE miniature Guardians have the same scale and design. Preserve large primary Guardian, tiny red scale player, palette, navy outlines and grey background. No text, numbers, labels, arrows or frames.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-f73d80cf-0895-48fe-9755-4d47b73cbb64.png

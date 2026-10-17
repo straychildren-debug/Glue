@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="ru">
+  <head><meta charset="UTF-8" /></head>
+  <body>
+    <template>
+      <style>
+        /* Кадр 1 «Царство бобов»: спуск камеры с неба, герой впрыгивает, машет замку, наезд на замок.
+           Каждый план — полный кадр, содержимое стоит на конечных местах; камера двигает планы с разной скоростью. */
+        #s1 { position: absolute; inset: 0; overflow: hidden; background: #3d8fe0; font-family: Nunito, sans-serif; }
+        #s1 .plane { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; }
+        #s1 .plane > img, #s1 .abs { position: absolute; display: block; }
+        #s1 .bird { position: absolute; width: 34px; height: 16px; overflow: visible; }
+        #s1 .dust { position: absolute; width: 34px; height: 34px; margin: -17px 0 0 -17px; border-radius: 50%; background: rgba(255, 251, 236, 0.9); }
+      </style>
+
+      <div id="s1" data-composition-id="s1" data-width="1920" data-height="1080">
+        <div id="s1-sky" class="plane" data-layout-allow-overflow>
+          <img src="art/layers/sky.jpg" style="left: 0; top: -680px; width: 1920px; height: 2880px" alt="" />
+          <div class="abs glow" style="left: -420px; top: -1120px; width: 1100px; height: 1100px; border-radius: 50%;
+            background: radial-gradient(closest-side, rgba(255, 250, 220, 0.75), rgba(255, 250, 220, 0))"></div>
+        </div>
+        <div id="s1-mountains" class="plane" data-layout-allow-overflow>
+          <img src="art/layers/mountains.png" style="left: -126px; top: 340px; width: 2172px" alt="" />
+        </div>
+        <div id="s1-birds" class="plane" data-layout-allow-overflow></div>
+        <div id="s1-kingdom" class="plane" data-layout-allow-overflow>
+          <img src="art/layers/kingdom.png" style="left: -126px; top: 375px; width: 2172px" alt="" />
+        </div>
+        <div id="s1-grass" class="plane" data-layout-allow-overflow>
+          <img src="art/layers/fg_grass.png" style="left: -126px; top: 660px; width: 2172px" alt="" />
+          <div class="abs shadow" style="left: 520px; top: 984px"></div>
+          <div id="s1-dust" class="abs" style="left: 520px; top: 984px"></div>
+          <div id="s1-hero-slot"></div>
+          <!-- Трава перед ступнями (A5, A6): герой стоит в лугу, а не поверх него -->
+          <img src="art/layers/grass_tuft_1.png" style="left: 418px; top: 936px; width: 128px" alt="" />
+          <img src="art/layers/grass_tuft_6.png" style="left: 524px; top: 944px; width: 118px" alt="" />
+          <img src="art/layers/grass_front_day.png" style="left: -140px; top: 862px; width: 2200px" alt="" />
+        </div>
+        <div id="s1-branch" class="plane" data-layout-allow-overflow>
+          <img src="art/layers/fg_branch.png" style="left: -30px; top: -20px; width: 900px; filter: blur(3px)" alt="" />
+        </div>
+        <div class="vignette"></div>
+        <p id="s1-cap" class="caption">Далеко-далеко, за облачными мостами, раскинулось Царство бобов.</p>
+      </div>
+
+      <script>
+        (() => {
+          const tl = gsap.timeline({ paused: true });
+          const $ = (sel) => document.querySelector(sel);
+          const P = window.__beans;
+          $("#s1-hero-slot").outerHTML = P.html("s1-hero", "red", 520, 990);
+          const set = (sel, at, vars) => tl.set(sel, vars, at);
+
+          // ── Камера. Спуск: планы сдвинуты вниз на свою глубину (ближе — больше путь), ветка уходит вверх.
+          const DESCENT = 3.4;
+          const depth = { "#s1-sky": 680, "#s1-mountains": 900, "#s1-birds": 950, "#s1-kingdom": 1000, "#s1-grass": 1250 };
+          for (const [sel, d] of Object.entries(depth)) {
+            tl.fromTo(sel, { y: d }, { y: 0, duration: DESCENT, ease: "power2.inOut" }, 0);
+          }
+          tl.fromTo("#s1-branch", { y: 0 }, { y: -1250, duration: DESCENT, ease: "power2.inOut" }, 0);
+          // Наезд на замок (5.5 → 7, разгоняется — склейка во 2-й кадр на ходу): ближние планы растут сильнее.
+          const CASTLE = "1085px 620px";
+          const push = { "#s1-sky": 1.04, "#s1-mountains": 1.08, "#s1-birds": 1.1, "#s1-kingdom": 1.16, "#s1-grass": 1.34 };
+          for (const [sel, s] of Object.entries(push)) {
+            tl.fromTo(sel, { scale: 1, transformOrigin: CASTLE }, { scale: s, duration: 1.5, ease: "power2.in", immediateRender: false }, 5.5);
+          }
+
+          // ── Птицы летят вправо — по ходу героев. Крылья: две фазы, смена 12 раз в секунду.
+          P.birds(tl, "#s1-birds", [[260, 380, 1], [200, 350, 0.8], [150, 402, 0.9]], 820, 1.4, 6.9);
+
+          // ── Титр.
+          P.caption(tl, "#s1-cap", 0.8, 5.4);
+
+          // ── Герой: впрыгивает снизу-слева (поза прыжка), приземляется — дальше играет кукла.
+          const H = "#s1-hero";
+          P.show(tl, H, "jump", 0);
+          set(H + " ~ .shadow, #s1 .shadow", 0, { autoAlpha: 0, scale: 0.3 });
+          const JUMP = 2.95, LAND = 3.65;
+          tl.fromTo(H, { x: -330 }, { x: 0, duration: LAND - JUMP, ease: "power1.out" }, JUMP);
+          tl.fromTo(H, { y: 380 }, { y: -170, duration: 0.42, ease: "power2.out" }, JUMP);
+          tl.to(H, { y: 0, duration: LAND - JUMP - 0.42, ease: "power2.in" }, JUMP + 0.42);
+          tl.fromTo(H + " .pose", { rotation: -14 }, { rotation: 8, duration: LAND - JUMP, ease: "sine.inOut", transformOrigin: "0px -140px" }, JUMP);
+          tl.to("#s1 .shadow", { autoAlpha: 1, scale: 1, duration: LAND - JUMP, ease: "power2.in" }, JUMP);
+          P.land(tl, H, LAND);
+          P.dust(tl, "#s1-dust", "s1d", LAND);
+
+          // Моргнул — увидел замок — удивился «О!» — заулыбался и машет дальней рукой.
+          P.face(tl, H, 4.15, { eyes: "blink" });
+          P.face(tl, H, 4.25, { eyes: "open" });
+          const WOW = 4.5;
+          P.face(tl, H, WOW, { eyes: "frightened", mouth: "surprised", brows: "worried" });
+          tl.fromTo(H + " .rig", { rotation: 0, scaleY: 1 }, { rotation: -5, scaleY: 1.06, duration: 0.25, ease: "back.out(1.6)", immediateRender: false }, WOW);
+          const JOY = 5.0;
+          P.face(tl, H, JOY, { eyes: "open", mouth: "smile", brows: null });
+          tl.to(H + " .rig", { rotation: 3, scaleY: 1, duration: 0.3, ease: "power2.out" }, JOY);
+          P.wave(tl, H, JOY, 4);
+          tl.to(H + " .rig", { y: -26, duration: 0.18, ease: "power2.out", yoyo: true, repeat: 1 }, JOY + 0.3);
+
+          window.__timelines["s1"] = tl;
+        })();
+      </script>
+    </template>
+  </body>
+</html>

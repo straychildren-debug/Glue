@@ -1,7 +1,7 @@
-"""Игровые копии текстур платформ мира 01 (исходники в assets/tiles/world_01/source не меняются).
+"""Игровые копии текстур платформ (исходники в assets/tiles/world_XX/source не меняются).
 
 Запуск:
-    blender -b --factory-startup -P tools/blender/make_tiles.py
+    blender -b --factory-startup -P tools/blender/make_tiles.py [-- имя имя ...]
 
 Для каждой текстуры: вырезать полезную полосу (у мха и края холст шире рисунка), свести шов
 по нужным осям, уменьшить до размера «вдвое крупнее, чем на экране при масштабе камеры 1».
@@ -11,17 +11,23 @@ Blender здесь — просто Python с numpy и чтением/запис
 """
 
 import os
+import sys
 
 import bpy
 import numpy as np
 
-SRC = "assets/tiles/world_01/source"
-OUT = "assets/tiles/world_01/game"
+# Папка мира — по префиксу имени: w01_… → assets/tiles/world_01/{source,game}.
+def world_dir(name: str, kind: str) -> str:
+    return "assets/tiles/world_%s/%s" % (name[1:3], kind)
 
-# имя → (файл, обрезка (x, y, ширина, высота) или None, оси шва, перекрытие px, размер результата).
+
+# имя → (файл, обрезка (x, y, ширина, высота) или None, оси шва, перекрытие px, размер результата
+# [, поправка {"saturation": доля, "contrast": доля, "flip_x": True}]).
 # Кладка и скала уже почти бесшовные (перепад на стыке ≈ 5–7 из 255): смешение рисовало бы
 # полупрозрачные двойные швы между камнями — их не сводим. У мха перекрытие узкое по той же причине.
-# Размер результата — вдвое больше мирового периода повтора: см. Art.GROUND в src/game/art.gd.
+# Заливки, нарисованные рядами (виадук, каменоломня), режем по середине горизонтального шва
+# сверху и снизу: при повторе половинки сложатся в обычный шов.
+# Размер результата — вдвое больше мирового периода повтора (Ground.TEXELS_PER_PX).
 TILES = {
     # Кладка: период 256 px мира (4 тайла) — камни примерно по полтайла.
     "w01_stone_fill": ("w01_stone_fill.png", None, "", 0, (512, 512)),
@@ -33,6 +39,28 @@ TILES = {
     # Край: столбцы 60–300 — каменная колонна (≈ 85–245) с плющом. Масштаб 0,15:
     # полоса 36 px мира, период 229 px.
     "w01_stone_side": ("w01_stone_side.png", (60, 0, 240, 1774), "y", 250, (72, 457)),
+    # Заливки зон 11–20 (задание 09). Масштаб, как у кладки: 1254 px исходника → 512.
+    # Река (T8) и святилище (T9) почти бесшовные — как кладка.
+    "w01_river_fill": ("w01_river_fill.png", None, "", 0, (512, 512)),
+    "w01_shrine_fill": ("w01_shrine_fill.png", None, "", 0, (512, 512)),
+    # Виадук (T7): ряды тёсаных блоков, шов по вертикали не сведён (перепад 21) — режем
+    # по горизонтальным швам на строках 5 и 1251; он ярче остальных — приглушаем.
+    "w01_viaduct_fill": ("w01_viaduct_fill.png", (0, 5, 1254, 1246), "", 0, (512, 509),
+                         {"saturation": 0.7, "contrast": 0.85}),
+    # Каменоломня (T5): слои породы, режем по линиям слоёв на строках 225 и 1175.
+    "w01_canyon_fill": ("w01_canyon_fill.png", (0, 225, 1254, 950), "", 0, (512, 388)),
+    # Глубина каньона (T6): глыбы крупные, как у скалы — период 384 px.
+    "w01_canyon_deep": ("w01_canyon_deep.png", None, "", 0, (768, 768)),
+    # Мир 2 «Мастерские» (задание 11, C2.1–C2.4). Заливка — кирпич с камнем, как кладка;
+    # глубина — крупный серый камень, как скала.
+    "w02_fill": ("w02_fill.png", None, "", 0, (512, 512)),
+    "w02_deep": ("w02_deep.png", None, "", 0, (768, 768)),
+    # Верх — каменный бордюр: строки 195–330 (над бордюром — пыль и травинки, ходят по строке
+    # ≈ 215). Масштаб 0,25: полоса 34 px мира, период 523 px.
+    "w02_top": ("w02_top.png", (0, 195, 2172, 135), "x", 80, (1046, 68)),
+    # Бок — колонна кирпича, внешняя грань справа (столбец ≈ 333): отражаем, чтобы грань была
+    # слева, как у мира 1. Масштаб 0,1: полоса 36 px мира, период 217 px.
+    "w02_side": ("w02_side.png", (0, 0, 360, 2172), "y", 250, (72, 384), {"flip_x": True}),
 }
 
 
@@ -67,13 +95,29 @@ def save(pixels: np.ndarray, size: tuple, path: str) -> None:
     bpy.data.images.remove(image)
 
 
+def adjust(pixels: np.ndarray, saturation: float = 1.0, contrast: float = 1.0, flip_x: bool = False) -> np.ndarray:
+    """Приглушить цвет: насыщенность к серому той же яркости, контраст к средней яркости."""
+    rgb = pixels[..., :3]
+    gray = rgb @ np.array([0.299, 0.587, 0.114], dtype=np.float32)
+    rgb = gray[..., None] + (rgb - gray[..., None]) * saturation
+    mean = float(gray.mean())
+    pixels[..., :3] = np.clip(mean + (rgb - mean) * contrast, 0.0, 1.0)
+    return pixels[:, ::-1].copy() if flip_x else pixels
+
+
 def main() -> None:
-    os.makedirs(OUT, exist_ok=True)
-    for name, (file, crop, axes, overlap, size) in TILES.items():
-        pixels = load(os.path.join(SRC, file))
+    only = sys.argv[sys.argv.index("--") + 1:] if "--" in sys.argv else []
+    for name, (file, crop, axes, overlap, size, *rest) in TILES.items():
+        if only and name not in only:
+            continue
+        out = world_dir(name, "game")
+        os.makedirs(out, exist_ok=True)
+        pixels = load(os.path.join(world_dir(name, "source"), file))
         if crop:
             x, y, w, h = crop
             pixels = pixels[y:y + h, x:x + w]
+        if rest:
+            pixels = adjust(pixels, **rest[0])
         premul = pixels.copy()
         premul[..., :3] *= premul[..., 3:4]
         if "x" in axes:
@@ -82,7 +126,7 @@ def main() -> None:
             premul = seamless(premul, 0, overlap)
         alpha = premul[..., 3:4]
         premul[..., :3] = np.where(alpha > 1e-4, premul[..., :3] / np.maximum(alpha, 1e-4), 0.0)
-        save(premul, size, os.path.join(OUT, name + ".png"))
+        save(premul, size, os.path.join(out, name + ".png"))
         print("TILE", name, premul.shape[1], "x", premul.shape[0], "->", size)
 
 

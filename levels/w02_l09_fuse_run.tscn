@@ -1,0 +1,200 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://src/level/greybox_level.gd" id="1"]
+[ext_resource type="PackedScene" path="res://levels/backdrops/w02_forge.tscn" id="bd"]
+[ext_resource type="Script" path="res://src/level/backdrop_layer.gd" id="bl"]
+[ext_resource type="Texture2D" path="res://assets/backgrounds/world_02/source/w02_lm09_powder_store.png" id="lm"]
+[ext_resource type="Script" path="res://src/mechanisms/cracked_wall.gd" id="cracked"]
+[ext_resource type="Script" path="res://src/mechanisms/door.gd" id="door"]
+[ext_resource type="Script" path="res://src/mechanisms/finish.gd" id="finish"]
+[ext_resource type="Script" path="res://src/mechanisms/keg.gd" id="keg"]
+[ext_resource type="Script" path="res://src/mechanisms/pressure_plate.gd" id="plate"]
+[ext_resource type="Script" path="res://src/mechanisms/saw.gd" id="saw"]
+[ext_resource type="Script" path="res://src/mechanisms/spark.gd" id="spark"]
+[ext_resource type="Script" path="res://src/mechanisms/spikes.gd" id="spikes"]
+[ext_resource type="Script" path="res://src/mechanisms/wire.gd" id="wire"]
+
+[node name="W02L09" type="Node2D"]
+script = ExtResource("1")
+title = "09 · Бегущий фитиль"
+blocks = Array[Rect2]([Rect2(0, -8, 1, 30), Rect2(71, -8, 1, 30), Rect2(0, 12, 8, 6), Rect2(8, 15, 18, 3), Rect2(26, 12, 10, 6), Rect2(32, -8, 1, 16), Rect2(36, 15, 22, 3), Rect2(47, -8, 1, 16), Rect2(58, 12, 13, 6), Rect2(62, -8, 1, 16)])
+checkpoints = Array[Vector2]([Vector2(2, 12), Vector2(29, 12)])
+bounds_tiles = Rect2(0, -8, 72, 27)
+kill_y_tiles = 19
+ground_fill = "w02_fill"
+ground_deep = "w02_deep"
+ground_top = "w02_top"
+ground_side = "w02_side"
+
+[node name="T1" type="AnimatableBody2D" parent="."]
+position = Vector2(384, 768)
+script = ExtResource("plate")
+width_tiles = 1.5
+latch = true
+mark_color = Color(0.95, 0.6, 0.2, 1)
+
+[node name="Bridge1" type="StaticBody2D" parent="."]
+position = Vector2(512, 768)
+script = ExtResource("cracked")
+size_tiles = Vector2(18, 1)
+
+[node name="Spikes1" type="Node2D" parent="."]
+position = Vector2(1088, 960)
+script = ExtResource("spikes")
+width_tiles = 18.0
+
+[node name="K1" type="Node2D" parent="."]
+position = Vector2(1088, 768)
+script = ExtResource("keg")
+walls = Array[NodePath]([NodePath("../Bridge1")])
+
+[node name="Saw1a" type="Node2D" parent="."]
+position = Vector2(704, 718)
+script = ExtResource("saw")
+radius_tiles = 0.4
+path_tiles = Vector2(3, 0)
+speed = 200.0
+
+[node name="Saw1b" type="Node2D" parent="."]
+position = Vector2(1280, 718)
+script = ExtResource("saw")
+radius_tiles = 0.4
+path_tiles = Vector2(3, 0)
+speed = 200.0
+start_at = 0.5
+
+[node name="D1" type="AnimatableBody2D" parent="."]
+position = Vector2(2048, 512)
+script = ExtResource("door")
+size_tiles = Vector2(1, 4)
+triggers = Array[NodePath]([NodePath("../T1")])
+open_offset_tiles = Vector2(0, -3.5)
+mark_color = Color(0.95, 0.6, 0.2, 1)
+
+[node name="G1" type="Node2D" parent="."]
+script = ExtResource("wire")
+points = PackedVector2Array(5, 6, 5.5, 6)
+next = Array[NodePath]([NodePath("../G1ground"), NodePath("../Fuse1")])
+switches = Array[NodePath]([NodePath("../T1")])
+
+[node name="G1ground" type="Node2D" parent="."]
+script = ExtResource("wire")
+points = PackedVector2Array(5.5, 6, 5.5, 5)
+grounded = true
+
+[node name="Fuse1" type="Node2D" parent="."]
+script = ExtResource("wire")
+points = PackedVector2Array(5.5, 6, 14.3, 6, 14.3, 6.4)
+next = Array[NodePath]([NodePath("../Fuse1b")])
+
+[node name="Fuse1b" type="Node2D" parent="."]
+script = ExtResource("wire")
+points = PackedVector2Array(14.3, 6.4, 17, 6.4, 17, 11.2)
+target = NodePath("../K1")
+
+[node name="Spark1" type="Node2D" parent="."]
+script = ExtResource("spark")
+wire = NodePath("../G1")
+respawn_time = 0.3
+
+[node name="T2" type="AnimatableBody2D" parent="."]
+position = Vector2(2240, 768)
+script = ExtResource("plate")
+width_tiles = 1.5
+latch = true
+mark_color = Color(0.3, 0.8, 0.75, 1)
+
+[node name="Bridge2" type="StaticBody2D" parent="."]
+position = Vector2(2304, 768)
+script = ExtResource("cracked")
+size_tiles = Vector2(22, 1)
+
+[node name="Spikes2" type="Node2D" parent="."]
+position = Vector2(3008, 960)
+script = ExtResource("spikes")
+width_tiles = 22.0
+
+[node name="K2" type="Node2D" parent="."]
+position = Vector2(2144, 768)
+script = ExtResource("keg")
+walls = Array[NodePath]([NodePath("../Bridge2")])
+
+[node name="B2a" type="AnimatableBody2D" parent="."]
+position = Vector2(2688, 768)
+script = ExtResource("plate")
+width_tiles = 1.0
+pulse = 0.8
+mark_color = Color(0.95, 0.5, 0.7, 1)
+
+[node name="D2" type="AnimatableBody2D" parent="."]
+position = Vector2(3008, 512)
+script = ExtResource("door")
+size_tiles = Vector2(1, 4)
+triggers = Array[NodePath]([NodePath("../B2a"), NodePath("../B2b")])
+open_offset_tiles = Vector2(0, -3.5)
+open_speed = 900.0
+mark_color = Color(0.95, 0.5, 0.7, 1)
+
+[node name="B2b" type="AnimatableBody2D" parent="."]
+position = Vector2(3232, 768)
+script = ExtResource("plate")
+width_tiles = 1.0
+pulse = 0.8
+mark_color = Color(0.95, 0.5, 0.7, 1)
+
+[node name="Saw2" type="Node2D" parent="."]
+position = Vector2(3392, 718)
+script = ExtResource("saw")
+radius_tiles = 0.4
+path_tiles = Vector2(3, 0)
+speed = 220.0
+start_at = 1.0
+start_forward = false
+
+[node name="D3" type="AnimatableBody2D" parent="."]
+position = Vector2(3968, 512)
+script = ExtResource("door")
+size_tiles = Vector2(1, 4)
+triggers = Array[NodePath]([NodePath("../T2")])
+open_offset_tiles = Vector2(0, -3.5)
+mark_color = Color(0.3, 0.8, 0.75, 1)
+
+[node name="G2" type="Node2D" parent="."]
+script = ExtResource("wire")
+points = PackedVector2Array(34, 6, 34.5, 6)
+next = Array[NodePath]([NodePath("../G2ground"), NodePath("../Fuse2")])
+switches = Array[NodePath]([NodePath("../T2")])
+
+[node name="G2ground" type="Node2D" parent="."]
+script = ExtResource("wire")
+points = PackedVector2Array(34.5, 6, 34.5, 5)
+grounded = true
+
+[node name="Fuse2" type="Node2D" parent="."]
+script = ExtResource("wire")
+points = PackedVector2Array(34.5, 6, 43.4, 6, 43.4, 5.5, 33.5, 5.5, 33.5, 11.2)
+target = NodePath("../K2")
+
+[node name="Spark2" type="Node2D" parent="."]
+script = ExtResource("spark")
+wire = NodePath("../G2")
+respawn_time = 0.3
+
+[node name="Finish" type="Node2D" parent="."]
+position = Vector2(4288, 768)
+script = ExtResource("finish")
+
+[node name="Backdrop" parent="." instance=ExtResource("bd")]
+
+[node name="Landmark" type="Node2D" parent="Backdrop"]
+script = ExtResource("bl")
+texture = ExtResource("lm")
+parallax = 0.3
+parallax_y = 0.1
+height = 0.6
+center_y = 0.55
+zoom_follow = 0.3
+repeat = false
+world_x = 1613.0
+haze = 0.22
+haze_color = Color(0.860, 0.900, 0.960, 1)

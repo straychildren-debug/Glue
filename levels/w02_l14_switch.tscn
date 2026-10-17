@@ -1,0 +1,77 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://src/level/greybox_level.gd" id="1"]
+[ext_resource type="Script" path="res://src/mechanisms/wire.gd" id="2"]
+[ext_resource type="Script" path="res://src/mechanisms/spark.gd" id="3"]
+[ext_resource type="Script" path="res://src/mechanisms/keg.gd" id="4"]
+[ext_resource type="Script" path="res://src/mechanisms/cracked_wall.gd" id="5"]
+[ext_resource type="Script" path="res://src/mechanisms/pressure_plate.gd" id="6"]
+[ext_resource type="Script" path="res://src/mechanisms/finish.gd" id="7"]
+[ext_resource type="PackedScene" path="res://levels/backdrops/w02_scaffolds.tscn" id="bd"]
+
+[node name="W02L14" type="Node2D"]
+script = ExtResource("1")
+title = "14 · Стрелка"
+blocks = Array[Rect2]([Rect2(0, -8, 1, 26), Rect2(0, 12, 26, 6), Rect2(19, -8, 1, 17), Rect2(32, 12, 10, 6), Rect2(42, -8, 1, 26)])
+checkpoints = Array[Vector2]([Vector2(2, 12)])
+bounds_tiles = Rect2(0, -8, 43, 27)
+kill_y_tiles = 19.0
+ground_fill = "w02_fill"
+ground_deep = "w02_deep"
+ground_top = "w02_top"
+ground_side = "w02_side"
+
+[node name="Plate1" type="AnimatableBody2D" parent="."]
+position = Vector2(384, 768)
+script = ExtResource("6")
+mark_color = Color(0.95, 0.75, 0.2, 1)
+
+[node name="Plate2" type="AnimatableBody2D" parent="."]
+position = Vector2(2240, 768)
+script = ExtResource("6")
+mark_color = Color(0.95, 0.75, 0.2, 1)
+
+[node name="W0" type="Node2D" parent="."]
+script = ExtResource("2")
+points = PackedVector2Array(2, 8.5, 12, 8.5)
+next = Array[NodePath]([NodePath("../ToBridge"), NodePath("../ToWall")])
+switches = Array[NodePath]([NodePath("../Plate1"), NodePath("../Plate2")])
+
+[node name="ToBridge" type="Node2D" parent="."]
+script = ExtResource("2")
+points = PackedVector2Array(12, 8.5, 12, 4, 25, 4, 25, 11.2)
+target = NodePath("../BridgeKeg")
+
+[node name="ToWall" type="Node2D" parent="."]
+script = ExtResource("2")
+points = PackedVector2Array(12, 8.5, 17.5, 8.5, 17.5, 11.2)
+target = NodePath("../WallKeg")
+
+[node name="Spark" type="Node2D" parent="."]
+script = ExtResource("3")
+wire = NodePath("../W0")
+
+[node name="WallKeg" type="Node2D" parent="."]
+position = Vector2(1120, 768)
+script = ExtResource("4")
+walls = Array[NodePath]([NodePath("../Wall")])
+
+[node name="Wall" type="StaticBody2D" parent="."]
+position = Vector2(1216, 576)
+script = ExtResource("5")
+
+[node name="BridgeKeg" type="Node2D" parent="."]
+position = Vector2(1600, 768)
+script = ExtResource("4")
+walls = Array[NodePath]([NodePath("../Bridge")])
+
+[node name="Bridge" type="StaticBody2D" parent="."]
+position = Vector2(1664, 768)
+script = ExtResource("5")
+size_tiles = Vector2(6, 0.5)
+
+[node name="Finish" type="Node2D" parent="."]
+position = Vector2(2496, 768)
+script = ExtResource("7")
+
+[node name="Backdrop" parent="." instance=ExtResource("bd")]

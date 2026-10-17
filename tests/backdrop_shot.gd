@@ -19,12 +19,26 @@ func _ready() -> void:
 	var shot := 0
 	for spec in args.slice(2):
 		var points := spec.split(";")
+		# Края кадра — стены: на время переноса их выключаем, камеру — сразу к игрокам,
+		# иначе стена прежнего кадра выталкивает перенесённых (бывает и на шипы).
+		var camera: SharedCamera = game.get_node("SharedCamera")
+		var walls: Array = [camera.get("_wall_left"), camera.get("_wall_right"), camera.get("_wall_top")]
+		for wall: StaticBody2D in walls:
+			wall.collision_layer = 0
+		var middle := Vector2.ZERO
+		for point in points:
+			var xy := point.split(",")
+			middle += Vector2(float(xy[0]), float(xy[1])) * GreyboxLevel.TILE / points.size()
+		camera.snap_to(middle)
 		for slot in mini(points.size(), game.players.size()):
 			var xy := points[slot].split(",")
 			var player: Player = game.players[slot]
 			place(player, Vector2(float(xy[0]), float(xy[1])) * GreyboxLevel.TILE
 					- Vector2(0, Player.SIZE.y / 2.0 + 1.0))
-		await frames(150)  # камера доезжает и меняет масштаб
+		await frames(6)
+		for wall: StaticBody2D in walls:
+			wall.collision_layer = Player.LAYER_CAMERA_WALLS
+		await frames(144)  # камера доезжает и меняет масштаб
 		await RenderingServer.frame_post_draw
 		var file := out_dir.path_join("%s_%d.png" % [args[1].get_file().get_basename(), shot])
 		get_viewport().get_texture().get_image().save_png(file)

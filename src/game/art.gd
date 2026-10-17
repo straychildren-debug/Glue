@@ -1,10 +1,13 @@
 class_name Art
 extends RefCounted
-## Готовая графика поверх серого прототипа. Механизмы — спрайты из Blender
-## (tools/blender/props.py → assets/props/v1, 4 px текстуры на 1 px игры), персонажи — PlayerSprite.
+## Готовая графика поверх серого прототипа. Механизмы — спрайты (4 px текстуры на 1 px игры):
+## живописный набор v2 (задание docs/12, tools/make_props.py → assets/props/v2) и, где v2 ещё нет,
+## плоский набор v1 из Blender (tools/blender/props.py → assets/props/v1). Персонажи — PlayerSprite.
 ## F3 в игре переключает графику и серые прямоугольники (хитбоксы видны как есть).
 
 const PROPS_DIR := "res://assets/props/v1/"
+## Новый набор заменяет старый по одному спрайту, по мере готовности.
+const PROPS_V2_DIR := "res://assets/props/v2/"
 
 ## Графика или серые прямоугольники прототипа.
 static var enabled := true
@@ -13,8 +16,14 @@ static var _textures := {}
 
 static func tex(sprite: String) -> Texture2D:
 	if not _textures.has(sprite):
-		_textures[sprite] = load(PROPS_DIR + sprite + ".png")
+		var v2 := PROPS_V2_DIR + sprite + ".png"
+		_textures[sprite] = load(v2 if ResourceLoader.exists(v2) else PROPS_DIR + sprite + ".png")
 	return _textures[sprite]
+
+
+## Есть ли спрайт (в v2 или v1): у новых механизмов спрайт появляется позже, чем код.
+static func has(sprite: String) -> bool:
+	return _textures.has(sprite) or ResourceLoader.exists(PROPS_V2_DIR + sprite + ".png") 			or ResourceLoader.exists(PROPS_DIR + sprite + ".png")
 
 
 ## Отражённая копия спрайта (правый или нижний торец). Отражение через трансформацию

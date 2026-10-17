@@ -1,0 +1,84 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://src/level/greybox_level.gd" id="1"]
+[ext_resource type="PackedScene" path="res://levels/backdrops/w02_yard.tscn" id="bd"]
+[ext_resource type="Script" path="res://src/level/backdrop_layer.gd" id="bl"]
+[ext_resource type="Texture2D" path="res://assets/backgrounds/world_02/source/w02_lm05_windmill_bellows.png" id="lm"]
+[ext_resource type="Script" path="res://src/mechanisms/bellows.gd" id="bellows"]
+[ext_resource type="Script" path="res://src/mechanisms/finish.gd" id="finish"]
+[ext_resource type="Script" path="res://src/mechanisms/pressure_plate.gd" id="plate"]
+[ext_resource type="Script" path="res://src/mechanisms/spikes.gd" id="spikes"]
+[ext_resource type="Script" path="res://src/mechanisms/spinner.gd" id="spinner"]
+
+[node name="W02L05" type="Node2D"]
+script = ExtResource("1")
+title = "05 · Ветряк"
+blocks = Array[Rect2]([Rect2(0, -8, 1, 30), Rect2(59, -8, 1, 30), Rect2(0, 12, 9, 6), Rect2(9, 15, 14.5, 3), Rect2(23.5, 12, 13, 6), Rect2(36.5, 15, 13, 3), Rect2(49.5, 12, 9.5, 6)])
+checkpoints = Array[Vector2]([Vector2(2, 12), Vector2(25.5, 12)])
+bounds_tiles = Rect2(0, -8, 60, 27)
+kill_y_tiles = 19
+ground_fill = "w02_fill"
+ground_deep = "w02_deep"
+ground_top = "w02_top"
+ground_side = "w02_side"
+
+[node name="PedalA" type="AnimatableBody2D" parent="."]
+position = Vector2(256, 768)
+script = ExtResource("plate")
+width_tiles = 1.5
+mark_color = Color(0.3, 0.8, 0.75, 1)
+
+[node name="Spikes1" type="Node2D" parent="."]
+position = Vector2(1040, 960)
+script = ExtResource("spikes")
+width_tiles = 14.5
+
+[node name="Wheel1" type="AnimatableBody2D" parent="."]
+position = Vector2(832, 780)
+script = ExtResource("spinner")
+length_tiles = 6.0
+spin_speed = -20.0
+
+[node name="Bellows" type="Node2D" parent="."]
+position = Vector2(1056, 608)
+script = ExtResource("bellows")
+length_tiles = 11.0
+height_tiles = 8.0
+pedal = NodePath("../PedalA")
+pedals = Array[NodePath]([NodePath("../PedalB")])
+
+[node name="PedalB" type="AnimatableBody2D" parent="."]
+position = Vector2(1920, 768)
+script = ExtResource("plate")
+width_tiles = 1.5
+mark_color = Color(0.3, 0.8, 0.75, 1)
+
+[node name="Spikes2" type="Node2D" parent="."]
+position = Vector2(2752, 960)
+script = ExtResource("spikes")
+width_tiles = 13.0
+
+[node name="Wheel2" type="AnimatableBody2D" parent="."]
+position = Vector2(2752, 780)
+script = ExtResource("spinner")
+length_tiles = 8.0
+spin_speed = -18.0
+
+[node name="Finish" type="Node2D" parent="."]
+position = Vector2(3552, 768)
+script = ExtResource("finish")
+
+[node name="Backdrop" parent="." instance=ExtResource("bd")]
+
+[node name="Landmark" type="Node2D" parent="Backdrop"]
+script = ExtResource("bl")
+texture = ExtResource("lm")
+parallax = 0.3
+parallax_y = 0.1
+height = 0.72
+center_y = 0.6
+zoom_follow = 0.3
+repeat = false
+world_x = 1344.0
+haze = 0.22
+haze_color = Color(0.860, 0.900, 0.960, 1)

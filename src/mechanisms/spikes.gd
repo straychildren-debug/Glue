@@ -21,9 +21,13 @@ const SPRITE_SINK := 4.0
 		queue_redraw()
 
 
+const GROUP := "spikes"
+
+
 func _ready() -> void:
 	if not Engine.is_editor_hint():
 		process_physics_priority = 15  # после движения игроков
+		add_to_group(GROUP)  # жук видит шипы впереди и не заходит в них
 
 
 func get_rect() -> Rect2:

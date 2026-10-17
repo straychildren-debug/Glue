@@ -105,5 +105,12 @@ func _on_moved(direction: Vector2i) -> void:
 func _refresh() -> void:
 	for i in _labels.size():
 		var selected := i == _selected
-		_labels[i].text = ("▶  %s  ◀" if selected else "%s") % ITEMS[i][1]
+		_labels[i].text = ("▶  %s  ◀" if selected else "%s") % _item_text(i)
 		_labels[i].add_theme_color_override("font_color", Color("c2410c") if selected else Color("3a3f47"))
+
+
+## В «Истории» выход из уровня ведёт в главное меню, а не к выбору уровня.
+func _item_text(i: int) -> String:
+	if ITEMS[i][0] == Action.MENU and Game.story:
+		return "Главное меню"
+	return ITEMS[i][1]

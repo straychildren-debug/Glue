@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <title>Держись! — вступление</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      /* Рисованная перекладка: слои генератора (art/layers — art/build_layers.py и art/build_rest.py),
+         куклы героев из частей. Сцены — подкомпозиции в compositions/. Здесь — общие стили и помощники. */
+      :root { --cream: #fbf4e6; --navy: #1a1d33; }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1920px; height: 1080px; overflow: hidden; background: #000; }
+      #main { position: relative; width: 100%; height: 100%; overflow: hidden; font-family: Nunito, sans-serif; }
+      .caption {
+        position: absolute; left: 50%; top: 44px; width: 1360px; margin-left: -680px;
+        padding: 22px 44px; border-radius: 26px; background: rgba(251, 244, 230, 0.94);
+        border: 4px solid var(--navy); box-shadow: 0 10px 30px rgba(20, 30, 60, 0.25);
+        font-size: 46px; font-weight: 800; line-height: 1.25; text-align: center; color: var(--navy);
+      }
+      .caption span { display: inline-block; }
+      .vignette { position: absolute; inset: 0; pointer-events: none;
+        background: radial-gradient(ellipse 75% 70% at 50% 45%, rgba(0, 0, 0, 0) 60%, rgba(10, 20, 50, 0.32) 100%); }
+      .shadow { position: absolute; width: 190px; height: 34px; margin-left: -95px; margin-top: -17px; border-radius: 50%;
+        background: radial-gradient(closest-side, rgba(22, 40, 30, 0.45), rgba(22, 40, 30, 0)); }
+
+      /* Кукла боба: (0, 0) — середина ступней. Координаты деталей — вывод art/build_layers.py. */
+      .pup { position: absolute; width: 0; height: 0; }
+      .pup .scale, .pup .rig, .pup .pose { position: absolute; left: 0; top: 0; width: 0; height: 0; }
+      .pup img { position: absolute; display: block; }
+      .pup .p-rarm { left: 24px; top: -172px; transform-origin: 22% 18%; }
+      .pup .p-lleg { left: -55px; top: -92px; }
+      .pup .p-rleg { left: 3px; top: -92px; }
+      .pup .p-body { left: -93px; top: -300px; }
+      .pup .p-larm { left: -119px; top: -179px; transform-origin: 78% 16%; }
+      .pup .p-bow { left: 22px; top: -322px; width: 64px; rotate: 14deg; }
+      .pup .f { opacity: 0; }
+      .pup .eyes-open, .pup .mouth-smile { opacity: 1; }
+      .pup .eyes-open { left: 2px; top: -223px; }
+      .pup .eyes-blink { left: -3px; top: -212px; }
+      .pup .eyes-frightened { left: 0px; top: -226px; }
+      .pup .eyes-determined { left: -4px; top: -216px; }
+      .pup .eyes-side { left: 3px; top: -224px; }
+      .pup .brows-worried { left: -3px; top: -245px; }
+      .pup .brows-determined { left: -5px; top: -245px; }
+      .pup .mouth-smile { left: 16px; top: -172px; }
+      .pup .mouth-surprised { left: 19px; top: -180px; }
+      .pup .mouth-shout { left: 16px; top: -180px; }
+      .pup .mouth-frown { left: 15px; top: -173px; }
+      .pup .pose img { opacity: 0; }
+      .pup .ps-jump { width: 262px; left: -131px; top: -280px; }
+      .pup .ps-run { width: 302px; left: -151px; top: -288px; }
+      .pup .ps-frightened { width: 246px; left: -123px; top: -297px; }
+      .pup .ps-stand { width: 242px; left: -121px; top: -300px; }
+      .pup .pose .p-bow { left: 30px; top: -318px; }
+      .dust { position: absolute; width: 34px; height: 34px; margin: -17px 0 0 -17px; border-radius: 50%; background: rgba(255, 251, 236, 0.9); }
+      .bird { position: absolute; width: 34px; height: 16px; overflow: visible; }
+      .clip { position: absolute; inset: 0; overflow: hidden; }
+      .page-scene { background: #d1b784; perspective: 2200px; }
+      .paper-strip {
+        position: absolute; left: 0; top: 50px; width: 4850px; height: 980px;
+        background: radial-gradient(circle at 18px 19px, #e8d8b0 0 2px, transparent 3px) 0 0 / 38px 38px,
+                    linear-gradient(135deg, #fff8e4, #eeddb9);
+        border: 13px solid #2b2c42; box-shadow: 0 18px 45px #25213c66;
+      }
+      .panel-card {
+        position: absolute; top: 55px; width: 1450px; height: 850px;
+        padding: 11px; border: 8px solid #20233d; background: #fff5dc;
+        box-shadow: 14px 17px 0 #24243748; transform-origin: 50% 50%;
+      }
+      .panel-card:nth-child(1) { left: 160px; rotate: -0.6deg; }
+      .panel-card:nth-child(2) { left: 1760px; rotate: 0.8deg; }
+      .panel-card:nth-child(3) { left: 3360px; rotate: -0.7deg; }
+      .panel-card img { display: block; width: 100%; height: 100%; object-fit: contain; }
+      .page-turn {
+        position: absolute; left: 0; top: -120px; width: 2350px; height: 1330px;
+        transform: skewX(-17deg); background: linear-gradient(90deg, #a69b7e, #fff9e7 13%, #fffdf4 75%, #c8b997);
+        box-shadow: -45px 0 70px #13172e99; pointer-events: none;
+      }
+      .comic-glint { position: absolute; width: 180px; height: 180px; border-radius: 50%;
+        background: radial-gradient(circle, #fffbd9cc 0, #fff9b844 21%, transparent 70%); pointer-events: none; }
+    </style>
+    <script>
+      // Помощники сцен (compositions/*): куклы бобов, лица, приземление, взмах, пыль, птицы, титры, ГПСЧ.
+      window.__beans = (() => {
+        const L = "art/layers/";
+        const FACE = {
+          eyes: ["open", "blink", "frightened", "determined", "side"],
+          brows: ["worried", "determined"],
+          mouth: ["smile", "surprised", "shout", "frown"],
+        };
+        const POSES = ["jump", "run", "frightened", "stand"];
+
+        /** Кукла: id, цвет (red / blue / green / yellow), место ступней, масштаб. Сестра (yellow) — 0.82 и бантик. */
+        function html(id, color, x, y, scale = 1) {
+          const p = color === "red" ? "hero_" : `hero_${color}_`;
+          const s = scale * (color === "yellow" ? 0.82 : 1);
+          const face = Object.entries(FACE).flatMap(([g, list]) =>
+            list.map((n) => `<img class="f ${g}-${n}" src="${L}${g}_${n}.png" alt="" />`)).join("");
+          const bow = color === "yellow" ? `<img class="p-bow" src="${L}hero_yellow_bow.png" alt="" />` : "";
+          return `<div class="pup" id="${id}" style="left:${x}px;top:${y}px"><div class="scale" style="scale:${s}">` +
+            `<div class="rig">` +
+            `<img class="p-rarm" src="${L}${p}right_arm.png" alt="" />` +
+            `<img class="p-lleg" src="${L}${p}left_leg.png" alt="" />` +
+            `<img class="p-rleg" src="${L}${p}right_leg.png" alt="" />` +
+            `<img class="p-body" src="${L}${p}body.png" alt="" />` + face + bow +
+            `<img class="p-larm" src="${L}${p}left_arm.png" alt="" />` +
+            `</div><div class="pose">` +
+            POSES.map((n) => `<img class="ps-${n}" src="${L}${p}${n}.png" alt="" />`).join("") +
+            `</div></div></div>`;
+        }
+
+        /** Что видно у куклы: "rig" — кукла из частей, иначе цельная поза (jump / run / frightened / stand). */
+        function show(tl, sel, which, at) {
+          tl.set(`${sel} .rig`, { autoAlpha: which === "rig" ? 1 : 0 }, at);
+          for (const n of POSES) tl.set(`${sel} .ps-${n}`, { opacity: which === n ? 1 : 0 }, at);
+        }
+
+        /** Лицо: {eyes, mouth, brows}; brows: null — без бровей; не указанная группа не меняется. */
+        function face(tl, sel, at, want) {
+          for (const [g, list] of Object.entries(FACE)) {
+            if (!(g in want)) continue;
+            for (const n of list) tl.set(`${sel} .${g}-${n}`, { opacity: want[g] === n ? 1 : 0 }, at);
+          }
+        }
+
+        /** Приземление: в тот же кадр — кукла, сплющивание и руки по инерции. */
+        function land(tl, sel, at) {
+          show(tl, sel, "rig", at);
+          tl.fromTo(`${sel} .rig`, { scaleX: 1.22, scaleY: 0.74, transformOrigin: "0px 0px" },
+            { scaleX: 1, scaleY: 1, duration: 0.55, ease: "back.out(2.4)", immediateRender: false }, at);
+          tl.fromTo(`${sel} .p-larm`, { rotation: 18 }, { rotation: 0, duration: 0.5, ease: "back.out(2)", immediateRender: false }, at);
+          tl.fromTo(`${sel} .p-rarm`, { rotation: -18 }, { rotation: 0, duration: 0.5, ease: "back.out(2)", immediateRender: false }, at);
+        }
+
+        /** Взмах дальней (правой) рукой: плечо выезжает к краю тела, иначе рука прячется за ним. */
+        function wave(tl, sel, at, times = 4) {
+          tl.to(`${sel} .p-rarm`, { rotation: -115, x: 44, y: -14, duration: 0.3, ease: "back.out(1.5)" }, at);
+          tl.fromTo(`${sel} .p-rarm`, { rotation: -115 }, { rotation: -140, duration: 0.17, ease: "sine.inOut", yoyo: true, repeat: times - 1, immediateRender: false }, at + 0.3);
+          tl.to(`${sel} .p-larm`, { rotation: 14, duration: 0.3, ease: "power2.out" }, at);
+        }
+
+        /** Облачко пыли из-под ног (контейнер стоит в точке ступней). */
+        function dust(tl, container, prefix, at, spread = 150, color = "rgba(255, 251, 236, 0.9)") {
+          const box = document.querySelector(container);
+          [-1, -0.55, -0.2, 0.2, 0.55, 1].forEach((d, i) => {
+            box.insertAdjacentHTML("beforeend", `<div class="dust" id="${prefix}${i}" style="opacity:0;background:${color}"></div>`);
+            tl.fromTo(`#${prefix}${i}`, { x: d * 30, y: 0, scale: 0.5 },
+              { x: d * spread, y: -18 - Math.abs(d) * 22, scale: 1.4 - Math.abs(d) * 0.4, duration: 0.6, ease: "power2.out", immediateRender: false }, at);
+            tl.fromTo(`#${prefix}${i}`, { opacity: 0.95 }, { opacity: 0, duration: 0.6, ease: "power1.in", immediateRender: false }, at);
+          });
+        }
+
+        /** Стайка птиц: [x, y, масштаб], путь dx; крылья — две фазы, 12 смен в секунду. */
+        function birds(tl, container, list, dx, from, to) {
+          const box = document.querySelector(container);
+          const UP = "M1 9 Q8 0 17 10 Q26 0 33 9", DOWN = "M1 6 Q8 15 17 9 Q26 15 33 6";
+          list.forEach(([x, y, s], i) => {
+            const id = `${box.id}-b${i}`;
+            box.insertAdjacentHTML("beforeend",
+              `<svg class="bird" id="${id}" viewBox="0 0 34 16" style="left:${x}px;top:${y}px">` +
+              `<path class="up" d="${UP}" fill="none" stroke="#24304f" stroke-width="3.2" stroke-linecap="round"/>` +
+              `<path class="down" d="${DOWN}" fill="none" stroke="#24304f" stroke-width="3.2" stroke-linecap="round" opacity="0"/></svg>`);
+            tl.fromTo(`#${id}`, { x: 0, scale: s }, { x: dx, y: -40 + i * 12, duration: to - from, ease: "none" }, from);
+            for (let k = 0, t = from + i / 12; t < to; k++, t += 1 / 12) {
+              tl.set(`#${id} .up`, { opacity: k % 2 ? 1 : 0 }, t);
+              tl.set(`#${id} .down`, { opacity: k % 2 ? 0 : 1 }, t);
+            }
+          });
+        }
+
+        /** Титр: плашка выезжает, слова всплывают волной; уходит вверх. */
+        function caption(tl, sel, from, to) {
+          const cap = document.querySelector(sel);
+          cap.innerHTML = cap.textContent.split(" ").map((w) => `<span>${w}</span>`).join(" ");
+          tl.fromTo(cap, { autoAlpha: 0, y: -24 }, { autoAlpha: 1, y: 0, duration: 0.5, ease: "power3.out" }, from);
+          tl.fromTo(`${sel} span`, { autoAlpha: 0, y: 14 }, { autoAlpha: 1, y: 0, duration: 0.35, ease: "power2.out", stagger: 0.05 }, from + 0.1);
+          tl.to(cap, { autoAlpha: 0, y: -24, duration: 0.35, ease: "power2.in" }, to);
+        }
+
+        /** Детерминированный ГПСЧ (mulberry32). */
+        function rng(seed) {
+          return () => {
+            seed |= 0; seed = (seed + 0x6d2b79f5) | 0;
+            let t = Math.imul(seed ^ (seed >>> 15), 1 | seed);
+            t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+            return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+          };
+        }
+
+        return { html, show, face, land, wave, dust, birds, caption, rng };
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="main" data-composition-id="main" data-start="0" data-duration="70" data-width="1920" data-height="1080">
+      <div id="s1-host" data-composition-id="s1" data-composition-src="compositions/s1_kingdom.html"
+        data-start="0" data-duration="7.2" data-track-index="0" data-width="1920" data-height="1080"></div>
+      <section id="page1" class="clip page-scene" data-start="6.7" data-duration="15.3" data-track-index="1">
+        <div class="paper-strip">
+          <article id="panel01" class="clip panel-card" data-start="7" data-duration="15"><img src="art/comic/p01_festival_lettered.png" alt="Праздник бобов" /></article>
+          <article id="panel02" class="clip panel-card" data-start="11.7" data-duration="10.3"><img src="art/comic/p02_ghosts_watch_lettered.png" alt="Призраки смотрят на праздник" /></article>
+          <article id="panel03" class="clip panel-card" data-start="16.7" data-duration="5.3"><img src="art/comic/p03_ghost_plan_lettered.png" alt="План призраков" /></article>
+        </div>
+      </section>
+      <section id="page2" class="clip page-scene" data-start="22" data-duration="15" data-track-index="1">
+        <div class="paper-strip">
+          <article id="panel04" class="clip panel-card" data-start="22" data-duration="15"><img src="art/comic/p04_raid_lettered.png" alt="Налёт призраков" /></article>
+          <article id="panel05" class="clip panel-card" data-start="26.7" data-duration="10.3"><img src="art/comic/p05_grab_lettered.png" alt="Похищение короля" /></article>
+          <article id="panel06" class="clip panel-card" data-start="31.7" data-duration="5.3"><img src="art/comic/p06_carried_lettered.png" alt="Упавшая корона" /></article>
+        </div>
+      </section>
+      <section id="page3" class="clip page-scene" data-start="37" data-duration="15" data-track-index="1">
+        <div class="paper-strip">
+          <article id="panel07" class="clip panel-card" data-start="37" data-duration="15"><img src="art/comic/p07_crown_lettered.png" alt="Корона на площади" /></article>
+          <article id="panel08" class="clip panel-card" data-start="41.7" data-duration="10.3"><img src="art/comic/p08_found_lettered.png" alt="Герои нашли корону" /></article>
+          <article id="panel09" class="clip panel-card" data-start="46.7" data-duration="5.3"><img src="art/comic/p09_decision_lettered.png" alt="Герои принимают решение" /></article>
+        </div>
+      </section>
+      <section id="page4" class="clip page-scene" data-start="52" data-duration="18" data-track-index="1">
+        <div class="paper-strip">
+          <article id="panel10" class="clip panel-card" data-start="52" data-duration="18"><img src="art/comic/p10_map_lettered.png" alt="Карта пути" /></article>
+          <article id="panel11" class="clip panel-card" data-start="56.7" data-duration="13.3"><img src="art/comic/p11_road_lettered.png" alt="Дорога к мостам" /></article>
+          <article id="panel12" class="clip panel-card" data-start="61.7" data-duration="8.3"><img src="art/comic/p12_bridge_lettered.png" alt="Держись!" /></article>
+        </div>
+      </section>
+      <div id="turn1" class="clip page-turn" data-start="21.65" data-duration="0.7" data-track-index="2"></div>
+      <div id="turn2" class="clip page-turn" data-start="36.65" data-duration="0.7" data-track-index="2"></div>
+      <div id="turn3" class="clip page-turn" data-start="51.65" data-duration="0.7" data-track-index="2"></div>
+      <audio id="score" src="art/comic_score.wav" data-start="0" data-duration="70" data-track-index="3" data-volume="0.85"></audio>
+    </div>
+    <script>
+      window.__timelines = window.__timelines || {};
+      const comic = gsap.timeline({ paused: true });
+      window.__timelines["main"] = comic;
+      comic.fromTo("#s1-host", { scale: 1, x: 0, y: 0, opacity: 1 },
+        { scale: 0.76, x: -170, y: 110, rotation: -1.5, opacity: 0, duration: 0.65, ease: "power2.in" }, 6.55);
+      for (let p = 1; p <= 4; p++) {
+        const base = [7, 22, 37, 52][p - 1];
+        const page = `#page${p}`;
+        const strip = `${page} .paper-strip`;
+        comic.set(strip, { x: 75, y: 0 }, base - 0.3);
+        comic.fromTo(page, { opacity: 0, rotationY: -8, scale: 0.96 },
+          { opacity: 1, rotationY: 0, scale: 1, duration: 0.5, ease: "power2.out" }, base - 0.3);
+        for (let i = 0; i < 3; i++) {
+          const idx = (p - 1) * 3 + i + 1;
+          const id = `#panel${String(idx).padStart(2, "0")}`;
+          const at = base + i * 5;
+          comic.fromTo(id, { opacity: 0, scale: 0.91, y: 50 },
+            { opacity: 1, scale: 1, y: 0, duration: 0.42, ease: "back.out(1.8)" }, at);
+          if (i > 0) comic.to(strip, { x: 75 - i * 1600, duration: 0.7, ease: "power2.inOut" }, at - 0.35);
+        }
+      }
+      for (const [i, at] of [[1, 21.65], [2, 36.65], [3, 51.65]]) {
+        comic.fromTo(`#turn${i}`, { x: 1900 }, { x: -2400, duration: 0.7, ease: "power2.inOut" }, at);
+      }
+      comic.to("#page4 .paper-strip", { scale: 0.96, transformOrigin: "72% 45%", duration: 7, ease: "sine.inOut" }, 62.8);
+    </script>
+  </body>
+</html>

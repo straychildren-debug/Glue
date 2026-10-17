@@ -1,0 +1,513 @@
+{
+  "task": "09_графика_11-20_задание.md",
+  "mode": "built-in image_gen",
+  "date": "2026-10-02",
+  "count": 42,
+  "assets": [
+    {
+      "id": "Z1",
+      "kind": "far",
+      "path": "D:/Cluade projects/games/Glue/assets/backgrounds/world_01/v2/source/w01_v2_far_river.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" (world \"Forgotten Bridges\"). Use it ONLY as a style reference: bright, cheerful hand-painted cartoon game art; saturated sky with big soft clouds; ancient grey-brown stone ruins with thick green moss on the top edges; lush rounded trees; many thin waterfalls; turquoise water; warm sunlight from the upper left; soft shading, clean readable shapes. Attached image 2: the approved far background of the same world — same palette, same level of detail, same painting style. Do NOT copy the sheet's layout, text, logo, UI panels, frames or characters.\n\nCreate a FAR BACKGROUND parallax layer for a 2D side-scrolling co-op platformer. Landscape 3:2. Strict side view, level horizon, no perspective floor, no isometric view. No characters, animals or people. No text, letters, logo, UI, frame or watermark. Nothing that looks interactive or walkable: no crates, doors, levers, buttons, flags, hooks, keys, no ropes or chains across the image, no flat platforms in front. Everything is far away and small in scale. Gentle atmospheric haze; colors a bit softer and less contrasty than a foreground, so small bright red, blue, yellow and green characters stay readable in front of it. Neutral white balance, no yellow or sepia tint.\nThe band between 40% and 80% of the height is only soft haze and distant silhouettes — no waterfalls, islands or bright details there; put the details near the horizon line and in the bottom mist. The bottom edge is mist or water depth, not ground. No large object touches the left or right edge, so the image can repeat horizontally.\n\nScene: AFTERNOON. A wide calm turquoise river basin of the bridge builders: ancient watermills with big wooden water wheels on mossy stone mill houses, small weirs and waterfalls, old stone bridge piers standing in the water, reeds and willow-like trees on the banks, distant soft blue hills. Warm afternoon light from the upper left.\nComposition: top 40% sky with big clouds; the river valley as a calm hazy silhouette across the middle; the lower part is bright water mist and spray.",
+      "refs": [
+        "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+        "D:/Cluade projects/games/Glue/assets/backgrounds/world_01/v2/source/w01_v2_far_valley.png"
+      ],
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fdbc-85f8-7471-90e2-82bd74996636\\exec-498b0461-d4cc-4ac7-bbf9-5d720623e3a0.png",
+      "edit_prompt": "Use case: precise-object-edit. Attached image 1 is the edit target, the river background. Keep the same painting style, palette, sky and river setting, but make the band from 40% to 80% of the image height only soft blue-white haze and faint distant silhouettes. Remove all distinct waterfalls, large islands, sharp masonry, bright highlights and saturated foliage from this middle band. Put the recognizable small watermills and water wheels very low in the scene at 82–90% height, partially veiled by mist. Bottom edge remains soft water mist. No large scenery clipped by left or right edges. Opaque landscape PNG, 3:2. No text or characters."
+    },
+    {
+      "id": "Z2",
+      "kind": "mid",
+      "path": "D:/Cluade projects/games/Glue/assets/backgrounds/world_01/v2/source/w01_v2_mid_river.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" — style reference only (bright hand-painted cartoon game art, grey-brown stone ruins with thick green moss, lush rounded trees, thin waterfalls, turquoise water, warm light from the upper left). Attached image 2: the approved far background of THIS zone — match its colors and light. Do NOT copy the sheet's layout, text, UI or characters.\n\nCreate a MIDDLE-DISTANCE parallax layer for a 2D side-scrolling co-op platformer. TRANSPARENT BACKGROUND PNG. Landscape 3:2. Strict side view. No characters, animals, text, logo, UI, frame or watermark. No crates, doors, levers, buttons, flags, hooks, keys, no ropes or chains across the image.\nThe highest point of the scenery is below the middle of the image; the upper half is completely empty and transparent. The band is clearly in the middle distance: slightly hazy, lighter and bluer than a foreground, medium detail. The tops are irregular and broken, never flat walkable ledges. The bottom fades into soft white mist instead of a hard ground line. Neutral white balance, no yellow tint. Left and right edges should continue each other for horizontal repeating; no big object cut by the edges.\n\nContent: a river bank band: small mossy stone mill houses with wooden water wheels, old wooden piles in the water, willow-like trees and reeds, one or two small waterfalls over weirs.\nPNG must have genuine alpha transparency, not a checkerboard painting. Every visible pixel including trees and mist must remain below 52% of image height. No sky or background plane.",
+      "refs": [
+        "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+        "D:/Cluade projects/games/Glue/assets/backgrounds/world_01/v2/source/w01_v2_far_river.png"
+      ],
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fdbc-85f8-7471-90e2-82bd74996636\\exec-335b9031-7029-46dd-b543-bfdee5bbd441.png",
+      "edit_prompt": null
+    },
+    {
+      "id": "L11",
+      "kind": "landmark",
+      "path": "D:/Cluade projects/games/Glue/assets/backgrounds/world_01/v2/source/w01_v2_lm11_watermill.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" — style reference only (bright hand-painted cartoon game art, grey-brown stone ruins with thick green moss, lush rounded trees, thin waterfalls, turquoise water, warm light from the upper left). Attached image 2: the approved far background of the same zone — match its colors and light. Do NOT copy the sheet's layout, text, UI or characters.\n\nCreate ONE isolated landmark object for the background of a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, with empty transparent space around it. The object stands in the middle distance: slightly hazy and softer than a foreground, medium detail, no hard black outlines. Its base fades into soft white mist. No characters, text, logo, UI, crates, doors with dark openings, flags, hooks, keys, ropes or chains hanging in front. Neutral white balance, no yellow tint.\nObject:\n\na big old watermill: a mossy stone mill house with a large wooden water wheel, water spilling from a broken wooden chute, two rounded trees. Landscape 3:2.\nPNG with genuine alpha transparency; no checkerboard painted into the pixels. All empty openings through arches are transparent, no dark doorways.",
+      "refs": [
+        "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+        "D:/Cluade projects/games/Glue/assets/backgrounds/world_01/v2/source/w01_v2_far_river.png"
+      ],
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fdbc-85f8-7471-90e2-82bd74996636\\exec-abb9d2ed-2cfc-4a08-aa5b-e79dbd7c4789.png",
+      "edit_prompt": null
+    },
+    {
+      "id": "L12",
+      "kind": "landmark",
+      "path": "D:/Cluade projects/games/Glue/assets/backgrounds/world_01/v2/source/w01_v2_lm12_trebuchet.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" — style reference only (bright hand-painted cartoon game art, grey-brown stone ruins with thick green moss, lush rounded trees, thin waterfalls, turquoise water, warm light from the upper left). Attached image 2: the approved far background of the same zone — match its colors and light. Do NOT copy the sheet's layout, text, UI or characters.\n\nCreate ONE isolated landmark object for the background of a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, with empty transparent space around it. The object stands in the middle distance: slightly hazy and softer than a foreground, medium detail, no hard black outlines. Its base fades into soft white mist. No characters, text, logo, UI, crates, doors with dark openings, flags, hooks, keys, ropes or chains hanging in front. Neutral white balance, no yellow tint.\nObject:\n\nthe ruin of a giant ancient wooden-and-stone throwing machine (a trebuchet) on a stone base, its long wooden arm raised and broken, moss and ivy on the base. Landscape 3:2.\nPNG with genuine alpha transparency; no checkerboard painted into the pixels. All empty openings through arches are transparent, no dark doorways.",
+      "refs": [
+        "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+        "D:/Cluade projects/games/Glue/assets/backgrounds/world_01/v2/source/w01_v2_far_river.png"
+      ],
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fdbc-85f8-7471-90e2-82bd74996636\\exec-a8c27ca3-151c-46e0-be6d-6f542e4761eb.png",
+      "edit_prompt": null
+    },
+    {
+      "id": "Z3",
+      "kind": "far",
+      "path": "D:/Cluade projects/games/Glue/assets/backgrounds/world_01/v2/source/w01_v2_far_canyon.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" (world \"Forgotten Bridges\"). Use it ONLY as a style reference: bright, cheerful hand-painted cartoon game art; saturated sky with big soft clouds; ancient grey-brown stone ruins with thick green moss on the top edges; lush rounded trees; many thin waterfalls; turquoise water; warm sunlight from the upper left; soft shading, clean readable shapes. Attached image 2: the approved far background of the same world — same palette, same level of detail, same painting style. Do NOT copy the sheet's layout, text, logo, UI panels, frames or characters.\n\nCreate a FAR BACKGROUND parallax layer for a 2D side-scrolling co-op platformer. Landscape 3:2. Strict side view, level horizon, no perspective floor, no isometric view. No characters, animals or people. No text, letters, logo, UI, frame or watermark. Nothing that looks interactive or walkable: no crates, doors, levers, buttons, flags, hooks, keys, no ropes or chains across the image, no flat platforms in front. Everything is far away and small in scale. Gentle atmospheric haze; colors a bit softer and less contrasty than a foreground, so small bright red, blue, yellow and green characters stay readable in front of it. Neutral white balance, no yellow or sepia tint.\nThe band between 40% and 80% of the height is only soft haze and distant silhouettes — no waterfalls, islands or bright details there; put the details near the horizon line and in the bottom mist. The bottom edge is mist or water depth, not ground. No large object touches the left or right edge, so the image can repeat horizontally.\n\nScene: AFTERNOON. A deep narrow quarry canyon of the bridge builders: tall mossy cliff walls with carved stone steps and square quarry cuts, ancient stone lifting towers and wooden galleries attached to the far walls (small, far away), thin waterfalls falling into misty depths; sunlight from above on the upper walls, cooler blue shadows lower down, still bright and friendly.\nComposition: a strip of sky at the top 30%; the far canyon walls frame the middle softly; the lower part is deep blue-white mist (pits in these levels must look like a deep canyon).\nPriority composition: in the 40–80% height band render ONLY very faint blue-grey silhouettes under dense soft haze, no crisp waterfall streaks, bright highlights or detailed islands. Recognizable scenery details stay near the upper horizon (30–40%) or very low (82–92%), dissolved in mist. Background, not a foreground scene.",
+      "refs": [
+        "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+        "D:/Cluade projects/games/Glue/assets/backgrounds/world_01/v2/source/w01_v2_far_valley.png"
+      ],
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fdbc-85f8-7471-90e2-82bd74996636\\exec-0ce6b0e1-dfaf-4312-8767-5519b5ae6afa.png",
+      "edit_prompt": "Use case: precise-object-edit. Image 1 is the edit target. Keep everything the same, including sky, palette, mountains and the exact arrangement of ruins, but veil the entire band between 40% and 80% of image height in MUCH stronger soft atmospheric mist. Within this band, all stonework, trees and waterfall streaks must become very faint low-contrast silhouettes; no crisp white waterfall strokes, dark tree blobs, or detailed islands. The characteristic upper silhouette of the canyon/viaduct should remain legible near the horizon, then dissolve into mist below. Preserve the image's time of day. Opaque landscape 3:2, no text."
+    },
+    {
+      "id": "Z4",
+      "kind": "mid",
+      "path": "D:/Cluade projects/games/Glue/assets/backgrounds/world_01/v2/source/w01_v2_mid_canyon.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" — style reference only (bright hand-painted cartoon game art, grey-brown stone ruins with thick green moss, lush rounded trees, thin waterfalls, turquoise water, warm light from the upper left). Attached image 2: the approved far background of THIS zone — match its colors and light. Do NOT copy the sheet's layout, text, UI or characters.\n\nCreate a MIDDLE-DISTANCE parallax layer for a 2D side-scrolling co-op platformer. TRANSPARENT BACKGROUND PNG. Landscape 3:2. Strict side view. No characters, animals, text, logo, UI, frame or watermark. No crates, doors, levers, buttons, flags, hooks, keys, no ropes or chains across the image.\nThe highest point of the scenery is below the middle of the image; the upper half is completely empty and transparent. The band is clearly in the middle distance: slightly hazy, lighter and bluer than a foreground, medium detail. The tops are irregular and broken, never flat walkable ledges. The bottom fades into soft white mist instead of a hard ground line. Neutral white balance, no yellow tint. Left and right edges should continue each other for horizontal repeating; no big object cut by the edges.\n\nContent: the lower parts of quarry cliff walls: carved stone steps, square cut-outs, old wooden galleries and beams on the walls, moss and hanging ivy, a thin waterfall; the band is cooler and bluer, like it stands in canyon shade.\nPNG must have genuine alpha transparency, not a checkerboard painting. Every visible pixel including trees and mist must remain below 52% of image height. No sky or background plane.",
+      "refs": [
+        "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+        "D:/Cluade projects/games/Glue/assets/backgrounds/world_01/v2/source/w01_v2_far_canyon.png"
+      ],
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fdbc-85f8-7471-90e2-82bd74996636\\exec-9d0f24d3-8300-4d20-babd-c21dedd7e7a9.png",
+      "edit_prompt": "Use case: precise-object-edit. Image 1 is the edit target. Keep everything the same, but make the entire scenery band shorter so the highest leaf or ruin begins strictly below 53% of image height. The upper half must be completely transparent alpha=0. All scenery is in the lower 47%, with no cut-off scenery at top. Keep landscape 3:2, actual alpha transparency."
+    },
+    {
+      "id": "L13",
+      "kind": "landmark",
+      "path": "D:/Cluade projects/games/Glue/assets/backgrounds/world_01/v2/source/w01_v2_lm13_lift_tower.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" — style reference only (bright hand-painted cartoon game art, grey-brown stone ruins with thick green moss, lush rounded trees, thin waterfalls, turquoise water, warm light from the upper left). Attached image 2: the approved far background of the same zone — match its colors and light. Do NOT copy the sheet's layout, text, UI or characters.\n\nCreate ONE isolated landmark object for the background of a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, with empty transparent space around it. The object stands in the middle distance: slightly hazy and softer than a foreground, medium detail, no hard black outlines. Its base fades into soft white mist. No characters, text, logo, UI, crates, doors with dark openings, flags, hooks, keys, ropes or chains hanging in front. Neutral white balance, no yellow tint.\nObject:\n\na tall ancient stone lifting tower on a quarry cliff edge with a big wooden wheel on top and a wooden cage platform hanging inside the frame (no ropes in front), moss on the stones. Portrait 2:3.\nPNG with genuine alpha transparency; no checkerboard painted into the pixels. All empty openings through arches are transparent, no dark doorways.",
+      "refs": [
+        "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+        "D:/Cluade projects/games/Glue/assets/backgrounds/world_01/v2/source/w01_v2_far_canyon.png"
+      ],
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fdbc-85f8-7471-90e2-82bd74996636\\exec-0f1dfb70-83e9-4f72-b7c1-2e419e77a00f.png",
+      "edit_prompt": null
+    },
+    {
+      "id": "L14",
+      "kind": "landmark",
+      "path": "D:/Cluade projects/games/Glue/assets/backgrounds/world_01/v2/source/w01_v2_lm14_quarry_arch.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" — style reference only (bright hand-painted cartoon game art, grey-brown stone ruins with thick green moss, lush rounded trees, thin waterfalls, turquoise water, warm light from the upper left). Attached image 2: the approved far background of the same zone — match its colors and light. Do NOT copy the sheet's layout, text, UI or characters.\n\nCreate ONE isolated landmark object for the background of a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, with empty transparent space around it. The object stands in the middle distance: slightly hazy and softer than a foreground, medium detail, no hard black outlines. Its base fades into soft white mist. No characters, text, logo, UI, crates, doors with dark openings, flags, hooks, keys, ropes or chains hanging in front. Neutral white balance, no yellow tint.\nObject:\n\na great broken stone archway spanning a narrow quarry gorge, half of the arch fallen, a ruined stone gallery on top with small trees, a thin waterfall falling through the gap. Landscape 3:2.\nPNG with genuine alpha transparency; no checkerboard painted into the pixels. All empty openings through arches are transparent, no dark doorways.",
+      "refs": [
+        "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+        "D:/Cluade projects/games/Glue/assets/backgrounds/world_01/v2/source/w01_v2_far_canyon.png"
+      ],
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fdbc-85f8-7471-90e2-82bd74996636\\exec-533a620e-ea83-4b95-8210-b5391143f3af.png",
+      "edit_prompt": "Use case: precise-object-edit. Image 1 is the edit target. Keep everything the same, but remove the entire right half of the central large arch, leaving a visibly broken half-arch projecting from the left cliff and a large open transparent gap to the right cliff. The narrow waterfall falls through this broken arch gap. Keep the ruined gallery and little trees, the painterly style and true transparent background."
+    },
+    {
+      "id": "Z8",
+      "kind": "far",
+      "path": "D:/Cluade projects/games/Glue/assets/backgrounds/world_01/v2/source/w01_v2_far_shrine.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" (world \"Forgotten Bridges\"). Use it ONLY as a style reference: bright, cheerful hand-painted cartoon game art; saturated sky with big soft clouds; ancient grey-brown stone ruins with thick green moss on the top edges; lush rounded trees; many thin waterfalls; turquoise water; warm sunlight from the upper left; soft shading, clean readable shapes. Attached image 2: the approved far background of the same world — same palette, same level of detail, same painting style. Do NOT copy the sheet's layout, text, logo, UI panels, frames or characters.\n\nCreate a FAR BACKGROUND parallax layer for a 2D side-scrolling co-op platformer. Landscape 3:2. Strict side view, level horizon, no perspective floor, no isometric view. No characters, animals or people. No text, letters, logo, UI, frame or watermark. Nothing that looks interactive or walkable: no crates, doors, levers, buttons, flags, hooks, keys, no ropes or chains across the image, no flat platforms in front. Everything is far away and small in scale. Gentle atmospheric haze; colors a bit softer and less contrasty than a foreground, so small bright red, blue, yellow and green characters stay readable in front of it. Neutral white balance, no yellow or sepia tint.\nThe band between 40% and 80% of the height is only soft haze and distant silhouettes — no waterfalls, islands or bright details there; put the details near the horizon line and in the bottom mist. The bottom edge is mist or water depth, not ground. No large object touches the left or right edge, so the image can repeat horizontally.\n\nScene: EARLY EVENING in the shade of tall cliffs. A quiet ancient shrine of the bridge builders: ruined stone arches and colonnades, a small domed chapel, old stone lanterns without fire, tall cypress-like trees, ivy everywhere, a few soft fireflies, a pale moon in a light blue-violet sky. Cool soft light, gentle and mysterious but bright and friendly, NOT scary, NOT dark.\nComposition: top 40% calm evening sky with a few pink clouds; the shrine ruins as soft hazy silhouettes near the horizon; the lower part is pale blue mist.\nPriority composition: in the 40–80% height band render ONLY very faint blue-grey silhouettes under dense soft haze, no crisp waterfall streaks, bright highlights or detailed islands. Recognizable scenery details stay near the upper horizon (30–40%) or very low (82–92%), dissolved in mist. Background, not a foreground scene.",
+      "refs": [
+        "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+        "D:/Cluade projects/games/Glue/assets/backgrounds/world_01/v2/source/w01_v2_far_valley.png"
+      ],
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fdbc-85f8-7471-90e2-82bd74996636\\exec-b0253caf-fe00-42df-863b-5225839ca6b5.png",
+      "edit_prompt": null
+    },
+    {
+      "id": "Z9",
+      "kind": "mid",
+      "path": "D:/Cluade projects/games/Glue/assets/backgrounds/world_01/v2/source/w01_v2_mid_shrine.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" — style reference only (bright hand-painted cartoon game art, grey-brown stone ruins with thick green moss, lush rounded trees, thin waterfalls, turquoise water, warm light from the upper left). Attached image 2: the approved far background of THIS zone — match its colors and light. Do NOT copy the sheet's layout, text, UI or characters.\n\nCreate a MIDDLE-DISTANCE parallax layer for a 2D side-scrolling co-op platformer. TRANSPARENT BACKGROUND PNG. Landscape 3:2. Strict side view. No characters, animals, text, logo, UI, frame or watermark. No crates, doors, levers, buttons, flags, hooks, keys, no ropes or chains across the image.\nThe highest point of the scenery is below the middle of the image; the upper half is completely empty and transparent. The band is clearly in the middle distance: slightly hazy, lighter and bluer than a foreground, medium detail. The tops are irregular and broken, never flat walkable ledges. The bottom fades into soft white mist instead of a hard ground line. Neutral white balance, no yellow tint. Left and right edges should continue each other for horizontal repeating; no big object cut by the edges.\n\nContent: the lower parts of a ruined shrine: broken colonnades and arches, stone lanterns without fire, cypress-like trees, thick ivy, a few soft fireflies; cool evening light, friendly, not scary.\nPNG must have genuine alpha transparency, not a checkerboard painting. Every visible pixel including trees and mist must remain below 52% of image height. No sky or background plane.",
+      "refs": [
+        "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+        "D:/Cluade projects/games/Glue/assets/backgrounds/world_01/v2/source/w01_v2_far_shrine.png"
+      ],
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fdbc-85f8-7471-90e2-82bd74996636\\exec-3da7c99d-047e-4d42-87e1-5376acffde91.png",
+      "edit_prompt": "Use case: precise-object-edit. Image 1 is the edit target. Keep everything the same, but lower the whole scenery band so the highest cypress, stone or leaf starts at 55% of image height. The upper half must be entirely transparent, alpha=0. Preserve landscape 3:2, cool colors and genuine alpha."
+    },
+    {
+      "id": "L15",
+      "kind": "landmark",
+      "path": "D:/Cluade projects/games/Glue/assets/backgrounds/world_01/v2/source/w01_v2_lm15_bell_crypt.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" — style reference only (bright hand-painted cartoon game art, grey-brown stone ruins with thick green moss, lush rounded trees, thin waterfalls, turquoise water, warm light from the upper left). Attached image 2: the approved far background of the same zone — match its colors and light. Do NOT copy the sheet's layout, text, UI or characters.\n\nCreate ONE isolated landmark object for the background of a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, with empty transparent space around it. The object stands in the middle distance: slightly hazy and softer than a foreground, medium detail, no hard black outlines. Its base fades into soft white mist. No characters, text, logo, UI, crates, doors with dark openings, flags, hooks, keys, ropes or chains hanging in front. Neutral white balance, no yellow tint.\nObject:\n\na small ancient stone crypt-chapel with a tall arched bell gable on top holding an old bronze bell, ivy and moss all over, two cypress-like trees beside it, cool evening light, cute and mysterious, NOT scary. Portrait 2:3.\nPNG with genuine alpha transparency; no checkerboard painted into the pixels. All empty openings through arches are transparent, no dark doorways.",
+      "refs": [
+        "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+        "D:/Cluade projects/games/Glue/assets/backgrounds/world_01/v2/source/w01_v2_far_shrine.png"
+      ],
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fdbc-85f8-7471-90e2-82bd74996636\\exec-665f61ad-3d91-465b-b2d9-01781766dd98.png",
+      "edit_prompt": null
+    },
+    {
+      "id": "L18",
+      "kind": "landmark",
+      "path": "D:/Cluade projects/games/Glue/assets/backgrounds/world_01/v2/source/w01_v2_lm18_twin_towers.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" — style reference only (bright hand-painted cartoon game art, grey-brown stone ruins with thick green moss, lush rounded trees, thin waterfalls, turquoise water, warm light from the upper left). Attached image 2: the approved far background of the same zone — match its colors and light. Do NOT copy the sheet's layout, text, UI or characters.\n\nCreate ONE isolated landmark object for the background of a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, with empty transparent space around it. The object stands in the middle distance: slightly hazy and softer than a foreground, medium detail, no hard black outlines. Its base fades into soft white mist. No characters, text, logo, UI, crates, doors with dark openings, flags, hooks, keys, ropes or chains hanging in front. Neutral white balance, no yellow tint.\nObject:\n\ntwo identical slender old stone towers standing far apart, each with an unlit stone lantern on top, the remains of a broken stone bridge between them, ivy and small trees, cool evening light, friendly. Landscape 3:2.\nPNG with genuine alpha transparency; no checkerboard painted into the pixels. All empty openings through arches are transparent, no dark doorways.",
+      "refs": [
+        "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+        "D:/Cluade projects/games/Glue/assets/backgrounds/world_01/v2/source/w01_v2_far_shrine.png"
+      ],
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fdbc-85f8-7471-90e2-82bd74996636\\exec-1fc69466-0c10-43ff-91c9-267037bf3d88.png",
+      "edit_prompt": null
+    },
+    {
+      "id": "Z5",
+      "kind": "far",
+      "path": "D:/Cluade projects/games/Glue/assets/backgrounds/world_01/v2/source/w01_v2_far_viaduct.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" (world \"Forgotten Bridges\"). Use it ONLY as a style reference: bright, cheerful hand-painted cartoon game art; saturated sky with big soft clouds; ancient grey-brown stone ruins with thick green moss on the top edges; lush rounded trees; many thin waterfalls; turquoise water; warm sunlight from the upper left; soft shading, clean readable shapes. Attached image 2: the approved far background of the same world — same palette, same level of detail, same painting style. Do NOT copy the sheet's layout, text, logo, UI panels, frames or characters.\n\nCreate a FAR BACKGROUND parallax layer for a 2D side-scrolling co-op platformer. Landscape 3:2. Strict side view, level horizon, no perspective floor, no isometric view. No characters, animals or people. No text, letters, logo, UI, frame or watermark. Nothing that looks interactive or walkable: no crates, doors, levers, buttons, flags, hooks, keys, no ropes or chains across the image, no flat platforms in front. Everything is far away and small in scale. Gentle atmospheric haze; colors a bit softer and less contrasty than a foreground, so small bright red, blue, yellow and green characters stay readable in front of it. Neutral white balance, no yellow or sepia tint.\nThe band between 40% and 80% of the height is only soft haze and distant silhouettes — no waterfalls, islands or bright details there; put the details near the horizon line and in the bottom mist. The bottom edge is mist or water depth, not ground. No large object touches the left or right edge, so the image can repeat horizontally.\n\nScene: GOLDEN HOUR. A huge broken ancient stone viaduct with many tall arches crossing a vast misty valley; several spans have collapsed; waterfalls pour from the broken ends; distant mountains; warm low sunlight from the left, long soft shadows, the valley still clear and readable.\nComposition: top 40% warm sky with golden clouds; the viaduct as a long silhouette across the upper middle; the lower part is golden mist.\nPriority composition: in the 40–80% height band render ONLY very faint blue-grey silhouettes under dense soft haze, no crisp waterfall streaks, bright highlights or detailed islands. Recognizable scenery details stay near the upper horizon (30–40%) or very low (82–92%), dissolved in mist. Background, not a foreground scene.",
+      "refs": [
+        "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+        "D:/Cluade projects/games/Glue/assets/backgrounds/world_01/v2/source/w01_v2_far_valley.png"
+      ],
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fdbc-85f8-7471-90e2-82bd74996636\\exec-032c9306-4544-4070-b551-10847ef8938a.png",
+      "edit_prompt": "Use case: precise-object-edit. Image 1 is the edit target. Keep everything the same, including sky, palette, mountains and the exact arrangement of ruins, but veil the entire band between 40% and 80% of image height in MUCH stronger soft atmospheric mist. Within this band, all stonework, trees and waterfall streaks must become very faint low-contrast silhouettes; no crisp white waterfall strokes, dark tree blobs, or detailed islands. The characteristic upper silhouette of the canyon/viaduct should remain legible near the horizon, then dissolve into mist below. Preserve the image's time of day. Opaque landscape 3:2, no text."
+    },
+    {
+      "id": "Z6",
+      "kind": "mid",
+      "path": "D:/Cluade projects/games/Glue/assets/backgrounds/world_01/v2/source/w01_v2_mid_viaduct.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" — style reference only (bright hand-painted cartoon game art, grey-brown stone ruins with thick green moss, lush rounded trees, thin waterfalls, turquoise water, warm light from the upper left). Attached image 2: the approved far background of THIS zone — match its colors and light. Do NOT copy the sheet's layout, text, UI or characters.\n\nCreate a MIDDLE-DISTANCE parallax layer for a 2D side-scrolling co-op platformer. TRANSPARENT BACKGROUND PNG. Landscape 3:2. Strict side view. No characters, animals, text, logo, UI, frame or watermark. No crates, doors, levers, buttons, flags, hooks, keys, no ropes or chains across the image.\nThe highest point of the scenery is below the middle of the image; the upper half is completely empty and transparent. The band is clearly in the middle distance: slightly hazy, lighter and bluer than a foreground, medium detail. The tops are irregular and broken, never flat walkable ledges. The bottom fades into soft white mist instead of a hard ground line. Neutral white balance, no yellow tint. Left and right edges should continue each other for horizontal repeating; no big object cut by the edges.\n\nContent: massive bases of the viaduct piers and the lower parts of tall stone arches with sky visible through them, broken arch stones, moss and ivy, small trees growing on the ruins, golden-hour light.\nPNG must have genuine alpha transparency, not a checkerboard painting. Every visible pixel including trees and mist must remain below 52% of image height. No sky or background plane.",
+      "refs": [
+        "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+        "D:/Cluade projects/games/Glue/assets/backgrounds/world_01/v2/source/w01_v2_far_viaduct.png"
+      ],
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fdbc-85f8-7471-90e2-82bd74996636\\exec-9d73cc32-6164-45fb-b0c5-21a7bd7cdc10.png",
+      "edit_prompt": "Use case: precise-object-edit. Image 1 is the edit target. Keep everything the same, but lower and shrink the entire scenery band so its highest leaf or stone begins strictly below 54% of image height. Upper 52% must be entirely transparent alpha=0. Keep actual PNG alpha and landscape 3:2."
+    },
+    {
+      "id": "Z7",
+      "kind": "far",
+      "path": "D:/Cluade projects/games/Glue/assets/backgrounds/world_01/v2/source/w01_v2_far_viaduct_sunset.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" (world \"Forgotten Bridges\"). Use it ONLY as a style reference: bright, cheerful hand-painted cartoon game art; saturated sky with big soft clouds; ancient grey-brown stone ruins with thick green moss on the top edges; lush rounded trees; many thin waterfalls; turquoise water; warm sunlight from the upper left; soft shading, clean readable shapes. Attached image 2: the approved far background of the same world — same palette, same level of detail, same painting style. Do NOT copy the sheet's layout, text, logo, UI panels, frames or characters.\n\nCreate a FAR BACKGROUND parallax layer for a 2D side-scrolling co-op platformer. Landscape 3:2. Strict side view, level horizon, no perspective floor, no isometric view. No characters, animals or people. No text, letters, logo, UI, frame or watermark. Nothing that looks interactive or walkable: no crates, doors, levers, buttons, flags, hooks, keys, no ropes or chains across the image, no flat platforms in front. Everything is far away and small in scale. Gentle atmospheric haze; colors a bit softer and less contrasty than a foreground, so small bright red, blue, yellow and green characters stay readable in front of it. Neutral white balance, no yellow or sepia tint.\nThe band between 40% and 80% of the height is only soft haze and distant silhouettes — no waterfalls, islands or bright details there; put the details near the horizon line and in the bottom mist. The bottom edge is mist or water depth, not ground. No large object touches the left or right edge, so the image can repeat horizontally.\n\nScene: SUNSET, the same broken stone viaduct as image 3 (attach the approved Z5 as image 3): orange and pink sky, the sun low on the left behind the viaduct, the valley in soft purple-blue haze — not dark, the scene stays friendly and readable.\nComposition: same as image 3.\nUse image 3 as the exact composition and structure to preserve. Keep everything the same, changing ONLY lighting and sky colors to sunset. Preserve all arch positions, collapsed spans, mountain silhouettes and mist bands.",
+      "refs": [
+        "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+        "D:/Cluade projects/games/Glue/assets/backgrounds/world_01/v2/source/w01_v2_far_valley.png",
+        "D:/Cluade projects/games/Glue/assets/backgrounds/world_01/v2/source/w01_v2_far_viaduct.png"
+      ],
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fdbc-85f8-7471-90e2-82bd74996636\\exec-f35151fb-fc47-40bd-9cc0-0dd2a9694a5a.png",
+      "edit_prompt": "Use case: precise-object-edit. Image 1 is the edit target. Keep everything the same, including sky, palette, mountains and the exact arrangement of ruins, but veil the entire band between 40% and 80% of image height in MUCH stronger soft atmospheric mist. Within this band, all stonework, trees and waterfall streaks must become very faint low-contrast silhouettes; no crisp white waterfall strokes, dark tree blobs, or detailed islands. The characteristic upper silhouette of the canyon/viaduct should remain legible near the horizon, then dissolve into mist below. Preserve the image's time of day. Opaque landscape 3:2, no text."
+    },
+    {
+      "id": "L16",
+      "kind": "landmark",
+      "path": "D:/Cluade projects/games/Glue/assets/backgrounds/world_01/v2/source/w01_v2_lm16_cargo_pier.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" — style reference only (bright hand-painted cartoon game art, grey-brown stone ruins with thick green moss, lush rounded trees, thin waterfalls, turquoise water, warm light from the upper left). Attached image 2: the approved far background of the same zone — match its colors and light. Do NOT copy the sheet's layout, text, UI or characters.\n\nCreate ONE isolated landmark object for the background of a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, with empty transparent space around it. The object stands in the middle distance: slightly hazy and softer than a foreground, medium detail, no hard black outlines. Its base fades into soft white mist. No characters, text, logo, UI, crates, doors with dark openings, flags, hooks, keys, ropes or chains hanging in front. Neutral white balance, no yellow tint.\nObject:\n\na stone river pier with the stump of a broken bridge span and old wooden cargo pulleys and beams on top, water flowing around its base. Landscape 3:2.\nPNG with genuine alpha transparency; no checkerboard painted into the pixels. All empty openings through arches are transparent, no dark doorways.",
+      "refs": [
+        "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+        "D:/Cluade projects/games/Glue/assets/backgrounds/world_01/v2/source/w01_v2_far_river.png"
+      ],
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fdbc-85f8-7471-90e2-82bd74996636\\exec-0863af70-b22f-43e2-9c59-7cbb65236296.png",
+      "edit_prompt": "Use case: precise-object-edit. Image 1 is the edit target. Keep everything the same, but remove every visible rope and cable from this cargo pier, including all loops over the wooden beam and all hanging vertical lines. Keep the bare antique pulley wheels, timber beams, broken bridge, masonry, water and foliage. Genuine transparent PNG, same composition and colors."
+    },
+    {
+      "id": "L17",
+      "kind": "landmark",
+      "path": "D:/Cluade projects/games/Glue/assets/backgrounds/world_01/v2/source/w01_v2_lm17_twin_gates.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" — style reference only (bright hand-painted cartoon game art, grey-brown stone ruins with thick green moss, lush rounded trees, thin waterfalls, turquoise water, warm light from the upper left). Attached image 2: the approved far background of the same zone — match its colors and light. Do NOT copy the sheet's layout, text, UI or characters.\n\nCreate ONE isolated landmark object for the background of a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, with empty transparent space around it. The object stands in the middle distance: slightly hazy and softer than a foreground, medium detail, no hard black outlines. Its base fades into soft white mist. No characters, text, logo, UI, crates, doors with dark openings, flags, hooks, keys, ropes or chains hanging in front. Neutral white balance, no yellow tint.\nObject:\n\nan old gatehouse on the viaduct with two tall arched gateways side by side, one blocked with fallen stones, moss and ivy, golden-hour light. Landscape 3:2.\nPNG with genuine alpha transparency; no checkerboard painted into the pixels. All empty openings through arches are transparent, no dark doorways.",
+      "refs": [
+        "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+        "D:/Cluade projects/games/Glue/assets/backgrounds/world_01/v2/source/w01_v2_far_viaduct.png"
+      ],
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fdbc-85f8-7471-90e2-82bd74996636\\exec-32dfd7ac-c666-4742-b627-e0099360ddb6.png",
+      "edit_prompt": null
+    },
+    {
+      "id": "L19",
+      "kind": "landmark",
+      "path": "D:/Cluade projects/games/Glue/assets/backgrounds/world_01/v2/source/w01_v2_lm19_drawbridge.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" — style reference only (bright hand-painted cartoon game art, grey-brown stone ruins with thick green moss, lush rounded trees, thin waterfalls, turquoise water, warm light from the upper left). Attached image 2: the approved far background of the same zone — match its colors and light. Do NOT copy the sheet's layout, text, UI or characters.\n\nCreate ONE isolated landmark object for the background of a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, with empty transparent space around it. The object stands in the middle distance: slightly hazy and softer than a foreground, medium detail, no hard black outlines. Its base fades into soft white mist. No characters, text, logo, UI, crates, doors with dark openings, flags, hooks, keys, ropes or chains hanging in front. Neutral white balance, no yellow tint.\nObject:\n\nan old drawbridge tower on a river: a square stone tower with a wooden bridge span raised up vertically beside it, the other half of the bridge missing, golden-hour light. Landscape 3:2.\nPNG with genuine alpha transparency; no checkerboard painted into the pixels. All empty openings through arches are transparent, no dark doorways.",
+      "refs": [
+        "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+        "D:/Cluade projects/games/Glue/assets/backgrounds/world_01/v2/source/w01_v2_far_viaduct.png"
+      ],
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fdbc-85f8-7471-90e2-82bd74996636\\exec-78de5004-d7b1-42b6-a534-b7c1321f0b6b.png",
+      "edit_prompt": null
+    },
+    {
+      "id": "L20",
+      "kind": "landmark",
+      "path": "D:/Cluade projects/games/Glue/assets/backgrounds/world_01/v2/source/w01_v2_lm20_viaduct_keep.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" — style reference only (bright hand-painted cartoon game art, grey-brown stone ruins with thick green moss, lush rounded trees, thin waterfalls, turquoise water, warm light from the upper left). Attached image 2: the approved far background of the same zone — match its colors and light. Do NOT copy the sheet's layout, text, UI or characters.\n\nCreate ONE isolated landmark object for the background of a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, with empty transparent space around it. The object stands in the middle distance: slightly hazy and softer than a foreground, medium detail, no hard black outlines. Its base fades into soft white mist. No characters, text, logo, UI, crates, doors with dark openings, flags, hooks, keys, ropes or chains hanging in front. Neutral white balance, no yellow tint.\nObject:\n\nthe tall central keep of the great broken viaduct, arches on both sides breaking off into the air, a waterfall from the top, warm sunset light from the left. Portrait 2:3.\nPNG with genuine alpha transparency; no checkerboard painted into the pixels. All empty openings through arches are transparent, no dark doorways.",
+      "refs": [
+        "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+        "D:/Cluade projects/games/Glue/assets/backgrounds/world_01/v2/source/w01_v2_far_viaduct_sunset.png"
+      ],
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fdbc-85f8-7471-90e2-82bd74996636\\exec-2b499912-6c26-4f37-b912-50ef5f1c129a.png",
+      "edit_prompt": null
+    },
+    {
+      "id": "T5",
+      "kind": "tile",
+      "path": "D:/Cluade projects/games/Glue/assets/tiles/world_01/source/w01_canyon_fill.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" — style reference only. Attached image 2: the approved far background of this zone — match its palette. Attached image 3: the approved stone masonry texture of the same game — match its painting style, stone scale and level of detail. Do NOT copy layouts, text, UI or characters.\n\nCreate a SEAMLESS TILEABLE TEXTURE, square 1:1, tileable on all four sides. Strict front orthographic view, no perspective. Hand-painted cartoon style, soft shading, light from the upper left. Medium-dark values and low contrast, so small bright red, blue, yellow and green characters read clearly in front of it. No moss, no grass, no plants, no holes, no doors, no objects, no text. Even lighting across the whole tile — no vignette, no gradient from one side to the other. Neutral white balance, no yellow tint.\nSurface:\n\nquarry rock wall: horizontal layers of pale grey-beige sedimentary stone of different thickness, flat chisel marks and square cut steps here and there, thin cracks; cooler and lighter than the masonry of image 3.",
+      "refs": [
+        "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+        "D:/Cluade projects/games/Glue/assets/backgrounds/world_01/v2/source/w01_v2_far_canyon.png",
+        "D:/Cluade projects/games/Glue/assets/tiles/world_01/source/w01_stone_fill.png"
+      ],
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fdbc-85f8-7471-90e2-82bd74996636\\exec-19a23146-a50e-49b9-a1f1-a5690a1a17ad.png",
+      "edit_prompt": "Use case: precise-object-edit. Image 1 is the edit target. Keep the same hand-painted style, grey-beige palette, stone scale, even lighting and square texture format, but change the surface structure from stacked masonry bricks to ONE continuous natural sedimentary quarry rock face: long irregular horizontal strata of varying thickness running across the tile, shallow flat chisel scars, occasional square quarry cut notches, fine cracks. No separate rounded bricks, no mortar grid, no staggered brick joints. Cool medium-dark grey-beige rock, subdued contrast. Seamless tileable on all four edges. Opaque square 1:1."
+    },
+    {
+      "id": "T6",
+      "kind": "tile",
+      "path": "D:/Cluade projects/games/Glue/assets/tiles/world_01/source/w01_canyon_deep.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" — style reference only. Attached image 2: the approved far background of this zone — match its palette. Attached image 3: the approved stone masonry texture of the same game — match its painting style, stone scale and level of detail. Do NOT copy layouts, text, UI or characters.\n\nCreate a SEAMLESS TILEABLE TEXTURE, square 1:1, tileable on all four sides. Strict front orthographic view, no perspective. Hand-painted cartoon style, soft shading, light from the upper left. Medium-dark values and low contrast, so small bright red, blue, yellow and green characters read clearly in front of it. No moss, no grass, no plants, no holes, no doors, no objects, no text. Even lighting across the whole tile — no vignette, no gradient from one side to the other. Neutral white balance, no yellow tint.\nSurface:\n\ndeep canyon rock: large rounded dark blue-grey boulders and rock masses with deep shadowed cracks, calmer and darker than T5.",
+      "refs": [
+        "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+        "D:/Cluade projects/games/Glue/assets/backgrounds/world_01/v2/source/w01_v2_far_canyon.png",
+        "D:/Cluade projects/games/Glue/assets/tiles/world_01/source/w01_stone_fill.png"
+      ],
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fdbc-85f8-7471-90e2-82bd74996636\\exec-efb009e9-288d-49fc-a894-2b7a40383283.png",
+      "edit_prompt": null
+    },
+    {
+      "id": "T7",
+      "kind": "tile",
+      "path": "D:/Cluade projects/games/Glue/assets/tiles/world_01/source/w01_viaduct_fill.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" — style reference only. Attached image 2: the approved far background of this zone — match its palette. Attached image 3: the approved stone masonry texture of the same game — match its painting style, stone scale and level of detail. Do NOT copy layouts, text, UI or characters.\n\nCreate a SEAMLESS TILEABLE TEXTURE, square 1:1, tileable on all four sides. Strict front orthographic view, no perspective. Hand-painted cartoon style, soft shading, light from the upper left. Medium-dark values and low contrast, so small bright red, blue, yellow and green characters read clearly in front of it. No moss, no grass, no plants, no holes, no doors, no objects, no text. Even lighting across the whole tile — no vignette, no gradient from one side to the other. Neutral white balance, no yellow tint.\nSurface:\n\nancient viaduct masonry: large regular rectangular dressed stone blocks in neat rows with thin joints, a few chipped corners, warm golden-grey stone lit by low evening light.",
+      "refs": [
+        "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+        "D:/Cluade projects/games/Glue/assets/backgrounds/world_01/v2/source/w01_v2_far_viaduct.png",
+        "D:/Cluade projects/games/Glue/assets/tiles/world_01/source/w01_stone_fill.png"
+      ],
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fdbc-85f8-7471-90e2-82bd74996636\\exec-e852b3ba-12c1-4f68-af33-dacb8d38550e.png",
+      "edit_prompt": null
+    },
+    {
+      "id": "T8",
+      "kind": "tile",
+      "path": "D:/Cluade projects/games/Glue/assets/tiles/world_01/source/w01_river_fill.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" — style reference only. Attached image 2: the approved far background of this zone — match its palette. Attached image 3: the approved stone masonry texture of the same game — match its painting style, stone scale and level of detail. Do NOT copy layouts, text, UI or characters.\n\nCreate a SEAMLESS TILEABLE TEXTURE, square 1:1, tileable on all four sides. Strict front orthographic view, no perspective. Hand-painted cartoon style, soft shading, light from the upper left. Medium-dark values and low contrast, so small bright red, blue, yellow and green characters read clearly in front of it. No moss, no grass, no plants, no holes, no doors, no objects, no text. Even lighting across the whole tile — no vignette, no gradient from one side to the other. Neutral white balance, no yellow tint.\nSurface:\n\nriverside mill masonry: rounded medium stones in uneven rows, slightly lighter and cooler than image 3, with faint darker water stains running down in a few places.",
+      "refs": [
+        "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+        "D:/Cluade projects/games/Glue/assets/backgrounds/world_01/v2/source/w01_v2_far_river.png",
+        "D:/Cluade projects/games/Glue/assets/tiles/world_01/source/w01_stone_fill.png"
+      ],
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fdbc-85f8-7471-90e2-82bd74996636\\exec-7b67fd11-138d-415e-a3d1-9bbd22f1e16d.png",
+      "edit_prompt": null
+    },
+    {
+      "id": "T9",
+      "kind": "tile",
+      "path": "D:/Cluade projects/games/Glue/assets/tiles/world_01/source/w01_shrine_fill.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" — style reference only. Attached image 2: the approved far background of this zone — match its palette. Attached image 3: the approved stone masonry texture of the same game — match its painting style, stone scale and level of detail. Do NOT copy layouts, text, UI or characters.\n\nCreate a SEAMLESS TILEABLE TEXTURE, square 1:1, tileable on all four sides. Strict front orthographic view, no perspective. Hand-painted cartoon style, soft shading, light from the upper left. Medium-dark values and low contrast, so small bright red, blue, yellow and green characters read clearly in front of it. No moss, no grass, no plants, no holes, no doors, no objects, no text. Even lighting across the whole tile — no vignette, no gradient from one side to the other. Neutral white balance, no yellow tint.\nSurface:\n\nold shrine masonry: large flat rectangular and square stone slabs, cool blue-grey stone, softly worn edges, a few faint carved grooves (no symbols, no letters, no faces).",
+      "refs": [
+        "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+        "D:/Cluade projects/games/Glue/assets/backgrounds/world_01/v2/source/w01_v2_far_shrine.png",
+        "D:/Cluade projects/games/Glue/assets/tiles/world_01/source/w01_stone_fill.png"
+      ],
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fdbc-85f8-7471-90e2-82bd74996636\\exec-f3756b1f-0b14-42ce-98ab-90c38542bd0b.png",
+      "edit_prompt": null
+    },
+    {
+      "id": "D1",
+      "kind": "decal",
+      "path": "D:/Cluade projects/games/Glue/assets/decals/world_01/source/w01_decal_grass.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" — style reference only. Attached image 2: the approved moss texture of the same game — match its colors and painting style exactly. Do NOT copy layouts, text, UI or characters.\n\nCreate ONE isolated decorative plant sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no objects.\nPlant:\na wide low tuft of lush rounded grass blades with two or three tiny white and yellow flowers, flat bottom edge (it stands on a ledge). Landscape 2:1.\nGenuine alpha transparency, not a checkerboard pattern. Olive-green and yellow-green foliage exactly like the moss reference; preserve hand-painted soft shapes. One single plant sprite, no sheet.",
+      "refs": [
+        "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+        "D:/Cluade projects/games/Glue/assets/tiles/world_01/source/w01_moss_top.png"
+      ],
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fdbc-85f8-7471-90e2-82bd74996636\\exec-dc7ef2d8-8ddd-4d9f-a20e-0a9c5dea45a8.png",
+      "edit_prompt": null
+    },
+    {
+      "id": "D1_2",
+      "kind": "decal",
+      "path": "D:/Cluade projects/games/Glue/assets/decals/world_01/source/w01_decal_grass_2.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" — style reference only. Attached image 2: the approved moss texture of the same game — match its colors and painting style exactly. Do NOT copy layouts, text, UI or characters.\n\nCreate ONE isolated decorative plant sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no objects.\nPlant:\na wide low tuft of lush rounded grass blades with two or three tiny white and yellow flowers, flat bottom edge (it stands on a ledge). Landscape 2:1.\nGenuine alpha transparency, not a checkerboard pattern. Olive-green and yellow-green foliage exactly like the moss reference; preserve hand-painted soft shapes. One single plant sprite, no sheet.",
+      "refs": [
+        "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+        "D:/Cluade projects/games/Glue/assets/tiles/world_01/source/w01_moss_top.png"
+      ],
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fdbc-85f8-7471-90e2-82bd74996636\\exec-aadfc312-5ed3-41f1-a6e5-2587122678df.png",
+      "edit_prompt": null
+    },
+    {
+      "id": "D2",
+      "kind": "decal",
+      "path": "D:/Cluade projects/games/Glue/assets/decals/world_01/source/w01_decal_ivy_hang.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" — style reference only. Attached image 2: the approved moss texture of the same game — match its colors and painting style exactly. Do NOT copy layouts, text, UI or characters.\n\nCreate ONE isolated decorative plant sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no objects.\nPlant:\na long strand of hanging ivy with rounded leaves, attached at the top edge and hanging straight down, thinning towards the bottom. Portrait 1:3.\nGenuine alpha transparency, not a checkerboard pattern. Olive-green and yellow-green foliage exactly like the moss reference; preserve hand-painted soft shapes. One single plant sprite, no sheet.",
+      "refs": [
+        "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+        "D:/Cluade projects/games/Glue/assets/tiles/world_01/source/w01_moss_top.png"
+      ],
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fdbc-85f8-7471-90e2-82bd74996636\\exec-027af27e-ac8d-4d58-b3d7-3c673c0d466d.png",
+      "edit_prompt": null
+    },
+    {
+      "id": "D2_2",
+      "kind": "decal",
+      "path": "D:/Cluade projects/games/Glue/assets/decals/world_01/source/w01_decal_ivy_hang_2.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" — style reference only. Attached image 2: the approved moss texture of the same game — match its colors and painting style exactly. Do NOT copy layouts, text, UI or characters.\n\nCreate ONE isolated decorative plant sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no objects.\nPlant:\na long strand of hanging ivy with rounded leaves, attached at the top edge and hanging straight down, thinning towards the bottom. Portrait 1:3.\nGenuine alpha transparency, not a checkerboard pattern. Olive-green and yellow-green foliage exactly like the moss reference; preserve hand-painted soft shapes. One single plant sprite, no sheet.",
+      "refs": [
+        "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+        "D:/Cluade projects/games/Glue/assets/tiles/world_01/source/w01_moss_top.png"
+      ],
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fdbc-85f8-7471-90e2-82bd74996636\\exec-236f05b4-05a7-438e-8a9f-eeafd526d5fe.png",
+      "edit_prompt": null
+    },
+    {
+      "id": "D3",
+      "kind": "decal",
+      "path": "D:/Cluade projects/games/Glue/assets/decals/world_01/source/w01_decal_flowers.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" — style reference only. Attached image 2: the approved moss texture of the same game — match its colors and painting style exactly. Do NOT copy layouts, text, UI or characters.\n\nCreate ONE isolated decorative plant sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no objects.\nPlant:\na small cluster of wild flowers (pink, white, yellow) with leaves, flat bottom edge. Square 1:1.\nGenuine alpha transparency, not a checkerboard pattern. Olive-green and yellow-green foliage exactly like the moss reference; preserve hand-painted soft shapes. One single plant sprite, no sheet.",
+      "refs": [
+        "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+        "D:/Cluade projects/games/Glue/assets/tiles/world_01/source/w01_moss_top.png"
+      ],
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fdbc-85f8-7471-90e2-82bd74996636\\exec-45f8c42b-89e0-4491-ade5-94b91ef24241.png",
+      "edit_prompt": null
+    },
+    {
+      "id": "D3_2",
+      "kind": "decal",
+      "path": "D:/Cluade projects/games/Glue/assets/decals/world_01/source/w01_decal_flowers_2.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" — style reference only. Attached image 2: the approved moss texture of the same game — match its colors and painting style exactly. Do NOT copy layouts, text, UI or characters.\n\nCreate ONE isolated decorative plant sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no objects.\nPlant:\na small cluster of wild flowers (pink, white, yellow) with leaves, flat bottom edge. Square 1:1.\nGenuine alpha transparency, not a checkerboard pattern. Olive-green and yellow-green foliage exactly like the moss reference; preserve hand-painted soft shapes. One single plant sprite, no sheet.",
+      "refs": [
+        "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+        "D:/Cluade projects/games/Glue/assets/tiles/world_01/source/w01_moss_top.png"
+      ],
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fdbc-85f8-7471-90e2-82bd74996636\\exec-05ce2173-4d26-49d8-89df-e7f79d1d4059.png",
+      "edit_prompt": null
+    },
+    {
+      "id": "D4",
+      "kind": "decal",
+      "path": "D:/Cluade projects/games/Glue/assets/decals/world_01/source/w01_decal_bush.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" — style reference only. Attached image 2: the approved moss texture of the same game — match its colors and painting style exactly. Do NOT copy layouts, text, UI or characters.\n\nCreate ONE isolated decorative plant sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no objects.\nPlant:\na small round leafy bush, flat bottom edge, soft rounded shapes. Landscape 3:2.\nGenuine alpha transparency, not a checkerboard pattern. Olive-green and yellow-green foliage exactly like the moss reference; preserve hand-painted soft shapes. One single plant sprite, no sheet.",
+      "refs": [
+        "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+        "D:/Cluade projects/games/Glue/assets/tiles/world_01/source/w01_moss_top.png"
+      ],
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fdbc-85f8-7471-90e2-82bd74996636\\exec-3159351f-4f2e-4f07-be60-9cf0792dfe57.png",
+      "edit_prompt": null
+    },
+    {
+      "id": "D4_2",
+      "kind": "decal",
+      "path": "D:/Cluade projects/games/Glue/assets/decals/world_01/source/w01_decal_bush_2.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" — style reference only. Attached image 2: the approved moss texture of the same game — match its colors and painting style exactly. Do NOT copy layouts, text, UI or characters.\n\nCreate ONE isolated decorative plant sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no objects.\nPlant:\na small round leafy bush, flat bottom edge, soft rounded shapes. Landscape 3:2.\nGenuine alpha transparency, not a checkerboard pattern. Olive-green and yellow-green foliage exactly like the moss reference; preserve hand-painted soft shapes. One single plant sprite, no sheet.",
+      "refs": [
+        "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+        "D:/Cluade projects/games/Glue/assets/tiles/world_01/source/w01_moss_top.png"
+      ],
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fdbc-85f8-7471-90e2-82bd74996636\\exec-371d7d59-81fa-48a2-bd0a-809cc5e3bc5e.png",
+      "edit_prompt": null
+    },
+    {
+      "id": "D5",
+      "kind": "decal",
+      "path": "D:/Cluade projects/games/Glue/assets/decals/world_01/source/w01_decal_front_branch.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" — style reference only. Attached image 2: the approved moss texture of the same game — match its colors and painting style exactly. Do NOT copy layouts, text, UI or characters.\n\nCreate ONE isolated decorative plant sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no objects.\nPlant:\na leafy tree branch entering from the left edge of the image, big soft leaves, slightly blurred like it is very close to the camera (foreground frame). Landscape 3:2.\nGenuine alpha transparency, not a checkerboard pattern. Olive-green and yellow-green foliage exactly like the moss reference; preserve hand-painted soft shapes. One single plant sprite, no sheet.",
+      "refs": [
+        "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+        "D:/Cluade projects/games/Glue/assets/tiles/world_01/source/w01_moss_top.png"
+      ],
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fdbc-85f8-7471-90e2-82bd74996636\\exec-6cc1a27a-2705-499e-8425-2daa329d92b1.png",
+      "edit_prompt": null
+    },
+    {
+      "id": "D5_2",
+      "kind": "decal",
+      "path": "D:/Cluade projects/games/Glue/assets/decals/world_01/source/w01_decal_front_branch_2.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" — style reference only. Attached image 2: the approved moss texture of the same game — match its colors and painting style exactly. Do NOT copy layouts, text, UI or characters.\n\nCreate ONE isolated decorative plant sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no objects.\nPlant:\na leafy tree branch entering from the left edge of the image, big soft leaves, slightly blurred like it is very close to the camera (foreground frame). Landscape 3:2.\nGenuine alpha transparency, not a checkerboard pattern. Olive-green and yellow-green foliage exactly like the moss reference; preserve hand-painted soft shapes. One single plant sprite, no sheet.",
+      "refs": [
+        "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+        "D:/Cluade projects/games/Glue/assets/tiles/world_01/source/w01_moss_top.png"
+      ],
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fdbc-85f8-7471-90e2-82bd74996636\\exec-26317adf-4990-481e-a1fa-26e6a04ec724.png",
+      "edit_prompt": null
+    },
+    {
+      "id": "D6",
+      "kind": "decal",
+      "path": "D:/Cluade projects/games/Glue/assets/decals/world_01/source/w01_decal_roots.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" — style reference only. Attached image 2: the approved moss texture of the same game — match its colors and painting style exactly. Do NOT copy layouts, text, UI or characters.\n\nCreate ONE isolated decorative plant sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no objects.\nPlant:\ntangled tree roots and a few hanging moss strands hanging down from a top edge, as if under an overhang. Landscape 2:1.\nGenuine alpha transparency, not a checkerboard pattern. Olive-green and yellow-green foliage exactly like the moss reference; preserve hand-painted soft shapes. One single plant sprite, no sheet.",
+      "refs": [
+        "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+        "D:/Cluade projects/games/Glue/assets/tiles/world_01/source/w01_moss_top.png"
+      ],
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fdbc-85f8-7471-90e2-82bd74996636\\exec-bf7fbfd9-4aaf-4ad0-8fba-0e6397b912ec.png",
+      "edit_prompt": null
+    },
+    {
+      "id": "D6_2",
+      "kind": "decal",
+      "path": "D:/Cluade projects/games/Glue/assets/decals/world_01/source/w01_decal_roots_2.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" — style reference only. Attached image 2: the approved moss texture of the same game — match its colors and painting style exactly. Do NOT copy layouts, text, UI or characters.\n\nCreate ONE isolated decorative plant sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no objects.\nPlant:\ntangled tree roots and a few hanging moss strands hanging down from a top edge, as if under an overhang. Landscape 2:1.\nGenuine alpha transparency, not a checkerboard pattern. Olive-green and yellow-green foliage exactly like the moss reference; preserve hand-painted soft shapes. One single plant sprite, no sheet.",
+      "refs": [
+        "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+        "D:/Cluade projects/games/Glue/assets/tiles/world_01/source/w01_moss_top.png"
+      ],
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fdbc-85f8-7471-90e2-82bd74996636\\exec-18e71930-b0d4-47a0-8c4f-08288b5cfdd6.png",
+      "edit_prompt": null
+    },
+    {
+      "id": "M1",
+      "kind": "menu",
+      "path": "D:/Cluade projects/games/Glue/assets/backgrounds/menu/source/menu_panorama.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" (world \"Forgotten Bridges\"). Use it ONLY as a style reference: bright, cheerful hand-painted cartoon game art; saturated sky with big soft clouds; ancient grey-brown stone ruins with thick green moss on the top edges; lush rounded trees; many thin waterfalls; turquoise water; warm sunlight from the upper left; soft shading, clean readable shapes. Attached image 2: the approved far background of the same world — same palette, same level of detail, same painting style. Do NOT copy the sheet's layout, text, logo, UI panels, frames or characters.\n\nCreate a FAR BACKGROUND parallax layer for a 2D side-scrolling co-op platformer. Landscape 16:9. Strict side view, level horizon, no perspective floor, no isometric view. No characters, animals or people. No text, letters, logo, UI, frame or watermark. Nothing that looks interactive or walkable: no crates, doors, levers, buttons, flags, hooks, keys, no ropes or chains across the image, no flat platforms in front. Everything is far away and small in scale. Gentle atmospheric haze; colors a bit softer and less contrasty than a foreground, so small bright red, blue, yellow and green characters stay readable in front of it. Neutral white balance, no yellow or sepia tint.\nThe band between 40% and 80% of the height is only soft haze and distant silhouettes — no waterfalls, islands or bright details there; put the details near the horizon line and in the bottom mist. The bottom edge is mist or water depth, not ground. No large object touches the left or right edge, so the image can repeat horizontally.\nScene: a panoramic view of the entire Forgotten Bridges world: waterfall valley on the left, ancient bridge builders' town and quarry canyon in the middle, an enormous broken stone viaduct on the right at sunset. Composition: upper center is empty calm sky reserved for a title, but DO NOT draw any text. Bottom is soft mist reserved for a level selection grid, but DO NOT draw any UI. Friendly bright hand-painted cartoon panorama, environmental scenery only. One seamless painting, not a collage.",
+      "refs": [
+        "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+        "D:/Cluade projects/games/Glue/assets/backgrounds/world_01/v2/source/w01_v2_far_valley.png"
+      ],
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fdbc-85f8-7471-90e2-82bd74996636\\exec-01688509-6e7f-4a51-910c-efcb7c1f10ff.png",
+      "edit_prompt": null
+    },
+    {
+      "id": "W2",
+      "kind": "concept",
+      "path": "D:/Cluade projects/games/Glue/docs/референсы/world2_workshops.png",
+      "prompt": "Use case: stylized-concept. Create ONE concept style sheet for a new world of the 2D co-op platformer \"Hold On!\". Attached image 1 is the existing world concept sheet: match its cheerful hand-painted cartoon art, chunky stone shapes, soft shading, and strict side-view platformer genre, but use the new place, lighting and palette specified below. Do not copy the reference text, logo, UI or layout. Landscape 3:2. Compose 3–4 small distinct side-view level fragments on one polished cohesive sheet, showing platforms, background environment, themed mechanisms, and tiny simple bright red, blue, yellow and green character silhouettes only for scale. Decorative scenery has no hard black outlines; interactive mechanisms and tiny character silhouettes have dark outlines. Include an unlabeled horizontal palette swatch strip. Absolutely no text, letters, numerals, captions, logos, watermark or menu UI anywhere.\nWorld: Bridge builders' workshops: gears, bellows, winches, copper and wood, warm furnace light and steam.",
+      "refs": [
+        "D:/Cluade projects/games/Glue/docs/референсы/reference.png"
+      ],
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fdbc-85f8-7471-90e2-82bd74996636\\exec-89c8a520-0024-43d1-b2dd-547d7a42e459.png",
+      "edit_prompt": null
+    },
+    {
+      "id": "W3",
+      "kind": "concept",
+      "path": "D:/Cluade projects/games/Glue/docs/референсы/world3_guardians.png",
+      "prompt": "Use case: stylized-concept. Create ONE concept style sheet for a new world of the 2D co-op platformer \"Hold On!\". Attached image 1 is the existing world concept sheet: match its cheerful hand-painted cartoon art, chunky stone shapes, soft shading, and strict side-view platformer genre, but use the new place, lighting and palette specified below. Do not copy the reference text, logo, UI or layout. Landscape 3:2. Compose 3–4 small distinct side-view level fragments on one polished cohesive sheet, showing platforms, background environment, themed mechanisms, and tiny simple bright red, blue, yellow and green character silhouettes only for scale. Decorative scenery has no hard black outlines; interactive mechanisms and tiny character silhouettes have dark outlines. Include an unlabeled horizontal palette swatch strip. Absolutely no text, letters, numerals, captions, logos, watermark or menu UI anywhere.\nWorld: Guardians: shrines and statue gardens, sunbeams through narrow gaps, mirrors, white stone and bronze.",
+      "refs": [
+        "D:/Cluade projects/games/Glue/docs/референсы/reference.png"
+      ],
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fdbc-85f8-7471-90e2-82bd74996636\\exec-02fe80db-6eec-46b1-95fc-c7e511f32ca0.png",
+      "edit_prompt": null
+    },
+    {
+      "id": "W4",
+      "kind": "concept",
+      "path": "D:/Cluade projects/games/Glue/docs/референсы/world4_sunken_city.png",
+      "prompt": "Use case: stylized-concept. Create ONE concept style sheet for a new world of the 2D co-op platformer \"Hold On!\". Attached image 1 is the existing world concept sheet: match its cheerful hand-painted cartoon art, chunky stone shapes, soft shading, and strict side-view platformer genre, but use the new place, lighting and palette specified below. Do not copy the reference text, logo, UI or layout. Landscape 3:2. Compose 3–4 small distinct side-view level fragments on one polished cohesive sheet, showing platforms, background environment, themed mechanisms, and tiny simple bright red, blue, yellow and green character silhouettes only for scale. Decorative scenery has no hard black outlines; interactive mechanisms and tiny character silhouettes have dark outlines. Include an unlabeled horizontal palette swatch strip. Absolutely no text, letters, numerals, captions, logos, watermark or menu UI anywhere.\nWorld: Sunken city: underwater streets, sluices, turquoise water, algae, submerged arches, sparkling sunlight through water.",
+      "refs": [
+        "D:/Cluade projects/games/Glue/docs/референсы/reference.png"
+      ],
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fdbc-85f8-7471-90e2-82bd74996636\\exec-bbea5cad-911a-4d71-be8a-338a87e25b15.png",
+      "edit_prompt": null
+    },
+    {
+      "id": "W5",
+      "kind": "concept",
+      "path": "D:/Cluade projects/games/Glue/docs/референсы/world5_ice_peaks.png",
+      "prompt": "Use case: stylized-concept. Create ONE concept style sheet for a new world of the 2D co-op platformer \"Hold On!\". Attached image 1 is the existing world concept sheet: match its cheerful hand-painted cartoon art, chunky stone shapes, soft shading, and strict side-view platformer genre, but use the new place, lighting and palette specified below. Do not copy the reference text, logo, UI or layout. Landscape 3:2. Compose 3–4 small distinct side-view level fragments on one polished cohesive sheet, showing platforms, background environment, themed mechanisms, and tiny simple bright red, blue, yellow and green character silhouettes only for scale. Decorative scenery has no hard black outlines; interactive mechanisms and tiny character silhouettes have dark outlines. Include an unlabeled horizontal palette swatch strip. Absolutely no text, letters, numerals, captions, logos, watermark or menu UI anywhere.\nWorld: Ice peaks: snow, glaciers, mountain passes, blue ice, icicles, snowy pine trees, bright sunshine.",
+      "refs": [
+        "D:/Cluade projects/games/Glue/docs/референсы/reference.png"
+      ],
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fdbc-85f8-7471-90e2-82bd74996636\\exec-5169beef-688d-48da-be2a-863676241f10.png",
+      "edit_prompt": null
+    },
+    {
+      "id": "W6",
+      "kind": "concept",
+      "path": "D:/Cluade projects/games/Glue/docs/референсы/world6_sky_forge.png",
+      "prompt": "Use case: stylized-concept. Create ONE concept style sheet for a new world of the 2D co-op platformer \"Hold On!\". Attached image 1 is the existing world concept sheet: match its cheerful hand-painted cartoon art, chunky stone shapes, soft shading, and strict side-view platformer genre, but use the new place, lighting and palette specified below. Do not copy the reference text, logo, UI or layout. Landscape 3:2. Compose 3–4 small distinct side-view level fragments on one polished cohesive sheet, showing platforms, background environment, themed mechanisms, and tiny simple bright red, blue, yellow and green character silhouettes only for scale. Decorative scenery has no hard black outlines; interactive mechanisms and tiny character silhouettes have dark outlines. Include an unlabeled horizontal palette swatch strip. Absolutely no text, letters, numerals, captions, logos, watermark or menu UI anywhere.\nWorld: Sky forge: clouds and floating islands, smithing furnaces in the sky, sunset gold and purple, chains linking islands.",
+      "refs": [
+        "D:/Cluade projects/games/Glue/docs/референсы/reference.png"
+      ],
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fdbc-85f8-7471-90e2-82bd74996636\\exec-3fe7bd19-b44d-46ba-82f8-ac72a47d1059.png",
+      "edit_prompt": null
+    }
+  ]
+}

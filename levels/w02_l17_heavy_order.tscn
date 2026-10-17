@@ -1,0 +1,265 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://src/level/greybox_level.gd" id="1"]
+[ext_resource type="PackedScene" path="res://levels/backdrops/w02_machine.tscn" id="bd"]
+[ext_resource type="Script" path="res://src/level/backdrop_layer.gd" id="bl"]
+[ext_resource type="Texture2D" path="res://assets/backgrounds/world_02/source/w02_lm17_loading_dock.png" id="lm"]
+[ext_resource type="Script" path="res://src/mechanisms/crane.gd" id="crane"]
+[ext_resource type="Script" path="res://src/mechanisms/crate.gd" id="crate"]
+[ext_resource type="Script" path="res://src/mechanisms/door.gd" id="door"]
+[ext_resource type="Script" path="res://src/mechanisms/finish.gd" id="finish"]
+[ext_resource type="Script" path="res://src/mechanisms/lever.gd" id="lever"]
+[ext_resource type="Script" path="res://src/mechanisms/pressure_plate.gd" id="plate"]
+[ext_resource type="Script" path="res://src/mechanisms/saw.gd" id="saw"]
+[ext_resource type="Script" path="res://src/mechanisms/spikes.gd" id="spikes"]
+
+[node name="W02L17" type="Node2D"]
+script = ExtResource("1")
+title = "17 · Тяжёлый заказ"
+blocks = Array[Rect2]([Rect2(0, -8, 1, 30), Rect2(130, -8, 1, 30), Rect2(1, 12, 9, 6), Rect2(4, 10.5, 1.5, 1.5), Rect2(5.5, 9, 4.5, 3), Rect2(10, 15, 16, 3), Rect2(26, 12, 1.5, 6), Rect2(27.5, 12, 17, 6), Rect2(37.5, -8, 1, 16), Rect2(44.5, 15, 12, 3), Rect2(56.5, 12, 8, 6), Rect2(64.5, 15, 9, 3), Rect2(73.5, 15, 3, 3), Rect2(76.5, 12, 19.5, 6), Rect2(83, -8, 1, 16), Rect2(96, 15, 18, 3), Rect2(114, 15, 3, 3), Rect2(117, 12, 14, 6), Rect2(124, -8, 1, 16)])
+checkpoints = Array[Vector2]([Vector2(1.5, 12), Vector2(39, 12), Vector2(84.5, 12)])
+bounds_tiles = Rect2(0, -8, 131, 27)
+kill_y_tiles = 19
+ground_fill = "w02_fill"
+ground_deep = "w02_deep"
+ground_top = "w02_top"
+ground_side = "w02_side"
+
+[node name="Heavy" type="CharacterBody2D" parent="."]
+position = Vector2(512, 545)
+script = ExtResource("crate")
+mass = 2.0
+
+[node name="CranePlate1" type="AnimatableBody2D" parent="."]
+position = Vector2(192, 768)
+script = ExtResource("plate")
+width_tiles = 1.5
+mark_color = Color(0.95, 0.85, 0.3, 1)
+
+[node name="PitSpikes" type="Node2D" parent="."]
+position = Vector2(1152, 960)
+script = ExtResource("spikes")
+width_tiles = 16.0
+
+[node name="Crane" type="Node2D" parent="."]
+position = Vector2(736, 256)
+script = ExtResource("crane")
+length_tiles = 16.0
+hang_tiles = 5.0
+speed = 150.0
+pallet_tiles = 3.0
+triggers = Array[NodePath]([NodePath("../CranePlate1"), NodePath("../CranePlate2")])
+trapdoor = NodePath("../Lid")
+
+[node name="ExitPlate" type="AnimatableBody2D" parent="."]
+position = Vector2(1856, 768)
+script = ExtResource("plate")
+width_tiles = 3.0
+threshold = 2.0
+mark_color = Color(0.35, 0.8, 0.4, 1)
+
+[node name="Lid" type="Node2D" parent="."]
+position = Vector2(2163.2, 768)
+script = ExtResource("lever")
+mark_color = Color(0.95, 0.6, 0.2, 1)
+
+[node name="CranePlate2" type="AnimatableBody2D" parent="."]
+position = Vector2(2304, 768)
+script = ExtResource("plate")
+width_tiles = 1.5
+mark_color = Color(0.95, 0.85, 0.3, 1)
+
+[node name="ExitDoor" type="AnimatableBody2D" parent="."]
+position = Vector2(2400, 512)
+script = ExtResource("door")
+size_tiles = Vector2(1, 4)
+triggers = Array[NodePath]([NodePath("../ExitPlate")])
+open_offset_tiles = Vector2(0, -4)
+mark_color = Color(0.35, 0.8, 0.4, 1)
+
+[node name="CrateX" type="CharacterBody2D" parent="."]
+position = Vector2(2758.4, 737)
+script = ExtResource("crate")
+
+[node name="CranePlate3" type="AnimatableBody2D" parent="."]
+position = Vector2(2585.6, 768)
+script = ExtResource("plate")
+width_tiles = 1.5
+mark_color = Color(0.4, 0.7, 0.95, 1)
+
+[node name="PitSpikes2" type="Node2D" parent="."]
+position = Vector2(3232, 960)
+script = ExtResource("spikes")
+width_tiles = 12.0
+
+[node name="Crane3" type="Node2D" parent="."]
+position = Vector2(2944, 448)
+script = ExtResource("crane")
+length_tiles = 9.0
+hang_tiles = 5.0
+speed = 150.0
+pallet_tiles = 3.0
+triggers = Array[NodePath]([NodePath("../CranePlate3"), NodePath("../CranePlate3b")])
+
+[node name="CranePlate4" type="AnimatableBody2D" parent="."]
+position = Vector2(3724.8, 768)
+script = ExtResource("plate")
+width_tiles = 1.0
+mark_color = Color(0.7, 0.45, 0.95, 1)
+
+[node name="CranePlate3b" type="AnimatableBody2D" parent="."]
+position = Vector2(3820.8, 768)
+script = ExtResource("plate")
+width_tiles = 1.0
+mark_color = Color(0.4, 0.7, 0.95, 1)
+
+[node name="CrateY" type="CharacterBody2D" parent="."]
+position = Vector2(4281.6, 737)
+script = ExtResource("crate")
+
+[node name="PitSpikes3" type="Node2D" parent="."]
+position = Vector2(4416, 960)
+script = ExtResource("spikes")
+width_tiles = 9.0
+
+[node name="Crane4" type="Node2D" parent="."]
+position = Vector2(4224, 448)
+script = ExtResource("crane")
+length_tiles = 9.0
+hang_tiles = 5.0
+speed = 150.0
+pallet_tiles = 3.0
+triggers = Array[NodePath]([NodePath("../CranePlate4"), NodePath("../CranePlate4b")])
+trapdoor = NodePath("../Lid4")
+
+[node name="Scale" type="AnimatableBody2D" parent="."]
+position = Vector2(4800, 960)
+script = ExtResource("plate")
+width_tiles = 3.0
+threshold = 2.0
+mark_color = Color(0.3, 0.8, 0.75, 1)
+
+[node name="CranePlate4b" type="AnimatableBody2D" parent="."]
+position = Vector2(4992, 768)
+script = ExtResource("plate")
+width_tiles = 1.5
+mark_color = Color(0.7, 0.45, 0.95, 1)
+
+[node name="Lid4" type="Node2D" parent="."]
+position = Vector2(5152, 768)
+script = ExtResource("lever")
+mark_color = Color(0.95, 0.5, 0.7, 1)
+
+[node name="ExitDoor2" type="AnimatableBody2D" parent="."]
+position = Vector2(5312, 512)
+script = ExtResource("door")
+size_tiles = Vector2(1, 4)
+triggers = Array[NodePath]([NodePath("../Scale")])
+open_offset_tiles = Vector2(0, -4)
+mark_color = Color(0.3, 0.8, 0.75, 1)
+
+[node name="Heavy3" type="CharacterBody2D" parent="."]
+position = Vector2(5856, 737)
+script = ExtResource("crate")
+mass = 2.0
+
+[node name="CranePlate5" type="AnimatableBody2D" parent="."]
+position = Vector2(5536, 768)
+script = ExtResource("plate")
+width_tiles = 1.0
+mark_color = Color(0.4, 0.7, 0.95, 1)
+
+[node name="PitSpikes4" type="Node2D" parent="."]
+position = Vector2(6720, 960)
+script = ExtResource("spikes")
+width_tiles = 18.0
+
+[node name="Crane5" type="Node2D" parent="."]
+position = Vector2(6240, 192)
+script = ExtResource("crane")
+length_tiles = 18.0
+hang_tiles = 9.0
+speed = 150.0
+pallet_tiles = 3.0
+triggers = Array[NodePath]([NodePath("../CranePlate5"), NodePath("../CranePlate5b")])
+trapdoor = NodePath("../Lid5")
+
+[node name="Saw1" type="Node2D" parent="."]
+position = Vector2(6400, 384)
+script = ExtResource("saw")
+path_tiles = Vector2(0, 5.45)
+speed = 240.0
+start_at = 0.0
+
+[node name="Saw2" type="Node2D" parent="."]
+position = Vector2(6579.2, 384)
+script = ExtResource("saw")
+path_tiles = Vector2(0, 5.45)
+speed = 320.0
+start_at = 0.5
+
+[node name="Saw3" type="Node2D" parent="."]
+position = Vector2(6758.4, 384)
+script = ExtResource("saw")
+path_tiles = Vector2(0, 5.45)
+speed = 200.0
+start_at = 0.2
+
+[node name="Saw4" type="Node2D" parent="."]
+position = Vector2(6937.6, 384)
+script = ExtResource("saw")
+path_tiles = Vector2(0, 5.45)
+speed = 290.0
+start_at = 0.7
+
+[node name="Saw5" type="Node2D" parent="."]
+position = Vector2(7116.8, 384)
+script = ExtResource("saw")
+path_tiles = Vector2(0, 5.45)
+speed = 250.0
+start_at = 0.4
+
+[node name="Scale3" type="AnimatableBody2D" parent="."]
+position = Vector2(7392, 960)
+script = ExtResource("plate")
+width_tiles = 3.0
+threshold = 2.0
+mark_color = Color(0.35, 0.8, 0.4, 1)
+
+[node name="Lid5" type="Node2D" parent="."]
+position = Vector2(7616, 768)
+script = ExtResource("lever")
+mark_color = Color(0.95, 0.6, 0.2, 1)
+
+[node name="CranePlate5b" type="AnimatableBody2D" parent="."]
+position = Vector2(7776, 768)
+script = ExtResource("plate")
+width_tiles = 1.0
+mark_color = Color(0.4, 0.7, 0.95, 1)
+
+[node name="ExitDoor3" type="AnimatableBody2D" parent="."]
+position = Vector2(7936, 512)
+script = ExtResource("door")
+size_tiles = Vector2(1, 4)
+triggers = Array[NodePath]([NodePath("../Scale3")])
+open_offset_tiles = Vector2(0, -4)
+mark_color = Color(0.35, 0.8, 0.4, 1)
+
+[node name="Finish" type="Node2D" parent="."]
+position = Vector2(8192, 768)
+script = ExtResource("finish")
+
+[node name="Backdrop" parent="." instance=ExtResource("bd")]
+
+[node name="Landmark" type="Node2D" parent="Backdrop"]
+script = ExtResource("bl")
+texture = ExtResource("lm")
+parallax = 0.3
+parallax_y = 0.1
+height = 0.6
+center_y = 0.55
+zoom_follow = 0.3
+repeat = false
+world_x = 2934.0
+haze = 0.22
+haze_color = Color(0.860, 0.900, 0.960, 1)

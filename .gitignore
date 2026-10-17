@@ -26,3 +26,14 @@ __pycache__/
 
 # Local preview server for index.html (machine-specific paths)
 .claude/launch.json
+
+# Scratch: maps, shots, local tools (node_modules, ffmpeg)
+tmp/
+tests/tmp/
+
+# Cartoon project: rendered videos, snapshots and scratch (rebuilt from sources)
+video/**/renders/
+video/**/snapshots/
+video/**/tmp/
+video/**/node_modules/
+video/**/*.mp4

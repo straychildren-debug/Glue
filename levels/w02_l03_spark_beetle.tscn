@@ -1,0 +1,102 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://src/level/greybox_level.gd" id="1"]
+[ext_resource type="PackedScene" path="res://levels/backdrops/w02_yard.tscn" id="bd"]
+[ext_resource type="Script" path="res://src/level/backdrop_layer.gd" id="bl"]
+[ext_resource type="Texture2D" path="res://assets/backgrounds/world_02/source/w02_lm03_launch_tower.png" id="lm"]
+[ext_resource type="Script" path="res://src/mechanisms/beetle.gd" id="beetle"]
+[ext_resource type="Script" path="res://src/mechanisms/cracked_wall.gd" id="cracked"]
+[ext_resource type="Script" path="res://src/mechanisms/finish.gd" id="finish"]
+[ext_resource type="Script" path="res://src/mechanisms/keg.gd" id="keg"]
+[ext_resource type="Script" path="res://src/mechanisms/pressure_plate.gd" id="plate"]
+[ext_resource type="Script" path="res://src/mechanisms/spark.gd" id="spark"]
+[ext_resource type="Script" path="res://src/mechanisms/spikes.gd" id="spikes"]
+[ext_resource type="Script" path="res://src/mechanisms/wire.gd" id="wire"]
+
+[node name="W02L03" type="Node2D"]
+script = ExtResource("1")
+title = "03 · Искра и жук"
+blocks = Array[Rect2]([Rect2(0, -8, 1, 26), Rect2(66, -8, 1, 26), Rect2(0, 12, 45, 6), Rect2(30, -8, 1, 17), Rect2(31, 11.5, 0.5, 0.5), Rect2(45, 9.25, 3, 8.75), Rect2(48, 13, 10, 5), Rect2(48, 9.25, 4, 0.5), Rect2(54, 9.25, 4, 0.5), Rect2(58, 9.25, 8, 8.75)])
+checkpoints = Array[Vector2]([Vector2(2, 12), Vector2(16.5, 12), Vector2(31.5, 12), Vector2(46.5, 9.25), Vector2(59, 9.25)])
+bounds_tiles = Rect2(0, -8, 67, 27)
+kill_y_tiles = 19
+ground_fill = "w02_fill"
+ground_deep = "w02_deep"
+ground_top = "w02_top"
+ground_side = "w02_side"
+
+[node name="Wire1" type="Node2D" parent="."]
+script = ExtResource("wire")
+points = PackedVector2Array(5, 11.6, 15.6, 11.6)
+
+[node name="Spark1" type="Node2D" parent="."]
+script = ExtResource("spark")
+wire = NodePath("../Wire1")
+speed = 200.0
+
+[node name="Wire2" type="Node2D" parent="."]
+script = ExtResource("wire")
+points = PackedVector2Array(18, 8.5, 24, 8.5)
+next = Array[NodePath]([NodePath("../ToGround"), NodePath("../ToKeg")])
+switches = Array[NodePath]([NodePath("../Switch")])
+
+[node name="ToGround" type="Node2D" parent="."]
+script = ExtResource("wire")
+points = PackedVector2Array(24, 8.5, 24, 5, 21, 5)
+grounded = true
+
+[node name="ToKeg" type="Node2D" parent="."]
+script = ExtResource("wire")
+points = PackedVector2Array(24, 8.5, 28.5, 8.5, 28.5, 11.2)
+target = NodePath("../Keg")
+
+[node name="Spark2" type="Node2D" parent="."]
+script = ExtResource("spark")
+wire = NodePath("../Wire2")
+
+[node name="Switch" type="AnimatableBody2D" parent="."]
+position = Vector2(1344, 768)
+script = ExtResource("plate")
+mark_color = Color(0.95, 0.85, 0.3, 1)
+
+[node name="Keg" type="Node2D" parent="."]
+position = Vector2(1824, 768)
+script = ExtResource("keg")
+walls = Array[NodePath]([NodePath("../Wall")])
+
+[node name="Wall" type="StaticBody2D" parent="."]
+position = Vector2(1920, 576)
+script = ExtResource("cracked")
+
+[node name="Beetle1" type="CharacterBody2D" parent="."]
+position = Vector2(2624, 739)
+script = ExtResource("beetle")
+
+[node name="Spikes" type="Node2D" parent="."]
+position = Vector2(3392, 832)
+script = ExtResource("spikes")
+width_tiles = 10.0
+
+[node name="Beetle2" type="CharacterBody2D" parent="."]
+position = Vector2(3840, 563)
+script = ExtResource("beetle")
+direction = -1
+
+[node name="Finish" type="Node2D" parent="."]
+position = Vector2(4096, 592)
+script = ExtResource("finish")
+
+[node name="Backdrop" parent="." instance=ExtResource("bd")]
+
+[node name="Landmark" type="Node2D" parent="Backdrop"]
+script = ExtResource("bl")
+texture = ExtResource("lm")
+parallax = 0.3
+parallax_y = 0.1
+height = 0.6
+center_y = 0.55
+zoom_follow = 0.3
+repeat = false
+world_x = 1501.0
+haze = 0.22
+haze_color = Color(0.860, 0.900, 0.960, 1)

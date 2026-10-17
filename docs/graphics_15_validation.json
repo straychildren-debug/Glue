@@ -1,0 +1,484 @@
+{
+  "date": "2026-10-03",
+  "method": "Visual review of each image plus Pillow alpha/size checks and SHA-256 comparison with native generator output",
+  "files": [
+    {
+      "id": "P17",
+      "path": "D:\\Cluade projects\\games\\Glue\\assets\\props\\v2\\source\\p17_finish.png",
+      "native_size": [
+        1510,
+        1041
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        25,
+        19,
+        1446,
+        1041
+      ],
+      "visible_bbox_alpha_32": [
+        207,
+        166,
+        1295,
+        868
+      ],
+      "upper_half_alpha_max": 255,
+      "border_alpha_max": 1,
+      "true_transparency": true,
+      "sha256": "c1cd14ffc62934f7925cb712cdf1e0f384e7af8989af5d11fee331c10f53c690",
+      "native_generator_bytes_preserved": true,
+      "states": [
+        {
+          "state": "closed",
+          "bbox_alpha_32": [
+            207,
+            166,
+            707,
+            868
+          ],
+          "width": 500,
+          "height": 702,
+          "ratio": 0.7123,
+          "target_tile_size": [
+            1.6,
+            2.2
+          ],
+          "crop_rect_xywh": [
+            207,
+            166,
+            500,
+            702
+          ]
+        },
+        {
+          "state": "open",
+          "bbox_alpha_32": [
+            800,
+            166,
+            1295,
+            868
+          ],
+          "width": 495,
+          "height": 702,
+          "ratio": 0.7051,
+          "target_tile_size": [
+            1.6,
+            2.2
+          ],
+          "crop_rect_xywh": [
+            800,
+            166,
+            500,
+            702
+          ]
+        }
+      ],
+      "target_door_tile_size": [
+        1,
+        1.5
+      ],
+      "target_game_display_px": [
+        102.4,
+        140.8
+      ],
+      "target_door_display_px": [
+        64,
+        96
+      ],
+      "proportions_approximate": true,
+      "baseline_y": 868,
+      "review_notes": "Два состояния: закрытое слева, открытое со створкой у левого косяка и тёплым светом справа. Общая линия порога y=868; прозрачный фон. Пропорции близки к заданным: видимый рисунок 500 / 495 × 702 px. При установке использовать одинаковые рамки 500 × 702 px и размер ворот 102,4 × 140,8 px; дверь целевая 64 × 96 px."
+    },
+    {
+      "id": "L21",
+      "path": "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_01\\v2\\source\\w01_v2_lm21_rose_window.png",
+      "native_size": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "alpha_bbox": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "visible_bbox_alpha_32": [
+        124,
+        114,
+        1427,
+        963
+      ],
+      "upper_half_alpha_max": 254,
+      "border_alpha_max": 3,
+      "true_transparency": true,
+      "sha256": "12b5c7cdbc172b0e1a75b9c010a94ff28083932f220f07b270add9a4eaf12302",
+      "native_generator_bytes_preserved": true,
+      "review_notes": "Четыре сектора витража: оранжевый, синий, зелёный, фиолетовый; основание в тумане."
+    },
+    {
+      "id": "L22",
+      "path": "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_01\\v2\\source\\w01_v2_lm22_stone_press.png",
+      "native_size": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "alpha_bbox": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "visible_bbox_alpha_32": [
+        20,
+        133,
+        1521,
+        931
+      ],
+      "upper_half_alpha_max": 254,
+      "border_alpha_max": 4,
+      "true_transparency": true,
+      "sha256": "63ee4f5758b4b6765ec6ca68b24aa116d98715c71f180652bf57b2b6d59160c1",
+      "native_generator_bytes_preserved": true,
+      "review_notes": "Три каменных молота: два подвешены, третий упал и разбит; прохладный свет святилища."
+    },
+    {
+      "id": "L23",
+      "path": "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_01\\v2\\source\\w01_v2_lm23_landslide.png",
+      "native_size": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "alpha_bbox": [
+        0,
+        17,
+        1008,
+        1536
+      ],
+      "visible_bbox_alpha_32": [
+        64,
+        24,
+        964,
+        1518
+      ],
+      "upper_half_alpha_max": 254,
+      "border_alpha_max": 6,
+      "true_transparency": true,
+      "sha256": "30139854ca11b83ff6f6f4b5f291616c26e8dac5f60f14185a2b7788201a1a01",
+      "native_generator_bytes_preserved": true,
+      "review_notes": "Сухая каменоломня: ступени, отрывающаяся плита, падающие камни и пыль. Лишние водопады удалены."
+    },
+    {
+      "id": "L24",
+      "path": "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_01\\v2\\source\\w01_v2_lm24_buried_shrine.png",
+      "native_size": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        253
+      ],
+      "alpha_bbox": [
+        0,
+        8,
+        1535,
+        1024
+      ],
+      "visible_bbox_alpha_32": [
+        81,
+        81,
+        1479,
+        975
+      ],
+      "upper_half_alpha_max": 253,
+      "border_alpha_max": 1,
+      "true_transparency": true,
+      "sha256": "73f68f78571f8dc701f963ee464bee77082c53e86ebb4c2a9df50b25c2d37831",
+      "native_generator_bytes_preserved": true,
+      "review_notes": "Купольная часовня с заваленным камнями входом, двумя каменными фонарями и светлячками."
+    },
+    {
+      "id": "L25",
+      "path": "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_01\\v2\\source\\w01_v2_lm25_pass_towers.png",
+      "native_size": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "alpha_bbox": [
+        0,
+        0,
+        1533,
+        1024
+      ],
+      "visible_bbox_alpha_32": [
+        63,
+        67,
+        1469,
+        975
+      ],
+      "upper_half_alpha_max": 254,
+      "border_alpha_max": 1,
+      "true_transparency": true,
+      "sha256": "1dd367aa36d17aa78f52fa826cd8a11a9c04a3001c44d2be8ea29073ab0bbbd3",
+      "native_generator_bytes_preserved": true,
+      "review_notes": "Две башни и два сломанных перехода; правая башня треснула, под ней падают камни."
+    },
+    {
+      "id": "P18",
+      "path": "D:\\Cluade projects\\games\\Glue\\assets\\props\\v2\\source\\p18_rockfall.png",
+      "native_size": [
+        793,
+        1983
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        25,
+        39,
+        769,
+        1937
+      ],
+      "visible_bbox_alpha_32": [
+        190,
+        79,
+        603,
+        1903
+      ],
+      "upper_half_alpha_max": 255,
+      "border_alpha_max": 0,
+      "true_transparency": true,
+      "sha256": "a91889ec27714b0aeeda1562df7ca7131eaf4528a39630cdb9df4cddfce09d4b",
+      "native_generator_bytes_preserved": true,
+      "review_notes": "Опасный передний край справа, каменные осколки с красными кончиками; середина в одном ритме для последующей нарезки."
+    },
+    {
+      "id": "P19",
+      "path": "D:\\Cluade projects\\games\\Glue\\assets\\props\\v2\\source\\p19_hint_sign.png",
+      "native_size": [
+        992,
+        1586
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        0,
+        32,
+        936,
+        1546
+      ],
+      "visible_bbox_alpha_32": [
+        209,
+        335,
+        794,
+        1251
+      ],
+      "upper_half_alpha_max": 255,
+      "border_alpha_max": 1,
+      "true_transparency": true,
+      "sha256": "08b84772399be49557ddf6e29a4f9bd7d44acf1cb26c6bd0298c6e447e061ae2",
+      "native_generator_bytes_preserved": true,
+      "review_notes": "Пустая светлая доска, короткий деревянный столб; знак вопроса добавляет игра."
+    },
+    {
+      "id": "P20",
+      "path": "D:\\Cluade projects\\games\\Glue\\assets\\props\\v2\\source\\p20_spring_pad.png",
+      "native_size": [
+        2172,
+        724
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        46,
+        171,
+        2126,
+        672
+      ],
+      "visible_bbox_alpha_32": [
+        49,
+        373,
+        2124,
+        504
+      ],
+      "upper_half_alpha_max": 1,
+      "border_alpha_max": 0,
+      "true_transparency": true,
+      "sha256": "8fcc8831641640c1a2b91ed49d32566071227770f246cf6ff57a45248953175b",
+      "native_generator_bytes_preserved": true,
+      "states": [
+        {
+          "state": "relaxed",
+          "bbox_alpha_32": [
+            49,
+            373,
+            1039,
+            504
+          ],
+          "width": 990,
+          "height": 131,
+          "ratio": 7.557,
+          "target_tile_size": [
+            2.5,
+            0.35
+          ]
+        },
+        {
+          "state": "charged",
+          "bbox_alpha_32": [
+            1130,
+            418,
+            2124,
+            504
+          ],
+          "width": 994,
+          "height": 86,
+          "ratio": 11.558,
+          "target_tile_size": [
+            2.5,
+            0.2
+          ]
+        }
+      ],
+      "review_notes": "Два низких состояния на общей линии основания. При ширине 160 px высота рисунка примерно 21,2 / 13,8 px; целевые размеры игры — 22,4 / 12,8 px. При подключении выставить эти размеры явно."
+    },
+    {
+      "id": "W2Z4",
+      "path": "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_02\\source\\w02_mid_forge.png",
+      "native_size": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "alpha_bbox": [
+        0,
+        21,
+        1536,
+        1024
+      ],
+      "visible_bbox_alpha_32": [
+        0,
+        586,
+        1536,
+        1024
+      ],
+      "upper_half_alpha_max": 1,
+      "border_alpha_max": 253,
+      "true_transparency": true,
+      "sha256": "8b94464fcc0a07e1ce8400b5a8454c2269d965bb0c6418a6553b9f6d575153fe",
+      "native_generator_bytes_preserved": true,
+      "review_notes": "Две наковальни и две закалочные ванны; потоки заменены паром. Заметный рисунок начинается с y=586, ниже середины. В верхней половине невидимый остаток alpha ≤ 1/255."
+    },
+    {
+      "id": "W2Z8",
+      "path": "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_02\\source\\w02_mid_machine.png",
+      "native_size": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "alpha_bbox": [
+        0,
+        32,
+        1536,
+        1024
+      ],
+      "visible_bbox_alpha_32": [
+        0,
+        539,
+        1536,
+        1024
+      ],
+      "upper_half_alpha_max": 1,
+      "border_alpha_max": 253,
+      "true_transparency": true,
+      "sha256": "33f7f770776c7036fababaca365dc64c6f3b8fdf517a795278786a4c9437e46d",
+      "native_generator_bytes_preserved": true,
+      "review_notes": "Вода и водяное колесо заменены зубчатыми шестернями, латунными трубами и механизмами. Заметный рисунок начинается с y=539. В верхней половине невидимый остаток alpha ≤ 1/255."
+    },
+    {
+      "id": "W2L01",
+      "path": "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_02\\source\\w02_lm01_conveyor_gallery.png",
+      "native_size": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "alpha_bbox": [
+        23,
+        9,
+        1522,
+        990
+      ],
+      "visible_bbox_alpha_32": [
+        77,
+        166,
+        1462,
+        877
+      ],
+      "upper_half_alpha_max": 254,
+      "border_alpha_max": 0,
+      "true_transparency": true,
+      "sha256": "03407178023fadae82627fd51d477ee629a6267a8f6a81c9fd046ec85310a91d",
+      "native_generator_bytes_preserved": true,
+      "review_notes": "Галерея целиком внутри кадра; правый конец закончен каменной опорой, по краям прозрачное поле."
+    }
+  ],
+  "summary": {
+    "required_files": 12,
+    "saved_files": 12,
+    "all_true_transparency": true,
+    "all_native_generator_bytes_preserved": true,
+    "p20_proportions_approximate": true,
+    "world2_upper_half_visible_scenery_absent": true,
+    "world2_upper_half_alpha_max": 1,
+    "p17_proportions_approximate": true,
+    "p17_states_share_baseline": true
+  },
+  "integration_pending": true
+}

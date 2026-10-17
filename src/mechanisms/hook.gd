@@ -29,6 +29,10 @@ func is_on_floor() -> bool:
 
 
 func _draw() -> void:
+	if Art.enabled:
+		# Спрайт 40×48: середина зева, за который хватаются, — точка (20, 35).
+		draw_texture_rect(Art.tex("hook"), Rect2(-20, -35, 40, 48), false)
+		return
 	# Железный крюк на кольце, вбитом в балку или скалу: тёмный контур, как у всего интерактивного.
 	var outline := Color("1a1d33")
 	var iron := Color("9aa3ad")

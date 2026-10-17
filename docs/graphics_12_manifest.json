@@ -1,0 +1,340 @@
+{
+  "date": "2026-10-03",
+  "method": "built-in image_gen",
+  "scope": "Task 12: all mandatory objects after accepted P1, Order points 2-4 plus P2 from the table",
+  "jobs": [
+    {
+      "id": "P3",
+      "path": "D:/Cluade projects/games/Glue/assets/props/v2/source/p03_door.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" — style reference. Attached image 2: a screenshot of the game as it looks now: painted backgrounds and painted stone platforms; the wooden and metal objects in it look too bright, flat and toy-like and stand out from the painted world. Attached image 3: the current version of the object to redesign — keep its shape, proportions and function, change only the rendering. Attached image 4: the approved stone texture of the platforms — match its painting style and level of detail. (Attached image 5, if present: an already approved object of the new set — match it exactly.) Do NOT copy layouts, text or UI from the attachments.\n\nRedesign this interactive object as a GAME SPRITE for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict orthographic side view, no perspective, no cast shadow on the ground, centered with empty space around it. Hand-painted cartoon style that belongs to the painted world: soft but visible material texture (wood grain and plank seams, worn edges, small chips, a little dirt and a few tiny moss specks), soft shading with light from the upper left, muted natural colors — clearly less saturated than the current version. It must still read at once as an interactive object: a clean, slightly thinner, painted dark brown-navy outline around the silhouette (not pure black), and a bit more contrast than the background behind it. If several states are listed, draw them side by side in one row, at the same scale, standing on the same baseline, evenly spaced. No text, letters, numbers, symbols, logos or watermark.\nObject: a tall wooden gate panel of vertical planks held by three iron bands with rivets; the top and bottom ends are finished with an iron band, the middle part is uniform so it can repeat.\nStates: one.\nProportions: portrait, 1 tile wide and 4 tiles tall.\nImage 5 is the ACCEPTED crate of the new set: match its muted natural wood, painted grain, worn edges, small moss specks and brown-navy outline. Genuine PNG alpha transparency. No ground shadow, no perspective, no backdrop, no characters. Preserve the orange/purple/yellow guidance colors where applicable, only slightly reduce saturation. All states must be complete and separated by transparent gutters.\nDraw a single tall narrow gate, height exactly FOUR times width, with exactly THREE iron bands total (top, middle, bottom). The central planks are straight vertical and homogeneous for repeat slicing. No arch, stone frame, knob, keyhole or additional gate hardware.",
+      "refs": [
+        "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+        "D:/Cluade projects/games/Glue/docs/progress/props_v1_in_world.jpg",
+        "D:/Cluade projects/games/Glue/assets/props/v1/door_mid.png",
+        "D:/Cluade projects/games/Glue/assets/tiles/world_01/source/w01_stone_fill.png",
+        "D:/Cluade projects/games/Glue/assets/props/v2/source/p01_crate.png"
+      ],
+      "transparent": true,
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\\exec-6560dce7-288d-49f4-91c2-c00bb5e7f67d.png",
+      "edits": []
+    },
+    {
+      "id": "P4",
+      "path": "D:/Cluade projects/games/Glue/assets/props/v2/source/p04_bridge.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" — style reference. Attached image 2: a screenshot of the game as it looks now: painted backgrounds and painted stone platforms; the wooden and metal objects in it look too bright, flat and toy-like and stand out from the painted world. Attached image 3: the current version of the object to redesign — keep its shape, proportions and function, change only the rendering. Attached image 4: the approved stone texture of the platforms — match its painting style and level of detail. (Attached image 5, if present: an already approved object of the new set — match it exactly.) Do NOT copy layouts, text or UI from the attachments.\n\nRedesign this interactive object as a GAME SPRITE for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict orthographic side view, no perspective, no cast shadow on the ground, centered with empty space around it. Hand-painted cartoon style that belongs to the painted world: soft but visible material texture (wood grain and plank seams, worn edges, small chips, a little dirt and a few tiny moss specks), soft shading with light from the upper left, muted natural colors — clearly less saturated than the current version. It must still read at once as an interactive object: a clean, slightly thinner, painted dark brown-navy outline around the silhouette (not pure black), and a bit more contrast than the background behind it. If several states are listed, draw them side by side in one row, at the same scale, standing on the same baseline, evenly spaced. No text, letters, numbers, symbols, logos or watermark.\nObject: a horizontal wooden bridge deck seen from the side: two rows of thick planks held by iron straps, both ends finished, the middle uniform so it can repeat; used for bridges, steps and lift platforms.\nStates: one.\nProportions: a long strip, 8 tiles long and half a tile thick.\nImage 5 is the ACCEPTED crate of the new set: match its muted natural wood, painted grain, worn edges, small moss specks and brown-navy outline. Genuine PNG alpha transparency. No ground shadow, no perspective, no backdrop, no characters. Preserve the orange/purple/yellow guidance colors where applicable, only slightly reduce saturation. All states must be complete and separated by transparent gutters.\nThe object silhouette is SIXTEEN times wider than tall, even if the canvas includes transparent margins. Strict side elevation: two horizontal rows of planks, no visible top face, no posts or supports below. Both end caps are finished and the long central region is homogeneous for repeat slicing. Wide landscape.",
+      "refs": [
+        "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+        "D:/Cluade projects/games/Glue/docs/progress/props_v1_in_world.jpg",
+        "D:/Cluade projects/games/Glue/assets/props/v1/bridge_mid.png",
+        "D:/Cluade projects/games/Glue/assets/tiles/world_01/source/w01_stone_fill.png",
+        "D:/Cluade projects/games/Glue/assets/props/v2/source/p01_crate.png"
+      ],
+      "transparent": true,
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\\exec-31f54c13-6186-4479-81c8-7b4d13a439d9.png",
+      "edits": [
+        {
+          "prompt": "Keep everything the same, but make ONLY the bridge deck silhouette thinner vertically: preserve its full horizontal length and reduce its height so the finished bridge is exactly sixteen times wider than tall (8 tiles long, half a tile thick). Keep the two rows of wooden planks, four iron straps, finished end caps, identical painted wood and iron, colors, grain, moss specks and outline. No perspective or visible top face. All empty space remains genuinely transparent. Image 1 is the existing bridge edit target. Image 5 is the approved crate style reference; image 2 is the game concept reference, image 3 the in-game screenshot, image 4 the masonry. No text, shadows, extra objects or new scenery.",
+          "refs": [
+            "D:/Cluade projects/games/Glue/assets/props/v2/source/p04_bridge.png",
+            "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+            "D:/Cluade projects/games/Glue/docs/progress/props_v1_in_world.jpg",
+            "D:/Cluade projects/games/Glue/assets/tiles/world_01/source/w01_stone_fill.png",
+            "D:/Cluade projects/games/Glue/assets/props/v2/source/p01_crate.png"
+          ],
+          "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\\exec-5eadf2a9-c599-4a53-a7e9-35d4adec3e35.png"
+        }
+      ]
+    },
+    {
+      "id": "P5",
+      "path": "D:/Cluade projects/games/Glue/assets/props/v2/source/p05_beam.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" — style reference. Attached image 2: a screenshot of the game as it looks now: painted backgrounds and painted stone platforms; the wooden and metal objects in it look too bright, flat and toy-like and stand out from the painted world. Attached image 3: the current version of the object to redesign — keep its shape, proportions and function, change only the rendering. Attached image 4: the approved stone texture of the platforms — match its painting style and level of detail. (Attached image 5, if present: an already approved object of the new set — match it exactly.) Do NOT copy layouts, text or UI from the attachments.\n\nRedesign this interactive object as a GAME SPRITE for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict orthographic side view, no perspective, no cast shadow on the ground, centered with empty space around it. Hand-painted cartoon style that belongs to the painted world: soft but visible material texture (wood grain and plank seams, worn edges, small chips, a little dirt and a few tiny moss specks), soft shading with light from the upper left, muted natural colors — clearly less saturated than the current version. It must still read at once as an interactive object: a clean, slightly thinner, painted dark brown-navy outline around the silhouette (not pure black), and a bit more contrast than the background behind it. If several states are listed, draw them side by side in one row, at the same scale, standing on the same baseline, evenly spaced. No text, letters, numbers, symbols, logos or watermark.\nObject: a thin long wooden beam of one squared timber with a few iron nails, both ends cut and finished, the middle uniform; used for perches and the seesaw.\nStates: one.\nProportions: a long thin strip, 10 tiles long and a quarter of a tile thick.\nImage 5 is the ACCEPTED crate of the new set: match its muted natural wood, painted grain, worn edges, small moss specks and brown-navy outline. Genuine PNG alpha transparency. No ground shadow, no perspective, no backdrop, no characters. Preserve the orange/purple/yellow guidance colors where applicable, only slightly reduce saturation. All states must be complete and separated by transparent gutters.\nThe timber silhouette is FORTY times wider than tall: one continuous straight beam of uniform quarter-tile thickness. No iron bands, ropes, joints, posts, support frame or extra objects. Both cut end caps finished; uniform repeatable middle. Wide landscape.",
+      "refs": [
+        "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+        "D:/Cluade projects/games/Glue/docs/progress/props_v1_in_world.jpg",
+        "D:/Cluade projects/games/Glue/assets/props/v1/beam_mid.png",
+        "D:/Cluade projects/games/Glue/assets/tiles/world_01/source/w01_stone_fill.png",
+        "D:/Cluade projects/games/Glue/assets/props/v2/source/p01_crate.png"
+      ],
+      "transparent": true,
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\\exec-931d7a53-0d1c-4d81-8d65-5c6ede9a6678.png",
+      "edits": [
+        {
+          "prompt": "Keep everything the same, but reduce ONLY the timber silhouette height by exactly 50%, preserving its full horizontal length: it must be a very slender beam whose width is forty times its height, corresponding to 10 tiles long and one quarter tile thick. Compress the wood, grain, small iron nails and painted outline vertically together; do not shorten the beam or add another beam. Preserve both finished cut ends and the uniform central timber. Keep the accepted crate painting style, muted warm brown, tiny moss specks, genuine transparent PNG background, no ground shadow, no perspective, no text. Image 1 is the beam edit target. Image 5 is the accepted crate, image 2 the concept reference, image 3 the screenshot, image 4 the masonry. One beam only.",
+          "refs": [
+            "D:/Cluade projects/games/Glue/assets/props/v2/source/p05_beam.png",
+            "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+            "D:/Cluade projects/games/Glue/docs/progress/props_v1_in_world.jpg",
+            "D:/Cluade projects/games/Glue/assets/tiles/world_01/source/w01_stone_fill.png",
+            "D:/Cluade projects/games/Glue/assets/props/v2/source/p01_crate.png"
+          ],
+          "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\\exec-a274c9a7-d4f7-4f40-891a-3ff4a0aba997.png"
+        },
+        {
+          "prompt": "Keep everything the same, but compress ONLY the existing beam vertically to 51 pixels of total visible height while retaining its current approximately 2052 pixel width. This is a VERY THIN timber, a width-to-height ratio of 40:1. It must be much thinner than the current beam, like a slender narrow perch, not a wide plank. Keep one straight continuous timber, finished ends, nails, grain, muted color and accepted crate painting style. Center it on the same canvas with large fully transparent margins above and below. No shadow, no text, no perspective. Image 1 is the beam edit target; image 5 the accepted crate, image 2 concept, image 3 screenshot, image 4 masonry.",
+          "refs": [
+            "D:/Cluade projects/games/Glue/assets/props/v2/source/p05_beam.png",
+            "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+            "D:/Cluade projects/games/Glue/docs/progress/props_v1_in_world.jpg",
+            "D:/Cluade projects/games/Glue/assets/tiles/world_01/source/w01_stone_fill.png",
+            "D:/Cluade projects/games/Glue/assets/props/v2/source/p01_crate.png"
+          ],
+          "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\\exec-5c4233b4-2b99-4255-887f-e1bbc072f004.png"
+        }
+      ]
+    },
+    {
+      "id": "P6",
+      "path": "D:/Cluade projects/games/Glue/assets/props/v2/source/p06_plates.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" — style reference. Attached image 2: a screenshot of the game as it looks now: painted backgrounds and painted stone platforms; the wooden and metal objects in it look too bright, flat and toy-like and stand out from the painted world. Attached image 3: the current version of the object to redesign — keep its shape, proportions and function, change only the rendering. Attached image 4: the approved stone texture of the platforms — match its painting style and level of detail. (Attached image 5, if present: an already approved object of the new set — match it exactly.) Do NOT copy layouts, text or UI from the attachments.\n\nRedesign this interactive object as a GAME SPRITE for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict orthographic side view, no perspective, no cast shadow on the ground, centered with empty space around it. Hand-painted cartoon style that belongs to the painted world: soft but visible material texture (wood grain and plank seams, worn edges, small chips, a little dirt and a few tiny moss specks), soft shading with light from the upper left, muted natural colors — clearly less saturated than the current version. It must still read at once as an interactive object: a clean, slightly thinner, painted dark brown-navy outline around the silhouette (not pure black), and a bit more contrast than the background behind it. If several states are listed, draw them side by side in one row, at the same scale, standing on the same baseline, evenly spaced. No text, letters, numbers, symbols, logos or watermark.\nObject: low pressure plates set into the floor: a flat stone base matching the platform masonry with a colored cap and short sloped ends.\nStates: plate with an orange cap raised; the same plate pressed down, its cap slightly brighter; a latch with a purple cap raised; the same latch pressed down, its cap slightly brighter.\nProportions: each is 2 tiles wide and a quarter of a tile tall.\nImage 5 is the ACCEPTED crate of the new set: match its muted natural wood, painted grain, worn edges, small moss specks and brown-navy outline. Genuine PNG alpha transparency. No ground shadow, no perspective, no backdrop, no characters. Preserve the orange/purple/yellow guidance colors where applicable, only slightly reduce saturation. All states must be complete and separated by transparent gutters.\nThe latch cap uses the same violet-purple guidance color as the current latch visible in the screenshot, slightly calmer in saturation. EXACTLY FOUR plates in one horizontal row, ordered: orange raised, orange pressed, purple raised, purple pressed. Identical stone bases, width and baseline. Pressed caps are visibly lower and slightly brighter. Each silhouette is eight times wider than tall. No wood, feet, standalone buttons or levers.",
+      "refs": [
+        "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+        "D:/Cluade projects/games/Glue/docs/progress/props_v1_in_world.jpg",
+        "D:/Cluade projects/games/Glue/assets/props/v1/plate_mid_off.png",
+        "D:/Cluade projects/games/Glue/assets/tiles/world_01/source/w01_stone_fill.png",
+        "D:/Cluade projects/games/Glue/assets/props/v2/source/p01_crate.png"
+      ],
+      "transparent": true,
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\\exec-6d90e151-7678-4955-822f-d46d836af934.png",
+      "edits": [
+        {
+          "prompt": "Keep everything the same, but make these FOUR floor plates much thinner vertically. Reduce the total height of the raised orange and purple plates to one eighth of their width (2 tiles wide and a quarter tile high). Compress the identical stone bases to a low flat shallow sill; do not draw a tall masonry block underneath. Keep the four widths unchanged and all four stone bases identical in geometry and stone arrangement, sharing exactly one bottom baseline. Raised caps visibly protrude above the stone, pressed caps sit flush within the same stone sill and are slightly brighter. Preserve orange, orange, purple, purple order, painted stone style, muted colors, outline and transparent gutters. Image 1 is the plates edit target; image 5 the accepted crate, image 2 concept, image 3 screenshot, image 4 masonry. Genuine transparent PNG; no extra objects, no shadows, no text.",
+          "refs": [
+            "D:/Cluade projects/games/Glue/assets/props/v2/source/p06_plates.png",
+            "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+            "D:/Cluade projects/games/Glue/docs/progress/props_v1_in_world.jpg",
+            "D:/Cluade projects/games/Glue/assets/tiles/world_01/source/w01_stone_fill.png",
+            "D:/Cluade projects/games/Glue/assets/props/v2/source/p01_crate.png"
+          ],
+          "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\\exec-bf2dd5ed-943c-4aad-a832-4b8feb42efe7.png"
+        }
+      ]
+    },
+    {
+      "id": "P8",
+      "path": "D:/Cluade projects/games/Glue/assets/props/v2/source/p08_seesaw.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" — style reference. Attached image 2: a screenshot of the game as it looks now: painted backgrounds and painted stone platforms; the wooden and metal objects in it look too bright, flat and toy-like and stand out from the painted world. Attached image 3: the current version of the object to redesign — keep its shape, proportions and function, change only the rendering. Attached image 4: the approved stone texture of the platforms — match its painting style and level of detail. (Attached image 5, if present: an already approved object of the new set — match it exactly.) Do NOT copy layouts, text or UI from the attachments.\n\nRedesign this interactive object as a GAME SPRITE for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict orthographic side view, no perspective, no cast shadow on the ground, centered with empty space around it. Hand-painted cartoon style that belongs to the painted world: soft but visible material texture (wood grain and plank seams, worn edges, small chips, a little dirt and a few tiny moss specks), soft shading with light from the upper left, muted natural colors — clearly less saturated than the current version. It must still read at once as an interactive object: a clean, slightly thinner, painted dark brown-navy outline around the silhouette (not pure black), and a bit more contrast than the background behind it. If several states are listed, draw them side by side in one row, at the same scale, standing on the same baseline, evenly spaced. No text, letters, numbers, symbols, logos or watermark.\nObject: the pivot stand of a seesaw: an A-frame of two wooden beams with a cross bar and an iron axle hub on top.\nStates: the stand alone; the same stand with a purple lock ring clamped around the hub (the seesaw is locked).\nProportions: each 1.5 tiles wide and 1 tile tall.\nImage 5 is the ACCEPTED crate of the new set: match its muted natural wood, painted grain, worn edges, small moss specks and brown-navy outline. Genuine PNG alpha transparency. No ground shadow, no perspective, no backdrop, no characters. Preserve the orange/purple/yellow guidance colors where applicable, only slightly reduce saturation. All states must be complete and separated by transparent gutters.\nEXACTLY TWO identical A-frame stands in one row. The only state difference is a clearly visible purple locking ring clamped around the iron axle hub on the right stand. Equal 1.5:1 width-to-height silhouette, identical scale and baseline. No long seesaw beam, plank, platform, lever or characters.",
+      "refs": [
+        "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+        "D:/Cluade projects/games/Glue/docs/progress/props_v1_in_world.jpg",
+        "D:/Cluade projects/games/Glue/assets/props/v1/seesaw_base.png",
+        "D:/Cluade projects/games/Glue/assets/tiles/world_01/source/w01_stone_fill.png",
+        "D:/Cluade projects/games/Glue/assets/props/v2/source/p01_crate.png"
+      ],
+      "transparent": true,
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\\exec-74dd85f5-4fda-4045-b6ac-026e3589094c.png",
+      "edits": []
+    },
+    {
+      "id": "P7",
+      "path": "D:/Cluade projects/games/Glue/assets/props/v2/source/p07_flags.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" — style reference. Attached image 2: a screenshot of the game as it looks now: painted backgrounds and painted stone platforms; the wooden and metal objects in it look too bright, flat and toy-like and stand out from the painted world. Attached image 3: the current version of the object to redesign — keep its shape, proportions and function, change only the rendering. Attached image 4: the approved stone texture of the platforms — match its painting style and level of detail. (Attached image 5, if present: an already approved object of the new set — match it exactly.) Do NOT copy layouts, text or UI from the attachments.\n\nRedesign this interactive object as a GAME SPRITE for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict orthographic side view, no perspective, no cast shadow on the ground, centered with empty space around it. Hand-painted cartoon style that belongs to the painted world: soft but visible material texture (wood grain and plank seams, worn edges, small chips, a little dirt and a few tiny moss specks), soft shading with light from the upper left, muted natural colors — clearly less saturated than the current version. It must still read at once as an interactive object: a clean, slightly thinner, painted dark brown-navy outline around the silhouette (not pure black), and a bit more contrast than the background behind it. If several states are listed, draw them side by side in one row, at the same scale, standing on the same baseline, evenly spaced. No text, letters, numbers, symbols, logos or watermark.\nObject: a checkpoint flag: a cloth pennant on a thin dark wooden pole with a small stone foot.\nStates: grey cloth (not yet reached); warm yellow cloth (checkpoint taken).\nProportions: each 1.6 tiles tall.\nImage 5 is the ACCEPTED crate of the new set: match its muted natural wood, painted grain, worn edges, small moss specks and brown-navy outline. Genuine PNG alpha transparency. No ground shadow, no perspective, no backdrop, no characters. Preserve the orange/purple/yellow guidance colors where applicable, only slightly reduce saturation. All states must be complete and separated by transparent gutters.\nThe reached checkpoint uses the warm yellow guidance color visible on the flag in image 2, slightly calmer in saturation. EXACTLY TWO identical pennants and poles, left grey cloth and right warm yellow cloth; same silhouette, same pole height, same small stone foot and baseline. Plain cloth without emblems. No wind streaks, glow halo or ground.",
+      "refs": [
+        "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+        "D:/Cluade projects/games/Glue/docs/progress/props_v1_in_world.jpg",
+        "D:/Cluade projects/games/Glue/assets/props/v1/flag_off.png",
+        "D:/Cluade projects/games/Glue/assets/tiles/world_01/source/w01_stone_fill.png",
+        "D:/Cluade projects/games/Glue/assets/props/v2/source/p01_crate.png"
+      ],
+      "transparent": false,
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\\exec-172e4269-2f82-4679-b9ca-6cf2ef615d67.png",
+      "edits": [
+        {
+          "prompt": "Keep everything the same, but remove ONLY all glow, bloom, colored haze and blurry shadow surrounding both flag sprites. Outside the two sharply bounded wooden poles, cloth pennants and stone feet, every pixel must be fully transparent alpha=0. No shadow or aura behind or below either object, including between the flags. Preserve the exact two flag shapes, painted textures, moss, grey left cloth, warm yellow right cloth, dark brown-navy outline, matched scale, shared baseline and composition. Image 1 is the flags edit target. Image 5 is the accepted crate; image 2 is the concept reference, image 3 the screenshot, image 4 the masonry. Genuine transparent PNG, not black or checkerboard backdrop. No text or extra objects.",
+          "refs": [
+            "D:/Cluade projects/games/Glue/assets/props/v2/source/p07_flags.png",
+            "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+            "D:/Cluade projects/games/Glue/docs/progress/props_v1_in_world.jpg",
+            "D:/Cluade projects/games/Glue/assets/tiles/world_01/source/w01_stone_fill.png",
+            "D:/Cluade projects/games/Glue/assets/props/v2/source/p01_crate.png"
+          ],
+          "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\\exec-71a3dd45-8407-487d-9c11-6a56710e0444.png"
+        },
+        {
+          "prompt": "Keep everything the same, but replace the ENTIRE background and surrounding glow/haze with one perfectly flat solid bright MAGENTA color #FF00FF. Both flags must be sharply isolated cutouts against this uniformly magenta backdrop: absolutely no brown, grey, yellow or black haze, no aura, no shadow, no gradient, no vignette anywhere outside the objects. Magenta must also fill the empty gap between the two flags and the space below the stone feet. Preserve the exact two flag silhouettes and arrangement, wood and stone, soft painted grain, grey left cloth, warm yellow right cloth, outline, equal scale and baseline. Do not change the flags themselves. Image 1 is the existing flags edit target; image 5 the accepted crate, image 2 concept, image 3 screenshot, image 4 masonry. No text or extra objects.",
+          "refs": [
+            "D:/Cluade projects/games/Glue/assets/props/v2/source/p07_flags.png",
+            "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+            "D:/Cluade projects/games/Glue/docs/progress/props_v1_in_world.jpg",
+            "D:/Cluade projects/games/Glue/assets/tiles/world_01/source/w01_stone_fill.png",
+            "D:/Cluade projects/games/Glue/assets/props/v2/source/p01_crate.png"
+          ],
+          "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\\exec-c05e2a41-d73a-44c0-bb8d-07c9cbe69623.png"
+        }
+      ],
+      "failed_edits": [
+        {
+          "prompt": "Keep everything the same, but remove ONLY the solid magenta background from image 1 and turn every background pixel into fully transparent alpha=0. Background extraction: keep the two flags as sharply bounded cutout sprites with genuine PNG alpha transparency, NO colored glow, NO magenta fringe, NO haze, NO cast shadows, NO backdrop of any color. Remove magenta between the flags, above, below and around them. Keep all wood, cloth, stone foot, moss, outlined edges, grey-left and yellow-right colors and existing matching scale exactly unchanged. Image 1 is the magenta flags edit target; image 5 is the approved crate; image 2 concept, image 3 game screenshot, image 4 masonry. Do not create a new flag design. One image with the existing two flags.",
+          "refs": [
+            "D:/Cluade projects/games/Glue/assets/props/v2/source/p07_flags.png",
+            "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+            "D:/Cluade projects/games/Glue/docs/progress/props_v1_in_world.jpg",
+            "D:/Cluade projects/games/Glue/assets/tiles/world_01/source/w01_stone_fill.png",
+            "D:/Cluade projects/games/Glue/assets/props/v2/source/p01_crate.png"
+          ],
+          "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\\exec-1e31590e-04b1-458e-9920-b1b531676e77.png"
+        }
+      ],
+      "background_fallback": "#FF00FF"
+    },
+    {
+      "id": "P10",
+      "path": "D:/Cluade projects/games/Glue/assets/props/v2/source/p10_ghost.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" — style reference. Attached image 2: a screenshot of the game as it looks now: painted backgrounds and painted stone platforms; the wooden and metal objects in it look too bright, flat and toy-like and stand out from the painted world. Attached image 3: the current version of the object to redesign — keep its shape, proportions and function, change only the rendering. Attached image 4: the approved stone texture of the platforms — match its painting style and level of detail. (Attached image 5, if present: an already approved object of the new set — match it exactly.) Do NOT copy layouts, text or UI from the attachments.\n\nRedesign this interactive object as a GAME SPRITE for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict orthographic side view, no perspective, no cast shadow on the ground, centered with empty space around it. Hand-painted cartoon style that belongs to the painted world: soft but visible material texture (wood grain and plank seams, worn edges, small chips, a little dirt and a few tiny moss specks), soft shading with light from the upper left, muted natural colors — clearly less saturated than the current version. It must still read at once as an interactive object: a clean, slightly thinner, painted dark brown-navy outline around the silhouette (not pure black), and a bit more contrast than the background behind it. If several states are listed, draw them side by side in one row, at the same scale, standing on the same baseline, evenly spaced. No text, letters, numbers, symbols, logos or watermark.\nObject: the \"shy ghost\" — a small round soft white-blue ghost with a wavy tail, slightly translucent, gentle painted glow, cute and funny, NOT scary.\nStates: chasing (eyes looking ahead, small open mouth with a pink tongue, tail streaming back); shy (eyes squeezed shut, pink blush, both little hands on its cheeks); floating calmly.\nProportions: each about 1 tile wide and 1 tile tall.\nImage 5 is the ACCEPTED crate of this set: match its soft painted material detail, muted natural colors, chips and worn edges, and brown-navy silhouette contour. Genuine transparent PNG, empty transparent margins and gutters, no painted checkerboard, no backdrop, no cast shadows, no text. All listed states are complete, strictly side orthographic, equal in scale and aligned along a single common bottom baseline. No characters or unlisted objects.\nEXACTLY THREE separate ghost sprites in one row, ordered chasing, shy, calm. Use the existing rounded ghost body and wavy tail from image 3, no arms or legs except the small hands needed for the shy cheek pose. The shy sprite has squeezed-shut eyes, pink blush, both small hands on cheeks. Chasing has a small open mouth with pink tongue. Calm is peacefully floating. Cool white-blue body, soft painted volume, slightly translucent; retain a clean painted outline. No glow outside the silhouette, only subtle luminous shading INSIDE the body. No scene from image 3.",
+      "refs": [
+        "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+        "D:/Cluade projects/games/Glue/docs/progress/props_v1_in_world.jpg",
+        "D:/Cluade projects/games/Glue/docs/progress/ghost_v1.png",
+        "D:/Cluade projects/games/Glue/assets/tiles/world_01/source/w01_stone_fill.png",
+        "D:/Cluade projects/games/Glue/assets/props/v2/source/p01_crate.png"
+      ],
+      "transparent": true,
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\\exec-e8a02a10-4e93-4a96-8c69-c98a24857498.png",
+      "edits": []
+    },
+    {
+      "id": "P9",
+      "path": "D:/Cluade projects/games/Glue/assets/props/v2/source/p09_spikes.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" — style reference. Attached image 2: a screenshot of the game as it looks now: painted backgrounds and painted stone platforms; the wooden and metal objects in it look too bright, flat and toy-like and stand out from the painted world. Attached image 3: the current version of the object to redesign — keep its shape, proportions and function, change only the rendering. Attached image 4: the approved stone texture of the platforms — match its painting style and level of detail. (Attached image 5, if present: an already approved object of the new set — match it exactly.) Do NOT copy layouts, text or UI from the attachments.\n\nRedesign this interactive object as a GAME SPRITE for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict orthographic side view, no perspective, no cast shadow on the ground, centered with empty space around it. Hand-painted cartoon style that belongs to the painted world: soft but visible material texture (wood grain and plank seams, worn edges, small chips, a little dirt and a few tiny moss specks), soft shading with light from the upper left, muted natural colors — clearly less saturated than the current version. It must still read at once as an interactive object: a clean, slightly thinner, painted dark brown-navy outline around the silhouette (not pure black), and a bit more contrast than the background behind it. If several states are listed, draw them side by side in one row, at the same scale, standing on the same baseline, evenly spaced. No text, letters, numbers, symbols, logos or watermark.\nObject: a row of forged iron spikes on a low warm stone sill, sharp tips with a small red warning accent; both ends finished, the middle uniform.\nStates: one.\nProportions: a strip 6 tiles long and half a tile tall.\nImage 5 is the ACCEPTED crate of this set: match its soft painted material detail, muted natural colors, chips and worn edges, and brown-navy silhouette contour. Genuine transparent PNG, empty transparent margins and gutters, no painted checkerboard, no backdrop, no cast shadows, no text. All listed states are complete, strictly side orthographic, equal in scale and aligned along a single common bottom baseline. No characters or unlisted objects.\nONE continuous horizontal row of spikes on ONE shallow stone sill. The silhouette is twelve times wider than tall; both ends finished and middle uniform for repeat slicing. Preserve the small red warning tips, use muted grey iron and masonry matching image 4. No blood, fire, vegetation covering the tips, characters or separate spike variants.",
+      "refs": [
+        "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+        "D:/Cluade projects/games/Glue/docs/progress/props_v1_in_world.jpg",
+        "D:/Cluade projects/games/Glue/assets/props/v1/spikes_mid.png",
+        "D:/Cluade projects/games/Glue/assets/tiles/world_01/source/w01_stone_fill.png",
+        "D:/Cluade projects/games/Glue/assets/props/v2/source/p01_crate.png"
+      ],
+      "transparent": true,
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\\exec-30ce7fe1-904c-4b9d-98a5-547657844387.png",
+      "edits": []
+    },
+    {
+      "id": "P12",
+      "path": "D:/Cluade projects/games/Glue/assets/props/v2/source/p12_key_lock.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" — style reference. Attached image 2: a screenshot of the game as it looks now: painted backgrounds and painted stone platforms; the wooden and metal objects in it look too bright, flat and toy-like and stand out from the painted world. Attached image 3: another screenshot of the current world, additional rendering context only. This object currently has no saved sprite because it is drawn in code. Follow the Object and Proportions lines below for its geometry and function. Attached image 4: the approved stone texture of the platforms — match its painting style and level of detail. (Attached image 5, if present: an already approved object of the new set — match it exactly.) Do NOT copy layouts, text or UI from the attachments.\n\nRedesign this interactive object as a GAME SPRITE for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict orthographic side view, no perspective, no cast shadow on the ground, centered with empty space around it. Hand-painted cartoon style that belongs to the painted world: soft but visible material texture (wood grain and plank seams, worn edges, small chips, a little dirt and a few tiny moss specks), soft shading with light from the upper left, muted natural colors — clearly less saturated than the current version. It must still read at once as an interactive object: a clean, slightly thinner, painted dark brown-navy outline around the silhouette (not pure black), and a bit more contrast than the background behind it. If several states are listed, draw them side by side in one row, at the same scale, standing on the same baseline, evenly spaced. No text, letters, numbers, symbols, logos or watermark.\nObject: a big old golden key with a round bow and a soft warm glow, and an iron lock plate with a keyhole mounted on a wooden door.\nStates: the key alone; the lock closed; the lock open (shackle up).\nProportions: the key 0.7 tile long; the lock half a tile.\nImage 5 is the ACCEPTED crate of this set: match its soft painted material detail, muted natural colors, chips and worn edges, and brown-navy silhouette contour. Genuine transparent PNG, empty transparent margins and gutters, no painted checkerboard, no backdrop, no cast shadows, no text. All listed states are complete, strictly side orthographic, equal in scale and aligned along a single common bottom baseline. No characters or unlisted objects.\nEXACTLY THREE isolated items in one row: key, closed lock, open lock. Both lock bodies must be identical: only the shackle position changes. Key and locks are separate cutout sprites, no wooden door slab or scene behind them; the lock has only a small wood mounting plate immediately behind it. Golden key is 1.4 times the lock body width, no halo outside the silhouette. No additional key, chain, labels or particles.",
+      "refs": [
+        "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+        "D:/Cluade projects/games/Glue/docs/progress/props_v1_in_world.jpg",
+        "D:/Cluade projects/games/Glue/docs/progress/props_v1_in_world_2.jpg",
+        "D:/Cluade projects/games/Glue/assets/tiles/world_01/source/w01_stone_fill.png",
+        "D:/Cluade projects/games/Glue/assets/props/v2/source/p01_crate.png"
+      ],
+      "transparent": true,
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\\exec-6d0fb08c-0703-47d8-89d6-3e352425c641.png",
+      "edits": []
+    },
+    {
+      "id": "P13",
+      "path": "D:/Cluade projects/games/Glue/assets/props/v2/source/p13_lever.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" — style reference. Attached image 2: a screenshot of the game as it looks now: painted backgrounds and painted stone platforms; the wooden and metal objects in it look too bright, flat and toy-like and stand out from the painted world. Attached image 3: another screenshot of the current world, additional rendering context only. This object currently has no saved sprite because it is drawn in code. Follow the Object and Proportions lines below for its geometry and function. Attached image 4: the approved stone texture of the platforms — match its painting style and level of detail. (Attached image 5, if present: an already approved object of the new set — match it exactly.) Do NOT copy layouts, text or UI from the attachments.\n\nRedesign this interactive object as a GAME SPRITE for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict orthographic side view, no perspective, no cast shadow on the ground, centered with empty space around it. Hand-painted cartoon style that belongs to the painted world: soft but visible material texture (wood grain and plank seams, worn edges, small chips, a little dirt and a few tiny moss specks), soft shading with light from the upper left, muted natural colors — clearly less saturated than the current version. It must still read at once as an interactive object: a clean, slightly thinner, painted dark brown-navy outline around the silhouette (not pure black), and a bit more contrast than the background behind it. If several states are listed, draw them side by side in one row, at the same scale, standing on the same baseline, evenly spaced. No text, letters, numbers, symbols, logos or watermark.\nObject: a floor lever: a stone block base with a wooden handle and a round knob.\nStates: off (handle tilted left, red knob); on (handle tilted right, green knob); the base alone; the handle alone (so the game can rotate it).\nProportions: the base half a tile wide, the handle 0.7 tile long.\nImage 5 is the ACCEPTED crate of this set: match its soft painted material detail, muted natural colors, chips and worn edges, and brown-navy silhouette contour. Genuine transparent PNG, empty transparent margins and gutters, no painted checkerboard, no backdrop, no cast shadows, no text. All listed states are complete, strictly side orthographic, equal in scale and aligned along a single common bottom baseline. No characters or unlisted objects.\nEXACTLY FOUR isolated sprites in one row: complete lever tilted left with RED knob, complete identical lever tilted right with GREEN knob, the same bare stone base with axle and without handle, the separate wooden handle with neutral dark brown knob and without base. The two complete bases are identical. Handle length about 1.4 times stone base width. Do not include a handle on the third base-only sprite. No arrows or control labels.",
+      "refs": [
+        "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+        "D:/Cluade projects/games/Glue/docs/progress/props_v1_in_world.jpg",
+        "D:/Cluade projects/games/Glue/docs/progress/props_v1_in_world_2.jpg",
+        "D:/Cluade projects/games/Glue/assets/tiles/world_01/source/w01_stone_fill.png",
+        "D:/Cluade projects/games/Glue/assets/props/v2/source/p01_crate.png"
+      ],
+      "transparent": true,
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\\exec-9a86e312-c51e-4dd4-8112-1db6edd128e9.png",
+      "edits": [
+        {
+          "prompt": "Keep everything the same, but rearrange ONLY the spacing and vertical alignment of these four existing lever sprites. Keep the exact four objects, order, painted textures, proportions, red and green knob colors, brown separate-handle knob and stone bases. The entire horizontal bounding box of each sprite must be separated from the next bounding box by a wide empty transparent gutter, at least half a stone base width. In particular move the bare stone base farther right, so its LEFTMOST pixel is clearly to the RIGHT of the green knob RIGHTMOST pixel, with an empty column gap between them. Align the lowest pixel of the separate handle to the same bottom baseline as the three stone bases. All four complete objects must fit inside the image with empty outer margins; use a wider landscape canvas or scale all four down equally if necessary. No clipping, no overlapping x-ranges, no new parts, no text. Genuine transparent PNG, no shadow. Image 1 edit target; image 5 accepted crate; image 2 concept, image 3 screenshot, image 4 masonry.",
+          "refs": [
+            "D:/Cluade projects/games/Glue/assets/props/v2/source/p13_lever.png",
+            "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+            "D:/Cluade projects/games/Glue/docs/progress/props_v1_in_world.jpg",
+            "D:/Cluade projects/games/Glue/assets/tiles/world_01/source/w01_stone_fill.png",
+            "D:/Cluade projects/games/Glue/assets/props/v2/source/p01_crate.png"
+          ],
+          "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\\exec-34c4bd10-4247-4f76-bb23-caab15d6ba21.png"
+        }
+      ]
+    },
+    {
+      "id": "P11",
+      "path": "D:/Cluade projects/games/Glue/assets/props/v2/source/p11_hook.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" — style reference. Attached image 2: a screenshot of the game as it looks now: painted backgrounds and painted stone platforms; the wooden and metal objects in it look too bright, flat and toy-like and stand out from the painted world. Attached image 3: another screenshot of the current world, additional rendering context only. This object currently has no saved sprite because it is drawn in code. Follow the Object and Proportions lines below for its geometry and function. Attached image 4: the approved stone texture of the platforms — match its painting style and level of detail. (Attached image 5, if present: an already approved object of the new set — match it exactly.) Do NOT copy layouts, text or UI from the attachments.\n\nRedesign this interactive object as a GAME SPRITE for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict orthographic side view, no perspective, no cast shadow on the ground, centered with empty space around it. Hand-painted cartoon style that belongs to the painted world: soft but visible material texture (wood grain and plank seams, worn edges, small chips, a little dirt and a few tiny moss specks), soft shading with light from the upper left, muted natural colors — clearly less saturated than the current version. It must still read at once as an interactive object: a clean, slightly thinner, painted dark brown-navy outline around the silhouette (not pure black), and a bit more contrast than the background behind it. If several states are listed, draw them side by side in one row, at the same scale, standing on the same baseline, evenly spaced. No text, letters, numbers, symbols, logos or watermark.\nObject: an iron hook on a ring hanging from a small iron plate bolted into stone, big enough for a hand to grab.\nStates: one.\nProportions: half a tile wide, 0.7 tile tall.\nImage 5 is the ACCEPTED crate of this set: match its soft painted material detail, muted natural colors, chips and worn edges, and brown-navy silhouette contour. Genuine transparent PNG, empty transparent margins and gutters, no painted checkerboard, no backdrop, no cast shadows, no text. All listed states are complete, strictly side orthographic, equal in scale and aligned along a single common bottom baseline. No characters or unlisted objects.\nONE isolated hook assembly. Short iron mounting plate at top, one ring and one large open J-shaped hook below, no chains or ropes. Small stone inset immediately at the mounting plate is allowed, no wall panel behind the hook. Hand-painted worn iron, side silhouette width about 0.71 times height.",
+      "refs": [
+        "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+        "D:/Cluade projects/games/Glue/docs/progress/props_v1_in_world.jpg",
+        "D:/Cluade projects/games/Glue/docs/progress/props_v1_in_world_2.jpg",
+        "D:/Cluade projects/games/Glue/assets/tiles/world_01/source/w01_stone_fill.png",
+        "D:/Cluade projects/games/Glue/assets/props/v2/source/p01_crate.png"
+      ],
+      "transparent": true,
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\\exec-f41495ae-2add-444a-bcde-e1f1ecfdf625.png",
+      "edits": []
+    },
+    {
+      "id": "P14",
+      "path": "D:/Cluade projects/games/Glue/assets/props/v2/source/p14_lift.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" — style reference. Attached image 2: a screenshot of the game as it looks now: painted backgrounds and painted stone platforms; the wooden and metal objects in it look too bright, flat and toy-like and stand out from the painted world. Attached image 3: another screenshot of the current world, additional rendering context only. This object currently has no saved sprite because it is drawn in code. Follow the Object and Proportions lines below for its geometry and function. Attached image 4: the approved stone texture of the platforms — match its painting style and level of detail. (Attached image 5, if present: an already approved object of the new set — match it exactly.) Do NOT copy layouts, text or UI from the attachments.\n\nRedesign this interactive object as a GAME SPRITE for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict orthographic side view, no perspective, no cast shadow on the ground, centered with empty space around it. Hand-painted cartoon style that belongs to the painted world: soft but visible material texture (wood grain and plank seams, worn edges, small chips, a little dirt and a few tiny moss specks), soft shading with light from the upper left, muted natural colors — clearly less saturated than the current version. It must still read at once as an interactive object: a clean, slightly thinner, painted dark brown-navy outline around the silhouette (not pure black), and a bit more contrast than the background behind it. If several states are listed, draw them side by side in one row, at the same scale, standing on the same baseline, evenly spaced. No text, letters, numbers, symbols, logos or watermark.\nObject: parts of a rope lift: a wooden pulley wheel with an iron axle on a short wooden beam, and the iron hanger that holds a lift platform under the rope.\nStates: the pulley; the hanger.\nProportions: the pulley 1 tile across; the hanger half a tile.\nImage 5 is the ACCEPTED crate of this set: match its soft painted material detail, muted natural colors, chips and worn edges, and brown-navy silhouette contour. Genuine transparent PNG, empty transparent margins and gutters, no painted checkerboard, no backdrop, no cast shadows, no text. All listed states are complete, strictly side orthographic, equal in scale and aligned along a single common bottom baseline. No characters or unlisted objects.\nEXACTLY TWO separate isolated parts in one row, aligned at the bottom: left, wooden pulley wheel with iron axle attached to a short horizontal wooden support beam; right, small iron hanger alone. The wheel diameter is twice the hanger width. No platform, crate, whole lift machine, long ropes, chains or third part. The pulley and hanger can be assembled by the game.",
+      "refs": [
+        "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+        "D:/Cluade projects/games/Glue/docs/progress/props_v1_in_world.jpg",
+        "D:/Cluade projects/games/Glue/docs/progress/props_v1_in_world_2.jpg",
+        "D:/Cluade projects/games/Glue/assets/tiles/world_01/source/w01_stone_fill.png",
+        "D:/Cluade projects/games/Glue/assets/props/v2/source/p01_crate.png"
+      ],
+      "transparent": true,
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\\exec-2a5d4b8d-3659-46a2-b44e-d072235d8369.png",
+      "edits": []
+    },
+    {
+      "id": "P15",
+      "path": "D:/Cluade projects/games/Glue/assets/props/v2/source/p15_saw.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" — style reference. Attached image 2: a screenshot of the game as it looks now: painted backgrounds and painted stone platforms; the wooden and metal objects in it look too bright, flat and toy-like and stand out from the painted world. Attached image 3: another screenshot of the current world, additional rendering context only. This object currently has no saved sprite because it is drawn in code. Follow the Object and Proportions lines below for its geometry and function. Attached image 4: the approved stone texture of the platforms — match its painting style and level of detail. (Attached image 5, if present: an already approved object of the new set — match it exactly.) Do NOT copy layouts, text or UI from the attachments.\n\nRedesign this interactive object as a GAME SPRITE for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict orthographic side view, no perspective, no cast shadow on the ground, centered with empty space around it. Hand-painted cartoon style that belongs to the painted world: soft but visible material texture (wood grain and plank seams, worn edges, small chips, a little dirt and a few tiny moss specks), soft shading with light from the upper left, muted natural colors — clearly less saturated than the current version. It must still read at once as an interactive object: a clean, slightly thinner, painted dark brown-navy outline around the silhouette (not pure black), and a bit more contrast than the background behind it. If several states are listed, draw them side by side in one row, at the same scale, standing on the same baseline, evenly spaced. No text, letters, numbers, symbols, logos or watermark.\nObject: a circular saw blade of steel with big teeth with small red tips and a dark hub, and a short piece of its iron rail with a round end stop.\nStates: the blade; the rail piece (both ends finished, the middle uniform).\nProportions: the blade 1.1 tiles across; the rail 4 tiles long and a fifth of a tile thick.\nImage 5 is the ACCEPTED crate of this set: match its soft painted material detail, muted natural colors, chips and worn edges, and brown-navy silhouette contour. Genuine transparent PNG, empty transparent margins and gutters, no painted checkerboard, no backdrop, no cast shadows, no text. All listed states are complete, strictly side orthographic, equal in scale and aligned along a single common bottom baseline. No characters or unlisted objects.\nEXACTLY TWO separated isolated sprites in one horizontal row: left, one circular steel saw blade with red warning tooth tips and dark hub; right, a separate long thin horizontal iron rail with finished round end stops at both ends and uniform repeatable middle. Saw blade diameter 1.1 tiles; rail length 4 tiles and thickness 0.2 tile, a 20:1 rail width-to-height ratio. The saw must NOT be touching or mounted on the rail. No mechanism support body, extra saws or characters.",
+      "refs": [
+        "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+        "D:/Cluade projects/games/Glue/docs/progress/props_v1_in_world.jpg",
+        "D:/Cluade projects/games/Glue/docs/progress/props_v1_in_world_2.jpg",
+        "D:/Cluade projects/games/Glue/assets/tiles/world_01/source/w01_stone_fill.png",
+        "D:/Cluade projects/games/Glue/assets/props/v2/source/p01_crate.png"
+      ],
+      "transparent": true,
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\\exec-23e42a3f-57bf-4316-9bb6-f4573be05de3.png",
+      "edits": [
+        {
+          "prompt": "Keep everything the same, but change ONLY the rail thickness and bottom alignment. Keep the circular saw disk exactly unchanged. Make the separate rail thinner vertically: its full visible length is twenty times its thickness, including the rounded end stops, a 4-tile-long and 0.2-tile-thick rail. Keep both rounded end stops and uniform central iron strip, painted metal, rivets, muted color and outline. Move the rail DOWN until its lowest pixel aligns precisely with the lowest tooth of the saw disk, on one common bottom baseline. Preserve a wide fully transparent gap between the disk and the rail. No perspective, shadows or extra objects; genuine transparent PNG. Image 1 is the saw and rail edit target; image 5 accepted crate, image 2 concept, image 3 screenshot, image 4 masonry.",
+          "refs": [
+            "D:/Cluade projects/games/Glue/assets/props/v2/source/p15_saw.png",
+            "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+            "D:/Cluade projects/games/Glue/docs/progress/props_v1_in_world.jpg",
+            "D:/Cluade projects/games/Glue/assets/tiles/world_01/source/w01_stone_fill.png",
+            "D:/Cluade projects/games/Glue/assets/props/v2/source/p01_crate.png"
+          ],
+          "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\\exec-db427bb3-7fb6-4c09-a845-21e16c4cdd75.png"
+        }
+      ]
+    },
+    {
+      "id": "P16",
+      "path": "D:/Cluade projects/games/Glue/assets/props/v2/source/p16_press.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" — style reference. Attached image 2: a screenshot of the game as it looks now: painted backgrounds and painted stone platforms; the wooden and metal objects in it look too bright, flat and toy-like and stand out from the painted world. Attached image 3: another screenshot of the current world, additional rendering context only. This object currently has no saved sprite because it is drawn in code. Follow the Object and Proportions lines below for its geometry and function. Attached image 4: the approved stone texture of the platforms — match its painting style and level of detail. (Attached image 5, if present: an already approved object of the new set — match it exactly.) Do NOT copy layouts, text or UI from the attachments.\n\nRedesign this interactive object as a GAME SPRITE for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict orthographic side view, no perspective, no cast shadow on the ground, centered with empty space around it. Hand-painted cartoon style that belongs to the painted world: soft but visible material texture (wood grain and plank seams, worn edges, small chips, a little dirt and a few tiny moss specks), soft shading with light from the upper left, muted natural colors — clearly less saturated than the current version. It must still read at once as an interactive object: a clean, slightly thinner, painted dark brown-navy outline around the silhouette (not pure black), and a bit more contrast than the background behind it. If several states are listed, draw them side by side in one row, at the same scale, standing on the same baseline, evenly spaced. No text, letters, numbers, symbols, logos or watermark.\nObject: the bottom edge of a heavy stone crushing press: a thick iron band with rivets and a row of blunt iron teeth below it; both ends finished, the middle uniform (the stone body above is drawn by the game from the platform masonry).\nStates: one.\nProportions: a strip 6 tiles long and half a tile tall.\nImage 5 is the ACCEPTED crate of this set: match its soft painted material detail, muted natural colors, chips and worn edges, and brown-navy silhouette contour. Genuine transparent PNG, empty transparent margins and gutters, no painted checkerboard, no backdrop, no cast shadows, no text. All listed states are complete, strictly side orthographic, equal in scale and aligned along a single common bottom baseline. No characters or unlisted objects.\nONE horizontal strip, iron rivet band with BLUNT teeth pointing down. Full silhouette width-to-height ratio twelve to one (6 tiles long, half tile thick). Both ends finished, middle uniform for repeat slicing. No stone press body above, no hanging machine frame, no wall, no ceiling, no chains, no long sharp spike tips. Empty transparent space above the iron band.",
+      "refs": [
+        "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+        "D:/Cluade projects/games/Glue/docs/progress/props_v1_in_world.jpg",
+        "D:/Cluade projects/games/Glue/docs/progress/props_v1_in_world_2.jpg",
+        "D:/Cluade projects/games/Glue/assets/tiles/world_01/source/w01_stone_fill.png",
+        "D:/Cluade projects/games/Glue/assets/props/v2/source/p01_crate.png"
+      ],
+      "transparent": true,
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\\exec-a244cd81-beb0-4c91-bad0-2a4754a0edb0.png",
+      "edits": []
+    },
+    {
+      "id": "P2",
+      "path": "D:/Cluade projects/games/Glue/assets/props/v2/source/p02_crate_heavy.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" — style reference. Attached image 2: a screenshot of the game as it looks now: painted backgrounds and painted stone platforms; the wooden and metal objects in it look too bright, flat and toy-like and stand out from the painted world. Attached image 3: the current version of the object to redesign — keep its shape, proportions and function, change only the rendering. Attached image 4: the approved stone texture of the platforms — match its painting style and level of detail. (Attached image 5, if present: an already approved object of the new set — match it exactly.) Do NOT copy layouts, text or UI from the attachments.\n\nRedesign this interactive object as a GAME SPRITE for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict orthographic side view, no perspective, no cast shadow on the ground, centered with empty space around it. Hand-painted cartoon style that belongs to the painted world: soft but visible material texture (wood grain and plank seams, worn edges, small chips, a little dirt and a few tiny moss specks), soft shading with light from the upper left, muted natural colors — clearly less saturated than the current version. It must still read at once as an interactive object: a clean, slightly thinner, painted dark brown-navy outline around the silhouette (not pure black), and a bit more contrast than the background behind it. If several states are listed, draw them side by side in one row, at the same scale, standing on the same baseline, evenly spaced. No text, letters, numbers, symbols, logos or watermark.\nObject: a heavy crate of dark old wood bound with two thick iron bands with rivets — clearly heavier than a normal crate.\nStates: one.\nProportions: square, 1 by 1 tile.\nImage 5 is the accepted normal crate of the new set: match its hand-painted grain, worn corners, faint chips, subdued natural color, sparse tiny moss specks and soft brown-navy outline exactly. The heavy crate has much darker old wood and TWO thick horizontal forged iron bands with rivets, clearly heavier than the accepted normal crate. Keep its square front-facing silhouette, no visible top or side faces, no perspective. ONE crate only, no normal crate next to it, no floor or cast shadow, no background glow. Genuine transparent PNG and clear empty margins.",
+      "refs": [
+        "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+        "D:/Cluade projects/games/Glue/docs/progress/props_v1_in_world.jpg",
+        "D:/Cluade projects/games/Glue/assets/props/v1/crate_heavy.png",
+        "D:/Cluade projects/games/Glue/assets/tiles/world_01/source/w01_stone_fill.png",
+        "D:/Cluade projects/games/Glue/assets/props/v2/source/p01_crate.png"
+      ],
+      "transparent": true,
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\\exec-75784ca8-9048-4797-8032-1299c64e750d.png",
+      "edits": []
+    }
+  ]
+}

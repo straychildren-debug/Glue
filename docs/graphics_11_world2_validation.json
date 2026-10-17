@@ -1,0 +1,1096 @@
+{
+  "date": "2026-10-03",
+  "scope": "Order 1 only: all world 2 assets and the Z3 acceptance correction.",
+  "files": [
+    {
+      "id": "E2",
+      "file": "docs/референсы/enemies/enemy_w2_pusher_beetle.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "sha256": "cee94e3e7c36bab7305d96be7efb95a15a72632dbcce3196b7a845fcb1440ced",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "transparent_fraction": 0.0,
+      "near_opaque_fraction": 1.0,
+      "border_alpha_max": 255,
+      "bbox_alpha_nonzero": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "final_bytes_equal_generator_output": true,
+      "final_prompt_logged": true,
+      "filename_logged": true,
+      "requested_transparency_ok": true,
+      "background_samples": [
+        [
+          223,
+          226,
+          231
+        ],
+        [
+          226,
+          230,
+          234
+        ],
+        [
+          223,
+          227,
+          231
+        ],
+        [
+          225,
+          226,
+          232
+        ],
+        [
+          222,
+          225,
+          229
+        ]
+      ]
+    },
+    {
+      "id": "E3",
+      "file": "docs/референсы/enemies/enemy_w2_spark.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "sha256": "b63236d96fb1f4a789f44c247e44ddb88710fc5dbe25119dbe3a9de77ee10d88",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "transparent_fraction": 0.0,
+      "near_opaque_fraction": 1.0,
+      "border_alpha_max": 255,
+      "bbox_alpha_nonzero": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "final_bytes_equal_generator_output": true,
+      "final_prompt_logged": true,
+      "filename_logged": true,
+      "requested_transparency_ok": true,
+      "background_samples": [
+        [
+          224,
+          229,
+          233
+        ],
+        [
+          228,
+          231,
+          235
+        ],
+        [
+          224,
+          228,
+          232
+        ],
+        [
+          225,
+          226,
+          232
+        ],
+        [
+          224,
+          226,
+          231
+        ]
+      ]
+    },
+    {
+      "id": "M2.1",
+      "file": "docs/референсы/mechanisms/mech_w2_conveyor.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "sha256": "10e6238197f8f8cd18afe3c56c83c84ea477f45470ba0bc5f6d4dedab592898d",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "transparent_fraction": 0.0,
+      "near_opaque_fraction": 1.0,
+      "border_alpha_max": 255,
+      "bbox_alpha_nonzero": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "final_bytes_equal_generator_output": true,
+      "final_prompt_logged": true,
+      "filename_logged": true,
+      "requested_transparency_ok": true,
+      "background_samples": [
+        [
+          222,
+          226,
+          230
+        ],
+        [
+          225,
+          228,
+          233
+        ],
+        [
+          223,
+          227,
+          230
+        ],
+        [
+          223,
+          224,
+          229
+        ],
+        [
+          221,
+          223,
+          228
+        ]
+      ]
+    },
+    {
+      "id": "M2.2",
+      "file": "docs/референсы/mechanisms/mech_w2_spring_pad.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "sha256": "b49d533389392117452d5f0e6bca7becf57d8183f1465923b63cc602f5fb895a",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "transparent_fraction": 0.0,
+      "near_opaque_fraction": 1.0,
+      "border_alpha_max": 255,
+      "bbox_alpha_nonzero": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "final_bytes_equal_generator_output": true,
+      "final_prompt_logged": true,
+      "filename_logged": true,
+      "requested_transparency_ok": true,
+      "background_samples": [
+        [
+          221,
+          224,
+          229
+        ],
+        [
+          224,
+          227,
+          232
+        ],
+        [
+          222,
+          226,
+          229
+        ],
+        [
+          222,
+          223,
+          229
+        ],
+        [
+          220,
+          222,
+          227
+        ]
+      ]
+    },
+    {
+      "id": "M2.3",
+      "file": "docs/референсы/mechanisms/mech_w2_rotating_platform.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "sha256": "10d743f64802b0f3b288de26a49d53a8e04e89b033bbd27ac1e7179951c5ddb0",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "transparent_fraction": 0.0,
+      "near_opaque_fraction": 1.0,
+      "border_alpha_max": 255,
+      "bbox_alpha_nonzero": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "final_bytes_equal_generator_output": true,
+      "final_prompt_logged": true,
+      "filename_logged": true,
+      "requested_transparency_ok": true,
+      "background_samples": [
+        [
+          223,
+          227,
+          231
+        ],
+        [
+          226,
+          229,
+          234
+        ],
+        [
+          224,
+          227,
+          231
+        ],
+        [
+          224,
+          225,
+          231
+        ],
+        [
+          223,
+          225,
+          230
+        ]
+      ]
+    },
+    {
+      "id": "M2.4",
+      "file": "docs/референсы/mechanisms/mech_w2_breakable_floor.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "sha256": "69915e0253a3714d7dc21e7986934b3d03f0774b62c5ade68168bca524916fe7",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "transparent_fraction": 0.0,
+      "near_opaque_fraction": 1.0,
+      "border_alpha_max": 255,
+      "bbox_alpha_nonzero": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "final_bytes_equal_generator_output": true,
+      "final_prompt_logged": true,
+      "filename_logged": true,
+      "requested_transparency_ok": true,
+      "background_samples": [
+        [
+          222,
+          226,
+          230
+        ],
+        [
+          226,
+          229,
+          233
+        ],
+        [
+          223,
+          227,
+          231
+        ],
+        [
+          223,
+          225,
+          231
+        ],
+        [
+          222,
+          225,
+          229
+        ]
+      ]
+    },
+    {
+      "id": "M2.5",
+      "file": "docs/референсы/mechanisms/mech_w2_bellows.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "sha256": "f70c53b8336cc41adaac98fd515ac75a629df5c263ab0e198b6f5b85fa787330",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "transparent_fraction": 0.0,
+      "near_opaque_fraction": 1.0,
+      "border_alpha_max": 255,
+      "bbox_alpha_nonzero": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "final_bytes_equal_generator_output": true,
+      "final_prompt_logged": true,
+      "filename_logged": true,
+      "requested_transparency_ok": true,
+      "background_samples": [
+        [
+          220,
+          224,
+          230
+        ],
+        [
+          224,
+          228,
+          234
+        ],
+        [
+          220,
+          226,
+          230
+        ],
+        [
+          221,
+          223,
+          230
+        ],
+        [
+          220,
+          224,
+          230
+        ]
+      ]
+    },
+    {
+      "id": "M2.6",
+      "file": "docs/референсы/mechanisms/mech_w2_crane_trolley.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "sha256": "b9f4c7a0cf6a6d6d6eaf14fa1b38f9ac5e58d478f20c37f5c203d6fe11bd972b",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "transparent_fraction": 0.0,
+      "near_opaque_fraction": 1.0,
+      "border_alpha_max": 255,
+      "bbox_alpha_nonzero": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "final_bytes_equal_generator_output": true,
+      "final_prompt_logged": true,
+      "filename_logged": true,
+      "requested_transparency_ok": true,
+      "background_samples": [
+        [
+          221,
+          224,
+          229
+        ],
+        [
+          224,
+          228,
+          232
+        ],
+        [
+          222,
+          226,
+          229
+        ],
+        [
+          222,
+          223,
+          228
+        ],
+        [
+          221,
+          224,
+          228
+        ]
+      ]
+    },
+    {
+      "id": "M2.7",
+      "file": "docs/референсы/mechanisms/mech_w2_wires_switch.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "sha256": "57ba174804fae4579d11229fccc1aea618d4c9301c8ea0c4e92efb8735d6c076",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "transparent_fraction": 0.0,
+      "near_opaque_fraction": 1.0,
+      "border_alpha_max": 255,
+      "bbox_alpha_nonzero": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "final_bytes_equal_generator_output": true,
+      "final_prompt_logged": true,
+      "filename_logged": true,
+      "requested_transparency_ok": true,
+      "background_samples": [
+        [
+          219,
+          223,
+          229
+        ],
+        [
+          223,
+          227,
+          232
+        ],
+        [
+          220,
+          225,
+          228
+        ],
+        [
+          220,
+          222,
+          229
+        ],
+        [
+          218,
+          222,
+          227
+        ]
+      ]
+    },
+    {
+      "id": "M2.8",
+      "file": "docs/референсы/mechanisms/mech_w2_fuse_keg.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "sha256": "b84098247c53b7f4254be7a9ea9b0eac455e2a1d80f4560e25f6aab93c8dda84",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "transparent_fraction": 0.0,
+      "near_opaque_fraction": 1.0,
+      "border_alpha_max": 255,
+      "bbox_alpha_nonzero": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "final_bytes_equal_generator_output": true,
+      "final_prompt_logged": true,
+      "filename_logged": true,
+      "requested_transparency_ok": true,
+      "background_samples": [
+        [
+          221,
+          226,
+          229
+        ],
+        [
+          225,
+          228,
+          233
+        ],
+        [
+          222,
+          226,
+          230
+        ],
+        [
+          223,
+          223,
+          229
+        ],
+        [
+          221,
+          223,
+          228
+        ]
+      ]
+    },
+    {
+      "id": "C2.1",
+      "file": "assets/tiles/world_02/source/w02_fill.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "sha256": "6ee583b1b3d5595338666dfcb3c7e56c75c47a4f1a68d1adb0c2bb3b32904f9f",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "transparent_fraction": 0.0,
+      "near_opaque_fraction": 1.0,
+      "border_alpha_max": 255,
+      "bbox_alpha_nonzero": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "final_bytes_equal_generator_output": true,
+      "final_prompt_logged": true,
+      "filename_logged": true,
+      "requested_transparency_ok": true,
+      "aspect_ratio": 1.0,
+      "opposite_edge_mean_absolute_rgb_difference": {
+        "horizontal": 23.36,
+        "vertical": 5.082
+      },
+      "opposite_edge_mean_absolute_alpha_difference": {
+        "horizontal": 0.0,
+        "vertical": 0.0
+      },
+      "luminance_mean_std": [
+        87.8,
+        20.87
+      ]
+    },
+    {
+      "id": "C2.2",
+      "file": "assets/tiles/world_02/source/w02_deep.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "sha256": "f0a338c1371e94fc77ee8bcd6b43d33516280ee9e3f1b97c04fda296751395a2",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "transparent_fraction": 0.0,
+      "near_opaque_fraction": 1.0,
+      "border_alpha_max": 255,
+      "bbox_alpha_nonzero": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "final_bytes_equal_generator_output": true,
+      "final_prompt_logged": true,
+      "filename_logged": true,
+      "requested_transparency_ok": true,
+      "aspect_ratio": 1.0,
+      "opposite_edge_mean_absolute_rgb_difference": {
+        "horizontal": 4.186,
+        "vertical": 4.995
+      },
+      "opposite_edge_mean_absolute_alpha_difference": {
+        "horizontal": 0.0,
+        "vertical": 0.0
+      },
+      "luminance_mean_std": [
+        79.54,
+        22.09
+      ]
+    },
+    {
+      "id": "C2.3",
+      "file": "assets/tiles/world_02/source/w02_top.png",
+      "size": [
+        2172,
+        724
+      ],
+      "mode": "RGBA",
+      "sha256": "1298cd924ca29ec20fc11a8ca0fd5c3b25562d7f05963c2aa94a1bba87f16e23",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_fraction": 0.836283,
+      "near_opaque_fraction": 0.144474,
+      "border_alpha_max": 255,
+      "bbox_alpha_nonzero": [
+        0,
+        0,
+        2172,
+        644
+      ],
+      "final_bytes_equal_generator_output": true,
+      "final_prompt_logged": true,
+      "filename_logged": true,
+      "requested_transparency_ok": true,
+      "aspect_ratio": 3.0,
+      "opposite_edge_mean_absolute_rgb_difference": {
+        "horizontal": 2.478,
+        "vertical": 0.0
+      },
+      "opposite_edge_mean_absolute_alpha_difference": {
+        "horizontal": 1.127,
+        "vertical": 0.0
+      },
+      "walk_line_estimate_fraction": 0.2928
+    },
+    {
+      "id": "C2.4",
+      "file": "assets/tiles/world_02/source/w02_side.png",
+      "size": [
+        724,
+        2172
+      ],
+      "mode": "RGBA",
+      "sha256": "99e2970ff6b7a284df127a7e8d594a735d0e8f0f10b7639d1b15576ca8883f2b",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_fraction": 0.548697,
+      "near_opaque_fraction": 0.443938,
+      "border_alpha_max": 255,
+      "bbox_alpha_nonzero": [
+        0,
+        0,
+        601,
+        2172
+      ],
+      "final_bytes_equal_generator_output": true,
+      "final_prompt_logged": true,
+      "filename_logged": true,
+      "requested_transparency_ok": true,
+      "aspect_ratio": 0.3333333333333333,
+      "opposite_edge_mean_absolute_rgb_difference": {
+        "horizontal": 96.371,
+        "vertical": 11.432
+      },
+      "opposite_edge_mean_absolute_alpha_difference": {
+        "horizontal": 252.946,
+        "vertical": 1.075
+      },
+      "right_half_alpha_max": 1,
+      "right_half_nonzero_alpha_pixels": 724
+    },
+    {
+      "id": "D2.1",
+      "file": "assets/decals/world_02/source/w02_decal_lantern.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "sha256": "db48af579d22eda1bfd5b027b28cecab2648b1cc52f61c21069caa65152e5aa3",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "transparent_fraction": 0.815357,
+      "near_opaque_fraction": 0.169326,
+      "border_alpha_max": 0,
+      "bbox_alpha_nonzero": [
+        65,
+        19,
+        1436,
+        1008
+      ],
+      "final_bytes_equal_generator_output": true,
+      "final_prompt_logged": true,
+      "filename_logged": true,
+      "requested_transparency_ok": true
+    },
+    {
+      "id": "D2.1.2",
+      "file": "assets/decals/world_02/source/w02_decal_lantern_2.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "sha256": "3441a6863139885bd2e32581c4d07e31a81cc072f52320e65f2cf31b140ad9ac",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "transparent_fraction": 0.855953,
+      "near_opaque_fraction": 0.130644,
+      "border_alpha_max": 0,
+      "bbox_alpha_nonzero": [
+        65,
+        36,
+        1394,
+        974
+      ],
+      "final_bytes_equal_generator_output": true,
+      "final_prompt_logged": true,
+      "filename_logged": true,
+      "requested_transparency_ok": true
+    },
+    {
+      "id": "D2.2",
+      "file": "assets/decals/world_02/source/w02_decal_steam.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "sha256": "a5bf399ef64066b97eb6d305a4bf78ed0dbba70257a16837df684cc912d648fe",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "transparent_fraction": 0.810354,
+      "near_opaque_fraction": 0.093217,
+      "border_alpha_max": 0,
+      "bbox_alpha_nonzero": [
+        65,
+        31,
+        1436,
+        990
+      ],
+      "final_bytes_equal_generator_output": true,
+      "final_prompt_logged": true,
+      "filename_logged": true,
+      "requested_transparency_ok": true
+    },
+    {
+      "id": "D2.2.2",
+      "file": "assets/decals/world_02/source/w02_decal_steam_2.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "sha256": "9f461120f4481513aa669d306b2630db49a00adbf0bc7c591eac8dea6896fd73",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "transparent_fraction": 0.735682,
+      "near_opaque_fraction": 0.160587,
+      "border_alpha_max": 1,
+      "bbox_alpha_nonzero": [
+        0,
+        9,
+        1364,
+        1000
+      ],
+      "final_bytes_equal_generator_output": true,
+      "final_prompt_logged": true,
+      "filename_logged": true,
+      "requested_transparency_ok": true
+    },
+    {
+      "id": "D2.3",
+      "file": "assets/decals/world_02/source/w02_decal_pipes.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "sha256": "8c34cefdd4a87e3d900c8aa7b90b806417aab6be558987b636dd6db23103131a",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "transparent_fraction": 0.79715,
+      "near_opaque_fraction": 0.174194,
+      "border_alpha_max": 0,
+      "bbox_alpha_nonzero": [
+        65,
+        18,
+        1448,
+        1010
+      ],
+      "final_bytes_equal_generator_output": true,
+      "final_prompt_logged": true,
+      "filename_logged": true,
+      "requested_transparency_ok": true
+    },
+    {
+      "id": "D2.3.2",
+      "file": "assets/decals/world_02/source/w02_decal_pipes_2.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "sha256": "20f93fc3da33eaf3a8bce22deff3ed5fc3dce29df5f072f6a6c5efe8b0907bdb",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "transparent_fraction": 0.882358,
+      "near_opaque_fraction": 0.100775,
+      "border_alpha_max": 0,
+      "bbox_alpha_nonzero": [
+        65,
+        32,
+        1436,
+        982
+      ],
+      "final_bytes_equal_generator_output": true,
+      "final_prompt_logged": true,
+      "filename_logged": true,
+      "requested_transparency_ok": true
+    },
+    {
+      "id": "D2.4",
+      "file": "assets/decals/world_02/source/w02_decal_banner.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "sha256": "3dca6e485cc3eb09c9388f0396bd3a5cae045d34104c326c865ffb9da1bf798b",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "transparent_fraction": 0.753397,
+      "near_opaque_fraction": 0.234987,
+      "border_alpha_max": 0,
+      "bbox_alpha_nonzero": [
+        65,
+        36,
+        1340,
+        965
+      ],
+      "final_bytes_equal_generator_output": true,
+      "final_prompt_logged": true,
+      "filename_logged": true,
+      "requested_transparency_ok": true
+    },
+    {
+      "id": "D2.4.2",
+      "file": "assets/decals/world_02/source/w02_decal_banner_2.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "sha256": "9b45944a6104bb05706726528f7e85c9e5180e28c4fe1ef6b6f8df987b3a1f2e",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "transparent_fraction": 0.739915,
+      "near_opaque_fraction": 0.248816,
+      "border_alpha_max": 1,
+      "bbox_alpha_nonzero": [
+        0,
+        31,
+        1344,
+        965
+      ],
+      "final_bytes_equal_generator_output": true,
+      "final_prompt_logged": true,
+      "filename_logged": true,
+      "requested_transparency_ok": true
+    },
+    {
+      "id": "D2.5",
+      "file": "assets/decals/world_02/source/w02_decal_soot_moss.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "sha256": "6afaaa1650d109f2f784a6dc98df46de6e62aef69d1916c0667f0b907a3aaa38",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "transparent_fraction": 0.862178,
+      "near_opaque_fraction": 0.098003,
+      "border_alpha_max": 1,
+      "bbox_alpha_nonzero": [
+        0,
+        21,
+        1490,
+        982
+      ],
+      "final_bytes_equal_generator_output": true,
+      "final_prompt_logged": true,
+      "filename_logged": true,
+      "requested_transparency_ok": true
+    },
+    {
+      "id": "D2.5.2",
+      "file": "assets/decals/world_02/source/w02_decal_soot_moss_2.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "sha256": "7bba6ca0ebb3ac08586fa07f51c5af8697968feec454258b46bc6e08d2f56607",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "transparent_fraction": 0.851924,
+      "near_opaque_fraction": 0.111451,
+      "border_alpha_max": 0,
+      "bbox_alpha_nonzero": [
+        63,
+        21,
+        1361,
+        952
+      ],
+      "final_bytes_equal_generator_output": true,
+      "final_prompt_logged": true,
+      "filename_logged": true,
+      "requested_transparency_ok": true
+    }
+  ],
+  "z3_correction": {
+    "id": "Z3",
+    "path": "D:/Cluade projects/games/Glue/assets/backgrounds/world_01/v2/source/w01_v2_far_canyon.png",
+    "generated_source": "C:/Users/Марат/.codex/generated_images/01a0fe7f-089d-7071-9b6f-2f5687fa78c2/exec-2d838a98-79c0-40c7-ba4c-01d4ca8563c2.png",
+    "refs": [
+      "D:/Cluade projects/games/Glue/assets/backgrounds/world_01/v2/source/w01_v2_far_canyon.png",
+      "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+      "D:/Cluade projects/games/Glue/assets/backgrounds/world_01/v2/source/w01_v2_far_valley.png"
+    ],
+    "prompt": "Image 1 is the edit target, the approved far canyon background. Images 2 and 3 are the original style references only. Keep everything the same, but move the two lifting towers away from the left and right edges and lower them so they stand near the horizon line, not in the top corners; leave the left and right edges simple, only sky, haze and distant cliffs. Preserve the palette, sky, neutral white balance, existing soft mist in the 40–80% height band, aspect ratio and original hand-painted style. No text.",
+    "native_size": [
+      1536,
+      1024
+    ],
+    "sha256": "b9971ea270ba2d1dcd38d92c361429ebdb5d7964e165612f627b8e5c84fa4821",
+    "final_bytes_equal_generator_output": true
+  },
+  "summary": {
+    "world2_files": 24,
+    "opaque_files": 12,
+    "transparent_files": 12,
+    "all_names_and_prompts_logged": true,
+    "all_native_generator_bytes_preserved": true,
+    "all_requested_alpha_modes_ok": true
+  },
+  "visual_review_notes": [
+    {
+      "ids": [
+        "E2",
+        "E3",
+        "M2.1",
+        "M2.2",
+        "M2.3",
+        "M2.4",
+        "M2.5",
+        "M2.6",
+        "M2.7",
+        "M2.8"
+      ],
+      "issue": "Scale figures are approximate; use Size in the assignment when building models. Some views show top-face perspective and a faint texture/gradient in the grey background."
+    },
+    {
+      "ids": [
+        "E3"
+      ],
+      "issue": "Primary body is near half-player height after correction, but bounding box with detached flames is taller. Miniature bounce scale is not exactly half-player height."
+    },
+    {
+      "ids": [
+        "M2.2",
+        "M2.3"
+      ],
+      "issue": "Primary view serves as the idle/horizontal state; it is not repeated in the miniature row. All gameplay states are present."
+    },
+    {
+      "ids": [
+        "M2.4",
+        "M2.5"
+      ],
+      "issue": "Some active player examples are grey; these are not additional frozen states."
+    },
+    {
+      "ids": [
+        "M2.5",
+        "M2.7",
+        "M2.8"
+      ],
+      "issue": "Primary bellows, switch box and keg are too large relative to the red player; wire is too thick. Follow Size in the assignment."
+    },
+    {
+      "ids": [
+        "C2.1",
+        "C2.2",
+        "C2.3",
+        "C2.4"
+      ],
+      "issue": "Seams need blending; the C2.1 horizontal seam is most apparent."
+    },
+    {
+      "ids": [
+        "C2.3",
+        "C2.4"
+      ],
+      "issue": "Native ratios 3:1 and 1:3 instead of requested 4:1 and 1:4. Preserved without resizing or upscale."
+    },
+    {
+      "ids": [
+        "C2.4"
+      ],
+      "issue": "Visually empty right half contains residual alpha 1/255 pixels."
+    },
+    {
+      "ids": [
+        "D2.2",
+        "D2.2.2"
+      ],
+      "issue": "Steam is warm cream with relatively dense lobes."
+    },
+    {
+      "ids": [
+        "D2.5",
+        "D2.5.2"
+      ],
+      "issue": "Dark olive moss has yellow-olive highlights; second variant has a slight top view."
+    },
+    {
+      "ids": [
+        "D2.2.2",
+        "D2.4.2",
+        "D2.5"
+      ],
+      "issue": "Nearly invisible alpha 1/255 pixels touch a canvas edge."
+    }
+  ],
+  "browser_review": {
+    "gallery": "docs/11_графика_мир_2_галерея.html",
+    "images_loaded": 25,
+    "broken_images": 0,
+    "checks": [
+      "All ten decals composited on a light background: no visible black backdrop or broad raw-RGB halo.",
+      "Top and side strips composited on a dark background.",
+      "Brick and stone fill repetition preview inspected."
+    ],
+    "reviewer": "Codex"
+  }
+}

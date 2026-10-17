@@ -13,6 +13,21 @@ enum { LEFT, RIGHT, JUMP, FREEZE, GRAB }
 var game: Node
 var a: Player
 var b: Player
+## «Человеческий» режим (аргумент human=<зерно>): реакция запаздывает, точка остановки и прицел
+## прыжка разбросаны — так проверяется, что уровень проходим не только с точностью бота.
+var human := false
+var rng := RandomNumberGenerator.new()
+
+
+## Разброс ±px в человеческом режиме.
+func _jit(px: float) -> float:
+	return rng.randf_range(-px, px) if human else 0.0
+
+
+## Запаздывание реакции человека: 4–14 кадров (0,07–0,23 с).
+func _react() -> void:
+	if human:
+		await frames(rng.randi_range(4, 14))
 
 
 func _keys(p: Player) -> Array[Key]:
@@ -99,6 +114,7 @@ func _pull_up(top: Player, low: Player, away: int) -> void:
 
 ## Бот бежит к target_x и перепрыгивает препятствия и ямы на пути.
 func _run_to(p: Player, target_x: float, max_frames := 900) -> void:
+	target_x += _jit(16.0)
 	var dir := 1 if target_x > p.global_position.x else -1
 	var k := _keys(p)
 	var key := k[RIGHT] if dir > 0 else k[LEFT]
@@ -106,9 +122,9 @@ func _run_to(p: Player, target_x: float, max_frames := 900) -> void:
 	var jump_frames := 0
 	press(key, true)
 	for i in max_frames:
-		if (p.global_position.x - target_x) * dir >= 0.0:
+		if (p.global_position.x - target_x) * dir >= 0.0 or not p.alive:
 			break
-		if p.alive and p.is_on_floor() and jump_frames == 0:
+		if p.is_on_floor() and jump_frames == 0:
 			var ahead := p.global_position + Vector2(36.0 * dir, 0.0)
 			var query := PhysicsRayQueryParameters2D.create(ahead, ahead + Vector2(0, 100.0),
 					Player.LAYER_WORLD | Crate.LAYER_OBJECTS | Player.LAYER_PLAYERS, [p.get_rid()])
@@ -123,13 +139,13 @@ func _run_to(p: Player, target_x: float, max_frames := 900) -> void:
 
 
 ## «Ступенька в воздухе»: А с разбега прыгает с края и замирает, когда, падая, опустится
-## до freeze_above px над уровнем берега. Б с разбега прыгает, приземляется на голову А
+## до freeze_above px над уровнем берега. Б с разбега (q_run px) прыгает, приземляется на голову А
 ## и прыгает дальше — на дальний берег (far_x — его край, far_top — его верх).
 func _air_step(p: Player, kp: Array[Key], q: Player, kq: Array[Key], edge_x: float, far_x: float,
-		far_top: float, freeze_above: float) -> bool:
+		far_top: float, freeze_above: float, q_run := 420.0) -> bool:
 	var bank_top := p.global_position.y + Player.SIZE.y / 2.0 + 1.0
 	place(p, Vector2(edge_x - 160.0, p.global_position.y))
-	place(q, Vector2(edge_x - 420.0, q.global_position.y))
+	place(q, Vector2(edge_x - q_run, q.global_position.y))
 	await frames(10)
 	press(kp[RIGHT], true)
 	var jumped := false
@@ -242,6 +258,7 @@ func _onto_head(q: Player, p: Player) -> void:
 
 ## Идёт к x (влево или вправо); останавливается, дойдя.
 func _walk_to(p: Player, k: Array[Key], x: float, max_frames := 600) -> void:
+	x += _jit(16.0)
 	var right := x > p.global_position.x
 	var key := k[RIGHT] if right else k[LEFT]
 	press(key, true)
@@ -282,6 +299,7 @@ func _jump(p: Player, k: Array[Key], direction: int, count: int) -> void:
 
 ## Прыжок к target_x с подруливанием в воздухе (после delay кадров): на площадку или уступ.
 func _hop_to(p: Player, target_x: float, delay := 0) -> void:
+	target_x += _jit(20.0)
 	var k := _keys(p)
 	press(k[JUMP], true)
 	for i in 100:
@@ -301,6 +319,7 @@ func _hop_to(p: Player, target_x: float, delay := 0) -> void:
 
 ## Прыжок к target_x с торможением в воздухе: приземляется точно (±10 px) — на узкое место.
 func _hop_exact(p: Player, target_x: float) -> void:
+	target_x += _jit(16.0)
 	var k := _keys(p)
 	press(k[JUMP], true)
 	for i in 100:
@@ -331,13 +350,19 @@ func _both_to_finish() -> void:
 	var door_x: float = game.level.get_finish().global_position.x
 	var first := b if b.global_position.x > a.global_position.x else a
 	var second := a if first == b else b
+	var was_human := human  # в дверь — без разброса: проверяется уровень, а не меткость шага в проём
+	human = false
 	await _walk_to(first, KEYS_2 if first == b else KEYS_1, door_x + 30.0)
 	await _walk_to(second, KEYS_2 if second == b else KEYS_1, door_x - 30.0)
+	human = was_human
 	await frames(5)
 
 
 ## Перезапускает игру на другом уровне; подключённые игроки остаются.
 func _load(level: PackedScene) -> void:
+	# Клавиша, оставшаяся зажатой в конце прошлого уровня, иначе едет в следующий.
+	for key: Key in KEYS_1 + KEYS_2:
+		press(key, false)
 	game.queue_free()
 	await frames(2)
 	game = GAME_SCENE.instantiate()
@@ -349,3 +374,21 @@ func _load(level: PackedScene) -> void:
 ## Центр стоящего игрока над полом с верхом на высоте row тайлов.
 func _stand_y(row: float) -> float:
 	return row * TILE - Player.SIZE.y / 2.0 - 1.0
+
+
+## Ждёт гибели p (до 2 с); true — погиб.
+func _dies(p: Player) -> bool:
+	for i in 120:
+		if not p.alive:
+			return true
+		await get_tree().physics_frame
+	return not p.alive
+
+
+## Ждёт общего респавна команды после гибели.
+func _respawned() -> void:
+	for i in 180:
+		await get_tree().physics_frame
+		if a.alive and b.alive:
+			break
+	await frames(20)

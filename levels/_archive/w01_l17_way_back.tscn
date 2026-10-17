@@ -1,0 +1,84 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://src/level/greybox_level.gd" id="1"]
+[ext_resource type="PackedScene" path="res://levels/backdrops/w01_viaduct.tscn" id="bd"]
+[ext_resource type="Script" path="res://src/level/backdrop_layer.gd" id="bl"]
+[ext_resource type="Texture2D" path="res://assets/backgrounds/world_01/v2/source/w01_v2_lm17_twin_gates.png" id="lm"]
+[ext_resource type="Script" path="res://src/mechanisms/crate.gd" id="2"]
+[ext_resource type="Script" path="res://src/mechanisms/pressure_plate.gd" id="3"]
+[ext_resource type="Script" path="res://src/mechanisms/door.gd" id="4"]
+[ext_resource type="Script" path="res://src/mechanisms/press.gd" id="5"]
+[ext_resource type="Script" path="res://src/mechanisms/finish.gd" id="6"]
+
+[node name="WayBack" type="Node2D"]
+script = ExtResource("1")
+title = "17 · Обратный путь"
+ground_fill = "w01_viaduct_fill"
+blocks = Array[Rect2]([Rect2(0, -8, 1, 30), Rect2(0, 12, 8, 10), Rect2(10, 12, 4, 0.5), Rect2(14, 8, 14, 4.5), Rect2(8, 15, 26, 7), Rect2(34, 11, 45, 11), Rect2(37, 10, 6, 1), Rect2(51, -8, 1, 16), Rect2(57, -8, 2, 16), Rect2(59, -8, 10, 13), Rect2(69, -8, 2, 16), Rect2(79, -8, 1, 30)])
+checkpoints = Array[Vector2]([Vector2(3, 12), Vector2(35, 11), Vector2(55, 11)])
+bounds_tiles = Rect2(0, -8, 80, 30)
+kill_y_tiles = 21.0
+
+[node name="Latch1" type="AnimatableBody2D" parent="."]
+position = Vector2(1152, 512)
+script = ExtResource("3")
+latch = true
+
+[node name="Door1" type="AnimatableBody2D" parent="."]
+position = Vector2(1664, 800)
+script = ExtResource("4")
+size_tiles = Vector2(1, 2.5)
+triggers = Array[NodePath]([NodePath("../Latch1")])
+open_offset_tiles = Vector2(0, -2.5)
+
+[node name="Crate" type="CharacterBody2D" parent="."]
+position = Vector2(1600, 480)
+script = ExtResource("2")
+
+[node name="Plate2" type="AnimatableBody2D" parent="."]
+position = Vector2(2976, 704)
+script = ExtResource("3")
+width_tiles = 6.0
+
+[node name="Door2" type="AnimatableBody2D" parent="."]
+position = Vector2(3264, 512)
+script = ExtResource("4")
+triggers = Array[NodePath]([NodePath("../Plate2")])
+invert = true
+keep_open = Array[NodePath]([NodePath("../Latch2")])
+
+[node name="Latch2" type="AnimatableBody2D" parent="."]
+position = Vector2(3456, 704)
+script = ExtResource("3")
+latch = true
+
+[node name="Press" type="AnimatableBody2D" parent="."]
+position = Vector2(3776, 320)
+script = ExtResource("5")
+size_tiles = Vector2(10, 3)
+top_wait = 1.0
+hold = NodePath("../StopLatch")
+
+[node name="StopLatch" type="AnimatableBody2D" parent="."]
+position = Vector2(4672, 704)
+script = ExtResource("3")
+latch = true
+
+[node name="Finish" type="Node2D" parent="."]
+position = Vector2(4864, 704)
+script = ExtResource("6")
+
+[node name="Backdrop" parent="." instance=ExtResource("bd")]
+
+[node name="Landmark" type="Node2D" parent="Backdrop"]
+script = ExtResource("bl")
+texture = ExtResource("lm")
+parallax = 0.3
+parallax_y = 0.1
+height = 0.5
+center_y = 0.46
+zoom_follow = 0.3
+repeat = false
+world_x = 2048.0
+haze = 0.22
+haze_color = Color(0.953, 0.890, 0.800, 1)

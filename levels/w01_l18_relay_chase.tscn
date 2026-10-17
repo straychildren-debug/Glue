@@ -1,0 +1,323 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://src/level/greybox_level.gd" id="1"]
+[ext_resource type="PackedScene" path="res://levels/backdrops/w01_pass.tscn" id="bd"]
+[ext_resource type="Script" path="res://src/level/backdrop_layer.gd" id="bl"]
+[ext_resource type="Texture2D" path="res://assets/backgrounds/world_01/v2/source/w01_v2_lm25_pass_towers.png" id="lm"]
+[ext_resource type="Script" path="res://src/mechanisms/pressure_plate.gd" id="plate"]
+[ext_resource type="Script" path="res://src/mechanisms/door.gd" id="door"]
+[ext_resource type="Script" path="res://src/mechanisms/saw.gd" id="saw"]
+[ext_resource type="Script" path="res://src/mechanisms/press.gd" id="press"]
+[ext_resource type="Script" path="res://src/mechanisms/spikes.gd" id="spikes"]
+[ext_resource type="Script" path="res://src/mechanisms/conveyor.gd" id="belt"]
+[ext_resource type="Script" path="res://src/mechanisms/finish.gd" id="finish"]
+[ext_resource type="Script" path="res://src/mechanisms/crusher.gd" id="crusher"]
+
+[node name="W01L18" type="Node2D"]
+script = ExtResource("1")
+title = "18 · Эстафета под обвалом"
+blocks = Array[Rect2]([Rect2(0, -8, 1, 26), Rect2(61, -8, 1, 26), Rect2(0, 12, 9.5, 6), Rect2(11.5, 12, 3.3, 6), Rect2(9.5, 14.5, 2, 3.5), Rect2(34.4, 14.5, 1.8, 3.5), Rect2(36.2, 12, 1, 6), Rect2(37.2, 14.5, 1.8, 3.5), Rect2(1, -8, 22, 11), Rect2(23, -8, 3, 7), Rect2(26, -8, 10.5, 11), Rect2(36.5, -8, 4, 7), Rect2(40.5, -8, 20.5, 11), Rect2(5, 7, 50, 1), Rect2(1, 10, 1.5, 2), Rect2(3.2, 8.5, 1.3, 0.5), Rect2(14.8, 12, 1.8, 6), Rect2(16.6, 14.5, 2.2, 3.5), Rect2(18.8, 12, 15.6, 6), Rect2(39, 12, 8, 6), Rect2(47, 14.5, 1, 3.5), Rect2(48, 12, 13, 6)])
+checkpoints = Array[Vector2]([Vector2(3, 12)])
+bounds_tiles = Rect2(0, -8, 62, 27)
+kill_y_tiles = 19.0
+
+[node name="ButtonU1" type="AnimatableBody2D" parent="."]
+position = Vector2(544, 448)
+script = ExtResource("plate")
+width_tiles = 1.0
+pulse = 0.4
+mark_color = Color(0.95, 0.6, 0.2, 1)
+
+[node name="SawU" type="Node2D" parent="."]
+position = Vector2(883.2, 230.4)
+script = ExtResource("saw")
+radius_tiles = 0.5
+path_tiles = Vector2(0, 2.9)
+speed = 260.0
+start_at = 0.0
+start_forward = true
+
+[node name="GateU1" type="AnimatableBody2D" parent="."]
+position = Vector2(928, 192)
+script = ExtResource("door")
+size_tiles = Vector2(1, 4)
+triggers = Array[NodePath]([NodePath("../ButtonL1")])
+open_offset_tiles = Vector2(0, -3.5)
+mark_color = Color(0.4, 0.7, 0.95, 1)
+
+[node name="ButtonU2" type="AnimatableBody2D" parent="."]
+position = Vector2(1120, 448)
+script = ExtResource("plate")
+width_tiles = 1.0
+pulse = 0.6
+mark_color = Color(0.35, 0.8, 0.4, 1)
+
+[node name="PressU" type="AnimatableBody2D" parent="."]
+position = Vector2(1472, -64)
+script = ExtResource("press")
+size_tiles = Vector2(3, 4)
+drop_tiles = 4.0
+top_wait = 0.25
+
+[node name="GateU2" type="AnimatableBody2D" parent="."]
+position = Vector2(1664, 192)
+script = ExtResource("door")
+size_tiles = Vector2(1, 4)
+triggers = Array[NodePath]([NodePath("../ButtonL2")])
+open_offset_tiles = Vector2(0, -3.5)
+mark_color = Color(0.7, 0.45, 0.95, 1)
+
+[node name="ButtonU3" type="AnimatableBody2D" parent="."]
+position = Vector2(1792, 448)
+script = ExtResource("plate")
+width_tiles = 1.0
+pulse = 0.25
+mark_color = Color(0.95, 0.85, 0.3, 1)
+
+[node name="SawU2" type="Node2D" parent="."]
+position = Vector2(1939.2, 230.4)
+script = ExtResource("saw")
+radius_tiles = 0.5
+path_tiles = Vector2(0, 2.9)
+speed = 260.0
+start_at = 0.0
+start_forward = true
+
+[node name="SawU3" type="Node2D" parent="."]
+position = Vector2(2041.6, 230.4)
+script = ExtResource("saw")
+radius_tiles = 0.5
+path_tiles = Vector2(0, 2.9)
+speed = 260.0
+start_at = 0.38
+start_forward = false
+
+[node name="GateU3" type="AnimatableBody2D" parent="."]
+position = Vector2(2076.8, 192)
+script = ExtResource("door")
+size_tiles = Vector2(1, 4)
+triggers = Array[NodePath]([NodePath("../ButtonL3")])
+open_offset_tiles = Vector2(0, -3.5)
+mark_color = Color(0.3, 0.8, 0.75, 1)
+
+[node name="ButtonU4" type="AnimatableBody2D" parent="."]
+position = Vector2(2240, 448)
+script = ExtResource("plate")
+width_tiles = 1.0
+pulse = 0.6
+mark_color = Color(0.95, 0.5, 0.7, 1)
+
+[node name="PressU2" type="AnimatableBody2D" parent="."]
+position = Vector2(2336, -64)
+script = ExtResource("press")
+size_tiles = Vector2(4, 4)
+drop_tiles = 4.0
+top_wait = 0.25
+rise_speed = 320.0
+
+[node name="GateU4" type="AnimatableBody2D" parent="."]
+position = Vector2(2592, 192)
+script = ExtResource("door")
+size_tiles = Vector2(1, 4)
+triggers = Array[NodePath]([NodePath("../ButtonL4")])
+open_offset_tiles = Vector2(0, -3.5)
+mark_color = Color(0.88, 0.88, 0.92, 1)
+
+[node name="ButtonU5" type="AnimatableBody2D" parent="."]
+position = Vector2(2745.6, 448)
+script = ExtResource("plate")
+width_tiles = 1.0
+pulse = 0.4
+mark_color = Color(0.65, 0.9, 0.3, 1)
+
+[node name="SawU4" type="Node2D" parent="."]
+position = Vector2(2816, 398)
+script = ExtResource("saw")
+radius_tiles = 0.4
+path_tiles = Vector2(3.2, 0)
+speed = 360.0
+
+[node name="GateU5" type="AnimatableBody2D" parent="."]
+position = Vector2(3046.4, 192)
+script = ExtResource("door")
+size_tiles = Vector2(1, 4)
+triggers = Array[NodePath]([NodePath("../ButtonL5")])
+open_offset_tiles = Vector2(0, -3.5)
+mark_color = Color(0.7, 0.5, 0.3, 1)
+
+[node name="ButtonU6" type="AnimatableBody2D" parent="."]
+position = Vector2(3328, 448)
+script = ExtResource("plate")
+width_tiles = 1.0
+pulse = 0.3
+mark_color = Color(0.9, 0.3, 0.3, 1)
+
+[node name="SpikesL" type="Node2D" parent="."]
+position = Vector2(672, 928)
+script = ExtResource("spikes")
+width_tiles = 2.0
+
+[node name="GateL1" type="AnimatableBody2D" parent="."]
+position = Vector2(736, 512)
+script = ExtResource("door")
+size_tiles = Vector2(1, 4)
+triggers = Array[NodePath]([NodePath("../ButtonU1")])
+open_offset_tiles = Vector2(0, 4)
+open_speed = 480.0
+mark_color = Color(0.95, 0.6, 0.2, 1)
+
+[node name="ButtonL1" type="AnimatableBody2D" parent="."]
+position = Vector2(896, 768)
+script = ExtResource("plate")
+width_tiles = 1.0
+pulse = 0.3
+mark_color = Color(0.4, 0.7, 0.95, 1)
+
+[node name="SpikesPitSaw" type="Node2D" parent="."]
+position = Vector2(1132.8, 928)
+script = ExtResource("spikes")
+width_tiles = 2.2
+
+[node name="SawOverPit" type="Node2D" parent="."]
+position = Vector2(1081.6, 672)
+script = ExtResource("saw")
+radius_tiles = 0.45
+path_tiles = Vector2(1.6, 0)
+speed = 150.0
+
+[node name="GateL2" type="AnimatableBody2D" parent="."]
+position = Vector2(1203.2, 512)
+script = ExtResource("door")
+size_tiles = Vector2(1, 4)
+triggers = Array[NodePath]([NodePath("../ButtonU2")])
+open_offset_tiles = Vector2(0, 4)
+open_speed = 480.0
+mark_color = Color(0.35, 0.8, 0.4, 1)
+
+[node name="ButtonL2" type="AnimatableBody2D" parent="."]
+position = Vector2(1510.4, 768)
+script = ExtResource("plate")
+width_tiles = 1.0
+pulse = 0.25
+mark_color = Color(0.7, 0.45, 0.95, 1)
+
+[node name="SawL" type="Node2D" parent="."]
+position = Vector2(1753.6, 718)
+script = ExtResource("saw")
+radius_tiles = 0.4
+path_tiles = Vector2(2.8, 0)
+speed = 240.0
+
+[node name="GateL3" type="AnimatableBody2D" parent="."]
+position = Vector2(1984, 512)
+script = ExtResource("door")
+size_tiles = Vector2(1, 4)
+triggers = Array[NodePath]([NodePath("../ButtonU3")])
+open_offset_tiles = Vector2(0, 4)
+open_speed = 900.0
+mark_color = Color(0.95, 0.85, 0.3, 1)
+
+[node name="ButtonL3" type="AnimatableBody2D" parent="."]
+position = Vector2(2112, 768)
+script = ExtResource("plate")
+width_tiles = 1.0
+pulse = 0.25
+mark_color = Color(0.3, 0.8, 0.75, 1)
+
+[node name="SpikesPit1" type="Node2D" parent="."]
+position = Vector2(2259.2, 928)
+script = ExtResource("spikes")
+width_tiles = 1.8
+
+[node name="SpikesPit2" type="Node2D" parent="."]
+position = Vector2(2438.4, 928)
+script = ExtResource("spikes")
+width_tiles = 1.8
+
+[node name="GateL4" type="AnimatableBody2D" parent="."]
+position = Vector2(2496, 512)
+script = ExtResource("door")
+size_tiles = Vector2(1, 4)
+triggers = Array[NodePath]([NodePath("../ButtonU4")])
+open_offset_tiles = Vector2(0, 4)
+open_speed = 480.0
+mark_color = Color(0.95, 0.5, 0.7, 1)
+
+[node name="ButtonL4" type="AnimatableBody2D" parent="."]
+position = Vector2(2624, 768)
+script = ExtResource("plate")
+width_tiles = 1.0
+pulse = 0.25
+mark_color = Color(0.88, 0.88, 0.92, 1)
+
+[node name="SawL2" type="Node2D" parent="."]
+position = Vector2(2764.8, 718)
+script = ExtResource("saw")
+radius_tiles = 0.4
+path_tiles = Vector2(3.0, 0)
+speed = 240.0
+
+[node name="SpikesPit3" type="Node2D" parent="."]
+position = Vector2(3040, 928)
+script = ExtResource("spikes")
+width_tiles = 1.0
+
+[node name="GateL5" type="AnimatableBody2D" parent="."]
+position = Vector2(3072, 512)
+script = ExtResource("door")
+size_tiles = Vector2(1, 4)
+triggers = Array[NodePath]([NodePath("../ButtonU5")])
+open_offset_tiles = Vector2(0, 4)
+open_speed = 480.0
+mark_color = Color(0.65, 0.9, 0.3, 1)
+
+[node name="ButtonL5" type="AnimatableBody2D" parent="."]
+position = Vector2(3174.4, 768)
+script = ExtResource("plate")
+width_tiles = 1.0
+pulse = 0.3
+mark_color = Color(0.7, 0.5, 0.3, 1)
+
+[node name="ButtonL6" type="AnimatableBody2D" parent="."]
+position = Vector2(3328, 768)
+script = ExtResource("plate")
+width_tiles = 1.0
+pulse = 0.3
+mark_color = Color(0.9, 0.3, 0.3, 1)
+
+[node name="Exit" type="AnimatableBody2D" parent="."]
+position = Vector2(3520, 192)
+script = ExtResource("door")
+size_tiles = Vector2(1, 9)
+triggers = Array[NodePath]([NodePath("../ButtonU6"), NodePath("../ButtonL6")])
+require_all = true
+stay_open = true
+open_offset_tiles = Vector2(0, -8.5)
+mark_color = Color(0.9, 0.3, 0.3, 1)
+
+[node name="Finish" type="Node2D" parent="."]
+position = Vector2(3744, 768)
+script = ExtResource("finish")
+
+[node name="Crusher" type="Node2D" parent="."]
+position = Vector2(-160, -512)
+script = ExtResource("crusher")
+height_tiles = 27.0
+speed = 55.0
+start_x_tiles = 6.5
+stop_x_tiles = 56.0
+catch_up_tiles = 9.0
+
+[node name="Backdrop" parent="." instance=ExtResource("bd")]
+
+[node name="Landmark" type="Node2D" parent="Backdrop"]
+script = ExtResource("bl")
+texture = ExtResource("lm")
+parallax = 0.3
+parallax_y = 0.1
+height = 0.5
+center_y = 0.46
+zoom_follow = 0.3
+repeat = false
+world_x = 1389.0
+haze = 0.3

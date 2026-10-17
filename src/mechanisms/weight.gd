@@ -32,6 +32,12 @@ static func total_on(node: Node) -> float:
 	return total
 
 
+## Все опоры-концы и нагрузки на них: опора -> Array[Dictionary] {body, mass, contact}.
+static func all_loads(tree: SceneTree) -> Dictionary:
+	_refresh(tree)
+	return _loads
+
+
 ## Тела, которые опираются прямо на node (стоят на нём или висят на нём).
 static func riders_of(node: Node) -> Array:
 	_refresh(node.get_tree())

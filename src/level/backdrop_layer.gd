@@ -27,13 +27,21 @@ extends Node2D
 ## Так слой отодвигается вглубь и меньше спорит с игроками.
 @export_range(0.0, 1.0) var haze := 0.0
 @export var haze_color := Color("cfe2f5")
+## Ориентир (без повтора) плавно тает к левому и правому краю на эту долю ширины:
+## туман и обрезанные кусты у края картинки не дают резкой вертикальной границы.
+const EDGE_FADE := 0.08
 
 const HAZE_SHADER := """
 shader_type canvas_item;
 uniform vec4 haze_color : source_color;
 uniform float haze = 0.0;
+uniform float edge_fade = 0.0;
 void fragment() {
-	COLOR = vec4(mix(COLOR.rgb, haze_color.rgb, haze), COLOR.a);
+	float edge = 1.0;
+	if (edge_fade > 0.0) {
+		edge = smoothstep(0.0, edge_fade, UV.x) * smoothstep(0.0, edge_fade, 1.0 - UV.x);
+	}
+	COLOR = vec4(mix(COLOR.rgb, haze_color.rgb, haze), COLOR.a * edge);
 }
 """
 static var _haze_shader: Shader
@@ -44,7 +52,7 @@ var _view_width := 0.0
 
 
 func _ready() -> void:
-	if haze <= 0.0:
+	if haze <= 0.0 and repeat:
 		return
 	if _haze_shader == null:
 		_haze_shader = Shader.new()
@@ -53,6 +61,7 @@ func _ready() -> void:
 	shader_material.shader = _haze_shader
 	shader_material.set_shader_parameter("haze_color", haze_color)
 	shader_material.set_shader_parameter("haze", haze)
+	shader_material.set_shader_parameter("edge_fade", 0.0 if repeat else EDGE_FADE)
 	material = shader_material
 
 

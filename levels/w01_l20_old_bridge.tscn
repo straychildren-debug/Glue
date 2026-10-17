@@ -1,0 +1,132 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://src/level/greybox_level.gd" id="1"]
+[ext_resource type="PackedScene" path="res://levels/backdrops/w01_viaduct_sunset.tscn" id="bd"]
+[ext_resource type="Script" path="res://src/level/backdrop_layer.gd" id="bl"]
+[ext_resource type="Texture2D" path="res://assets/backgrounds/world_01/v2/source/w01_v2_lm20_viaduct_keep.png" id="lm"]
+[ext_resource type="Script" path="res://src/mechanisms/seesaw.gd" id="2"]
+[ext_resource type="Script" path="res://src/mechanisms/door.gd" id="3"]
+[ext_resource type="Script" path="res://src/mechanisms/pressure_plate.gd" id="4"]
+[ext_resource type="Script" path="res://src/mechanisms/hook.gd" id="5"]
+[ext_resource type="Script" path="res://src/mechanisms/spikes.gd" id="6"]
+[ext_resource type="Script" path="res://src/mechanisms/press.gd" id="7"]
+[ext_resource type="Script" path="res://src/mechanisms/ghost.gd" id="8"]
+[ext_resource type="Script" path="res://src/mechanisms/finish.gd" id="9"]
+[ext_resource type="Script" path="res://src/mechanisms/crusher.gd" id="crusher"]
+
+[node name="OldBridge" type="Node2D"]
+script = ExtResource("1")
+title = "20 · Старый мост"
+ground_fill = "w01_viaduct_fill"
+blocks = Array[Rect2]([Rect2(0, -8, 1, 30), Rect2(0, 12, 22, 10), Rect2(4, 10.5, 2, 1.5), Rect2(6, 9, 2, 3), Rect2(8, 7.5, 2, 4.5), Rect2(10, 6, 3, 6), Rect2(22, 6.75, 6, 15.25), Rect2(27, 5.75, 1, 1), Rect2(28, 12, 32, 10), Rect2(33, 11, 6, 1), Rect2(48, -8, 1, 17), Rect2(60, 14, 10, 8), Rect2(70, 12, 34, 10), Rect2(76, -8, 1, 18), Rect2(81, -8, 2, 17), Rect2(83, -8, 10, 14), Rect2(93, -8, 2, 17), Rect2(110, 12, 10, 10), Rect2(120, 9, 10, 13), Rect2(125, -8, 1, 14), Rect2(130, -8, 1, 30)])
+checkpoints = Array[Vector2]([Vector2(2, 12), Vector2(54, 12)])
+bounds_tiles = Rect2(0, -8, 131, 30)
+kill_y_tiles = 20.0
+
+[node name="Seesaw1" type="Node2D" parent="."]
+position = Vector2(1056, 704)
+script = ExtResource("2")
+start_side = 1
+
+[node name="Step" type="AnimatableBody2D" parent="."]
+position = Vector2(1408, 640)
+script = ExtResource("3")
+size_tiles = Vector2(1.5, 0.5)
+triggers = Array[NodePath]([NodePath("../StepLatch")])
+open_offset_tiles = Vector2(-1.5, 0)
+
+[node name="StepLatch" type="AnimatableBody2D" parent="."]
+position = Vector2(1568, 432)
+script = ExtResource("4")
+latch = true
+
+[node name="Plate2" type="AnimatableBody2D" parent="."]
+position = Vector2(2720, 768)
+script = ExtResource("4")
+width_tiles = 6.0
+
+[node name="Door2" type="AnimatableBody2D" parent="."]
+position = Vector2(3072, 576)
+script = ExtResource("3")
+triggers = Array[NodePath]([NodePath("../Plate2")])
+invert = true
+keep_open = Array[NodePath]([NodePath("../Latch2")])
+
+[node name="Latch2" type="AnimatableBody2D" parent="."]
+position = Vector2(3264, 768)
+script = ExtResource("4")
+latch = true
+
+[node name="Hook" type="Node2D" parent="."]
+position = Vector2(3872, 448)
+script = ExtResource("5")
+
+[node name="Spikes" type="Node2D" parent="."]
+position = Vector2(4160, 896)
+script = ExtResource("6")
+width_tiles = 10.0
+
+[node name="Press" type="AnimatableBody2D" parent="."]
+position = Vector2(5312, 384)
+script = ExtResource("7")
+size_tiles = Vector2(10, 3)
+top_wait = 1.0
+hold = NodePath("../StopLatch")
+
+[node name="StopLatch" type="AnimatableBody2D" parent="."]
+position = Vector2(6208, 768)
+script = ExtResource("4")
+latch = true
+
+[node name="LastBridge" type="AnimatableBody2D" parent="."]
+position = Vector2(6656, 768)
+script = ExtResource("3")
+size_tiles = Vector2(6, 0.5)
+triggers = Array[NodePath]([NodePath("../ChaseLatch")])
+open_offset_tiles = Vector2(0, 8)
+open_speed = 600.0
+
+[node name="ChaseLatch" type="AnimatableBody2D" parent="."]
+position = Vector2(7232, 768)
+script = ExtResource("4")
+latch = true
+
+[node name="Ghost" type="Node2D" parent="."]
+position = Vector2(6848, 480)
+script = ExtResource("8")
+area_tiles = Rect2(103, -4, 22, 17)
+
+[node name="ExitDoor" type="AnimatableBody2D" parent="."]
+position = Vector2(8000, 384)
+script = ExtResource("3")
+triggers = Array[NodePath]([NodePath("../ChaseLatch")])
+invert = true
+close_speed = 15.0
+
+[node name="Finish" type="Node2D" parent="."]
+position = Vector2(8192, 576)
+script = ExtResource("9")
+
+[node name="Crusher" type="Node2D" parent="."]
+position = Vector2(4352, -512)
+script = ExtResource("crusher")
+height_tiles = 30.0
+speed = 40.0
+start_x_tiles = 76.0
+stop_x_tiles = 124.0
+catch_up_tiles = 10.0
+
+[node name="Backdrop" parent="." instance=ExtResource("bd")]
+
+[node name="Landmark" type="Node2D" parent="Backdrop"]
+script = ExtResource("bl")
+texture = ExtResource("lm")
+parallax = 0.3
+parallax_y = 0.1
+height = 0.62
+center_y = 0.6
+zoom_follow = 0.3
+repeat = false
+world_x = 3354.0
+haze = 0.22
+haze_color = Color(0.949, 0.824, 0.776, 1)

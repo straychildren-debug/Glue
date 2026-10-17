@@ -1,0 +1,123 @@
+Вступительный мультик — этап 0 (04.10.2026)
+Генератор: встроенный image_gen. Изображения сохранены в исходном размере, без апскейла.
+Все перечисленные изображения передавались генератору как стилистические/дизайнерские референсы; каждый результат — новый отдельный PNG.
+
+H1 — h1_hero_parts.png
+References: 1 docs/референсы/reference.png; 2 assets/characters/v2/preview/idle_red.png
+Transparent background: true
+Prompt:
+Use case: illustration-story. Create a NEW transparent PNG production asset, not an edit of the references. Image 1 is the game's concept sheet for overall bright hand-painted cartoon color and setting only; do not reproduce its layout or any text. Image 2 is the exact red hero game sprite and is the authoritative character design. A CUT-OUT ANIMATION PUPPET of the character from image 2: parts drawn SEPARATELY, laid out in a neat row with very wide genuinely transparent gaps, nothing overlapping, all at the same scale. Strict side-facing three-quarter view as in image 2, facing RIGHT. Parts: 1) body WITHOUT arms, legs or face (smooth glossy red bean shape, blank); 2) left arm; 3) right arm; 4) left leg; 5) right leg; 6) small pink ribbon bow as separate accessory. Every limb complete, hidden joint end rounded. Preserve exact red color, simple bean silhouette, proportions, glossy highlights and very thick dark navy outline of game sprite. No shadows outside the parts. Style: bright hand-painted cartoon like image 1, saturated colors, soft visible painted texture, soft shading, light upper left. No text, letters, numbers, symbols, logos, watermark, grids, labels or checkerboard.
+
+H2 — h2_hero_face.png
+References: 1 docs/референсы/reference.png; 2 assets/characters/v2/preview/idle_red.png; 3 video/intro/art/h1_hero_parts.png
+Transparent background: true
+Prompt:
+Use case: illustration-story. Create a NEW production asset. Image 1 is the concept sheet style reference only. Image 2 is the exact game hero sprite; preserve its simple black navy facial design. Image 3 is the approved red bean puppet parts; match its style, color, rendering and scale. A FACE SHEET for this cut-out puppet: separate facial features, each drawn alone in a neat grid with very wide transparent gaps, nothing overlapping. GENUINELY TRANSPARENT BACKGROUND PNG. Eyes, a pair in each cell: normal open; closed blink as two short curves; wide open with tiny pupils, frightened; looking to the side; half-closed and determined. Eyebrows, a pair in each cell: calm; raised and worried; lowered and determined. Mouths as separate cells: small smile; open round O surprise; wide open shout; small frown. Every feature dark navy exactly like image 2. Consistent pair size and line weight, no red bean body behind features. No text, labels, letters, numbers, symbols, logo, watermark, grid or checkerboard.
+
+H3 — h3_hero_poses.png
+References: 1 docs/референсы/reference.png; 2 assets/characters/v2/preview/idle_red.png; 3 video/intro/art/h1_hero_parts.png
+Transparent background: true
+Prompt:
+Use case: illustration-story. Create a NEW production asset. Image 1 is the concept sheet style reference only. Image 2 is the exact red hero game sprite; keep its design, shape, proportions, red color, highlights, small smile and thick dark navy outline. Image 3 is the approved hero puppet parts; match its style, palette and rendering. POSE SHEET of the exact red bean hero: four whole characters side by side in one row at the same scale and baseline, evenly spaced with wide genuinely transparent gaps. TRANSPARENT BACKGROUND PNG. All face RIGHT in three-quarter side view. Poses: 1 standing confident with small smile; 2 running fast leaning forward, legs mid-stride; 3 jumping with arms up and legs tucked; 4 frightened, leaning back, arms raised and eyes wide. Keep forms readable for animation extraction. Bright hand-painted cartoon, soft painted texture, light upper left. No text, labels, letters, numbers, symbols, logos, watermark or checkerboard.
+
+A1 — a1_sky.png
+References: 1 docs/референсы/reference.png; 2 video/intro/art/h3_hero_poses.png
+Transparent background: false
+Prompt:
+Use case: illustration-story. Create a NEW image for the deepest parallax layer of a 2D animated storybook cartoon intro. Image 1 is the game concept sheet style and world reference only: use its luminous blue skies, fluffy clouds, bright saturated painted colors and soft visible painterly texture; do not copy its layout, characters, UI or words. Image 2 is an approved hero pose sheet of this same animation: match its overall palette and finish, but put NO characters in the scene. Object: A TALL 2:3 SKY BACKGROUND for a vertical camera move. At the top, rich clear azure blue sky with only a few soft fluffy clouds and ample empty blue space. Gradually lighter and warmer toward a distant low horizon at the bottom, with big soft clouds near the bottom edge. Depth, gentle sunlight from upper left, cheerful fairy-tale mood. Fill the entire image edge to edge, opaque background, NO transparency. No land, no castle, no mountains, no bridges, no characters. No text, letters, numbers, symbols, logos or watermark.
+
+A2 — a2_mountains.png
+References: 1 docs/референсы/reference.png; 2 video/intro/art/a1_sky.png
+Transparent background: true
+Prompt:
+Use case: illustration-story. Create a NEW PARALLAX LAYER as an independent transparent PNG, NOT a composite scene. Image 1 is the game concept sheet's painted fantasy world style. Image 2 is the approved sky backdrop for the same scene: match its luminous upper-left daylight, palette and painted finish, but DO NOT include any sky from it in the output. Wide horizontal panoramic composition, ideally 3:1. Object: a FAR DISTANCE strip of soft hazy blue-green mountains and floating stone cliffs above a sea of fluffy clouds; thin rope-and-wood bridges linking the cliffs, a few tiny waterfalls falling down into clouds. Landscape masses occupy the lower half to two-thirds; the entire upper area above the mountain tops has TRUE ALPHA TRANSPARENCY. The layer should be lighter, softer and less detailed than foreground; no castle, houses, characters, letters, text or decorative frame. There must be no painted blue sky, no white background and no checkerboard anywhere, only real transparency outside the mountain/cloud silhouettes. Style: bright hand-painted cartoon like image 1, saturated but atmospheric colors, soft visible painted texture, soft shading, light upper left. No text, letters, numbers, symbols, logos or watermark.
+
+A3 — a3_kingdom.png
+References: 1 docs/референсы/reference.png; 2 video/intro/art/a1_sky.png; 3 video/intro/art/a2_mountains.png
+Transparent background: true
+Prompt:
+Use case: illustration-story. Create a NEW independent MID-DISTANCE PARALLAX LAYER, transparent PNG, for the same 2D cartoon intro scene as images 2 and 3. Image 1 is the game's concept sheet style/world reference only. Image 2 is the approved sky, image 3 the approved far mountain strip; match their exact sunny palette, light direction, painted finish and perspective, but DO NOT bake either background layer into this output. Very wide panoramic composition around 3:1. Object: the Bean Kingdom built on ONE continuous green hill across the bottom of the image. A fairy-tale castle near center whose tall towers end in round glossy bean-shaped domes (red, blue, yellow and green), a small cozy town of round-roofed houses around it, winding road leading uphill, tiny flags with no symbols. Clear, detailed, jewel-like middle distance, large enough to read from a moving camera. All sky and everything above the castle and hill silhouettes is GENUINELY TRANSPARENT. No characters. Keep castle silhouette separated from the mountain layer behind. Bright hand-painted storybook cartoon, saturated but harmonious colors, soft visible painted texture, soft shading, light upper left. No text, letters, numbers, symbols, logos, watermark, painted sky, white background or checkerboard.
+
+A4 — a4_foreground.png
+References: 1 docs/референсы/reference.png; 2 video/intro/art/a2_mountains.png; 3 video/intro/art/a3_kingdom.png
+Transparent background: true
+Prompt:
+Use case: illustration-story. Create a NEW independent FOREGROUND PARALLAX LAYER as a genuinely transparent PNG for the same cartoon intro scene. Image 1 is the game concept sheet style reference. Image 2 is the approved far mountains and image 3 the approved Bean Kingdom; match their sunlight, painting style, saturated greens, flowers and perspective, but DO NOT include their scenery in this output. Wide horizontal panorama around 3:1. Object: a rich meadow EDGE along only the bottom 15-25% of frame, close to camera, with tall blades of grass, large colorful flowers, foliage; also ONE leafy tree branch entering from the top-left corner only, extending modestly over empty central space. The middle and upper-right 70% must be CLEAR GENUINE ALPHA TRANSPARENCY, so the kingdom behind remains plainly visible. Large close-up forms and soft painterly detail. No ground filling the center, no sky, no castle, no mountains, no characters. Bright hand-painted cartoon, soft visible painted texture, light from upper left. No text, letters, numbers, symbols, logos, watermark, white or black background or checkerboard.
+
+Правки после генерации: исходники не ретушировались. Листы H1–H3 нарезаны по прозрачным промежуткам в slices/. Для пробы A4 разделён на ветку и нижний край кадра без изменения исходного PNG; на герое добавлена только мягкая программная контактная тень.
+
+Продолжение набора после утверждения стиля (04.10.2026). Общая часть каждого запроса: NEW production asset for a layered 2D storybook cartoon intro; match the attached approved assets and the concept sheet's saturated hand-painted palette, soft visible texture and glossy bean characters with dark navy outlines; no text, logos, watermarks or checkerboard. All transparent assets requested with true alpha. Для согласованности вложены наиболее близкие из уже принятых картинок набора. Ниже записана предметная часть каждого запроса и референсы; B1n создан редактированием B1 без смены композиции.
+
+A5 — a5_grass_front.png
+References: docs/референсы/reference.png; a4_foreground.png; scene1_preview.jpg.
+Prompt: Independent 3:1 transparent parallax foreground. A continuous low strip of short meadow grass along the BOTTOM edge, irregular blade tips, a few white daisies and yellow buttercups. Warm upper-left sunlight, bright tips and dark roots. Fully transparent above the grass; soft side edges. Match the approved foreground; designed to overlap the standing hero's feet.
+
+A6 — a6_grass_tufts.png
+References: reference.png; a4_foreground.png; scene1_preview.jpg.
+Prompt: Six separate short grass tufts on one transparent sheet with generous gaps, varied widths, two with a daisy or buttercup, one with a blue bellflower. Flat soft bases, upward fanning blades, matching warm upper-left light and meadow colors. For placing in front of character feet.
+
+K1 — k1_king_parts.png
+References: reference.png; h1_hero_parts.png; h3_hero_poses.png.
+Prompt: Cut-out puppet sheet for the king of beans: big glossy plum-purple bean, kind and plump, gold jeweled crown, red cape with white fur trim, curly mustache. Separate non-overlapping complete body without face or limbs, arms, legs, cape, crown and mustache, same scale, transparent background, dark navy outlines.
+
+K2 — k2_king_face.png
+References: reference.png; k1_king_parts.png; h2_hero_face.png.
+Prompt: Transparent facial-feature sheet for the same king. Separate pairs of normal, closed and frightened eyes; smile and surprised round O mouth; expressive eyebrows, dark navy face lines, generous transparent gaps, matching K1.
+
+K3 — k3_king_poses.png
+References: reference.png; k1_king_parts.png; h3_hero_poses.png.
+Prompt: Three whole king poses side by side at one scale on transparent background: happy king waving from the stage; frightened king with arms raised; king dangling in air while carried away, WITHOUT crown. Preserve purple bean body, cape, fur trim, mustache, navy outline and glossy highlights.
+
+G1 — g1_ghosts.png
+References: reference.png; assets/props/v2/source/p10_ghost.png; k3_king_poses.png.
+Prompt: Five playful ghosts on a transparent pose sheet, matching the game's rounded white ghost design: flying fast left, swooping down to grab, laughing, lifting upward with arms raised, peeking with sly grin. Non-scary, separated poses, dark navy outlines.
+
+X1 — x1_crown.png
+References: reference.png; k1_king_parts.png; k3_king_poses.png.
+Prompt: The king's gold crown with bean-shaped red, blue, yellow and green jewels, alone in two separated states, upright and tilted on its side. Large clear silhouette, polished warm highlights, dark navy outline, transparent background.
+
+B1 — b1_square_day.png
+References: reference.png; a3_kingdom.png; k3_king_poses.png.
+Prompt: Opaque 3:1 panorama of the Bean Kingdom's festival square at bright midday. Cobblestones, colorful round-roofed houses, the familiar bean-domed castle behind, a wooden stage with steps at center right. No characters or writing; keep open space for animated crowd and king.
+
+B1n — b1n_square_night.png
+References: b1_square_day.png (edited source); reference.png.
+Prompt: Transform the approved festival-square image into night while preserving EXACTLY the same layout and architecture: same castle, houses, stage, stairs and cobblestones in the same places. Deep blue starry sky, pale moon, cold moonlight, dark windows, no characters. Opaque image.
+
+B2 — b2_bunting.png
+References: reference.png; b1_square_day.png.
+Prompt: Transparent 3:1 foreground decoration strip across the upper portion: several sagging strings of red, blue, yellow and green triangular flags with no symbols, round paper lanterns, poles at ends. Clear transparent lower area, matching festive painted style.
+
+B3 — b3_lanterns.png
+References: reference.png; b2_bunting.png; b1n_square_night.png.
+Prompt: Transparent asset sheet of one round paper festival lantern in two separated states at the same scale: warmly lit yellow-orange and dark unlit. Match the lanterns on the accepted bunting and the night square.
+
+B4 — b4_crowd.png
+References: reference.png; assets/characters/v2/preview/idle_red.png; h3_hero_poses.png; b1_square_day.png.
+Prompt: Transparent two-row pose sheet of six distinct bean townsfolk with glossy bodies and navy outlines. Pink with straw hat, orange with scarf, teal with flower, lilac with glasses, brown with cap, light green with small bag. Top row happily dancing; bottom row the same six running left in fright, wide transparent gaps.
+
+C1 — c1_cobbles_close.png
+References: reference.png; b1n_square_night.png; x1_crown.png.
+Prompt: Opaque close-up of the night festival-square cobblestones, cool blue moonlight, a few fallen bunting pieces and confetti, soft background castle and empty central space where a separate crown will be composited. No characters or lettering.
+
+D1 — d1_dawn_sky.png
+References: reference.png; a1_sky.png; b1_square_day.png.
+Prompt: Opaque wide dawn sky, deep blue above blending to pink and warm gold at horizon; rising sun and delicate glowing cloud streaks, painted in the accepted storybook style. No land, people, architecture or writing.
+
+D2 — d2_far_bridges.png
+References: reference.png; d1_dawn_sky.png; a2_mountains.png.
+Prompt: Transparent far parallax strip at dawn: floating cliffs, ancient stone arch ruins, rope bridges disappearing in morning haze, small waterfalls and clouds; warm pink-gold light from right. Entire upper sky transparent, distant forms hazy.
+
+D3 — d3_road.png
+References: reference.png; d1_dawn_sky.png; d2_far_bridges.png.
+Prompt: Transparent middle-distance layer: winding dirt road over grassy green hills leading toward distant bridges, a blank wooden signpost, rounded trees, low warm sunlight from right and long soft shadows. Transparent above the hill outline, no characters or text.
+
+D4 — d4_foreground.png
+References: reference.png; d3_road.png; a4_foreground.png.
+Prompt: Transparent close foreground at the lower edge: tall backlit grass and large meadow flowers glowing gold in sunrise light, cool shadows at roots. Transparent above, no sky, road or characters.
+
+D5 — d5_grass_front.png
+References: reference.png; a5_grass_front.png; d3_road.png.
+Prompt: Transparent continuous strip of low grass along the bottom edge, matching A5 but at dawn: ragged blade tops with pink-gold rim light from right and cool roots, soft side ends for tiling; fully transparent above blades.
+
+Правки при сборке: исходные листы нарезаны на отдельные спрайты в layers/; красный герой перекрашен кодом в синего, зелёного и жёлтую сестрёнку, бантик вынесен отдельным спрайтом. Фоны не ретушировались; размеры и движение слоёв подобраны в index.html. Для A5 и D5 использована передняя полоса травы; фрагменты A6 стоят поверх ступней героя в первом кадре.

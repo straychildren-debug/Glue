@@ -1,0 +1,682 @@
+{
+  "date": "2026-10-03",
+  "method": "built-in image_gen",
+  "scope": "Task 11, Order 1: world 2 plus Z3 acceptance correction",
+  "jobs": [
+    {
+      "id": "E2",
+      "kind": "enemy",
+      "path": "D:/Cluade projects/games/Glue/docs/референсы/enemies/enemy_w2_pusher_beetle.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" — style reference only. Attached image 2: the concept sheet of the world where this enemy lives — match its palette and light. Attached image 3: the player character of the game — match its art style exactly: chunky rounded shapes, a thick dark navy outline around the silhouette, flat cartoon toon shading with one soft shadow tone, light from the upper left, simple black oval eyes. Do NOT copy layouts, text or UI from the attachments.\n\nCreate ONE character model sheet of an ENEMY for a 2D side-scrolling co-op platformer. Landscape 3:2. Plain flat light grey background (#E6E8EC), no scenery, no ground texture. On the left: the enemy large, full body, in strict side view facing right. To its right, in one row, smaller and evenly spaced: the same enemy in each pose listed below, all in strict side view, with exactly the same design, colors and scale. Next to the large view stands a tiny simple red bean-shaped character for scale (see Size). The enemy has a thick dark navy outline like the player character; cute, rounded, funny, readable as a small sprite — friendly cartoon, NOT scary, no gore. Dangerous parts (teeth, claws, spikes) have a small red warning accent. Its colors must not match the pure red, blue, yellow or green of the players. No text, letters, numbers, labels, arrows, frames, logos or watermark.\nEnemy: a stocky round workshop beetle with a copper-bronze shell and a wide flat top (a player can stand and ride on its back) and a big flat bulldozer-like plate on its head for pushing; short sturdy legs; it crawls along platforms and shoves players off edges.\nPoses: crawling; pushing hard (leaning forward, legs braced); stopped by a wooden crate in front of it (surprised); turning back at a ledge edge (one foot over the edge, startled); carrying the tiny red character standing on its back.\nSize: as tall as the player character, about two characters long.\nNeutral white balance. Keep all requested poses or states distinct, complete and fully visible, with generous spacing. All miniature states share one scale; the left primary view is larger. Frozen characters are stone-grey versions of the bean character, with identical limbs and outline. No extra scenery.",
+      "refs": [
+        "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+        "D:/Cluade projects/games/Glue/docs/референсы/world2_workshops.png",
+        "D:/Cluade projects/games/Glue/assets/characters/v2/preview/idle_red.png"
+      ],
+      "transparent": false,
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\\exec-685d41e3-df16-40f4-86e0-f70f1a927e5b.png",
+      "edits": [
+        {
+          "prompt": "Keep everything the same, but correct ONLY these details: beside the large left beetle, enlarge the red scale character until its full height equals the beetle full height; the beetle is about two character widths long. Keep the smaller pose figures at their existing shared scale. In the fourth small pose (second from the right), add a tiny plain grey ledge ending immediately under its rightmost foot, which hangs over empty space, and make the beetle turn back to face LEFT, visibly startled. All other beetle views face right. Remove the floating red and navy exclamation-like marks above the poses. Keep plain FLAT light grey #E6E8EC background, no vignette or gradient. Preserve the beetle design, colors, thick navy contour, arrangement and all five poses. No text, labels, arrows or symbols.",
+          "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\\exec-75dd7798-b749-4855-9ee5-6ee44e49fb55.png"
+        }
+      ],
+      "native_size": [
+        1536,
+        1024
+      ],
+      "alpha_extrema": [
+        255,
+        255
+      ]
+    },
+    {
+      "id": "E3",
+      "kind": "enemy",
+      "path": "D:/Cluade projects/games/Glue/docs/референсы/enemies/enemy_w2_spark.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" — style reference only. Attached image 2: the concept sheet of the world where this enemy lives — match its palette and light. Attached image 3: the player character of the game — match its art style exactly: chunky rounded shapes, a thick dark navy outline around the silhouette, flat cartoon toon shading with one soft shadow tone, light from the upper left, simple black oval eyes. Do NOT copy layouts, text or UI from the attachments.\n\nCreate ONE character model sheet of an ENEMY for a 2D side-scrolling co-op platformer. Landscape 3:2. Plain flat light grey background (#E6E8EC), no scenery, no ground texture. On the left: the enemy large, full body, in strict side view facing right. To its right, in one row, smaller and evenly spaced: the same enemy in each pose listed below, all in strict side view, with exactly the same design, colors and scale. Next to the large view stands a tiny simple red bean-shaped character for scale (see Size). The enemy has a thick dark navy outline like the player character; cute, rounded, funny, readable as a small sprite — friendly cartoon, NOT scary, no gore. Dangerous parts (teeth, claws, spikes) have a small red warning accent. Its colors must not match the pure red, blue, yellow or green of the players. No text, letters, numbers, labels, arrows, frames, logos or watermark.\nEnemy: \"the spark\" — a tiny lively creature made of orange-yellow fire with a cheeky face, it runs along wires and fuse cords and lights them.\nPoses: running along a thin copper wire; bouncing back from a frozen stone-still character standing on the wire (surprised); jumping onto the end of a fuse cord and lighting it (fuse sparkling); fizzled out (a sad little smoke puff with eyes).\nSize: half the height of the player character.\nNeutral white balance. Keep all requested poses or states distinct, complete and fully visible, with generous spacing. All miniature states share one scale; the left primary view is larger. Frozen characters are stone-grey versions of the bean character, with identical limbs and outline. No extra scenery.",
+      "refs": [
+        "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+        "D:/Cluade projects/games/Glue/docs/референсы/world2_workshops.png",
+        "D:/Cluade projects/games/Glue/assets/characters/v2/preview/idle_red.png"
+      ],
+      "transparent": false,
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\\exec-d98846ec-53e7-4454-bf7b-a66d7dc054a3.png",
+      "edits": [
+        {
+          "prompt": "Image 1 is the edit target. Images 2, 3 and 4 are style references. Keep everything the same, but correct the spark's scale: in the large left view the entire fire creature, including its floating flames, must be HALF the height of the adjacent red player. Enlarge the red player and shrink the large spark as necessary so they fit and the spark remains larger than the miniature spark poses. In the bounce pose the spark must be half the height of the stone-grey frozen player too. Preserve the four complete poses, wire, fuse, sad smoke puff, copper-orange-yellow palette, friendly design and thick navy outline. Remove the red exclamation marks above the bounce pose. Make the background a perfectly uniform solid light grey #E6E8EC, with no texture, gradient or vignette. No text, numbers or labels.",
+          "refs": [
+            "D:/Cluade projects/games/Glue/docs/референсы/enemies/enemy_w2_spark.png",
+            "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+            "D:/Cluade projects/games/Glue/docs/референсы/world2_workshops.png",
+            "D:/Cluade projects/games/Glue/assets/characters/v2/preview/idle_red.png"
+          ],
+          "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\\exec-52e885a9-5ebf-4f3a-80ec-82fe7903bcef.png"
+        }
+      ],
+      "native_size": [
+        1536,
+        1024
+      ],
+      "alpha_extrema": [
+        255,
+        255
+      ]
+    },
+    {
+      "id": "M2.1",
+      "kind": "mechanism",
+      "path": "D:/Cluade projects/games/Glue/docs/референсы/mechanisms/mech_w2_conveyor.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" — style reference only. Attached image 2: the concept sheet of the world where this mechanism is used — match its materials, palette and light. Attached image 3: an existing interactive prop of the game rendered in Blender — match its art style: chunky readable shapes, a thick dark navy outline, flat toon shading, light from the upper left. Do NOT copy layouts, text or UI from the attachments.\n\nCreate ONE model sheet of an interactive MECHANISM for a 2D side-scrolling co-op platformer. Landscape 3:2. Plain flat light grey background (#E6E8EC), no scenery. On the left: the mechanism large, in strict side view (orthographic, no perspective). To its right, in one row, smaller and evenly spaced: the same mechanism in each state listed below, strict side view, same design and scale. A tiny simple red bean-shaped character stands next to the large view for scale (see Size). The mechanism has a thick dark navy outline around its silhouette and moving parts; dangerous parts have a small red warning accent. Clear, chunky, cartoon, readable as a small game sprite. No text, letters, numbers, labels, arrows, frames, logos or watermark.\nMechanism: a conveyor belt platform of wood and iron: a long belt with small wooden cleats running over big rollers at both ends, on a sturdy iron frame, with a small direction lever on its side.\nStates: stopped (lever in the middle); running right (soft motion streaks, lever right); carrying a wooden crate and a tiny frozen stone-still character as cargo.\nSize: five tiles long (about six character widths), half a tile thick.\nNeutral white balance. Keep all requested poses or states distinct, complete and fully visible, with generous spacing. All miniature states share one scale; the left primary view is larger. Frozen characters are stone-grey versions of the bean character, with identical limbs and outline. No extra scenery.",
+      "refs": [
+        "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+        "D:/Cluade projects/games/Glue/docs/референсы/world2_workshops.png",
+        "D:/Cluade projects/games/Glue/assets/props/v1/crate.png"
+      ],
+      "transparent": false,
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\\exec-4df9bed8-b6f7-43bd-b012-1184882e300a.png",
+      "edits": [],
+      "native_size": [
+        1536,
+        1024
+      ],
+      "alpha_extrema": [
+        255,
+        255
+      ]
+    },
+    {
+      "id": "M2.2",
+      "kind": "mechanism",
+      "path": "D:/Cluade projects/games/Glue/docs/референсы/mechanisms/mech_w2_spring_pad.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" — style reference only. Attached image 2: the concept sheet of the world where this mechanism is used — match its materials, palette and light. Attached image 3: an existing interactive prop of the game rendered in Blender — match its art style: chunky readable shapes, a thick dark navy outline, flat toon shading, light from the upper left. Do NOT copy layouts, text or UI from the attachments.\n\nCreate ONE model sheet of an interactive MECHANISM for a 2D side-scrolling co-op platformer. Landscape 3:2. Plain flat light grey background (#E6E8EC), no scenery. On the left: the mechanism large, in strict side view (orthographic, no perspective). To its right, in one row, smaller and evenly spaced: the same mechanism in each state listed below, strict side view, same design and scale. A tiny simple red bean-shaped character stands next to the large view for scale (see Size). The mechanism has a thick dark navy outline around its silhouette and moving parts; dangerous parts have a small red warning accent. Clear, chunky, cartoon, readable as a small game sprite. No text, letters, numbers, labels, arrows, frames, logos or watermark.\nMechanism: a spring launch pad — a square iron plate on top of a big coiled spring inside a short wooden frame.\nStates: at rest; squeezed flat under a tiny frozen character (loaded); launching (spring fully extended, a character flying up).\nSize: one and a half tiles wide.\nNeutral white balance. Keep all requested poses or states distinct, complete and fully visible, with generous spacing. All miniature states share one scale; the left primary view is larger. Frozen characters are stone-grey versions of the bean character, with identical limbs and outline. No extra scenery.",
+      "refs": [
+        "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+        "D:/Cluade projects/games/Glue/docs/референсы/world2_workshops.png",
+        "D:/Cluade projects/games/Glue/assets/props/v1/crate.png"
+      ],
+      "transparent": false,
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\\exec-ae0c939c-9338-4b37-b2dd-32db943999e1.png",
+      "edits": [],
+      "native_size": [
+        1536,
+        1024
+      ],
+      "alpha_extrema": [
+        255,
+        255
+      ]
+    },
+    {
+      "id": "M2.3",
+      "kind": "mechanism",
+      "path": "D:/Cluade projects/games/Glue/docs/референсы/mechanisms/mech_w2_rotating_platform.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" — style reference only. Attached image 2: the concept sheet of the world where this mechanism is used — match its materials, palette and light. Attached image 3: an existing interactive prop of the game rendered in Blender — match its art style: chunky readable shapes, a thick dark navy outline, flat toon shading, light from the upper left. Do NOT copy layouts, text or UI from the attachments.\n\nCreate ONE model sheet of an interactive MECHANISM for a 2D side-scrolling co-op platformer. Landscape 3:2. Plain flat light grey background (#E6E8EC), no scenery. On the left: the mechanism large, in strict side view (orthographic, no perspective). To its right, in one row, smaller and evenly spaced: the same mechanism in each state listed below, strict side view, same design and scale. A tiny simple red bean-shaped character stands next to the large view for scale (see Size). The mechanism has a thick dark navy outline around its silhouette and moving parts; dangerous parts have a small red warning accent. Clear, chunky, cartoon, readable as a small game sprite. No text, letters, numbers, labels, arrows, frames, logos or watermark.\nMechanism: a rotating plank platform — a thick wooden beam with iron bands, mounted at its middle on a big iron hub with a gear box.\nStates: horizontal; tilted 45 degrees; vertical; horizontal with a tiny frozen character stuck on one end turning with it.\nSize: three tiles long.\nNeutral white balance. Keep all requested poses or states distinct, complete and fully visible, with generous spacing. All miniature states share one scale; the left primary view is larger. Frozen characters are stone-grey versions of the bean character, with identical limbs and outline. No extra scenery.",
+      "refs": [
+        "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+        "D:/Cluade projects/games/Glue/docs/референсы/world2_workshops.png",
+        "D:/Cluade projects/games/Glue/assets/props/v1/crate.png"
+      ],
+      "transparent": false,
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\\exec-5bcfffbe-a487-431c-8f38-df228447c6d7.png",
+      "edits": [],
+      "native_size": [
+        1536,
+        1024
+      ],
+      "alpha_extrema": [
+        255,
+        255
+      ]
+    },
+    {
+      "id": "M2.4",
+      "kind": "mechanism",
+      "path": "D:/Cluade projects/games/Glue/docs/референсы/mechanisms/mech_w2_breakable_floor.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" — style reference only. Attached image 2: the concept sheet of the world where this mechanism is used — match its materials, palette and light. Attached image 3: an existing interactive prop of the game rendered in Blender — match its art style: chunky readable shapes, a thick dark navy outline, flat toon shading, light from the upper left. Do NOT copy layouts, text or UI from the attachments.\n\nCreate ONE model sheet of an interactive MECHANISM for a 2D side-scrolling co-op platformer. Landscape 3:2. Plain flat light grey background (#E6E8EC), no scenery. On the left: the mechanism large, in strict side view (orthographic, no perspective). To its right, in one row, smaller and evenly spaced: the same mechanism in each state listed below, strict side view, same design and scale. A tiny simple red bean-shaped character stands next to the large view for scale (see Size). The mechanism has a thick dark navy outline around its silhouette and moving parts; dangerous parts have a small red warning accent. Clear, chunky, cartoon, readable as a small game sprite. No text, letters, numbers, labels, arrows, frames, logos or watermark.\nMechanism: a fragile wooden floor — old pale worn planks with visible cracks and a few missing nails, clearly weaker than normal planks; it holds one character and breaks under two.\nStates: intact with one character on it; cracking under two characters (planks bending, splinters); broken (planks falling apart).\nSize: three tiles wide, half a tile thick.\nNeutral white balance. Keep all requested poses or states distinct, complete and fully visible, with generous spacing. All miniature states share one scale; the left primary view is larger. Frozen characters are stone-grey versions of the bean character, with identical limbs and outline. No extra scenery.",
+      "refs": [
+        "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+        "D:/Cluade projects/games/Glue/docs/референсы/world2_workshops.png",
+        "D:/Cluade projects/games/Glue/assets/props/v1/crate.png"
+      ],
+      "transparent": false,
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\\exec-ba9741a7-e530-4e2c-896e-b3dc8a78c053.png",
+      "edits": [],
+      "native_size": [
+        1536,
+        1024
+      ],
+      "alpha_extrema": [
+        255,
+        255
+      ]
+    },
+    {
+      "id": "M2.5",
+      "kind": "mechanism",
+      "path": "D:/Cluade projects/games/Glue/docs/референсы/mechanisms/mech_w2_bellows.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" — style reference only. Attached image 2: the concept sheet of the world where this mechanism is used — match its materials, palette and light. Attached image 3: an existing interactive prop of the game rendered in Blender — match its art style: chunky readable shapes, a thick dark navy outline, flat toon shading, light from the upper left. Do NOT copy layouts, text or UI from the attachments.\n\nCreate ONE model sheet of an interactive MECHANISM for a 2D side-scrolling co-op platformer. Landscape 3:2. Plain flat light grey background (#E6E8EC), no scenery. On the left: the mechanism large, in strict side view (orthographic, no perspective). To its right, in one row, smaller and evenly spaced: the same mechanism in each state listed below, strict side view, same design and scale. A tiny simple red bean-shaped character stands next to the large view for scale (see Size). The mechanism has a thick dark navy outline around its silhouette and moving parts; dangerous parts have a small red warning accent. Clear, chunky, cartoon, readable as a small game sprite. No text, letters, numbers, labels, arrows, frames, logos or watermark.\nMechanism: big workshop bellows on a wooden frame with a brass nozzle and a wide foot pedal; stepping or jumping on the pedal blows a strong gust of wind.\nStates: idle; a character jumping on the pedal (bellows squeezed); blowing (soft wind streaks from the nozzle pushing a jumping character sideways).\nSize: two tiles high, the pedal one tile wide.\nNeutral white balance. Keep all requested poses or states distinct, complete and fully visible, with generous spacing. All miniature states share one scale; the left primary view is larger. Frozen characters are stone-grey versions of the bean character, with identical limbs and outline. No extra scenery.\nShow the complete main bellows and exactly THREE complete small states to its right: idle, compressed by a jumping player, and blowing with a visible wind puff pushing a different airborne player. Bellows are about 2.3 player heights, the foot pedal about 1.15 player heights wide. The nozzle points horizontally right. No three-quarter view, no rectangular floor patch.",
+      "refs": [
+        "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+        "D:/Cluade projects/games/Glue/docs/референсы/world2_workshops.png",
+        "D:/Cluade projects/games/Glue/assets/props/v1/crate.png"
+      ],
+      "transparent": false,
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\\exec-66aaf0ef-d3a0-426d-a6f4-fdcde7160d37.png",
+      "edits": [],
+      "native_size": [
+        1536,
+        1024
+      ],
+      "alpha_extrema": [
+        255,
+        255
+      ]
+    },
+    {
+      "id": "M2.6",
+      "kind": "mechanism",
+      "path": "D:/Cluade projects/games/Glue/docs/референсы/mechanisms/mech_w2_crane_trolley.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" — style reference only. Attached image 2: the concept sheet of the world where this mechanism is used — match its materials, palette and light. Attached image 3: an existing interactive prop of the game rendered in Blender — match its art style: chunky readable shapes, a thick dark navy outline, flat toon shading, light from the upper left. Do NOT copy layouts, text or UI from the attachments.\n\nCreate ONE model sheet of an interactive MECHANISM for a 2D side-scrolling co-op platformer. Landscape 3:2. Plain flat light grey background (#E6E8EC), no scenery. On the left: the mechanism large, in strict side view (orthographic, no perspective). To its right, in one row, smaller and evenly spaced: the same mechanism in each state listed below, strict side view, same design and scale. A tiny simple red bean-shaped character stands next to the large view for scale (see Size). The mechanism has a thick dark navy outline around its silhouette and moving parts; dangerous parts have a small red warning accent. Clear, chunky, cartoon, readable as a small game sprite. No text, letters, numbers, labels, arrows, frames, logos or watermark.\nMechanism: a crane trolley — a small iron trolley with wheels running along an overhead iron rail, with a big iron hook hanging below it on a short rigid bar (no rope); players hang on the hook and ride across.\nStates: trolley parked at the left end of the rail; moving (motion streaks) with a character hanging from the hook; carrying a chain of two characters (one holds the hook, the other holds the first one's hand).\nSize: the rail is many tiles long (show a part of it), the hook hangs one tile below the rail.\nNeutral white balance. Keep all requested poses or states distinct, complete and fully visible, with generous spacing. All miniature states share one scale; the left primary view is larger. Frozen characters are stone-grey versions of the bean character, with identical limbs and outline. No extra scenery.\nThe last small state must clearly show TWO players in a vertical hand-holding chain beneath the hook. Upper player's raised hand grips the metal hook; upper player's other lowered hand grips lower player's raised hand. The players' bodies do NOT merge. Every hook hangs from a short straight solid metal bar, never a rope, cable or chain. All rail segments and all players fit within the canvas. Primary plus exactly THREE complete small states. Flat uniform #E6E8EC background.",
+      "refs": [
+        "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+        "D:/Cluade projects/games/Glue/docs/референсы/world2_workshops.png",
+        "D:/Cluade projects/games/Glue/assets/props/v1/crate.png"
+      ],
+      "transparent": false,
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\\exec-9f658bfa-289a-491f-a3aa-7ec2d4b07834.png",
+      "edits": [],
+      "native_size": [
+        1536,
+        1024
+      ],
+      "alpha_extrema": [
+        255,
+        255
+      ]
+    },
+    {
+      "id": "M2.7",
+      "kind": "mechanism",
+      "path": "D:/Cluade projects/games/Glue/docs/референсы/mechanisms/mech_w2_wires_switch.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" — style reference only. Attached image 2: the concept sheet of the world where this mechanism is used — match its materials, palette and light. Attached image 3: an existing interactive prop of the game rendered in Blender — match its art style: chunky readable shapes, a thick dark navy outline, flat toon shading, light from the upper left. Do NOT copy layouts, text or UI from the attachments.\n\nCreate ONE model sheet of an interactive MECHANISM for a 2D side-scrolling co-op platformer. Landscape 3:2. Plain flat light grey background (#E6E8EC), no scenery. On the left: the mechanism large, in strict side view (orthographic, no perspective). To its right, in one row, smaller and evenly spaced: the same mechanism in each state listed below, strict side view, same design and scale. A tiny simple red bean-shaped character stands next to the large view for scale (see Size). The mechanism has a thick dark navy outline around its silhouette and moving parts; dangerous parts have a small red warning accent. Clear, chunky, cartoon, readable as a small game sprite. No text, letters, numbers, labels, arrows, frames, logos or watermark.\nMechanism: a copper wire track mounted on small brass posts along the floor and walls, with a junction box and a switch lever that sends sparks to one of two branches.\nStates: a straight wire piece and a corner piece; a junction with the switch lever left; the same junction with the lever right; a wire with a tiny frozen stone-still character standing on it (it blocks the spark).\nSize: the wire is a thin line at ankle height; the junction box is half a character tall.\nNeutral white balance. Keep all requested poses or states distinct, complete and fully visible, with generous spacing. All miniature states share one scale; the left primary view is larger. Frozen characters are stone-grey versions of the bean character, with identical limbs and outline. No extra scenery.\nPrimary assembly at left and exactly FOUR separate smaller diagrams to its right: straight plus corner wire pieces, junction lever LEFT, matching junction lever RIGHT, and copper track blocked by a stone-grey bean. The two junction boxes are identical except their lever angle. Show a small red player beside the primary box at the SAME rendering scale; junction box half that player's height, copper wires ankle-high. Circuit wires are thick copper tubes/tracks, not electric glow. No diagrams with arrows or words. Uniform light-grey canvas, no gradient.",
+      "refs": [
+        "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+        "D:/Cluade projects/games/Glue/docs/референсы/world2_workshops.png",
+        "D:/Cluade projects/games/Glue/assets/props/v1/crate.png"
+      ],
+      "transparent": false,
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\\exec-53f82a9e-b377-47ac-a6ae-fcf9baa64cd8.png",
+      "edits": [],
+      "native_size": [
+        1536,
+        1024
+      ],
+      "alpha_extrema": [
+        255,
+        255
+      ]
+    },
+    {
+      "id": "M2.8",
+      "kind": "mechanism",
+      "path": "D:/Cluade projects/games/Glue/docs/референсы/mechanisms/mech_w2_fuse_keg.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" — style reference only. Attached image 2: the concept sheet of the world where this mechanism is used — match its materials, palette and light. Attached image 3: an existing interactive prop of the game rendered in Blender — match its art style: chunky readable shapes, a thick dark navy outline, flat toon shading, light from the upper left. Do NOT copy layouts, text or UI from the attachments.\n\nCreate ONE model sheet of an interactive MECHANISM for a 2D side-scrolling co-op platformer. Landscape 3:2. Plain flat light grey background (#E6E8EC), no scenery. On the left: the mechanism large, in strict side view (orthographic, no perspective). To its right, in one row, smaller and evenly spaced: the same mechanism in each state listed below, strict side view, same design and scale. A tiny simple red bean-shaped character stands next to the large view for scale (see Size). The mechanism has a thick dark navy outline around its silhouette and moving parts; dangerous parts have a small red warning accent. Clear, chunky, cartoon, readable as a small game sprite. No text, letters, numbers, labels, arrows, frames, logos or watermark.\nMechanism: a fuse cord running from the end of a copper wire to a small powder keg standing next to a cracked stone wall.\nStates: fuse unlit; fuse burning (a bright spark travelling along it); cartoon puff explosion of the keg (no fire damage, just a big dusty puff); the wall broken open with rubble.\nSize: the keg is half a character tall, the wall three tiles tall.\nNeutral white balance. Keep all requested poses or states distinct, complete and fully visible, with generous spacing. All miniature states share one scale; the left primary view is larger. Frozen characters are stone-grey versions of the bean character, with identical limbs and outline. No extra scenery.\nPrimary unlit keg-and-fuse assembly at left plus exactly FOUR complete small scenes at right, arranged in ONE horizontal row: unlit fuse; traveling orange spark on burning fuse; soft dusty puff bursting from keg beside cracked wall; collapsed stone wall with rubble. Clearly keep powder keg only half the height of the red player beside the large view, and wall about 3.4 player heights. Keep dangerous red accents small. All states fully fit, no circles, frames or labels, no black smoke cloud, no fireball.",
+      "refs": [
+        "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+        "D:/Cluade projects/games/Glue/docs/референсы/world2_workshops.png",
+        "D:/Cluade projects/games/Glue/assets/props/v1/crate.png"
+      ],
+      "transparent": false,
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\\exec-f7257691-4f32-4071-81bc-9e84df2383a6.png",
+      "edits": [],
+      "native_size": [
+        1536,
+        1024
+      ],
+      "alpha_extrema": [
+        255,
+        255
+      ]
+    },
+    {
+      "id": "C2.1",
+      "kind": "texture",
+      "path": "D:/Cluade projects/games/Glue/assets/tiles/world_02/source/w02_fill.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" — style reference only. Attached image 2: the approved concept sheet of world 2, the workshops — match its palette. Attached image 3: the approved stone masonry texture of the same game — match its painting style, stone scale and level of detail. Do NOT copy layouts, text, UI or characters.\n\nCreate a SEAMLESS TILEABLE TEXTURE, square 1:1, tileable on all four sides. Strict front orthographic view, no perspective. Hand-painted cartoon style, soft shading, light from the upper left. Medium-dark values and low contrast, so small bright red, blue, yellow and green characters read clearly in front of it. No moss, no grass, no plants, no holes, no doors, no objects, no text. Even lighting across the whole tile — no vignette, no gradient from one side to the other. Neutral white balance, no yellow tint.\nSurface: workshop foundation masonry: sooty warm red-brown bricks with occasional larger grey stone blocks, thin dark joints, faint soot stains; no metal, no wood.\nThe final image must be a SQUARE 1:1 texture swatch, edge-to-edge masonry with no blank margins. Material color is medium-dark and low contrast, and overall illumination is completely uniform across the canvas; no vignette, spotlight or panel borders. Mortar is softly painted, not a heavy dark silhouette outline. Repeatable brick bond across both opposite edges. No moss, grass or objects. Do not copy the model-sheet composition of the references.",
+      "refs": [
+        "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+        "D:/Cluade projects/games/Glue/docs/референсы/world2_workshops.png",
+        "D:/Cluade projects/games/Glue/assets/tiles/world_01/source/w01_stone_fill.png"
+      ],
+      "transparent": false,
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\\exec-e86ca783-1e01-4f6c-adf6-7392eda75b65.png",
+      "edits": [],
+      "native_size": [
+        1254,
+        1254
+      ],
+      "alpha_extrema": [
+        255,
+        255
+      ]
+    },
+    {
+      "id": "C2.2",
+      "kind": "texture",
+      "path": "D:/Cluade projects/games/Glue/assets/tiles/world_02/source/w02_deep.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" — style reference only. Attached image 2: the approved concept sheet of world 2, the workshops — match its palette. Attached image 3: the approved stone masonry texture of the same game — match its painting style, stone scale and level of detail. Do NOT copy layouts, text, UI or characters.\n\nCreate a SEAMLESS TILEABLE TEXTURE, square 1:1, tileable on all four sides. Strict front orthographic view, no perspective. Hand-painted cartoon style, soft shading, light from the upper left. Medium-dark values and low contrast, so small bright red, blue, yellow and green characters read clearly in front of it. No moss, no grass, no plants, no holes, no doors, no objects, no text. Even lighting across the whole tile — no vignette, no gradient from one side to the other. Neutral white balance, no yellow tint.\nSurface: heavy dark foundation stone of a workshop: large blackened grey blocks, calmer and darker than the brick wall.\nThe final image must be a SQUARE 1:1 texture swatch, edge-to-edge masonry with no blank margins. Material color is medium-dark and low contrast, and overall illumination is completely uniform across the canvas; no vignette, spotlight or panel borders. Mortar is softly painted, not a heavy dark silhouette outline. Repeatable brick bond across both opposite edges. No moss, grass or objects. Do not copy the model-sheet composition of the references.",
+      "refs": [
+        "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+        "D:/Cluade projects/games/Glue/docs/референсы/world2_workshops.png",
+        "D:/Cluade projects/games/Glue/assets/tiles/world_01/source/w01_stone_fill.png"
+      ],
+      "transparent": false,
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\\exec-6916e6c4-4983-4869-a32e-f0e539b2e7ca.png",
+      "edits": [],
+      "native_size": [
+        1254,
+        1254
+      ],
+      "alpha_extrema": [
+        255,
+        255
+      ]
+    },
+    {
+      "id": "C2.3",
+      "kind": "texture",
+      "path": "D:/Cluade projects/games/Glue/assets/tiles/world_02/source/w02_top.png",
+      "prompt": "Attached image 1: the game concept sheet, style only. Attached image 2: the approved world 2 workshop concept sheet, match its materials and palette. Attached image 3: the approved world 1 masonry, match its painting style and material scale. Do NOT copy layouts, text, UI, characters or mechanisms.\n\nCreate ONE horizontal strip, 4:1, TRANSPARENT BACKGROUND PNG, tileable horizontally (left and right edges continue each other). Strict side orthographic view. The fairly flat, slightly worn walkable top line is about 30% from the top of the image. Everything below the narrow paving cap is transparent, the fill texture goes underneath. Hand-painted cartoon style, soft shading, light from upper left. No dark outline, no text, no characters, no interactive objects. Neutral white balance.\nSurface: the top edge of a workshop floor: flat worn stone paving slabs with a thin layer of sawdust and soot and a few small tufts of dry moss (no wooden planks, no metal plates).\nEXTRA-WIDE horizontal 4:1 canvas. The narrow paving cap spans the full width and reaches BOTH the left and right canvas edges. Its walkable upper surface is at y=30% of canvas height. Only the narrow cap and its sawdust/soot/dry moss are visible, all remaining pixels truly transparent; no deep foundation blocks under it, no shadow painted on the transparent area. Flat side elevation, no visible top plane in perspective. Both strip ends continue smoothly and are not rounded off.",
+      "refs": [
+        "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+        "D:/Cluade projects/games/Glue/docs/референсы/world2_workshops.png",
+        "D:/Cluade projects/games/Glue/assets/tiles/world_01/source/w01_stone_fill.png"
+      ],
+      "transparent": true,
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\\exec-a3366485-7658-4036-951b-73f482f828f0.png",
+      "edits": [],
+      "native_size": [
+        2172,
+        724
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "C2.4",
+      "kind": "texture",
+      "path": "D:/Cluade projects/games/Glue/assets/tiles/world_02/source/w02_side.png",
+      "prompt": "Attached image 1: the game concept sheet, style only. Attached image 2: the approved world 2 workshop concept sheet, match its materials and palette. Attached image 3: the approved world 1 masonry, match its painting style and material scale. Do NOT copy layouts, text, UI, characters or mechanisms.\n\nCreate ONE vertical strip, 1:4, TRANSPARENT BACKGROUND PNG, tileable vertically (top and bottom edges continue each other). Strict side orthographic view. A narrow column of rounded corner bricks occupies the left half; the RIGHT HALF IS COMPLETELY TRANSPARENT, the brick fill continues there. No slab face extending into the right half. Hand-painted cartoon style, soft shading, light from upper left. No dark silhouette outline, no text, no characters, no objects. Neutral white balance.\nSurface: the left edge of a brick platform: darker rounded corner bricks with soot streaks running down, a few small chipped bricks.\nEXTRA-TALL vertical 1:4 canvas. The thin brick edge strip must run from the top canvas edge to the bottom canvas edge WITHOUT caps or empty end margins; brick pattern continues vertically. Place the strip only in the LEFT HALF, centered around x=25% of width. EVERY pixel with x>=50% of width is fully transparent, including shadows. No freestanding pillar perspective, no broad front wall, no masonry outside the narrow strip.",
+      "refs": [
+        "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+        "D:/Cluade projects/games/Glue/docs/референсы/world2_workshops.png",
+        "D:/Cluade projects/games/Glue/assets/tiles/world_01/source/w01_stone_fill.png"
+      ],
+      "transparent": true,
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\\exec-822504de-34c2-40c6-af98-babf7d2073da.png",
+      "edits": [
+        {
+          "prompt": "Image 1 is the edit target, a transparent vertical edge strip. Images 2 and 3 are style references; image 4 is the approved workshop brick fill. Keep everything the same, but change the edge blocks into rounded RED-BROWN BRICKS, darker and sootier than image 4, with a few chipped corners and grey-black soot streaks running down. Keep occasional small grey stones, but most of the strip must read as red-brown brick rather than grey quarry stone. Preserve the transparent background, the completely empty right half, the strip reaching both top and bottom edges, the original native aspect ratio, soft hand-painted shading without a dark outline and the material scale. No moss, objects or text. Neutral white balance.",
+          "refs": [
+            "D:/Cluade projects/games/Glue/assets/tiles/world_02/source/w02_side.png",
+            "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+            "D:/Cluade projects/games/Glue/docs/референсы/world2_workshops.png",
+            "D:/Cluade projects/games/Glue/assets/tiles/world_02/source/w02_fill.png"
+          ],
+          "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\\exec-a679ae41-6caf-4d5d-a6f8-eae15c92bff1.png"
+        }
+      ],
+      "native_size": [
+        724,
+        2172
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "D2.1",
+      "kind": "decal",
+      "path": "D:/Cluade projects/games/Glue/assets/decals/world_02/source/w02_decal_lantern.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" — style reference only. Attached image 2: the approved world 2 workshop concept sheet — match its palette and light. Attached image 3: the approved world 2 floor top strip — match its colors and painting style exactly. Do NOT copy layouts, text, UI or characters.\n\nCreate ONE isolated decorative sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no unrelated objects.\nObject: a warm glowing wall lantern of brass and glass on a short wall bracket.\n\nNeutral white balance. Genuine PNG alpha transparency, no painted checkerboard, no ground plane, no backdrop, no cast shadow outside the object. Landscape 3:2.\nThe object is a background decoration, hand-painted WITHOUT any black/navy contour around its silhouette or parts. No broad cast shadow and no wall slab behind the object. Match muted tones of the floor cap, neutral white balance, not photorealistic.\nThe short bracket is a flat horizontal brass wall plate and arm, not a curved hook. Lantern is softly rounded square, modest warm glass glow contained near glass, no giant halo.\nNo crates, barrels, kegs, fuse cords, copper wires, gears, saws, wooden planks or boards, hooks, chains, ropes, wheels, levers, springs.",
+      "refs": [
+        "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+        "D:/Cluade projects/games/Glue/docs/референсы/world2_workshops.png",
+        "D:/Cluade projects/games/Glue/assets/tiles/world_02/source/w02_top.png"
+      ],
+      "transparent": true,
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\\exec-162dd644-6d7a-400f-a924-4c93eef03e87.png",
+      "edits": [],
+      "native_size": [
+        1536,
+        1024
+      ],
+      "alpha_extrema": [
+        0,
+        254
+      ]
+    },
+    {
+      "id": "D2.1.2",
+      "kind": "decal",
+      "path": "D:/Cluade projects/games/Glue/assets/decals/world_02/source/w02_decal_lantern_2.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" — style reference only. Attached image 2: the approved world 2 workshop concept sheet — match its palette and light. Attached image 3: the approved world 2 floor top strip — match its colors and painting style exactly. Do NOT copy layouts, text, UI or characters.\n\nCreate ONE isolated decorative sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no unrelated objects.\nObject: a warm glowing wall lantern of brass and glass on a short wall bracket.\n\nNeutral white balance. Genuine PNG alpha transparency, no painted checkerboard, no ground plane, no backdrop, no cast shadow outside the object. Landscape 3:2.\nCreate a second independent variant of this one object, with a modestly different silhouette and details, matching the same materials, scale and style. ONE object only, not a pair or comparison sheet.\nThe object is a background decoration, hand-painted WITHOUT any black/navy contour around its silhouette or parts. No broad cast shadow and no wall slab behind the object. Match muted tones of the floor cap, neutral white balance, not photorealistic.\nVariant: a slightly taller narrow lantern with a domed brass top and frosted amber glass on a plain short L-shaped metal bracket. No hooks, chains, rods or rope.\nNo crates, barrels, kegs, fuse cords, copper wires, gears, saws, wooden planks or boards, hooks, chains, ropes, wheels, levers, springs.",
+      "refs": [
+        "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+        "D:/Cluade projects/games/Glue/docs/референсы/world2_workshops.png",
+        "D:/Cluade projects/games/Glue/assets/tiles/world_02/source/w02_top.png"
+      ],
+      "transparent": true,
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\\exec-c6ebca10-a941-4531-89bf-4a8e69c9d8fd.png",
+      "edits": [],
+      "native_size": [
+        1536,
+        1024
+      ],
+      "alpha_extrema": [
+        0,
+        254
+      ]
+    },
+    {
+      "id": "D2.2",
+      "kind": "decal",
+      "path": "D:/Cluade projects/games/Glue/assets/decals/world_02/source/w02_decal_steam.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" — style reference only. Attached image 2: the approved world 2 workshop concept sheet — match its palette and light. Attached image 3: the approved world 2 floor top strip — match its colors and painting style exactly. Do NOT copy layouts, text, UI or characters.\n\nCreate ONE isolated decorative sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no unrelated objects.\nObject: a soft white puff of steam rising, wispy and transparent at the edges.\n\nNeutral white balance. Genuine PNG alpha transparency, no painted checkerboard, no ground plane, no backdrop, no cast shadow outside the object. Landscape 3:2.\nThe object is a background decoration, hand-painted WITHOUT any black/navy contour around its silhouette or parts. No broad cast shadow and no wall slab behind the object. Match muted tones of the floor cap, neutral white balance, not photorealistic.\nONE irregular rising cloud of faint off-white translucent steam, narrow at bottom, widening softly near middle, tapering into wisps; no source device. Entire cloud floats isolated with empty alpha margins on all four sides. No black outline.\nNo crates, barrels, kegs, fuse cords, copper wires, gears, saws, wooden planks or boards, hooks, chains, ropes, wheels, levers, springs.",
+      "refs": [
+        "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+        "D:/Cluade projects/games/Glue/docs/референсы/world2_workshops.png",
+        "D:/Cluade projects/games/Glue/assets/tiles/world_02/source/w02_top.png"
+      ],
+      "transparent": true,
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\\exec-4c72d35a-1ae5-47bb-80e4-be3150293d7c.png",
+      "edits": [],
+      "native_size": [
+        1536,
+        1024
+      ],
+      "alpha_extrema": [
+        0,
+        254
+      ]
+    },
+    {
+      "id": "D2.2.2",
+      "kind": "decal",
+      "path": "D:/Cluade projects/games/Glue/assets/decals/world_02/source/w02_decal_steam_2.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" — style reference only. Attached image 2: the approved world 2 workshop concept sheet — match its palette and light. Attached image 3: the approved world 2 floor top strip — match its colors and painting style exactly. Do NOT copy layouts, text, UI or characters.\n\nCreate ONE isolated decorative sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no unrelated objects.\nObject: a soft white puff of steam rising, wispy and transparent at the edges.\n\nNeutral white balance. Genuine PNG alpha transparency, no painted checkerboard, no ground plane, no backdrop, no cast shadow outside the object. Landscape 3:2.\nCreate a second independent variant of this one object, with a modestly different silhouette and details, matching the same materials, scale and style. ONE object only, not a pair or comparison sheet.\nThe object is a background decoration, hand-painted WITHOUT any black/navy contour around its silhouette or parts. No broad cast shadow and no wall slab behind the object. Match muted tones of the floor cap, neutral white balance, not photorealistic.\nSecond variant: ONE soft wispy puff of off-white steam, a little broader and drifting slightly to the right, isolated with generous alpha margins. No device or scenery.\nNo crates, barrels, kegs, fuse cords, copper wires, gears, saws, wooden planks or boards, hooks, chains, ropes, wheels, levers, springs.",
+      "refs": [
+        "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+        "D:/Cluade projects/games/Glue/docs/референсы/world2_workshops.png",
+        "D:/Cluade projects/games/Glue/assets/tiles/world_02/source/w02_top.png"
+      ],
+      "transparent": true,
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\\exec-4735f264-a8d6-40f6-854a-de9dce49e356.png",
+      "edits": [],
+      "native_size": [
+        1536,
+        1024
+      ],
+      "alpha_extrema": [
+        0,
+        254
+      ]
+    },
+    {
+      "id": "D2.3",
+      "kind": "decal",
+      "path": "D:/Cluade projects/games/Glue/assets/decals/world_02/source/w02_decal_pipes.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" — style reference only. Attached image 2: the approved world 2 workshop concept sheet — match its palette and light. Attached image 3: the approved world 2 floor top strip — match its colors and painting style exactly. Do NOT copy layouts, text, UI or characters.\n\nCreate ONE isolated decorative sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no unrelated objects.\nObject: a few vertical copper pipes with joints mounted on a wall (vertical only).\n\nNeutral white balance. Genuine PNG alpha transparency, no painted checkerboard, no ground plane, no backdrop, no cast shadow outside the object. Landscape 3:2.\nThe object is a background decoration, hand-painted WITHOUT any black/navy contour around its silhouette or parts. No broad cast shadow and no wall slab behind the object. Match muted tones of the floor cap, neutral white balance, not photorealistic.\nThree separate VERTICAL copper pipes, different lengths and modest widths, close together as one decorative grouping, with short collars/joints and tiny wall mounts. Absolutely no horizontal pipe runs, lever, valve wheel, wire or glow. No wall background.\nNo crates, barrels, kegs, fuse cords, copper wires, gears, saws, wooden planks or boards, hooks, chains, ropes, wheels, levers, springs.",
+      "refs": [
+        "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+        "D:/Cluade projects/games/Glue/docs/референсы/world2_workshops.png",
+        "D:/Cluade projects/games/Glue/assets/tiles/world_02/source/w02_top.png"
+      ],
+      "transparent": true,
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\\exec-3bf065ba-55c1-42c1-bef3-bcd491b8468c.png",
+      "edits": [],
+      "native_size": [
+        1536,
+        1024
+      ],
+      "alpha_extrema": [
+        0,
+        254
+      ]
+    },
+    {
+      "id": "D2.3.2",
+      "kind": "decal",
+      "path": "D:/Cluade projects/games/Glue/assets/decals/world_02/source/w02_decal_pipes_2.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" — style reference only. Attached image 2: the approved world 2 workshop concept sheet — match its palette and light. Attached image 3: the approved world 2 floor top strip — match its colors and painting style exactly. Do NOT copy layouts, text, UI or characters.\n\nCreate ONE isolated decorative sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no unrelated objects.\nObject: a few vertical copper pipes with joints mounted on a wall (vertical only).\n\nNeutral white balance. Genuine PNG alpha transparency, no painted checkerboard, no ground plane, no backdrop, no cast shadow outside the object. Landscape 3:2.\nCreate a second independent variant of this one object, with a modestly different silhouette and details, matching the same materials, scale and style. ONE object only, not a pair or comparison sheet.\nThe object is a background decoration, hand-painted WITHOUT any black/navy contour around its silhouette or parts. No broad cast shadow and no wall slab behind the object. Match muted tones of the floor cap, neutral white balance, not photorealistic.\nSecond variant: a group of TWO upright copper pipes of different heights with a few rounded connecting collars and tiny plain mounting tabs, all pipes vertical. No horizontal crossbar, nozzle, tap, valve or wall.\nNo crates, barrels, kegs, fuse cords, copper wires, gears, saws, wooden planks or boards, hooks, chains, ropes, wheels, levers, springs.",
+      "refs": [
+        "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+        "D:/Cluade projects/games/Glue/docs/референсы/world2_workshops.png",
+        "D:/Cluade projects/games/Glue/assets/tiles/world_02/source/w02_top.png"
+      ],
+      "transparent": true,
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\\exec-bf941bde-b674-4dc6-94d4-f19024e57954.png",
+      "edits": [],
+      "native_size": [
+        1536,
+        1024
+      ],
+      "alpha_extrema": [
+        0,
+        254
+      ]
+    },
+    {
+      "id": "D2.4",
+      "kind": "decal",
+      "path": "D:/Cluade projects/games/Glue/assets/decals/world_02/source/w02_decal_banner.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" — style reference only. Attached image 2: the approved world 2 workshop concept sheet — match its palette and light. Attached image 3: the approved world 2 floor top strip — match its colors and painting style exactly. Do NOT copy layouts, text, UI or characters.\n\nCreate ONE isolated decorative sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no unrelated objects.\nObject: a hanging cloth banner, plain warm red with a simple border, no symbols.\n\nNeutral white balance. Genuine PNG alpha transparency, no painted checkerboard, no ground plane, no backdrop, no cast shadow outside the object. Landscape 3:2.\nThe object is a background decoration, hand-painted WITHOUT any black/navy contour around its silhouette or parts. No broad cast shadow and no wall slab behind the object. Match muted tones of the floor cap, neutral white balance, not photorealistic.\nONE plain warm red cloth banner with a thin muted cream border, hanging by a simple folded cloth upper hem with two tiny metal wall studs, cloth only. No pole or support bar of any material, no ropes or hooks, no emblem. Straight simple bottom hem.\nNo glow, no bloom, no light halo, no fog or smoky haze around the object. This object does not emit light. All exterior pixels are transparent; softly lit matte materials with subdued highlights.\nNo crates, barrels, kegs, fuse cords, copper wires, gears, saws, wooden planks or boards, hooks, chains, ropes, wheels, levers, springs.",
+      "refs": [
+        "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+        "D:/Cluade projects/games/Glue/docs/референсы/world2_workshops.png",
+        "D:/Cluade projects/games/Glue/assets/tiles/world_02/source/w02_top.png"
+      ],
+      "transparent": true,
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\\exec-c834be5a-f156-49f6-9b82-df23c9ef400f.png",
+      "edits": [],
+      "native_size": [
+        1536,
+        1024
+      ],
+      "alpha_extrema": [
+        0,
+        254
+      ]
+    },
+    {
+      "id": "D2.4.2",
+      "kind": "decal",
+      "path": "D:/Cluade projects/games/Glue/assets/decals/world_02/source/w02_decal_banner_2.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" — style reference only. Attached image 2: the approved world 2 workshop concept sheet — match its palette and light. Attached image 3: the approved world 2 floor top strip — match its colors and painting style exactly. Do NOT copy layouts, text, UI or characters.\n\nCreate ONE isolated decorative sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no unrelated objects.\nObject: a hanging cloth banner, plain warm red with a simple border, no symbols.\n\nNeutral white balance. Genuine PNG alpha transparency, no painted checkerboard, no ground plane, no backdrop, no cast shadow outside the object. Landscape 3:2.\nCreate a second independent variant of this one object, with a modestly different silhouette and details, matching the same materials, scale and style. ONE object only, not a pair or comparison sheet.\nThe object is a background decoration, hand-painted WITHOUT any black/navy contour around its silhouette or parts. No broad cast shadow and no wall slab behind the object. Match muted tones of the floor cap, neutral white balance, not photorealistic.\nSecond variant: ONE plain warm red cloth banner with a muted golden narrow border, wider softer fabric folds and a gently pointed lower edge. Only cloth and two tiny attachment studs at the top, no pole or rod, no symbol.\nNo glow, no bloom, no light halo, no fog or smoky haze around the object. This object does not emit light. All exterior pixels are transparent; softly lit matte materials with subdued highlights.\nNo crates, barrels, kegs, fuse cords, copper wires, gears, saws, wooden planks or boards, hooks, chains, ropes, wheels, levers, springs.",
+      "refs": [
+        "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+        "D:/Cluade projects/games/Glue/docs/референсы/world2_workshops.png",
+        "D:/Cluade projects/games/Glue/assets/tiles/world_02/source/w02_top.png"
+      ],
+      "transparent": true,
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\\exec-57ec06c5-a813-44b8-8c20-f6a841aad687.png",
+      "edits": [],
+      "native_size": [
+        1536,
+        1024
+      ],
+      "alpha_extrema": [
+        0,
+        254
+      ]
+    },
+    {
+      "id": "D2.5",
+      "kind": "decal",
+      "path": "D:/Cluade projects/games/Glue/assets/decals/world_02/source/w02_decal_soot_moss.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" — style reference only. Attached image 2: the approved world 2 workshop concept sheet — match its palette and light. Attached image 3: the approved world 2 floor top strip — match its colors and painting style exactly. Do NOT copy layouts, text, UI or characters.\n\nCreate ONE isolated decorative sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no unrelated objects.\nObject: a small tuft of dark green moss with a few dry grass blades and soot specks.\n\nNeutral white balance. Genuine PNG alpha transparency, no painted checkerboard, no ground plane, no backdrop, no cast shadow outside the object. Landscape 3:2.\nThe object is a background decoration, hand-painted WITHOUT any black/navy contour around its silhouette or parts. No broad cast shadow and no wall slab behind the object. Match muted tones of the floor cap, neutral white balance, not photorealistic.\nONE compact LOW tuft of muted DARK olive-green moss, short sparse dry beige grass, a few tiny charcoal-grey soot specks. No bright yellow/lime/red flowers. Flat bottom to sit on a floor ledge, no soil mound or stone base.\nNo glow, no bloom, no light halo, no fog or smoky haze around the object. This object does not emit light. All exterior pixels are transparent; softly lit matte materials with subdued highlights.\nNo crates, barrels, kegs, fuse cords, copper wires, gears, saws, wooden planks or boards, hooks, chains, ropes, wheels, levers, springs.",
+      "refs": [
+        "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+        "D:/Cluade projects/games/Glue/docs/референсы/world2_workshops.png",
+        "D:/Cluade projects/games/Glue/assets/tiles/world_02/source/w02_top.png"
+      ],
+      "transparent": true,
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\\exec-306eed2d-fe93-40c8-95c6-9dcdff68fc76.png",
+      "edits": [],
+      "native_size": [
+        1536,
+        1024
+      ],
+      "alpha_extrema": [
+        0,
+        254
+      ]
+    },
+    {
+      "id": "D2.5.2",
+      "kind": "decal",
+      "path": "D:/Cluade projects/games/Glue/assets/decals/world_02/source/w02_decal_soot_moss_2.png",
+      "prompt": "Attached image 1: the concept sheet of my game \"Hold On!\" — style reference only. Attached image 2: the approved world 2 workshop concept sheet — match its palette and light. Attached image 3: the approved world 2 floor top strip — match its colors and painting style exactly. Do NOT copy layouts, text, UI or characters.\n\nCreate ONE isolated decorative sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no unrelated objects.\nObject: a small tuft of dark green moss with a few dry grass blades and soot specks.\n\nNeutral white balance. Genuine PNG alpha transparency, no painted checkerboard, no ground plane, no backdrop, no cast shadow outside the object. Landscape 3:2.\nCreate a second independent variant of this one object, with a modestly different silhouette and details, matching the same materials, scale and style. ONE object only, not a pair or comparison sheet.\nThe object is a background decoration, hand-painted WITHOUT any black/navy contour around its silhouette or parts. No broad cast shadow and no wall slab behind the object. Match muted tones of the floor cap, neutral white balance, not photorealistic.\nSecond variant: ONE smaller asymmetrical LOW mound of muted dark olive moss with three or four bent beige dry grass blades and soot flecks. No bright green or yellow, no red blossoms, no soil or rock base.\nNo glow, no bloom, no light halo, no fog or smoky haze around the object. This object does not emit light. All exterior pixels are transparent; softly lit matte materials with subdued highlights.\nNo crates, barrels, kegs, fuse cords, copper wires, gears, saws, wooden planks or boards, hooks, chains, ropes, wheels, levers, springs.",
+      "refs": [
+        "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+        "D:/Cluade projects/games/Glue/docs/референсы/world2_workshops.png",
+        "D:/Cluade projects/games/Glue/assets/tiles/world_02/source/w02_top.png"
+      ],
+      "transparent": true,
+      "generated_source": "C:\\Users\\Марат\\.codex\\generated_images\\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\\exec-2d7c61e6-6ec8-458c-b40d-e2a4fe1f581d.png",
+      "edits": [],
+      "native_size": [
+        1536,
+        1024
+      ],
+      "alpha_extrema": [
+        0,
+        254
+      ]
+    }
+  ],
+  "z3_correction": {
+    "id": "Z3",
+    "path": "D:/Cluade projects/games/Glue/assets/backgrounds/world_01/v2/source/w01_v2_far_canyon.png",
+    "generated_source": "C:/Users/Марат/.codex/generated_images/01a0fe7f-089d-7071-9b6f-2f5687fa78c2/exec-2d838a98-79c0-40c7-ba4c-01d4ca8563c2.png",
+    "refs": [
+      "D:/Cluade projects/games/Glue/assets/backgrounds/world_01/v2/source/w01_v2_far_canyon.png",
+      "D:/Cluade projects/games/Glue/docs/референсы/reference.png",
+      "D:/Cluade projects/games/Glue/assets/backgrounds/world_01/v2/source/w01_v2_far_valley.png"
+    ],
+    "prompt": "Image 1 is the edit target, the approved far canyon background. Images 2 and 3 are the original style references only. Keep everything the same, but move the two lifting towers away from the left and right edges and lower them so they stand near the horizon line, not in the top corners; leave the left and right edges simple, only sky, haze and distant cliffs. Preserve the palette, sky, neutral white balance, existing soft mist in the 40–80% height band, aspect ratio and original hand-painted style. No text.",
+    "native_size": [
+      1536,
+      1024
+    ],
+    "sha256": "b9971ea270ba2d1dcd38d92c361429ebdb5d7964e165612f627b8e5c84fa4821",
+    "final_bytes_equal_generator_output": true
+  },
+  "completed_date": "2026-10-03",
+  "delivery_scope": "Order 1 only: all world 2 assets and the Z3 acceptance correction.",
+  "delivery_status": "All requested PNGs saved; ready for acceptance with documented generator deviations.",
+  "visual_review_notes": [
+    {
+      "ids": [
+        "E2",
+        "E3",
+        "M2.1",
+        "M2.2",
+        "M2.3",
+        "M2.4",
+        "M2.5",
+        "M2.6",
+        "M2.7",
+        "M2.8"
+      ],
+      "issue": "Scale figures are approximate; use Size in the assignment when building models. Some views show top-face perspective and a faint texture/gradient in the grey background."
+    },
+    {
+      "ids": [
+        "E3"
+      ],
+      "issue": "Primary body is near half-player height after correction, but bounding box with detached flames is taller. Miniature bounce scale is not exactly half-player height."
+    },
+    {
+      "ids": [
+        "M2.2",
+        "M2.3"
+      ],
+      "issue": "Primary view serves as the idle/horizontal state; it is not repeated in the miniature row. All gameplay states are present."
+    },
+    {
+      "ids": [
+        "M2.4",
+        "M2.5"
+      ],
+      "issue": "Some active player examples are grey; these are not additional frozen states."
+    },
+    {
+      "ids": [
+        "M2.5",
+        "M2.7",
+        "M2.8"
+      ],
+      "issue": "Primary bellows, switch box and keg are too large relative to the red player; wire is too thick. Follow Size in the assignment."
+    },
+    {
+      "ids": [
+        "C2.1",
+        "C2.2",
+        "C2.3",
+        "C2.4"
+      ],
+      "issue": "Seams need blending; the C2.1 horizontal seam is most apparent."
+    },
+    {
+      "ids": [
+        "C2.3",
+        "C2.4"
+      ],
+      "issue": "Native ratios 3:1 and 1:3 instead of requested 4:1 and 1:4. Preserved without resizing or upscale."
+    },
+    {
+      "ids": [
+        "C2.4"
+      ],
+      "issue": "Visually empty right half contains residual alpha 1/255 pixels."
+    },
+    {
+      "ids": [
+        "D2.2",
+        "D2.2.2"
+      ],
+      "issue": "Steam is warm cream with relatively dense lobes."
+    },
+    {
+      "ids": [
+        "D2.5",
+        "D2.5.2"
+      ],
+      "issue": "Dark olive moss has yellow-olive highlights; second variant has a slight top view."
+    },
+    {
+      "ids": [
+        "D2.2.2",
+        "D2.4.2",
+        "D2.5"
+      ],
+      "issue": "Nearly invisible alpha 1/255 pixels touch a canvas edge."
+    }
+  ],
+  "browser_review": {
+    "gallery": "docs/11_графика_мир_2_галерея.html",
+    "images_loaded": 25,
+    "broken_images": 0,
+    "checks": [
+      "All ten decals composited on a light background: no visible black backdrop or broad raw-RGB halo.",
+      "Top and side strips composited on a dark background.",
+      "Brick and stone fill repetition preview inspected."
+    ],
+    "reviewer": "Codex"
+  }
+}

@@ -23,9 +23,38 @@ const RESETTABLE := "resettable"
 		checkpoints = value
 		queue_redraw()
 ## Границы камеры в тайлах.
+## Свои точки появления игроков у первого чекпоинта (тайлы, по слотам по кругу): уровни, где игроки
+## с самого начала разведены по разным коридорам. Пусто — все у чекпоинта рядом.
+@export var slot_spawns: Array[Vector2] = []
 @export var bounds_tiles := Rect2(0, -10, 40, 29)
 ## Ниже этой линии (в тайлах) игрок погибает.
 @export var kill_y_tiles := 19.0
+## Текстуры платформ зоны (имена в assets/tiles/world_XX/game, мир — по префиксу имени):
+## заливка у поверхности (кладка) и глубина (скала).
+@export var ground_fill := "w01_stone_fill":
+	set(value):
+		ground_fill = value
+		queue_redraw()
+@export var ground_deep := "w01_cliff_fill":
+	set(value):
+		ground_deep = value
+		queue_redraw()
+## Полоса по верхней кромке (мох, бордюр) и по открытым бокам — у каждого мира своя.
+@export var ground_top := "w01_moss_top":
+	set(value):
+		ground_top = value
+		queue_redraw()
+@export var ground_side := "w01_stone_side":
+	set(value):
+		ground_side = value
+		queue_redraw()
+## Растительность по краям платформ (src/level/decals.gd).
+@export var decals := true:
+	set(value):
+		decals = value
+		queue_redraw()
+## Ветки переднего плана у верхних углов экрана (src/level/front_leaves.gd); только с задником.
+@export var front_leaves := true
 @export var sky_color := Color("c9d9e8")
 @export var block_color := Color("6b7280")
 @export var top_color := Color("7fae5c")
@@ -39,6 +68,7 @@ var active_checkpoint := 0:
 var _snapshot := {}
 var _sky: Node2D
 var _ground: Ground
+var _decals: Decals
 
 
 func _ready() -> void:
@@ -51,8 +81,15 @@ func _ready() -> void:
 	_ground = Ground.new()
 	_ground.name = "Ground"
 	add_child(_ground, false, Node.INTERNAL_MODE_FRONT)
+	_decals = Decals.new()
+	_decals.name = "Decals"
+	add_child(_decals, false, Node.INTERNAL_MODE_FRONT)
 	if Engine.is_editor_hint():
 		return
+	if front_leaves and ground_fill.begins_with("w01") and get_children().any(func(child: Node) -> bool: return child is Backdrop):
+		var leaves := FrontLeaves.new()
+		leaves.name = "FrontLeaves"
+		add_child(leaves, false, Node.INTERNAL_MODE_BACK)
 	for rect in blocks:
 		var body := StaticBody2D.new()
 		body.collision_layer = Player.LAYER_WORLD
@@ -93,6 +130,9 @@ func get_kill_y() -> float:
 
 ## Точка появления игрока у чекпоинта: игроки встают рядом, не друг в друге.
 func get_spawn_position(checkpoint: int, slot: int) -> Vector2:
+	if checkpoint == 0 and not slot_spawns.is_empty():
+		var own := slot_spawns[slot % slot_spawns.size()] * TILE
+		return own + Vector2(floorf(float(slot) / slot_spawns.size()) * (Player.SIZE.x + 8.0), -Player.SIZE.y / 2.0 - 1.0)
 	var base := checkpoints[checkpoint] * TILE
 	return base + Vector2(slot * (Player.SIZE.x + 8.0), -Player.SIZE.y / 2.0 - 1.0)
 
@@ -137,6 +177,8 @@ func _draw_sky() -> void:
 func _draw() -> void:
 	if _ground:
 		_ground.queue_redraw()  # F3 и правка блоков в редакторе перерисовывают и платформы
+	if _decals:
+		_decals.queue_redraw()
 	for rect in blocks:
 		var px := Rect2(rect.position * TILE, rect.size * TILE)
 		if rect.size.y <= 0.5:
@@ -155,9 +197,10 @@ func _draw() -> void:
 	for i in checkpoints.size():
 		var base := checkpoints[i] * TILE
 		if Art.enabled:
-			# Спрайт флажка 48×104: основание древка — точка (8, 104).
-			draw_texture_rect(Art.tex("flag_on" if i == active_checkpoint else "flag_off"),
-					Rect2(base - Vector2(8, 104), Vector2(48, 104)), false)
+			# Спрайт флажка 64×104: основание древка — точка (12, 104).
+			var flag := Art.tex("flag_on" if i == active_checkpoint else "flag_off")
+			var size := Vector2(flag.get_size()) / 4.0
+			draw_texture_rect(flag, Rect2(base - Vector2(12, size.y), size), false)
 			continue
 		var flag := Color("f2c230") if i == active_checkpoint else Color("9aa3ad")
 		draw_line(base, base + Vector2(0, -96), Color("3a3f47"), 4.0)

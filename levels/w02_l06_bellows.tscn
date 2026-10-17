@@ -1,0 +1,43 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://src/level/greybox_level.gd" id="1"]
+[ext_resource type="Script" path="res://src/mechanisms/bellows.gd" id="2"]
+[ext_resource type="Script" path="res://src/mechanisms/pressure_plate.gd" id="3"]
+[ext_resource type="Script" path="res://src/mechanisms/finish.gd" id="4"]
+[ext_resource type="PackedScene" path="res://levels/backdrops/w02_forge.tscn" id="bd"]
+
+[node name="W02L06" type="Node2D"]
+script = ExtResource("1")
+title = "06 · Меха"
+blocks = Array[Rect2]([Rect2(0, -8, 1, 26), Rect2(0, 12, 10, 6), Rect2(18, 12, 10, 6), Rect2(28, -8, 1, 26)])
+checkpoints = Array[Vector2]([Vector2(2, 12)])
+bounds_tiles = Rect2(0, -8, 29, 27)
+kill_y_tiles = 19.0
+ground_fill = "w02_fill"
+ground_deep = "w02_deep"
+ground_top = "w02_top"
+ground_side = "w02_side"
+
+[node name="Pedal1" type="AnimatableBody2D" parent="."]
+position = Vector2(384, 768)
+script = ExtResource("3")
+width_tiles = 1.5
+
+[node name="Pedal2" type="AnimatableBody2D" parent="."]
+position = Vector2(1408, 768)
+script = ExtResource("3")
+width_tiles = 1.5
+
+[node name="Bellows" type="Node2D" parent="."]
+position = Vector2(640, 704)
+script = ExtResource("2")
+length_tiles = 10.0
+height_tiles = 5.0
+pedal = NodePath("../Pedal1")
+pedals = Array[NodePath]([NodePath("../Pedal2")])
+
+[node name="Finish" type="Node2D" parent="."]
+position = Vector2(1664, 768)
+script = ExtResource("4")
+
+[node name="Backdrop" parent="." instance=ExtResource("bd")]

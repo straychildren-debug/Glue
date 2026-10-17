@@ -1,0 +1,72 @@
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+C2.1 | w02_fill.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world2_workshops.png
+D:/Cluade projects/games/Glue/assets/tiles/world_01/source/w01_stone_fill.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the approved concept sheet of world 2, the workshops — match its palette. Attached image 3: the approved stone masonry texture of the same game — match its painting style, stone scale and level of detail. Do NOT copy layouts, text, UI or characters.
+
+Create a SEAMLESS TILEABLE TEXTURE, square 1:1, tileable on all four sides. Strict front orthographic view, no perspective. Hand-painted cartoon style, soft shading, light from the upper left. Medium-dark values and low contrast, so small bright red, blue, yellow and green characters read clearly in front of it. No moss, no grass, no plants, no holes, no doors, no objects, no text. Even lighting across the whole tile — no vignette, no gradient from one side to the other. Neutral white balance, no yellow tint.
+Surface: workshop foundation masonry: sooty warm red-brown bricks with occasional larger grey stone blocks, thin dark joints, faint soot stains; no metal, no wood.
+The final image must be a SQUARE 1:1 texture swatch, edge-to-edge masonry with no blank margins. Material color is medium-dark and low contrast, and overall illumination is completely uniform across the canvas; no vignette, spotlight or panel borders. Mortar is softly painted, not a heavy dark silhouette outline. Repeatable brick bond across both opposite edges. No moss, grass or objects. Do not copy the model-sheet composition of the references.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-e86ca783-1e01-4f6c-adf6-7392eda75b65.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+C2.2 | w02_deep.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world2_workshops.png
+D:/Cluade projects/games/Glue/assets/tiles/world_01/source/w01_stone_fill.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the approved concept sheet of world 2, the workshops — match its palette. Attached image 3: the approved stone masonry texture of the same game — match its painting style, stone scale and level of detail. Do NOT copy layouts, text, UI or characters.
+
+Create a SEAMLESS TILEABLE TEXTURE, square 1:1, tileable on all four sides. Strict front orthographic view, no perspective. Hand-painted cartoon style, soft shading, light from the upper left. Medium-dark values and low contrast, so small bright red, blue, yellow and green characters read clearly in front of it. No moss, no grass, no plants, no holes, no doors, no objects, no text. Even lighting across the whole tile — no vignette, no gradient from one side to the other. Neutral white balance, no yellow tint.
+Surface: heavy dark foundation stone of a workshop: large blackened grey blocks, calmer and darker than the brick wall.
+The final image must be a SQUARE 1:1 texture swatch, edge-to-edge masonry with no blank margins. Material color is medium-dark and low contrast, and overall illumination is completely uniform across the canvas; no vignette, spotlight or panel borders. Mortar is softly painted, not a heavy dark silhouette outline. Repeatable brick bond across both opposite edges. No moss, grass or objects. Do not copy the model-sheet composition of the references.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-6916e6c4-4983-4869-a32e-f0e539b2e7ca.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+C2.3 | w02_top.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world2_workshops.png
+D:/Cluade projects/games/Glue/assets/tiles/world_01/source/w01_stone_fill.png
+Prompt:
+Attached image 1: the game concept sheet, style only. Attached image 2: the approved world 2 workshop concept sheet, match its materials and palette. Attached image 3: the approved world 1 masonry, match its painting style and material scale. Do NOT copy layouts, text, UI, characters or mechanisms.
+
+Create ONE horizontal strip, 4:1, TRANSPARENT BACKGROUND PNG, tileable horizontally (left and right edges continue each other). Strict side orthographic view. The fairly flat, slightly worn walkable top line is about 30% from the top of the image. Everything below the narrow paving cap is transparent, the fill texture goes underneath. Hand-painted cartoon style, soft shading, light from upper left. No dark outline, no text, no characters, no interactive objects. Neutral white balance.
+Surface: the top edge of a workshop floor: flat worn stone paving slabs with a thin layer of sawdust and soot and a few small tufts of dry moss (no wooden planks, no metal plates).
+EXTRA-WIDE horizontal 4:1 canvas. The narrow paving cap spans the full width and reaches BOTH the left and right canvas edges. Its walkable upper surface is at y=30% of canvas height. Only the narrow cap and its sawdust/soot/dry moss are visible, all remaining pixels truly transparent; no deep foundation blocks under it, no shadow painted on the transparent area. Flat side elevation, no visible top plane in perspective. Both strip ends continue smoothly and are not rounded off.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-a3366485-7658-4036-951b-73f482f828f0.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+C2.4 | w02_side.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world2_workshops.png
+D:/Cluade projects/games/Glue/assets/tiles/world_01/source/w01_stone_fill.png
+Prompt:
+Attached image 1: the game concept sheet, style only. Attached image 2: the approved world 2 workshop concept sheet, match its materials and palette. Attached image 3: the approved world 1 masonry, match its painting style and material scale. Do NOT copy layouts, text, UI, characters or mechanisms.
+
+Create ONE vertical strip, 1:4, TRANSPARENT BACKGROUND PNG, tileable vertically (top and bottom edges continue each other). Strict side orthographic view. A narrow column of rounded corner bricks occupies the left half; the RIGHT HALF IS COMPLETELY TRANSPARENT, the brick fill continues there. No slab face extending into the right half. Hand-painted cartoon style, soft shading, light from upper left. No dark silhouette outline, no text, no characters, no objects. Neutral white balance.
+Surface: the left edge of a brick platform: darker rounded corner bricks with soot streaks running down, a few small chipped bricks.
+EXTRA-TALL vertical 1:4 canvas. The thin brick edge strip must run from the top canvas edge to the bottom canvas edge WITHOUT caps or empty end margins; brick pattern continues vertically. Place the strip only in the LEFT HALF, centered around x=25% of width. EVERY pixel with x>=50% of width is fully transparent, including shadows. No freestanding pillar perspective, no broad front wall, no masonry outside the narrow strip.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-822504de-34c2-40c6-af98-babf7d2073da.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+C2.4 | w02_side.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/assets/tiles/world_02/source/w02_side.png
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world2_workshops.png
+D:/Cluade projects/games/Glue/assets/tiles/world_02/source/w02_fill.png
+Edit prompt:
+Image 1 is the edit target, a transparent vertical edge strip. Images 2 and 3 are style references; image 4 is the approved workshop brick fill. Keep everything the same, but change the edge blocks into rounded RED-BROWN BRICKS, darker and sootier than image 4, with a few chipped corners and grey-black soot streaks running down. Keep occasional small grey stones, but most of the strip must read as red-brown brick rather than grey quarry stone. Preserve the transparent background, the completely empty right half, the strip reaching both top and bottom edges, the original native aspect ratio, soft hand-painted shading without a dark outline and the material scale. No moss, objects or text. Neutral white balance.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-a679ae41-6caf-4d5d-a6f8-eae15c92bff1.png

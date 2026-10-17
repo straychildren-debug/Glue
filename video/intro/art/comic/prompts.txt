@@ -1,0 +1,13 @@
+P01 — p01_festival.png
+Mode: built-in image_gen, generated illustration without lettering.
+References (in order):
+1. docs/референсы/reference.png — game style, not layout or text.
+2. video/intro/art/b1_square_day.png — approved Bean Kingdom square and stage.
+3. video/intro/art/k3_king_poses.png — exact king design.
+4. video/intro/art/b4_crowd.png — exact townsfolk designs.
+5. video/intro/art/h3_hero_poses.png — exact red hero design; palette for siblings.
+
+Prompt:
+Use case: illustration-story. Asset type: P01 full-bleed illustrated comic panel for the opening of a cheerful 2D game. Image 1 is the game's concept sheet for style only; do not copy its layout, UI or text. Image 2 is the APPROVED Bean Kingdom festival square: keep its distinctive bean-domed castle, colorful round-roofed houses, cobblestones and wooden stage at center-right. Image 3 is the EXACT king design: glossy plum-purple bean, jeweled gold crown, red cape with white ermine trim, curled mustache and navy outline. Image 4 is the EXACT six townsfolk designs and accessories. Image 5 is the EXACT red hero shape and glossy finish; use this design also for blue and green brothers and the slightly smaller yellow sister with pink bow. Draw ONE landscape 3:2 COMIC PANEL, not a comic page. The kind king stands firmly ON the wooden stage with a soft contact shadow, both arms raised, beaming as he announces the festival. In front of the stage, grounded townsfolk cheer and dance; the four heroes jump with joy among them. Bunting and round lanterns overhead, confetti and small fireworks in the sky. Strong readable wide shot from a slightly low angle; one clear focus on the king, crowd secondary. Painted characters must be integrated into the scene with consistent warm daylight and soft ground shadows; lower limbs may be naturally overlapped by foreground confetti or crowd. Leave relatively calm open sky in the upper left for code-added speech balloons. Saturated hand-painted cartoon, soft visible paint texture and shading, dark navy character outlines, friendly expressive faces. Full-bleed image. NO panel border, NO speech balloons, NO captions, NO text, letters, numbers, symbols, logos or watermark anywhere.
+
+После уточнения пользователя реплики, плашки и звуковые надписи встроены в конечный PNG через letter_panels.py. Точный русский текст панели: «Каждый год бобы праздновали весёлый Праздник бобов.»; «Да начнётся праздник!»; «УРА-А!». Исходная иллюстрация сохранена отдельно в p01_festival.png; конечная панель — p01_festival_lettered.png. Проба страницы — p01_page_proof.jpg.

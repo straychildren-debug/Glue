@@ -1,0 +1,156 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://src/level/greybox_level.gd" id="1"]
+[ext_resource type="PackedScene" path="res://levels/backdrops/w02_scaffolds.tscn" id="bd"]
+[ext_resource type="Script" path="res://src/level/backdrop_layer.gd" id="bl"]
+[ext_resource type="Texture2D" path="res://assets/backgrounds/world_02/source/w02_lm15_twin_halls.png" id="lm"]
+[ext_resource type="Script" path="res://src/mechanisms/door.gd" id="door"]
+[ext_resource type="Script" path="res://src/mechanisms/finish.gd" id="finish"]
+[ext_resource type="Script" path="res://src/mechanisms/saw.gd" id="saw"]
+[ext_resource type="Script" path="res://src/mechanisms/wheel.gd" id="wheel"]
+
+[node name="W02L15" type="Node2D"]
+script = ExtResource("1")
+title = "15 · Беличье колесо"
+blocks = Array[Rect2]([Rect2(0, -8, 1, 30), Rect2(79, -8, 1, 30), Rect2(1, -8, 12, 15), Rect2(1, 12, 12, 6), Rect2(3.5, 11, 3, 1), Rect2(13, -8, 33, 10), Rect2(13, 12, 5, 6), Rect2(18, 12.5, 2, 5.5), Rect2(14, 11, 3, 1), Rect2(20, 6, 8, 12), Rect2(23, 5, 3, 1), Rect2(28, 12, 19, 6), Rect2(29.5, 11, 3, 1), Rect2(33.5, 11, 3, 1), Rect2(41, 2, 1, 6), Rect2(46, -8, 1, 17.5), Rect2(47, 12.5, 2, 5.5), Rect2(42.5, 11, 3, 1), Rect2(49, 4, 30, 14), Rect2(47, -8, 32, 7), Rect2(51, 3, 3, 1), Rect2(55.5, 3, 3, 1), Rect2(60.5, 3, 3, 1), Rect2(65.5, 3, 3, 1), Rect2(71, -1, 1, 1)])
+checkpoints = Array[Vector2]([Vector2(2, 12), Vector2(21, 6), Vector2(42.5, 12)])
+bounds_tiles = Rect2(0, -8, 80, 27)
+kill_y_tiles = 19
+ground_fill = "w02_fill"
+ground_deep = "w02_deep"
+ground_top = "w02_top"
+ground_side = "w02_side"
+
+[node name="Wheel1" type="Node2D" parent="."]
+position = Vector2(320, 704)
+script = ExtResource("wheel")
+mark_color = Color(0.95, 0.85, 0.3, 1)
+coast_time = 2.5
+
+[node name="Gate1" type="AnimatableBody2D" parent="."]
+position = Vector2(704, 448)
+script = ExtResource("door")
+size_tiles = Vector2(1, 5)
+triggers = Array[NodePath]([NodePath("../Wheel1")])
+open_offset_tiles = Vector2(0, -5)
+close_speed = 900.0
+mark_color = Color(0.95, 0.85, 0.3, 1)
+
+[node name="Wheel2" type="Node2D" parent="."]
+position = Vector2(992, 704)
+script = ExtResource("wheel")
+mark_color = Color(0.4, 0.7, 0.95, 1)
+coast_time = 2.5
+
+[node name="Lift" type="AnimatableBody2D" parent="."]
+position = Vector2(1152, 768)
+script = ExtResource("door")
+size_tiles = Vector2(2, 0.5)
+triggers = Array[NodePath]([NodePath("../Wheel2"), NodePath("../Wheel3")])
+open_offset_tiles = Vector2(0, -6)
+open_speed = 160.0
+close_speed = 160.0
+mark_color = Color(0.4, 0.7, 0.95, 1)
+
+[node name="Wheel3" type="Node2D" parent="."]
+position = Vector2(1568, 320)
+script = ExtResource("wheel")
+mark_color = Color(0.4, 0.7, 0.95, 1)
+coast_time = 2.5
+
+[node name="Wheel4" type="Node2D" parent="."]
+position = Vector2(1984, 704)
+script = ExtResource("wheel")
+mark_color = Color(0.35, 0.8, 0.4, 1)
+coast_time = 2.8
+
+[node name="Wheel5" type="Node2D" parent="."]
+position = Vector2(2240, 704)
+script = ExtResource("wheel")
+mark_color = Color(0.35, 0.8, 0.4, 1)
+coast_time = 2.8
+
+[node name="Gate5" type="AnimatableBody2D" parent="."]
+position = Vector2(2624, 512)
+script = ExtResource("door")
+size_tiles = Vector2(1, 4)
+triggers = Array[NodePath]([NodePath("../Wheel4"), NodePath("../Wheel5")])
+require_all = true
+open_offset_tiles = Vector2(0, -4)
+close_speed = 900.0
+mark_colors = Array[Color]([Color(0.35, 0.8, 0.4, 1), Color(0.35, 0.8, 0.4, 1)])
+
+[node name="Wheel6" type="Node2D" parent="."]
+position = Vector2(2816, 704)
+script = ExtResource("wheel")
+mark_color = Color(0.7, 0.45, 0.95, 1)
+coast_time = 2.5
+
+[node name="Lift2" type="AnimatableBody2D" parent="."]
+position = Vector2(3008, 768)
+script = ExtResource("door")
+size_tiles = Vector2(2, 0.5)
+triggers = Array[NodePath]([NodePath("../Wheel6"), NodePath("../Wheel7")])
+open_offset_tiles = Vector2(0, -8)
+open_speed = 160.0
+close_speed = 160.0
+mark_color = Color(0.7, 0.45, 0.95, 1)
+
+[node name="ShaftSaw" type="Node2D" parent="."]
+position = Vector2(2848, 480)
+script = ExtResource("saw")
+path_tiles = Vector2(6, 0)
+speed = 260.0
+
+[node name="Wheel7" type="Node2D" parent="."]
+position = Vector2(3360, 192)
+script = ExtResource("wheel")
+mark_color = Color(0.7, 0.45, 0.95, 1)
+coast_time = 2.5
+
+[node name="Wheel8" type="Node2D" parent="."]
+position = Vector2(3648, 192)
+script = ExtResource("wheel")
+mark_color = Color(0.95, 0.6, 0.2, 1)
+coast_time = 9.0
+
+[node name="Wheel9" type="Node2D" parent="."]
+position = Vector2(3968, 192)
+script = ExtResource("wheel")
+mark_color = Color(0.95, 0.6, 0.2, 1)
+coast_time = 3.8
+
+[node name="Wheel10" type="Node2D" parent="."]
+position = Vector2(4288, 192)
+script = ExtResource("wheel")
+mark_color = Color(0.95, 0.6, 0.2, 1)
+coast_time = 2.0
+
+[node name="Gate10" type="AnimatableBody2D" parent="."]
+position = Vector2(4544, 0)
+script = ExtResource("door")
+size_tiles = Vector2(1, 4)
+triggers = Array[NodePath]([NodePath("../Wheel8"), NodePath("../Wheel9"), NodePath("../Wheel10")])
+require_all = true
+open_offset_tiles = Vector2(0, -4)
+close_speed = 900.0
+mark_colors = Array[Color]([Color(0.95, 0.6, 0.2, 1), Color(0.95, 0.6, 0.2, 1), Color(0.95, 0.6, 0.2, 1)])
+
+[node name="Finish" type="Node2D" parent="."]
+position = Vector2(4864, 256)
+script = ExtResource("finish")
+
+[node name="Backdrop" parent="." instance=ExtResource("bd")]
+
+[node name="Landmark" type="Node2D" parent="Backdrop"]
+script = ExtResource("bl")
+texture = ExtResource("lm")
+parallax = 0.3
+parallax_y = 0.1
+height = 0.6
+center_y = 0.55
+zoom_follow = 0.3
+repeat = false
+world_x = 1792.0
+haze = 0.22
+haze_color = Color(0.860, 0.900, 0.960, 1)

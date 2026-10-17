@@ -1,0 +1,744 @@
+{
+  "date": "2026-10-03",
+  "checks": [
+    {
+      "id": "P3",
+      "filename": "p03_door.png",
+      "size": [
+        887,
+        1774
+      ],
+      "format": "PNG",
+      "mode": "RGBA",
+      "alpha_min_max": [
+        0,
+        255
+      ],
+      "fully_transparent_pixels": 931056,
+      "bbox": [
+        235,
+        106,
+        654,
+        1669
+      ],
+      "segments": [
+        {
+          "bbox": [
+            235,
+            106,
+            654,
+            1669
+          ],
+          "width": 419,
+          "height": 1563,
+          "baseline": 1669,
+          "ratio": 0.268
+        }
+      ],
+      "source_bytes_preserved": true,
+      "accepted_crate_is_image_5": true
+    },
+    {
+      "id": "P4",
+      "filename": "p04_bridge.png",
+      "size": [
+        2172,
+        724
+      ],
+      "format": "PNG",
+      "mode": "RGBA",
+      "alpha_min_max": [
+        0,
+        255
+      ],
+      "fully_transparent_pixels": 1275143,
+      "bbox": [
+        35,
+        285,
+        2137,
+        434
+      ],
+      "segments": [
+        {
+          "bbox": [
+            35,
+            285,
+            2137,
+            434
+          ],
+          "width": 2102,
+          "height": 149,
+          "baseline": 434,
+          "ratio": 14.107
+        }
+      ],
+      "source_bytes_preserved": true,
+      "accepted_crate_is_image_5": true
+    },
+    {
+      "id": "P5",
+      "filename": "p05_beam.png",
+      "size": [
+        2172,
+        724
+      ],
+      "format": "PNG",
+      "mode": "RGBA",
+      "alpha_min_max": [
+        0,
+        255
+      ],
+      "fully_transparent_pixels": 1423124,
+      "bbox": [
+        60,
+        323,
+        2112,
+        396
+      ],
+      "segments": [
+        {
+          "bbox": [
+            60,
+            323,
+            2112,
+            396
+          ],
+          "width": 2052,
+          "height": 73,
+          "baseline": 396,
+          "ratio": 28.11
+        }
+      ],
+      "source_bytes_preserved": true,
+      "accepted_crate_is_image_5": true
+    },
+    {
+      "id": "P6",
+      "filename": "p06_plates.png",
+      "size": [
+        2172,
+        724
+      ],
+      "format": "PNG",
+      "mode": "RGBA",
+      "alpha_min_max": [
+        0,
+        255
+      ],
+      "fully_transparent_pixels": 1395903,
+      "bbox": [
+        47,
+        303,
+        2126,
+        405
+      ],
+      "segments": [
+        {
+          "bbox": [
+            47,
+            303,
+            547,
+            405
+          ],
+          "width": 500,
+          "height": 102,
+          "baseline": 405,
+          "ratio": 4.902
+        },
+        {
+          "bbox": [
+            571,
+            321,
+            1072,
+            405
+          ],
+          "width": 501,
+          "height": 84,
+          "baseline": 405,
+          "ratio": 5.964
+        },
+        {
+          "bbox": [
+            1098,
+            303,
+            1601,
+            405
+          ],
+          "width": 503,
+          "height": 102,
+          "baseline": 405,
+          "ratio": 4.931
+        },
+        {
+          "bbox": [
+            1625,
+            320,
+            2126,
+            405
+          ],
+          "width": 501,
+          "height": 85,
+          "baseline": 405,
+          "ratio": 5.894
+        }
+      ],
+      "source_bytes_preserved": true,
+      "accepted_crate_is_image_5": true
+    },
+    {
+      "id": "P8",
+      "filename": "p08_seesaw.png",
+      "size": [
+        2172,
+        724
+      ],
+      "format": "PNG",
+      "mode": "RGBA",
+      "alpha_min_max": [
+        0,
+        255
+      ],
+      "fully_transparent_pixels": 1210055,
+      "bbox": [
+        324,
+        67,
+        1849,
+        661
+      ],
+      "segments": [
+        {
+          "bbox": [
+            324,
+            79,
+            1035,
+            661
+          ],
+          "width": 711,
+          "height": 582,
+          "baseline": 661,
+          "ratio": 1.222
+        },
+        {
+          "bbox": [
+            1137,
+            67,
+            1849,
+            661
+          ],
+          "width": 712,
+          "height": 594,
+          "baseline": 661,
+          "ratio": 1.199
+        }
+      ],
+      "source_bytes_preserved": true,
+      "accepted_crate_is_image_5": true
+    },
+    {
+      "id": "P7",
+      "filename": "p07_flags.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "alpha_min_max": [
+        255,
+        255
+      ],
+      "fully_transparent_pixels": 0,
+      "bbox": [
+        213,
+        57,
+        1351,
+        967
+      ],
+      "segments": [
+        {
+          "bbox": [
+            213,
+            61,
+            734,
+            967
+          ],
+          "width": 521,
+          "height": 906,
+          "baseline": 967,
+          "ratio": 0.575
+        },
+        {
+          "bbox": [
+            837,
+            57,
+            1351,
+            967
+          ],
+          "width": 514,
+          "height": 910,
+          "baseline": 967,
+          "ratio": 0.565
+        }
+      ],
+      "source_bytes_preserved": true,
+      "accepted_crate_is_image_5": true,
+      "background_fallback": "#FF00FF",
+      "top_left_background_rgb": [
+        250,
+        4,
+        249
+      ],
+      "top_left_background_rgb_min": [
+        238,
+        2,
+        240
+      ],
+      "top_left_background_rgb_max": [
+        252,
+        13,
+        252
+      ]
+    },
+    {
+      "id": "P10",
+      "filename": "p10_ghost.png",
+      "size": [
+        2006,
+        784
+      ],
+      "format": "PNG",
+      "mode": "RGBA",
+      "alpha_min_max": [
+        0,
+        255
+      ],
+      "fully_transparent_pixels": 1074828,
+      "bbox": [
+        72,
+        178,
+        1941,
+        636
+      ],
+      "segments": [
+        {
+          "bbox": [
+            72,
+            184,
+            661,
+            632
+          ],
+          "width": 589,
+          "height": 448,
+          "baseline": 632,
+          "ratio": 1.315
+        },
+        {
+          "bbox": [
+            750,
+            181,
+            1295,
+            636
+          ],
+          "width": 545,
+          "height": 455,
+          "baseline": 636,
+          "ratio": 1.198
+        },
+        {
+          "bbox": [
+            1422,
+            178,
+            1941,
+            634
+          ],
+          "width": 519,
+          "height": 456,
+          "baseline": 634,
+          "ratio": 1.138
+        }
+      ],
+      "source_bytes_preserved": true,
+      "accepted_crate_is_image_5": true
+    },
+    {
+      "id": "P9",
+      "filename": "p09_spikes.png",
+      "size": [
+        1942,
+        809
+      ],
+      "format": "PNG",
+      "mode": "RGBA",
+      "alpha_min_max": [
+        0,
+        255
+      ],
+      "fully_transparent_pixels": 1237838,
+      "bbox": [
+        56,
+        307,
+        1887,
+        567
+      ],
+      "segments": [
+        {
+          "bbox": [
+            56,
+            307,
+            1887,
+            567
+          ],
+          "width": 1831,
+          "height": 260,
+          "baseline": 567,
+          "ratio": 7.042
+        }
+      ],
+      "source_bytes_preserved": true,
+      "accepted_crate_is_image_5": true
+    },
+    {
+      "id": "P12",
+      "filename": "p12_key_lock.png",
+      "size": [
+        1774,
+        887
+      ],
+      "format": "PNG",
+      "mode": "RGBA",
+      "alpha_min_max": [
+        0,
+        255
+      ],
+      "fully_transparent_pixels": 1139010,
+      "bbox": [
+        75,
+        168,
+        1741,
+        717
+      ],
+      "segments": [
+        {
+          "bbox": [
+            75,
+            404,
+            718,
+            716
+          ],
+          "width": 643,
+          "height": 312,
+          "baseline": 716,
+          "ratio": 2.061
+        },
+        {
+          "bbox": [
+            781,
+            264,
+            1193,
+            717
+          ],
+          "width": 412,
+          "height": 453,
+          "baseline": 717,
+          "ratio": 0.909
+        },
+        {
+          "bbox": [
+            1289,
+            168,
+            1741,
+            717
+          ],
+          "width": 452,
+          "height": 549,
+          "baseline": 717,
+          "ratio": 0.823
+        }
+      ],
+      "source_bytes_preserved": true,
+      "accepted_crate_is_image_5": true
+    },
+    {
+      "id": "P13",
+      "filename": "p13_lever.png",
+      "size": [
+        2172,
+        724
+      ],
+      "format": "PNG",
+      "mode": "RGBA",
+      "alpha_min_max": [
+        0,
+        255
+      ],
+      "fully_transparent_pixels": 1303055,
+      "bbox": [
+        46,
+        210,
+        2123,
+        592
+      ],
+      "segments": [
+        {
+          "bbox": [
+            46,
+            215,
+            558,
+            592
+          ],
+          "width": 512,
+          "height": 377,
+          "baseline": 592,
+          "ratio": 1.358
+        },
+        {
+          "bbox": [
+            669,
+            210,
+            1167,
+            592
+          ],
+          "width": 498,
+          "height": 382,
+          "baseline": 592,
+          "ratio": 1.304
+        },
+        {
+          "bbox": [
+            1259,
+            377,
+            1585,
+            592
+          ],
+          "width": 326,
+          "height": 215,
+          "baseline": 592,
+          "ratio": 1.516
+        },
+        {
+          "bbox": [
+            1679,
+            245,
+            2123,
+            586
+          ],
+          "width": 444,
+          "height": 341,
+          "baseline": 586,
+          "ratio": 1.302
+        }
+      ],
+      "source_bytes_preserved": true,
+      "accepted_crate_is_image_5": true
+    },
+    {
+      "id": "P11",
+      "filename": "p11_hook.png",
+      "size": [
+        1063,
+        1479
+      ],
+      "format": "PNG",
+      "mode": "RGBA",
+      "alpha_min_max": [
+        0,
+        255
+      ],
+      "fully_transparent_pixels": 1194131,
+      "bbox": [
+        184,
+        352,
+        886,
+        1274
+      ],
+      "segments": [
+        {
+          "bbox": [
+            184,
+            352,
+            886,
+            1274
+          ],
+          "width": 702,
+          "height": 922,
+          "baseline": 1274,
+          "ratio": 0.761
+        }
+      ],
+      "source_bytes_preserved": true,
+      "accepted_crate_is_image_5": true
+    },
+    {
+      "id": "P14",
+      "filename": "p14_lift.png",
+      "size": [
+        1774,
+        887
+      ],
+      "format": "PNG",
+      "mode": "RGBA",
+      "alpha_min_max": [
+        0,
+        255
+      ],
+      "fully_transparent_pixels": 1144421,
+      "bbox": [
+        109,
+        185,
+        1667,
+        716
+      ],
+      "segments": [
+        {
+          "bbox": [
+            109,
+            185,
+            1214,
+            716
+          ],
+          "width": 1105,
+          "height": 531,
+          "baseline": 716,
+          "ratio": 2.081
+        },
+        {
+          "bbox": [
+            1373,
+            374,
+            1667,
+            716
+          ],
+          "width": 294,
+          "height": 342,
+          "baseline": 716,
+          "ratio": 0.86
+        }
+      ],
+      "source_bytes_preserved": true,
+      "accepted_crate_is_image_5": true
+    },
+    {
+      "id": "P15",
+      "filename": "p15_saw.png",
+      "size": [
+        2172,
+        724
+      ],
+      "format": "PNG",
+      "mode": "RGBA",
+      "alpha_min_max": [
+        0,
+        255
+      ],
+      "fully_transparent_pixels": 1296194,
+      "bbox": [
+        112,
+        104,
+        2050,
+        633
+      ],
+      "segments": [
+        {
+          "bbox": [
+            112,
+            104,
+            652,
+            633
+          ],
+          "width": 540,
+          "height": 529,
+          "baseline": 633,
+          "ratio": 1.021
+        },
+        {
+          "bbox": [
+            704,
+            561,
+            2050,
+            628
+          ],
+          "width": 1346,
+          "height": 67,
+          "baseline": 628,
+          "ratio": 20.09
+        }
+      ],
+      "source_bytes_preserved": true,
+      "accepted_crate_is_image_5": true
+    },
+    {
+      "id": "P16",
+      "filename": "p16_press.png",
+      "size": [
+        2172,
+        724
+      ],
+      "format": "PNG",
+      "mode": "RGBA",
+      "alpha_min_max": [
+        0,
+        255
+      ],
+      "fully_transparent_pixels": 1194151,
+      "bbox": [
+        58,
+        266,
+        2114,
+        471
+      ],
+      "segments": [
+        {
+          "bbox": [
+            58,
+            266,
+            2114,
+            471
+          ],
+          "width": 2056,
+          "height": 205,
+          "baseline": 471,
+          "ratio": 10.029
+        }
+      ],
+      "source_bytes_preserved": true,
+      "accepted_crate_is_image_5": true
+    },
+    {
+      "id": "P2",
+      "filename": "p02_crate_heavy.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "format": "PNG",
+      "mode": "RGBA",
+      "alpha_min_max": [
+        0,
+        255
+      ],
+      "fully_transparent_pixels": 726816,
+      "bbox": [
+        145,
+        177,
+        1110,
+        1079
+      ],
+      "segments": [
+        {
+          "bbox": [
+            145,
+            177,
+            1110,
+            1079
+          ],
+          "width": 965,
+          "height": 902,
+          "baseline": 1079,
+          "ratio": 1.07
+        }
+      ],
+      "source_bytes_preserved": true,
+      "accepted_crate_is_image_5": true
+    }
+  ]
+}

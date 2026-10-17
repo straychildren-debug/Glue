@@ -5,10 +5,11 @@ extends SmokeTest
 
 const TEST_SAVE := "user://test_progress.cfg"
 const MENU := preload("res://src/menu/level_select.tscn")
-const L06 := preload("res://levels/w01_l06_the_crate.tscn")
+const L06 := preload("res://levels/w01_l06_crate_from_far.tscn")
 
 
 func _ready() -> void:
+	Progress.playtest_open = false  # проверяем настоящие правила открытия, а не плейтест
 	_catalog()
 	_progress()
 	await _level_select()
@@ -21,6 +22,7 @@ func _ready() -> void:
 func _catalog() -> void:
 	print("— каталог")
 	check(Levels.count(0) == Levels.LEVELS_PER_WORLD, "в мире 1 — %d уровней" % Levels.count(0))
+	check(Levels.WORLDS.size() >= 2 and Levels.count(1) == Levels.LEVELS_PER_WORLD, "в каталоге мир 2 — %d уровней" % Levels.count(1))
 	var built := 0
 	for i in Levels.count(0):
 		if Levels.is_built(0, i):
@@ -35,7 +37,8 @@ func _catalog() -> void:
 	check(built >= 10 and Levels.is_built(0, built - 1), "собрано %d уровней, подряд с первого" % built)
 	check(Levels.next_built(0, 2) == 3, "после 03 идёт 04")
 	check(Levels.next_built(0, built - 1) == -1, "после последнего собранного (%02d) — возврат в меню" % built)
-	check(Levels.debug_next(0, built - 1) == Vector2i(Levels.EXTRAS_WORLD, 0), "F2 после последнего — комнаты прототипа")
+	var after_last := Vector2i(1, 0) if Levels.is_built(1, 0) else Vector2i(Levels.EXTRAS_WORLD, 0)
+	check(Levels.debug_next(0, built - 1) == after_last, "F2 после последнего — мир 2 (или комнаты прототипа, пока он не собран)")
 	check(Levels.debug_next(Levels.EXTRAS_WORLD, Levels.EXTRAS.size() - 1) == Vector2i(0, 0), "F2 после комнат — снова уровень 01")
 
 
@@ -54,6 +57,14 @@ func _progress() -> void:
 	check(Progress.is_unlocked(0, 9), "отладка: открыты все уровни")
 	Progress.set_unlock_all(false)
 	check(Progress.is_unlocked(Levels.EXTRAS_WORLD, 0), "комнаты прототипа открыты всегда")
+	# Загрузка настроек повторно ставит основные клавиши — запасные (Пробел, Enter) не теряются.
+	InputRouter.set_key(InputRouter.KEYBOARD_1, "jump", KEY_W)
+	InputRouter.set_key(InputRouter.KEYBOARD_2, "jump", KEY_UP)
+	check(KEY_SPACE in InputRouter.keyboard_keys[InputRouter.KEYBOARD_1].jump
+			and KEY_ENTER in InputRouter.keyboard_keys[InputRouter.KEYBOARD_2].jump, "сохранённые клавиши не стирают Пробел и Enter")
+	InputRouter.set_key(InputRouter.KEYBOARD_1, "jump", KEY_I)
+	check(InputRouter.keyboard_keys[InputRouter.KEYBOARD_1].jump == [KEY_I, KEY_SPACE], "переназначение меняет только основную клавишу")
+	InputRouter.reset_keys()
 
 
 func _level_select() -> void:
@@ -61,7 +72,7 @@ func _level_select() -> void:
 	var menu: Control = MENU.instantiate()
 	add_child(menu)
 	await frames(5)
-	check(menu._cards.size() == Levels.count(0) + Levels.EXTRAS.size(), "карточек: %d" % menu._cards.size())
+	check(menu._cards.size() == Levels.count(0) + Levels.WORLDS.size(), "карточек: %d (уровни и миры)" % menu._cards.size())
 	var status: String = menu._status.text
 	check(status.contains("пройдено 2 из 20"), "в строке состояния — прогресс (%s)" % status)
 	# Курсор открылся на первом непройденном открытом уровне.
@@ -78,6 +89,17 @@ func _level_select() -> void:
 	menu._on_confirmed(InputRouter.NO_DEVICE)
 	await frames(2)
 	check(is_instance_valid(menu) and menu.is_inside_tree(), "неподключённый игрок уровень не запускает")
+	# Мир 2 закрыт, пока не пройден последний уровень мира 1; открытый — листается.
+	menu._on_paged(1)
+	check(menu.world == 0 and menu._status.text.contains("откроется"), "мир 2 закрыт: %s" % menu._status.text)
+	Progress.mark_completed(0, Levels.count(0) - 1)
+	menu._on_paged(1)
+	await frames(2)
+	check(menu.world == 1 and menu._cards.size() == Levels.count(1) + Levels.WORLDS.size(),
+			"пройден 20 — листнули в мир 2 (%d карточек)" % menu._cards.size())
+	menu._on_paged(-1)
+	await frames(2)
+	check(menu.world == 0, "и обратно в мир 1")
 	menu.queue_free()
 	await frames(2)
 
@@ -86,14 +108,14 @@ func _pause_and_checkpoint() -> void:
 	print("— пауза и рестарт с чекпоинта")
 	var game: Game = await start_game(L06)
 	var a: Player = game.players[0]
-	var crate: Crate = game.level.get_node("Crate1")
+	var crate: Crate = game.level.get_node("Crate")
 	var home := crate.global_position
 	crate.global_position += Vector2(200, 0)
-	place(a, Vector2(15 * 64.0, 12 * 64.0 - 29.0))
+	place(a, Vector2(25 * 64.0, 12 * 64.0 - 29.0))
 	await frames(10)
 	game.restart_from_checkpoint()
 	await frames(5)
-	check(crate.global_position.distance_to(home) < 2.0 and a.global_position.x < 4 * 64.0,
+	check(crate.global_position.distance_to(home) < 2.0 and a.global_position.x < 12 * 64.0,
 			"рестарт с чекпоинта вернул ящик и команду (ящик %s, игрок %s)" % [crate.global_position, a.global_position])
 	game._from_catalog = true  # пауза открывается только в обычной игре
 	game._open_pause()

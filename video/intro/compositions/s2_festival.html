@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="ru">
+  <head><meta charset="UTF-8" /></head>
+  <body>
+    <template>
+      <style>
+        /* Кадры 2–5: праздник на площади → ночь → налёт призраков → похищение короля → корона на площади.
+           Камера: #s2-push (наезд на корону в конце) > #s2-cam (вход-наезд из кадра 1) > #s2-world (площадь 3240×1080, проезд).
+           Призраки, корона и гирлянда — в экранных координатах (внутри #s2-push, вне мира). */
+        #s2 { position: absolute; inset: 0; overflow: hidden; background: #2a3a70; font-family: Nunito, sans-serif; }
+        #s2 .full { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; }
+        #s2-push, #s2-cam { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; }
+        #s2-world { position: absolute; left: 0; top: 0; width: 3240px; height: 1080px; }
+        #s2 .plate { position: absolute; left: 0; top: 0; width: 3240px; height: 1080px; display: block; }
+        #s2 .at { position: absolute; width: 0; height: 0; }
+        #s2 .at > img { position: absolute; bottom: 0; left: 0; translate: -50% 0; display: block; }
+        #s2 .free { position: absolute; display: block; }
+        #s2-tint { position: absolute; left: 0; top: 0; width: 3240px; height: 1080px; background: #3d4f9c; mix-blend-mode: multiply; }
+        #s2 .glow { position: absolute; width: 300px; height: 300px; margin: -150px 0 0 -150px; border-radius: 50%; mix-blend-mode: screen;
+          background: radial-gradient(closest-side, rgba(255, 196, 92, 0.85), rgba(255, 150, 40, 0.25) 55%, rgba(255, 150, 40, 0)); }
+        #s2 .star { position: absolute; width: 5px; height: 5px; margin: -2.5px; border-radius: 50%; background: #fffbe6;
+          box-shadow: 0 0 8px 2px rgba(255, 250, 220, 0.8); }
+        #s2 .spark { position: absolute; width: 10px; height: 10px; margin: -5px; border-radius: 50%; }
+        #s2 .conf { position: absolute; width: 14px; height: 22px; margin: -11px -7px; border-radius: 3px; }
+        #s2 .gst { position: absolute; display: block; }
+      </style>
+
+      <div id="s2" data-composition-id="s2" data-width="1920" data-height="1080">
+        <div id="s2-push">
+          <div id="s2-cam">
+            <div id="s2-world" data-layout-allow-overflow>
+              <img class="plate" src="art/layers/square_day.jpg" alt="" />
+              <img id="s2-night" class="plate" src="art/layers/square_night.jpg" alt="" style="opacity: 0" />
+              <div id="s2-sky" class="at" style="left: 0; top: 0"></div>
+              <svg id="s2-rope" class="free" style="left: 0; top: 0; width: 3240px; height: 600px; overflow: visible"></svg>
+              <div id="s2-lanterns" class="at" style="left: 0; top: 0"></div>
+              <div id="s2-king" class="at" style="left: 2140px; top: 642px">
+                <img id="s2-king-wave" src="art/layers/king_wave.png" alt="" style="height: 343px" />
+                <img id="s2-king-fear" src="art/layers/king_frightened.png" alt="" style="height: 343px; opacity: 0" />
+              </div>
+              <div id="s2-kidnap" class="at" style="left: 2140px; top: 642px; opacity: 0">
+                <img src="art/layers/king_carried.png" alt="" style="height: 300px; bottom: 150px" />
+                <img src="art/layers/ghost_lift.png" alt="" style="height: 200px; left: -120px; bottom: -6px" />
+                <img src="art/layers/ghost_lift.png" alt="" style="height: 200px; left: 135px; bottom: -14px" />
+              </div>
+              <div id="s2-crowd" class="at" style="left: 0; top: 0"></div>
+              <div id="s2-fx" class="at" style="left: 0; top: 0"></div>
+              <div id="s2-tint" style="opacity: 0"></div>
+              <div id="s2-glows" class="at" style="left: 0; top: 0"></div>
+            </div>
+          </div>
+          <img id="s2-bunting" class="free" src="art/layers/bunting.png" alt="" style="left: -100px; top: -230px; width: 3600px" />
+          <div id="s2-ghosts" class="full"></div>
+          <div id="s2-crown" class="at" style="left: 965px; top: 330px">
+            <img id="s2-crown-up" src="art/layers/crown_upright.png" alt="" style="height: 74px; opacity: 0" />
+            <img id="s2-crown-side" src="art/layers/crown_tilted.png" alt="" style="height: 74px; opacity: 0" />
+          </div>
+          <div id="s2-glint" class="free" style="left: 1135px; top: 762px; width: 0; height: 0"></div>
+        </div>
+        <div class="vignette"></div>
+        <p id="s2-cap-a" class="caption">Однажды бобы праздновали весёлый Праздник бобов вместе со своим добрым королём.</p>
+        <p id="s2-cap-b" class="caption">Но вдруг, откуда ни возьмись, налетели призраки!</p>
+        <p id="s2-cap-c" class="caption">Они схватили короля бобов и унесли его далеко-далеко…</p>
+      </div>
+
+      <script>
+        (() => {
+          const tl = gsap.timeline({ paused: true });
+          const $ = (sel) => document.querySelector(sel);
+          const P = window.__beans;
+          const rnd = P.rng(2026);
+          const set = (sel, at, vars) => tl.set(sel, vars, at);
+
+          // ── Камера. Вход — продолжение наезда из кадра 1 (масштаб растёт, тормозит), затем проезд вправо к помосту.
+          const CAM_X = -1180, CAM_S = 1.07;
+          tl.fromTo("#s2-cam", { scale: 1, transformOrigin: "960px 540px" }, { scale: CAM_S, duration: 1.0, ease: "power3.out" }, 0);
+          tl.fromTo("#s2-world", { x: 0 }, { x: CAM_X, duration: 5.6, ease: "power2.inOut" }, 0);
+          tl.fromTo("#s2-bunting", { x: 0 }, { x: CAM_X * 1.25, duration: 5.6, ease: "power2.inOut" }, 0);
+          // Мир → экран, когда камера стоит (после 5.6).
+          const scr = (wx, wy) => [960 + CAM_S * (wx + CAM_X - 960), 540 + CAM_S * (wy - 540)];
+
+          // ── Толпа: шесть горожан и четверо героев танцуют; ночью разбегаются влево (призраки летят справа).
+          const crowd = $("#s2-crowd");
+          const town = [[420, 905, 1, 0.82], [680, 1010, 2, 1.0], [930, 880, 3, 0.78], [1710, 1020, 4, 1.02],
+            [1980, 905, 5, 0.84], [2420, 1000, 6, 1.0], [2700, 890, 2, 0.8], [2950, 1015, 4, 1.0]];
+          town.sort((a, b) => a[1] - b[1]).forEach(([x, y, n, s], i) => {
+            crowd.insertAdjacentHTML("beforeend", `<div class="at" id="s2-t${i}" style="left:${x}px;top:${y}px">` +
+              `<img class="dance" src="art/layers/town_dance_${n}.png" alt="" style="height:${Math.round(200 * s)}px" />` +
+              `<img class="run" src="art/layers/town_run_${n}.png" alt="" style="height:${Math.round(200 * s)}px;opacity:0" /></div>`);
+            // Танец: прыжки с покачиванием, заканчиваются к ночи.
+            const hop = 0.3 + (i % 3) * 0.03;
+            const count = Math.floor((6.3 - 0.3 - i * 0.07) / hop / 2) * 2;
+            tl.fromTo(`#s2-t${i}`, { y: 0 }, { y: -30 - (i % 3) * 8, duration: hop, ease: "power1.out", yoyo: true, repeat: count - 1 }, 0.3 + i * 0.07);
+            tl.fromTo(`#s2-t${i} .dance`, { rotation: -5 }, { rotation: 5, duration: hop * 2, ease: "sine.inOut", yoyo: true, repeat: count / 2 - 1 }, 0.3 + i * 0.07);
+            // Бегство: поворот (зеркало) и бег влево — с ускорением, в тот кадр, когда над ним пролетает призрак.
+            const flee = 9.0 + (x > 2300 ? 0 : x > 1500 ? 0.25 : 0.5) + (i % 2) * 0.08;
+            set(`#s2-t${i} .dance`, flee, { opacity: 0 });
+            set(`#s2-t${i} .run`, flee, { opacity: 1 });
+            tl.fromTo(`#s2-t${i}`, { scaleX: 1 }, { scaleX: -1, duration: 0.08, immediateRender: false }, flee);
+            tl.to(`#s2-t${i}`, { x: -1500 - (i % 3) * 120, duration: 1.6, ease: "power2.in" }, flee + 0.05);
+          });
+
+          const heroes = [["s2-red", "red", 1130, 975], ["s2-blue", "blue", 1300, 990], ["s2-green", "green", 1480, 972], ["s2-yellow", "yellow", 1610, 992]];
+          heroes.forEach(([id, color, x, y], i) => {
+            crowd.insertAdjacentHTML("beforeend", P.html(id, color, x, y, 0.64));
+            const H = "#" + id;
+            P.show(tl, H, "rig", 0);
+            tl.fromTo(`${H} .rig`, { y: 0 }, { y: -36, duration: 0.28, ease: "power1.out", yoyo: true, repeat: 19 }, 0.5 + i * 0.09);
+            P.wave(tl, H, 1.4 + i * 0.4, 6);
+            // Ночь: тревога; призраки: испуг и бегство влево.
+            P.face(tl, H, 7.4 + i * 0.1, { eyes: "side", brows: "worried", mouth: "surprised" });
+            P.show(tl, H, "frightened", 8.75 + i * 0.05);
+            tl.fromTo(`${H} .pose`, { y: 0 }, { y: -40, duration: 0.15, ease: "power2.out", yoyo: true, repeat: 1, immediateRender: false }, 8.75 + i * 0.05);
+            P.show(tl, H, "run", 9.3 + i * 0.07);
+            tl.fromTo(`${H} .pose`, { scaleX: 1 }, { scaleX: -1, duration: 0.06, immediateRender: false }, 9.3 + i * 0.07);
+            tl.to(H, { x: -1400, duration: 1.4, ease: "power2.in" }, 9.35 + i * 0.07);
+          });
+
+          // ── Король на помосте машет; при налёте — испуг.
+          tl.fromTo("#s2-king", { rotation: -4, transformOrigin: "0px 0px" }, { rotation: 4, duration: 0.42, ease: "sine.inOut", yoyo: true, repeat: 13 }, 0.3);
+          tl.fromTo("#s2-king", { y: 0 }, { y: -26, duration: 0.2, ease: "power2.out", yoyo: true, repeat: 3, immediateRender: false }, 5.6);
+
+          // ── Праздник: конфетти (мир) и салют в небе (мир).
+          const fx = $("#s2-fx");
+          const COLORS = ["#f04c4a", "#ffd345", "#3cb7e6", "#68c74a", "#ff8fc8", "#ffffff"];
+          [[1.0, 500, 900], [2.4, 1200, 930], [3.8, 1900, 900], [5.2, 2500, 920]].forEach(([at, cx, cy], b) => {
+            for (let k = 0; k < 34; k++) {
+              const id = `s2-c${b}-${k}`, ang = -Math.PI / 2 + (rnd() - 0.5) * 1.6, v = 380 + rnd() * 420;
+              fx.insertAdjacentHTML("beforeend", `<div class="conf" id="${id}" style="left:${cx}px;top:${cy}px;background:${COLORS[k % 6]};opacity:0"></div>`);
+              const dx = Math.cos(ang) * v, up = Math.sin(ang) * v;
+              set(`#${id}`, at, { opacity: 1 });
+              tl.fromTo(`#${id}`, { x: 0 }, { x: dx * 1.4, duration: 2.4, ease: "power1.out", immediateRender: false }, at);
+              tl.fromTo(`#${id}`, { y: 0 }, { y: up, duration: 0.6, ease: "power2.out", immediateRender: false }, at);
+              tl.to(`#${id}`, { y: up + 560, duration: 1.8, ease: "power1.in" }, at + 0.6);
+              tl.fromTo(`#${id}`, { rotation: rnd() * 360, scaleY: 1 }, { rotation: "+=" + (500 + rnd() * 500), scaleY: -1, duration: 2.4, ease: "none", immediateRender: false }, at);
+              tl.to(`#${id}`, { opacity: 0, duration: 0.4 }, at + 2.0);
+            }
+          });
+          [[1.6, 760, 190, "#ffd345"], [3.0, 1380, 140, "#ff7a8a"], [4.4, 1960, 110, "#7fd6ff"], [5.7, 2560, 170, "#ffe8a0"]].forEach(([at, cx, cy, c], f) => {
+            for (let k = 0; k < 26; k++) {
+              const id = `s2-f${f}-${k}`, ang = (k / 26) * Math.PI * 2, r = 150 + rnd() * 40;
+              fx.insertAdjacentHTML("beforeend", `<div class="spark" id="${id}" style="left:${cx}px;top:${cy}px;background:${c};box-shadow:0 0 14px 4px ${c};opacity:0"></div>`);
+              set(`#${id}`, at, { opacity: 1 });
+              tl.fromTo(`#${id}`, { x: 0, y: 0, scale: 1.3 }, { x: Math.cos(ang) * r, y: Math.sin(ang) * r + 60, scale: 0.4, duration: 1.2, ease: "power3.out", immediateRender: false }, at);
+              tl.to(`#${id}`, { opacity: 0, duration: 0.5, ease: "power1.in" }, at + 0.75);
+            }
+          });
+
+          // ── Фонарики на верёвке над площадью: днём просто висят, ночью светят, гаснут, когда над ними пролетает призрак.
+          const LX = [1330, 1610, 1890, 2390, 2670, 2950];
+          const rope = (x) => 205 + 0.00012 * (x - 2140) ** 2 * -1 + 85;
+          $("#s2-rope").innerHTML = `<path d="M1150 ${rope(1150)} ${LX.map((x) => `L${x} ${rope(x)}`).join(" ")} L3200 ${rope(3200)}" fill="none" stroke="#3b2a1e" stroke-width="4"/>`;
+          const lan = $("#s2-lanterns"), glows = $("#s2-glows");
+          LX.forEach((x, i) => {
+            const y = rope(x);
+            lan.insertAdjacentHTML("beforeend", `<div class="at" id="s2-l${i}" style="left:${x}px;top:${y}px">` +
+              `<img class="on" src="art/layers/lantern_lit.png" alt="" style="height:96px;bottom:-96px" />` +
+              `<img class="off" src="art/layers/lantern_unlit.png" alt="" style="height:96px;bottom:-96px;opacity:0" /></div>`);
+            glows.insertAdjacentHTML("beforeend", `<div class="glow" id="s2-g${i}" style="left:${x}px;top:${y + 50}px;opacity:0"></div>`);
+            tl.to(`#s2-g${i}`, { opacity: 1, duration: 0.6, ease: "power1.out" }, 7.2 + i * 0.12);
+          });
+
+          // ── Ночь: ночная площадь проступает, мир темнеет, загораются звёзды.
+          tl.to("#s2-night", { opacity: 1, duration: 1.4, ease: "power1.inOut" }, 6.4);
+          tl.to("#s2-tint", { opacity: 0.62, duration: 1.4, ease: "power1.inOut" }, 6.4);
+          tl.to("#s2-bunting", { filter: "brightness(0.42) saturate(0.7)", duration: 1.4, ease: "power1.inOut" }, 6.4);
+          const sky = $("#s2-sky");
+          for (let k = 0; k < 46; k++) {
+            const x = 1150 + rnd() * 2050, y = 20 + rnd() * 300;
+            sky.insertAdjacentHTML("beforeend", `<div class="star" id="s2-s${k}" style="left:${x}px;top:${y}px;opacity:0;scale:${0.6 + rnd()}"></div>`);
+            tl.to(`#s2-s${k}`, { opacity: 0.5 + rnd() * 0.5, duration: 0.5 }, 7.0 + rnd() * 1.0);
+          }
+          // Затишье перед налётом: фонарики чуть качнуло ветром.
+          LX.forEach((x, i) => tl.fromTo(`#s2-l${i}`, { rotation: 0 }, { rotation: -7, duration: 0.35, ease: "sine.inOut", yoyo: true, repeat: 1 }, 8.0 + i * 0.04));
+
+          // ── Налёт: три призрака справа налево (против хода героев), со шлейфом. Камера вздрагивает.
+          const ghosts = $("#s2-ghosts");
+          const FLY = 8.6, FLY_D = 1.5, X0 = 2150, X1 = -650;
+          [[250, 1.0, 0], [420, 0.85, 0.18], [560, 0.95, 0.34]].forEach(([y, s, d], g) => {
+            for (let e = 2; e >= 0; e--) {
+              const id = `s2-gh${g}-${e}`;
+              ghosts.insertAdjacentHTML("beforeend", `<img class="gst" id="${id}" src="art/layers/ghost_fast.png" alt="" ` +
+                `style="left:0;top:${y - 140 * s}px;height:${Math.round(260 * s)}px;opacity:${e ? 0.28 / e : 1};filter:blur(${e * 2 + 1}px)" />`);
+              tl.fromTo(`#${id}`, { x: X0 }, { x: X1, duration: FLY_D, ease: "none" }, FLY + d + e * 0.05);
+              tl.fromTo(`#${id}`, { y: 0 }, { y: -36, duration: FLY_D / 3, ease: "sine.inOut", yoyo: true, repeat: 2, immediateRender: false }, FLY + d + e * 0.05);
+            }
+          });
+          tl.fromTo("#s2-cam", { x: 0 }, { x: 14, duration: 0.05, ease: "none", yoyo: true, repeat: 7, immediateRender: false }, FLY + 0.1);
+          // Фонарь гаснет в тот кадр, когда над ним проносится первый призрак.
+          LX.forEach((x, i) => {
+            const [sx] = scr(x, 0);
+            const at = FLY + (X0 + 200 - sx) / (X0 - X1) * FLY_D;
+            set(`#s2-l${i} .on`, at, { opacity: 0 });
+            set(`#s2-l${i} .off`, at, { opacity: 1 });
+            set(`#s2-g${i}`, at, { opacity: 0 });
+            tl.fromTo(`#s2-l${i}`, { rotation: 0 }, { rotation: 24, duration: 0.25, ease: "power2.out", immediateRender: false }, at);
+            tl.to(`#s2-l${i}`, { rotation: -10, duration: 0.5, ease: "sine.inOut" }, at + 0.25);
+            tl.to(`#s2-l${i}`, { rotation: 0, duration: 0.6, ease: "sine.inOut" }, at + 0.75);
+          });
+
+          // ── Похищение. Два призрака пикируют на короля сверху справа.
+          const [kx, ky] = scr(2140, 642);
+          [[1900, -260, kx - 150, ky - 330], [2100, 60, kx + 120, ky - 260]].forEach(([x0, y0, x1, y1], g) => {
+            ghosts.insertAdjacentHTML("beforeend", `<img class="gst" id="s2-sw${g}" src="art/layers/ghost_swoop.png" alt="" style="left:0;top:0;height:240px;opacity:0" />`);
+            set(`#s2-sw${g}`, 10.5 + g * 0.15, { opacity: 1 });
+            tl.fromTo(`#s2-sw${g}`, { x: x0, y: y0 }, { x: x1 - 120, y: y1 - 120, duration: 0.6, ease: "power2.in", immediateRender: false }, 10.5 + g * 0.15);
+            set(`#s2-sw${g}`, 11.6, { opacity: 0 });
+          });
+          const SCARE = 11.05;
+          set("#s2-king-wave", SCARE, { opacity: 0 });
+          set("#s2-king-fear", SCARE, { opacity: 1 });
+          tl.fromTo("#s2-king", { y: 0 }, { y: -40, duration: 0.14, ease: "power2.out", yoyo: true, repeat: 1, immediateRender: false }, SCARE);
+          // Хохочущий призрак наблюдает и улетает следом.
+          ghosts.insertAdjacentHTML("beforeend", `<img class="gst" id="s2-laugh" src="art/layers/ghost_laugh.png" alt="" style="left:0;top:0;height:230px;opacity:0" />`);
+          set("#s2-laugh", 11.2, { opacity: 1 });
+          tl.fromTo("#s2-laugh", { x: 2000, y: 120 }, { x: 1440, y: 150, duration: 0.5, ease: "power3.out", immediateRender: false }, 11.2);
+          tl.fromTo("#s2-laugh", { rotation: -6 }, { rotation: 6, duration: 0.14, ease: "sine.inOut", yoyo: true, repeat: 7, immediateRender: false }, 11.7);
+          tl.to("#s2-laugh", { x: 300, y: -400, duration: 1.4, ease: "power2.in" }, 12.9);
+
+          // Рывок: короля подхватывают (в тот же кадр — корона слетает с головы).
+          const YANK = 11.6;
+          set("#s2-king", YANK, { opacity: 0 });
+          set("#s2-kidnap", YANK, { opacity: 1 });
+          tl.fromTo("#s2-kidnap", { y: 60 }, { y: -40, duration: 0.3, ease: "power3.out", immediateRender: false }, YANK);
+          tl.to("#s2-kidnap", { x: -1250, y: -1000, duration: 2.1, ease: "power2.in" }, YANK + 0.35);
+          tl.fromTo("#s2-kidnap img", { rotation: -4 }, { rotation: 4, duration: 0.18, ease: "sine.inOut", yoyo: true, repeat: 9, immediateRender: false }, YANK);
+          // Корона: подлетает, кувыркаясь падает с помоста на брусчатку, подскакивает и ложится набок.
+          set("#s2-crown-up", YANK, { opacity: 1 });
+          tl.fromTo("#s2-crown", { x: 0, y: 0 }, { x: 60, y: -110, duration: 0.3, ease: "power2.out", immediateRender: false }, YANK);
+          const LANDC = YANK + 0.3 + 0.62;
+          tl.to("#s2-crown", { x: 170, y: 790 - 330, duration: 0.62, ease: "power2.in" }, YANK + 0.3);
+          tl.fromTo("#s2-crown", { rotation: 0 }, { rotation: 420, duration: 0.92, ease: "none", immediateRender: false }, YANK);
+          set("#s2-crown-up", LANDC, { opacity: 0 });
+          set("#s2-crown-side", LANDC, { opacity: 1 });
+          set("#s2-crown", LANDC, { rotation: 0 });
+          tl.to("#s2-crown", { y: 790 - 330 - 34, duration: 0.13, ease: "power2.out" }, LANDC);
+          tl.to("#s2-crown", { y: 790 - 330, duration: 0.13, ease: "power2.in" }, LANDC + 0.13);
+          tl.fromTo("#s2-crown-side", { rotation: -14 }, { rotation: 0, duration: 0.3, ease: "power2.out", immediateRender: false }, LANDC + 0.26);
+          P.dust(tl, "#s2-glint", "s2cd", LANDC, 70, "rgba(200, 210, 255, 0.55)");
+
+          // Тишина, блик на короне — и наезд на неё (склейка в крупный план кадра 4 на ходу).
+          const glint = $("#s2-glint");
+          glint.insertAdjacentHTML("beforeend", `<div id="s2-gl" style="position:absolute;width:44px;height:44px;margin:-22px;opacity:0;` +
+            `background:radial-gradient(closest-side,#fff,rgba(255,240,180,0));clip-path:polygon(50% 0,58% 42%,100% 50%,58% 58%,50% 100%,42% 58%,0 50%,42% 42%)"></div>`);
+          tl.fromTo("#s2-gl", { opacity: 0, scale: 0.2, rotation: 0 }, { opacity: 1, scale: 1.6, rotation: 45, duration: 0.25, ease: "power2.out", immediateRender: false }, 13.9);
+          tl.to("#s2-gl", { opacity: 0, scale: 0.4, duration: 0.3, ease: "power2.in" }, 14.15);
+          tl.fromTo("#s2-push", { scale: 1, transformOrigin: "1135px 790px" }, { scale: 1.75, duration: 1.8, ease: "power2.in" }, 14.2);
+
+          // ── Титры.
+          P.caption(tl, "#s2-cap-a", 0.6, 6.2);
+          P.caption(tl, "#s2-cap-b", 8.2, 10.9);
+          P.caption(tl, "#s2-cap-c", 11.3, 15.4);
+
+          window.__timelines["s2"] = tl;
+        })();
+      </script>
+    </template>
+  </body>
+</html>

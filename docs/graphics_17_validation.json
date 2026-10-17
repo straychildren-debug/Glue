@@ -1,0 +1,1276 @@
+{
+  "date": "2026-10-04",
+  "method": "Visual review plus native PNG alpha/size inspection and SHA-256 comparison",
+  "files": [
+    {
+      "id": "P31",
+      "path": "D:\\Cluade projects\\games\\Glue\\assets\\props\\v2\\source\\p31_finish_workshop.png",
+      "native_size": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "sha256": "89046924afdbd2856072fb8bdb1af5a131ea137d9ec5da684b72fce35dbaeecc",
+      "native_generator_bytes_preserved": true,
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "alpha_bbox": [
+        0,
+        115,
+        1328,
+        1024
+      ],
+      "visible_bbox_alpha_32": [
+        205,
+        150,
+        1323,
+        857
+      ],
+      "border_alpha_max": 1,
+      "true_transparency": true,
+      "x_groups_alpha_32": [
+        [
+          205,
+          150,
+          716,
+          857
+        ],
+        [
+          810,
+          150,
+          1323,
+          857
+        ]
+      ],
+      "review_notes": "Два состояния кирпично-латунных ворот: закрытое слева, открытое справа; медные полосы на двери, шестерня в замковом камне. Порог общий, створка у левого косяка. Исходник прозрачен; слабый остаток alpha по краям отмечен в проверке. В игре масштаб как у P17, 102,4 × 140,8 px."
+    },
+    {
+      "id": "P21",
+      "path": "D:\\Cluade projects\\games\\Glue\\assets\\props\\v2\\source\\p21_conveyor.png",
+      "native_size": [
+        2172,
+        724
+      ],
+      "mode": "RGBA",
+      "sha256": "350de2e28c62b60e060550612291dc8faffd8f0e69ac48ccff4a2c1aaa9e5d48",
+      "native_generator_bytes_preserved": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        22,
+        246,
+        2147,
+        668
+      ],
+      "visible_bbox_alpha_32": [
+        27,
+        343,
+        2145,
+        473
+      ],
+      "border_alpha_max": 0,
+      "true_transparency": true,
+      "x_groups_alpha_32": [
+        [
+          27,
+          346,
+          1511,
+          468
+        ],
+        [
+          1579,
+          343,
+          1710,
+          473
+        ],
+        [
+          1771,
+          393,
+          2145,
+          430
+        ]
+      ],
+      "review_notes": "Три детали слева направо: низкая полоса с двумя барабанами, отдельный круглый барабан, короткая поверхность для прокрутки. Без высоких ножек и перспективы пола. Пропорции приблизительные; в игре полоса 384 × 25,6 px, барабан диаметром 25,6 px. После нарезки проверить повтор середины и сохранить круглость отдельного барабана."
+    },
+    {
+      "id": "P26",
+      "path": "D:\\Cluade projects\\games\\Glue\\assets\\props\\v2\\source\\p26_wires.png",
+      "native_size": [
+        2172,
+        724
+      ],
+      "mode": "RGBA",
+      "sha256": "b937e24a741def23ee98a4f68f6a45e71fbd9f008f181a0c4dc24b30df6a3c78",
+      "native_generator_bytes_preserved": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        47,
+        112,
+        2168,
+        724
+      ],
+      "visible_bbox_alpha_32": [
+        53,
+        221,
+        2117,
+        606
+      ],
+      "border_alpha_max": 1,
+      "true_transparency": true,
+      "x_groups_alpha_32": [
+        [
+          53,
+          352,
+          742,
+          444
+        ],
+        [
+          799,
+          223,
+          973,
+          448
+        ],
+        [
+          1008,
+          221,
+          1302,
+          479
+        ],
+        [
+          1340,
+          221,
+          1635,
+          479
+        ],
+        [
+          1694,
+          349,
+          1890,
+          460
+        ],
+        [
+          1945,
+          352,
+          2117,
+          606
+        ]
+      ],
+      "review_notes": "Шесть отдельных деталей: прямой провод с изоляторами, угол 90°, две развилки со стрелками влево/вправо, клемма, заземление. Направления стрелок различаются; коробки совпадают по масштабу. При подключении толщину провода и размеры коробок задать по заданию."
+    },
+    {
+      "id": "P28",
+      "path": "D:\\Cluade projects\\games\\Glue\\assets\\props\\v2\\source\\p28_cracked.png",
+      "native_size": [
+        2172,
+        724
+      ],
+      "mode": "RGBA",
+      "sha256": "fbf8e392a291a8d0355d1c3f3ec02fb4cb856d3927ba2b1203dc1467e30d09c5",
+      "native_generator_bytes_preserved": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        78,
+        109,
+        2152,
+        700
+      ],
+      "visible_bbox_alpha_32": [
+        82,
+        111,
+        2106,
+        585
+      ],
+      "border_alpha_max": 0,
+      "true_transparency": true,
+      "x_groups_alpha_32": [
+        [
+          82,
+          111,
+          299,
+          585
+        ],
+        [
+          348,
+          446,
+          1337,
+          585
+        ],
+        [
+          1375,
+          459,
+          1498,
+          585
+        ],
+        [
+          1513,
+          509,
+          1610,
+          584
+        ],
+        [
+          1629,
+          479,
+          1761,
+          585
+        ],
+        [
+          1785,
+          486,
+          1888,
+          584
+        ],
+        [
+          1910,
+          491,
+          1988,
+          572
+        ],
+        [
+          2010,
+          509,
+          2106,
+          585
+        ]
+      ],
+      "review_notes": "Вертикальная треснувшая стена, горизонтальный пролёт и ровно шесть отдельных обломков кирпича и камня. Все детали внутри кадра, края закончены. После нарезки проверить повтор кладки и трещин; игровая стена 64 × 192 px, пролёт 384 × 64 px."
+    },
+    {
+      "id": "P30",
+      "path": "D:\\Cluade projects\\games\\Glue\\assets\\props\\v2\\source\\p30_beetle.png",
+      "native_size": [
+        2172,
+        724
+      ],
+      "mode": "RGBA",
+      "sha256": "62e3db6c57537af24bc336a38cd98f17c89583a9fae98373139c14e4f8ef9bb4",
+      "native_generator_bytes_preserved": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        29,
+        9,
+        2120,
+        724
+      ],
+      "visible_bbox_alpha_32": [
+        75,
+        186,
+        2101,
+        553
+      ],
+      "border_alpha_max": 1,
+      "true_transparency": true,
+      "x_groups_alpha_32": [
+        [
+          75,
+          186,
+          716,
+          544
+        ],
+        [
+          788,
+          186,
+          1391,
+          553
+        ],
+        [
+          1439,
+          216,
+          2101,
+          550
+        ]
+      ],
+      "review_notes": "Три позы жука вправо: два шага и толкание с опущенной головой-лопатой. Широкая площадка на панцире, медь и латунь, ноги в разных положениях. При подключении выровнять рамки и опорную точку, целевой размер 70,4 × 57,6 px."
+    },
+    {
+      "id": "P29",
+      "path": "D:\\Cluade projects\\games\\Glue\\assets\\props\\v2\\source\\p29_spark.png",
+      "native_size": [
+        2172,
+        724
+      ],
+      "mode": "RGBA",
+      "sha256": "671f87d38fb3a893978cc55b5b3c03a87c243b2ef30f2b77c0d75337ddcebf8d",
+      "native_generator_bytes_preserved": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        226,
+        89,
+        2088,
+        700
+      ],
+      "visible_bbox_alpha_32": [
+        229,
+        182,
+        1951,
+        573
+      ],
+      "border_alpha_max": 0,
+      "true_transparency": true,
+      "x_groups_alpha_32": [
+        [
+          229,
+          220,
+          726,
+          569
+        ],
+        [
+          899,
+          198,
+          1429,
+          573
+        ],
+        [
+          1579,
+          182,
+          1892,
+          571
+        ],
+        [
+          1901,
+          356,
+          1951,
+          404
+        ]
+      ],
+      "review_notes": "Три состояния: бег вправо с пламенем влево; отскок влево с удивлёнными глазами и пламенем вправо; затухание — серый дым с двумя угольками. Рук и ног нет. При нарезке включить отдельные язычки пламени в рамку соответствующего состояния; целевой диаметр ядра 25,6 px, с пламенем около 38,4 px."
+    },
+    {
+      "id": "P27",
+      "path": "D:\\Cluade projects\\games\\Glue\\assets\\props\\v2\\source\\p27_keg.png",
+      "native_size": [
+        1774,
+        887
+      ],
+      "mode": "RGBA",
+      "sha256": "a341bb8ab16216dc95b75097922eb526ffcc1db7d1780ba91d941c922e8ea719",
+      "native_generator_bytes_preserved": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        229,
+        150,
+        1486,
+        863
+      ],
+      "visible_bbox_alpha_32": [
+        422,
+        208,
+        1355,
+        758
+      ],
+      "border_alpha_max": 0,
+      "true_transparency": true,
+      "x_groups_alpha_32": [
+        [
+          422,
+          280,
+          812,
+          758
+        ],
+        [
+          963,
+          208,
+          1355,
+          758
+        ]
+      ],
+      "review_notes": "Два одинаковых бочонка с обычным и горящим фитилём. Верх исправлен на вид строго сбоку; полоса пустая, без знаков. У состояний общий низ корпуса. Целевой размер тела 41,6 × 44,8 px, искру учесть отдельно при нарезке."
+    },
+    {
+      "id": "P22",
+      "path": "D:\\Cluade projects\\games\\Glue\\assets\\props\\v2\\source\\p22_rotating_beam.png",
+      "native_size": [
+        2172,
+        724
+      ],
+      "mode": "RGBA",
+      "sha256": "a1f0e40f506f30406d7dfdb67a0db05b61441d76a97be29de8572cf7355a3021",
+      "native_generator_bytes_preserved": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        49,
+        198,
+        2144,
+        562
+      ],
+      "visible_bbox_alpha_32": [
+        53,
+        271,
+        2141,
+        453
+      ],
+      "border_alpha_max": 0,
+      "true_transparency": true,
+      "x_groups_alpha_32": [
+        [
+          53,
+          294,
+          1895,
+          429
+        ],
+        [
+          1961,
+          271,
+          2141,
+          453
+        ]
+      ],
+      "review_notes": "Одна горизонтальная балка с железными накладками и отдельная круглая ось с центральным болтом. Круглые ролики на концах удалены. Ритм середины однородный; при нарезке привести балку к 512 × 25,6 px, ось к диаметру 57,6 px. Пропорции исходника приблизительные."
+    },
+    {
+      "id": "P23",
+      "path": "D:\\Cluade projects\\games\\Glue\\assets\\props\\v2\\source\\p23_brittle_floor.png",
+      "native_size": [
+        2172,
+        724
+      ],
+      "mode": "RGBA",
+      "sha256": "f483f9e384fcabb44e92e2acd644ef9e70807fe97840a99cd75122c00e3fba5d",
+      "native_generator_bytes_preserved": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        18,
+        216,
+        2154,
+        571
+      ],
+      "visible_bbox_alpha_32": [
+        27,
+        342,
+        2143,
+        425
+      ],
+      "border_alpha_max": 0,
+      "true_transparency": true,
+      "x_groups_alpha_32": [
+        [
+          27,
+          342,
+          589,
+          411
+        ],
+        [
+          616,
+          344,
+          1142,
+          425
+        ],
+        [
+          1174,
+          346,
+          1344,
+          402
+        ],
+        [
+          1368,
+          348,
+          1564,
+          403
+        ],
+        [
+          1595,
+          348,
+          1742,
+          404
+        ],
+        [
+          1772,
+          344,
+          1967,
+          401
+        ],
+        [
+          1982,
+          345,
+          2143,
+          404
+        ]
+      ],
+      "review_notes": "Целый и треснувший тонкий настил, затем ровно пять щепок. Уменьшены толщина досок и провис верёвки. Все части внутри кадра; при нарезке целый настил привести к 256 × 16 px, у треснувшего сохранить тот же пролёт и точку привязки."
+    },
+    {
+      "id": "P24",
+      "path": "D:\\Cluade projects\\games\\Glue\\assets\\props\\v2\\source\\p24_bellows.png",
+      "native_size": [
+        1672,
+        941
+      ],
+      "mode": "RGBA",
+      "sha256": "e04f44a4e5c118b264b1c20f5984672afc36c2a42509ab4064b40d3a68b02b4f",
+      "native_generator_bytes_preserved": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        0,
+        39,
+        1577,
+        884
+      ],
+      "visible_bbox_alpha_32": [
+        146,
+        112,
+        1574,
+        856
+      ],
+      "border_alpha_max": 1,
+      "true_transparency": true,
+      "x_groups_alpha_32": [
+        [
+          146,
+          112,
+          807,
+          856
+        ],
+        [
+          957,
+          201,
+          1574,
+          856
+        ]
+      ],
+      "review_notes": "Два состояния мехов с соплом вправо: раскрытое слева, сжатое справа с небольшим воздушным облачком и поднятым рычагом. Складки сжатого состояния заметно сближены, основания на общей линии. Стойки в исходнике отличаются по высоте: при подключении согласовать их масштаб и привязку сопла, целевой рисунок 102,4 × 115,2 px."
+    },
+    {
+      "id": "P25",
+      "path": "D:\\Cluade projects\\games\\Glue\\assets\\props\\v2\\source\\p25_crane.png",
+      "native_size": [
+        1755,
+        896
+      ],
+      "mode": "RGBA",
+      "sha256": "7d397717e3b32c34adb8bc3aad1b425a3559890439778416fc1114beba2f6e4e",
+      "native_generator_bytes_preserved": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        22,
+        20,
+        1737,
+        806
+      ],
+      "visible_bbox_alpha_32": [
+        28,
+        285,
+        1731,
+        695
+      ],
+      "border_alpha_max": 0,
+      "true_transparency": true,
+      "x_groups_alpha_32": [
+        [
+          28,
+          460,
+          1188,
+          587
+        ],
+        [
+          1213,
+          434,
+          1595,
+          607
+        ],
+        [
+          1606,
+          285,
+          1731,
+          695
+        ]
+      ],
+      "review_notes": "Три отдельные детали: рельс, двухколёсная тележка, прямая тяга с большим открытым крюком. Тяга без цепи, середина однородная. При нарезке рельс 384 × 23,68 px, тележка 83,2 × 51,2 px, тяга толщиной 7,68 px и крюк около 32 px."
+    },
+    {
+      "id": "W2L04",
+      "path": "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_02\\source\\w02_lm04_sorting_yard.png",
+      "native_size": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "sha256": "711f84516abd007c4bf12ed2ec6103828178c6cb8bfd96a64b8f8716eb47d21c",
+      "native_generator_bytes_preserved": true,
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "alpha_bbox": [
+        0,
+        15,
+        1536,
+        1024
+      ],
+      "visible_bbox_alpha_32": [
+        15,
+        53,
+        1522,
+        998
+      ],
+      "border_alpha_max": 8,
+      "true_transparency": true,
+      "x_groups_alpha_32": [
+        [
+          15,
+          53,
+          1522,
+          998
+        ]
+      ],
+      "review_notes": "Сортировочный двор: четыре желоба, оранжевые, синие, зелёные и фиолетовые ворота, каменные блоки и отдельные деревянные бункеры. Лишний дальний виадук удалён, у основания восстановлен мягкий белый туман."
+    },
+    {
+      "id": "W2L05",
+      "path": "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_02\\source\\w02_lm05_windmill_bellows.png",
+      "native_size": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "sha256": "18d953324bfc4541c8cc98d15f28b2ccd6815ec970289d7515715187e3f4b252",
+      "native_generator_bytes_preserved": true,
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "alpha_bbox": [
+        0,
+        17,
+        1024,
+        1536
+      ],
+      "visible_bbox_alpha_32": [
+        42,
+        57,
+        1020,
+        1499
+      ],
+      "border_alpha_max": 2,
+      "true_transparency": true,
+      "x_groups_alpha_32": [
+        [
+          42,
+          57,
+          1020,
+          1499
+        ]
+      ],
+      "review_notes": "Ветряк с четырьмя деревянными парусными крыльями на круглой башне, большие мехи у основания и белый воздух из латунного сопла. Силуэт целиком внутри кадра, утренний свет двора и мягкий туман."
+    },
+    {
+      "id": "W2L06",
+      "path": "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_02\\source\\w02_lm06_switch_tower.png",
+      "native_size": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "sha256": "7ec2a6bd7d688ca72eb860e7108caa01ec99479dd5b5d698eb24d8a00651074b",
+      "native_generator_bytes_preserved": true,
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "alpha_bbox": [
+        65,
+        0,
+        1010,
+        1536
+      ],
+      "visible_bbox_alpha_32": [
+        73,
+        8,
+        948,
+        1492
+      ],
+      "border_alpha_max": 4,
+      "true_transparency": true,
+      "x_groups_alpha_32": [
+        [
+          73,
+          8,
+          948,
+          1492
+        ]
+      ],
+      "review_notes": "Стрелочная башня с большим латунным рычагом, медными проводами в обе стороны и фарфоровыми изоляторами. Лишние дальние арки удалены; провода закончены внутри кадра, по бокам прозрачное поле. Свет кузни и туман у основания."
+    },
+    {
+      "id": "W2L07",
+      "path": "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_02\\source\\w02_lm07_shift_bell.png",
+      "native_size": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "sha256": "f22d86900d089529ab37ca70c3946a59409e6c6294a59ba6e03337aef541a470",
+      "native_generator_bytes_preserved": true,
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "alpha_bbox": [
+        0,
+        9,
+        1010,
+        1536
+      ],
+      "visible_bbox_alpha_32": [
+        21,
+        20,
+        1002,
+        1488
+      ],
+      "border_alpha_max": 2,
+      "true_transparency": true,
+      "x_groups_alpha_32": [
+        [
+          21,
+          20,
+          1002,
+          1488
+        ]
+      ],
+      "review_notes": "Башня смены с бронзовым колоколом, циферблатом только с делениями и двумя конвейерными галереями на разных высотах. Чисел и стрелок на циферблате нет; башня целиком в кадре, мягкий пар у основания."
+    },
+    {
+      "id": "W2L08",
+      "path": "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_02\\source\\w02_lm08_gantry_crane.png",
+      "native_size": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "sha256": "bc0d95fbf5d100d669aa215f9e5270a459e84f4791e992bf50481662452db4d3",
+      "native_generator_bytes_preserved": true,
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "alpha_bbox": [
+        0,
+        9,
+        1532,
+        1024
+      ],
+      "visible_bbox_alpha_32": [
+        99,
+        61,
+        1468,
+        977
+      ],
+      "border_alpha_max": 2,
+      "true_transparency": true,
+      "x_groups_alpha_32": [
+        [
+          99,
+          61,
+          1468,
+          977
+        ]
+      ],
+      "review_notes": "Портальный кран между двумя башнями: тележка, большой подвесной крюк, нижний деревянный проход с отсутствующими досками. Один связанный ориентир, мягкий свет кузни; весь кран внутри кадра."
+    },
+    {
+      "id": "W2L09",
+      "path": "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_02\\source\\w02_lm09_powder_store.png",
+      "native_size": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "sha256": "f8da4caaa498a1caf25351365f113b802e3a6bbf07a5b50bab1eba1ac961cd29",
+      "native_generator_bytes_preserved": true,
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "alpha_bbox": [
+        0,
+        21,
+        1536,
+        1024
+      ],
+      "visible_bbox_alpha_32": [
+        27,
+        68,
+        1499,
+        925
+      ],
+      "border_alpha_max": 1,
+      "true_transparency": true,
+      "x_groups_alpha_32": [
+        [
+          27,
+          68,
+          1499,
+          925
+        ]
+      ],
+      "review_notes": "Пороховой склад с большим проломом, бочками, длинной линией фитиля на деревянных столбиках и дымом. Тёплый свет кузни, мягкое основание в тумане; линия фитиля внутри кадра."
+    },
+    {
+      "id": "W2L10",
+      "path": "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_02\\source\\w02_lm10_weighing_tower.png",
+      "native_size": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "sha256": "13fa3b34403c81d98e45af3c7bc93e44ecbb528354708e88ebea8f68872bec72",
+      "native_generator_bytes_preserved": true,
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "alpha_bbox": [
+        0,
+        15,
+        1024,
+        1536
+      ],
+      "visible_bbox_alpha_32": [
+        15,
+        150,
+        1011,
+        1449
+      ],
+      "border_alpha_max": 1,
+      "true_transparency": true,
+      "x_groups_alpha_32": [
+        [
+          15,
+          150,
+          1011,
+          1449
+        ]
+      ],
+      "review_notes": "Высокие весы с двумя латунными чашами на цепях: слева каменные блоки, справа большая железная гиря. Обе чаши и балка целиком внутри кадра, туман у основания."
+    },
+    {
+      "id": "W2L11",
+      "path": "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_02\\source\\w02_lm11_beetle_statue.png",
+      "native_size": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "sha256": "b0fd6b3fe0a573a724a7992a97dbb6606fec4db61e91969042575f89d35526c3",
+      "native_generator_bytes_preserved": true,
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "alpha_bbox": [
+        0,
+        8,
+        1536,
+        1024
+      ],
+      "visible_bbox_alpha_32": [
+        49,
+        34,
+        1491,
+        1006
+      ],
+      "border_alpha_max": 11,
+      "true_transparency": true,
+      "x_groups_alpha_32": [
+        [
+          49,
+          34,
+          1491,
+          1006
+        ]
+      ],
+      "review_notes": "Большая декоративная медно-латунная статуя жука на каменном постаменте среди связанных деревянных лесов. Полированный панцирь, мягкий свет зоны и туман у основания; без надписей."
+    },
+    {
+      "id": "W2L12",
+      "path": "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_02\\source\\w02_lm12_collapsed_hall.png",
+      "native_size": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "sha256": "732353b2cab0669cfc038c809fadeb916909cf12c26e83042915f17d0b3ffdca",
+      "native_generator_bytes_preserved": true,
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "alpha_bbox": [
+        0,
+        0,
+        1520,
+        1024
+      ],
+      "visible_bbox_alpha_32": [
+        42,
+        66,
+        1494,
+        937
+      ],
+      "border_alpha_max": 1,
+      "true_transparency": true,
+      "x_groups_alpha_32": [
+        [
+          42,
+          66,
+          1494,
+          937
+        ]
+      ],
+      "review_notes": "Цех с рухнувшей кровлей: сломанные и свисающие балки, завал из камня и кирпича, подпорки и пыль в лучах света. Проём крыши и завал читаются, рисунок не страшный."
+    },
+    {
+      "id": "W2L13",
+      "path": "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_02\\source\\w02_lm13_lock_gate.png",
+      "native_size": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "sha256": "ee8fcdc0ad5a5f1dd71569eaa027e33c871e28724e0519d1890e1f231ad4c29f",
+      "native_generator_bytes_preserved": true,
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "alpha_bbox": [
+        0,
+        0,
+        1535,
+        1024
+      ],
+      "visible_bbox_alpha_32": [
+        79,
+        53,
+        1454,
+        986
+      ],
+      "border_alpha_max": 2,
+      "true_transparency": true,
+      "x_groups_alpha_32": [
+        [
+          79,
+          53,
+          1454,
+          986
+        ]
+      ],
+      "review_notes": "Круглые механические ворота из дерева и латуни, связанные шестерни и засовы, ровно три больших рычага справа. Один связанный ориентир в деревянной раме, без тёмного проёма."
+    },
+    {
+      "id": "W2L14",
+      "path": "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_02\\source\\w02_lm14_spring_arena.png",
+      "native_size": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "sha256": "ef81326577cd1c218363d19f15d1ad462bea00e837defb1570c9ee271bf8fcf9",
+      "native_generator_bytes_preserved": true,
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "alpha_bbox": [
+        0,
+        0,
+        1535,
+        1024
+      ],
+      "visible_bbox_alpha_32": [
+        52,
+        28,
+        1504,
+        1003
+      ],
+      "border_alpha_max": 3,
+      "true_transparency": true,
+      "x_groups_alpha_32": [
+        [
+          52,
+          28,
+          1504,
+          1003
+        ]
+      ],
+      "review_notes": "Испытательный манеж пружинщиков: полосатый навес, большие пружины и батуты на выставочных подставках, маленькие пустые вымпелы. Без персонажей, знаков и надписей, мягкий туман у основания."
+    },
+    {
+      "id": "W2L15",
+      "path": "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_02\\source\\w02_lm15_twin_halls.png",
+      "native_size": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "sha256": "d0252748739d2efb9bc7ae0bbecd364676c50dda7a1ab6f3189e4ffad595a28e",
+      "native_generator_bytes_preserved": true,
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "alpha_bbox": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "visible_bbox_alpha_32": [
+        20,
+        135,
+        1508,
+        904
+      ],
+      "border_alpha_max": 7,
+      "true_transparency": true,
+      "x_groups_alpha_32": [
+        [
+          20,
+          135,
+          1508,
+          904
+        ]
+      ],
+      "review_notes": "Два цеха-близнеца, соединённые высоко над промежутком длинным приводным валом, ремнями и шкивами, входящими в обе крыши. Два здания читаются отдельно, связанная группа в тумане."
+    },
+    {
+      "id": "W2L16",
+      "path": "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_02\\source\\w02_lm16_wind_tunnel.png",
+      "native_size": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "sha256": "9606c3557bb5307260666e53cb941c0d6527529651fb0eaf413da63dc9bc22ba",
+      "native_generator_bytes_preserved": true,
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "alpha_bbox": [
+        0,
+        21,
+        1536,
+        1024
+      ],
+      "visible_bbox_alpha_32": [
+        27,
+        143,
+        1502,
+        883
+      ],
+      "border_alpha_max": 2,
+      "true_transparency": true,
+      "x_groups_alpha_32": [
+        [
+          27,
+          143,
+          1502,
+          883
+        ]
+      ],
+      "review_notes": "Длинная деревянная аэродинамическая труба на опорах, огромный вентилятор слева и мехи справа. Без воды и водопадов; цельный силуэт, закатный свет большой машины."
+    },
+    {
+      "id": "W2L17",
+      "path": "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_02\\source\\w02_lm17_loading_dock.png",
+      "native_size": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "sha256": "0180e0deee685f7864633db30a39b2a76433fd034d72d654c7fcb57e0e8b7ec2",
+      "native_generator_bytes_preserved": true,
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "alpha_bbox": [
+        0,
+        13,
+        1536,
+        1024
+      ],
+      "visible_bbox_alpha_32": [
+        69,
+        26,
+        1464,
+        989
+      ],
+      "border_alpha_max": 2,
+      "true_transparency": true,
+      "x_groups_alpha_32": [
+        [
+          69,
+          26,
+          1464,
+          989
+        ]
+      ],
+      "review_notes": "Погрузочный причал: один огромный окованный ящик подвешен к деревянному крану, под ним весовая площадка и короткий конвейер. Каменная пристань и тёплые фонари, закатный свет."
+    },
+    {
+      "id": "W2L18",
+      "path": "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_02\\source\\w02_lm18_lightning_tower.png",
+      "native_size": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "sha256": "2104d68b1de66d5774ba655e5e7ab0be9f7fefef2f06e9e4d64f58ba39fdc606",
+      "native_generator_bytes_preserved": true,
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "alpha_bbox": [
+        0,
+        17,
+        1024,
+        1536
+      ],
+      "visible_bbox_alpha_32": [
+        38,
+        47,
+        986,
+        1495
+      ],
+      "border_alpha_max": 2,
+      "true_transparency": true,
+      "x_groups_alpha_32": [
+        [
+          38,
+          47,
+          986,
+          1495
+        ]
+      ],
+      "review_notes": "Башня, спиральные провода и светящаяся катушка; в круглом окне слабый дружелюбный бело-голубой призрачный свет. После правки основание и пар целиком внутри кадра; максимальная альфа по границе 2/255. Поля меньше запрошенных 7%, поэтому выбирать масштаб по видимой архитектуре."
+    },
+    {
+      "id": "W2L19",
+      "path": "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_02\\source\\w02_lm19_crossing.png",
+      "native_size": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "sha256": "bb9ebad5f8af75b9fa25cacd20cc69e5b52c2fcbf78fdbe116bc79ea9cebbd32",
+      "native_generator_bytes_preserved": true,
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "alpha_bbox": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "visible_bbox_alpha_32": [
+        3,
+        160,
+        1527,
+        859
+      ],
+      "border_alpha_max": 28,
+      "true_transparency": true,
+      "x_groups_alpha_32": [
+        [
+          3,
+          160,
+          1527,
+          859
+        ]
+      ],
+      "review_notes": "Четыре галереи, поворотный круг, стрелка и сигнальный столб. Высокий ракурс исправлен на боковой; дополнительные галереи показаны позади. Все концы внутри кадра. Круг виден с небольшим верхним ребром; мягкое свечение по бокам доходит до границы (альфа до 28/255), поля уже заданных. При установке смягчить контраст и подобрать дымку."
+    },
+    {
+      "id": "W2L20",
+      "path": "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_02\\source\\w02_lm20_machine_core.png",
+      "native_size": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "sha256": "cc3a2d422d4bbf166d26295c177b8a1cc109d1a70d4718b82178ccb678ed3594",
+      "native_generator_bytes_preserved": true,
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "alpha_bbox": [
+        0,
+        9,
+        1014,
+        1536
+      ],
+      "visible_bbox_alpha_32": [
+        36,
+        142,
+        993,
+        1370
+      ],
+      "border_alpha_max": 1,
+      "true_transparency": true,
+      "x_groups_alpha_32": [
+        [
+          36,
+          142,
+          993,
+          1370
+        ]
+      ],
+      "review_notes": "Сердце машины: большая стена шестерён, поршни, латунные трубы и яркое ядро печи. Портретный формат; основание в паре. При установке подобрать дымку, чтобы свечение не спорило с героями."
+    },
+    {
+      "id": "W2M2",
+      "path": "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\menu\\source\\menu_panorama_w02.png",
+      "native_size": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "sha256": "4d76f9f8e6f54f6b5e79b3b4e5ce10bf2a4749ced9c67cc828f8b5bfdf62e38e",
+      "native_generator_bytes_preserved": true,
+      "true_transparency": false,
+      "review_notes": "Панорама без интерфейса: утренний двор слева, кузня в центре, большая машина справа в закатном свете. После правки арка отделена от левого края; верхний центр оставлен под заголовок, нижняя треть смягчена паром под сетку уровней. Нативный формат 1672 × 941, приблизительно 16:9."
+    }
+  ],
+  "summary": {
+    "required_files": 29,
+    "saved_files": 29,
+    "all_native_generator_bytes_preserved": true,
+    "all_requested_transparency_present": true
+  },
+  "integration_pending": true
+}

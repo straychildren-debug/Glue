@@ -3,7 +3,8 @@ class_name Crate
 extends CharacterBody2D
 ## Ящик: падает, толкается игроками, давит весом на плиты и качели, возит замершего.
 ## Тяжёлый ящик сдвигают только вдвоём (паровозиком: второй толкает первого).
-## Упавший в пропасть ящик возвращается туда, где стоял при взятии чекпоинта.
+## Упавший в пропасть ящик возвращается туда, где последний раз спокойно стоял; при общем
+## респавне — туда, где стоял при взятии чекпоинта.
 ## Положение узла — центр ящика.
 
 const LAYER_OBJECTS := 8
@@ -32,6 +33,10 @@ var landing_speed := 0.0
 ## Масса толкающих в этом кадре: направление (-1/1) -> сумма.
 var _push := {}
 var _home := Vector2.ZERO
+## Где ящик последний раз спокойно стоял на твёрдом полу или плите: упавший в пропасть
+## возвращается сюда, а не на чекпоинт — случайно столкнутый ящик не теряет пройденный путь.
+var _rest := Vector2.ZERO
+var _still := 0.0
 var _respawn_timer := -1.0
 var _launched := false
 
@@ -42,6 +47,7 @@ func _ready() -> void:
 	var collision := CollisionShape2D.new()
 	collision.shape = shape
 	add_child(collision)
+	z_index = 1  # поверх ворот финиша и других механизмов: ящик не прячется за рамкой
 	if Engine.is_editor_hint():
 		return
 	add_to_group(GROUP)
@@ -57,6 +63,7 @@ func _ready() -> void:
 	# После игроков: их толчки этого кадра уже собраны.
 	process_physics_priority = 5
 	_home = global_position
+	_rest = global_position
 
 
 ## Игрок упёрся в ящик сбоку и толкает его в сторону direction.
@@ -115,6 +122,19 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 	landing_speed = fall_speed if is_on_floor() and not on_floor else 0.0
 	Player.follow_carrier(self)
+	_update_rest(delta)
+
+
+## Стоит спокойно полсекунды на неподвижной опоре (блок уровня или плита) — запомнить место.
+## Мосты, двери, качели, подъёмники не в счёт: уедут — и ящик появлялся бы в воздухе.
+func _update_rest(delta: float) -> void:
+	var below := Weight.floor_below(self) if is_on_floor() else null
+	if (below is StaticBody2D or below is PressurePlate) and velocity.length() < 1.0:
+		_still += delta
+		if _still >= 0.5:
+			_rest = global_position
+	else:
+		_still = 0.0
 
 
 ## Упал за линию смерти: исчезает и появляется у точки чекпоинта.
@@ -131,7 +151,7 @@ func fall_out() -> void:
 
 func _appear() -> void:
 	_respawn_timer = -1.0
-	_place(_home)
+	_place(_rest)
 
 
 func _place(at: Vector2) -> void:
@@ -159,6 +179,7 @@ func save_state() -> Variant:
 
 func load_state(state: Variant) -> void:
 	_home = state
+	_rest = state
 	_respawn_timer = -1.0
 	_place(_home)
 

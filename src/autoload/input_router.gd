@@ -2,7 +2,7 @@ extends Node
 ## Привязка устройств ввода к игрокам (слоты 0–3).
 ## Геймпад — основное устройство; две раскладки клавиатуры — для отладки.
 ## Игрок подключается кнопкой A / Start на геймпаде или клавишей прыжка своей раскладки.
-## Раскладки временные: позже появится экран переназначения клавиш.
+## Основные клавиши раскладок переназначаются в настройках (GameSettings).
 
 signal player_joined(slot: int)
 signal player_left(slot: int)
@@ -16,7 +16,8 @@ const NO_DEVICE := -100
 ## Отрицательные id — раскладки клавиатуры, неотрицательные — id геймпадов Godot.
 const KEYBOARD_1 := -1
 const KEYBOARD_2 := -2
-const KEYBOARD_KEYS := {
+## Раскладки по умолчанию; действующие — keyboard_keys (меняются в настройках, GameSettings).
+const DEFAULT_KEYS := {
 	KEYBOARD_1: {
 		"left": [KEY_A], "right": [KEY_D], "jump": [KEY_W, KEY_SPACE],
 		"freeze": [KEY_S], "grab": [KEY_E],
@@ -30,6 +31,8 @@ const PAD_JUMP := JOY_BUTTON_A
 const PAD_FREEZE: Array[JoyButton] = [JOY_BUTTON_X, JOY_BUTTON_LEFT_SHOULDER]
 const PAD_GRAB := JOY_BUTTON_RIGHT_SHOULDER  # и правый курок
 
+## Раскладка -> действие -> клавиши (первая — основная, её переназначают в настройках).
+var keyboard_keys: Dictionary = DEFAULT_KEYS.duplicate(true)
 var _devices: Array[int] = [NO_DEVICE, NO_DEVICE, NO_DEVICE, NO_DEVICE]
 var _jump_pressed: Array[bool] = [false, false, false, false]
 var _freeze_pressed: Array[bool] = [false, false, false, false]
@@ -62,9 +65,9 @@ func _input(event: InputEvent) -> void:
 		elif event.button_index == JOY_BUTTON_BACK:
 			action = "leave"
 	elif event is InputEventKey and event.pressed and not event.echo:
-		for kb in KEYBOARD_KEYS:
+		for kb in keyboard_keys:
 			for key_action in ["jump", "freeze"]:
-				if event.physical_keycode in KEYBOARD_KEYS[kb][key_action]:
+				if event.physical_keycode in keyboard_keys[kb][key_action]:
 					device = kb
 					action = key_action
 	if device == NO_DEVICE or action == "":
@@ -103,8 +106,8 @@ func device_of_event(event: InputEvent) -> int:
 	if event is InputEventJoypadButton or event is InputEventJoypadMotion:
 		return event.device
 	if event is InputEventKey:
-		for kb in KEYBOARD_KEYS:
-			for keys: Array in KEYBOARD_KEYS[kb].values():
+		for kb in keyboard_keys:
+			for keys: Array in keyboard_keys[kb].values():
 				if event.physical_keycode in keys:
 					return kb
 	return NO_DEVICE
@@ -124,10 +127,10 @@ func device_name(slot: int) -> String:
 	match device:
 		NO_DEVICE:
 			return ""
-		KEYBOARD_1:
-			return "клавиатура: A/D, прыжок W, замри S, хват E"
-		KEYBOARD_2:
-			return "клавиатура: ←/→, прыжок ↑, замри ↓, хват . или Num0"
+		KEYBOARD_1, KEYBOARD_2:
+			return "клавиатура: %s/%s, прыжок %s, замри %s, хват %s" % [key_name(device, "left"),
+					key_name(device, "right"), key_name(device, "jump"), key_name(device, "freeze"),
+					key_name(device, "grab")]
 	return Input.get_joy_name(device)
 
 
@@ -137,7 +140,7 @@ func get_move_x(slot: int) -> float:
 	if device == NO_DEVICE:
 		return 0.0
 	if device < 0:
-		var keys: Dictionary = KEYBOARD_KEYS[device]
+		var keys: Dictionary = keyboard_keys[device]
 		return float(_any_key(keys["right"])) - float(_any_key(keys["left"]))
 	var x := Input.get_joy_axis(device, JOY_AXIS_LEFT_X)
 	x = 0.0 if absf(x) < STICK_DEADZONE else signf(x) * inverse_lerp(STICK_DEADZONE, 1.0, absf(x))
@@ -153,7 +156,7 @@ func is_jump_held(slot: int) -> bool:
 	if device == NO_DEVICE:
 		return false
 	if device < 0:
-		return _any_key(KEYBOARD_KEYS[device]["jump"])
+		return _any_key(keyboard_keys[device]["jump"])
 	return Input.is_joy_button_pressed(device, PAD_JUMP)
 
 
@@ -162,7 +165,7 @@ func is_grab_held(slot: int) -> bool:
 	if device == NO_DEVICE:
 		return false
 	if device < 0:
-		return _any_key(KEYBOARD_KEYS[device]["grab"])
+		return _any_key(keyboard_keys[device]["grab"])
 	return Input.is_joy_button_pressed(device, PAD_GRAB) \
 			or Input.get_joy_axis(device, JOY_AXIS_TRIGGER_RIGHT) > TRIGGER_THRESHOLD
 
@@ -214,3 +217,34 @@ func _any_key(keys: Array) -> bool:
 		if Input.is_physical_key_pressed(key):
 			return true
 	return false
+
+
+## Название основной клавиши действия раскладки для подсказок: стрелки — значками.
+func key_name(keyboard: int, action: String) -> String:
+	var key: Key = keyboard_keys[keyboard][action][0]
+	match key:
+		KEY_LEFT: return "←"
+		KEY_RIGHT: return "→"
+		KEY_UP: return "↑"
+		KEY_DOWN: return "↓"
+		KEY_SPACE: return "Пробел"
+		KEY_PERIOD: return "."
+	return OS.get_keycode_string(key)
+
+
+## Основная клавиша действия раскладки (первая в списке); запасные клавиши остаются.
+func set_key(keyboard: int, action: String, key: Key) -> void:
+	var keys: Array = keyboard_keys[keyboard][action].duplicate()
+	# Основная клавиша не изменилась — запасные (Пробел у прыжка 1-й раскладки, Enter у 2-й) остаются.
+	if not keys.is_empty() and keys[0] == key:
+		return
+	keys.erase(key)
+	if keys.is_empty():
+		keys.append(key)
+	else:
+		keys[0] = key
+	keyboard_keys[keyboard][action] = keys
+
+
+func reset_keys() -> void:
+	keyboard_keys = DEFAULT_KEYS.duplicate(true)

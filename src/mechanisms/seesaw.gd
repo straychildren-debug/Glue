@@ -9,6 +9,8 @@ extends Node2D
 ## Положение узла — шарнир (середина балки); пол — на pivot_height_tiles ниже.
 
 const BEAM_THICKNESS := 16.0
+## Ось козел на спрайте — доля его высоты от верха (assets/props/v2/seesaw_base: 61 из 321).
+const HUB_FRAC := 61.0 / 321.0
 ## Сколько секунд балка помнит тех, кто на ней стоял (для броска).
 const RIDER_MEMORY := 0.25
 ## Бросает тех, чей центр не выше этого над балкой: стопку из двух-трёх тел.
@@ -86,6 +88,10 @@ func _ready() -> void:
 	shape.size = Vector2(length_tiles * GreyboxLevel.TILE, BEAM_THICKNESS)
 	var collision := CollisionShape2D.new()
 	collision.shape = shape
+	# Доска — односторонняя: снизу сквозь неё запрыгивают наверх. Иначе под поднятым концом
+	# у стены получался карман — сверху доска, сбоку стена и опора, — из которого не выбраться.
+	collision.one_way_collision = true
+	collision.one_way_collision_margin = 8.0
 	_beam.add_child(collision)
 	_beam.rotation = angle
 	add_child(_beam)
@@ -206,8 +212,12 @@ func load_state(state: Variant) -> void:
 func _draw() -> void:
 	var height := pivot_height_tiles * GreyboxLevel.TILE
 	if Art.enabled:
-		# Козлы 96×76: шарнир — точка (48, 12), низ — пол; под другую высоту тянутся по вертикали.
-		draw_texture_rect(Art.tex("seesaw_base"), Rect2(-48, -12, 96, 12 + height), false)
+		# Козлы шириной 96: ось — на высоте HUB_FRAC холста, низ — пол; под высоту шарнира
+		# тянутся по вертикали. Запертые — с фиолетовым кольцом фиксатора на оси.
+		var locked := not lock.is_empty() and not Engine.is_editor_hint() and is_locked()
+		var total := height / (1.0 - HUB_FRAC)
+		draw_texture_rect(Art.tex("seesaw_base_locked" if locked else "seesaw_base"),
+				Rect2(-48, -HUB_FRAC * total, 96, total), false)
 		var half_length := length_tiles * GreyboxLevel.TILE / 2.0
 		draw_set_transform(Vector2.ZERO, angle)
 		Art.draw_strip_h(self, Rect2(-half_length, -BEAM_THICKNESS / 2.0, half_length * 2.0, BEAM_THICKNESS),
@@ -215,7 +225,8 @@ func _draw() -> void:
 		draw_set_transform(Vector2.ZERO)
 		draw_circle(Vector2.ZERO, 6.0, PlayerSprite.OUTLINE_COLOR)
 		draw_circle(Vector2.ZERO, 4.0, Color("9aa3ad"))
-		_draw_lock()
+		if not locked:
+			_draw_lock()  # отпущенный фиксатор — тёмное кольцо; запертый нарисован на козлах
 		return
 	draw_colored_polygon(PackedVector2Array([Vector2(0, 0), Vector2(-40, height), Vector2(40, height)]),
 			Color("5b6470"))

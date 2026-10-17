@@ -1,0 +1,590 @@
+
+
+=== GRAPHICS 11 / PART E WORLD 2 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+W2Z1 | w02_far_yard.png
+References, in attachment order:
+D:\Cluade projects\games\Glue\docs\референсы\world2_workshops.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" (world 2 "Workshops"). Use it ONLY as a style reference: bright, cheerful hand-painted cartoon game art; warm wood, copper and brass, grey stone, glowing forges, soft steam, big gears and wooden cranes; warm light; soft shading, clean readable shapes. Do NOT copy the sheet's layout, text, logo, UI panels, frames or characters.
+
+Create a FAR BACKGROUND parallax layer for a 2D side-scrolling co-op platformer. Landscape 3:2. Strict side view, level horizon, no perspective floor, no isometric view. No characters, animals or people. No text, letters, logo, UI, frame or watermark. Nothing that looks interactive or walkable: no crates, doors, levers, buttons, flags, hooks, keys, no ropes or chains across the image, no flat platforms in front. Everything is far away and small in scale. Gentle atmospheric haze; colors a bit softer and less contrasty than a foreground, so small bright red, blue, yellow and green characters stay readable in front of it. Neutral white balance, no yellow or sepia tint.
+The band between 40% and 80% of the height is only soft haze and distant silhouettes — no bright details there; put the details near the horizon line and in the bottom haze. The bottom edge is soft mist or steam, not ground. No large object touches the left or right edge, so the image can repeat horizontally.
+Scene: MORNING. The open yard of the bridge builders' workshops beside a huge unfinished stone viaduct: tall wooden cranes and scaffolding on the viaduct, small workshop houses with chimneys, a big water wheel, soft white steam, blue sky with big clouds, warm sunlight from the upper left.
+Composition: top 40% sky with big clouds; the viaduct and cranes as a calm hazy silhouette across the middle; the lower part is soft white steam.
+All structures distant and soft, without dark game-object outlines. No foreground terrain or perspective ground. Keep substantial transparent-looking haze across the central gameplay band (this far image itself is fully opaque); no detailed cranes or tall tower forms in the top corners or at either horizontal edge. Any specified hall chains are tiny distant silhouettes contained within the hall, never spanning the frame. Native landscape 3:2.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-60b13ea6-84fc-4ad7-835e-0b3cb5794184.png
+
+
+=== GRAPHICS 11 / PART E WORLD 2 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+W2Z3 | w02_far_forge.png
+References, in attachment order:
+D:\Cluade projects\games\Glue\docs\референсы\world2_workshops.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" (world 2 "Workshops"). Use it ONLY as a style reference: bright, cheerful hand-painted cartoon game art; warm wood, copper and brass, grey stone, glowing forges, soft steam, big gears and wooden cranes; warm light; soft shading, clean readable shapes. Do NOT copy the sheet's layout, text, logo, UI panels, frames or characters.
+
+Create a FAR BACKGROUND parallax layer for a 2D side-scrolling co-op platformer. Landscape 3:2. Strict side view, level horizon, no perspective floor, no isometric view. No characters, animals or people. No text, letters, logo, UI, frame or watermark. Nothing that looks interactive or walkable: no crates, doors, levers, buttons, flags, hooks, keys, no ropes or chains across the image, no flat platforms in front. Everything is far away and small in scale. Gentle atmospheric haze; colors a bit softer and less contrasty than a foreground, so small bright red, blue, yellow and green characters stay readable in front of it. Neutral white balance, no yellow or sepia tint.
+The band between 40% and 80% of the height is only soft haze and distant silhouettes — no bright details there; put the details near the horizon line and in the bottom haze. The bottom edge is soft mist or steam, not ground. No large object touches the left or right edge, so the image can repeat horizontally.
+Scene: INSIDE a huge stone forge hall: tall brick arches, rows of glowing forges far away, big bellows and hanging chains as small silhouettes, warm orange light and soft steam, a few high windows with daylight. Friendly and cosy, not dark.
+Composition: the hall's far wall with arches and windows across the top half; glowing forges near the horizon; the lower part is warm orange haze and steam.
+All structures distant and soft, without dark game-object outlines. No foreground terrain or perspective ground. Keep substantial transparent-looking haze across the central gameplay band (this far image itself is fully opaque); no detailed cranes or tall tower forms in the top corners or at either horizontal edge. Any specified hall chains are tiny distant silhouettes contained within the hall, never spanning the frame. Native landscape 3:2.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-b2a76170-fe0b-4d6b-a552-6a3cc66e8c81.png
+
+
+=== GRAPHICS 11 / PART E WORLD 2 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+W2Z5 | w02_far_scaffolds.png
+References, in attachment order:
+D:\Cluade projects\games\Glue\docs\референсы\world2_workshops.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" (world 2 "Workshops"). Use it ONLY as a style reference: bright, cheerful hand-painted cartoon game art; warm wood, copper and brass, grey stone, glowing forges, soft steam, big gears and wooden cranes; warm light; soft shading, clean readable shapes. Do NOT copy the sheet's layout, text, logo, UI panels, frames or characters.
+
+Create a FAR BACKGROUND parallax layer for a 2D side-scrolling co-op platformer. Landscape 3:2. Strict side view, level horizon, no perspective floor, no isometric view. No characters, animals or people. No text, letters, logo, UI, frame or watermark. Nothing that looks interactive or walkable: no crates, doors, levers, buttons, flags, hooks, keys, no ropes or chains across the image, no flat platforms in front. Everything is far away and small in scale. Gentle atmospheric haze; colors a bit softer and less contrasty than a foreground, so small bright red, blue, yellow and green characters stay readable in front of it. Neutral white balance, no yellow or sepia tint.
+The band between 40% and 80% of the height is only soft haze and distant silhouettes — no bright details there; put the details near the horizon line and in the bottom haze. The bottom edge is soft mist or steam, not ground. No large object touches the left or right edge, so the image can repeat horizontally.
+Scene: INSIDE a gigantic wooden workshop built on scaffolding: layers of timber beams and walkways far away, hanging brass lanterns, big gears on the walls, sunlight through arched openings, soft steam. Warm and bright.
+Composition: beams and walkways as soft silhouettes in the upper half; lanterns and gears near the horizon; the lower part is pale steam.
+All structures distant and soft, without dark game-object outlines. No foreground terrain or perspective ground. Keep substantial transparent-looking haze across the central gameplay band (this far image itself is fully opaque); no detailed cranes or tall tower forms in the top corners or at either horizontal edge. Any specified hall chains are tiny distant silhouettes contained within the hall, never spanning the frame. Native landscape 3:2.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-57c075ef-6021-4f4d-b4bf-8adc27271c6e.png
+
+
+=== GRAPHICS 11 / PART E WORLD 2 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+W2Z7 | w02_far_machine.png
+References, in attachment order:
+D:\Cluade projects\games\Glue\docs\референсы\world2_workshops.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" (world 2 "Workshops"). Use it ONLY as a style reference: bright, cheerful hand-painted cartoon game art; warm wood, copper and brass, grey stone, glowing forges, soft steam, big gears and wooden cranes; warm light; soft shading, clean readable shapes. Do NOT copy the sheet's layout, text, logo, UI panels, frames or characters.
+
+Create a FAR BACKGROUND parallax layer for a 2D side-scrolling co-op platformer. Landscape 3:2. Strict side view, level horizon, no perspective floor, no isometric view. No characters, animals or people. No text, letters, logo, UI, frame or watermark. Nothing that looks interactive or walkable: no crates, doors, levers, buttons, flags, hooks, keys, no ropes or chains across the image, no flat platforms in front. Everything is far away and small in scale. Gentle atmospheric haze; colors a bit softer and less contrasty than a foreground, so small bright red, blue, yellow and green characters stay readable in front of it. Neutral white balance, no yellow or sepia tint.
+The band between 40% and 80% of the height is only soft haze and distant silhouettes — no bright details there; put the details near the horizon line and in the bottom haze. The bottom edge is soft mist or steam, not ground. No large object touches the left or right edge, so the image can repeat horizontally.
+Scene: SUNSET over the workshops: an enormous clockwork machine tower with giant gears and a smoking chimney in the distance, cranes and the unfinished viaduct beside it, orange and pink sky, warm lanterns lighting up. Friendly, NOT dark.
+Composition: top 40% sunset sky; the machine tower as a big hazy silhouette in the middle; the lower part is golden steam.
+All structures distant and soft, without dark game-object outlines. No foreground terrain or perspective ground. Keep substantial transparent-looking haze across the central gameplay band (this far image itself is fully opaque); no detailed cranes or tall tower forms in the top corners or at either horizontal edge. Any specified hall chains are tiny distant silhouettes contained within the hall, never spanning the frame. Native landscape 3:2.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-435ce3a2-d64a-428a-9655-3353a14d60c8.png
+
+
+=== GRAPHICS 11 / PART E WORLD 2 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+W2Z1 | w02_far_yard.png
+References, in attachment order:
+D:\Cluade projects\games\Glue\assets\backgrounds\world_02\source\w02_far_yard.png
+D:\Cluade projects\games\Glue\docs\референсы\world2_workshops.png
+Edit prompt:
+Image 1 is the edit target. Image 2 is the approved world 2 style reference.
+Keep everything the same, but correct ONLY edge composition and haze. Move all cranes, towers, sheds and water wheels clear of the leftmost and rightmost 10 percent of the frame, so both horizontal edges contain only blue sky, simple very faint distant viaduct silhouettes and soft white steam. Keep the major unfinished viaduct, morning palette and clouds. Increase pale blue-white atmospheric haze across height 40–80 percent so all stone and wood there become soft low-contrast distant silhouettes. No dark foreground structures, no flat ground at the bottom, no hooks or chains in front.
+Preserve native dimensions and opaque background. No text, labels, UI, frame, watermark or dark outline.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-dc30aea8-10dd-46c4-9683-0cffe913e0ee.png
+
+
+=== GRAPHICS 11 / PART E WORLD 2 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+W2Z3 | w02_far_forge.png
+References, in attachment order:
+D:\Cluade projects\games\Glue\assets\backgrounds\world_02\source\w02_far_forge.png
+D:\Cluade projects\games\Glue\docs\референсы\world2_workshops.png
+Edit prompt:
+Image 1 is the edit target. Image 2 is the approved world 2 style reference.
+Keep everything the same, but correct ONLY the gameplay band: add calm translucent warm-grey steam throughout height 40–80 percent, lowering sharp detail, saturated orange forge glows and machine contrast there until only faint distant silhouettes remain. Keep the upper hall arches, windows and small upper forge lights clearly recognizable; retain the cosy forge identity and native warm-orange lighting without a yellow color cast. No hard ground at the bottom, no foreground mechanism.
+Preserve native dimensions and opaque background. No text, labels, UI, frame, watermark or dark outline.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-adbcd7e3-1d6f-4a43-9085-a64ef29cf71a.png
+
+
+=== GRAPHICS 11 / PART E WORLD 2 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+W2Z5 | w02_far_scaffolds.png
+References, in attachment order:
+D:\Cluade projects\games\Glue\assets\backgrounds\world_02\source\w02_far_scaffolds.png
+D:\Cluade projects\games\Glue\docs\референсы\world2_workshops.png
+Edit prompt:
+Image 1 is the edit target. Image 2 is the approved world 2 style reference.
+Keep everything the same, but correct ONLY the materials and extra streams: the huge workshop is made predominantly of massive warm wooden posts, timber beams, trusses, braces and scaffolding. Change the thick upper stone columns and stone arch faces into clearly wooden supports, preserving their positions and small brass lanterns and gears. Remove the glowing vertical waterfalls or molten-metal streams from the lower area and replace them with soft pale white steam. Calm the height 40–80 percent band into hazy distant timber silhouettes. No foreground mechanisms, no hard ground.
+Preserve native dimensions and opaque background. No text, labels, UI, frame, watermark or dark outline.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-b15e4f19-94a5-4d70-b25c-0f32aae6f87c.png
+
+
+=== GRAPHICS 11 / PART E WORLD 2 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+W2Z2 | w02_mid_yard.png
+References, in attachment order:
+D:\Cluade projects\games\Glue\docs\референсы\world2_workshops.png
+D:\Cluade projects\games\Glue\assets\backgrounds\world_02\source\w02_far_yard.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" (world 2 "Workshops") — style reference only. Attached image 2: the approved far background of THIS zone — match its colors and light. Do NOT copy the sheet's layout, text, UI or characters.
+
+Create a MIDDLE-DISTANCE parallax layer for a 2D side-scrolling co-op platformer. TRANSPARENT BACKGROUND PNG. Landscape 3:2. Strict side view. No characters, animals, text, logo, UI, frame or watermark. No crates, doors, levers, buttons, flags, hooks, keys, no ropes or chains across the image.
+The highest point of the scenery is below the middle of the image; the upper half is completely empty and transparent. The band is clearly in the middle distance: slightly hazy, lighter and bluer than a foreground, medium detail. The tops are irregular and broken, never flat walkable ledges. The bottom fades into soft white mist instead of a hard ground line. Neutral white balance, no yellow tint. Left and right edges should continue each other for horizontal repeating; no big object cut by the edges.
+Content: a band of small workshop sheds with chimneys, stacks of timber and stone blocks, wooden scaffolding, a water wheel, soft steam; morning light.
+TRUE PNG ALPHA. Keep all scenery entirely BELOW 52 percent of canvas height. Above the midline alpha must be exactly zero. No outlines, visible backdrop, checkerboard or ground floor. Native landscape 3:2.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-a58cadf1-0c7f-4aba-b834-cb8e8c786ac0.png
+
+
+=== GRAPHICS 11 / PART E WORLD 2 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+W2Z4 | w02_mid_forge.png
+References, in attachment order:
+D:\Cluade projects\games\Glue\docs\референсы\world2_workshops.png
+D:\Cluade projects\games\Glue\assets\backgrounds\world_02\source\w02_far_forge.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" (world 2 "Workshops") — style reference only. Attached image 2: the approved far background of THIS zone — match its colors and light. Do NOT copy the sheet's layout, text, UI or characters.
+
+Create a MIDDLE-DISTANCE parallax layer for a 2D side-scrolling co-op platformer. TRANSPARENT BACKGROUND PNG. Landscape 3:2. Strict side view. No characters, animals, text, logo, UI, frame or watermark. No crates, doors, levers, buttons, flags, hooks, keys, no ropes or chains across the image.
+The highest point of the scenery is below the middle of the image; the upper half is completely empty and transparent. The band is clearly in the middle distance: slightly hazy, lighter and bluer than a foreground, medium detail. The tops are irregular and broken, never flat walkable ledges. The bottom fades into soft white mist instead of a hard ground line. Neutral white balance, no yellow tint. Left and right edges should continue each other for horizontal repeating; no big object cut by the edges.
+Content: the lower parts of forge hall arches and brick pillars, big anvils and quench tubs as silhouettes, warm orange glow, steam.
+TRUE PNG ALPHA. Keep all scenery entirely BELOW 52 percent of canvas height. Above the midline alpha must be exactly zero. No outlines, visible backdrop, checkerboard or ground floor. Native landscape 3:2.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-4fcd7f69-c0c9-4e4b-85e5-aee550fbf066.png
+
+
+=== GRAPHICS 11 / PART E WORLD 2 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+W2Z6 | w02_mid_scaffolds.png
+References, in attachment order:
+D:\Cluade projects\games\Glue\docs\референсы\world2_workshops.png
+D:\Cluade projects\games\Glue\assets\backgrounds\world_02\source\w02_far_scaffolds.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" (world 2 "Workshops") — style reference only. Attached image 2: the approved far background of THIS zone — match its colors and light. Do NOT copy the sheet's layout, text, UI or characters.
+
+Create a MIDDLE-DISTANCE parallax layer for a 2D side-scrolling co-op platformer. TRANSPARENT BACKGROUND PNG. Landscape 3:2. Strict side view. No characters, animals, text, logo, UI, frame or watermark. No crates, doors, levers, buttons, flags, hooks, keys, no ropes or chains across the image.
+The highest point of the scenery is below the middle of the image; the upper half is completely empty and transparent. The band is clearly in the middle distance: slightly hazy, lighter and bluer than a foreground, medium detail. The tops are irregular and broken, never flat walkable ledges. The bottom fades into soft white mist instead of a hard ground line. Neutral white balance, no yellow tint. Left and right edges should continue each other for horizontal repeating; no big object cut by the edges.
+Content: timber scaffolding, walkways and posts, hanging brass lanterns, a few big wooden gears on the posts, steam between them.
+TRUE PNG ALPHA. Keep all scenery entirely BELOW 52 percent of canvas height. Above the midline alpha must be exactly zero. No outlines, visible backdrop, checkerboard or ground floor. Native landscape 3:2.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-eb0a8f02-2ae3-4718-b1ca-edf5d98b6f7c.png
+
+
+=== GRAPHICS 11 / PART E WORLD 2 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+W2Z8 | w02_mid_machine.png
+References, in attachment order:
+D:\Cluade projects\games\Glue\docs\референсы\world2_workshops.png
+D:\Cluade projects\games\Glue\assets\backgrounds\world_02\source\w02_far_machine.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" (world 2 "Workshops") — style reference only. Attached image 2: the approved far background of THIS zone — match its colors and light. Do NOT copy the sheet's layout, text, UI or characters.
+
+Create a MIDDLE-DISTANCE parallax layer for a 2D side-scrolling co-op platformer. TRANSPARENT BACKGROUND PNG. Landscape 3:2. Strict side view. No characters, animals, text, logo, UI, frame or watermark. No crates, doors, levers, buttons, flags, hooks, keys, no ropes or chains across the image.
+The highest point of the scenery is below the middle of the image; the upper half is completely empty and transparent. The band is clearly in the middle distance: slightly hazy, lighter and bluer than a foreground, medium detail. The tops are irregular and broken, never flat walkable ledges. The bottom fades into soft white mist instead of a hard ground line. Neutral white balance, no yellow tint. Left and right edges should continue each other for horizontal repeating; no big object cut by the edges.
+Content: the lower parts of the giant machine: huge gears, brass pipes and pistons, wooden frames, warm sunset light and lanterns.
+TRUE PNG ALPHA. Keep all scenery entirely BELOW 52 percent of canvas height. Above the midline alpha must be exactly zero. No outlines, visible backdrop, checkerboard or ground floor. Native landscape 3:2.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-edfb6e03-5c2f-4ae8-9976-b10516906950.png
+
+
+=== GRAPHICS 11 / PART E WORLD 2 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+W2L01 | w02_lm01_conveyor_gallery.png
+References, in attachment order:
+D:\Cluade projects\games\Glue\docs\референсы\world2_workshops.png
+D:\Cluade projects\games\Glue\assets\backgrounds\world_02\source\w02_far_yard.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" (world 2 "Workshops") — style reference only. Attached image 2: the approved far background of THIS zone — match its colors and light. Do NOT copy the sheet's layout, text, UI or characters.
+
+Create ONE isolated landmark object for the background of a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, with empty transparent space around it. The object stands in the middle distance: slightly hazy and softer than a foreground, medium detail, no hard black outlines. Its base fades into soft white mist. No characters, text, logo, UI, crates, doors with dark openings, flags, hooks, keys, ropes or chains hanging in front. Neutral white balance, no yellow tint.
+Object: a long wooden conveyor gallery on stone legs carrying stone blocks up to the viaduct, morning light. Landscape 3:2.
+One single decorative landmark / specified connected grouping, isolated, centered, fully contained with generous transparent margins. Actual alpha transparency with no painted black/white/checkerboard background. No dark silhouette outline. The object is background scenery, never a foreground interactive prop; soften contrast and edges. Preserve the explicit Object description: a requested distant crane hook, lever, wires or furnace opening is part of that static landmark only, an exception to generic exclusions. No extra hooks, levers, crates, characters, faces, letters, emblems or UI.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-4ef3da1b-a3e5-4f73-9e04-186ef9f3f301.png
+
+
+=== GRAPHICS 11 / PART E WORLD 2 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+W2L02 | w02_lm02_spring_press.png
+References, in attachment order:
+D:\Cluade projects\games\Glue\docs\референсы\world2_workshops.png
+D:\Cluade projects\games\Glue\assets\backgrounds\world_02\source\w02_far_yard.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" (world 2 "Workshops") — style reference only. Attached image 2: the approved far background of THIS zone — match its colors and light. Do NOT copy the sheet's layout, text, UI or characters.
+
+Create ONE isolated landmark object for the background of a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, with empty transparent space around it. The object stands in the middle distance: slightly hazy and softer than a foreground, medium detail, no hard black outlines. Its base fades into soft white mist. No characters, text, logo, UI, crates, doors with dark openings, flags, hooks, keys, ropes or chains hanging in front. Neutral white balance, no yellow tint.
+Object: a giant old spring press made of wood and iron with a huge coiled steel spring. Portrait 2:3.
+One single decorative landmark / specified connected grouping, isolated, centered, fully contained with generous transparent margins. Actual alpha transparency with no painted black/white/checkerboard background. No dark silhouette outline. The object is background scenery, never a foreground interactive prop; soften contrast and edges. Preserve the explicit Object description: a requested distant crane hook, lever, wires or furnace opening is part of that static landmark only, an exception to generic exclusions. No extra hooks, levers, crates, characters, faces, letters, emblems or UI.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-e439dc14-b9af-4e4a-be53-4192f44ef82d.png
+
+
+=== GRAPHICS 11 / PART E WORLD 2 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+W2L03 | w02_lm03_launch_tower.png
+References, in attachment order:
+D:\Cluade projects\games\Glue\docs\референсы\world2_workshops.png
+D:\Cluade projects\games\Glue\assets\backgrounds\world_02\source\w02_far_yard.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" (world 2 "Workshops") — style reference only. Attached image 2: the approved far background of THIS zone — match its colors and light. Do NOT copy the sheet's layout, text, UI or characters.
+
+Create ONE isolated landmark object for the background of a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, with empty transparent space around it. The object stands in the middle distance: slightly hazy and softer than a foreground, medium detail, no hard black outlines. Its base fades into soft white mist. No characters, text, logo, UI, crates, doors with dark openings, flags, hooks, keys, ropes or chains hanging in front. Neutral white balance, no yellow tint.
+Object: a tall wooden catapult-like launching tower with a spring mechanism at its base. Portrait 2:3.
+One single decorative landmark / specified connected grouping, isolated, centered, fully contained with generous transparent margins. Actual alpha transparency with no painted black/white/checkerboard background. No dark silhouette outline. The object is background scenery, never a foreground interactive prop; soften contrast and edges. Preserve the explicit Object description: a requested distant crane hook, lever, wires or furnace opening is part of that static landmark only, an exception to generic exclusions. No extra hooks, levers, crates, characters, faces, letters, emblems or UI.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-98bdd2b7-b638-4198-bef2-01de3c5b579f.png
+
+
+=== GRAPHICS 11 / PART E WORLD 2 / FAILED REQUEST / 2026-10-03 ===
+W2Z4 | w02_mid_forge.png
+Result: HTTP 429 usage_limit_reached. NO NEW PNG RETURNED; previous saved file retained. Reset reported by service: 2026-10-03 20:53:16 Moscow.
+References in attachment order:
+D:\Cluade projects\games\Glue\assets\backgrounds\world_02\source\w02_mid_forge.png
+D:\Cluade projects\games\Glue\docs\референсы\world2_workshops.png
+D:\Cluade projects\games\Glue\assets\backgrounds\world_02\source\w02_far_forge.png
+Requested edit:
+Image 1 is the middle forge layer to edit. Images 2 and 3 are style references. Keep everything the same, but correct ONLY the content and band placement: make the foreground of this distant decorative band include two clearly recognizable big dark iron ANVIL silhouettes and two round wide QUENCH TUBS with pale steam rising, nestled among the lower forge hall arches and brick pillars. Replace the two glowing pouring streams with quiet steaming quench tubs; no molten streams or waterfall. Keep orange forge light as a faint reflected glow, no black outlines. Lower the entire scenery band so its tallest point is below 55 percent of image height. The whole upper half must be empty alpha=0, including haze. Bottom fades into soft steam. Actual transparent PNG, no backdrop. Preserve native dimensions, existing hall palette, no characters, lettering, labels or UI.
+
+
+=== GRAPHICS 13 / WORLD 2 / BUILT-IN IMAGE_GEN / FAILED ATTEMPT ===
+03.10.2026 06:33:18 МСК
+W2Z4 | w02_mid_forge.png
+References, in attachment order:
+D:\Cluade projects\games\Glue\assets\backgrounds\world_02\source\w02_mid_forge.png
+D:\Cluade projects\games\Glue\docs\референсы\world2_workshops.png
+D:\Cluade projects\games\Glue\assets\backgrounds\world_02\source\w02_far_forge.png
+Edit prompt:
+Image 1 is the middle forge layer to edit. Images 2 and 3 are style references. Keep everything the same, but correct ONLY the content and band placement: make the foreground of this distant decorative band include two clearly recognizable big dark iron ANVIL silhouettes and two round wide QUENCH TUBS with pale steam rising, nestled among the lower forge hall arches and brick pillars. Replace the two glowing pouring streams with quiet steaming quench tubs; no molten streams or waterfall. Keep orange forge light as a faint reflected glow, no black outlines. Lower the entire scenery band so its tallest point is below 55 percent of image height. The whole upper half must be empty alpha=0, including haze. Bottom fades into soft steam. Actual transparent PNG, no backdrop. Preserve native dimensions, existing hall palette, no characters, lettering, labels or UI.
+Result: HTTP 429 usage_limit_reached. NO NEW PNG. Existing PNG preserved.
+Service reset: 2026-10-03 20:53:16 +03:00
+
+
+=== GRAPHICS 15 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+W2Z4 | w02_mid_forge.png
+References, in attachment order:
+D:\Cluade projects\games\Glue\assets\backgrounds\world_02\source\w02_mid_forge.png
+D:\Cluade projects\games\Glue\docs\референсы\world2_workshops.png
+D:\Cluade projects\games\Glue\assets\backgrounds\world_02\source\w02_far_forge.png
+Prompt:
+Image 1 is the middle forge layer to edit. Images 2 and 3 are style references. Keep everything the same, but correct ONLY the content and band placement: make the foreground of this distant decorative band include two clearly recognizable big dark iron ANVIL silhouettes and two round wide QUENCH TUBS with pale steam rising, nestled among the lower forge hall arches and brick pillars. Replace the two glowing pouring streams with quiet steaming quench tubs; no molten streams or waterfall. Keep orange forge light as a faint reflected glow, no black outlines. Lower the entire scenery band so its tallest point is below 55 percent of image height. The whole upper half must be empty alpha=0, including haze. Bottom fades into soft steam. Actual transparent PNG, no backdrop. Preserve native dimensions, existing hall palette, no characters, lettering, labels or UI.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fff4-751d-75b1-aa81-5afaf42c086c\exec-c82f3380-7ad7-4e11-ba9e-78a2c8e5cc2e.png
+
+
+=== GRAPHICS 15 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+W2Z8 | w02_mid_machine.png
+References, in attachment order:
+D:\Cluade projects\games\Glue\assets\backgrounds\world_02\source\w02_mid_machine.png
+D:\Cluade projects\games\Glue\docs\референсы\world2_workshops.png
+D:\Cluade projects\games\Glue\assets\backgrounds\world_02\source\w02_far_machine.png
+Prompt:
+Image 1 is the edit target: the middle-distance machine background layer. Image 2 is the world 2 concept sheet, style reference only. Image 3 is the approved far machine layer, palette and lighting reference only.
+Keep the native landscape 3:2 canvas, painted style, warm sunset light and gentle haze. Correct only the machine band's objects and placement: remove the unrequested water streams, waterfall and water-wheel appearance. Replace those forms with clearly readable enormous WOODEN AND BRASS GEARS with solid teeth, brass pipes and short industrial pistons mounted in timber frames, and a few warm lanterns. No flowing liquid. This is a distant decorative machine band, not an interactive platform or prop, with soft edges and low contrast and no dark silhouette outline.
+Lower the entire scenery band so every element and every bit of haze is BELOW 55 percent of canvas height. The entire upper half must be completely empty true alpha=0. Fade the bottom into pale steam. Preserve the original dimensions and genuine PNG transparency. No characters, text, symbols, UI, hooks, crates or backdrop.
+CRITICAL canvas placement: the upper TWO THIRDS of the canvas are completely empty, alpha=0, including no haze. Scale and lower the whole machine grouping into the BOTTOM THIRD only. True transparent PNG.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fff4-751d-75b1-aa81-5afaf42c086c\exec-5a37d4a4-0ef6-49f4-8ffc-b59005045faa.png
+
+
+=== GRAPHICS 15 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+W2L01 | w02_lm01_conveyor_gallery.png
+References, in attachment order:
+D:\Cluade projects\games\Glue\assets\backgrounds\world_02\source\w02_lm01_conveyor_gallery.png
+D:\Cluade projects\games\Glue\docs\референсы\world2_workshops.png
+D:\Cluade projects\games\Glue\assets\backgrounds\world_02\source\w02_far_yard.png
+Prompt:
+Image 1 is the edit target: the existing conveyor-gallery landmark. Image 2 is the world 2 concept sheet, style reference only. Image 3 is the approved far yard layer, palette and lighting reference only.
+Keep the same entire connected conveyor gallery with stone legs, ascending timber conveyor carrying stone blocks, arches, moss, morning light, materials and painted style. Change ONLY its framing: fit the WHOLE gallery inside the native 3:2 canvas without any clipped beam, stone, foliage or arch, leaving at least 8 percent clear transparent canvas on the RIGHT and LEFT and visible transparent margins above and below. Keep it one isolated connected landmark and keep its base fading into soft white mist. Do not extend a viaduct beyond the gallery, add background scenery or add extra objects. No opaque color backdrop or checkerboard. Genuine transparent PNG, original dimensions, no characters, text, logo or UI.
+CRITICAL: scale the entire gallery down to fit inside 75 percent of the canvas width and 75 percent of its height, centered; reconstruct the previously clipped right end as a finished stone pier. Clear empty alpha margin around every part, especially to the right.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fff4-751d-75b1-aa81-5afaf42c086c\exec-5d804dad-dd80-4fc1-85be-ee4c58017c10.png
+
+
+=== GRAPHICS 15 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+W2Z4 | w02_mid_forge.png
+References, in attachment order:
+D:\Cluade projects\games\Glue\assets\backgrounds\world_02\source\w02_mid_forge.png
+Prompt:
+Edit image 1 ONLY. Preserve the native 1536x1024 canvas, genuine transparent PNG, painted materials, forge lighting and all existing objects including both anvils and both steaming quench tubs.
+Change ONLY the vertical scale and placement of the ENTIRE scenery band, including all pillars, arches, forges, steam, glow and haze. Compress its height and move it down so EVERY visible element lies within the BOTTOM 35 PERCENT of the canvas (rows 666–1023). The upper 65 percent, rows 0–665, must be entirely empty exact alpha=0. No translucent haze, specks, outlines or color anywhere in that empty area. Retain soft fading steam at the bottom. Keep the same horizontal composition and width. No text or extra objects.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fff4-751d-75b1-aa81-5afaf42c086c\exec-a0ceb518-1ea7-4401-850a-f9cb4da5ec24.png
+
+
+=== GRAPHICS 17 / 2026-10-04 / BUILT-IN IMAGE_GEN ===
+W2L05 | w02_lm05_windmill_bellows.png
+References, in attachment order:
+D:\Cluade projects\games\Glue\docs\референсы\world2_workshops.png
+D:\Cluade projects\games\Glue\assets\backgrounds\world_02\source\w02_far_yard.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" (world 2 "Workshops") — style reference only. Attached image 2: the approved far background of THIS zone — match its colors and light. Do NOT copy the sheet's layout, text, UI or characters.
+
+Create ONE isolated landmark object for the background of a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, with empty transparent space around it. The object stands in the middle distance: slightly hazy and softer than a foreground, medium detail, no hard black outlines. Its base fades into soft white mist. No characters, text, logo, UI, crates, doors with dark openings, flags, hooks, keys, ropes or chains hanging in front. Neutral white balance, no yellow tint.
+Object: a big windmill on a round brick tower with four wooden sail arms, a huge leather bellows at its foot driven by the mill, soft white puffs of air from its brass nozzle, morning light. Portrait 2:3.
+One single decorative landmark / specified connected grouping, isolated, centered, fully contained with generous transparent margins. Actual alpha transparency with no painted black/white/checkerboard background. No dark silhouette outline. The object is background scenery, never a foreground interactive prop; soften contrast and edges. Preserve the explicit Object description: a requested distant crane hook, lever, wires or furnace opening is part of that static landmark only, an exception to generic exclusions. No extra hooks, levers, crates, characters, faces, letters, emblems or UI.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fff4-751d-75b1-aa81-5afaf42c086c\exec-97aa85b3-1706-4412-9b59-e10b26dd6f50.png
+
+
+=== GRAPHICS 17 / 2026-10-04 / BUILT-IN IMAGE_GEN ===
+W2L06 | w02_lm06_switch_tower.png
+References, in attachment order:
+D:\Cluade projects\games\Glue\docs\референсы\world2_workshops.png
+D:\Cluade projects\games\Glue\assets\backgrounds\world_02\source\w02_far_forge.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" (world 2 "Workshops") — style reference only. Attached image 2: the approved far background of THIS zone — match its colors and light. Do NOT copy the sheet's layout, text, UI or characters.
+
+Create ONE isolated landmark object for the background of a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, with empty transparent space around it. The object stands in the middle distance: slightly hazy and softer than a foreground, medium detail, no hard black outlines. Its base fades into soft white mist. No characters, text, logo, UI, crates, doors with dark openings, flags, hooks, keys, ropes or chains hanging in front. Neutral white balance, no yellow tint.
+Object: a big switch tower: a brick tower with a giant brass lever on its side and copper wires going out of it in two directions over porcelain insulators, warm orange forge light. Portrait 2:3.
+One single decorative landmark / specified connected grouping, isolated, centered, fully contained with generous transparent margins. Actual alpha transparency with no painted black/white/checkerboard background. No dark silhouette outline. The object is background scenery, never a foreground interactive prop; soften contrast and edges. Preserve the explicit Object description: a requested distant crane hook, lever, wires or furnace opening is part of that static landmark only, an exception to generic exclusions. No extra hooks, levers, crates, characters, faces, letters, emblems or UI.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fff4-751d-75b1-aa81-5afaf42c086c\exec-99301d0a-e877-4f52-8589-78d277f2a19e.png
+
+Edit prompt:
+Edit image 1. Keep the central brick switch tower, its giant brass lever on the side, copper wires in two directions over white porcelain insulators, chimney and connected timber supports, warm forge light and soft mist. Remove ALL detached distant viaduct ARCHES, other towers and extra background masonry BEHIND the main tower on either side. The gaps and outside surroundings must be empty alpha transparency. SHORTEN the LEFT and RIGHT outgoing copper wires so each wire is fully contained and ends visibly in a small copper termination near its outermost porcelain insulator, with at least 8 percent of the image width of EMPTY transparent margin between any wire end and canvas edge. No wire cut by either edge. Preserve a tall portrait composition with main tower centered and complete. No characters, text, symbols, new scenery, foreground outline or hard shadow. True transparent PNG.
+Edit references:
+C:\Users\Марат\.codex\generated_images\01a0fff4-751d-75b1-aa81-5afaf42c086c\exec-2cb7b5af-cad7-4510-b8f3-66ec28032a52.png
+Edit output: C:\Users\Марат\.codex\generated_images\01a0fff4-751d-75b1-aa81-5afaf42c086c\exec-99301d0a-e877-4f52-8589-78d277f2a19e.png
+
+
+=== GRAPHICS 17 / 2026-10-04 / BUILT-IN IMAGE_GEN ===
+W2L07 | w02_lm07_shift_bell.png
+References, in attachment order:
+D:\Cluade projects\games\Glue\docs\референсы\world2_workshops.png
+D:\Cluade projects\games\Glue\assets\backgrounds\world_02\source\w02_far_forge.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" (world 2 "Workshops") — style reference only. Attached image 2: the approved far background of THIS zone — match its colors and light. Do NOT copy the sheet's layout, text, UI or characters.
+
+Create ONE isolated landmark object for the background of a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, with empty transparent space around it. The object stands in the middle distance: slightly hazy and softer than a foreground, medium detail, no hard black outlines. Its base fades into soft white mist. No characters, text, logo, UI, crates, doors with dark openings, flags, hooks, keys, ropes or chains hanging in front. Neutral white balance, no yellow tint.
+Object: a brick shift tower of the forge: a big round clock face WITHOUT numbers or hands markings, only simple ticks, a bronze bell in an open belfry on top, two conveyor galleries leaving the tower at different heights, soft steam, warm light. Portrait 2:3.
+One single decorative landmark / specified connected grouping, isolated, centered, fully contained with generous transparent margins. Actual alpha transparency with no painted black/white/checkerboard background. No dark silhouette outline. The object is background scenery, never a foreground interactive prop; soften contrast and edges. Preserve the explicit Object description: a requested distant crane hook, lever, wires or furnace opening is part of that static landmark only, an exception to generic exclusions. No extra hooks, levers, crates, characters, faces, letters, emblems or UI.
+Isolation is CRITICAL: attached image 2 is ONLY a color/light reference. Do NOT reproduce its far viaduct, arches, sky, clouds, distant towers, ground or landscape behind this landmark. Draw only the Object description and its directly attached structural supports, no separate background scenery. Complete all requested ends and appendages inside the canvas with at least 6 percent clear alpha margins.
+The clock face has ONLY simple tick marks: no numerals, letters, written marks or clock hands.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fff4-751d-75b1-aa81-5afaf42c086c\exec-d2e1a226-f56b-4bf6-8d24-9ae749f29c97.png
+
+
+=== GRAPHICS 17 / 2026-10-04 / BUILT-IN IMAGE_GEN ===
+W2L04 | w02_lm04_sorting_yard.png
+References, in attachment order:
+D:\Cluade projects\games\Glue\docs\референсы\world2_workshops.png
+D:\Cluade projects\games\Glue\assets\backgrounds\world_02\source\w02_far_yard.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" (world 2 "Workshops") — style reference only. Attached image 2: the approved far background of THIS zone — match its colors and light. Do NOT copy the sheet's layout, text, UI or characters.
+
+Create ONE isolated landmark object for the background of a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, with empty transparent space around it. The object stands in the middle distance: slightly hazy and softer than a foreground, medium detail, no hard black outlines. Its base fades into soft white mist. No characters, text, logo, UI, crates, doors with dark openings, flags, hooks, keys, ropes or chains hanging in front. Neutral white balance, no yellow tint.
+Object: a tall wooden sorting rack of the workshops: several chutes and small colored gates (soft orange, blue, green, purple) dropping stone blocks into separate wooden bins below, morning light. Landscape 3:2.
+One single decorative landmark / specified connected grouping, isolated, centered, fully contained with generous transparent margins. Actual alpha transparency with no painted black/white/checkerboard background. No dark silhouette outline. The object is background scenery, never a foreground interactive prop; soften contrast and edges. Preserve the explicit Object description: a requested distant crane hook, lever, wires or furnace opening is part of that static landmark only, an exception to generic exclusions. No extra hooks, levers, crates, characters, faces, letters, emblems or UI.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fff4-751d-75b1-aa81-5afaf42c086c\exec-f055b547-c8a0-4fde-b960-3b1c4c8072e4.png
+
+Edit prompt:
+Edit image 1. Keep the ONE connected wooden sorting rack, its four chutes, four small colored gates (orange, blue, green, purple), falling stone blocks and four wooden collection bins, its supporting posts and attached masonry piers, morning painted light, soft haze and fading mist at the base. Remove ALL unrelated far-background VIADUCT TOWERS, ARCHES, distant buildings and clouds BEHIND the sorting rack, especially across the upper left and upper right. The space through and around the rack must be transparent. Do not fill the newly empty space with new scenery. The landmark is ONLY the sorting rack and its directly connected structural supports, no whole landscape. Keep all ends complete and inside with generous alpha margins. Medium-distance soft hand-painted rendering, no dark outline, no text or characters, true transparent PNG.
+Edit references:
+C:\Users\Марат\.codex\generated_images\01a0fff4-751d-75b1-aa81-5afaf42c086c\exec-ad7b5902-cd82-4fa3-88f8-78961dc59f7d.png
+Edit output: C:\Users\Марат\.codex\generated_images\01a0fff4-751d-75b1-aa81-5afaf42c086c\exec-2c8e7be2-a494-4860-a3fb-a5fae0cd24f8.png
+
+Edit prompt:
+Edit image 1 only, keep exactly the same connected four-chute sorting rack, its four colored gates and bins, stones and directly attached supports. No distant background structures. Correct only framing and BASE FADE: make the entire rack about 12 percent smaller within the existing 1536x1024 canvas so the full left and right ends have clear transparent margins. Add a thin soft WHITE MIST layer around the very bottom of the stone piers and wooden bin supports. The lower ends of supports gently fade into this mist; mist itself fades out into alpha transparency before reaching any canvas edge. Upper rack, colored gates, blocks and bins remain clearly visible. Medium-distance hand-painted softness, morning light, no dark outline. True transparent PNG, no painted backdrop, no new scene or objects, no text or characters.
+Edit references:
+C:\Users\Марат\.codex\generated_images\01a0fff4-751d-75b1-aa81-5afaf42c086c\exec-2c8e7be2-a494-4860-a3fb-a5fae0cd24f8.png
+Edit output: C:\Users\Марат\.codex\generated_images\01a0fff4-751d-75b1-aa81-5afaf42c086c\exec-f055b547-c8a0-4fde-b960-3b1c4c8072e4.png
+
+
+=== GRAPHICS 17 / 2026-10-04 / BUILT-IN IMAGE_GEN ===
+W2L08 | w02_lm08_gantry_crane.png
+References, in attachment order:
+D:\Cluade projects\games\Glue\docs\референсы\world2_workshops.png
+D:\Cluade projects\games\Glue\assets\backgrounds\world_02\source\w02_far_forge.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" (world 2 "Workshops") — style reference only. Attached image 2: the approved far background of THIS zone — match its colors and light. Do NOT copy the sheet's layout, text, UI or characters.
+
+Create ONE isolated landmark object for the background of a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, with empty transparent space around it. The object stands in the middle distance: slightly hazy and softer than a foreground, medium detail, no hard black outlines. Its base fades into soft white mist. No characters, text, logo, UI, crates, doors with dark openings, flags, hooks, keys, ropes or chains hanging in front. Neutral white balance, no yellow tint.
+Object: a tall wooden gantry crane with a trolley and a big hook on a long rail between two brick towers, a wooden scaffold walkway below with a few missing planks, warm light. Landscape 3:2.
+One single decorative landmark / specified connected grouping, isolated, centered, fully contained with generous transparent margins. Actual alpha transparency with no painted black/white/checkerboard background. No dark silhouette outline. The object is background scenery, never a foreground interactive prop; soften contrast and edges. Preserve the explicit Object description: a requested distant crane hook, lever, wires or furnace opening is part of that static landmark only, an exception to generic exclusions. No extra hooks, levers, crates, characters, faces, letters, emblems or UI.
+Isolation is CRITICAL: attached image 2 is ONLY a color/light reference. Do NOT reproduce its far viaduct, arches, sky, clouds, distant towers, ground or landscape behind this landmark. Draw only the Object description and its directly attached structural supports, no separate background scenery. Complete all requested ends and appendages inside the canvas with at least 6 percent clear alpha margins.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fff4-751d-75b1-aa81-5afaf42c086c\exec-6f5c006c-fbdf-4911-a266-623530fdc249.png
+
+
+=== GRAPHICS 17 / 2026-10-04 / BUILT-IN IMAGE_GEN ===
+W2L09 | w02_lm09_powder_store.png
+References, in attachment order:
+D:\Cluade projects\games\Glue\docs\референсы\world2_workshops.png
+D:\Cluade projects\games\Glue\assets\backgrounds\world_02\source\w02_far_forge.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" (world 2 "Workshops") — style reference only. Attached image 2: the approved far background of THIS zone — match its colors and light. Do NOT copy the sheet's layout, text, UI or characters.
+
+Create ONE isolated landmark object for the background of a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, with empty transparent space around it. The object stands in the middle distance: slightly hazy and softer than a foreground, medium detail, no hard black outlines. Its base fades into soft white mist. No characters, text, logo, UI, crates, doors with dark openings, flags, hooks, keys, ropes or chains hanging in front. Neutral white balance, no yellow tint.
+Object: a small stone powder store with a big hole blown in its wall, a long fuse line on short wooden poles leading to it, a few old powder barrels nearby, thin smoke, warm light. Landscape 3:2.
+One single decorative landmark / specified connected grouping, isolated, centered, fully contained with generous transparent margins. Actual alpha transparency with no painted black/white/checkerboard background. No dark silhouette outline. The object is background scenery, never a foreground interactive prop; soften contrast and edges. Preserve the explicit Object description: a requested distant crane hook, lever, wires or furnace opening is part of that static landmark only, an exception to generic exclusions. No extra hooks, levers, crates, characters, faces, letters, emblems or UI.
+Isolation is CRITICAL: attached image 2 is ONLY a color/light reference. Do NOT reproduce its far viaduct, arches, sky, clouds, distant towers, ground or landscape behind this landmark. Draw only the Object description and its directly attached structural supports, no separate background scenery. Complete all requested ends and appendages inside the canvas with at least 6 percent clear alpha margins.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fff4-751d-75b1-aa81-5afaf42c086c\exec-36772dba-88ce-48f2-a87a-f832c7c74260.png
+
+
+=== GRAPHICS 17 / 2026-10-04 / BUILT-IN IMAGE_GEN ===
+W2L10 | w02_lm10_weighing_tower.png
+References, in attachment order:
+D:\Cluade projects\games\Glue\docs\референсы\world2_workshops.png
+D:\Cluade projects\games\Glue\assets\backgrounds\world_02\source\w02_far_forge.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" (world 2 "Workshops") — style reference only. Attached image 2: the approved far background of THIS zone — match its colors and light. Do NOT copy the sheet's layout, text, UI or characters.
+
+Create ONE isolated landmark object for the background of a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, with empty transparent space around it. The object stands in the middle distance: slightly hazy and softer than a foreground, medium detail, no hard black outlines. Its base fades into soft white mist. No characters, text, logo, UI, crates, doors with dark openings, flags, hooks, keys, ropes or chains hanging in front. Neutral white balance, no yellow tint.
+Object: an old weighing scale as big as a tower, with two huge brass pans on chains and a beam on a brick pillar; one pan loaded with stone blocks, the other with a big iron weight, warm light. Portrait 2:3.
+One single decorative landmark / specified connected grouping, isolated, centered, fully contained with generous transparent margins. Actual alpha transparency with no painted black/white/checkerboard background. No dark silhouette outline. The object is background scenery, never a foreground interactive prop; soften contrast and edges. Preserve the explicit Object description: a requested distant crane hook, lever, wires or furnace opening is part of that static landmark only, an exception to generic exclusions. No extra hooks, levers, crates, characters, faces, letters, emblems or UI.
+Isolation is CRITICAL: attached image 2 is ONLY a color/light reference. Do NOT reproduce its far viaduct, arches, sky, clouds, distant towers, ground or landscape behind this landmark. Draw only the Object description and its directly attached structural supports, no separate background scenery. Complete all requested ends and appendages inside the canvas with at least 6 percent clear alpha margins.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fff4-751d-75b1-aa81-5afaf42c086c\exec-7ab7898a-3527-4777-ad70-2f932845ec2a.png
+
+
+=== GRAPHICS 17 / 2026-10-04 / BUILT-IN IMAGE_GEN ===
+W2L11 | w02_lm11_beetle_statue.png
+References, in attachment order:
+D:\Cluade projects\games\Glue\docs\референсы\world2_workshops.png
+D:\Cluade projects\games\Glue\assets\backgrounds\world_02\source\w02_far_scaffolds.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" (world 2 "Workshops") — style reference only. Attached image 2: the approved far background of THIS zone — match its colors and light. Do NOT copy the sheet's layout, text, UI or characters.
+
+Create ONE isolated landmark object for the background of a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, with empty transparent space around it. The object stands in the middle distance: slightly hazy and softer than a foreground, medium detail, no hard black outlines. Its base fades into soft white mist. No characters, text, logo, UI, crates, doors with dark openings, flags, hooks, keys, ropes or chains hanging in front. Neutral white balance, no yellow tint.
+Object: a giant decorative copper beetle statue on a stone plinth among timber scaffolding, the emblem of the workshops, polished brass shell catching the light. Landscape 3:2.
+One single decorative landmark / specified connected grouping, isolated, centered, fully contained with generous transparent margins. Actual alpha transparency with no painted black/white/checkerboard background. No dark silhouette outline. The object is background scenery, never a foreground interactive prop; soften contrast and edges. Preserve the explicit Object description: a requested distant crane hook, lever, wires or furnace opening is part of that static landmark only, an exception to generic exclusions. No extra hooks, levers, crates, characters, faces, letters, emblems or UI.
+Isolation is CRITICAL: attached image 2 is ONLY a color/light reference. Do NOT reproduce its far viaduct, arches, sky, clouds, distant towers, ground or landscape behind this landmark. Draw only the Object description and its directly attached structural supports, no separate background scenery. Complete all requested ends and appendages inside the canvas with at least 6 percent clear alpha margins.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fff4-751d-75b1-aa81-5afaf42c086c\exec-bd3965c4-8985-48f4-8d53-2fca90b83cbd.png
+
+
+=== GRAPHICS 17 / 2026-10-04 / BUILT-IN IMAGE_GEN ===
+W2L12 | w02_lm12_collapsed_hall.png
+References, in attachment order:
+D:\Cluade projects\games\Glue\docs\референсы\world2_workshops.png
+D:\Cluade projects\games\Glue\assets\backgrounds\world_02\source\w02_far_scaffolds.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" (world 2 "Workshops") — style reference only. Attached image 2: the approved far background of THIS zone — match its colors and light. Do NOT copy the sheet's layout, text, UI or characters.
+
+Create ONE isolated landmark object for the background of a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, with empty transparent space around it. The object stands in the middle distance: slightly hazy and softer than a foreground, medium detail, no hard black outlines. Its base fades into soft white mist. No characters, text, logo, UI, crates, doors with dark openings, flags, hooks, keys, ropes or chains hanging in front. Neutral white balance, no yellow tint.
+Object: a workshop hall with a collapsed roof: broken timber beams hanging down, a pile of stones and bricks spilled through the gap, wooden props holding up the rest, dust in the sunbeams, NOT scary. Landscape 3:2.
+One single decorative landmark / specified connected grouping, isolated, centered, fully contained with generous transparent margins. Actual alpha transparency with no painted black/white/checkerboard background. No dark silhouette outline. The object is background scenery, never a foreground interactive prop; soften contrast and edges. Preserve the explicit Object description: a requested distant crane hook, lever, wires or furnace opening is part of that static landmark only, an exception to generic exclusions. No extra hooks, levers, crates, characters, faces, letters, emblems or UI.
+Isolation is CRITICAL: attached image 2 is ONLY a color/light reference. Do NOT reproduce its far viaduct, arches, sky, clouds, distant towers, ground or landscape behind this landmark. Draw only the Object description and its directly attached structural supports, no separate background scenery. Complete all requested ends and appendages inside the canvas with at least 6 percent clear alpha margins.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fff4-751d-75b1-aa81-5afaf42c086c\exec-75ca7161-31ce-416a-9939-bb7d1945137c.png
+
+
+=== GRAPHICS 17 / 2026-10-04 / BUILT-IN IMAGE_GEN ===
+W2L13 | w02_lm13_lock_gate.png
+References, in attachment order:
+D:\Cluade projects\games\Glue\docs\референсы\world2_workshops.png
+D:\Cluade projects\games\Glue\assets\backgrounds\world_02\source\w02_far_scaffolds.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" (world 2 "Workshops") — style reference only. Attached image 2: the approved far background of THIS zone — match its colors and light. Do NOT copy the sheet's layout, text, UI or characters.
+
+Create ONE isolated landmark object for the background of a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, with empty transparent space around it. The object stands in the middle distance: slightly hazy and softer than a foreground, medium detail, no hard black outlines. Its base fades into soft white mist. No characters, text, logo, UI, crates, doors with dark openings, flags, hooks, keys, ropes or chains hanging in front. Neutral white balance, no yellow tint.
+Object: a giant round mechanical vault gate of wood and brass with interlocking gears, sliding bolts and three big levers beside it, standing in a timber frame. Landscape 3:2.
+One single decorative landmark / specified connected grouping, isolated, centered, fully contained with generous transparent margins. Actual alpha transparency with no painted black/white/checkerboard background. No dark silhouette outline. The object is background scenery, never a foreground interactive prop; soften contrast and edges. Preserve the explicit Object description: a requested distant crane hook, lever, wires or furnace opening is part of that static landmark only, an exception to generic exclusions. No extra hooks, levers, crates, characters, faces, letters, emblems or UI.
+Isolation is CRITICAL: attached image 2 is ONLY a color/light reference. Do NOT reproduce its far viaduct, arches, sky, clouds, distant towers, ground or landscape behind this landmark. Draw only the Object description and its directly attached structural supports, no separate background scenery. Complete all requested ends and appendages inside the canvas with at least 6 percent clear alpha margins.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fff4-751d-75b1-aa81-5afaf42c086c\exec-8248cb64-6576-426c-a519-2bda6f77615b.png
+
+
+=== GRAPHICS 17 / 2026-10-04 / BUILT-IN IMAGE_GEN ===
+W2L14 | w02_lm14_spring_arena.png
+References, in attachment order:
+D:\Cluade projects\games\Glue\docs\референсы\world2_workshops.png
+D:\Cluade projects\games\Glue\assets\backgrounds\world_02\source\w02_far_scaffolds.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" (world 2 "Workshops") — style reference only. Attached image 2: the approved far background of THIS zone — match its colors and light. Do NOT copy the sheet's layout, text, UI or characters.
+
+Create ONE isolated landmark object for the background of a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, with empty transparent space around it. The object stands in the middle distance: slightly hazy and softer than a foreground, medium detail, no hard black outlines. Its base fades into soft white mist. No characters, text, logo, UI, crates, doors with dark openings, flags, hooks, keys, ropes or chains hanging in front. Neutral white balance, no yellow tint.
+Object: a cheerful test arena of the spring makers like a small circus: a striped canvas roof on a timber frame, springboards and big coiled springs on display stands, little plain pennants without symbols. Landscape 3:2.
+One single decorative landmark / specified connected grouping, isolated, centered, fully contained with generous transparent margins. Actual alpha transparency with no painted black/white/checkerboard background. No dark silhouette outline. The object is background scenery, never a foreground interactive prop; soften contrast and edges. Preserve the explicit Object description: a requested distant crane hook, lever, wires or furnace opening is part of that static landmark only, an exception to generic exclusions. No extra hooks, levers, crates, characters, faces, letters, emblems or UI.
+Isolation is CRITICAL: attached image 2 is ONLY a color/light reference. Do NOT reproduce its far viaduct, arches, sky, clouds, distant towers, ground or landscape behind this landmark. Draw only the Object description and its directly attached structural supports, no separate background scenery. Complete all requested ends and appendages inside the canvas with at least 6 percent clear alpha margins.
+The little plain decorative pennants specifically requested in Object ARE allowed; no symbols on them.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fff4-751d-75b1-aa81-5afaf42c086c\exec-db034f06-d377-45dc-9d7b-34872271c867.png
+
+
+=== GRAPHICS 17 / 2026-10-04 / BUILT-IN IMAGE_GEN ===
+W2L15 | w02_lm15_twin_halls.png
+References, in attachment order:
+D:\Cluade projects\games\Glue\docs\референсы\world2_workshops.png
+D:\Cluade projects\games\Glue\assets\backgrounds\world_02\source\w02_far_scaffolds.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" (world 2 "Workshops") — style reference only. Attached image 2: the approved far background of THIS zone — match its colors and light. Do NOT copy the sheet's layout, text, UI or characters.
+
+Create ONE isolated landmark object for the background of a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, with empty transparent space around it. The object stands in the middle distance: slightly hazy and softer than a foreground, medium detail, no hard black outlines. Its base fades into soft white mist. No characters, text, logo, UI, crates, doors with dark openings, flags, hooks, keys, ropes or chains hanging in front. Neutral white balance, no yellow tint.
+Object: two twin workshop halls side by side with a narrow gap between them, joined high above by one long driving shaft with leather belts and pulleys running into both roofs. Landscape 3:2.
+One single decorative landmark / specified connected grouping, isolated, centered, fully contained with generous transparent margins. Actual alpha transparency with no painted black/white/checkerboard background. No dark silhouette outline. The object is background scenery, never a foreground interactive prop; soften contrast and edges. Preserve the explicit Object description: a requested distant crane hook, lever, wires or furnace opening is part of that static landmark only, an exception to generic exclusions. No extra hooks, levers, crates, characters, faces, letters, emblems or UI.
+Isolation is CRITICAL: attached image 2 is ONLY a color/light reference. Do NOT reproduce its far viaduct, arches, sky, clouds, distant towers, ground or landscape behind this landmark. Draw only the Object description and its directly attached structural supports, no separate background scenery. Complete all requested ends and appendages inside the canvas with at least 6 percent clear alpha margins.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fff4-751d-75b1-aa81-5afaf42c086c\exec-b1395799-5e8a-48d7-9681-0952b10c19ef.png
+
+
+=== GRAPHICS 17 / 2026-10-04 / BUILT-IN IMAGE_GEN ===
+W2L16 | w02_lm16_wind_tunnel.png
+References, in attachment order:
+D:\Cluade projects\games\Glue\docs\референсы\world2_workshops.png
+D:\Cluade projects\games\Glue\assets\backgrounds\world_02\source\w02_far_machine.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" (world 2 "Workshops") — style reference only. Attached image 2: the approved far background of THIS zone — match its colors and light. Do NOT copy the sheet's layout, text, UI or characters.
+
+Create ONE isolated landmark object for the background of a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, with empty transparent space around it. The object stands in the middle distance: slightly hazy and softer than a foreground, medium detail, no hard black outlines. Its base fades into soft white mist. No characters, text, logo, UI, crates, doors with dark openings, flags, hooks, keys, ropes or chains hanging in front. Neutral white balance, no yellow tint.
+Object: a wind tunnel of the bridge builders: a long wooden tube on trestles with a huge fan at one end and bellows beside it, sunset light. Landscape 3:2.
+One single decorative landmark / specified connected grouping, isolated, centered, fully contained with generous transparent margins. Actual alpha transparency with no painted black/white/checkerboard background. No dark silhouette outline. The object is background scenery, never a foreground interactive prop; soften contrast and edges. Preserve the explicit Object description: a requested distant crane hook, lever, wires or furnace opening is part of that static landmark only, an exception to generic exclusions. No extra hooks, levers, crates, characters, faces, letters, emblems or UI.
+Isolation is CRITICAL: attached image 2 is ONLY a color/light reference. Do NOT reproduce its far viaduct, arches, sky, clouds, distant towers, ground or landscape behind this landmark. Draw only the Object description and its directly attached structural supports, no separate background scenery. Complete all requested ends and appendages inside the canvas with at least 6 percent clear alpha margins.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fff4-751d-75b1-aa81-5afaf42c086c\exec-1a8c8d2e-6c0b-4c04-92c8-226c61e0ccb9.png
+
+
+=== GRAPHICS 17 / 2026-10-04 / BUILT-IN IMAGE_GEN ===
+W2L17 | w02_lm17_loading_dock.png
+References, in attachment order:
+D:\Cluade projects\games\Glue\docs\референсы\world2_workshops.png
+D:\Cluade projects\games\Glue\assets\backgrounds\world_02\source\w02_far_machine.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" (world 2 "Workshops") — style reference only. Attached image 2: the approved far background of THIS zone — match its colors and light. Do NOT copy the sheet's layout, text, UI or characters.
+
+Create ONE isolated landmark object for the background of a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, with empty transparent space around it. The object stands in the middle distance: slightly hazy and softer than a foreground, medium detail, no hard black outlines. Its base fades into soft white mist. No characters, text, logo, UI, crates, doors with dark openings, flags, hooks, keys, ropes or chains hanging in front. Neutral white balance, no yellow tint.
+Object: a loading dock: a huge iron-bound crate hanging from a big wooden crane over a stone quay, a weighing platform and a short conveyor below it, warm lanterns, sunset light. Landscape 3:2.
+One single decorative landmark / specified connected grouping, isolated, centered, fully contained with generous transparent margins. Actual alpha transparency with no painted black/white/checkerboard background. No dark silhouette outline. The object is background scenery, never a foreground interactive prop; soften contrast and edges. Preserve the explicit Object description: a requested distant crane hook, lever, wires or furnace opening is part of that static landmark only, an exception to generic exclusions. No extra hooks, levers, crates, characters, faces, letters, emblems or UI.
+Isolation is CRITICAL: attached image 2 is ONLY a color/light reference. Do NOT reproduce its far viaduct, arches, sky, clouds, distant towers, ground or landscape behind this landmark. Draw only the Object description and its directly attached structural supports, no separate background scenery. Complete all requested ends and appendages inside the canvas with at least 6 percent clear alpha margins.
+The ONE huge suspended iron-bound crate specifically requested in Object IS required, an exception to the generic no-crates rule. No other crates.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fff4-751d-75b1-aa81-5afaf42c086c\exec-cc3d6d97-900a-4ac7-a7d9-8cef7b59aba3.png
+
+
+=== GRAPHICS 17 / 2026-10-04 / BUILT-IN IMAGE_GEN ===
+W2L18 | w02_lm18_lightning_tower.png
+References, in attachment order:
+D:\Cluade projects\games\Glue\docs\референсы\world2_workshops.png
+D:\Cluade projects\games\Glue\assets\backgrounds\world_02\source\w02_far_machine.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" (world 2 "Workshops") — style reference only. Attached image 2: the approved far background of THIS zone — match its colors and light. Do NOT copy the sheet's layout, text, UI or characters.
+
+Create ONE isolated landmark object for the background of a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, with empty transparent space around it. The object stands in the middle distance: slightly hazy and softer than a foreground, medium detail, no hard black outlines. Its base fades into soft white mist. No characters, text, logo, UI, crates, doors with dark openings, flags, hooks, keys, ropes or chains hanging in front. Neutral white balance, no yellow tint.
+Object: a tall copper lightning rod tower with spiral wires and a softly glowing coil on top, a faint friendly ghostly glow in one of its round windows, sunset light, NOT scary. Portrait 2:3.
+One single decorative landmark / specified connected grouping, isolated, centered, fully contained with generous transparent margins. Actual alpha transparency with no painted black/white/checkerboard background. No dark silhouette outline. The object is background scenery, never a foreground interactive prop; soften contrast and edges. Preserve the explicit Object description: a requested distant crane hook, lever, wires or furnace opening is part of that static landmark only, an exception to generic exclusions. No extra hooks, levers, crates, characters, faces, letters, emblems or UI.
+Isolation is CRITICAL: attached image 2 is ONLY a color/light reference. Do NOT reproduce its far viaduct, arches, sky, clouds, distant towers, ground or landscape behind this landmark. Draw only the Object description and its directly attached structural supports, no separate background scenery. Complete all requested ends and appendages inside the canvas with at least 6 percent clear alpha margins.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fff4-751d-75b1-aa81-5afaf42c086c\exec-e57f3a78-de24-488f-8fdc-6e95a08609c7.png
+
+Edit prompt:
+Edit image 1 only. Preserve the tall copper lightning-rod tower, spiral wires, softly glowing top coil, all architecture and connected supports, sunset painting, composition and mist. Change ONLY the light INSIDE the central large ROUND WINDOW, about halfway up the stone building below the tall rod. It is currently ordinary warm yellow forge light. Replace it with a FAINT FRIENDLY GHOSTLY pale white-blue glow: a small soft translucent wisp of bluish light behind the window glass, mysterious but gentle, no scary face, no visible person or character, no eyes, no hard outline. Window frame and glass divisions unchanged. This blue-white glimmer must be distinct from the warm orange sunset and furnace lights elsewhere, but subtle, not a bright neon spot. No glow spills far outside the window. Everything else unchanged; true transparent PNG, no text or symbols.
+Edit references:
+C:\Users\Марат\.codex\generated_images\01a0fff4-751d-75b1-aa81-5afaf42c086c\exec-b204e32d-2916-40f2-b322-c1738efadb31.png
+Edit output: C:\Users\Марат\.codex\generated_images\01a0fff4-751d-75b1-aa81-5afaf42c086c\exec-e57f3a78-de24-488f-8fdc-6e95a08609c7.png
+
+
+=== GRAPHICS 17 / 2026-10-04 / BUILT-IN IMAGE_GEN ===
+W2L20 | w02_lm20_machine_core.png
+References, in attachment order:
+D:\Cluade projects\games\Glue\docs\референсы\world2_workshops.png
+D:\Cluade projects\games\Glue\assets\backgrounds\world_02\source\w02_far_machine.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" (world 2 "Workshops") — style reference only. Attached image 2: the approved far background of THIS zone — match its colors and light. Do NOT copy the sheet's layout, text, UI or characters.
+
+Create ONE isolated landmark object for the background of a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, with empty transparent space around it. The object stands in the middle distance: slightly hazy and softer than a foreground, medium detail, no hard black outlines. Its base fades into soft white mist. No characters, text, logo, UI, crates, doors with dark openings, flags, hooks, keys, ropes or chains hanging in front. Neutral white balance, no yellow tint.
+Object: the heart of the great machine: an enormous gear wall with pistons, brass pipes and a glowing furnace core, sunset light. Portrait 2:3.
+One single decorative landmark / specified connected grouping, isolated, centered, fully contained with generous transparent margins. Actual alpha transparency with no painted black/white/checkerboard background. No dark silhouette outline. The object is background scenery, never a foreground interactive prop; soften contrast and edges. Preserve the explicit Object description: a requested distant crane hook, lever, wires or furnace opening is part of that static landmark only, an exception to generic exclusions. No extra hooks, levers, crates, characters, faces, letters, emblems or UI.
+Isolation is CRITICAL: attached image 2 is ONLY a color/light reference. Do NOT reproduce its far viaduct, arches, sky, clouds, distant towers, ground or landscape behind this landmark. Draw only the Object description and its directly attached structural supports, no separate background scenery. Complete all requested ends and appendages inside the canvas with at least 6 percent clear alpha margins.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fff4-751d-75b1-aa81-5afaf42c086c\exec-98505182-54fe-40d4-96c3-742b65c2b30a.png
+
+
+=== GRAPHICS 17 / 2026-10-04 / BUILT-IN IMAGE_GEN ===
+W2L18 | w02_lm18_lightning_tower.png
+References, in attachment order:
+D:\Cluade projects\games\Glue\docs\референсы\world2_workshops.png
+D:\Cluade projects\games\Glue\assets\backgrounds\world_02\source\w02_far_machine.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" (world 2 "Workshops") — style reference only. Attached image 2: the approved far background of THIS zone — match its colors and light. Do NOT copy the sheet's layout, text, UI or characters.
+
+Create ONE isolated landmark object for the background of a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, with empty transparent space around it. The object stands in the middle distance: slightly hazy and softer than a foreground, medium detail, no hard black outlines. Its base fades into soft white mist. No characters, text, logo, UI, crates, doors with dark openings, flags, hooks, keys, ropes or chains hanging in front. Neutral white balance, no yellow tint.
+Object: a tall copper lightning rod tower with spiral wires and a softly glowing coil on top, a faint friendly ghostly glow in one of its round windows, sunset light, NOT scary. Portrait 2:3.
+One single decorative landmark / specified connected grouping, isolated, centered, fully contained with generous transparent margins. Actual alpha transparency with no painted black/white/checkerboard background. No dark silhouette outline. The object is background scenery, never a foreground interactive prop; soften contrast and edges. Preserve the explicit Object description: a requested distant crane hook, lever, wires or furnace opening is part of that static landmark only, an exception to generic exclusions. No extra hooks, levers, crates, characters, faces, letters, emblems or UI.
+Isolation is CRITICAL: attached image 2 is ONLY a color/light reference. Do NOT reproduce its far viaduct, arches, sky, clouds, distant towers, ground or landscape behind this landmark. Draw only the Object description and its directly attached structural supports, no separate background scenery. Complete all requested ends and appendages inside the canvas with at least 6 percent clear alpha margins.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fff4-751d-75b1-aa81-5afaf42c086c\exec-0ec02015-ccc2-4efc-8ae0-f42f6c833c57.png
+
+Edit prompt:
+Edit image 1 only. Preserve the tall copper lightning-rod tower, spiral wires, softly glowing top coil, all architecture and connected supports, sunset painting, composition and mist. Change ONLY the light INSIDE the central large ROUND WINDOW, about halfway up the stone building below the tall rod. It is currently ordinary warm yellow forge light. Replace it with a FAINT FRIENDLY GHOSTLY pale white-blue glow: a small soft translucent wisp of bluish light behind the window glass, mysterious but gentle, no scary face, no visible person or character, no eyes, no hard outline. Window frame and glass divisions unchanged. This blue-white glimmer must be distinct from the warm orange sunset and furnace lights elsewhere, but subtle, not a bright neon spot. No glow spills far outside the window. Everything else unchanged; true transparent PNG, no text or symbols.
+Edit references:
+C:\Users\Марат\.codex\generated_images\01a0fff4-751d-75b1-aa81-5afaf42c086c\exec-b204e32d-2916-40f2-b322-c1738efadb31.png
+Edit output: C:\Users\Марат\.codex\generated_images\01a0fff4-751d-75b1-aa81-5afaf42c086c\exec-e57f3a78-de24-488f-8fdc-6e95a08609c7.png
+
+Edit prompt:
+Edit this image only. Preserve the copper lightning-rod tower, spiral wires, glowing top coil, architecture, all attached supports, warm sunset light, the faint friendly white-blue ghostly wisp INSIDE the round window, and the painted rendering. Fix transparent containment only: fit the WHOLE landmark slightly smaller and centered with at least 7 percent fully transparent empty margin on ALL FOUR sides of the canvas. Currently its base mist reaches the bottom canvas edge and is abruptly cropped. Include the entire softly fading base mist inside the frame: all mist and soft glow must gradually reach ZERO alpha before ANY canvas edge. No rectangular hazy backdrop. Building silhouette and soft mist remain complete, not cropped. TRUE transparent PNG, no painted black/white background, portrait 2:3. No new details, text, symbols or characters. Keep ghost window glow visible but faint; soften strong outline/contrast very slightly as distant background scenery.
+Edit references:
+C:\Users\Марат\.codex\generated_images\01a0fff4-751d-75b1-aa81-5afaf42c086c\exec-e57f3a78-de24-488f-8fdc-6e95a08609c7.png
+Edit output: C:\Users\Марат\.codex\generated_images\01a0fff4-751d-75b1-aa81-5afaf42c086c\exec-0ec02015-ccc2-4efc-8ae0-f42f6c833c57.png
+
+
+=== GRAPHICS 17 / 2026-10-04 / BUILT-IN IMAGE_GEN ===
+W2L19 | w02_lm19_crossing.png
+References, in attachment order:
+D:\Cluade projects\games\Glue\docs\референсы\world2_workshops.png
+D:\Cluade projects\games\Glue\assets\backgrounds\world_02\source\w02_far_machine.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" (world 2 "Workshops") — style reference only. Attached image 2: the approved far background of THIS zone — match its colors and light. Do NOT copy the sheet's layout, text, UI or characters.
+
+Create ONE isolated landmark object for the background of a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, with empty transparent space around it. The object stands in the middle distance: slightly hazy and softer than a foreground, medium detail, no hard black outlines. Its base fades into soft white mist. No characters, text, logo, UI, crates, doors with dark openings, flags, hooks, keys, ropes or chains hanging in front. Neutral white balance, no yellow tint.
+Object: a crossing of the workshop conveyors: four conveyor galleries meeting at a big round wooden turntable with a switch rail and a signal post, sunset light. Landscape 3:2.
+One single decorative landmark / specified connected grouping, isolated, centered, fully contained with generous transparent margins. Actual alpha transparency with no painted black/white/checkerboard background. No dark silhouette outline. The object is background scenery, never a foreground interactive prop; soften contrast and edges. Preserve the explicit Object description: a requested distant crane hook, lever, wires or furnace opening is part of that static landmark only, an exception to generic exclusions. No extra hooks, levers, crates, characters, faces, letters, emblems or UI.
+Isolation is CRITICAL: attached image 2 is ONLY a color/light reference. Do NOT reproduce its far viaduct, arches, sky, clouds, distant towers, ground or landscape behind this landmark. Draw only the Object description and its directly attached structural supports, no separate background scenery. Complete all requested ends and appendages inside the canvas with at least 6 percent clear alpha margins.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fff4-751d-75b1-aa81-5afaf42c086c\exec-76c95537-f5ac-4cde-bb72-19fb813dc373.png
+
+Edit prompt:
+Revise image 1 into a strict ORTHOGRAPHIC SIDE-ELEVATION decorative landmark for a 2D side-scrolling game. The current high oblique top view is wrong. Show a crossing of FOUR workshop conveyor galleries meeting at a big ROUND WOODEN TURNTABLE with a switch rail and a signal post. Move the camera down to belt height: the galleries and turntable must show their VERTICAL SIDE FACES, not broad visible plank top surfaces. Long primary left and right galleries are horizontal in the image; two secondary galleries can be indicated in overlapping side silhouettes behind the central circular switching mechanism, never diagonally foreshortened toward the viewer. The center is recognizably a round turntable housing viewed at belt height, with a curved wooden rim and a small switch rail. Keep all four complete gallery ends, wooden trestle supports, brass rollers and the signal post, all fully contained, 8 percent empty alpha margins. It is static MIDDLE-DISTANCE scenery, NOT a foreground interactive sprite: reduce detail and contrast, soft hazy painted edges, muted wood/copper/grey stone, no dark outline, neutral white balance, subtle sunset highlights; base dissolves in soft white steam. Attached image 2 is only style reference; attached image 3 only palette/light reference, no scene copied. One isolated connected landmark with TRUE TRANSPARENT PNG background, no sky/ground/black backdrop, no letters/numbers/characters/crates/flags. Landscape 3:2.
+Edit references:
+C:\Users\Марат\.codex\generated_images\01a0fff4-751d-75b1-aa81-5afaf42c086c\exec-3897b4d0-61d4-4f32-80fc-a323b070ba13.png
+D:\Cluade projects\games\Glue\docs\референсы\world2_workshops.png
+D:\Cluade projects\games\Glue\assets\backgrounds\world_02\source\w02_far_machine.png
+Edit output: C:\Users\Марат\.codex\generated_images\01a0fff4-751d-75b1-aa81-5afaf42c086c\exec-6a9aab05-8481-4ebc-b364-7748cca75bbd.png
+
+Edit prompt:
+Edit this image only, preserve the current SIDE-ELEVATION view, all four conveyor galleries, central wooden turntable, switch rail, signal post, wooden trestles, composition and materials. Fix containment/margins: draw the same COMPLETE connected landmark slightly smaller and centered so there is at least 7 percent fully transparent empty margin along ALL FOUR sides of the canvas. Currently the left and right gallery ends almost touch the side edges. Every end must remain finished and fully inside, no cropping or extending gallery offscreen. Mist/glow must also fade to zero alpha before reaching any canvas edge; no rectangular haze boundary. Because this is MIDDLE-DISTANCE scenery, gently soften the strongest contrast and tiny details, retain a painterly soft finish, no dark outline, neutral white balance with localized sunset highlights, base fading in soft WHITE steam. TRUE TRANSPARENT PNG background, no painted black/white/checkerboard background. No text/characters/UI. Keep landscape 3:2 native composition. Do not change the side camera to an oblique top view.
+Edit references:
+C:\Users\Марат\.codex\generated_images\01a0fff4-751d-75b1-aa81-5afaf42c086c\exec-6a9aab05-8481-4ebc-b364-7748cca75bbd.png
+Edit output: C:\Users\Марат\.codex\generated_images\01a0fff4-751d-75b1-aa81-5afaf42c086c\exec-76c95537-f5ac-4cde-bb72-19fb813dc373.png

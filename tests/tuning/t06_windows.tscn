@@ -1,0 +1,6 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://tests/tuning/t06_windows.gd" id="1"]
+
+[node name="T06Windows" type="Node"]
+script = ExtResource("1")

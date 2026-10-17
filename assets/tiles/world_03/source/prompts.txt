@@ -1,0 +1,82 @@
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+C3.1 | w03_fill.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world3_guardians.png
+D:/Cluade projects/games/Glue/assets/tiles/world_01/source/w01_stone_fill.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the approved concept sheet of world 3 — match its palette. Attached image 3: the approved stone masonry texture of the same game — match its painting style, stone scale and level of detail. Do NOT copy layouts, text, UI or characters.
+
+Create a SEAMLESS TILEABLE TEXTURE, square 1:1, tileable on all four sides. Strict front orthographic view, no perspective. Hand-painted cartoon style, soft shading, light from the upper left. Medium-dark values and low contrast, so small bright red, blue, yellow and green characters read clearly in front of it. No moss, no grass, no plants, no holes, no doors, no objects, no text. Even lighting across the whole tile — no vignette, no gradient from one side to the other. Neutral white balance, no yellow tint.
+Surface: white limestone and pale marble blocks, large and regular, thin warm joints, a faint carved line along a few block edges (no symbols, no letters, no faces).
+SQUARE 1:1 output, edge-to-edge masonry. Completely even illumination across the canvas, subdued highlights, low overall contrast. Mortar is soft, never a dark silhouette outline. Opposite edges must continue the same bond. No blank margins, scenery or props.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-b7d3a0ca-4a01-490b-aaa7-512743060572.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+C3.2 | w03_deep.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world3_guardians.png
+D:/Cluade projects/games/Glue/assets/tiles/world_01/source/w01_stone_fill.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the approved concept sheet of world 3 — match its palette. Attached image 3: the approved stone masonry texture of the same game — match its painting style, stone scale and level of detail. Do NOT copy layouts, text, UI or characters.
+
+Create a SEAMLESS TILEABLE TEXTURE, square 1:1, tileable on all four sides. Strict front orthographic view, no perspective. Hand-painted cartoon style, soft shading, light from the upper left. Medium-dark values and low contrast, so small bright red, blue, yellow and green characters read clearly in front of it. No moss, no grass, no plants, no holes, no doors, no objects, no text. Even lighting across the whole tile — no vignette, no gradient from one side to the other. Neutral white balance, no yellow tint.
+Surface: pale grey-white bedrock with large soft rounded masses, slightly darker and calmer than the marble.
+SQUARE 1:1 output, edge-to-edge masonry. Completely even illumination across the canvas, subdued highlights, low overall contrast. Mortar is soft, never a dark silhouette outline. Opposite edges must continue the same bond. No blank margins, scenery or props.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-e100f260-9e22-48fc-890a-384cd2a58c00.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+C3.3 | w03_top.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world3_guardians.png
+D:/Cluade projects/games/Glue/assets/tiles/world_01/source/w01_stone_fill.png
+Prompt:
+Attached image 1: the game concept sheet, style only. Attached image 2: the approved concept sheet of world 3, match its materials and palette. Attached image 3: the approved world 1 masonry, match its painting style and material scale. Do NOT copy layouts, text, UI, characters or mechanisms.
+
+Create ONE horizontal strip, 4:1, TRANSPARENT BACKGROUND PNG, tileable horizontally. Strict side orthographic view. A fairly flat walkable top line lies about 30% from the top of the canvas. Only the shallow decorative cap exists; all pixels below the narrow cap are transparent. The cap extends to both left and right canvas edges and continues across them, no empty end margins and no rounded end caps. Hand-painted cartoon shading, light from upper left, no dark outline, no text, no interactive objects, no backdrop. Neutral white balance.
+Surface: lush bright grass with small white daisies and young ivy growing on a white marble edge.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-f138ef3a-63d2-4ede-bc19-0ab58439cfeb.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+C3.4 | w03_side.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world3_guardians.png
+D:/Cluade projects/games/Glue/assets/tiles/world_01/source/w01_stone_fill.png
+Prompt:
+Attached image 1: the game concept sheet, style only. Attached image 2: the approved concept sheet of world 3, match its materials and palette. Attached image 3: the approved world 1 masonry, match its painting style and material scale. Do NOT copy layouts, text, UI, characters or mechanisms.
+
+Create ONE vertical strip, 1:4, TRANSPARENT BACKGROUND PNG, tileable vertically. Strict side orthographic view. The narrow platform edge occupies ONLY the LEFT HALF; the entire RIGHT HALF must have alpha zero, including shadows. The edge strip reaches both top and bottom canvas edges; no empty end margins. Hand-painted cartoon shading, light from upper left, no dark silhouette outline, no text, no interactive objects, no backdrop. Neutral white balance.
+Surface: a white marble edge with flowering ivy (tiny white flowers) hanging down along it.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-9b177ed7-9f7a-4293-ad4d-e1ac2394e95b.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+C3.1 | w03_fill.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/assets/tiles/world_03/source/w03_fill.png
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world3_guardians.png
+D:/Cluade projects/games/Glue/assets/tiles/world_01/source/w01_stone_fill.png
+Edit prompt:
+Image 1 is the existing marble fill TEXTURE to edit. Images 2–4 are style references. Keep everything the same, but remove the yellow/beige cast from the stone and reduce highlight brightness and overall contrast. White limestone and pale marble read as neutral muted medium GREY with faint cool grey shadows, ONLY narrow warm mortar joints. No brilliant white highlights. Preserve the large regular block pattern, faint carved edge lines, square image, all-four-edge seamless tiling and uniform lighting. No outline, vignette, gradient, plants, props, text or symbols.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-29ef9537-f9d4-4cab-a0c4-830a67f861c2.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+C3.2 | w03_deep.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/assets/tiles/world_03/source/w03_deep.png
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world3_guardians.png
+D:/Cluade projects/games/Glue/assets/tiles/world_01/source/w01_stone_fill.png
+Edit prompt:
+Image 1 is the current depth texture to edit. Images 2–4 are style references. Keep the square canvas and subdued neutral grey palette, but replace the regular BRICK/BLOCK MASONRY with continuous natural pale grey-white BEDROCK: very large soft rounded rock masses merging together, no regular rows, no mortar, no squared blocks. Calm medium-grey values, softer and slightly darker than pale marble. Hand-painted cartoon with low contrast, even lighting. It must tile seamlessly on all FOUR edges, edge-to-edge material only. No dark silhouette outlines, plants, holes, doors, props, text, symbols, vignette or gradients.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-1cfa0390-13a6-4fc1-80e4-1514c5634ae6.png

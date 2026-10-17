@@ -1,0 +1,116 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://src/level/greybox_level.gd" id="1"]
+[ext_resource type="PackedScene" path="res://levels/backdrops/w01_viaduct.tscn" id="bd"]
+[ext_resource type="Script" path="res://src/level/backdrop_layer.gd" id="bl"]
+[ext_resource type="Texture2D" path="res://assets/backgrounds/world_01/v2/source/w01_v2_lm19_drawbridge.png" id="lm"]
+[ext_resource type="Script" path="res://src/mechanisms/crate.gd" id="2"]
+[ext_resource type="Script" path="res://src/mechanisms/pressure_plate.gd" id="3"]
+[ext_resource type="Script" path="res://src/mechanisms/door.gd" id="4"]
+[ext_resource type="Script" path="res://src/mechanisms/finish.gd" id="5"]
+
+[node name="Drawbridge" type="Node2D"]
+script = ExtResource("1")
+title = "19 · Разводной мост"
+ground_fill = "w01_viaduct_fill"
+blocks = Array[Rect2]([Rect2(0, -8, 1, 30), Rect2(0, 12, 20, 10), Rect2(25, 12, 2, 10), Rect2(32, 12, 2, 10), Rect2(39, 13, 5, 9), Rect2(49, 12, 10, 10), Rect2(59, -8, 1, 30)])
+checkpoints = Array[Vector2]([Vector2(3, 12), Vector2(33, 12), Vector2(52, 12)])
+bounds_tiles = Rect2(0, -8, 60, 30)
+kill_y_tiles = 18.0
+
+[node name="Crate" type="CharacterBody2D" parent="."]
+position = Vector2(384, 735)
+script = ExtResource("2")
+
+[node name="PlateB" type="AnimatableBody2D" parent="."]
+position = Vector2(576, 768)
+script = ExtResource("3")
+mark_color = Color(0.243, 0.482, 0.98, 1)
+
+[node name="HeavyCrate" type="CharacterBody2D" parent="."]
+position = Vector2(768, 735)
+script = ExtResource("2")
+mass = 2.0
+
+[node name="PlateA" type="AnimatableBody2D" parent="."]
+position = Vector2(1088, 768)
+script = ExtResource("3")
+threshold = 2.0
+mark_color = Color(0.949, 0.6, 0.29, 1)
+
+[node name="Section1" type="AnimatableBody2D" parent="."]
+position = Vector2(1280, 1216)
+script = ExtResource("4")
+size_tiles = Vector2(5, 0.5)
+triggers = Array[NodePath]([NodePath("../PlateA")])
+open_offset_tiles = Vector2(0, -7)
+mark_color = Color(0.949, 0.6, 0.29, 1)
+
+[node name="PlateC" type="AnimatableBody2D" parent="."]
+position = Vector2(1664, 768)
+script = ExtResource("3")
+mark_color = Color(0.243, 0.482, 0.98, 1)
+
+[node name="Section2" type="AnimatableBody2D" parent="."]
+position = Vector2(1728, 1216)
+script = ExtResource("4")
+size_tiles = Vector2(5, 0.5)
+triggers = Array[NodePath]([NodePath("../PlateB"), NodePath("../PlateC")])
+require_all = true
+open_offset_tiles = Vector2(0, -7)
+mark_color = Color(0.243, 0.482, 0.98, 1)
+
+[node name="LatchD" type="AnimatableBody2D" parent="."]
+position = Vector2(2112, 768)
+script = ExtResource("3")
+latch = true
+mark_color = Color(0.247, 0.725, 0.314, 1)
+
+[node name="Section3" type="AnimatableBody2D" parent="."]
+position = Vector2(2176, 1216)
+script = ExtResource("4")
+size_tiles = Vector2(5, 0.5)
+triggers = Array[NodePath]([NodePath("../LatchD")])
+open_offset_tiles = Vector2(0, -7)
+mark_color = Color(0.247, 0.725, 0.314, 1)
+
+[node name="PlateE" type="AnimatableBody2D" parent="."]
+position = Vector2(2656, 832)
+script = ExtResource("3")
+width_tiles = 5.0
+mark_color = Color(0.898, 0.282, 0.302, 1)
+
+[node name="Section4" type="AnimatableBody2D" parent="."]
+position = Vector2(2816, 1216)
+script = ExtResource("4")
+size_tiles = Vector2(5, 0.5)
+triggers = Array[NodePath]([NodePath("../PlateE")])
+invert = true
+keep_open = Array[NodePath]([NodePath("../LatchF")])
+open_offset_tiles = Vector2(0, -7)
+mark_color = Color(0.898, 0.282, 0.302, 1)
+
+[node name="LatchF" type="AnimatableBody2D" parent="."]
+position = Vector2(3264, 768)
+script = ExtResource("3")
+latch = true
+mark_color = Color(0.898, 0.282, 0.302, 1)
+
+[node name="Finish" type="Node2D" parent="."]
+position = Vector2(3584, 768)
+script = ExtResource("5")
+
+[node name="Backdrop" parent="." instance=ExtResource("bd")]
+
+[node name="Landmark" type="Node2D" parent="Backdrop"]
+script = ExtResource("bl")
+texture = ExtResource("lm")
+parallax = 0.3
+parallax_y = 0.1
+height = 0.5
+center_y = 0.46
+zoom_follow = 0.3
+repeat = false
+world_x = 1536.0
+haze = 0.34
+haze_color = Color(0.953, 0.890, 0.800, 1)

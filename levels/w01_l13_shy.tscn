@@ -1,0 +1,121 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://src/level/greybox_level.gd" id="1"]
+[ext_resource type="PackedScene" path="res://levels/backdrops/w01_shrine.tscn" id="bd"]
+[ext_resource type="Script" path="res://src/level/backdrop_layer.gd" id="bl"]
+[ext_resource type="Texture2D" path="res://assets/backgrounds/world_01/v2/source/w01_v2_lm15_bell_crypt.png" id="lm"]
+[ext_resource type="Script" path="res://src/mechanisms/pressure_plate.gd" id="plate"]
+[ext_resource type="Script" path="res://src/mechanisms/door.gd" id="door"]
+[ext_resource type="Script" path="res://src/mechanisms/ghost.gd" id="ghost"]
+[ext_resource type="Script" path="res://src/mechanisms/crate.gd" id="crate"]
+[ext_resource type="Script" path="res://src/mechanisms/spikes.gd" id="spikes"]
+[ext_resource type="Script" path="res://src/mechanisms/finish.gd" id="finish"]
+[ext_resource type="Script" path="res://src/mechanisms/crusher.gd" id="crusher"]
+
+[node name="W01L13" type="Node2D"]
+script = ExtResource("1")
+title = "13 · Стесняшки"
+blocks = Array[Rect2]([Rect2(0, -8, 1, 26), Rect2(74, -8, 1, 26), Rect2(0, 12, 20, 6), Rect2(21.5, 12, 15.5, 6), Rect2(20, 13.03, 1.5, 4.97), Rect2(26.5, -8, 1, 16), Rect2(37, 15, 4.6, 3), Rect2(41.6, 12, 32.4, 6), Rect2(52, -8, 1, 16), Rect2(64, -8, 1, 16)])
+checkpoints = Array[Vector2]([Vector2(8, 12), Vector2(33, 12), Vector2(56.5, 12)])
+bounds_tiles = Rect2(0, -8, 75, 27)
+kill_y_tiles = 19.0
+ground_fill = "w01_shrine_fill"
+
+[node name="Ghost1" type="Node2D" parent="."]
+position = Vector2(115.2, 691.2)
+script = ExtResource("ghost")
+area_tiles = Rect2(1, 2, 25.5, 10)
+
+[node name="Crate" type="CharacterBody2D" parent="."]
+position = Vector2(704, 737)
+script = ExtResource("crate")
+
+[node name="Plate1" type="AnimatableBody2D" parent="."]
+position = Vector2(1328, 833.92)
+script = ExtResource("plate")
+width_tiles = 1.5
+mark_color = Color(0.4, 0.7, 0.95, 1)
+
+[node name="Door1" type="AnimatableBody2D" parent="."]
+position = Vector2(1696, 512)
+script = ExtResource("door")
+size_tiles = Vector2(1, 4)
+triggers = Array[NodePath]([NodePath("../Plate1")])
+open_offset_tiles = Vector2(0, -3.5)
+mark_color = Color(0.4, 0.7, 0.95, 1)
+
+[node name="Ghost2" type="Node2D" parent="."]
+position = Vector2(1811.2, 537.6)
+script = ExtResource("ghost")
+area_tiles = Rect2(27.5, 2, 24.5, 10)
+
+[node name="Ghost3" type="Node2D" parent="."]
+position = Vector2(3219.2, 723.2)
+script = ExtResource("ghost")
+area_tiles = Rect2(27.5, 2, 24.5, 10)
+
+[node name="Spikes2" type="Node2D" parent="."]
+position = Vector2(2515.2, 960)
+script = ExtResource("spikes")
+width_tiles = 4.6
+
+[node name="Latch2" type="AnimatableBody2D" parent="."]
+position = Vector2(2912, 768)
+script = ExtResource("plate")
+width_tiles = 1.5
+latch = true
+mark_color = Color(0.35, 0.8, 0.4, 1)
+
+[node name="Door2" type="AnimatableBody2D" parent="."]
+position = Vector2(3328, 512)
+script = ExtResource("door")
+size_tiles = Vector2(1, 4)
+triggers = Array[NodePath]([NodePath("../Latch2")])
+open_offset_tiles = Vector2(0, -3.5)
+mark_color = Color(0.35, 0.8, 0.4, 1)
+
+[node name="Ghost4" type="Node2D" parent="."]
+position = Vector2(3430.4, 537.6)
+script = ExtResource("ghost")
+area_tiles = Rect2(53, 2, 21, 10)
+
+[node name="GateNear" type="AnimatableBody2D" parent="."]
+position = Vector2(3744, 768)
+script = ExtResource("plate")
+width_tiles = 1.0
+pulse = 1.2
+mark_color = Color(0.9, 0.3, 0.3, 1)
+
+[node name="Gate" type="AnimatableBody2D" parent="."]
+position = Vector2(4096, 512)
+script = ExtResource("door")
+size_tiles = Vector2(1, 4)
+triggers = Array[NodePath]([NodePath("../GateNear"), NodePath("../GateFar")])
+open_offset_tiles = Vector2(0, -3.5)
+mark_color = Color(0.9, 0.3, 0.3, 1)
+
+[node name="GateFar" type="AnimatableBody2D" parent="."]
+position = Vector2(4256, 768)
+script = ExtResource("plate")
+width_tiles = 1.0
+pulse = 1.2
+mark_color = Color(0.9, 0.3, 0.3, 1)
+
+[node name="Finish" type="Node2D" parent="."]
+position = Vector2(4576, 768)
+script = ExtResource("finish")
+
+[node name="Backdrop" parent="." instance=ExtResource("bd")]
+
+[node name="Landmark" type="Node2D" parent="Backdrop"]
+script = ExtResource("bl")
+texture = ExtResource("lm")
+parallax = 0.3
+parallax_y = 0.1
+height = 0.62
+center_y = 0.6
+zoom_follow = 0.3
+repeat = false
+world_x = 1680.0
+haze = 0.3
+haze_color = Color(0.839, 0.851, 0.949, 1)

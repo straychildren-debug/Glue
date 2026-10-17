@@ -41,14 +41,15 @@ func _spikes() -> void:
 	check(b.alive and b.standing_on() == a, "Б стоит на голове замершего над шипами")
 	await _hop_to(b, 15.5 * TILE)
 	await _walk_to(b, KEYS_2, 17.0 * TILE)
-	check(b.alive and b.global_position.x > 16 * TILE, "Б перешёл шипы по голове замершего и взял чекпоинт")
-	# А оживает в шипах — гибнет, и оба появляются у чекпоинта за шипами.
+	check(b.alive and b.global_position.x > 16 * TILE, "Б перешёл шипы по голове замершего")
+	check(game.level.active_checkpoint == 0, "чекпоинт за шипами не взят, пока там один")
+	# А оживает в шипах — гибнет; чекпоинт за шипами не взят — оба у старта (решение 57).
 	tap(KEYS_1[FREEZE])
 	await frames(10)
 	check(deaths == before + 2, "ожил в шипах — погиб")
 	await frames(90)
-	check(a.alive and b.alive and a.global_position.x > 15 * TILE and b.global_position.x > 15 * TILE,
-			"оба у чекпоинта за шипами (a %s b %s)" % [a.global_position, b.global_position])
+	check(a.alive and b.alive and a.global_position.x < 4 * TILE and b.global_position.x < 4 * TILE,
+			"нарочная гибель не переносит за шипы — оба у старта (a %s b %s)" % [a.global_position, b.global_position])
 
 
 func _saw() -> void:
@@ -63,24 +64,21 @@ func _saw() -> void:
 	await frames(5)
 	check(deaths == before + 1, "пила режет незамершего")
 	await frames(120)
-	# Замерший укорачивает пиле путь: она отскакивает от него и не заходит дальше.
-	tap(KEYS_1[FREEZE])  # сначала замереть: на рельсе пила режет незамершего
+	# «Замри» от пилы не спасает (решение 10.10.2026): пила доезжает до замершего и режет его.
+	before = deaths
+	tap(KEYS_1[FREEZE])
 	await frames(2)
 	await _teleport(a, Vector2(25 * TILE, _stand_y(12)), b, Vector2(17 * TILE, _stand_y(12)))
-	var farthest := 0.0
-	var moved := 0.0
-	var last := saw.blade_position().x
+	saw.progress = 0.0
+	saw.forward = true
 	for i in 360:
 		await get_tree().physics_frame
-		farthest = maxf(farthest, saw.blade_position().x)
-		moved += absf(saw.blade_position().x - last)
-		last = saw.blade_position().x
-	check(a.alive and farthest < a.global_position.x - Player.SIZE.x / 2.0,
-			"пила не проходит дальше замершего (край пилы %.0f, замерший %.0f)" % [farthest + saw.radius(), a.global_position.x])
-	check(moved > 400.0, "пила продолжает ездить — от замершего назад (%.0f px)" % moved)
-	place(a, Vector2(17.5 * TILE, _stand_y(12)))  # замерший уходит с рельса и только потом оживает
-	await frames(2)
-	tap(KEYS_1[FREEZE])
+		if deaths > before:
+			break
+	check(deaths > before, "пила режет и замершего")
+	await frames(120)
+	if a.frozen:
+		tap(KEYS_1[FREEZE])
 	await frames(5)
 	hanging.speed = 160.0
 

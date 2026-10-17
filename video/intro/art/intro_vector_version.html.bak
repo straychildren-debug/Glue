@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <title>Держись! — вступление</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      /* Палитра: небо — голубое → вечернее фиолетовое; крем (плашки), слива (контур и текст), оранжевый акцент.
+         Мультяшный векторный стиль: толстый сливовый контур, плоская заливка, мягкий блик. Шрифт — Nunito. */
+      :root { --cream: #fbf4e6; --plum: #2a2433; --accent: #d9661f; }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { margin: 0; width: 1920px; height: 1080px; overflow: hidden; background: #a9d4f0; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; font-family: Nunito, sans-serif; color: var(--plum); }
+      .clip { position: absolute; inset: 0; }
+      .scene { position: absolute; inset: 0; overflow: hidden; }
+      .world { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; transform-origin: 50% 50%; }
+      .layer { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; overflow: visible; }
+      .wide { width: 2880px; }
+      .actor { position: absolute; overflow: visible; }
+      .actor svg { overflow: visible; display: block; }
+      .caption {
+        position: absolute; left: 50%; bottom: 44px; width: 1500px; margin-left: -750px;
+        padding: 24px 48px; border-radius: 28px; background: rgba(251, 244, 230, 0.95);
+        border: 5px solid var(--plum); font-size: 50px; font-weight: 700; line-height: 1.25; text-align: center;
+      }
+      .title { position: absolute; left: 0; right: 0; text-align: center; font-weight: 900; color: var(--cream);
+        -webkit-text-stroke: 10px var(--plum); paint-order: stroke fill; letter-spacing: 2px; }
+      .title span { display: inline-block; }
+      .pill { position: absolute; left: 50%; width: 760px; margin-left: -380px; padding: 14px 0; text-align: center;
+        font-size: 60px; font-weight: 800; color: #9a3f10; background: rgba(251, 244, 230, 0.96); border: 5px solid var(--plum); border-radius: 999px; }
+      .caption.top { top: 40px; bottom: auto; }
+      .confetti { position: absolute; width: 18px; height: 28px; border-radius: 5px; border: 3px solid var(--plum); }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="46" data-width="1920" data-height="1080">
+      <!-- 1. Царство бобов (0–7.2) -->
+      <section id="s1" class="clip" data-start="0" data-duration="7.2" data-track-index="0">
+        <div id="s1-scene" class="scene">
+          <div id="s1-world" class="world">
+            <svg id="s1-sky" class="layer" viewBox="0 0 1920 1080"></svg>
+            <svg id="s1-far" class="layer wide" viewBox="0 0 2880 1080"></svg>
+            <svg id="s1-castle" class="layer" viewBox="0 0 1920 1080"></svg>
+            <svg id="s1-near" class="layer wide" viewBox="0 0 2880 1080"></svg>
+            <div id="s1-cast"></div>
+            <svg id="s1-front" class="layer wide" viewBox="0 0 2880 1080"></svg>
+          </div>
+          <h1 id="s1-title" class="title" style="top: 40px; font-size: 130px"></h1>
+          <p id="s1-cap" class="caption">Далеко-далеко, за облачными мостами, раскинулось Царство бобов.</p>
+        </div>
+      </section>
+
+      <!-- 2. Праздник → призраки → похищение (6.6–29.2) -->
+      <section id="s2" class="clip" data-start="6.6" data-duration="22.6" data-track-index="1">
+        <div id="s2-scene" class="scene">
+          <div id="s2-world" class="world">
+            <svg id="s2-sky" class="layer" viewBox="0 0 1920 1080"></svg>
+            <svg id="s2-night" class="layer" viewBox="0 0 1920 1080" style="opacity: 0"></svg>
+            <svg id="s2-fx" class="layer" viewBox="0 0 1920 1080"></svg>
+            <svg id="s2-town" class="layer" viewBox="0 0 1920 1080"></svg>
+            <svg id="s2-bunting" class="layer" viewBox="0 0 1920 1080"></svg>
+            <svg id="s2-stage" class="layer" viewBox="0 0 1920 1080"></svg>
+            <div id="s2-cast"></div>
+            <svg id="s2-wind" class="layer" viewBox="0 0 1920 1080"></svg>
+            <div id="s2-confetti"></div>
+          </div>
+          <p id="s2-cap-a" class="caption top">Однажды бобы праздновали весёлый Праздник бобов вместе со своим добрым королём.</p>
+          <p id="s2-cap-b" class="caption top">Но вдруг, откуда ни возьмись, налетели призраки!</p>
+          <p id="s2-cap-c" class="caption top">Они схватили короля бобов и унесли его далеко-далеко…</p>
+        </div>
+      </section>
+
+      <!-- 3. Три брата и сестрёнка (28.6–38.2) -->
+      <section id="s3" class="clip" data-start="28.6" data-duration="9.6" data-track-index="2">
+        <div id="s3-scene" class="scene">
+          <div id="s3-world" class="world">
+            <svg id="s3-sky" class="layer" viewBox="0 0 1920 1080"></svg>
+            <svg id="s3-town" class="layer" viewBox="0 0 1920 1080"></svg>
+            <div id="s3-cast"></div>
+          </div>
+          <p id="s3-cap" class="caption top">Тогда три брата и их младшая сестрёнка решили: мы найдём короля и вернём его домой!</p>
+        </div>
+      </section>
+
+      <!-- 4. В путь (37.6–46) -->
+      <section id="s4" class="clip" data-start="37.6" data-duration="8.4" data-track-index="3">
+        <div id="s4-scene" class="scene">
+          <div id="s4-world" class="world">
+            <svg id="s4-sky" class="layer" viewBox="0 0 1920 1080"></svg>
+            <svg id="s4-far" class="layer wide" viewBox="0 0 2880 1080"></svg>
+            <svg id="s4-mid" class="layer wide" viewBox="0 0 2880 1080"></svg>
+            <svg id="s4-road" class="layer wide" viewBox="0 0 2880 1080"></svg>
+            <div id="s4-cast"></div>
+          </div>
+          <h1 id="s4-title" class="title" style="top: 150px; font-size: 230px"></h1>
+          <p id="s4-sub" class="pill" style="top: 470px">История начинается</p>
+        </div>
+      </section>
+    </div>
+
+    <script>
+      const PLUM = "#2a2433";
+      // Детерминированный «случай»
+      let seed = 11;
+      const rand = () => ((seed = (seed * 16807) % 2147483647) / 2147483647);
+      const $ = (id) => document.getElementById(id);
+      const put = (id, html) => { $(id).innerHTML = html; };
+
+      // ---------- Рисовалки ----------
+      function grad(id, stops) {
+        return `<linearGradient id="${id}" x1="0" y1="0" x2="0" y2="1">` + stops.map(([o, c]) => `<stop offset="${o}" stop-color="${c}"/>`).join("") + `</linearGradient>`;
+      }
+      // Холмы: гладкая волна по ширине w с основанием base и амплитудой amp
+      function hills(w, base, amp, waves, fill, phase = 0) {
+        let d = `M0 1080 L0 ${base}`;
+        const step = w / waves;
+        for (let i = 0; i < waves; i++) {
+          const x0 = i * step, top = base - amp * (0.7 + 0.3 * Math.sin(i * 1.7 + phase));
+          d += ` Q ${x0 + step / 2} ${top} ${x0 + step} ${base}`;
+        }
+        d += ` L ${w} 1080 Z`;
+        return `<path d="${d}" fill="${fill}" stroke="${PLUM}" stroke-width="8" stroke-linejoin="round"/>`;
+      }
+      function cloud(x, y, s, id = "") {
+        return `<g ${id ? `id="${id}"` : ""} transform="translate(${x} ${y}) scale(${s})">` +
+          `<path d="M-120 30 Q-130 -20 -80 -25 Q-70 -75 -10 -65 Q30 -100 75 -55 Q130 -60 125 0 Q150 35 100 45 L-90 45 Q-140 45 -120 30 Z" fill="#fffdf6" stroke="${PLUM}" stroke-width="7" stroke-linejoin="round"/></g>`;
+      }
+      function tree(x, y, s, c = "#5cb34a") {
+        return `<g transform="translate(${x} ${y}) scale(${s})"><rect x="-9" y="-40" width="18" height="44" rx="6" fill="#8a5a32" stroke="${PLUM}" stroke-width="6"/>` +
+          `<path d="M0 -150 Q60 -140 55 -85 Q75 -55 40 -38 L-40 -38 Q-75 -55 -55 -85 Q-60 -140 0 -150 Z" fill="${c}" stroke="${PLUM}" stroke-width="6" stroke-linejoin="round"/>` +
+          `<ellipse cx="-20" cy="-110" rx="12" ry="18" fill="#fff" opacity="0.35"/></g>`;
+      }
+      function house(x, y, w, h, wall, roof) {
+        return `<g transform="translate(${x} ${y})">` +
+          `<rect x="${-w / 2}" y="${-h}" width="${w}" height="${h}" rx="14" fill="${wall}" stroke="${PLUM}" stroke-width="7"/>` +
+          `<path d="M${-w / 2 - 22} ${-h + 6} L0 ${-h - w * 0.55} L${w / 2 + 22} ${-h + 6} Z" fill="${roof}" stroke="${PLUM}" stroke-width="7" stroke-linejoin="round"/>` +
+          `<circle cx="0" cy="${-h + 40}" r="17" fill="#ffe7a1" stroke="${PLUM}" stroke-width="6"/>` +
+          `<rect x="-18" y="-58" width="36" height="58" rx="18" fill="#8a5a32" stroke="${PLUM}" stroke-width="6"/></g>`;
+      }
+      function crownSVG(id, x, y, s, extra = "") {
+        return `<g transform="translate(${x} ${y}) scale(${s})"><g id="${id}" ${extra}><path d="M-48 0 L-44 -46 L-22 -22 L0 -58 L22 -22 L44 -46 L48 0 Z" fill="#f2c230" stroke="${PLUM}" stroke-width="7" stroke-linejoin="round"/>` +
+          `<circle cx="0" cy="-16" r="8" fill="#e8452c" stroke="${PLUM}" stroke-width="4"/><circle cx="-26" cy="-8" r="5" fill="#3a7bd9" stroke="${PLUM}" stroke-width="3"/><circle cx="26" cy="-8" r="5" fill="#3a7bd9" stroke="${PLUM}" stroke-width="3"/></g></g>`;
+      }
+      // Боб-персонаж (SVG, начало координат — между ступнями). Части с id для риггинга.
+      function beanSVG(id, color, opt = {}) {
+        let s = `<g id="${id}-rig">`;
+        if (opt.cape) s += `<path d="M-70 -150 Q-120 -40 -96 -6 L96 -6 Q120 -40 70 -150 Z" fill="#d93a3a" stroke="${PLUM}" stroke-width="8" stroke-linejoin="round"/>`;
+        s += `<g id="${id}-feet"><ellipse id="${id}-fl" cx="-32" cy="-8" rx="30" ry="15" fill="${color}" stroke="${PLUM}" stroke-width="7"/>` +
+          `<ellipse id="${id}-fr" cx="32" cy="-8" rx="30" ry="15" fill="${color}" stroke="${PLUM}" stroke-width="7"/></g>`;
+        for (const [side, sx] of [["L", -1], ["R", 1]]) {
+          const d = `M${74 * sx} -96 Q${112 * sx} -78 ${112 * sx} -48`;
+          s += `<g id="${id}-arm${side}"><path d="${d}" fill="none" stroke="${PLUM}" stroke-width="22" stroke-linecap="round"/><path d="${d}" fill="none" stroke="${color}" stroke-width="10" stroke-linecap="round"/></g>`;
+        }
+        s += `<g id="${id}-body"><path d="M0 -215 C62 -215 86 -160 82 -100 C79 -40 66 -14 0 -12 C-66 -14 -79 -40 -82 -100 C-86 -160 -62 -215 0 -215 Z" fill="${color}" stroke="${PLUM}" stroke-width="9"/>` +
+          `<path d="M60 -150 C70 -90 60 -40 20 -22 C55 -30 72 -70 72 -110 Z" fill="rgba(0,0,0,0.12)"/>` +
+          `<ellipse cx="-38" cy="-165" rx="15" ry="30" transform="rotate(25 -38 -165)" fill="#fff" opacity="0.55"/></g>`;
+        s += `<g id="${id}-eyes"><ellipse cx="-22" cy="-142" rx="10" ry="17" fill="${PLUM}"/><ellipse cx="22" cy="-142" rx="10" ry="17" fill="${PLUM}"/>` +
+          `<circle cx="-19" cy="-149" r="4" fill="#fff"/><circle cx="25" cy="-149" r="4" fill="#fff"/></g>`;
+        s += `<g id="${id}-brows" opacity="0"><path d="M-36 -172 L-10 -162" stroke="${PLUM}" stroke-width="7" stroke-linecap="round"/><path d="M36 -172 L10 -162" stroke="${PLUM}" stroke-width="7" stroke-linecap="round"/></g>`;
+        s += `<path id="${id}-mouth" d="M-15 -112 Q0 -98 15 -112" fill="none" stroke="${PLUM}" stroke-width="6" stroke-linecap="round"/>`;
+        s += `<ellipse id="${id}-oh" cx="0" cy="-108" rx="9" ry="12" fill="${PLUM}" opacity="0"/>`;
+        if (opt.mustache) s += `<path d="M0 -118 Q-20 -128 -40 -110 Q-24 -104 0 -112 Q24 -104 40 -110 Q20 -128 0 -118 Z" fill="#fffdf6" stroke="${PLUM}" stroke-width="5" stroke-linejoin="round"/>`;
+        if (opt.bow) s += `<g transform="translate(34 -200) rotate(18)"><path d="M0 0 L-34 -18 L-34 18 Z M0 0 L34 -18 L34 18 Z" fill="#ff7eb6" stroke="${PLUM}" stroke-width="6" stroke-linejoin="round"/><circle r="10" fill="#ff7eb6" stroke="${PLUM}" stroke-width="6"/></g>`;
+        if (opt.crown) s += crownSVG(`${id}-crown`, 0, -212, 1);
+        s += `</g>`;
+        return s;
+      }
+      // Актёр: div в точке (x, низ y) с SVG внутри; scale 1 ≈ 300 px холста
+      function actor(parent, id, x, y, scale, svg) {
+        const w = 300 * scale, h = 300 * scale;
+        const d = document.createElement("div");
+        d.id = id; d.className = "actor";
+        d.setAttribute("data-layout-allow-overflow", "");
+        d.style.left = (x - w / 2) + "px"; d.style.top = (y - h) + "px"; d.style.width = w + "px"; d.style.height = h + "px";
+        d.innerHTML = `<svg viewBox="-150 -280 300 300" width="${w}" height="${h}">${svg}</svg>`;
+        $(parent).appendChild(d);
+      }
+      function ghostSVG(id) {
+        const arm = (sx) => { const d = `M${80 * sx} 0 Q${118 * sx} -10 ${122 * sx} -40`; return `<path d="${d}" fill="none" stroke="${PLUM}" stroke-width="20" stroke-linecap="round"/><path d="${d}" fill="none" stroke="#fbfcff" stroke-width="9" stroke-linecap="round"/>`; };
+        return `<g id="${id}-rig"><path d="M-82 30 C-86 -100 86 -100 82 30 L82 78 Q62 58 41 80 Q20 100 0 78 Q-20 58 -41 80 Q-62 100 -82 78 Z" fill="#fbfcff" stroke="${PLUM}" stroke-width="8" stroke-linejoin="round"/>` +
+          `<path d="M50 -50 Q70 0 60 60 Q72 20 74 -10 Q70 -40 50 -50 Z" fill="#cfd9f2" opacity="0.8"/>` +
+          `<ellipse cx="-24" cy="-22" rx="11" ry="17" fill="${PLUM}"/><ellipse cx="22" cy="-22" rx="11" ry="17" fill="${PLUM}"/>` +
+          `<circle cx="-21" cy="-29" r="4" fill="#fff"/><circle cx="25" cy="-29" r="4" fill="#fff"/>` +
+          `<ellipse cx="0" cy="14" rx="12" ry="15" fill="${PLUM}"/><ellipse cx="0" cy="20" rx="7" ry="6" fill="#ff8aa0"/>` + arm(-1) + arm(1) + `</g>`;
+      }
+      function ghost(parent, id, x, y, scale) {
+        const w = 300 * scale, h = 260 * scale;
+        const d = document.createElement("div");
+        d.id = id; d.className = "actor";
+        d.setAttribute("data-layout-allow-overflow", "");
+        d.style.left = (x - w / 2) + "px"; d.style.top = (y - h / 2) + "px"; d.style.width = w + "px"; d.style.height = h + "px";
+        d.innerHTML = `<svg viewBox="-150 -130 300 260" width="${w}" height="${h}"><defs><filter id="${id}-blur" x="-50%" width="200%"><feGaussianBlur id="${id}-blurv" stdDeviation="0 0"/></filter></defs><g filter="url(#${id}-blur)">${ghostSVG(id)}</g></svg>`;
+        $(parent).appendChild(d);
+      }
+      function titleLetters(id, text) {
+        $(id).innerHTML = [...text].map((ch, i) => `<span id="${id}-l${i}">${ch === " " ? "&nbsp;" : ch}</span>`).join("");
+        return [...text].length;
+      }
+
+      const C = { red: "#e8453c", blue: "#3a7bd9", yellow: "#f2c230", green: "#3fb24a", purple: "#8e4ad9",
+        orange: "#ff9a3c", pink: "#ff8fb8", teal: "#2fbfae", lilac: "#b49cff", lime: "#b6dc4a" };
+      const PAL = ["#e8453c", "#f2c230", "#3a7bd9", "#3fb24a", "#ff8fb8", "#8e4ad9"];
+
+      // ---------- Сцена 1: царство ----------
+      put("s1-sky", `<defs>${grad("s1g", [[0, "#7cc4f5"], [0.65, "#cfeaf8"], [1, "#fff4dc"]])}</defs><rect width="1920" height="1080" fill="url(#s1g)"/>` +
+        `<g transform="translate(1520 210)"><g id="s1-rays">${[...Array(12)].map((_, i) => `<rect x="-10" y="-190" width="20" height="70" rx="10" fill="#ffd34d" stroke="${PLUM}" stroke-width="5" transform="rotate(${i * 30})"/>`).join("")}</g>` +
+        `<circle r="100" fill="#ffd34d" stroke="${PLUM}" stroke-width="8"/><ellipse cx="-30" cy="-35" rx="22" ry="34" fill="#fff" opacity="0.4" transform="rotate(30 -30 -35)"/></g>` +
+        cloud(330, 200, 1.1, "s1-c1") + cloud(980, 130, 0.8, "s1-c2") + cloud(1250, 330, 0.7, "s1-c3"));
+      put("s1-far", hills(2880, 640, 120, 7, "#8fd16a", 0.4) + [200, 520, 980, 1400, 1900, 2350, 2700].map((x, i) => tree(x, 600 + (i % 2) * 20, 0.55 + (i % 3) * 0.1, i % 2 ? "#4fa83c" : "#62bb4c")).join(""));
+      // замок на холме: башни с куполами-бобами и флажками
+      let castle = `<g transform="translate(960 640) scale(0.78)">`;
+      castle += `<rect x="-170" y="-170" width="340" height="170" rx="16" fill="#f3e3c3" stroke="${PLUM}" stroke-width="8"/>`;
+      castle += `<rect x="-40" y="-90" width="80" height="90" rx="40" fill="#8a5a32" stroke="${PLUM}" stroke-width="7"/>`;
+      [[-200, 260, C.red], [200, 260, C.blue], [-80, 320, C.yellow], [80, 320, C.green], [0, 390, C.purple]].forEach(([x, h, c], i) => {
+        castle += `<rect x="${x - 45}" y="${-h}" width="90" height="${h}" rx="12" fill="#f8ecd2" stroke="${PLUM}" stroke-width="8"/>`;
+        castle += `<path d="M${x} ${-h - 110} C${x + 50} ${-h - 110} ${x + 58} ${-h - 40} ${x + 52} ${-h} L${x - 52} ${-h} C${x - 58} ${-h - 40} ${x - 50} ${-h - 110} ${x} ${-h - 110} Z" fill="${c}" stroke="${PLUM}" stroke-width="8"/>`;
+        castle += `<circle cx="${x}" cy="${-h + 60}" r="16" fill="#ffe7a1" stroke="${PLUM}" stroke-width="6"/>`;
+        castle += `<line x1="${x}" y1="${-h - 108}" x2="${x}" y2="${-h - 170}" stroke="${PLUM}" stroke-width="7" stroke-linecap="round"/>`;
+        castle += `<path id="s1-flag${i}" d="M${x} ${-h - 170} L${x + 56} ${-h - 152} L${x} ${-h - 134} Z" fill="${c}" stroke="${PLUM}" stroke-width="6" stroke-linejoin="round"/>`;
+      });
+      castle += `</g>`;
+      put("s1-castle", castle);
+      put("s1-near", hills(2880, 840, 90, 5, "#6cc04f", 1.3) +
+        [300, 820, 1500, 2100, 2600].map((x) => `<g transform="translate(${x} 800)">${[0, 1, 2].map((k) => `<circle cx="${k * 26 - 26}" cy="${-(k % 2) * 10}" r="13" fill="${["#ff8fb8", "#ffd34d", "#ffffff"][k]}" stroke="${PLUM}" stroke-width="5"/>`).join("")}</g>`).join(""));
+      put("s1-front", hills(2880, 1000, 70, 6, "#4fa83c", 2.1));
+      const s1Beans = [["s1-b0", 420, C.orange, 0.62], ["s1-b1", 610, C.pink, 0.55], ["s1-b2", 1300, C.teal, 0.6], ["s1-b3", 1490, C.lime, 0.55], ["s1-b4", 1680, C.lilac, 0.62]];
+      s1Beans.forEach(([id, x, c, sc]) => actor("s1-cast", id, x, 880, sc, beanSVG(id, c)));
+      const s1TitleN = titleLetters("s1-title", "Царство бобов");
+
+      // ---------- Сцена 2: праздник ----------
+      put("s2-sky", `<defs>${grad("s2g", [[0, "#8fd0f7"], [0.7, "#ffe6c4"], [1, "#ffd59e"]])}</defs><rect width="1920" height="1080" fill="url(#s2g)"/>` + cloud(260, 170, 0.9) + cloud(1650, 140, 0.8));
+      put("s2-night", `<defs>${grad("s2n", [[0, "#1f1a46"], [0.6, "#4b2f6e"], [1, "#7a4a6e"]])}</defs><rect width="1920" height="1080" fill="url(#s2n)"/>` +
+        `<g transform="translate(1560 200)"><circle r="78" fill="#fff6c9" stroke="${PLUM}" stroke-width="7"/><circle cx="26" cy="-14" r="64" fill="#3b2b62"/></g>` +
+        [...Array(26)].map((_, i) => `<circle class="star" cx="${Math.round(rand() * 1900)}" cy="${Math.round(rand() * 420)}" r="${3 + (i % 3) * 2}" fill="#fff6c9"/>`).join(""));
+      put("s2-town", hills(1920, 760, 40, 4, "#9ccf7a", 0.9) +
+        house(170, 760, 170, 170, "#ffe2b8", C.red) + house(420, 760, 150, 210, "#f6d0e0", C.blue) +
+        house(1500, 760, 160, 190, "#d6efd0", C.yellow) + house(1760, 760, 180, 160, "#e3dcff", C.green) +
+        `<rect x="0" y="860" width="1920" height="220" fill="#e9c98f" stroke="${PLUM}" stroke-width="8"/>` +
+        [...Array(12)].map((_, i) => `<ellipse cx="${80 + i * 160}" cy="${930 + (i % 2) * 60}" rx="46" ry="16" fill="#d8b47a"/>`).join(""));
+      // гирлянды флажков и фонарики
+      let bunt = "";
+      [[0, 300, 960, 430, 1920, 300, "s2-bunt0"], [140, 420, 960, 520, 1780, 420, "s2-bunt1"]].forEach(([x0, y0, cx, cy, x1, y1, gid], r) => {
+        bunt += `<g id="${gid}"><path d="M${x0} ${y0} Q${cx} ${cy + 80} ${x1} ${y1}" fill="none" stroke="${PLUM}" stroke-width="6"/>`;
+        for (let i = 0; i < 18; i++) {
+          const t = (i + 0.5) / 18;
+          const x = (1 - t) * (1 - t) * x0 + 2 * (1 - t) * t * cx + t * t * x1;
+          const y = (1 - t) * (1 - t) * y0 + 2 * (1 - t) * t * (cy + 80) + t * t * y1;
+          bunt += `<path d="M${x - 24} ${y} L${x + 24} ${y} L${x} ${y + 54} Z" fill="${PAL[(i + r) % 6]}" stroke="${PLUM}" stroke-width="5" stroke-linejoin="round"/>`;
+        }
+        bunt += `</g>`;
+      });
+      [[300, 470], [700, 520], [1220, 520], [1620, 470]].forEach(([x, y], i) => {
+        bunt += `<g transform="translate(${x} ${y})"><line y1="-40" y2="0" stroke="${PLUM}" stroke-width="5"/><circle id="s2-glow${i}" cy="40" r="60" fill="#ffd34d" opacity="0.35"/><ellipse cy="40" rx="30" ry="40" fill="#ffb347" stroke="${PLUM}" stroke-width="6"/><rect x="-14" y="-6" width="28" height="12" rx="4" fill="${PLUM}"/></g>`;
+      });
+      put("s2-bunting", bunt);
+      put("s2-stage", `<rect x="760" y="760" width="400" height="110" rx="18" fill="#c0874a" stroke="${PLUM}" stroke-width="8"/>` +
+        `<rect x="740" y="740" width="440" height="34" rx="14" fill="#e8453c" stroke="${PLUM}" stroke-width="8"/>` +
+        [...Array(5)].map((_, i) => `<circle cx="${790 + i * 85}" cy="757" r="8" fill="#f2c230" stroke="${PLUM}" stroke-width="4"/>`).join("") +
+        crownSVG("s2-crownfall", 960, 742, 1.0, 'opacity="0"'));
+      actor("s2-cast", "s2-king", 960, 748, 1.05, beanSVG("s2-king", C.purple, { crown: true, cape: true, mustache: true }));
+      const fans = [["s2-f0", 230, C.orange, 0.62], ["s2-f1", 420, C.pink, 0.58], ["s2-f2", 600, C.teal, 0.66], ["s2-f3", 1320, C.lime, 0.6], ["s2-f4", 1500, C.lilac, 0.64], ["s2-f5", 1690, C.red, 0.58]];
+      fans.forEach(([id, x, c, sc]) => actor("s2-cast", id, x, 900, sc, beanSVG(id, c)));
+      ghost("s2-cast", "s2-g0", 2200, 260, 0.9);
+      ghost("s2-cast", "s2-g1", -300, 360, 0.8);
+      ghost("s2-cast", "s2-g2", 2300, 480, 0.85);
+      put("s2-wind", [...Array(7)].map((_, i) => `<path id="s2-w${i}" d="M${-200 - i * 40} ${180 + i * 95} q 260 -40 520 0 t 520 0" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round" opacity="0"/>`).join(""));
+      const confettiEls = [];
+      for (let i = 0; i < 60; i++) {
+        const d = document.createElement("div");
+        d.className = "confetti";
+        d.style.left = (i % 2 ? 1700 : 160) + "px"; d.style.top = "820px"; d.style.background = PAL[i % 6];
+        $("s2-confetti").appendChild(d);
+        confettiEls.push({ el: d, side: i % 2 ? -1 : 1, vx: 300 + rand() * 900, up: 500 + rand() * 450, spin: (rand() - 0.5) * 1080, wave: i < 30 ? 0 : 1 });
+      }
+      put("s2-fx", [[520, 220, "#ffd34d"], [1400, 180, "#ff8fb8"], [960, 120, "#7cc4f5"]].map(([x, y, c], i) =>
+        `<g transform="translate(${x} ${y})"><g id="s2-fw${i}" opacity="0">` + [...Array(12)].map((_, k) => `<line x1="0" y1="-30" x2="0" y2="-90" stroke="${c}" stroke-width="10" stroke-linecap="round" transform="rotate(${k * 30})"/>`).join("") + `<circle r="18" fill="#fff" stroke="${c}" stroke-width="6"/></g></g>`).join(""));
+
+      // ---------- Сцена 3: герои ----------
+      put("s3-sky", `<defs>${grad("s3g", [[0, "#2c2556"], [0.6, "#5a3f7e"], [1, "#a8667a"]])}</defs><rect width="1920" height="1080" fill="url(#s3g)"/>` +
+        `<g transform="translate(1600 190)"><circle r="78" fill="#fff6c9" stroke="${PLUM}" stroke-width="7"/><circle cx="26" cy="-14" r="64" fill="#3d2d63"/></g>` +
+        [...Array(30)].map((_, i) => `<circle class="s3star" cx="${Math.round(rand() * 1900)}" cy="${Math.round(rand() * 460)}" r="${3 + (i % 3) * 2}" fill="#fff6c9"/>`).join(""));
+      put("s3-town", hills(1920, 760, 40, 4, "#5f8a6a", 0.9) +
+        house(260, 760, 170, 170, "#c9b7a6", "#9a4a4a") + house(1660, 760, 160, 190, "#b3c4b0", "#a8902e") +
+        `<rect x="0" y="860" width="1920" height="220" fill="#b39a76" stroke="${PLUM}" stroke-width="8"/>` +
+        `<path d="M200 860 Q420 900 620 870" fill="none" stroke="${PLUM}" stroke-width="5"/>` +
+        [[230, C.red], [300, C.yellow], [380, C.blue], [460, C.green], [540, C.pink]].map(([x, c], i) => `<path d="M${x - 22} ${876 + (i % 2) * 8} L${x + 22} ${872 + (i % 2) * 8} L${x + 6} 918 Z" fill="${c}" stroke="${PLUM}" stroke-width="5" stroke-linejoin="round" transform="rotate(${i * 9 - 18} ${x} 890)"/>`).join("") +
+        `<g transform="translate(1180 905)"><circle id="s3-crownglow" r="90" fill="#ffe27a" opacity="0.4"/></g>` +
+        crownSVG("s3-crown", 1180, 935, 1.15) +
+        `<g transform="translate(1214 860)"><path id="s3-sparkle" d="M0 -26 L7 -7 L26 0 L7 7 L0 26 L-7 7 L-26 0 L-7 -7 Z" fill="#fffbe0" stroke="${PLUM}" stroke-width="4"/></g>`);
+      const heroes = [["s3-red", 470, C.red, 0.9, {}], ["s3-blue", 690, C.blue, 0.9, {}], ["s3-green", 910, C.green, 0.9, {}], ["s3-yellow", 1460, C.yellow, 0.72, { bow: true }]];
+      heroes.forEach(([id, x, c, sc, o]) => actor("s3-cast", id, x, 920, sc, beanSVG(id, c, o)));
+
+      // ---------- Сцена 4: в путь ----------
+      put("s4-sky", `<defs>${grad("s4g", [[0, "#ffb37a"], [0.45, "#ffd9a8"], [1, "#fff1d6"]])}</defs><rect width="1920" height="1080" fill="url(#s4g)"/>` +
+        `<g transform="translate(960 560)"><circle id="s4-sun" r="190" fill="#ffd34d" stroke="${PLUM}" stroke-width="8"/></g>` + cloud(330, 220, 0.9) + cloud(1600, 170, 1.0));
+      let far = hills(2880, 600, 210, 6, "#b9a6e8", 0.2);
+      far += `<g transform="translate(2010 560)"><rect x="-60" y="-120" width="120" height="120" rx="12" fill="#6e5aa8" stroke="${PLUM}" stroke-width="7"/><path d="M-60 -120 L0 -200 L60 -120 Z" fill="#4b3d80" stroke="${PLUM}" stroke-width="7" stroke-linejoin="round"/><circle cx="0" cy="-60" r="14" fill="#cfe6ff" stroke="${PLUM}" stroke-width="5"/></g>`;
+      put("s4-far", far);
+      let mid = hills(2880, 760, 110, 6, "#7fc35d", 1.1);
+      [[620, 700], [1520, 690], [2420, 700]].forEach(([x, y]) => {
+        mid += `<g transform="translate(${x} ${y})"><path d="M-200 0 Q0 -120 200 0" fill="none" stroke="${PLUM}" stroke-width="14"/><path d="M-200 0 Q0 -120 200 0" fill="none" stroke="#c9a46a" stroke-width="6"/>` +
+          [-160, -80, 0, 80, 160].map((dx) => `<line x1="${dx}" y1="${-Math.round(120 * (1 - (dx / 200) ** 2) * 0.5)}" x2="${dx}" y2="40" stroke="${PLUM}" stroke-width="6"/>`).join("") + `</g>`;
+      });
+      mid += [300, 1000, 1800, 2600].map((x, i) => tree(x, 760, 0.6, i % 2 ? "#4fa83c" : "#62bb4c")).join("");
+      put("s4-mid", mid);
+      put("s4-road", hills(2880, 900, 50, 5, "#62b44a", 2.4) + `<path d="M0 990 Q720 950 1440 990 T2880 990" fill="none" stroke="#e9c98f" stroke-width="70" stroke-linecap="round"/>` +
+        `<path d="M0 990 Q720 950 1440 990 T2880 990" fill="none" stroke="${PLUM}" stroke-width="6" stroke-dasharray="40 50" opacity="0.25"/>`);
+      const runners = [["s4-red", 560, C.red, 0.78, {}], ["s4-blue", 780, C.blue, 0.78, {}], ["s4-green", 1000, C.green, 0.78, {}], ["s4-yellow", 1210, C.yellow, 0.64, { bow: true }]];
+      runners.forEach(([id, x, c, sc, o]) => actor("s4-cast", id, x, 1000, sc, beanSVG(id, c, o)));
+      const s4TitleN = titleLetters("s4-title", "Держись!");
+
+      // ================= Таймлайн =================
+      const tl = gsap.timeline({ paused: true });
+      const O = { transformOrigin: "50% 100%" };
+
+      function blink(id, at) {
+        tl.fromTo(`#${id}-eyes`, { scaleY: 1 }, { scaleY: 0.1, duration: 0.07, yoyo: true, repeat: 1, ease: "none", transformOrigin: "50% 50%", immediateRender: false }, at);
+      }
+      function wave(id, side, at, times = 3) {
+        tl.fromTo(`#${id}-arm${side}`, { rotation: 0 }, { rotation: side === "R" ? -70 : 70, duration: 0.22, yoyo: true, repeat: times * 2 - 1, ease: "sine.inOut", svgOrigin: side === "R" ? "74 -96" : "-74 -96", immediateRender: false }, at);
+      }
+      // прыжок: присед → взлёт с вытягиванием → приземление со сплющиванием → отскок формы
+      function hop(id, at, height = 120, n = 1, gap = 0.12) {
+        for (let k = 0; k < n; k++) {
+          const t = at + k * (0.62 + gap);
+          tl.fromTo(`#${id}-rig`, { scaleY: 1, scaleX: 1 }, { scaleY: 0.82, scaleX: 1.14, duration: 0.1, ease: "power1.in", ...O, immediateRender: false }, t);
+          tl.fromTo(`#${id}-rig`, { scaleY: 0.82, scaleX: 1.14 }, { scaleY: 1.12, scaleX: 0.9, duration: 0.12, ease: "power2.out", ...O, immediateRender: false }, t + 0.1);
+          tl.fromTo(`#${id}`, { y: 0 }, { y: -height, duration: 0.24, ease: "power2.out", immediateRender: false }, t + 0.1);
+          tl.fromTo(`#${id}`, { y: -height }, { y: 0, duration: 0.2, ease: "power2.in", immediateRender: false }, t + 0.34);
+          tl.fromTo(`#${id}-rig`, { scaleY: 1.12, scaleX: 0.9 }, { scaleY: 0.86, scaleX: 1.12, duration: 0.08, ease: "power1.out", ...O, immediateRender: false }, t + 0.54);
+          tl.fromTo(`#${id}-rig`, { scaleY: 0.86, scaleX: 1.12 }, { scaleY: 1, scaleX: 1, duration: 0.2, ease: "back.out(3)", ...O, immediateRender: false }, t + 0.62);
+        }
+      }
+      function breathe(id, at, dur) {
+        const n = Math.max(0, Math.floor(dur / 1.2) - 1);
+        tl.fromTo(`#${id}-body`, { scaleY: 1 }, { scaleY: 1.035, duration: 0.6, yoyo: true, repeat: n * 2 + 1, ease: "sine.inOut", svgOrigin: "0 -12" }, at);
+      }
+      function caption(id, at, until) {
+        tl.fromTo(id, { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.5, ease: "back.out(1.6)" }, at);
+        tl.to(id, { opacity: 0, y: -10, duration: 0.35, ease: "power1.in" }, until - 0.35);
+      }
+      // переход «ирисом»: новая сцена раскрывается кругом из центра
+      function iris(sceneId, at) {
+        tl.fromTo(sceneId, { clipPath: "circle(0% at 50% 50%)" }, { clipPath: "circle(80% at 50% 50%)", duration: 0.6, ease: "power2.inOut" }, at);
+      }
+      function letters(id, n, at) {
+        for (let i = 0; i < n; i++) tl.fromTo(`#${id}-l${i}`, { y: 140, opacity: 0, rotation: i % 2 ? 12 : -12 }, { y: 0, opacity: 1, rotation: 0, duration: 0.55, ease: "back.out(2.4)" }, at + i * 0.045);
+      }
+
+      // ---- 1. Царство (0–7.2): камера опускается с неба на королевство
+      tl.fromTo("#s1-world", { scale: 1.35, y: 260 }, { scale: 1, y: 0, duration: 4.2, ease: "power2.inOut" }, 0);
+      tl.fromTo("#s1-rays", { rotation: 0 }, { rotation: 60, duration: 7.2, ease: "none", svgOrigin: "0 0" }, 0);
+      [["#s1-c1", 90], ["#s1-c2", -70], ["#s1-c3", 110]].forEach(([c, dx]) => tl.fromTo(c, { x: 0 }, { x: dx, duration: 7.2, ease: "none" }, 0));
+      tl.fromTo("#s1-far", { x: 0 }, { x: -120, duration: 7.2, ease: "none" }, 0);
+      tl.fromTo("#s1-near", { x: 0 }, { x: -260, duration: 7.2, ease: "none" }, 0);
+      tl.fromTo("#s1-front", { x: 0 }, { x: -420, duration: 7.2, ease: "none" }, 0);
+      for (let i = 0; i < 5; i++) tl.fromTo(`#s1-flag${i}`, { scaleX: 1 }, { scaleX: 0.75, duration: 0.35, yoyo: true, repeat: 19, ease: "sine.inOut", transformOrigin: "0% 50%" }, 0.1 * i);
+      s1Beans.forEach(([id], i) => {
+        tl.fromTo(`#${id}`, { y: 260 }, { y: 0, duration: 0.6, ease: "back.out(2)" }, 2.3 + i * 0.15);
+        wave(id, i % 2 ? "L" : "R", 3.2 + i * 0.15, 3);
+        blink(id, 4.6 + i * 0.3);
+        hop(id, 5.4 + (i % 2) * 0.25, 70, 1);
+      });
+      letters("s1-title", s1TitleN, 0.6);
+      tl.to("#s1-title", { opacity: 0, y: -40, duration: 0.4 }, 6.4);
+      caption("#s1-cap", 1.4, 6.9);
+
+      // ---- 2. Праздник (6.6–15)
+      iris("#s2-scene", 6.6);
+      tl.fromTo("#s2-world", { scale: 1.08 }, { scale: 1, duration: 8, ease: "power1.out" }, 6.6);
+      tl.fromTo("#s2-bunt0", { rotation: -1 }, { rotation: 1, duration: 1.1, yoyo: true, repeat: 7, ease: "sine.inOut", svgOrigin: "960 300" }, 6.6);
+      tl.fromTo("#s2-bunt1", { rotation: 1 }, { rotation: -1, duration: 1.3, yoyo: true, repeat: 5, ease: "sine.inOut", svgOrigin: "960 420" }, 6.6);
+      for (let i = 0; i < 4; i++) tl.fromTo(`#s2-glow${i}`, { scale: 0.9 }, { scale: 1.15, duration: 0.8, yoyo: true, repeat: 9, ease: "sine.inOut", transformOrigin: "50% 50%" }, 6.6 + i * 0.2);
+      breathe("s2-king", 6.6, 16);
+      wave("s2-king", "R", 7.6, 4); wave("s2-king", "L", 9.4, 3);
+      hop("s2-king", 11.6, 60, 2, 0.05);
+      blink("s2-king", 8.8); blink("s2-king", 12.9);
+      fans.forEach(([id], i) => {
+        hop(id, 7.4 + (i % 3) * 0.22, 110 + (i % 2) * 40, 5, 0.18);
+        wave(id, i % 2 ? "L" : "R", 7.6 + i * 0.1, 6);
+        blink(id, 9 + i * 0.4);
+      });
+      confettiEls.forEach((c, i) => {
+        const at = (c.wave ? 10.6 : 7.8) + (i % 10) * 0.03;
+        tl.fromTo(c.el, { x: 0, y: 0, rotation: 0 }, { x: c.side * c.vx, y: -c.up, rotation: c.spin / 2, duration: 0.8, ease: "power2.out" }, at);
+        tl.fromTo(c.el, { x: c.side * c.vx, y: -c.up, rotation: c.spin / 2 }, { y: 300, x: c.side * c.vx * 1.25, rotation: c.spin, duration: 2.6, ease: "power1.in", immediateRender: false }, at + 0.8);
+      });
+      [[8.4, 0], [9.6, 1], [11.2, 2], [12.6, 0]].forEach(([at, k]) => {
+        tl.fromTo(`#s2-fw${k}`, { scale: 0.2, opacity: 1 }, { scale: 1.3, opacity: 0, duration: 0.9, ease: "power2.out", transformOrigin: "50% 50%", immediateRender: false }, at);
+      });
+      caption("#s2-cap-a", 7.3, 14.7);
+
+      // ---- призраки (15–22): ночь, ветер, мигают фонари, призраки влетают, бобы в испуге разбегаются
+      tl.fromTo("#s2-night", { opacity: 0 }, { opacity: 0.92, duration: 1.6, ease: "power1.inOut" }, 15);
+      tl.fromTo(".star", { opacity: 0 }, { opacity: 1, duration: 0.4, stagger: 0.02 }, 15.8);
+      for (let i = 0; i < 4; i++) tl.fromTo(`#s2-glow${i}`, { opacity: 0.35 }, { opacity: 0.05, duration: 0.12, yoyo: true, repeat: 15, ease: "steps(1)" }, 15.4 + i * 0.07);
+      tl.fromTo("#s2-bunt0", { rotation: 1 }, { rotation: -6, duration: 0.4, yoyo: true, repeat: 15, ease: "sine.inOut", svgOrigin: "0 300", immediateRender: false }, 15.4);
+      tl.fromTo("#s2-bunt1", { rotation: -1 }, { rotation: 5, duration: 0.35, yoyo: true, repeat: 17, ease: "sine.inOut", svgOrigin: "1780 420", immediateRender: false }, 15.4);
+      for (let i = 0; i < 7; i++) {
+        tl.fromTo(`#s2-w${i}`, { opacity: 0, x: 0 }, { opacity: 0.85, x: 900, duration: 0.6, ease: "power1.in" }, 15.3 + i * 0.35);
+        tl.fromTo(`#s2-w${i}`, { opacity: 0.85, x: 900 }, { opacity: 0, x: 2200, duration: 0.6, ease: "power1.out", immediateRender: false }, 15.9 + i * 0.35);
+      }
+      [["s2-g0", -1350, 120, 15.8], ["s2-g1", 980, -40, 16.3], ["s2-g2", -1180, -60, 16.8]].forEach(([id, dx, dy, at]) => {
+        tl.fromTo(`#${id}`, { x: 0, y: 0 }, { x: dx, y: dy, duration: 1.3, ease: "power3.out" }, at);
+        tl.fromTo(`#${id}-blurv`, { attr: { stdDeviation: "18 0" } }, { attr: { stdDeviation: "0 0" }, duration: 1.0, ease: "power2.out" }, at);
+        tl.fromTo(`#${id}-rig`, { y: 0 }, { y: -26, duration: 0.7, yoyo: true, repeat: 7, ease: "sine.inOut" }, at + 1.3);
+      });
+      [...fans.map((f) => f[0]), "s2-king"].forEach((id, i) => {
+        tl.fromTo(`#${id}-eyes`, { scale: 1 }, { scale: 1.35, duration: 0.2, ease: "back.out(3)", transformOrigin: "50% 50%", immediateRender: false }, 16.2 + (i % 3) * 0.08);
+        tl.fromTo(`#${id}-mouth`, { opacity: 1 }, { opacity: 0, duration: 0.05 }, 16.2);
+        tl.fromTo(`#${id}-oh`, { opacity: 0 }, { opacity: 1, duration: 0.05 }, 16.2);
+      });
+      fans.forEach(([id, x], i) => {
+        const dir = x < 960 ? -1 : 1;
+        hop(id, 16.5 + (i % 3) * 0.1, 140, 1);
+        tl.fromTo(`#${id}`, { x: 0 }, { x: dir * 1100, duration: 1.4, ease: "power2.in" }, 17.3 + (i % 3) * 0.12);
+        tl.fromTo(`#${id}-fl`, { y: 0 }, { y: -18, duration: 0.09, yoyo: true, repeat: 13, ease: "none" }, 17.3);
+        tl.fromTo(`#${id}-fr`, { y: -18 }, { y: 0, duration: 0.09, yoyo: true, repeat: 13, ease: "none" }, 17.3);
+      });
+      caption("#s2-cap-b", 15.6, 21.8);
+
+      // ---- похищение (22–29): призраки обступают короля, корона падает, короля уносят вдаль
+      tl.fromTo("#s2-g0", { x: -1350, y: 120 }, { x: -1490, y: 380, duration: 1.0, ease: "power2.inOut", immediateRender: false }, 21.6);
+      tl.fromTo("#s2-g1", { x: 980, y: -40 }, { x: 1460, y: 210, duration: 1.0, ease: "power2.inOut", immediateRender: false }, 21.75);
+      tl.fromTo("#s2-g2", { x: -1180, y: -60 }, { x: -1340, y: 40, duration: 1.0, ease: "power2.inOut", immediateRender: false }, 21.9);
+      wave("s2-king", "R", 22.8, 3); wave("s2-king", "L", 22.8, 3);
+      tl.fromTo("#s2-king-crown", { opacity: 1 }, { opacity: 0, duration: 0.01 }, 23.3);
+      tl.fromTo("#s2-crownfall", { opacity: 0, y: -280, x: 0, rotation: 0 }, { opacity: 1, duration: 0.01 }, 23.3);
+      tl.fromTo("#s2-crownfall", { y: -280, x: 0, rotation: 0 }, { y: 0, x: 90, rotation: 200, duration: 0.9, ease: "bounce.out", transformOrigin: "50% 100%", immediateRender: false }, 23.32);
+      const base = { "#s2-king": [0, 0], "#s2-g0": [-1490, 380], "#s2-g1": [1460, 210], "#s2-g2": [-1340, 40] };
+      Object.entries(base).forEach(([sel, [bx, by]]) => {
+        tl.fromTo(sel, { x: bx, y: by }, { x: bx + 140, y: by - 120, duration: 1.0, ease: "power1.inOut", immediateRender: false }, 23.4);
+        tl.fromTo(sel, { x: bx + 140, y: by - 120, scale: 1 }, { x: bx + 820, y: by - 760, scale: 0.35, duration: 3.2, ease: "power2.in", immediateRender: false }, 24.4);
+      });
+      tl.fromTo("#s2-king-rig", { rotation: 0 }, { rotation: 14, duration: 0.5, yoyo: true, repeat: 7, ease: "sine.inOut", svgOrigin: "0 -110" }, 23.4);
+      caption("#s2-cap-c", 22.2, 28.9);
+
+      // ---- 3. Герои (28.6–38.2): спрыгивают один за другим, смотрят на корону, хмурятся — решено!
+      iris("#s3-scene", 28.6);
+      tl.fromTo(".s3star", { opacity: 0.3 }, { opacity: 1, duration: 0.7, yoyo: true, repeat: 11, stagger: 0.03, ease: "sine.inOut" }, 28.6);
+      tl.fromTo("#s3-crownglow", { scale: 0.85, opacity: 0.6 }, { scale: 1.15, opacity: 1, duration: 0.9, yoyo: true, repeat: 9, ease: "sine.inOut", transformOrigin: "50% 50%" }, 28.6);
+      tl.fromTo("#s3-sparkle", { scale: 0.4, rotation: 0 }, { scale: 1.2, rotation: 90, duration: 0.6, yoyo: true, repeat: 15, ease: "sine.inOut", transformOrigin: "50% 50%" }, 28.6);
+      heroes.forEach(([id], i) => {
+        const at = 29.3 + i * 0.55;
+        tl.fromTo(`#${id}`, { y: -900 }, { y: 0, duration: 0.5, ease: "power2.in" }, at);
+        tl.fromTo(`#${id}-rig`, { scaleY: 1.2, scaleX: 0.85 }, { scaleY: 0.78, scaleX: 1.2, duration: 0.08, ease: "power1.out", ...O }, at + 0.5);
+        tl.fromTo(`#${id}-rig`, { scaleY: 0.78, scaleX: 1.2 }, { scaleY: 1, scaleX: 1, duration: 0.35, ease: "back.out(3)", ...O, immediateRender: false }, at + 0.58);
+        breathe(id, at + 1, 4.5);
+        blink(id, 32.2 + i * 0.3);
+        tl.fromTo(`#${id}-eyes`, { x: 0 }, { x: id === "s3-yellow" ? -8 : 10, duration: 0.3, ease: "power2.out", immediateRender: false }, 32.6 + i * 0.05);
+        tl.fromTo(`#${id}-brows`, { opacity: 0 }, { opacity: 1, duration: 0.15 }, 34.0 + i * 0.05);
+        hop(id, 35.2 + i * 0.08, 150, 2, 0.1);
+        tl.fromTo(`#${id}-armR`, { rotation: 0 }, { rotation: -95, duration: 0.25, ease: "back.out(2)", svgOrigin: "74 -96", immediateRender: false }, 35.2);
+        tl.fromTo(`#${id}-armL`, { rotation: 0 }, { rotation: 95, duration: 0.25, ease: "back.out(2)", svgOrigin: "-74 -96", immediateRender: false }, 35.2);
+      });
+      caption("#s3-cap", 30.4, 37.9);
+
+      // ---- 4. В путь (37.6–46): бегут к мостам, параллакс, заголовок
+      iris("#s4-scene", 37.6);
+      tl.fromTo("#s4-sun", { y: 220 }, { y: 0, duration: 6, ease: "power1.out" }, 37.6);
+      tl.fromTo("#s4-far", { x: 0 }, { x: -260, duration: 8.4, ease: "none" }, 37.6);
+      tl.fromTo("#s4-mid", { x: 0 }, { x: -700, duration: 8.4, ease: "none" }, 37.6);
+      tl.fromTo("#s4-road", { x: 0 }, { x: -960, duration: 8.4, ease: "none" }, 37.6);
+      runners.forEach(([id], i) => {
+        tl.fromTo(`#${id}`, { x: -1400 }, { x: 0, duration: 1.4, ease: "power2.out" }, 37.8 + i * 0.12);
+        tl.fromTo(`#${id}-rig`, { y: 0, rotation: 8 }, { y: -26, rotation: 8, duration: 0.16, yoyo: true, repeat: 49, ease: "sine.out", svgOrigin: "0 0" }, 37.6 + i * 0.05);
+        tl.fromTo(`#${id}-fl`, { y: 0, x: 0 }, { y: -20, x: 16, duration: 0.16, yoyo: true, repeat: 49, ease: "sine.inOut" }, 37.6);
+        tl.fromTo(`#${id}-fr`, { y: -20, x: 16 }, { y: 0, x: 0, duration: 0.16, yoyo: true, repeat: 49, ease: "sine.inOut" }, 37.6);
+        tl.fromTo(`#${id}-armR`, { rotation: -30 }, { rotation: 30, duration: 0.32, yoyo: true, repeat: 24, ease: "sine.inOut", svgOrigin: "74 -96" }, 37.6);
+        tl.fromTo(`#${id}-armL`, { rotation: 30 }, { rotation: -30, duration: 0.32, yoyo: true, repeat: 24, ease: "sine.inOut", svgOrigin: "-74 -96" }, 37.6);
+      });
+      letters("s4-title", s4TitleN, 41.0);
+      tl.fromTo("#s4-title", { scale: 1 }, { scale: 1.05, duration: 0.8, yoyo: true, repeat: 3, ease: "sine.inOut" }, 42.0);
+      tl.fromTo("#s4-sub", { opacity: 0, y: 40, scale: 0.8 }, { opacity: 1, y: 0, scale: 1, duration: 0.6, ease: "back.out(2)" }, 42.2);
+
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

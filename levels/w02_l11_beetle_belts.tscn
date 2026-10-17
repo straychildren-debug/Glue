@@ -1,0 +1,205 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://src/level/greybox_level.gd" id="1"]
+[ext_resource type="PackedScene" path="res://levels/backdrops/w02_scaffolds.tscn" id="bd"]
+[ext_resource type="Script" path="res://src/level/backdrop_layer.gd" id="bl"]
+[ext_resource type="Texture2D" path="res://assets/backgrounds/world_02/source/w02_lm11_beetle_statue.png" id="lm"]
+[ext_resource type="Script" path="res://src/mechanisms/beetle.gd" id="beetle"]
+[ext_resource type="Script" path="res://src/mechanisms/conveyor.gd" id="conveyor"]
+[ext_resource type="Script" path="res://src/mechanisms/crate.gd" id="crate"]
+[ext_resource type="Script" path="res://src/mechanisms/door.gd" id="door"]
+[ext_resource type="Script" path="res://src/mechanisms/finish.gd" id="finish"]
+[ext_resource type="Script" path="res://src/mechanisms/lever.gd" id="lever"]
+[ext_resource type="Script" path="res://src/mechanisms/pressure_plate.gd" id="plate"]
+[ext_resource type="Script" path="res://src/mechanisms/saw.gd" id="saw"]
+[ext_resource type="Script" path="res://src/mechanisms/spikes.gd" id="spikes"]
+
+[node name="W02L11" type="Node2D"]
+script = ExtResource("1")
+title = "11 · Жуки на ленте"
+blocks = Array[Rect2]([Rect2(0, -8, 1, 30), Rect2(97.5, -8, 1, 30), Rect2(1, 13, 4, 5), Rect2(5, 12, 26.5, 6), Rect2(18.5, -8, 13, 16), Rect2(31.5, 15, 6, 3), Rect2(37.5, 12, 11, 6), Rect2(48.5, 15, 2.5, 3), Rect2(51, 12.375, 10, 5.625), Rect2(51, -8, 10, 17.6), Rect2(61, 12, 1.5, 6), Rect2(62.5, 11, 6, 7), Rect2(65.5, 8, 3, 3), Rect2(68.5, 8, 13, 10), Rect2(68.5, -8, 13, 12), Rect2(80, -8, 1, 12), Rect2(81, 11, 1.5, 7), Rect2(82.5, 8.375, 10, 9.625), Rect2(81, -8, 11.5, 13.6), Rect2(92.5, 8, 5, 10)])
+checkpoints = Array[Vector2]([Vector2(2, 13), Vector2(29.5, 12), Vector2(66.2, 8)])
+bounds_tiles = Rect2(0, -8, 98.5, 27)
+kill_y_tiles = 19
+ground_fill = "w02_fill"
+ground_deep = "w02_deep"
+ground_top = "w02_top"
+ground_side = "w02_side"
+
+[node name="Spk1a" type="Node2D" parent="."]
+position = Vector2(496, 768)
+script = ExtResource("spikes")
+width_tiles = 1.5
+
+[node name="Spk1b" type="Node2D" parent="."]
+position = Vector2(1072, 768)
+script = ExtResource("spikes")
+width_tiles = 1.5
+
+[node name="Plate1" type="AnimatableBody2D" parent="."]
+position = Vector2(704, 768)
+script = ExtResource("plate")
+mark_color = Color(0.95, 0.85, 0.3, 1)
+
+[node name="Bump1" type="CharacterBody2D" parent="."]
+position = Vector2(896, 740)
+script = ExtResource("beetle")
+direction = -1
+speed = 200.0
+aggressive = true
+knockback = true
+mass = 0.0
+sight_tiles = 8.0
+
+[node name="Door1" type="AnimatableBody2D" parent="."]
+position = Vector2(1184, 512)
+script = ExtResource("door")
+size_tiles = Vector2(1, 4)
+triggers = Array[NodePath]([NodePath("../Plate1"), NodePath("../Lever1")])
+open_offset_tiles = Vector2(0, -3.5)
+mark_color = Color(0.95, 0.85, 0.3, 1)
+
+[node name="Saw1" type="Node2D" parent="."]
+position = Vector2(1376, 732.8)
+script = ExtResource("saw")
+path_tiles = Vector2(5, 0)
+speed = 260.0
+
+[node name="Lever1" type="Node2D" parent="."]
+position = Vector2(1952, 768)
+script = ExtResource("lever")
+mark_color = Color(0.95, 0.85, 0.3, 1)
+
+[node name="Pit2" type="Node2D" parent="."]
+position = Vector2(2208, 960)
+script = ExtResource("spikes")
+width_tiles = 6.0
+
+[node name="Bridge" type="AnimatableBody2D" parent="."]
+position = Vector2(2400, 768)
+script = ExtResource("door")
+size_tiles = Vector2(6, 0.5)
+triggers = Array[NodePath]([NodePath("../Plate2")])
+open_offset_tiles = Vector2(-6, 0)
+mark_color = Color(0.4, 0.7, 0.95, 1)
+
+[node name="Plate2" type="AnimatableBody2D" parent="."]
+position = Vector2(2848, 768)
+script = ExtResource("plate")
+mark_color = Color(0.4, 0.7, 0.95, 1)
+
+[node name="Bump2" type="CharacterBody2D" parent="."]
+position = Vector2(3040, 740)
+script = ExtResource("beetle")
+direction = -1
+speed = 200.0
+aggressive = true
+knockback = true
+mass = 0.0
+sight_tiles = 8.0
+
+[node name="Pit3" type="Node2D" parent="."]
+position = Vector2(3184, 960)
+script = ExtResource("spikes")
+width_tiles = 2.5
+
+[node name="Belt" type="StaticBody2D" parent="."]
+position = Vector2(3264, 768)
+script = ExtResource("conveyor")
+width_tiles = 10.0
+speed = -260.0
+
+[node name="Runner1" type="CharacterBody2D" parent="."]
+position = Vector2(3776, 716)
+script = ExtResource("beetle")
+direction = -1
+speed = 200.0
+knockback = true
+respawn_time = 2.0
+
+[node name="Runner2" type="CharacterBody2D" parent="."]
+position = Vector2(3846.4, 716)
+script = ExtResource("beetle")
+direction = -1
+speed = 200.0
+knockback = true
+respawn_time = 3.1
+
+[node name="Bump3" type="CharacterBody2D" parent="."]
+position = Vector2(4064, 676)
+script = ExtResource("beetle")
+direction = 1
+speed = 200.0
+aggressive = true
+knockback = true
+mass = 0.0
+sight_tiles = 8.0
+
+[node name="Crate4" type="CharacterBody2D" parent="."]
+position = Vector2(4960, 481)
+script = ExtResource("crate")
+
+[node name="Walker4" type="CharacterBody2D" parent="."]
+position = Vector2(4576, 484)
+script = ExtResource("beetle")
+direction = 1
+speed = 110.0
+
+[node name="Plate4" type="AnimatableBody2D" parent="."]
+position = Vector2(4723.2, 512)
+script = ExtResource("plate")
+width_tiles = 3.0
+threshold = 3.0
+mark_color = Color(0.35, 0.8, 0.4, 1)
+
+[node name="Door4" type="AnimatableBody2D" parent="."]
+position = Vector2(5120, 256)
+script = ExtResource("door")
+size_tiles = Vector2(1, 4)
+triggers = Array[NodePath]([NodePath("../Plate4"), NodePath("../Lever4")])
+open_offset_tiles = Vector2(0, -3.5)
+close_speed = 900.0
+mark_color = Color(0.35, 0.8, 0.4, 1)
+
+[node name="Pit4" type="Node2D" parent="."]
+position = Vector2(5232, 704)
+script = ExtResource("spikes")
+width_tiles = 1.5
+
+[node name="Belt4" type="StaticBody2D" parent="."]
+position = Vector2(5280, 512)
+script = ExtResource("conveyor")
+width_tiles = 10.0
+speed = -240.0
+
+[node name="Runner4" type="CharacterBody2D" parent="."]
+position = Vector2(5856, 460)
+script = ExtResource("beetle")
+direction = -1
+speed = 200.0
+knockback = true
+respawn_time = 2.2
+
+[node name="Lever4" type="Node2D" parent="."]
+position = Vector2(5984, 512)
+script = ExtResource("lever")
+mark_color = Color(0.35, 0.8, 0.4, 1)
+
+[node name="Finish" type="Node2D" parent="."]
+position = Vector2(6112, 512)
+script = ExtResource("finish")
+
+[node name="Backdrop" parent="." instance=ExtResource("bd")]
+
+[node name="Landmark" type="Node2D" parent="Backdrop"]
+script = ExtResource("bl")
+texture = ExtResource("lm")
+parallax = 0.3
+parallax_y = 0.1
+height = 0.6
+center_y = 0.55
+zoom_follow = 0.3
+repeat = false
+world_x = 2206.0
+haze = 0.22
+haze_color = Color(0.860, 0.900, 0.960, 1)

@@ -1,0 +1,193 @@
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+D4.1 | w04_decal_coral.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world4_sunken_city.png
+D:/Cluade projects/games/Glue/assets/tiles/world_04/source/w04_top.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the approved concept sheet of world 4 — match its palette and light. Attached image 3: the floor top strip of the same world — match its painting style and colors. Do NOT copy layouts, text, UI or characters.
+
+Create ONE isolated decorative sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no unrelated objects.
+Object: a cluster of rounded corals in orange, pink and purple.
+Neutral white balance. Genuine PNG alpha transparency, no painted checkerboard, no wall slab, ground plane or backdrop. Soft painted edges WITHOUT black/navy contour. Landscape 3:2. ONE centered object or specified decorative group with generous empty alpha margins. No broad cast shadow or glow outside the object.
+No fish, jellyfish, crabs, big bubbles, wheel valves, rafts, logs, chains, barrels, crates.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-5d80bc00-bbf9-4e89-95a3-e93781bfcdad.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+D4.1.2 | w04_decal_coral_2.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world4_sunken_city.png
+D:/Cluade projects/games/Glue/assets/tiles/world_04/source/w04_top.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the approved concept sheet of world 4 — match its palette and light. Attached image 3: the floor top strip of the same world — match its painting style and colors. Do NOT copy layouts, text, UI or characters.
+
+Create ONE isolated decorative sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no unrelated objects.
+Object: a cluster of rounded corals in orange, pink and purple.
+Neutral white balance. Genuine PNG alpha transparency, no painted checkerboard, no wall slab, ground plane or backdrop. Soft painted edges WITHOUT black/navy contour. Landscape 3:2. ONE centered object or specified decorative group with generous empty alpha margins. No broad cast shadow or glow outside the object.
+A second independent variant of this ONE object: modestly different silhouette and details, same scale, colors and materials. No pair, grid or comparison sheet.
+No fish, jellyfish, crabs, big bubbles, wheel valves, rafts, logs, chains, barrels, crates.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-4c9202d9-6461-46a1-b190-b9cfbe97cc41.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+D4.2 | w04_decal_seaweed.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world4_sunken_city.png
+D:/Cluade projects/games/Glue/assets/tiles/world_04/source/w04_top.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the approved concept sheet of world 4 — match its palette and light. Attached image 3: the floor top strip of the same world — match its painting style and colors. Do NOT copy layouts, text, UI or characters.
+
+Create ONE isolated decorative sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no unrelated objects.
+Object: a tall strand of green seaweed swaying, attached at the bottom.
+Neutral white balance. Genuine PNG alpha transparency, no painted checkerboard, no wall slab, ground plane or backdrop. Soft painted edges WITHOUT black/navy contour. Landscape 3:2. ONE centered object or specified decorative group with generous empty alpha margins. No broad cast shadow or glow outside the object.
+ONE tall narrow strand, a single continuous stem rooted at the bottom, not a wide horizontal garland or carpet.
+No fish, jellyfish, crabs, big bubbles, wheel valves, rafts, logs, chains, barrels, crates.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-73eb4d3f-64b5-414c-ba68-c863edcf9ca2.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+D4.2.2 | w04_decal_seaweed_2.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world4_sunken_city.png
+D:/Cluade projects/games/Glue/assets/tiles/world_04/source/w04_top.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the approved concept sheet of world 4 — match its palette and light. Attached image 3: the floor top strip of the same world — match its painting style and colors. Do NOT copy layouts, text, UI or characters.
+
+Create ONE isolated decorative sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no unrelated objects.
+Object: a tall strand of green seaweed swaying, attached at the bottom.
+Neutral white balance. Genuine PNG alpha transparency, no painted checkerboard, no wall slab, ground plane or backdrop. Soft painted edges WITHOUT black/navy contour. Landscape 3:2. ONE centered object or specified decorative group with generous empty alpha margins. No broad cast shadow or glow outside the object.
+A second independent variant of this ONE object: modestly different silhouette and details, same scale, colors and materials. No pair, grid or comparison sheet.
+ONE tall narrow strand, a single continuous stem rooted at the bottom, not a wide horizontal garland or carpet.
+No fish, jellyfish, crabs, big bubbles, wheel valves, rafts, logs, chains, barrels, crates.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-48388faf-7578-48aa-9ca7-3c9c47e9f99e.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+D4.3 | w04_decal_shells.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world4_sunken_city.png
+D:/Cluade projects/games/Glue/assets/tiles/world_04/source/w04_top.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the approved concept sheet of world 4 — match its palette and light. Attached image 3: the floor top strip of the same world — match its painting style and colors. Do NOT copy layouts, text, UI or characters.
+
+Create ONE isolated decorative sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no unrelated objects.
+Object: a few seashells and a starfish lying on a ledge, flat bottom edge.
+Neutral white balance. Genuine PNG alpha transparency, no painted checkerboard, no wall slab, ground plane or backdrop. Soft painted edges WITHOUT black/navy contour. Landscape 3:2. ONE centered object or specified decorative group with generous empty alpha margins. No broad cast shadow or glow outside the object.
+No fish, jellyfish, crabs, big bubbles, wheel valves, rafts, logs, chains, barrels, crates.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-fce9238f-2a40-45f9-a700-0265623ab615.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+D4.3.2 | w04_decal_shells_2.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world4_sunken_city.png
+D:/Cluade projects/games/Glue/assets/tiles/world_04/source/w04_top.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the approved concept sheet of world 4 — match its palette and light. Attached image 3: the floor top strip of the same world — match its painting style and colors. Do NOT copy layouts, text, UI or characters.
+
+Create ONE isolated decorative sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no unrelated objects.
+Object: a few seashells and a starfish lying on a ledge, flat bottom edge.
+Neutral white balance. Genuine PNG alpha transparency, no painted checkerboard, no wall slab, ground plane or backdrop. Soft painted edges WITHOUT black/navy contour. Landscape 3:2. ONE centered object or specified decorative group with generous empty alpha margins. No broad cast shadow or glow outside the object.
+A second independent variant of this ONE object: modestly different silhouette and details, same scale, colors and materials. No pair, grid or comparison sheet.
+No fish, jellyfish, crabs, big bubbles, wheel valves, rafts, logs, chains, barrels, crates.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-2fcfa516-b1a6-40cf-a0ec-f416f9820604.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+D4.4 | w04_decal_anemone.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world4_sunken_city.png
+D:/Cluade projects/games/Glue/assets/tiles/world_04/source/w04_top.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the approved concept sheet of world 4 — match its palette and light. Attached image 3: the floor top strip of the same world — match its painting style and colors. Do NOT copy layouts, text, UI or characters.
+
+Create ONE isolated decorative sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no unrelated objects.
+Object: a soft sea anemone with waving tentacles in pale violet.
+Neutral white balance. Genuine PNG alpha transparency, no painted checkerboard, no wall slab, ground plane or backdrop. Soft painted edges WITHOUT black/navy contour. Landscape 3:2. ONE centered object or specified decorative group with generous empty alpha margins. No broad cast shadow or glow outside the object.
+No fish, jellyfish, crabs, big bubbles, wheel valves, rafts, logs, chains, barrels, crates.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-21aaa33b-c659-4bb8-b433-dc450762fb29.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+D4.4.2 | w04_decal_anemone_2.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world4_sunken_city.png
+D:/Cluade projects/games/Glue/assets/tiles/world_04/source/w04_top.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the approved concept sheet of world 4 — match its palette and light. Attached image 3: the floor top strip of the same world — match its painting style and colors. Do NOT copy layouts, text, UI or characters.
+
+Create ONE isolated decorative sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no unrelated objects.
+Object: a soft sea anemone with waving tentacles in pale violet.
+Neutral white balance. Genuine PNG alpha transparency, no painted checkerboard, no wall slab, ground plane or backdrop. Soft painted edges WITHOUT black/navy contour. Landscape 3:2. ONE centered object or specified decorative group with generous empty alpha margins. No broad cast shadow or glow outside the object.
+A second independent variant of this ONE object: modestly different silhouette and details, same scale, colors and materials. No pair, grid or comparison sheet.
+No fish, jellyfish, crabs, big bubbles, wheel valves, rafts, logs, chains, barrels, crates.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-ea9231ab-1912-4909-9186-485979d85991.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+D4.5 | w04_decal_bubbles.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world4_sunken_city.png
+D:/Cluade projects/games/Glue/assets/tiles/world_04/source/w04_top.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the approved concept sheet of world 4 — match its palette and light. Attached image 3: the floor top strip of the same world — match its painting style and colors. Do NOT copy layouts, text, UI or characters.
+
+Create ONE isolated decorative sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no unrelated objects.
+Object: a thin trail of tiny air bubbles rising.
+Neutral white balance. Genuine PNG alpha transparency, no painted checkerboard, no wall slab, ground plane or backdrop. Soft painted edges WITHOUT black/navy contour. Landscape 3:2. ONE centered object or specified decorative group with generous empty alpha margins. No broad cast shadow or glow outside the object.
+No fish, jellyfish, crabs, big bubbles, wheel valves, rafts, logs, chains, barrels, crates.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-e7c67755-eeb9-4829-944d-758252e03476.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+D4.5.2 | w04_decal_bubbles_2.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world4_sunken_city.png
+D:/Cluade projects/games/Glue/assets/tiles/world_04/source/w04_top.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the approved concept sheet of world 4 — match its palette and light. Attached image 3: the floor top strip of the same world — match its painting style and colors. Do NOT copy layouts, text, UI or characters.
+
+Create ONE isolated decorative sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no unrelated objects.
+Object: a thin trail of tiny air bubbles rising.
+Neutral white balance. Genuine PNG alpha transparency, no painted checkerboard, no wall slab, ground plane or backdrop. Soft painted edges WITHOUT black/navy contour. Landscape 3:2. ONE centered object or specified decorative group with generous empty alpha margins. No broad cast shadow or glow outside the object.
+A second independent variant of this ONE object: modestly different silhouette and details, same scale, colors and materials. No pair, grid or comparison sheet.
+No fish, jellyfish, crabs, big bubbles, wheel valves, rafts, logs, chains, barrels, crates.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-f71840c1-23ef-47dc-9ce1-2e2cd5764dd5.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+D4.3 | w04_decal_shells.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/assets/decals/world_04/source/w04_decal_shells.png
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world4_sunken_city.png
+D:/Cluade projects/games/Glue/assets/tiles/world_04/source/w04_top.png
+Edit prompt:
+Image 1 is the current seashell decoration to edit; images 2–4 are style references. Keep everything the same, but REMOVE all seaweed, algae, corals, foliage, grass and pebbles from this image. Leave ONLY the existing few seashells and ONE orange starfish as one isolated decorative group, all resting along the same flat bottom baseline. Preserve the exact shell/starfish designs, colors, hand-painted shading, no silhouette outline, real alpha transparency and centered composition with empty margins. No ground slab, wall or backdrop, no text or unrelated objects.
+No fish, jellyfish, crabs, big bubbles, wheel valves, rafts, logs, chains, barrels, crates.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-6f243cd0-bfe2-487c-b026-e1c4912c76ab.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+D4.3.2 | w04_decal_shells_2.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/assets/decals/world_04/source/w04_decal_shells_2.png
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world4_sunken_city.png
+D:/Cluade projects/games/Glue/assets/tiles/world_04/source/w04_top.png
+Edit prompt:
+Image 1 is the current seashell decoration to edit; images 2–4 are style references. Keep everything the same, but REMOVE all seaweed, algae, corals, foliage, grass and pebbles from this image. Leave ONLY the existing few seashells and ONE orange starfish as one isolated decorative group, all resting along the same flat bottom baseline. Preserve the exact shell/starfish designs, colors, hand-painted shading, no silhouette outline, real alpha transparency and centered composition with empty margins. No ground slab, wall or backdrop, no text or unrelated objects.
+No fish, jellyfish, crabs, big bubbles, wheel valves, rafts, logs, chains, barrels, crates.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-f250f379-37cd-41c5-8287-e04c37dcfa59.png

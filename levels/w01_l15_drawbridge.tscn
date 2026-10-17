@@ -1,0 +1,186 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://src/level/greybox_level.gd" id="1"]
+[ext_resource type="PackedScene" path="res://levels/backdrops/w01_river.tscn" id="bd"]
+[ext_resource type="Script" path="res://src/level/backdrop_layer.gd" id="bl"]
+[ext_resource type="Texture2D" path="res://assets/backgrounds/world_01/v2/source/w01_v2_lm19_drawbridge.png" id="lm"]
+[ext_resource type="Script" path="res://src/mechanisms/pressure_plate.gd" id="plate"]
+[ext_resource type="Script" path="res://src/mechanisms/door.gd" id="door"]
+[ext_resource type="Script" path="res://src/mechanisms/spikes.gd" id="spikes"]
+[ext_resource type="Script" path="res://src/mechanisms/finish.gd" id="finish"]
+
+[node name="W01L15" type="Node2D"]
+script = ExtResource("1")
+title = "15 · Разводной мост"
+blocks = Array[Rect2]([Rect2(0, -8, 1, 26), Rect2(53, -8, 1, 26), Rect2(0, 12, 6, 6), Rect2(43, 12, 10, 6), Rect2(10, 12, 4, 6), Rect2(19, 12, 4, 6), Rect2(27, 12, 4, 6), Rect2(35, 12, 4, 6), Rect2(6, 17, 37, 1), Rect2(49.5, -8, 1, 12)])
+checkpoints = Array[Vector2]([Vector2(3, 12), Vector2(27.3, 12)])
+bounds_tiles = Rect2(0, -8, 54, 27)
+kill_y_tiles = 19.0
+ground_fill = "w01_river_fill"
+
+[node name="Spikes" type="Node2D" parent="."]
+position = Vector2(1568, 1088)
+script = ExtResource("spikes")
+width_tiles = 37
+
+[node name="L1" type="AnimatableBody2D" parent="."]
+position = Vector2(294.4, 768)
+script = ExtResource("plate")
+width_tiles = 1.0
+pulse = 1.2
+mark_color = Color(0.95, 0.6, 0.2, 1)
+
+[node name="R1" type="AnimatableBody2D" parent="."]
+position = Vector2(742.4, 768)
+script = ExtResource("plate")
+width_tiles = 1.0
+pulse = 1.2
+mark_color = Color(0.95, 0.6, 0.2, 1)
+
+[node name="S1" type="AnimatableBody2D" parent="."]
+position = Vector2(384, 1120)
+script = ExtResource("door")
+size_tiles = Vector2(4, 0.5)
+triggers = Array[NodePath]([NodePath("../L1"), NodePath("../R1")])
+open_offset_tiles = Vector2(0, -5.5)
+open_speed = 900.0
+close_speed = 300.0
+mark_color = Color(0.95, 0.6, 0.2, 1)
+
+[node name="L2" type="AnimatableBody2D" parent="."]
+position = Vector2(806.4, 768)
+script = ExtResource("plate")
+width_tiles = 1.0
+pulse = 1.25
+mark_color = Color(0.4, 0.7, 0.95, 1)
+
+[node name="R2" type="AnimatableBody2D" parent="."]
+position = Vector2(1318.4, 768)
+script = ExtResource("plate")
+width_tiles = 1.0
+pulse = 1.25
+mark_color = Color(0.4, 0.7, 0.95, 1)
+
+[node name="S2" type="AnimatableBody2D" parent="."]
+position = Vector2(896, 1120)
+script = ExtResource("door")
+size_tiles = Vector2(5, 0.5)
+triggers = Array[NodePath]([NodePath("../L2"), NodePath("../R2")])
+open_offset_tiles = Vector2(0, -5.5)
+open_speed = 900.0
+close_speed = 300.0
+mark_color = Color(0.4, 0.7, 0.95, 1)
+
+[node name="L3" type="AnimatableBody2D" parent="."]
+position = Vector2(1382.4, 768)
+script = ExtResource("plate")
+width_tiles = 1.0
+pulse = 1.0
+mark_color = Color(0.35, 0.8, 0.4, 1)
+
+[node name="R3" type="AnimatableBody2D" parent="."]
+position = Vector2(1830.4, 768)
+script = ExtResource("plate")
+width_tiles = 1.0
+pulse = 1.0
+mark_color = Color(0.35, 0.8, 0.4, 1)
+
+[node name="S3" type="AnimatableBody2D" parent="."]
+position = Vector2(1472, 1120)
+script = ExtResource("door")
+size_tiles = Vector2(4, 0.5)
+triggers = Array[NodePath]([NodePath("../L3"), NodePath("../R3")])
+open_offset_tiles = Vector2(0, -5.5)
+open_speed = 900.0
+close_speed = 300.0
+mark_color = Color(0.35, 0.8, 0.4, 1)
+
+[node name="L4" type="AnimatableBody2D" parent="."]
+position = Vector2(1894.4, 768)
+script = ExtResource("plate")
+width_tiles = 1.0
+pulse = 0.9
+mark_color = Color(0.7, 0.45, 0.95, 1)
+
+[node name="R4" type="AnimatableBody2D" parent="."]
+position = Vector2(2342.4, 768)
+script = ExtResource("plate")
+width_tiles = 1.0
+pulse = 0.9
+mark_color = Color(0.7, 0.45, 0.95, 1)
+
+[node name="S4" type="AnimatableBody2D" parent="."]
+position = Vector2(1984, 1120)
+script = ExtResource("door")
+size_tiles = Vector2(4, 0.5)
+triggers = Array[NodePath]([NodePath("../L4"), NodePath("../R4")])
+open_offset_tiles = Vector2(0, -5.5)
+open_speed = 900.0
+close_speed = 300.0
+mark_color = Color(0.7, 0.45, 0.95, 1)
+
+[node name="L5" type="AnimatableBody2D" parent="."]
+position = Vector2(2406.4, 768)
+script = ExtResource("plate")
+width_tiles = 1.0
+pulse = 0.85
+mark_color = Color(0.95, 0.85, 0.3, 1)
+
+[node name="R5" type="AnimatableBody2D" parent="."]
+position = Vector2(2854.4, 768)
+script = ExtResource("plate")
+width_tiles = 1.0
+pulse = 0.85
+mark_color = Color(0.95, 0.85, 0.3, 1)
+
+[node name="S5" type="AnimatableBody2D" parent="."]
+position = Vector2(2496, 1120)
+script = ExtResource("door")
+size_tiles = Vector2(4, 0.5)
+triggers = Array[NodePath]([NodePath("../L5"), NodePath("../R5")])
+open_offset_tiles = Vector2(0, -5.5)
+open_speed = 900.0
+close_speed = 300.0
+mark_color = Color(0.95, 0.85, 0.3, 1)
+
+[node name="ExitA" type="AnimatableBody2D" parent="."]
+position = Vector2(2912, 768)
+script = ExtResource("plate")
+width_tiles = 1.0
+pulse = 0.3
+mark_color = Color(0.9, 0.3, 0.3, 1)
+
+[node name="ExitB" type="AnimatableBody2D" parent="."]
+position = Vector2(3072, 768)
+script = ExtResource("plate")
+width_tiles = 1.0
+pulse = 0.3
+mark_color = Color(0.9, 0.3, 0.3, 1)
+
+[node name="Exit" type="AnimatableBody2D" parent="."]
+position = Vector2(3168, 512)
+script = ExtResource("door")
+size_tiles = Vector2(1, 4)
+triggers = Array[NodePath]([NodePath("../ExitA"), NodePath("../ExitB")])
+require_all = true
+stay_open = true
+open_offset_tiles = Vector2(0, -3.5)
+mark_color = Color(0.9, 0.3, 0.3, 1)
+
+[node name="Finish" type="Node2D" parent="."]
+position = Vector2(3296, 768)
+script = ExtResource("finish")
+
+[node name="Backdrop" parent="." instance=ExtResource("bd")]
+
+[node name="Landmark" type="Node2D" parent="Backdrop"]
+script = ExtResource("bl")
+texture = ExtResource("lm")
+parallax = 0.3
+parallax_y = 0.1
+height = 0.5
+center_y = 0.46
+zoom_follow = 0.3
+repeat = false
+world_x = 1210.0
+haze = 0.3

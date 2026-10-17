@@ -1,0 +1,195 @@
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+D5.1 | w05_decal_snowdrift.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world5_ice_peaks.png
+D:/Cluade projects/games/Glue/assets/tiles/world_05/source/w05_top_snow.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the approved concept sheet of world 5 — match its palette and light. Attached image 3: the floor top strip of the same world — match its painting style and colors. Do NOT copy layouts, text, UI or characters.
+
+Create ONE isolated decorative sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no unrelated objects.
+Object: a soft rounded snowdrift, flat bottom edge.
+Neutral white balance. Genuine PNG alpha transparency, no painted checkerboard, no wall slab, ground plane or backdrop. Soft painted edges WITHOUT black/navy contour. Landscape 3:2. ONE centered object or specified decorative group with generous empty alpha margins. No broad cast shadow or glow outside the object.
+No icicles longer than a hand, no snowballs, ice cubes or ice blocks, no thin pale ice sheets, no owls, no footprints.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-d02fd1f8-425b-4ca6-88c3-60f45e6917f7.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+D5.1.2 | w05_decal_snowdrift_2.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world5_ice_peaks.png
+D:/Cluade projects/games/Glue/assets/tiles/world_05/source/w05_top_snow.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the approved concept sheet of world 5 — match its palette and light. Attached image 3: the floor top strip of the same world — match its painting style and colors. Do NOT copy layouts, text, UI or characters.
+
+Create ONE isolated decorative sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no unrelated objects.
+Object: a soft rounded snowdrift, flat bottom edge.
+Neutral white balance. Genuine PNG alpha transparency, no painted checkerboard, no wall slab, ground plane or backdrop. Soft painted edges WITHOUT black/navy contour. Landscape 3:2. ONE centered object or specified decorative group with generous empty alpha margins. No broad cast shadow or glow outside the object.
+A second independent variant of this ONE object: modestly different silhouette and details, same scale, colors and materials. No pair, grid or comparison sheet.
+No icicles longer than a hand, no snowballs, ice cubes or ice blocks, no thin pale ice sheets, no owls, no footprints.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-006e713b-3d3f-4852-bc09-4ece129c4f58.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+D5.2 | w05_decal_pine_branch.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world5_ice_peaks.png
+D:/Cluade projects/games/Glue/assets/tiles/world_05/source/w05_top_snow.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the approved concept sheet of world 5 — match its palette and light. Attached image 3: the floor top strip of the same world — match its painting style and colors. Do NOT copy layouts, text, UI or characters.
+
+Create ONE isolated decorative sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no unrelated objects.
+Object: a snowy pine branch entering from the left edge, slightly blurred like very close to the camera.
+Neutral white balance. Genuine PNG alpha transparency, no painted checkerboard, no wall slab, ground plane or backdrop. Soft painted edges WITHOUT black/navy contour. Landscape 3:2. ONE centered object or specified decorative group with generous empty alpha margins. No broad cast shadow or glow outside the object.
+The requested foreground branch specifically ENTERS from the LEFT CANVAS EDGE; this overrides the generic centered-object and margin instruction ONLY at that attachment edge. Keep the right, top and bottom margins transparent. No standalone tree or ground.
+No icicles longer than a hand, no snowballs, ice cubes or ice blocks, no thin pale ice sheets, no owls, no footprints.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-42672a5b-952a-4cf3-960c-926df7b501ac.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+D5.2.2 | w05_decal_pine_branch_2.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world5_ice_peaks.png
+D:/Cluade projects/games/Glue/assets/tiles/world_05/source/w05_top_snow.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the approved concept sheet of world 5 — match its palette and light. Attached image 3: the floor top strip of the same world — match its painting style and colors. Do NOT copy layouts, text, UI or characters.
+
+Create ONE isolated decorative sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no unrelated objects.
+Object: a snowy pine branch entering from the left edge, slightly blurred like very close to the camera.
+Neutral white balance. Genuine PNG alpha transparency, no painted checkerboard, no wall slab, ground plane or backdrop. Soft painted edges WITHOUT black/navy contour. Landscape 3:2. ONE centered object or specified decorative group with generous empty alpha margins. No broad cast shadow or glow outside the object.
+A second independent variant of this ONE object: modestly different silhouette and details, same scale, colors and materials. No pair, grid or comparison sheet.
+The requested foreground branch specifically ENTERS from the LEFT CANVAS EDGE; this overrides the generic centered-object and margin instruction ONLY at that attachment edge. Keep the right, top and bottom margins transparent. No standalone tree or ground.
+No icicles longer than a hand, no snowballs, ice cubes or ice blocks, no thin pale ice sheets, no owls, no footprints.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-d57c54c6-c5f9-4f36-a06a-33a050d8f9cf.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+D5.3 | w05_decal_frozen_bush.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world5_ice_peaks.png
+D:/Cluade projects/games/Glue/assets/tiles/world_05/source/w05_top_snow.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the approved concept sheet of world 5 — match its palette and light. Attached image 3: the floor top strip of the same world — match its painting style and colors. Do NOT copy layouts, text, UI or characters.
+
+Create ONE isolated decorative sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no unrelated objects.
+Object: a small bush covered with frost and a cap of snow.
+Neutral white balance. Genuine PNG alpha transparency, no painted checkerboard, no wall slab, ground plane or backdrop. Soft painted edges WITHOUT black/navy contour. Landscape 3:2. ONE centered object or specified decorative group with generous empty alpha margins. No broad cast shadow or glow outside the object.
+No icicles longer than a hand, no snowballs, ice cubes or ice blocks, no thin pale ice sheets, no owls, no footprints.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-390148fb-7963-469d-bdfd-7135b53dd351.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+D5.3.2 | w05_decal_frozen_bush_2.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world5_ice_peaks.png
+D:/Cluade projects/games/Glue/assets/tiles/world_05/source/w05_top_snow.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the approved concept sheet of world 5 — match its palette and light. Attached image 3: the floor top strip of the same world — match its painting style and colors. Do NOT copy layouts, text, UI or characters.
+
+Create ONE isolated decorative sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no unrelated objects.
+Object: a small bush covered with frost and a cap of snow.
+Neutral white balance. Genuine PNG alpha transparency, no painted checkerboard, no wall slab, ground plane or backdrop. Soft painted edges WITHOUT black/navy contour. Landscape 3:2. ONE centered object or specified decorative group with generous empty alpha margins. No broad cast shadow or glow outside the object.
+A second independent variant of this ONE object: modestly different silhouette and details, same scale, colors and materials. No pair, grid or comparison sheet.
+No icicles longer than a hand, no snowballs, ice cubes or ice blocks, no thin pale ice sheets, no owls, no footprints.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-ad4aa076-3ae1-4761-b88b-15276a0d8aed.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+D5.4 | w05_decal_snowy_rocks.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world5_ice_peaks.png
+D:/Cluade projects/games/Glue/assets/tiles/world_05/source/w05_top_snow.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the approved concept sheet of world 5 — match its palette and light. Attached image 3: the floor top strip of the same world — match its painting style and colors. Do NOT copy layouts, text, UI or characters.
+
+Create ONE isolated decorative sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no unrelated objects.
+Object: a few small snow-capped rocks, flat bottom edge.
+Neutral white balance. Genuine PNG alpha transparency, no painted checkerboard, no wall slab, ground plane or backdrop. Soft painted edges WITHOUT black/navy contour. Landscape 3:2. ONE centered object or specified decorative group with generous empty alpha margins. No broad cast shadow or glow outside the object.
+No icicles longer than a hand, no snowballs, ice cubes or ice blocks, no thin pale ice sheets, no owls, no footprints.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-ed555670-61ad-43bb-913f-058969ce4509.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+D5.4.2 | w05_decal_snowy_rocks_2.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world5_ice_peaks.png
+D:/Cluade projects/games/Glue/assets/tiles/world_05/source/w05_top_snow.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the approved concept sheet of world 5 — match its palette and light. Attached image 3: the floor top strip of the same world — match its painting style and colors. Do NOT copy layouts, text, UI or characters.
+
+Create ONE isolated decorative sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no unrelated objects.
+Object: a few small snow-capped rocks, flat bottom edge.
+Neutral white balance. Genuine PNG alpha transparency, no painted checkerboard, no wall slab, ground plane or backdrop. Soft painted edges WITHOUT black/navy contour. Landscape 3:2. ONE centered object or specified decorative group with generous empty alpha margins. No broad cast shadow or glow outside the object.
+A second independent variant of this ONE object: modestly different silhouette and details, same scale, colors and materials. No pair, grid or comparison sheet.
+No icicles longer than a hand, no snowballs, ice cubes or ice blocks, no thin pale ice sheets, no owls, no footprints.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-608dbe77-75f1-49b3-a4f4-34a7bb72718f.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+D5.5 | w05_decal_frost.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world5_ice_peaks.png
+D:/Cluade projects/games/Glue/assets/tiles/world_05/source/w05_top_snow.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the approved concept sheet of world 5 — match its palette and light. Attached image 3: the floor top strip of the same world — match its painting style and colors. Do NOT copy layouts, text, UI or characters.
+
+Create ONE isolated decorative sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no unrelated objects.
+Object: a soft sparkle of frost glitter in the air, very transparent.
+Neutral white balance. Genuine PNG alpha transparency, no painted checkerboard, no wall slab, ground plane or backdrop. Soft painted edges WITHOUT black/navy contour. Landscape 3:2. ONE centered object or specified decorative group with generous empty alpha margins. No broad cast shadow or glow outside the object.
+This specified light/frost effect is the intended exception to no glow: faint wisps and motes are extremely transparent with actual low alpha, never an opaque yellow or white backdrop, never a solid object or scenery.
+No icicles longer than a hand, no snowballs, ice cubes or ice blocks, no thin pale ice sheets, no owls, no footprints.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-c25d2f65-ed01-45d6-b160-5db3adc66947.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+D5.5.2 | w05_decal_frost_2.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world5_ice_peaks.png
+D:/Cluade projects/games/Glue/assets/tiles/world_05/source/w05_top_snow.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the approved concept sheet of world 5 — match its palette and light. Attached image 3: the floor top strip of the same world — match its painting style and colors. Do NOT copy layouts, text, UI or characters.
+
+Create ONE isolated decorative sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no unrelated objects.
+Object: a soft sparkle of frost glitter in the air, very transparent.
+Neutral white balance. Genuine PNG alpha transparency, no painted checkerboard, no wall slab, ground plane or backdrop. Soft painted edges WITHOUT black/navy contour. Landscape 3:2. ONE centered object or specified decorative group with generous empty alpha margins. No broad cast shadow or glow outside the object.
+A second independent variant of this ONE object: modestly different silhouette and details, same scale, colors and materials. No pair, grid or comparison sheet.
+This specified light/frost effect is the intended exception to no glow: faint wisps and motes are extremely transparent with actual low alpha, never an opaque yellow or white backdrop, never a solid object or scenery.
+No icicles longer than a hand, no snowballs, ice cubes or ice blocks, no thin pale ice sheets, no owls, no footprints.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-161073c8-42c9-42dd-9048-43c9c0a7fc6d.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+D5.1 | w05_decal_snowdrift.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/assets/decals/world_05/source/w05_decal_snowdrift.png
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world5_ice_peaks.png
+D:/Cluade projects/games/Glue/assets/tiles/world_05/source/w05_top_snow.png
+Edit prompt:
+Attached image 1 is the snowdrift to edit. Images 2–4 are style references only. Keep the cool white and pale blue painted snow, soft shading, overall width and the independent variant shape. Correct ONLY the silhouette: this is a snowdrift standing on the ground, a low rounded mound, widest at the base, with a clean FLAT HORIZONTAL bottom edge across its whole width. Fill the drooping undersides upward into a solid low snow mound with rounded sloping sides. No hanging cap, dangling lobes, dripping underside or stone platform. No outlines, ground plane, backdrop, shadow or glow outside the mound. One isolated centered object, generous transparent margins, actual PNG alpha transparency. Do not resize or crop. No text, labels, numbers or symbols.
+No icicles longer than a hand, no snowballs, ice cubes or ice blocks, no thin pale ice sheets, no owls, no footprints.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-8017c141-991f-40e6-ba1a-363868062fa7.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+D5.1.2 | w05_decal_snowdrift_2.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/assets/decals/world_05/source/w05_decal_snowdrift_2.png
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world5_ice_peaks.png
+D:/Cluade projects/games/Glue/assets/tiles/world_05/source/w05_top_snow.png
+Edit prompt:
+Attached image 1 is the snowdrift to edit. Images 2–4 are style references only. Keep the cool white and pale blue painted snow, soft shading, overall width and the independent variant shape. Correct ONLY the silhouette: this is a snowdrift standing on the ground, a low rounded mound, widest at the base, with a clean FLAT HORIZONTAL bottom edge across its whole width. Fill the drooping undersides upward into a solid low snow mound with rounded sloping sides. No hanging cap, dangling lobes, dripping underside or stone platform. No outlines, ground plane, backdrop, shadow or glow outside the mound. One isolated centered object, generous transparent margins, actual PNG alpha transparency. Do not resize or crop. No text, labels, numbers or symbols.
+No icicles longer than a hand, no snowballs, ice cubes or ice blocks, no thin pale ice sheets, no owls, no footprints.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-e56a8017-679e-4ef5-a349-491690293656.png

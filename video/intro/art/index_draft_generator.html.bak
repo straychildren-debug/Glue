@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1920, height=1080">
+    <title>Держись! — вступление</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      /* Рисованная перекладка: слои генератора (art/layers, готовит art/build_layers.py), кукла героя из частей.
+         Каждый план — полный кадр 1920×1080, его содержимое стоит на конечных местах; камера двигает планы с разной скоростью. */
+      :root { --cream: #fbf4e6; --navy: #1a1d33; }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1920px; height: 1080px; overflow: hidden; background: #3d8fe0; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; font-family: Nunito, sans-serif; }
+      .clip { position: absolute; inset: 0; overflow: hidden; }
+      .plane { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; }
+      .plane img, .plane .abs { position: absolute; display: block; }
+      .caption {
+        position: absolute; left: 50%; top: 44px; width: 1360px; margin-left: -680px;
+        padding: 22px 44px; border-radius: 26px; background: rgba(251, 244, 230, 0.94);
+        border: 4px solid var(--navy); box-shadow: 0 10px 30px rgba(20, 30, 60, 0.25);
+        font-size: 46px; font-weight: 800; line-height: 1.25; text-align: center; color: var(--navy);
+      }
+      .caption span { display: inline-block; }
+
+      /* Кукла: (0, 0) контейнера — середина ступней. Координаты — вывод build_layers.py. */
+      #hero { position: absolute; width: 0; height: 0; }
+      #hero .rig, #hero .pose { position: absolute; left: 0; top: 0; width: 0; height: 0; }
+      #hero img { position: absolute; display: block; }
+      #hero .hero-right-arm { left: 24px; top: -172px; transform-origin: 22% 18%; }
+      #hero .hero-left-leg { left: -55px; top: -92px; }
+      #hero .hero-right-leg { left: 3px; top: -92px; }
+      #hero .hero-body { left: -93px; top: -300px; }
+      #hero .hero-left-arm { left: -119px; top: -179px; transform-origin: 78% 16%; }
+      #hero .eyes-blink { left: -3px; top: -212px; }
+      #hero .eyes-frightened { left: 0px; top: -226px; }
+      #hero .eyes-open { left: 2px; top: -223px; }
+      #hero .mouth-smile { left: 16px; top: -172px; }
+      #hero .mouth-surprised { left: 19px; top: -180px; }
+      #hero .brows-worried { left: -3px; top: -245px; }
+      #hero .hero-jump { left: -131px; top: -280px; }
+      .shadow { position: absolute; width: 190px; height: 34px; margin-left: -95px; margin-top: -17px; border-radius: 50%;
+        background: radial-gradient(closest-side, rgba(22, 40, 30, 0.45), rgba(22, 40, 30, 0)); }
+      .dust { position: absolute; width: 34px; height: 34px; margin: -17px 0 0 -17px; border-radius: 50%; background: rgba(255, 251, 236, 0.9); }
+      .bird { position: absolute; width: 34px; height: 16px; overflow: visible; }
+      .glow { position: absolute; border-radius: 50%; pointer-events: none; }
+      .vignette { position: absolute; inset: 0; pointer-events: none;
+        background: radial-gradient(ellipse 75% 70% at 50% 45%, rgba(0, 0, 0, 0) 60%, rgba(10, 20, 50, 0.32) 100%); }
+      .story-bg { position: absolute; inset: 0; overflow: visible; }
+      .story-bg img { position: absolute; display: block; }
+      .story-sprite { position: absolute; display: block; transform-origin: 50% 85%; }
+      .story-caption { position: absolute; top: 28px; left: 50%; transform: translateX(-50%);
+        width: 1460px; padding: 18px 36px; box-sizing: border-box; border: 4px solid var(--navy);
+        border-radius: 24px; background: rgba(251,244,230,.95); box-shadow: 0 9px 24px rgba(10,20,45,.25);
+        color: var(--navy); font: 800 43px/1.22 Nunito, sans-serif; text-align: center; }
+      .night-sky { position: absolute; inset: 0; background: linear-gradient(#081a4b 0%, #204478 67%, #395d87 100%); }
+      .story-title { position: absolute; top: 110px; left: 0; width: 100%; text-align: center;
+        color: #fff5d5; font: 900 220px/1 Nunito, sans-serif; letter-spacing: 2px;
+        -webkit-text-stroke: 11px var(--navy); paint-order: stroke fill;
+        text-shadow: 0 14px 30px rgba(12,20,50,.45); }
+      .star { position: absolute; width: 18px; height: 18px; transform: rotate(45deg);
+        background: #fff4ae; box-shadow: 0 0 25px 10px rgba(255,230,150,.75); }
+    </style>
+  </head>
+  <body>
+    <div data-hf-id="hf-ayd0" id="root" data-composition-id="main" data-start="0" data-duration="46" data-width="1920" data-height="1080">
+      <!-- 1. Царство бобов: спуск камеры с неба, герой впрыгивает, машет замку, наезд на замок -->
+      <section data-hf-id="hf-3i78" id="s1" class="clip" data-start="0" data-duration="8" data-track-index="0">
+        <div data-hf-id="hf-w8j1" id="s1-sky" class="plane" data-layout-allow-overflow="">
+          <img data-hf-id="hf-xxce" src="art/layers/sky.jpg" style="left: 0; top: -680px; width: 1920px; height: 2880px" alt="">
+          <div data-hf-id="hf-vwbi" class="glow" style="left: -420px; top: -1120px; width: 1100px; height: 1100px;
+            background: radial-gradient(closest-side, rgba(255, 250, 220, 0.75), rgba(255, 250, 220, 0))"></div>
+        </div>
+        <div data-hf-id="hf-og5y" id="s1-mountains" class="plane" data-layout-allow-overflow="">
+          <img data-hf-id="hf-mvkt" src="art/layers/mountains.png" style="left: -126px; top: 340px; width: 2172px" alt="">
+        </div>
+        <div data-hf-id="hf-pww2" id="s1-birds" class="plane" data-layout-allow-overflow=""></div>
+        <div data-hf-id="hf-sq19" id="s1-kingdom" class="plane" data-layout-allow-overflow="">
+          <img data-hf-id="hf-8h1q" src="art/layers/kingdom.png" style="left: -126px; top: 375px; width: 2172px" alt="">
+        </div>
+        <div data-hf-id="hf-ep84" id="s1-grass" class="plane" data-layout-allow-overflow="">
+          <img data-hf-id="hf-3gqc" src="art/layers/fg_grass.png" style="left: -126px; top: 660px; width: 2172px" alt="">
+          <div data-hf-id="hf-y3i2" id="s1-shadow" class="shadow" style="left: 520px; top: 984px"></div>
+          <div data-hf-id="hf-w7cq" id="s1-dust" class="abs" style="left: 520px; top: 984px"></div>
+          <div data-hf-id="hf-zm4r" id="hero" style="left: 520px; top: 990px">
+            <div data-hf-id="hf-3tr6" class="rig">
+              <img data-hf-id="hf-6gv1" class="hero-right-arm" src="art/layers/hero_right_arm.png" alt="">
+              <img data-hf-id="hf-er6j" class="hero-left-leg" src="art/layers/hero_left_leg.png" alt="">
+              <img data-hf-id="hf-9cv9" class="hero-right-leg" src="art/layers/hero_right_leg.png" alt="">
+              <img data-hf-id="hf-3w61" class="hero-body" src="art/layers/hero_body.png" alt="">
+              <img data-hf-id="hf-cvz1" class="eyes-open" src="art/layers/eyes_open.png" alt="">
+              <img data-hf-id="hf-fyo6" class="eyes-blink" src="art/layers/eyes_blink.png" alt="" style="opacity: 0">
+              <img data-hf-id="hf-pkzk" class="eyes-frightened" src="art/layers/eyes_frightened.png" alt="" style="opacity: 0">
+              <img data-hf-id="hf-rnle" class="brows-worried" src="art/layers/brows_worried.png" alt="" style="opacity: 0">
+              <img data-hf-id="hf-xg9n" class="mouth-smile" src="art/layers/mouth_smile.png" alt="">
+              <img data-hf-id="hf-skdw" class="mouth-surprised" src="art/layers/mouth_surprised.png" alt="" style="opacity: 0">
+              <img data-hf-id="hf-jw1f" class="hero-left-arm" src="art/layers/hero_left_arm.png" alt="">
+            </div>
+            <div data-hf-id="hf-5vv3" class="pose"><img data-hf-id="hf-f5u1" class="hero-jump" src="art/layers/hero_jump.png" alt=""></div>
+          </div>
+          <img data-hf-id="hf-itkf" src="art/layers/grass_tuft_2.png" style="left: 430px; top: 933px; height: 76px" alt="">
+          <img data-hf-id="hf-atee" src="art/layers/grass_tuft_4.png" style="left: 540px; top: 938px; height: 76px" alt="">
+          <img data-hf-id="hf-fhqw" src="art/layers/grass_front_day.png" style="left: 0; top: 1000px; width: 1920px; height: 80px" alt="">
+        </div>
+        <div data-hf-id="hf-8phu" id="s1-branch" class="plane" data-layout-allow-overflow="">
+          <img data-hf-id="hf-l4v0" src="art/layers/fg_branch.png" style="left: -30px; top: -20px; width: 900px; filter: blur(3px)" alt="">
+        </div>
+        <div data-hf-id="hf-q7bi" class="vignette"></div>
+        <p data-hf-id="hf-zo8e" id="s1-cap" class="caption">Далеко-далеко, за облачными мостами, раскинулось Царство бобов.</p>
+      </section>
+      <!-- 2. Праздник на площади -->
+      <section data-hf-id="hf-c0fc" id="s2" class="clip" data-start="8" data-duration="6" data-track-index="1">
+        <div data-hf-id="hf-iq4b" id="s2-bg" class="story-bg" data-layout-allow-overflow=""><img data-hf-id="hf-3ch4" src="art/layers/square_day.jpg" style="left:-690px;top:0;width:3240px;height:1080px" alt=""></div>
+        <img data-hf-id="hf-8k9s" id="s2-bunting" class="story-sprite" src="art/layers/bunting.png" style="left:-150px;top:140px;width:2220px" alt="">
+        <div data-hf-id="hf-8emy" id="s2-crowd" class="plane" data-layout-allow-overflow=""></div>
+        <img data-hf-id="hf-ojn7" id="s2-king" class="story-sprite" src="art/layers/king_wave.png" style="left:1280px;top:275px;height:320px" alt="">
+        <p data-hf-id="hf-d82m" id="s2-cap" class="story-caption">Однажды бобы праздновали весёлый Праздник бобов вместе со своим добрым королём.</p>
+      </section>
+      <!-- 3. Налёт призраков -->
+      <section data-hf-id="hf-owzk" id="s3" class="clip" data-start="14" data-duration="7" data-track-index="2">
+        <div data-hf-id="hf-i7ad" id="s3-day" class="story-bg" data-layout-allow-overflow=""><img data-hf-id="hf-aq3m" src="art/layers/square_day.jpg" style="left:-810px;top:0;width:3240px;height:1080px" alt=""></div>
+        <div data-hf-id="hf-k89s" id="s3-night" class="story-bg" style="opacity:0" data-layout-allow-overflow=""><img data-hf-id="hf-zdhy" src="art/layers/square_night.jpg" style="left:-810px;top:0;width:3240px;height:1080px" alt=""></div>
+        <img data-hf-id="hf-nrdp" id="s3-bunting" class="story-sprite" src="art/layers/bunting.png" style="left:-200px;top:140px;width:2220px" alt="">
+        <div data-hf-id="hf-3v7n" id="s3-lanterns" class="plane" data-layout-allow-overflow=""></div>
+        <div data-hf-id="hf-h977" id="s3-crowd" class="plane" data-layout-allow-overflow=""></div>
+        <img data-hf-id="hf-kb0a" id="s3-king-wave" class="story-sprite" src="art/layers/king_wave.png" style="left:1255px;top:275px;height:320px" alt="">
+        <img data-hf-id="hf-6m96" id="s3-king-fear" class="story-sprite" src="art/layers/king_frightened.png" style="left:1255px;top:270px;height:325px" alt="">
+        <div data-hf-id="hf-nuw4" id="s3-ghosts" class="plane" data-layout-allow-overflow=""></div>
+        <p data-hf-id="hf-4p5l" id="s3-cap" class="story-caption">Но вдруг, откуда ни возьмись, налетели призраки!</p>
+      </section>
+      <!-- 4. Похищение и падающая корона -->
+      <section data-hf-id="hf-2d4q" id="s4" class="clip" data-start="21" data-duration="7" data-track-index="3">
+        <div data-hf-id="hf-1mja" class="night-sky"></div>
+        <div data-hf-id="hf-e9zc" id="s4-world" class="story-bg" data-layout-allow-overflow="">
+          <img data-hf-id="hf-yu2q" src="art/layers/square_night.jpg" style="left:-700px;top:0;width:3240px;height:1080px" alt="">
+          <img data-hf-id="hf-c8c2" id="s4-king" class="story-sprite" src="art/layers/king_carried.png" style="left:1090px;top:280px;height:330px" alt="">
+          <img data-hf-id="hf-homf" id="s4-ghost-a" class="story-sprite" src="art/layers/ghost_lift.png" style="left:1030px;top:190px;height:190px" alt="">
+          <img data-hf-id="hf-7rgp" id="s4-ghost-b" class="story-sprite" src="art/layers/ghost_lift.png" style="left:1350px;top:190px;height:190px" alt="">
+          <img data-hf-id="hf-m7qu" id="s4-crown" class="story-sprite" src="art/layers/crown_upright.png" style="left:1250px;top:260px;height:85px" alt="">
+        </div>
+        <p data-hf-id="hf-2oi9" id="s4-cap" class="story-caption">Они схватили короля бобов и унесли его далеко-далеко…</p>
+      </section>
+      <!-- 5. Тишина после похищения -->
+      <section data-hf-id="hf-00rf" id="s5" class="clip" data-start="28" data-duration="3" data-track-index="4">
+        <div data-hf-id="hf-z4gu" id="s5-bg" class="story-bg" data-layout-allow-overflow=""><img data-hf-id="hf-dp46" src="art/layers/cobbles_night.jpg" style="left:0;top:-100px;width:1920px;height:1280px" alt=""></div>
+        <img data-hf-id="hf-g0v2" id="s5-crown" class="story-sprite" src="art/layers/crown_tilted.png" style="left:815px;top:620px;width:290px;height:auto" alt="">
+        <div data-hf-id="hf-0y2n" class="star" id="s5-star-a" style="left:1090px;top:630px"></div>
+        <div data-hf-id="hf-9ilg" class="star" id="s5-star-b" style="left:780px;top:740px;width:9px;height:9px"></div>
+      </section>
+      <!-- 6. Три брата и сестрёнка решаются отправиться в путь -->
+      <section data-hf-id="hf-klhf" id="s6" class="clip" data-start="31" data-duration="7" data-track-index="5">
+        <div data-hf-id="hf-kblb" id="s6-bg" class="story-bg" data-layout-allow-overflow=""><img data-hf-id="hf-krh0" src="art/layers/square_night.jpg" style="left:-690px;top:0;width:3240px;height:1080px" alt=""></div>
+        <img data-hf-id="hf-8us0" id="s6-crown" class="story-sprite" src="art/layers/crown_tilted.png" style="left:900px;top:850px;width:125px;height:auto" alt="">
+        <div data-hf-id="hf-u4uz" id="s6-heroes" class="plane" data-layout-allow-overflow=""></div>
+        <p data-hf-id="hf-itta" id="s6-cap" class="story-caption">Тогда три брата и их младшая сестрёнка решили: мы найдём короля и вернём его домой!</p>
+      </section>
+      <!-- 7. Рассветная дорога и название -->
+      <section data-hf-id="hf-3bkb" id="s7" class="clip" data-start="38" data-duration="8" data-track-index="6">
+        <div data-hf-id="hf-4szo" id="s7-sky" class="story-bg" data-layout-allow-overflow=""><img data-hf-id="hf-h34c" src="art/layers/dawn_sky.jpg" style="left:-350px;top:0;width:2620px;height:1080px" alt=""></div>
+        <div data-hf-id="hf-uqus" id="s7-far" class="story-bg" data-layout-allow-overflow=""><img data-hf-id="hf-8erj" src="art/layers/dawn_bridges.png" style="left:-200px;top:350px;width:2500px" alt=""></div>
+        <div data-hf-id="hf-d12n" id="s7-road" class="story-bg" data-layout-allow-overflow=""><img data-hf-id="hf-bx8t" src="art/layers/dawn_road.png" style="left:-200px;top:380px;width:2600px" alt=""></div>
+        <div data-hf-id="hf-u35k" id="s7-heroes" class="plane" data-layout-allow-overflow=""></div>
+        <div data-hf-id="hf-cjbm" id="s7-front" class="story-bg" data-layout-allow-overflow=""><img data-hf-id="hf-wvuo" src="art/layers/dawn_foreground.png" style="left:-220px;top:710px;width:2700px" alt=""></div>
+        <img data-hf-id="hf-zonr" id="s7-grass-front" class="story-sprite" src="art/layers/grass_front_dawn.png" style="left:-170px;top:995px;width:2500px;height:80px" alt="">
+        <h1 data-hf-id="hf-rke0" id="s7-title" class="story-title">Держись!</h1>
+      </section>
+      <audio data-hf-id="hf-2o34" id="story-score" src="art/story_score.wav" data-start="0" data-duration="46" data-track-index="7"></audio>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      const $ = (sel) => document.querySelector(sel);
+
+      // ── Камера кадра 1. Конечные места слоёв — в разметке; спуск — сдвиг планов вниз на свою глубину.
+      // Чем ближе план, тем больше путь: небо 680, горы 900, город 1000, трава 1250, ветка 1250 (уходит вверх).
+      const DESCENT = 3.6;
+      const depth = { "#s1-sky": 680, "#s1-mountains": 900, "#s1-birds": 950, "#s1-kingdom": 1000, "#s1-grass": 1250 };
+      for (const [sel, d] of Object.entries(depth)) {
+        tl.fromTo(sel, { y: d }, { y: 0, duration: DESCENT, ease: "power2.inOut" }, 0);
+      }
+      tl.fromTo("#s1-branch", { y: 0 }, { y: -1250, duration: DESCENT, ease: "power2.inOut" }, 0);
+
+      // Наезд на замок (6.3 → 8, разгоняется — склейка во 2-й кадр на ходу): ближние планы растут сильнее.
+      const CASTLE = "1085px 620px";
+      const push = { "#s1-sky": 1.04, "#s1-mountains": 1.08, "#s1-birds": 1.1, "#s1-kingdom": 1.16, "#s1-grass": 1.34 };
+      for (const [sel, s] of Object.entries(push)) {
+        tl.fromTo(sel, { scale: 1, transformOrigin: CASTLE }, { scale: s, duration: 1.7, ease: "power2.in", immediateRender: false }, 6.3);
+      }
+
+      // ── Птицы: стайка летит влево (направление фильма). Крылья — две нарисованные фазы (вверх / вниз),
+      // смена 12 раз в секунду, как в рисованной мультипликации «на двойках»; у каждой птицы свой сдвиг фазы.
+      const birds = $("#s1-birds");
+      const WING_UP = "M1 9 Q8 0 17 10 Q26 0 33 9", WING_DOWN = "M1 6 Q8 15 17 9 Q26 15 33 6";
+      const FLAP = 1 / 12;
+      [[1500, 380, 1], [1560, 350, 0.8], [1610, 402, 0.9]].forEach(([x, y, s], i) => {
+        birds.insertAdjacentHTML("beforeend",
+          `<svg class="bird" id="bird${i}" viewBox="0 0 34 16" style="left:${x}px;top:${y}px">` +
+          `<path class="up" d="${WING_UP}" fill="none" stroke="#24304f" stroke-width="3.2" stroke-linecap="round"/>` +
+          `<path class="down" d="${WING_DOWN}" fill="none" stroke="#24304f" stroke-width="3.2" stroke-linecap="round" opacity="0"/></svg>`);
+        tl.fromTo(`#bird${i}`, { x: 0, scale: s }, { x: -820, y: -40 + i * 12, duration: 5.6, ease: "none" }, 1.6);
+        for (let k = 0, t = 1.6 + i * FLAP; t < 7.2; k++, t += FLAP) {
+          const down = k % 2 === 0;
+          tl.set(`#bird${i} .up`, { opacity: down ? 0 : 1 }, t);
+          tl.set(`#bird${i} .down`, { opacity: down ? 1 : 0 }, t);
+        }
+      });
+
+      // ── Титр: слова всплывают волной.
+      const cap = $("#s1-cap");
+      cap.innerHTML = cap.textContent.split(" ").map((w) => `<span>${w}</span>`).join(" ");
+      tl.fromTo(cap, { autoAlpha: 0, y: -24 }, { autoAlpha: 1, y: 0, duration: 0.5, ease: "power3.out" }, 0.8);
+      tl.fromTo("#s1-cap span", { autoAlpha: 0, y: 14 }, { autoAlpha: 1, y: 0, duration: 0.35, ease: "power2.out", stagger: 0.05 }, 0.9);
+      tl.to(cap, { autoAlpha: 0, y: -24, duration: 0.35, ease: "power2.in" }, 6.2);
+
+      // ── Герой. Впрыгивает снизу-слева (поза прыжка), приземляется — дальше играет кукла.
+      const hero = "#hero", rig = "#hero .rig", pose = "#hero .pose";
+      const set = (sel, at, vars) => tl.set(sel, vars, at);
+      set(rig, 0, { autoAlpha: 0 });
+      set(pose, 0, { autoAlpha: 1 });
+      set("#s1-shadow", 0, { autoAlpha: 0, scale: 0.3 });
+      const JUMP = 3.25, LAND = 4.0;
+      tl.fromTo(hero, { x: -330 }, { x: 0, duration: LAND - JUMP, ease: "power1.out" }, JUMP);
+      tl.fromTo(hero, { y: 380 }, { y: -170, duration: 0.42, ease: "power2.out" }, JUMP);
+      tl.to(hero, { y: 0, duration: LAND - JUMP - 0.42, ease: "power2.in" }, JUMP + 0.42);
+      tl.fromTo(pose, { rotation: -14 }, { rotation: 8, duration: LAND - JUMP, ease: "sine.inOut", transformOrigin: "0px -140px" }, JUMP);
+      tl.to("#s1-shadow", { autoAlpha: 1, scale: 1, duration: LAND - JUMP, ease: "power2.in" }, JUMP);
+
+      // Приземление: в тот же кадр — смена на куклу, сплющивание, пыль.
+      set(pose, LAND, { autoAlpha: 0 });
+      set(rig, LAND, { autoAlpha: 1 });
+      tl.fromTo(rig, { scaleX: 1.22, scaleY: 0.74, transformOrigin: "0px 0px" },
+        { scaleX: 1, scaleY: 1, duration: 0.55, ease: "back.out(2.4)" }, LAND);
+      tl.fromTo("#hero .hero-left-arm", { rotation: 18 }, { rotation: 0, duration: 0.5, ease: "back.out(2)" }, LAND);
+      tl.fromTo("#hero .hero-right-arm", { rotation: -18 }, { rotation: 0, duration: 0.5, ease: "back.out(2)" }, LAND);
+      const dust = $("#s1-dust");
+      [-1, -0.55, -0.2, 0.2, 0.55, 1].forEach((d, i) => {
+        dust.insertAdjacentHTML("beforeend", `<div class="dust" id="dust${i}"></div>`);
+        tl.fromTo(`#dust${i}`, { x: d * 30, y: 0, scale: 0.5, autoAlpha: 0 },
+          { x: d * 150, y: -18 - Math.abs(d) * 22, scale: 1.4 - Math.abs(d) * 0.4, duration: 0.6, ease: "power2.out", immediateRender: true }, LAND);
+        tl.fromTo(`#dust${i}`, { autoAlpha: 0.95 }, { autoAlpha: 0, duration: 0.6, ease: "power1.in", immediateRender: false }, LAND);
+      });
+
+      // Моргнул — увидел замок (стоп) — удивился «О!» — заулыбался и машет.
+      const swap = (from, to, at) => { set(from, at, { autoAlpha: 0 }); set(to, at, { autoAlpha: 1 }); };
+      swap("#hero .eyes-open", "#hero .eyes-blink", 4.55);
+      swap("#hero .eyes-blink", "#hero .eyes-open", 4.65);
+      const WOW = 4.95;
+      swap("#hero .eyes-open", "#hero .eyes-frightened", WOW);
+      swap("#hero .mouth-smile", "#hero .mouth-surprised", WOW);
+      set("#hero .brows-worried", WOW, { autoAlpha: 1 });
+      tl.fromTo(rig, { rotation: 0, scaleY: 1 }, { rotation: -5, scaleY: 1.06, duration: 0.25, ease: "back.out(1.6)", immediateRender: false }, WOW);
+      const JOY = 5.6;
+      swap("#hero .eyes-frightened", "#hero .eyes-open", JOY);
+      swap("#hero .mouth-surprised", "#hero .mouth-smile", JOY);
+      set("#hero .brows-worried", JOY, { autoAlpha: 0 });
+      tl.to(rig, { rotation: 3, scaleY: 1, duration: 0.3, ease: "power2.out" }, JOY);
+      // Машет замку дальней (правой) рукой — она поднимается над плечом со стороны замка.
+      // Плечо на время взмаха выезжает к краю тела, иначе поднятая рука прячется за ним.
+      tl.to("#hero .hero-right-arm", { rotation: -115, x: 44, y: -14, duration: 0.3, ease: "back.out(1.5)" }, JOY);
+      tl.fromTo("#hero .hero-right-arm", { rotation: -115 }, { rotation: -140, duration: 0.17, ease: "sine.inOut", yoyo: true, repeat: 3, immediateRender: false }, JOY + 0.3);
+      tl.to("#hero .hero-left-arm", { rotation: 14, duration: 0.3, ease: "power2.out" }, JOY);
+      tl.to(rig, { y: -26, duration: 0.18, ease: "power2.out", yoyo: true, repeat: 1 }, JOY + 0.3);
+
+      // ── Остальные сцены: картинки — независимые слои, склейки — жёсткие.
+      const layer = (name) => `art/layers/${name}.png`;
+      function showCaption(id, start, end) {
+        tl.fromTo(id, { autoAlpha: 0, y: -18 },
+          { autoAlpha: 1, y: 0, duration: 0.4, ease: "power2.out" }, start + 0.3);
+        tl.to(id, { autoAlpha: 0, y: -15, duration: 0.35, ease: "power2.in" }, end - 0.5);
+      }
+      function addCrowd(target, prefix, top = 745) {
+        const host = $(target);
+        const xs = [140, 360, 590, 820, 1030, 1700];
+        xs.forEach((x, i) => host.insertAdjacentHTML("beforeend",
+          `<img id="${prefix}-${i}" class="story-sprite" src="${layer(`town_dance_${i + 1}`)}" style="left:${x}px;top:${top + (i % 2) * 18}px;height:${150 - (i % 3) * 8}px" alt="" />`));
+        return xs;
+      }
+      addCrowd("#s2-crowd", "s2-town");
+      addCrowd("#s3-crowd", "s3-town");
+      [140, 360, 590, 820, 1030, 1700].forEach((x, i) => $("#s3-crowd").insertAdjacentHTML("beforeend",
+        `<img id="s3-run-${i}" class="story-sprite" src="${layer(`town_run_${i + 1}`)}" style="left:${x}px;top:${745 + (i % 2) * 18}px;height:${150 - (i % 3) * 8}px;opacity:0" alt="" />`));
+      [280, 690, 1130, 1650].forEach((x, i) => $("#s3-lanterns").insertAdjacentHTML("beforeend",
+        `<img id="lamp-on-${i}" class="story-sprite" src="${layer("lantern_lit")}" style="left:${x}px;top:${295 + (i % 2) * 22}px;height:75px" alt="" />` +
+        `<img id="lamp-off-${i}" class="story-sprite" src="${layer("lantern_unlit")}" style="left:${x}px;top:${295 + (i % 2) * 22}px;height:75px;opacity:0" alt="" />`));
+      [["ghost_swoop", 1930, 325], ["ghost_fast", 2070, 480], ["ghost_laugh", 2200, 205]].forEach(([name, x, y], i) =>
+        $("#s3-ghosts").insertAdjacentHTML("beforeend", `<img id="s3-ghost-${i}" class="story-sprite" src="${layer(name)}" style="left:${x}px;top:${y}px;height:${180 + i * 15}px" alt="" />`));
+      const confetti = document.createElement("div");
+      confetti.id = "s2-confetti";
+      confetti.className = "plane";
+      $("#s2").insertBefore(confetti, $("#s2-cap"));
+      for (let i = 0; i < 22; i++) {
+        const x = (i * 279 + 81) % 1920, c = ["#f04c4a", "#ffd345", "#3cb7e6", "#68c74a"][i % 4];
+        confetti.insertAdjacentHTML("beforeend", `<div id="confetti-${i}" style="position:absolute;left:${x}px;top:-40px;width:14px;height:22px;border-radius:3px;background:${c};transform:rotate(${i * 31}deg)"></div>`);
+      }
+      // 2. Праздник: камера движется влево к королю, толпа танцует.
+      tl.fromTo("#s2-bg", { x: 70 }, { x: -115, duration: 6, ease: "none" }, 8);
+      tl.fromTo("#s2-bunting", { x: 35, rotation: -1 }, { x: -60, rotation: 1, duration: 6, ease: "sine.inOut" }, 8);
+      tl.fromTo("#s2-king", { rotation: -7 }, { rotation: 7, duration: 0.7, yoyo: true, repeat: 7, ease: "sine.inOut" }, 8.25);
+      for (let i = 0; i < 6; i++) tl.fromTo(`#s2-town-${i}`, { y: 0 },
+        { y: -42 - (i % 3) * 12, duration: 0.36 + i * 0.04, yoyo: true, repeat: 12, ease: "sine.inOut" }, 8.2 + i * 0.12);
+      for (let i = 0; i < 22; i++) tl.fromTo(`#confetti-${i}`, { y: -160, rotation: i * 31 },
+        { y: 1110, x: (i % 2 ? -1 : 1) * (80 + i * 5), rotation: i * 31 + 480,
+          duration: 3.5 + (i % 5) * 0.45, ease: "none" }, 8 + (i % 6) * 0.32);
+      showCaption("#s2-cap", 8, 14);
+
+      // 3. День становится ночью, лампы гаснут по очереди, призраки налетают.
+      tl.fromTo("#s3-night", { autoAlpha: 0 }, { autoAlpha: 1, duration: 1.35, ease: "power1.in", immediateRender: false }, 14.35);
+      tl.fromTo("#s3-day", { x: 0 }, { x: -160, duration: 7, ease: "none" }, 14);
+      tl.fromTo("#s3-night", { x: 0 }, { x: -160, duration: 7, ease: "none" }, 14);
+      tl.fromTo("#s3-bunting", { rotation: 0 }, { rotation: -5, duration: 0.5, yoyo: true, repeat: 7 }, 15.6);
+      for (let i = 0; i < 4; i++) {
+        tl.set(`#lamp-on-${i}`, { autoAlpha: 0 }, 14.9 + i * 0.22);
+        tl.set(`#lamp-off-${i}`, { autoAlpha: 1 }, 14.9 + i * 0.22);
+      }
+      for (let i = 0; i < 6; i++) {
+        tl.fromTo(`#s3-town-${i}`, { y: 0 }, { y: -30, duration: 0.3, yoyo: true, repeat: 4 }, 14 + i * 0.08);
+        tl.set(`#s3-town-${i}`, { autoAlpha: 0 }, 16.55);
+        tl.set(`#s3-run-${i}`, { autoAlpha: 1 }, 16.55);
+        tl.to(`#s3-run-${i}`, { x: -900 - i * 35, y: 50, duration: 3.2 + i * 0.3, ease: "power2.in" }, 16.55);
+      }
+      tl.set("#s3-king-wave", { autoAlpha: 0 }, 17.05);
+      tl.fromTo("#s3-king-fear", { autoAlpha: 0, rotation: 0 }, { autoAlpha: 1, rotation: -8, duration: 0.25 }, 17.05);
+      for (let i = 0; i < 3; i++) tl.fromTo(`#s3-ghost-${i}`, { x: 0, y: 0 },
+        { x: -850 - i * 90, y: 95 + i * 60, duration: 3.2 + i * 0.35, ease: "power2.out" }, 16.05 + i * 0.2);
+      tl.fromTo("#s3", { x: 0 }, { x: 13, duration: 0.08, yoyo: true, repeat: 7 }, 16.15);
+      showCaption("#s3-cap", 14, 21);
+
+      // 4. Похитители поднимаются в небо, корона падает на площадь.
+      for (const [id, dx, dy] of [["s4-king", -130, -790], ["s4-ghost-a", -300, -760], ["s4-ghost-b", -5, -740]])
+        tl.fromTo(`#${id}`, { x: 0, y: 0 }, { x: dx, y: dy, duration: 4.6, ease: "power2.in" }, 21.2);
+      tl.fromTo("#s4-crown", { x: 0, y: 0, rotation: 0 },
+        { x: -300, y: 560, rotation: 670, duration: 4.5, ease: "power2.in" }, 22.1);
+      tl.to("#s4-crown", { y: 535, rotation: 700, duration: 0.25, ease: "power2.out" }, 26.6);
+      showCaption("#s4-cap", 21, 28);
+
+      // 5. Тишина и блеск короны.
+      tl.fromTo("#s5-bg", { scale: 1 }, { scale: 1.1, duration: 3, ease: "power1.inOut", transformOrigin: "50% 67%" }, 28);
+      tl.fromTo("#s5-crown", { scale: 0.9, rotation: -8 }, { scale: 1.1, rotation: 3, duration: 3, ease: "sine.inOut" }, 28);
+      for (const [id, at] of [["s5-star-a", 28.8], ["s5-star-b", 29.45]])
+        tl.fromTo(`#${id}`, { autoAlpha: 0, scale: 0 }, { autoAlpha: 1, scale: 1, duration: 0.32, yoyo: true, repeat: 3 }, at);
+
+      // 6. Четверо героев приземляются возле короны, переглядываются и кивают.
+      const heroCols = ["red", "blue", "green", "yellow"], heroXs = [430, 650, 1120, 1350];
+      heroCols.forEach((color, i) => {
+        const base = color === "red" ? "hero" : `hero_${color}`;
+        const h = color === "yellow" ? 194 : 225;
+        $("#s6-heroes").insertAdjacentHTML("beforeend", `<div class="story-sprite" id="s6-${color}" style="left:${heroXs[i]}px;top:${935-h}px;width:220px;height:${h}px">` +
+          `<img class="jump" src="${layer(`${base}_jump`)}" style="position:absolute;left:0;bottom:0;height:${h}px" alt="" />` +
+          `<img class="stand" src="${layer(`${base}_stand`)}" style="position:absolute;left:0;bottom:0;height:${h}px;opacity:0" alt="" />` +
+          (color === "yellow" ? `<img class="bow" src="${layer("hero_yellow_bow")}" style="position:absolute;left:103px;top:-7px;width:47px;opacity:0" alt="" />` : "") + `</div>`);
+        tl.fromTo(`#s6-${color}`, { y: -650, rotation: -11 },
+          { y: 0, rotation: 0, duration: 0.65, ease: "bounce.out" }, 31.45 + i * 0.18);
+        tl.set(`#s6-${color} .jump`, { autoAlpha: 0 }, 32.8 + i * 0.12);
+        tl.set(`#s6-${color} .stand`, { autoAlpha: 1 }, 32.8 + i * 0.12);
+        if (color === "yellow") tl.set(`#s6-${color} .bow`, { autoAlpha: 1 }, 33.2);
+        tl.to(`#s6-${color}`, { rotation: i % 2 ? 6 : -6, duration: 0.28, yoyo: true, repeat: 2 }, 34.2 + i * 0.1);
+        tl.to(`#s6-${color}`, { y: 12, duration: 0.25, yoyo: true, repeat: 1, ease: "power2.inOut" }, 35.7 + i * 0.08);
+      });
+      tl.fromTo("#s6-bg", { scale: 1.2 }, { scale: 1, duration: 6.6, ease: "power2.out", transformOrigin: "50% 78%" }, 31);
+      tl.fromTo("#s6-crown", { scale: 1.45 }, { scale: 1, duration: 6.6, ease: "power2.out" }, 31);
+      showCaption("#s6-cap", 31, 38);
+
+      // 7. Общий бег к мостам, ближние планы уезжают влево быстрее дальних.
+      heroCols.forEach((color, i) => {
+        const base = color === "red" ? "hero" : `hero_${color}`;
+        const h = color === "yellow" ? 180 : 205;
+        $("#s7-heroes").insertAdjacentHTML("beforeend", `<div id="s7-${color}" class="story-sprite" style="left:${280 + i * 210}px;top:${930-h}px;width:220px;height:${h}px">` +
+          `<img src="${layer(`${base}_run`)}" style="position:absolute;left:0;bottom:0;height:${h}px" alt="" />` +
+          (color === "yellow" ? `<img src="${layer("hero_yellow_bow")}" style="position:absolute;left:110px;top:-6px;width:43px" alt="" />` : "") + `</div>`);
+        tl.fromTo(`#s7-${color}`, { x: 0 }, { x: 180, duration: 8, ease: "none" }, 38);
+        tl.fromTo(`#s7-${color}`, { y: 0 }, { y: -26 - i * 3,
+          duration: 0.42 + i * 0.035, yoyo: true, repeat: 17, ease: "sine.inOut" }, 38 + i * 0.06);
+      });
+      for (const [id, distance] of [["s7-sky", -70], ["s7-far", -150], ["s7-road", -250], ["s7-front", -350], ["s7-grass-front", -380]])
+        tl.fromTo(`#${id}`, { x: 0 }, { x: distance, duration: 8, ease: "none" }, 38);
+      tl.fromTo("#s7-title", { autoAlpha: 0, y: -80, scale: 0.65 },
+        { autoAlpha: 1, y: 0, scale: 1, duration: 1.1, ease: "back.out(1.8)" }, 42.4);
+      tl.to("#s7-title", { scale: 1.05, duration: 2.5, ease: "sine.inOut" }, 43.5);
+
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

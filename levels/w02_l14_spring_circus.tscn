@@ -1,0 +1,236 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://src/level/greybox_level.gd" id="1"]
+[ext_resource type="PackedScene" path="res://levels/backdrops/w02_scaffolds.tscn" id="bd"]
+[ext_resource type="Script" path="res://src/level/backdrop_layer.gd" id="bl"]
+[ext_resource type="Texture2D" path="res://assets/backgrounds/world_02/source/w02_lm14_spring_arena.png" id="lm"]
+[ext_resource type="Script" path="res://src/mechanisms/finish.gd" id="finish"]
+[ext_resource type="Script" path="res://src/mechanisms/mover.gd" id="mover"]
+[ext_resource type="Script" path="res://src/mechanisms/saw.gd" id="saw"]
+[ext_resource type="Script" path="res://src/mechanisms/spikes.gd" id="spikes"]
+[ext_resource type="Script" path="res://src/mechanisms/spring_pad.gd" id="spring"]
+
+[node name="W02L14" type="Node2D"]
+script = ExtResource("1")
+title = "14 · Пружинный цирк"
+blocks = Array[Rect2]([Rect2(0, -8, 1, 30), Rect2(126, -8, 1, 30), Rect2(1, -8, 23, 12), Rect2(1, 8, 5, 1), Rect2(1, 12, 5, 6), Rect2(6, 16, 16, 2), Rect2(22, 8, 2, 1), Rect2(22, 12, 6, 6), Rect2(28, 15, 15, 3), Rect2(29.25, 12, 1.5, 3), Rect2(34.25, 12, 1.5, 3), Rect2(39.25, 12, 1.5, 3), Rect2(43, 8, 16.5, 10), Rect2(59.5, 0.5, 8.5, 17.5), Rect2(64, -1.5, 1.5, 1), Rect2(66, -3.5, 2, 1), Rect2(68, 6, 24, 12), Rect2(92, 0.5, 8, 17.5), Rect2(91, -1.5, 1.5, 0.5), Rect2(100, 8, 17, 10), Rect2(117, 0.5, 9, 17.5)])
+checkpoints = Array[Vector2]([Vector2(2.5, 12), Vector2(24, 12), Vector2(61, 0.5)])
+slot_spawns = Array[Vector2]([Vector2(2.5, 8), Vector2(2.5, 12)])
+bounds_tiles = Rect2(0, -8, 127, 27)
+kill_y_tiles = 19
+ground_fill = "w02_fill"
+ground_deep = "w02_deep"
+ground_top = "w02_top"
+ground_side = "w02_side"
+
+[node name="PitSpikes" type="Node2D" parent="."]
+position = Vector2(896, 1024)
+script = ExtResource("spikes")
+width_tiles = 16.0
+
+[node name="TrapezeU" type="AnimatableBody2D" parent="."]
+position = Vector2(384, 512)
+script = ExtResource("mover")
+size_tiles = Vector2(4, 0.5)
+path_tiles = Vector2(12, 0)
+speed = 150.0
+ride = true
+partners = Array[NodePath]([NodePath("../TrapezeL")])
+
+[node name="TrapezeL" type="AnimatableBody2D" parent="."]
+position = Vector2(384, 768)
+script = ExtResource("mover")
+size_tiles = Vector2(4, 0.5)
+path_tiles = Vector2(12, 0)
+speed = 150.0
+ride = true
+partners = Array[NodePath]([NodePath("../TrapezeU")])
+
+[node name="SawU1" type="Node2D" parent="."]
+position = Vector2(704, 291.2)
+script = ExtResource("saw")
+path_tiles = Vector2(0, 2.9)
+speed = 300.0
+start_at = 0.0
+
+[node name="SawU2" type="Node2D" parent="."]
+position = Vector2(1056, 291.2)
+script = ExtResource("saw")
+path_tiles = Vector2(0, 2.9)
+speed = 340.0
+start_at = 0.5
+
+[node name="SawL1" type="Node2D" parent="."]
+position = Vector2(640, 576)
+script = ExtResource("saw")
+path_tiles = Vector2(0, 2.45)
+speed = 280.0
+start_at = 0.3
+
+[node name="SawL2" type="Node2D" parent="."]
+position = Vector2(960, 576)
+script = ExtResource("saw")
+path_tiles = Vector2(0, 2.45)
+speed = 320.0
+start_at = 0.8
+
+[node name="Spikes2" type="Node2D" parent="."]
+position = Vector2(2272, 960)
+script = ExtResource("spikes")
+width_tiles = 15.0
+
+[node name="Pad1" type="StaticBody2D" parent="."]
+position = Vector2(1920, 768)
+script = ExtResource("spring")
+
+[node name="Pad2" type="StaticBody2D" parent="."]
+position = Vector2(2240, 768)
+script = ExtResource("spring")
+
+[node name="Pad3" type="StaticBody2D" parent="."]
+position = Vector2(2560, 768)
+script = ExtResource("spring")
+
+[node name="SawA" type="Node2D" parent="."]
+position = Vector2(2080, 800)
+script = ExtResource("saw")
+radius_tiles = 0.5
+path_tiles = Vector2(0, -4.5)
+speed = 170.0
+
+[node name="SawB" type="Node2D" parent="."]
+position = Vector2(2400, 512)
+script = ExtResource("saw")
+radius_tiles = 0.5
+path_tiles = Vector2(0, 4.5)
+speed = 170.0
+
+[node name="Pad4" type="StaticBody2D" parent="."]
+position = Vector2(3200, 512)
+script = ExtResource("spring")
+
+[node name="TrapezeTop" type="AnimatableBody2D" parent="."]
+position = Vector2(3136, 128)
+script = ExtResource("mover")
+size_tiles = Vector2(4.5, 0.5)
+path_tiles = Vector2(6, 0)
+speed = 100.0
+pause = 3.0
+
+[node name="PitSpikes4" type="Node2D" parent="."]
+position = Vector2(5120, 384)
+script = ExtResource("spikes")
+width_tiles = 24.0
+
+[node name="DuoU" type="AnimatableBody2D" parent="."]
+position = Vector2(4352, -224)
+script = ExtResource("mover")
+size_tiles = Vector2(3, 0.5)
+path_tiles = Vector2(21, 0)
+speed = 190.0
+ride = true
+hold = true
+partners = Array[NodePath]([NodePath("../DuoL")])
+
+[node name="DuoL" type="AnimatableBody2D" parent="."]
+position = Vector2(4352, 32)
+script = ExtResource("mover")
+size_tiles = Vector2(3, 0.5)
+path_tiles = Vector2(21, 0)
+speed = 190.0
+ride = true
+hold = true
+partners = Array[NodePath]([NodePath("../DuoU")])
+
+[node name="DuoSawU1" type="Node2D" parent="."]
+position = Vector2(4704, -476.8)
+script = ExtResource("saw")
+path_tiles = Vector2(0, 3.4)
+speed = 280.0
+start_at = 0.0
+
+[node name="DuoSawU2" type="Node2D" parent="."]
+position = Vector2(4960, -476.8)
+script = ExtResource("saw")
+path_tiles = Vector2(0, 3.4)
+speed = 320.0
+start_at = 0.6
+
+[node name="DuoSawU3" type="Node2D" parent="."]
+position = Vector2(5216, -476.8)
+script = ExtResource("saw")
+path_tiles = Vector2(0, 3.4)
+speed = 300.0
+start_at = 0.3
+
+[node name="DuoSawU4" type="Node2D" parent="."]
+position = Vector2(5472, -476.8)
+script = ExtResource("saw")
+path_tiles = Vector2(0, 3.4)
+speed = 340.0
+start_at = 0.85
+
+[node name="DuoSawL1" type="Node2D" parent="."]
+position = Vector2(4832, -160)
+script = ExtResource("saw")
+path_tiles = Vector2(0, 2.45)
+speed = 270.0
+start_at = 0.5
+
+[node name="DuoSawL2" type="Node2D" parent="."]
+position = Vector2(5088, -160)
+script = ExtResource("saw")
+path_tiles = Vector2(0, 2.45)
+speed = 310.0
+start_at = 0.1
+
+[node name="DuoSawL3" type="Node2D" parent="."]
+position = Vector2(5344, -160)
+script = ExtResource("saw")
+path_tiles = Vector2(0, 2.45)
+speed = 290.0
+start_at = 0.8
+
+[node name="DuoSawL4" type="Node2D" parent="."]
+position = Vector2(5600, -160)
+script = ExtResource("saw")
+path_tiles = Vector2(0, 2.45)
+speed = 330.0
+start_at = 0.35
+
+[node name="Catcher" type="AnimatableBody2D" parent="."]
+position = Vector2(5952, -224)
+script = ExtResource("mover")
+size_tiles = Vector2(3, 0.5)
+path_tiles = Vector2(20, 0)
+speed = 150.0
+ride = true
+return_delay = 1.5
+
+[node name="Pad5" type="StaticBody2D" parent="."]
+position = Vector2(6355.2, 32)
+script = ExtResource("spring")
+
+[node name="PitSpikes5" type="Node2D" parent="."]
+position = Vector2(6944, 512)
+script = ExtResource("spikes")
+width_tiles = 17.0
+
+[node name="Finish" type="Node2D" parent="."]
+position = Vector2(7808, 32)
+script = ExtResource("finish")
+
+[node name="Backdrop" parent="." instance=ExtResource("bd")]
+
+[node name="Landmark" type="Node2D" parent="Backdrop"]
+script = ExtResource("bl")
+texture = ExtResource("lm")
+parallax = 0.3
+parallax_y = 0.1
+height = 0.6
+center_y = 0.55
+zoom_follow = 0.3
+repeat = false
+world_x = 2845.0
+haze = 0.22
+haze_color = Color(0.860, 0.900, 0.960, 1)

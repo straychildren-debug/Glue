@@ -255,12 +255,19 @@ func _draw() -> void:
 	for x_y: Vector2 in [Vector2(0, left_y), Vector2(span, right_y)]:
 		draw_line(Vector2(x_y.x, top), Vector2(x_y.x, x_y.y), outline, 5.0)
 		draw_line(Vector2(x_y.x, top), Vector2(x_y.x, x_y.y), Color("c8b48a"), 2.5)
-	draw_rect(Rect2(-width / 4.0, top - 20.0, span + width / 2.0, 12.0), outline)
-	draw_rect(Rect2(-width / 4.0 + 2.0, top - 18.0, span + width / 2.0 - 4.0, 8.0), Color("8a5a30"))
-	for x: float in [0.0, span]:
-		draw_circle(Vector2(x, top), 15.0, outline)
-		draw_circle(Vector2(x, top), 11.0, Color("9aa3ad"))
-		draw_circle(Vector2(x, top), 4.0, outline)
+	if Art.enabled:
+		Art.draw_wood(self, Rect2(-width / 4.0, top - 22.0, span + width / 2.0, 14.0))
+		for x: float in [0.0, span]:
+			draw_texture_rect(Art.tex("lift_wheel"), Rect2(x - 16.0, top - 16.0, 32, 32), false)
+		for x_y: Vector2 in [Vector2(0, left_y), Vector2(span, right_y)]:
+			draw_texture_rect(Art.tex("lift_hanger"), Rect2(x_y.x - 10.0, x_y.y - 23.0, 20, 24), false)
+	else:
+		draw_rect(Rect2(-width / 4.0, top - 20.0, span + width / 2.0, 12.0), outline)
+		draw_rect(Rect2(-width / 4.0 + 2.0, top - 18.0, span + width / 2.0 - 4.0, 8.0), Color("8a5a30"))
+		for x: float in [0.0, span]:
+			draw_circle(Vector2(x, top), 15.0, outline)
+			draw_circle(Vector2(x, top), 11.0, Color("9aa3ad"))
+			draw_circle(Vector2(x, top), 4.0, outline)
 	if lock.is_empty() == false and not Engine.is_editor_hint():
 		var locked := is_locked()
 		draw_circle(Vector2(span / 2.0, top - 14.0), 9.0, outline)

@@ -3,7 +3,8 @@ class_name Ground
 extends Node2D
 ## Платформы уровня в графике мира 01: любой прямоугольник блока «одевается» текстурами
 ## (tools/blender/make_tiles.py → assets/tiles/world_01/game). Внутри — кладка у поверхности,
-## глубже — скала; сверху по открытой кромке — мох; по открытым бокам — каменный край с плющом.
+## глубже — скала (какие именно — у зоны свои, GreyboxLevel.ground_fill / ground_deep);
+## сверху по открытой кромке — мох; по открытым бокам — каменный край с плющом.
 ## Открытая — значит не прижата к соседнему блоку: на стыке блоков ни мха, ни края нет.
 ## Текстуры привязаны к миру, а не к блоку: соседние блоки продолжают друг друга без шва.
 ##
@@ -13,7 +14,11 @@ extends Node2D
 ## в одной строке встречались бы кладка и скала — прямые швы по границам блоков.
 ## Тонкие блоки (балки, насесты) рисует GreyboxLevel деревом. F3 — серые прямоугольники.
 
-const DIR := "res://assets/tiles/world_01/game/"
+## Линия, по которой ходят, в полосе верха — доля её высоты (выше — травинки или пыль),
+## и внешний край каменной колонны в полосе бока — доля её ширины (левее — свисающий плющ).
+## У каждого мира свой рисунок — свои доли (измерены по прозрачности, см. make_tiles.py).
+const TOP_SURFACE := {"w01_moss_top": 0.17, "w02_top": 0.13}
+const SIDE_EDGES := {"w01_stone_side": 0.104, "w02_side": 0.11}
 ## Текстуры вдвое крупнее, чем на экране при масштабе камеры 1: период повтора = размер / 2.
 const TEXELS_PER_PX := 2.0
 ## Кладка у поверхности на такую глубину, переход в скалу — последние MASONRY_FEATHER;
@@ -31,12 +36,8 @@ const SHADE_SPAN := 6.0 * GreyboxLevel.TILE
 ## Блок, доходящий почти до низа камеры, рисуется ниже её границы — под землёй не видно неба.
 const BOTTOM_REACH := 1.5
 const BOTTOM_EXTRA := 3.0
-## Линия, по которой ходят, в полосе мха — доля её высоты (выше — травинки, ниже — капли).
-const MOSS_SURFACE := 0.17
 ## Мох чуть заходит за углы блока, прикрывая верх бокового края.
 const MOSS_OVERHANG := 5.0
-## Внешний край каменной колонны в полосе края — доля её ширины (левее — свисающий плющ).
-const SIDE_EDGE := 0.104
 const EPS := 0.001
 
 const FILL_SHADER := """
@@ -103,9 +104,14 @@ func _ready() -> void:
 	add_child(_trim, false, Node.INTERNAL_MODE_FRONT)
 
 
+## Путь к игровой текстуре по имени: папка мира — по префиксу (w02_fill → world_02).
+static func path(name: String) -> String:
+	return "res://assets/tiles/world_%s/game/%s.png" % [name.substr(1, 2), name]
+
+
 func _tex(name: String) -> Texture2D:
 	if not _textures.has(name):
-		_textures[name] = load(DIR + name + ".png")
+		_textures[name] = load(path(name))
 	return _textures[name]
 
 
@@ -113,7 +119,9 @@ func _tex(name: String) -> Texture2D:
 ## чекпоинта), поэтому карта глубины пересчитывается, только если изменились блоки или F3.
 func _draw() -> void:
 	var level := get_parent() as GreyboxLevel
-	var key := "%s|%s|%s" % [Art.enabled, level.blocks if level else null, level.bounds_tiles if level else null]
+	var key := "%s|%s|%s|%s|%s|%s|%s" % [Art.enabled, level.blocks if level else null, level.bounds_tiles if level else null,
+			level.ground_fill if level else "", level.ground_deep if level else "",
+			level.ground_top if level else "", level.ground_side if level else ""]
 	if key == _built_for:
 		return
 	_built_for = key
@@ -136,8 +144,8 @@ func _update_material(level: GreyboxLevel) -> void:
 	area.size.y += BOTTOM_EXTRA
 	var origin := area.position * GreyboxLevel.TILE
 	var depth := _depth_map(area)
-	var stone := _tex("w01_stone_fill")
-	var cliff := _tex("w01_cliff_fill")
+	var stone := _tex(level.ground_fill)
+	var cliff := _tex(level.ground_deep)
 	_material.set_shader_parameter("stone_tex", stone)
 	_material.set_shader_parameter("cliff_tex", cliff)
 	_material.set_shader_parameter("depth_map", ImageTexture.create_from_image(depth))
@@ -224,20 +232,21 @@ func _draw_trim() -> void:
 	var shade_from := level.get_kill_y() - SHADE_SPAN
 	for rect in _blocks:
 		for span in _open_side(rect, _blocks, true):
-			_draw_side(rect.position.x, span, true, shade_from)
+			_draw_side(level.ground_side, rect.position.x, span, true, shade_from)
 		for span in _open_side(rect, _blocks, false):
-			_draw_side(rect.end.x, span, false, shade_from)
+			_draw_side(level.ground_side, rect.end.x, span, false, shade_from)
 	for rect in _blocks:
 		for span in _open_top(rect, _blocks):
-			_draw_moss(rect.position.y, span)
+			_draw_moss(level.ground_top, rect.position.y, span)
 
 
 ## Мох по открытому участку кромки [span.x, span.y] (тайлы) на высоте top (тайлы). Не темнеет:
 ## поверхности, по которым ходят, должны читаться всегда.
-func _draw_moss(top: float, span: Vector2) -> void:
-	var texture := _tex("w01_moss_top")
+func _draw_moss(name: String, top: float, span: Vector2) -> void:
+	var texture := _tex(name)
 	var size := texture.get_size() / TEXELS_PER_PX
-	var y := top * GreyboxLevel.TILE - MOSS_SURFACE * size.y
+	var surface: float = TOP_SURFACE.get(name, 0.17)
+	var y := top * GreyboxLevel.TILE - surface * size.y
 	var x0 := span.x * GreyboxLevel.TILE - MOSS_OVERHANG
 	var x1 := span.y * GreyboxLevel.TILE + MOSS_OVERHANG
 	var points := PackedVector2Array([Vector2(x0, y), Vector2(x1, y), Vector2(x1, y + size.y), Vector2(x0, y + size.y)])
@@ -248,11 +257,12 @@ func _draw_moss(top: float, span: Vector2) -> void:
 
 ## Каменный край с плющом по открытому участку бока [span.x, span.y] (тайлы) на x (тайлы).
 ## Правый край — зеркальная копия левого. Темнеет к низу уровня, как кладка и скала.
-func _draw_side(x: float, span: Vector2, left: bool, shade_from: float) -> void:
-	var texture := _tex("w01_stone_side")
+func _draw_side(name: String, x: float, span: Vector2, left: bool, shade_from: float) -> void:
+	var texture := _tex(name)
 	var size := texture.get_size() / TEXELS_PER_PX
 	var edge := x * GreyboxLevel.TILE
-	var x0 := edge - SIDE_EDGE * size.x if left else edge + SIDE_EDGE * size.x - size.x
+	var side_edge: float = SIDE_EDGES.get(name, 0.104)
+	var x0 := edge - side_edge * size.x if left else edge + side_edge * size.x - size.x
 	var x1 := x0 + size.x
 	var u0 := 0.0 if left else 1.0
 	var u1 := 1.0 - u0

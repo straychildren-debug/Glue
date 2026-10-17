@@ -1,0 +1,102 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://src/level/greybox_level.gd" id="1"]
+[ext_resource type="PackedScene" path="res://levels/backdrops/w01_viaduct.tscn" id="bd"]
+[ext_resource type="Script" path="res://src/level/backdrop_layer.gd" id="bl"]
+[ext_resource type="Texture2D" path="res://assets/backgrounds/world_01/v2/source/w01_v2_lm21_rose_window.png" id="lm"]
+
+[ext_resource type="Script" path="res://src/mechanisms/crate.gd" id="2"]
+[ext_resource type="Script" path="res://src/mechanisms/pressure_plate.gd" id="3"]
+[ext_resource type="Script" path="res://src/mechanisms/door.gd" id="4"]
+[ext_resource type="Script" path="res://src/mechanisms/finish.gd" id="5"]
+
+[node name="W01L10" type="Node2D"]
+script = ExtResource("1")
+title = "10 · Четыре цвета"
+blocks = Array[Rect2]([Rect2(0, -8, 1, 26), Rect2(0, 12, 52, 6), Rect2(1, -8, 50, 17), Rect2(51, -8, 1, 26)])
+checkpoints = Array[Vector2]([Vector2(8, 12)])
+bounds_tiles = Rect2(0, -8, 52, 27)
+kill_y_tiles = 19.0
+ground_fill = "w01_viaduct_fill"
+
+[node name="PlateOrange" type="AnimatableBody2D" parent="."]
+position = Vector2(256, 768)
+script = ExtResource("3")
+width_tiles = 1.5
+mark_color = Color(0.95, 0.6, 0.2, 1)
+
+[node name="PlateGreen" type="AnimatableBody2D" parent="."]
+position = Vector2(1120, 768)
+script = ExtResource("3")
+width_tiles = 1.5
+mark_color = Color(0.35, 0.8, 0.4, 1)
+
+[node name="PlateBlue" type="AnimatableBody2D" parent="."]
+position = Vector2(2176, 768)
+script = ExtResource("3")
+width_tiles = 1.5
+mark_color = Color(0.4, 0.7, 0.95, 1)
+
+[node name="PlatePurple" type="AnimatableBody2D" parent="."]
+position = Vector2(2368, 768)
+script = ExtResource("3")
+width_tiles = 1.5
+mark_color = Color(0.7, 0.45, 0.95, 1)
+threshold = 2.0
+latch = true
+
+[node name="Door0" type="AnimatableBody2D" parent="."]
+position = Vector2(768, 576)
+script = ExtResource("4")
+open_offset_tiles = Vector2(0, -2.5)
+triggers = Array[NodePath]([NodePath("../PlateOrange"), NodePath("../PlateGreen")])
+mark_color = Color(0.95, 0.6, 0.2, 1)
+mark_colors = Array[Color]([Color(0.35, 0.8, 0.4, 1)])
+
+[node name="Door1" type="AnimatableBody2D" parent="."]
+position = Vector2(1536, 576)
+script = ExtResource("4")
+open_offset_tiles = Vector2(0, -2.5)
+triggers = Array[NodePath]([NodePath("../PlateOrange"), NodePath("../PlateGreen"), NodePath("../PlateBlue")])
+mark_color = Color(0.95, 0.6, 0.2, 1)
+mark_colors = Array[Color]([Color(0.35, 0.8, 0.4, 1), Color(0.4, 0.7, 0.95, 1)])
+
+[node name="Door2" type="AnimatableBody2D" parent="."]
+position = Vector2(1856, 576)
+script = ExtResource("4")
+open_offset_tiles = Vector2(0, -2.5)
+triggers = Array[NodePath]([NodePath("../PlateGreen")])
+mark_color = Color(0.35, 0.8, 0.4, 1)
+invert = true
+
+[node name="Door3" type="AnimatableBody2D" parent="."]
+position = Vector2(2560, 576)
+script = ExtResource("4")
+open_offset_tiles = Vector2(0, -2.5)
+triggers = Array[NodePath]([NodePath("../PlateOrange"), NodePath("../PlatePurple")])
+mark_color = Color(0.95, 0.6, 0.2, 1)
+mark_colors = Array[Color]([Color(0.7, 0.45, 0.95, 1)])
+require_all = true
+
+[node name="Crate" type="CharacterBody2D" parent="."]
+position = Vector2(2816, 737)
+script = ExtResource("2")
+
+[node name="Finish" type="Node2D" parent="."]
+position = Vector2(3072, 768)
+script = ExtResource("5")
+
+[node name="Backdrop" parent="." instance=ExtResource("bd")]
+
+[node name="Landmark" type="Node2D" parent="Backdrop"]
+script = ExtResource("bl")
+texture = ExtResource("lm")
+parallax = 0.3
+parallax_y = 0.1
+height = 0.5
+center_y = 0.46
+zoom_follow = 0.3
+repeat = false
+world_x = 1165.0
+haze = 0.3
+haze_color = Color(0.953, 0.890, 0.800, 1)

@@ -1,0 +1,182 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://src/level/greybox_level.gd" id="1"]
+[ext_resource type="PackedScene" path="res://levels/backdrops/w01_canyon.tscn" id="bd"]
+[ext_resource type="Script" path="res://src/level/backdrop_layer.gd" id="bl"]
+[ext_resource type="Texture2D" path="res://assets/backgrounds/world_01/v2/source/w01_v2_lm23_landslide.png" id="lm"]
+[ext_resource type="Script" path="res://src/mechanisms/pressure_plate.gd" id="plate"]
+[ext_resource type="Script" path="res://src/mechanisms/door.gd" id="door"]
+[ext_resource type="Script" path="res://src/mechanisms/saw.gd" id="saw"]
+[ext_resource type="Script" path="res://src/mechanisms/spikes.gd" id="spikes"]
+[ext_resource type="Script" path="res://src/mechanisms/bellows.gd" id="bellows"]
+[ext_resource type="Script" path="res://src/mechanisms/brittle_floor.gd" id="brittle"]
+[ext_resource type="Script" path="res://src/mechanisms/press.gd" id="press"]
+[ext_resource type="Script" path="res://src/mechanisms/spring_pad.gd" id="spring"]
+[ext_resource type="Script" path="res://src/mechanisms/crusher.gd" id="crusher"]
+[ext_resource type="Script" path="res://src/mechanisms/finish.gd" id="finish"]
+[ext_resource type="Script" path="res://src/mechanisms/crate.gd" id="crate"]
+
+[node name="W01L16" type="Node2D"]
+script = ExtResource("1")
+title = "16 · Обвал"
+blocks = Array[Rect2]([Rect2(0, -8, 1, 26), Rect2(101, -8, 1, 26), Rect2(0, 12, 26, 6), Rect2(9, 8.5, 4, 3.5), Rect2(21, -8, 1, 16), Rect2(26, 15, 4.6, 3), Rect2(59, -8, 13, 14), Rect2(59, 6, 1, 3), Rect2(63, 6, 1, 3), Rect2(67, 6, 1, 3), Rect2(71, 6, 1, 3), Rect2(85, 12, 16, 6), Rect2(92, 10, 2, 0.5), Rect2(96, -8, 1, 16), Rect2(30.6, 12, 44.4, 6), Rect2(43.2, -8, 1, 16), Rect2(75, 7.5, 10, 10.5)])
+checkpoints = Array[Vector2]([Vector2(3, 12)])
+bounds_tiles = Rect2(0, -8, 102, 27)
+kill_y_tiles = 19.0
+ground_fill = "w01_canyon_fill"
+ground_deep = "w01_canyon_deep"
+
+[node name="Plate" type="AnimatableBody2D" parent="."]
+position = Vector2(960, 768)
+script = ExtResource("plate")
+width_tiles = 1.5
+mark_color = Color(0.95, 0.6, 0.2, 1)
+
+[node name="Saw" type="Node2D" parent="."]
+position = Vector2(1100.8, 718)
+script = ExtResource("saw")
+radius_tiles = 0.4
+path_tiles = Vector2(2.8, 0)
+speed = 240.0
+
+[node name="Door" type="AnimatableBody2D" parent="."]
+position = Vector2(1344, 512)
+script = ExtResource("door")
+size_tiles = Vector2(1, 4)
+triggers = Array[NodePath]([NodePath("../Plate"), NodePath("../PlateBack")])
+open_offset_tiles = Vector2(0, -3.5)
+mark_color = Color(0.95, 0.6, 0.2, 1)
+
+[node name="PlateBack" type="AnimatableBody2D" parent="."]
+position = Vector2(1504, 768)
+script = ExtResource("plate")
+width_tiles = 1.5
+mark_color = Color(0.95, 0.6, 0.2, 1)
+
+[node name="Spikes" type="Node2D" parent="."]
+position = Vector2(1811.2, 960)
+script = ExtResource("spikes")
+width_tiles = 4.6
+
+[node name="Crate1" type="CharacterBody2D" parent="."]
+position = Vector2(2348.8, 737)
+script = ExtResource("crate")
+
+[node name="PlateTwo" type="AnimatableBody2D" parent="."]
+position = Vector2(2432, 768)
+script = ExtResource("plate")
+width_tiles = 1.5
+threshold = 2.0
+mark_color = Color(0.4, 0.7, 0.95, 1)
+
+[node name="DoorTwo" type="AnimatableBody2D" parent="."]
+position = Vector2(2764.8, 512)
+script = ExtResource("door")
+size_tiles = Vector2(1, 4)
+triggers = Array[NodePath]([NodePath("../PlateTwo")])
+keep_open = Array[NodePath]([NodePath("../LatchTwo")])
+open_offset_tiles = Vector2(0, -3.5)
+mark_color = Color(0.4, 0.7, 0.95, 1)
+
+[node name="LatchTwo" type="AnimatableBody2D" parent="."]
+position = Vector2(2892.8, 768)
+script = ExtResource("plate")
+width_tiles = 1.5
+latch = true
+mark_color = Color(0.4, 0.7, 0.95, 1)
+
+[node name="SawRun1" type="Node2D" parent="."]
+position = Vector2(3084.8, 718)
+script = ExtResource("saw")
+radius_tiles = 0.4
+path_tiles = Vector2(3, 0)
+speed = 260.0
+
+[node name="SawRun2" type="Node2D" parent="."]
+position = Vector2(3379.2, 718)
+script = ExtResource("saw")
+radius_tiles = 0.4
+path_tiles = Vector2(3, 0)
+speed = 260.0
+start_at = 0.5
+start_forward = true
+
+[node name="Press1" type="AnimatableBody2D" parent="."]
+position = Vector2(3840, 384)
+script = ExtResource("press")
+size_tiles = Vector2(3, 3)
+top_wait = 0.8
+bottom_wait = 0.3
+start_delay = 0.0
+
+[node name="Press2" type="AnimatableBody2D" parent="."]
+position = Vector2(4096, 384)
+script = ExtResource("press")
+size_tiles = Vector2(3, 3)
+top_wait = 0.8
+bottom_wait = 0.3
+start_delay = 0.71
+
+[node name="Press3" type="AnimatableBody2D" parent="."]
+position = Vector2(4352, 384)
+script = ExtResource("press")
+size_tiles = Vector2(3, 3)
+top_wait = 0.8
+bottom_wait = 0.3
+start_delay = 1.42
+
+[node name="Crate2" type="CharacterBody2D" parent="."]
+position = Vector2(4716.8, 737)
+script = ExtResource("crate")
+
+[node name="ButtonA" type="AnimatableBody2D" parent="."]
+position = Vector2(5696, 768)
+script = ExtResource("plate")
+width_tiles = 1.0
+pulse = 0.35
+mark_color = Color(0.9, 0.3, 0.3, 1)
+
+[node name="ButtonB" type="AnimatableBody2D" parent="."]
+position = Vector2(5952, 640)
+script = ExtResource("plate")
+width_tiles = 1.0
+pulse = 0.35
+mark_color = Color(0.9, 0.3, 0.3, 1)
+
+[node name="Exit" type="AnimatableBody2D" parent="."]
+position = Vector2(6144, 512)
+script = ExtResource("door")
+size_tiles = Vector2(1, 4)
+triggers = Array[NodePath]([NodePath("../ButtonA"), NodePath("../ButtonB")])
+require_all = true
+stay_open = true
+open_offset_tiles = Vector2(0, -3.5)
+mark_color = Color(0.9, 0.3, 0.3, 1)
+
+[node name="Finish" type="Node2D" parent="."]
+position = Vector2(6304, 768)
+script = ExtResource("finish")
+
+[node name="Crusher" type="Node2D" parent="."]
+position = Vector2(-160, -512)
+script = ExtResource("crusher")
+height_tiles = 27.0
+speed = 100.0
+start_x_tiles = 7.0
+stop_x_tiles = 99.0
+catch_up_tiles = 8.0
+
+[node name="Backdrop" parent="." instance=ExtResource("bd")]
+
+[node name="Landmark" type="Node2D" parent="Backdrop"]
+script = ExtResource("bl")
+texture = ExtResource("lm")
+parallax = 0.3
+parallax_y = 0.1
+height = 0.62
+center_y = 0.6
+zoom_follow = 0.3
+repeat = false
+world_x = 2285.0
+haze = 0.3
+haze_color = Color(0.827, 0.882, 0.949, 1)

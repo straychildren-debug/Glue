@@ -1,0 +1,62 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://src/level/greybox_level.gd" id="1"]
+[ext_resource type="Script" path="res://src/mechanisms/bellows.gd" id="2"]
+[ext_resource type="Script" path="res://src/mechanisms/pressure_plate.gd" id="3"]
+[ext_resource type="Script" path="res://src/mechanisms/crate.gd" id="4"]
+[ext_resource type="Script" path="res://src/mechanisms/door.gd" id="5"]
+[ext_resource type="Script" path="res://src/mechanisms/finish.gd" id="6"]
+[ext_resource type="PackedScene" path="res://levels/backdrops/w02_machine.tscn" id="bd"]
+
+[node name="W02L16" type="Node2D"]
+script = ExtResource("1")
+title = "16 · Ветер и ящик"
+blocks = Array[Rect2]([Rect2(0, -8, 1, 26), Rect2(0, 6, 14, 12), Rect2(20, 12, 0.5, 6), Rect2(20.5, 13, 2.5, 5), Rect2(23, 12, 13, 6), Rect2(30, -8, 1, 17), Rect2(36, -8, 1, 26)])
+checkpoints = Array[Vector2]([Vector2(2, 6)])
+bounds_tiles = Rect2(0, -8, 37, 27)
+kill_y_tiles = 19.0
+ground_fill = "w02_fill"
+ground_deep = "w02_deep"
+ground_top = "w02_top"
+ground_side = "w02_side"
+
+[node name="Crate" type="CharacterBody2D" parent="."]
+position = Vector2(640, 351)
+script = ExtResource("4")
+
+[node name="Pedal1" type="AnimatableBody2D" parent="."]
+position = Vector2(384, 384)
+script = ExtResource("3")
+width_tiles = 1.5
+
+[node name="Pedal2" type="AnimatableBody2D" parent="."]
+position = Vector2(1728, 768)
+script = ExtResource("3")
+width_tiles = 1.5
+
+[node name="Bellows" type="Node2D" parent="."]
+position = Vector2(896, 576)
+script = ExtResource("2")
+length_tiles = 11.0
+height_tiles = 9.0
+gust_time = 1.5
+pedal = NodePath("../Pedal1")
+pedals = Array[NodePath]([NodePath("../Pedal2")])
+
+[node name="Plate" type="AnimatableBody2D" parent="."]
+position = Vector2(1392, 832)
+script = ExtResource("3")
+width_tiles = 2.5
+mark_color = Color(0.4, 0.7, 0.95, 1)
+
+[node name="Door" type="AnimatableBody2D" parent="."]
+position = Vector2(1920, 576)
+script = ExtResource("5")
+triggers = Array[NodePath]([NodePath("../Plate")])
+mark_color = Color(0.4, 0.7, 0.95, 1)
+
+[node name="Finish" type="Node2D" parent="."]
+position = Vector2(2112, 768)
+script = ExtResource("6")
+
+[node name="Backdrop" parent="." instance=ExtResource("bd")]

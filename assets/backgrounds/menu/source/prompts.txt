@@ -1,0 +1,37 @@
+
+
+=== GRAPHICS 09 / 2026-10-02 / BUILT-IN IMAGE_GEN ===
+Original generator PNG files. No upscaling or image postprocessing.
+
+M1 | menu_panorama.png
+References:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/assets/backgrounds/world_01/v2/source/w01_v2_far_valley.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" (world "Forgotten Bridges"). Use it ONLY as a style reference: bright, cheerful hand-painted cartoon game art; saturated sky with big soft clouds; ancient grey-brown stone ruins with thick green moss on the top edges; lush rounded trees; many thin waterfalls; turquoise water; warm sunlight from the upper left; soft shading, clean readable shapes. Attached image 2: the approved far background of the same world — same palette, same level of detail, same painting style. Do NOT copy the sheet's layout, text, logo, UI panels, frames or characters.
+
+Create a FAR BACKGROUND parallax layer for a 2D side-scrolling co-op platformer. Landscape 16:9. Strict side view, level horizon, no perspective floor, no isometric view. No characters, animals or people. No text, letters, logo, UI, frame or watermark. Nothing that looks interactive or walkable: no crates, doors, levers, buttons, flags, hooks, keys, no ropes or chains across the image, no flat platforms in front. Everything is far away and small in scale. Gentle atmospheric haze; colors a bit softer and less contrasty than a foreground, so small bright red, blue, yellow and green characters stay readable in front of it. Neutral white balance, no yellow or sepia tint.
+The band between 40% and 80% of the height is only soft haze and distant silhouettes — no waterfalls, islands or bright details there; put the details near the horizon line and in the bottom mist. The bottom edge is mist or water depth, not ground. No large object touches the left or right edge, so the image can repeat horizontally.
+Scene: a panoramic view of the entire Forgotten Bridges world: waterfall valley on the left, ancient bridge builders' town and quarry canyon in the middle, an enormous broken stone viaduct on the right at sunset. Composition: upper center is empty calm sky reserved for a title, but DO NOT draw any text. Bottom is soft mist reserved for a level selection grid, but DO NOT draw any UI. Friendly bright hand-painted cartoon panorama, environmental scenery only. One seamless painting, not a collage.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fdbc-85f8-7471-90e2-82bd74996636\exec-01688509-6e7f-4a51-910c-efcb7c1f10ff.png
+
+
+=== GRAPHICS 17 / 2026-10-04 / BUILT-IN IMAGE_GEN ===
+W2M2 | menu_panorama_w02.png
+References, in attachment order:
+D:\Cluade projects\games\Glue\docs\референсы\world2_workshops.png
+D:\Cluade projects\games\Glue\assets\backgrounds\world_02\source\w02_far_yard.png
+D:\Cluade projects\games\Glue\assets\backgrounds\world_02\source\w02_far_machine.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" (world 2 "Workshops"). Use it ONLY as a style reference: bright, cheerful hand-painted cartoon game art; warm wood, copper and brass, grey stone, glowing forges, soft steam, big gears and wooden cranes; warm light; soft shading, clean readable shapes. Do NOT copy the sheet's layout, text, logo, UI panels, frames or characters.
+
+Create a FAR BACKGROUND parallax layer for a 2D side-scrolling co-op platformer. Landscape panorama 16:9. Strict side view, level horizon, no perspective floor, no isometric view. No characters, animals or people. No text, letters, logo, UI, frame or watermark. Nothing that looks interactive or walkable: no crates, doors, levers, buttons, flags, hooks, keys, no ropes or chains across the image, no flat platforms in front. Everything is far away and small in scale. Gentle atmospheric haze; colors a bit softer and less contrasty than a foreground, so small bright red, blue, yellow and green characters stay readable in front of it. Neutral white balance, no yellow or sepia tint.
+The band between 40% and 80% of the height is only soft haze and distant silhouettes — no bright details there; put the details near the horizon line and in the bottom haze. The bottom edge is soft mist or steam, not ground. No large object touches the left or right edge, so the image can repeat horizontally.
+Scene: a wide panorama of world 2 Workshops: a morning open yard with wooden cranes beside an unfinished stone viaduct at the left, a cosy forge with chimneys in the middle, a gigantic timber workshop on scaffolds and an enormous clockwork machine tower with giant gears at the right in sunset light. A gentle transition of light across the whole scene, cohesive hand-painted cartoon art. Composition: empty clear sky at the top center for a title to be added later; the lower third is very soft steam for the level-selection grid to be added later. No title or grid drawn, no text, no symbols, no silhouettes of characters, no hard navy outlines. Keep distant towers clear of both side edges. Preserve native 16:9 panorama composition.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fff4-751d-75b1-aa81-5afaf42c086c\exec-7303f824-f908-4c63-844b-24beee743023.png
+
+Edit prompt:
+Edit this game menu panorama. Preserve its hand-painted style, native 16:9 composition, cheerful transition from cool morning workshop yard on the left through a cosy forge in the middle to sunset giant timber workshop and clockwork gear tower on the right. Preserve the large clear sky in the top center for a title later. Make these targeted composition corrections: (1) The large LEFT viaduct currently meets/crosses the very left canvas edge. Recompose ONLY its left end and attached cranes so the COMPLETE large viaduct silhouette ends inside the canvas with at least 5 percent clear atmospheric space at the left edge. No large structure touches either side edge; edge regions are just sky and soft haze/distant tiny indistinct silhouettes. (2) The entire LOWER THIRD must be VERY SOFT STEAM for a level selection grid to be added later. Gradually fade the lower scenery into denser pale neutral white-blue mist so no sharp arches, platforms, trees, forge details or waterfalls remain below 67 percent of the image height. Remove distinct bright waterfall bands by merging them into soft steam. Soften the middle 40-67 percent band too: distant hazy low-contrast architecture only, no bright busy small details. Keep workshop/forge/machine silhouettes recognizable mainly above the mist, no foreground objects or interactive props. No UI/title/grid/text/letters/symbols/characters. OPAQUE panorama background, not transparent. Maintain neutral white balance with only localized warm sunset/forge light, no global yellow tint.
+Edit references:
+C:\Users\Марат\.codex\generated_images\01a0fff4-751d-75b1-aa81-5afaf42c086c\exec-24a0e798-3977-46c5-bd53-60aa251b11a9.png
+Edit output: C:\Users\Марат\.codex\generated_images\01a0fff4-751d-75b1-aa81-5afaf42c086c\exec-7303f824-f908-4c63-844b-24beee743023.png

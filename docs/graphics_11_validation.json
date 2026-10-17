@@ -1,0 +1,3714 @@
+{
+  "date": "2026-10-03",
+  "method": "read-only Pillow/numpy metadata and SHA-256; images copied without pixel changes",
+  "base_A_to_D_count": 118,
+  "new_worlds_3_to_6_count": 94,
+  "Z3_count": 1,
+  "world2_backgrounds_ready": 11,
+  "world2_backgrounds_pending": 18,
+  "all_saved_images": 130,
+  "table_names_exact": true,
+  "all_final_bytes_equal_generator_output": true,
+  "all_prompts_logged": true,
+  "all_decal_variant_pairs_distinct": true,
+  "checks": [
+    {
+      "id": "E2",
+      "world": 2,
+      "kind": "enemy",
+      "path": "docs/референсы/enemies/enemy_w2_pusher_beetle.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "zero_alpha_percent": 0.0,
+      "sha256": "cee94e3e7c36bab7305d96be7efb95a15a72632dbcce3196b7a845fcb1440ced",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "docs/референсы/enemies/prompts.txt",
+      "all_prompts_logged": true
+    },
+    {
+      "id": "E3",
+      "world": 2,
+      "kind": "enemy",
+      "path": "docs/референсы/enemies/enemy_w2_spark.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "zero_alpha_percent": 0.0,
+      "sha256": "b63236d96fb1f4a789f44c247e44ddb88710fc5dbe25119dbe3a9de77ee10d88",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "docs/референсы/enemies/prompts.txt",
+      "all_prompts_logged": true
+    },
+    {
+      "id": "M2.1",
+      "world": 2,
+      "kind": "mechanism",
+      "path": "docs/референсы/mechanisms/mech_w2_conveyor.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "zero_alpha_percent": 0.0,
+      "sha256": "10e6238197f8f8cd18afe3c56c83c84ea477f45470ba0bc5f6d4dedab592898d",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "docs/референсы/mechanisms/prompts.txt",
+      "all_prompts_logged": true
+    },
+    {
+      "id": "M2.2",
+      "world": 2,
+      "kind": "mechanism",
+      "path": "docs/референсы/mechanisms/mech_w2_spring_pad.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "zero_alpha_percent": 0.0,
+      "sha256": "b49d533389392117452d5f0e6bca7becf57d8183f1465923b63cc602f5fb895a",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "docs/референсы/mechanisms/prompts.txt",
+      "all_prompts_logged": true
+    },
+    {
+      "id": "M2.3",
+      "world": 2,
+      "kind": "mechanism",
+      "path": "docs/референсы/mechanisms/mech_w2_rotating_platform.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "zero_alpha_percent": 0.0,
+      "sha256": "10d743f64802b0f3b288de26a49d53a8e04e89b033bbd27ac1e7179951c5ddb0",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "docs/референсы/mechanisms/prompts.txt",
+      "all_prompts_logged": true
+    },
+    {
+      "id": "M2.4",
+      "world": 2,
+      "kind": "mechanism",
+      "path": "docs/референсы/mechanisms/mech_w2_breakable_floor.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "zero_alpha_percent": 0.0,
+      "sha256": "69915e0253a3714d7dc21e7986934b3d03f0774b62c5ade68168bca524916fe7",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "docs/референсы/mechanisms/prompts.txt",
+      "all_prompts_logged": true
+    },
+    {
+      "id": "M2.5",
+      "world": 2,
+      "kind": "mechanism",
+      "path": "docs/референсы/mechanisms/mech_w2_bellows.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "zero_alpha_percent": 0.0,
+      "sha256": "f70c53b8336cc41adaac98fd515ac75a629df5c263ab0e198b6f5b85fa787330",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "docs/референсы/mechanisms/prompts.txt",
+      "all_prompts_logged": true
+    },
+    {
+      "id": "M2.6",
+      "world": 2,
+      "kind": "mechanism",
+      "path": "docs/референсы/mechanisms/mech_w2_crane_trolley.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "zero_alpha_percent": 0.0,
+      "sha256": "b9f4c7a0cf6a6d6d6eaf14fa1b38f9ac5e58d478f20c37f5c203d6fe11bd972b",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "docs/референсы/mechanisms/prompts.txt",
+      "all_prompts_logged": true
+    },
+    {
+      "id": "M2.7",
+      "world": 2,
+      "kind": "mechanism",
+      "path": "docs/референсы/mechanisms/mech_w2_wires_switch.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "zero_alpha_percent": 0.0,
+      "sha256": "57ba174804fae4579d11229fccc1aea618d4c9301c8ea0c4e92efb8735d6c076",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "docs/референсы/mechanisms/prompts.txt",
+      "all_prompts_logged": true
+    },
+    {
+      "id": "M2.8",
+      "world": 2,
+      "kind": "mechanism",
+      "path": "docs/референсы/mechanisms/mech_w2_fuse_keg.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "zero_alpha_percent": 0.0,
+      "sha256": "b84098247c53b7f4254be7a9ea9b0eac455e2a1d80f4560e25f6aab93c8dda84",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "docs/референсы/mechanisms/prompts.txt",
+      "all_prompts_logged": true
+    },
+    {
+      "id": "C2.1",
+      "world": 2,
+      "kind": "texture",
+      "path": "assets/tiles/world_02/source/w02_fill.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "aspect": 1.0,
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "zero_alpha_percent": 0.0,
+      "sha256": "6ee583b1b3d5595338666dfcb3c7e56c75c47a4f1a68d1adb0c2bb3b32904f9f",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/tiles/world_02/source/prompts.txt",
+      "all_prompts_logged": true,
+      "seams_rgb_mean_abs": {
+        "left_right": 23.36,
+        "top_bottom": 5.082,
+        "interior_x_adjacent": 2.699,
+        "interior_y_adjacent": 3.236
+      }
+    },
+    {
+      "id": "C2.2",
+      "world": 2,
+      "kind": "texture",
+      "path": "assets/tiles/world_02/source/w02_deep.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "aspect": 1.0,
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "zero_alpha_percent": 0.0,
+      "sha256": "f0a338c1371e94fc77ee8bcd6b43d33516280ee9e3f1b97c04fda296751395a2",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/tiles/world_02/source/prompts.txt",
+      "all_prompts_logged": true,
+      "seams_rgb_mean_abs": {
+        "left_right": 4.186,
+        "top_bottom": 4.995,
+        "interior_x_adjacent": 2.509,
+        "interior_y_adjacent": 2.895
+      }
+    },
+    {
+      "id": "C2.3",
+      "world": 2,
+      "kind": "texture",
+      "path": "assets/tiles/world_02/source/w02_top.png",
+      "size": [
+        2172,
+        724
+      ],
+      "aspect": 3.0,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "zero_alpha_percent": 83.628,
+      "sha256": "1298cd924ca29ec20fc11a8ca0fd5c3b25562d7f05963c2aa94a1bba87f16e23",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/tiles/world_02/source/prompts.txt",
+      "all_prompts_logged": true,
+      "requested_aspect": 4,
+      "first_row_85pct_opaque_percent": 29.14
+    },
+    {
+      "id": "C2.4",
+      "world": 2,
+      "kind": "texture",
+      "path": "assets/tiles/world_02/source/w02_side.png",
+      "size": [
+        724,
+        2172
+      ],
+      "aspect": 0.333333,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "zero_alpha_percent": 54.87,
+      "sha256": "99e2970ff6b7a284df127a7e8d594a735d0e8f0f10b7639d1b15576ca8883f2b",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/tiles/world_02/source/prompts.txt",
+      "all_prompts_logged": true,
+      "requested_aspect": 0.25,
+      "right_half_alpha_max": 1,
+      "right_half_pixels_alpha_gt_0": 724,
+      "right_half_pixels_alpha_gt_1": 0,
+      "right_half_pixels_alpha_gt_8": 0
+    },
+    {
+      "id": "D2.1",
+      "world": 2,
+      "kind": "decal",
+      "path": "assets/decals/world_02/source/w02_decal_lantern.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "zero_alpha_percent": 81.536,
+      "sha256": "db48af579d22eda1bfd5b027b28cecab2648b1cc52f61c21069caa65152e5aa3",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/decals/world_02/source/prompts.txt",
+      "all_prompts_logged": true,
+      "visible_alpha_gt_8_bbox": [
+        438,
+        145,
+        1167,
+        891
+      ],
+      "median_alpha_nonzero": 253.0,
+      "border_alpha_max": 0
+    },
+    {
+      "id": "D2.1.2",
+      "world": 2,
+      "kind": "decal",
+      "path": "assets/decals/world_02/source/w02_decal_lantern_2.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "zero_alpha_percent": 85.595,
+      "sha256": "3441a6863139885bd2e32581c4d07e31a81cc072f52320e65f2cf31b140ad9ac",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/decals/world_02/source/prompts.txt",
+      "all_prompts_logged": true,
+      "visible_alpha_gt_8_bbox": [
+        516,
+        64,
+        1026,
+        946
+      ],
+      "median_alpha_nonzero": 253.0,
+      "border_alpha_max": 0
+    },
+    {
+      "id": "D2.2",
+      "world": 2,
+      "kind": "decal",
+      "path": "assets/decals/world_02/source/w02_decal_steam.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "zero_alpha_percent": 81.035,
+      "sha256": "a5bf399ef64066b97eb6d305a4bf78ed0dbba70257a16837df684cc912d648fe",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/decals/world_02/source/prompts.txt",
+      "all_prompts_logged": true,
+      "visible_alpha_gt_8_bbox": [
+        506,
+        80,
+        1089,
+        978
+      ],
+      "median_alpha_nonzero": 249.0,
+      "border_alpha_max": 0
+    },
+    {
+      "id": "D2.2.2",
+      "world": 2,
+      "kind": "decal",
+      "path": "assets/decals/world_02/source/w02_decal_steam_2.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "zero_alpha_percent": 73.568,
+      "sha256": "9f461120f4481513aa669d306b2630db49a00adbf0bc7c591eac8dea6896fd73",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/decals/world_02/source/prompts.txt",
+      "all_prompts_logged": true,
+      "visible_alpha_gt_8_bbox": [
+        311,
+        94,
+        1245,
+        933
+      ],
+      "median_alpha_nonzero": 252.0,
+      "border_alpha_max": 1
+    },
+    {
+      "id": "D2.3",
+      "world": 2,
+      "kind": "decal",
+      "path": "assets/decals/world_02/source/w02_decal_pipes.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "zero_alpha_percent": 79.715,
+      "sha256": "8c34cefdd4a87e3d900c8aa7b90b806417aab6be558987b636dd6db23103131a",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/decals/world_02/source/prompts.txt",
+      "all_prompts_logged": true,
+      "visible_alpha_gt_8_bbox": [
+        476,
+        25,
+        1053,
+        1001
+      ],
+      "median_alpha_nonzero": 252.0,
+      "border_alpha_max": 0
+    },
+    {
+      "id": "D2.3.2",
+      "world": 2,
+      "kind": "decal",
+      "path": "assets/decals/world_02/source/w02_decal_pipes_2.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "zero_alpha_percent": 88.236,
+      "sha256": "20f93fc3da33eaf3a8bce22deff3ed5fc3dce29df5f072f6a6c5efe8b0907bdb",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/decals/world_02/source/prompts.txt",
+      "all_prompts_logged": true,
+      "visible_alpha_gt_8_bbox": [
+        601,
+        61,
+        935,
+        945
+      ],
+      "median_alpha_nonzero": 253.0,
+      "border_alpha_max": 0
+    },
+    {
+      "id": "D2.4",
+      "world": 2,
+      "kind": "decal",
+      "path": "assets/decals/world_02/source/w02_decal_banner.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "zero_alpha_percent": 75.34,
+      "sha256": "3dca6e485cc3eb09c9388f0396bd3a5cae045d34104c326c865ffb9da1bf798b",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/decals/world_02/source/prompts.txt",
+      "all_prompts_logged": true,
+      "visible_alpha_gt_8_bbox": [
+        531,
+        47,
+        993,
+        962
+      ],
+      "median_alpha_nonzero": 253.0,
+      "border_alpha_max": 0
+    },
+    {
+      "id": "D2.4.2",
+      "world": 2,
+      "kind": "decal",
+      "path": "assets/decals/world_02/source/w02_decal_banner_2.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "zero_alpha_percent": 73.992,
+      "sha256": "9b45944a6104bb05706726528f7e85c9e5180e28c4fe1ef6b6f8df987b3a1f2e",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/decals/world_02/source/prompts.txt",
+      "all_prompts_logged": true,
+      "visible_alpha_gt_8_bbox": [
+        467,
+        54,
+        1063,
+        963
+      ],
+      "median_alpha_nonzero": 253.0,
+      "border_alpha_max": 1
+    },
+    {
+      "id": "D2.5",
+      "world": 2,
+      "kind": "decal",
+      "path": "assets/decals/world_02/source/w02_decal_soot_moss.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "zero_alpha_percent": 86.218,
+      "sha256": "6afaaa1650d109f2f784a6dc98df46de6e62aef69d1916c0667f0b907a3aaa38",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/decals/world_02/source/prompts.txt",
+      "all_prompts_logged": true,
+      "visible_alpha_gt_8_bbox": [
+        171,
+        382,
+        1366,
+        681
+      ],
+      "median_alpha_nonzero": 252.0,
+      "border_alpha_max": 1
+    },
+    {
+      "id": "D2.5.2",
+      "world": 2,
+      "kind": "decal",
+      "path": "assets/decals/world_02/source/w02_decal_soot_moss_2.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "zero_alpha_percent": 85.192,
+      "sha256": "7bba6ca0ebb3ac08586fa07f51c5af8697968feec454258b46bc6e08d2f56607",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/decals/world_02/source/prompts.txt",
+      "all_prompts_logged": true,
+      "visible_alpha_gt_8_bbox": [
+        184,
+        275,
+        1359,
+        758
+      ],
+      "median_alpha_nonzero": 252.0,
+      "border_alpha_max": 0
+    },
+    {
+      "id": "E4",
+      "world": 3,
+      "kind": "enemy",
+      "path": "docs/референсы/enemies/enemy_w3_stone_guardian.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "zero_alpha_percent": 0.0,
+      "sha256": "90b9e05a05b68f6fae24ed7fe7155fb2c85b47d8cb1a0cb06f6edde147dd6e1f",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "docs/референсы/enemies/prompts.txt",
+      "all_prompts_logged": true
+    },
+    {
+      "id": "E5",
+      "world": 3,
+      "kind": "enemy",
+      "path": "docs/референсы/enemies/enemy_w3_thief_bird.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "zero_alpha_percent": 0.0,
+      "sha256": "73f03738f28ff5133e3b092dc09bfb90d3a097859495349be8f80afa847f9092",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "docs/референсы/enemies/prompts.txt",
+      "all_prompts_logged": true
+    },
+    {
+      "id": "E6",
+      "world": 3,
+      "kind": "enemy",
+      "path": "docs/референсы/enemies/enemy_w3_sleeping_golem.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "zero_alpha_percent": 0.0,
+      "sha256": "62e9219bb5fc1e3b7360eb68aa632224fd7bd325aaafc05f58954a1b09302a7a",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "docs/референсы/enemies/prompts.txt",
+      "all_prompts_logged": true
+    },
+    {
+      "id": "E7",
+      "world": 3,
+      "kind": "enemy",
+      "path": "docs/референсы/enemies/enemy_w3_bold_ghost.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "zero_alpha_percent": 0.0,
+      "sha256": "ef5c15a55bfcedfcef713fd1e7cfc7319e16bf3296f47d869234ee38e4c9ed55",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "docs/референсы/enemies/prompts.txt",
+      "all_prompts_logged": true
+    },
+    {
+      "id": "E8",
+      "world": 4,
+      "kind": "enemy",
+      "path": "docs/референсы/enemies/enemy_w4_biter_fish.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "zero_alpha_percent": 0.0,
+      "sha256": "75726e1dfaf54875683a55c053400f730b32c6d0cc53cb756e43361684892100",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "docs/референсы/enemies/prompts.txt",
+      "all_prompts_logged": true
+    },
+    {
+      "id": "E9",
+      "world": 4,
+      "kind": "enemy",
+      "path": "docs/референсы/enemies/enemy_w4_jellyfish.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "zero_alpha_percent": 0.0,
+      "sha256": "5778f45a7f1a3faf484d03fd79c91958bc7ac18db0e921c06da3ece98eab13a7",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "docs/референсы/enemies/prompts.txt",
+      "all_prompts_logged": true
+    },
+    {
+      "id": "E10",
+      "world": 4,
+      "kind": "enemy",
+      "path": "docs/референсы/enemies/enemy_w4_pusher_crab.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "zero_alpha_percent": 0.0,
+      "sha256": "fac985e3b5c2d764d231523c19ec3d1df08d9ca67b8b8cc7bc8e828d6f820fa4",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "docs/референсы/enemies/prompts.txt",
+      "all_prompts_logged": true
+    },
+    {
+      "id": "E11",
+      "world": 5,
+      "kind": "enemy",
+      "path": "docs/референсы/enemies/enemy_w5_yeti.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "zero_alpha_percent": 0.0,
+      "sha256": "a80c554809ca1fddb2d368d04c5f4ea2d3450160c24e0456fef9eaed4c034624",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "docs/референсы/enemies/prompts.txt",
+      "all_prompts_logged": true
+    },
+    {
+      "id": "E12",
+      "world": 5,
+      "kind": "enemy",
+      "path": "docs/референсы/enemies/enemy_w5_snow_owl.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "zero_alpha_percent": 0.0,
+      "sha256": "d01c959095c2885d5849403d1006d8098a43765740f6c34fc6b9dc706d4eb3d1",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "docs/референсы/enemies/prompts.txt",
+      "all_prompts_logged": true
+    },
+    {
+      "id": "E13",
+      "world": 6,
+      "kind": "enemy",
+      "path": "docs/референсы/enemies/enemy_w6_shadow_ghost.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "zero_alpha_percent": 0.0,
+      "sha256": "104bd6c218b14f41a54df2f27f5fe2b0d0cb65fe76b74bf125f1748c398e0f79",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "docs/референсы/enemies/prompts.txt",
+      "all_prompts_logged": true
+    },
+    {
+      "id": "E14",
+      "world": 6,
+      "kind": "enemy",
+      "path": "docs/референсы/enemies/enemy_w6_great_guardian.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "zero_alpha_percent": 0.0,
+      "sha256": "8f32de6d1aa2319a9b8daa6734f2dc7611ecf0179cedcdda2b971e5f6c58ca30",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "docs/референсы/enemies/prompts.txt",
+      "all_prompts_logged": true
+    },
+    {
+      "id": "M3.1",
+      "world": 3,
+      "kind": "mechanism",
+      "path": "docs/референсы/mechanisms/mech_w3_mirrors.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "zero_alpha_percent": 0.0,
+      "sha256": "351873761c969e9bbeb7be80d754dcada5d8f84b1f020e28eda9b1eca59aab0b",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "docs/референсы/mechanisms/prompts.txt",
+      "all_prompts_logged": true
+    },
+    {
+      "id": "M3.2",
+      "world": 3,
+      "kind": "mechanism",
+      "path": "docs/референсы/mechanisms/mech_w3_light_receiver.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "zero_alpha_percent": 0.0,
+      "sha256": "c0160b7c2841282ef705a2954b30749d95dba1a8c2417fe24771734ad946624e",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "docs/референсы/mechanisms/prompts.txt",
+      "all_prompts_logged": true
+    },
+    {
+      "id": "M3.3",
+      "world": 3,
+      "kind": "mechanism",
+      "path": "docs/референсы/mechanisms/mech_w3_statue_pedestal.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "zero_alpha_percent": 0.0,
+      "sha256": "84765eea2dbfe1363605d57b174039630f7e907b03b89b916036c60dde1cb9cf",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "docs/референсы/mechanisms/prompts.txt",
+      "all_prompts_logged": true
+    },
+    {
+      "id": "M3.4",
+      "world": 3,
+      "kind": "mechanism",
+      "path": "docs/референсы/mechanisms/mech_w3_count_gate.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "zero_alpha_percent": 0.0,
+      "sha256": "87cd6ab93fbcfc85431da3dba8a86e64a92de376429f977ec310ffc52646052a",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "docs/референсы/mechanisms/prompts.txt",
+      "all_prompts_logged": true
+    },
+    {
+      "id": "M3.5",
+      "world": 3,
+      "kind": "mechanism",
+      "path": "docs/референсы/mechanisms/mech_w3_rockfall.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "zero_alpha_percent": 0.0,
+      "sha256": "ae449338ecc753e0f7be7140e0460d9e8968c7cebb88c9d676437aadd26c2707",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "docs/референсы/mechanisms/prompts.txt",
+      "all_prompts_logged": true
+    },
+    {
+      "id": "M3.6",
+      "world": 3,
+      "kind": "mechanism",
+      "path": "docs/референсы/mechanisms/mech_w3_movable_statue.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "zero_alpha_percent": 0.0,
+      "sha256": "2bfd73aa1c067068c413af19c639cc34b55ad5f83149e2fc03a167f422742455",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "docs/референсы/mechanisms/prompts.txt",
+      "all_prompts_logged": true
+    },
+    {
+      "id": "M4.1",
+      "world": 4,
+      "kind": "mechanism",
+      "path": "docs/референсы/mechanisms/mech_w4_sluice_gate.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "zero_alpha_percent": 0.0,
+      "sha256": "c77310d07d8be49da80521c7e444ae5a627c60653c2f507fd3f1156d175aea8e",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "docs/референсы/mechanisms/prompts.txt",
+      "all_prompts_logged": true
+    },
+    {
+      "id": "M4.2",
+      "world": 4,
+      "kind": "mechanism",
+      "path": "docs/референсы/mechanisms/mech_w4_float_crate.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "zero_alpha_percent": 0.0,
+      "sha256": "bf41fbc95763f445ca2e3d798ecd8138714189b005ebbad8c1c8927113de386d",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "docs/референсы/mechanisms/prompts.txt",
+      "all_prompts_logged": true
+    },
+    {
+      "id": "M4.3",
+      "world": 4,
+      "kind": "mechanism",
+      "path": "docs/референсы/mechanisms/mech_w4_water_jet.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "zero_alpha_percent": 0.0,
+      "sha256": "000b9dda849f5d8f78c2b3b34c6aebff8ede82291794437e4b222688bd6b467a",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "docs/референсы/mechanisms/prompts.txt",
+      "all_prompts_logged": true
+    },
+    {
+      "id": "M4.4",
+      "world": 4,
+      "kind": "mechanism",
+      "path": "docs/референсы/mechanisms/mech_w4_bubble_lift.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "zero_alpha_percent": 0.0,
+      "sha256": "480786e58f8a8eb031e04463f7595a5a388b1405d4fe851105d41ced120cd09f",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "docs/референсы/mechanisms/prompts.txt",
+      "all_prompts_logged": true
+    },
+    {
+      "id": "M4.5",
+      "world": 4,
+      "kind": "mechanism",
+      "path": "docs/референсы/mechanisms/mech_w4_raft.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "zero_alpha_percent": 0.0,
+      "sha256": "8a5277fad88db9735249c66f2d16379c5da07ece5fa4315948d3feae58945cd0",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "docs/референсы/mechanisms/prompts.txt",
+      "all_prompts_logged": true
+    },
+    {
+      "id": "M5.1",
+      "world": 5,
+      "kind": "mechanism",
+      "path": "docs/референсы/mechanisms/mech_w5_ice_block.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "zero_alpha_percent": 0.0,
+      "sha256": "fb01a961232083f92db790a3a88a637a6f6bdfe7d69e7ebcd2537037053761af",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "docs/референсы/mechanisms/prompts.txt",
+      "all_prompts_logged": true
+    },
+    {
+      "id": "M5.2",
+      "world": 5,
+      "kind": "mechanism",
+      "path": "docs/референсы/mechanisms/mech_w5_icicle.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "zero_alpha_percent": 0.0,
+      "sha256": "de59757fc4b6015eb05e538d8768cff425d17f47a34e616c2c5b2b5e5783a129",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "docs/референсы/mechanisms/prompts.txt",
+      "all_prompts_logged": true
+    },
+    {
+      "id": "M5.3",
+      "world": 5,
+      "kind": "mechanism",
+      "path": "docs/референсы/mechanisms/mech_w5_snowball_roll.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "zero_alpha_percent": 0.0,
+      "sha256": "07315683d91c57ddb032108f4259590a600ff68fd90cc7c3bfea8581eb23f0cf",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "docs/референсы/mechanisms/prompts.txt",
+      "all_prompts_logged": true
+    },
+    {
+      "id": "M5.4",
+      "world": 5,
+      "kind": "mechanism",
+      "path": "docs/референсы/mechanisms/mech_w5_thin_ice.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "zero_alpha_percent": 0.0,
+      "sha256": "df7bf0d36801fd9973c33cc295f515a705306daa17348f54b8342a4c1dda2f02",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "docs/референсы/mechanisms/prompts.txt",
+      "all_prompts_logged": true
+    },
+    {
+      "id": "M6.1",
+      "world": 6,
+      "kind": "mechanism",
+      "path": "docs/референсы/mechanisms/mech_w6_portals.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "zero_alpha_percent": 0.0,
+      "sha256": "b69582d44fe41faa2e4b7cb3a630c700f292ee33f804674603f52f5cbe61980f",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "docs/референсы/mechanisms/prompts.txt",
+      "all_prompts_logged": true
+    },
+    {
+      "id": "M6.2",
+      "world": 6,
+      "kind": "mechanism",
+      "path": "docs/референсы/mechanisms/mech_w6_magnet.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "zero_alpha_percent": 0.0,
+      "sha256": "907733adea4abafb9b0c29430ec6a5057fd6f6ca9e9ad9caeedceb3b9c89e2e3",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "docs/референсы/mechanisms/prompts.txt",
+      "all_prompts_logged": true
+    },
+    {
+      "id": "M6.3",
+      "world": 6,
+      "kind": "mechanism",
+      "path": "docs/референсы/mechanisms/mech_w6_vanishing_cloud.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "zero_alpha_percent": 0.0,
+      "sha256": "b6eb293146ff7e6592e56f61e4bce432f95bf0c8171303c5ae7cfbf424e1e9a9",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "docs/референсы/mechanisms/prompts.txt",
+      "all_prompts_logged": true
+    },
+    {
+      "id": "M6.4",
+      "world": 6,
+      "kind": "mechanism",
+      "path": "docs/референсы/mechanisms/mech_w6_launch_cannon.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "zero_alpha_percent": 0.0,
+      "sha256": "6ff4efea38a604278d5fdfb31da5ecc30d16d36d86bab16691d887f535980599",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "docs/референсы/mechanisms/prompts.txt",
+      "all_prompts_logged": true
+    },
+    {
+      "id": "M6.5",
+      "world": 6,
+      "kind": "mechanism",
+      "path": "docs/референсы/mechanisms/mech_w6_lantern.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "zero_alpha_percent": 0.0,
+      "sha256": "95ff996c7bd12bc161f6237dd9b120257584648ec5175308e6d689c9fdcef7ae",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "docs/референсы/mechanisms/prompts.txt",
+      "all_prompts_logged": true
+    },
+    {
+      "id": "M6.6",
+      "world": 6,
+      "kind": "mechanism",
+      "path": "docs/референсы/mechanisms/mech_w6_gravity_crystal.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "zero_alpha_percent": 0.0,
+      "sha256": "3e6416cb00aba9bbd8c174cdd57cc57b342eff7ae26963d3bfa53a167e2fd261",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "docs/референсы/mechanisms/prompts.txt",
+      "all_prompts_logged": true
+    },
+    {
+      "id": "M6.7",
+      "world": 6,
+      "kind": "mechanism",
+      "path": "docs/референсы/mechanisms/mech_w6_swinging_island.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "zero_alpha_percent": 0.0,
+      "sha256": "858e271a0706ccc597061bd556aadb0f651e749a247a44663ff9b3cb04857593",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "docs/референсы/mechanisms/prompts.txt",
+      "all_prompts_logged": true
+    },
+    {
+      "id": "M6.8",
+      "world": 6,
+      "kind": "mechanism",
+      "path": "docs/референсы/mechanisms/mech_w6_updraft_vent.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "zero_alpha_percent": 0.0,
+      "sha256": "6d699b72a4c78a43653365f91a07fc5ec6345f3ea9d71d017d524733a08a9b1c",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "docs/референсы/mechanisms/prompts.txt",
+      "all_prompts_logged": true
+    },
+    {
+      "id": "M6.9",
+      "world": 6,
+      "kind": "mechanism",
+      "path": "docs/референсы/mechanisms/mech_w6_molten_pour.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "zero_alpha_percent": 0.0,
+      "sha256": "19ab7e5950558348e27f58a546eefebe227e638cd66d3306c9ddd94c1854ca53",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "docs/референсы/mechanisms/prompts.txt",
+      "all_prompts_logged": true
+    },
+    {
+      "id": "C3.1",
+      "world": 3,
+      "kind": "texture",
+      "path": "assets/tiles/world_03/source/w03_fill.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "aspect": 1.0,
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "zero_alpha_percent": 0.0,
+      "sha256": "d42e072164c0620c435686cad5889b775ea56157aa8f4ac5cdc7bd04d4f52fb8",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/tiles/world_03/source/prompts.txt",
+      "all_prompts_logged": true,
+      "seams_rgb_mean_abs": {
+        "left_right": 6.396,
+        "top_bottom": 6.544,
+        "interior_x_adjacent": 2.547,
+        "interior_y_adjacent": 2.998
+      }
+    },
+    {
+      "id": "C3.2",
+      "world": 3,
+      "kind": "texture",
+      "path": "assets/tiles/world_03/source/w03_deep.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "aspect": 1.0,
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "zero_alpha_percent": 0.0,
+      "sha256": "02a079a3b0c7e44246de1382a4c559fe27c177f1dccae5f56e69580081966e2f",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/tiles/world_03/source/prompts.txt",
+      "all_prompts_logged": true,
+      "seams_rgb_mean_abs": {
+        "left_right": 5.778,
+        "top_bottom": 6.907,
+        "interior_x_adjacent": 2.169,
+        "interior_y_adjacent": 2.621
+      }
+    },
+    {
+      "id": "C3.3",
+      "world": 3,
+      "kind": "texture",
+      "path": "assets/tiles/world_03/source/w03_top.png",
+      "size": [
+        2172,
+        724
+      ],
+      "aspect": 3.0,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "zero_alpha_percent": 76.906,
+      "sha256": "61f63de5f3755bcda0ef299121aa3f5563c1138623d2133915ac5f5d72326ab3",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/tiles/world_03/source/prompts.txt",
+      "all_prompts_logged": true,
+      "requested_aspect": 4,
+      "first_row_85pct_opaque_percent": 37.02
+    },
+    {
+      "id": "C3.4",
+      "world": 3,
+      "kind": "texture",
+      "path": "assets/tiles/world_03/source/w03_side.png",
+      "size": [
+        724,
+        2172
+      ],
+      "aspect": 0.333333,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "zero_alpha_percent": 55.447,
+      "sha256": "61b651c438d35d4166cec82a33ea8b2de0c528ef280a067055b3786c8e4aab3f",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/tiles/world_03/source/prompts.txt",
+      "all_prompts_logged": true,
+      "requested_aspect": 0.25,
+      "right_half_alpha_max": 250,
+      "right_half_pixels_alpha_gt_0": 3452,
+      "right_half_pixels_alpha_gt_1": 1781,
+      "right_half_pixels_alpha_gt_8": 892
+    },
+    {
+      "id": "C4.1",
+      "world": 4,
+      "kind": "texture",
+      "path": "assets/tiles/world_04/source/w04_fill.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "aspect": 1.0,
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "zero_alpha_percent": 0.0,
+      "sha256": "1d2438fc27b8f96e6b178aeea5a2de3c17c1212bec1d6ed6ac84edce3531d2f6",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/tiles/world_04/source/prompts.txt",
+      "all_prompts_logged": true,
+      "seams_rgb_mean_abs": {
+        "left_right": 10.533,
+        "top_bottom": 9.132,
+        "interior_x_adjacent": 3.558,
+        "interior_y_adjacent": 3.998
+      }
+    },
+    {
+      "id": "C4.2",
+      "world": 4,
+      "kind": "texture",
+      "path": "assets/tiles/world_04/source/w04_deep.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "aspect": 1.0,
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "zero_alpha_percent": 0.0,
+      "sha256": "411989a80f6b574656722939ee686282a6fbfd4b2f2816375d0d8f262d64f875",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/tiles/world_04/source/prompts.txt",
+      "all_prompts_logged": true,
+      "seams_rgb_mean_abs": {
+        "left_right": 7.028,
+        "top_bottom": 7.56,
+        "interior_x_adjacent": 3.189,
+        "interior_y_adjacent": 3.722
+      }
+    },
+    {
+      "id": "C4.3",
+      "world": 4,
+      "kind": "texture",
+      "path": "assets/tiles/world_04/source/w04_top.png",
+      "size": [
+        2172,
+        724
+      ],
+      "aspect": 3.0,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "zero_alpha_percent": 74.395,
+      "sha256": "cb4e70c3d4c52ca546a4a1bdba7473a8d40e7dbd64252681980cfe3c2ae9a955",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/tiles/world_04/source/prompts.txt",
+      "all_prompts_logged": true,
+      "requested_aspect": 4,
+      "first_row_85pct_opaque_percent": 38.54
+    },
+    {
+      "id": "C4.4",
+      "world": 4,
+      "kind": "texture",
+      "path": "assets/tiles/world_04/source/w04_side.png",
+      "size": [
+        724,
+        2172
+      ],
+      "aspect": 0.333333,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "zero_alpha_percent": 54.133,
+      "sha256": "1feb373e85980344cfb5b3c9ad5bb458a5b1141638db39dda4b349dfb09bf8fb",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/tiles/world_04/source/prompts.txt",
+      "all_prompts_logged": true,
+      "requested_aspect": 0.25,
+      "right_half_alpha_max": 9,
+      "right_half_pixels_alpha_gt_0": 11746,
+      "right_half_pixels_alpha_gt_1": 226,
+      "right_half_pixels_alpha_gt_8": 2
+    },
+    {
+      "id": "C5.1",
+      "world": 5,
+      "kind": "texture",
+      "path": "assets/tiles/world_05/source/w05_fill.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "aspect": 1.0,
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "zero_alpha_percent": 0.0,
+      "sha256": "96b2c69d879d28e2c715b88b7b6d5023afa3d85ebacb2a7740b78457a33e7ab2",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/tiles/world_05/source/prompts.txt",
+      "all_prompts_logged": true,
+      "seams_rgb_mean_abs": {
+        "left_right": 7.835,
+        "top_bottom": 7.321,
+        "interior_x_adjacent": 3.907,
+        "interior_y_adjacent": 4.288
+      }
+    },
+    {
+      "id": "C5.2",
+      "world": 5,
+      "kind": "texture",
+      "path": "assets/tiles/world_05/source/w05_deep.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "aspect": 1.0,
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "zero_alpha_percent": 0.0,
+      "sha256": "ec284eace255856c6fdb0644f01573e1ddf3aabcd98f8202f566182ae104ecdd",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/tiles/world_05/source/prompts.txt",
+      "all_prompts_logged": true,
+      "seams_rgb_mean_abs": {
+        "left_right": 6.352,
+        "top_bottom": 5.809,
+        "interior_x_adjacent": 2.904,
+        "interior_y_adjacent": 2.897
+      }
+    },
+    {
+      "id": "C5.3",
+      "world": 5,
+      "kind": "texture",
+      "path": "assets/tiles/world_05/source/w05_top_snow.png",
+      "size": [
+        2172,
+        724
+      ],
+      "aspect": 3.0,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "zero_alpha_percent": 73.527,
+      "sha256": "57bff7029baeb5fd102fc1d59d80d69cff55fd5b910309a4c20891ac18132771",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/tiles/world_05/source/prompts.txt",
+      "all_prompts_logged": true,
+      "requested_aspect": 4,
+      "first_row_85pct_opaque_percent": 24.17
+    },
+    {
+      "id": "C5.4",
+      "world": 5,
+      "kind": "texture",
+      "path": "assets/tiles/world_05/source/w05_top_ice.png",
+      "size": [
+        2172,
+        724
+      ],
+      "aspect": 3.0,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "zero_alpha_percent": 67.475,
+      "sha256": "c2dbc4ee2802505c1b9c4318123ee505cfa23701d9cdfeb0efb023e31d306ce4",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/tiles/world_05/source/prompts.txt",
+      "all_prompts_logged": true,
+      "requested_aspect": 4,
+      "first_row_85pct_opaque_percent": 34.12
+    },
+    {
+      "id": "C5.5",
+      "world": 5,
+      "kind": "texture",
+      "path": "assets/tiles/world_05/source/w05_side.png",
+      "size": [
+        807,
+        1949
+      ],
+      "aspect": 0.414058,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "zero_alpha_percent": 60.454,
+      "sha256": "de96dbb693c3f99bfb0dd6bf9d76d3be971f2d2771b4f9a6572ccca63cb1f8e3",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/tiles/world_05/source/prompts.txt",
+      "all_prompts_logged": true,
+      "requested_aspect": 0.25,
+      "right_half_alpha_max": 1,
+      "right_half_pixels_alpha_gt_0": 88,
+      "right_half_pixels_alpha_gt_1": 0,
+      "right_half_pixels_alpha_gt_8": 0
+    },
+    {
+      "id": "C6.1",
+      "world": 6,
+      "kind": "texture",
+      "path": "assets/tiles/world_06/source/w06_fill.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "aspect": 1.0,
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "zero_alpha_percent": 0.0,
+      "sha256": "116d3192c273837505cfee136fa0dc7a055c5eedfa000c5a6a3f58997fc3f45a",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/tiles/world_06/source/prompts.txt",
+      "all_prompts_logged": true,
+      "seams_rgb_mean_abs": {
+        "left_right": 6.858,
+        "top_bottom": 5.227,
+        "interior_x_adjacent": 2.982,
+        "interior_y_adjacent": 3.367
+      }
+    },
+    {
+      "id": "C6.2",
+      "world": 6,
+      "kind": "texture",
+      "path": "assets/tiles/world_06/source/w06_deep.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "aspect": 1.0,
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "zero_alpha_percent": 0.0,
+      "sha256": "ffdf34d7e1ca53f65c00f97e8b5faf0e2da958e3f63b3eb95325720adc0320ac",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/tiles/world_06/source/prompts.txt",
+      "all_prompts_logged": true,
+      "seams_rgb_mean_abs": {
+        "left_right": 5.081,
+        "top_bottom": 4.982,
+        "interior_x_adjacent": 2.611,
+        "interior_y_adjacent": 2.364
+      }
+    },
+    {
+      "id": "C6.3",
+      "world": 6,
+      "kind": "texture",
+      "path": "assets/tiles/world_06/source/w06_top.png",
+      "size": [
+        2173,
+        724
+      ],
+      "aspect": 3.001381,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "zero_alpha_percent": 75.501,
+      "sha256": "0e2b0ab41254aa865a3801c2a9e33f5f94696bd445d5fff0a8b6168a5db922af",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/tiles/world_06/source/prompts.txt",
+      "all_prompts_logged": true,
+      "requested_aspect": 4,
+      "first_row_85pct_opaque_percent": 42.13
+    },
+    {
+      "id": "C6.4",
+      "world": 6,
+      "kind": "texture",
+      "path": "assets/tiles/world_06/source/w06_side.png",
+      "size": [
+        743,
+        2115
+      ],
+      "aspect": 0.3513,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "zero_alpha_percent": 57.422,
+      "sha256": "2e53fe31742ccf5ad82362ef7e558927300d2e6da00b15f9f3858bc235a98040",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/tiles/world_06/source/prompts.txt",
+      "all_prompts_logged": true,
+      "requested_aspect": 0.25,
+      "right_half_alpha_max": 251,
+      "right_half_pixels_alpha_gt_0": 2880,
+      "right_half_pixels_alpha_gt_1": 2104,
+      "right_half_pixels_alpha_gt_8": 1512
+    },
+    {
+      "id": "D3.1",
+      "world": 3,
+      "kind": "decal",
+      "path": "assets/decals/world_03/source/w03_decal_ivy_flowers.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "zero_alpha_percent": 89.916,
+      "sha256": "f5108839def696af209e5691c6bf431a0de337d8640ecb704a4e71427322758b",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/decals/world_03/source/prompts.txt",
+      "all_prompts_logged": true,
+      "visible_alpha_gt_8_bbox": [
+        607,
+        8,
+        914,
+        1016
+      ],
+      "median_alpha_nonzero": 250.0,
+      "border_alpha_max": 1
+    },
+    {
+      "id": "D3.1.2",
+      "world": 3,
+      "kind": "decal",
+      "path": "assets/decals/world_03/source/w03_decal_ivy_flowers_2.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "zero_alpha_percent": 90.321,
+      "sha256": "6c194559d57ca24223bd8b7ddfb4e532ebcb56ab82218b9d3a160d6e492c734d",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/decals/world_03/source/prompts.txt",
+      "all_prompts_logged": true,
+      "visible_alpha_gt_8_bbox": [
+        605,
+        3,
+        943,
+        1020
+      ],
+      "median_alpha_nonzero": 251.0,
+      "border_alpha_max": 3
+    },
+    {
+      "id": "D3.2",
+      "world": 3,
+      "kind": "decal",
+      "path": "assets/decals/world_03/source/w03_decal_cypress_pot.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "zero_alpha_percent": 87.484,
+      "sha256": "851a4eb7ac68c9f18a20cd3def532b88242e5d0bfb9ad5da956d08e951741405",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/decals/world_03/source/prompts.txt",
+      "all_prompts_logged": true,
+      "visible_alpha_gt_8_bbox": [
+        603,
+        58,
+        935,
+        964
+      ],
+      "median_alpha_nonzero": 253.0,
+      "border_alpha_max": 0
+    },
+    {
+      "id": "D3.2.2",
+      "world": 3,
+      "kind": "decal",
+      "path": "assets/decals/world_03/source/w03_decal_cypress_pot_2.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "zero_alpha_percent": 86.411,
+      "sha256": "702ddfdf3a7c0f6660680123f796e0f369d53048d8af2266ff6de4bdbd2d05b8",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/decals/world_03/source/prompts.txt",
+      "all_prompts_logged": true,
+      "visible_alpha_gt_8_bbox": [
+        577,
+        61,
+        964,
+        971
+      ],
+      "median_alpha_nonzero": 252.0,
+      "border_alpha_max": 0
+    },
+    {
+      "id": "D3.3",
+      "world": 3,
+      "kind": "decal",
+      "path": "assets/decals/world_03/source/w03_decal_statue_piece.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "zero_alpha_percent": 68.145,
+      "sha256": "4b9ac9788a7b17d21369ed89c7a6389e62412fa64fde43443d463af410fe42dc",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/decals/world_03/source/prompts.txt",
+      "all_prompts_logged": true,
+      "visible_alpha_gt_8_bbox": [
+        83,
+        209,
+        1453,
+        850
+      ],
+      "median_alpha_nonzero": 252.0,
+      "border_alpha_max": 1
+    },
+    {
+      "id": "D3.3.2",
+      "world": 3,
+      "kind": "decal",
+      "path": "assets/decals/world_03/source/w03_decal_statue_piece_2.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "zero_alpha_percent": 77.492,
+      "sha256": "6c20914a72b3091c711a4ac6d878c4875034c26075bea35fc77e4efa0d349d9d",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/decals/world_03/source/prompts.txt",
+      "all_prompts_logged": true,
+      "visible_alpha_gt_8_bbox": [
+        180,
+        306,
+        1384,
+        747
+      ],
+      "median_alpha_nonzero": 252.0,
+      "border_alpha_max": 0
+    },
+    {
+      "id": "D3.4",
+      "world": 3,
+      "kind": "decal",
+      "path": "assets/decals/world_03/source/w03_decal_flowers.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "zero_alpha_percent": 78.03,
+      "sha256": "38fa7317c3d67f7348b6212f83d343492288887ae2f418f4f11f5fa32fd8bc2d",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/decals/world_03/source/prompts.txt",
+      "all_prompts_logged": true,
+      "visible_alpha_gt_8_bbox": [
+        64,
+        302,
+        1473,
+        753
+      ],
+      "median_alpha_nonzero": 252.0,
+      "border_alpha_max": 0
+    },
+    {
+      "id": "D3.4.2",
+      "world": 3,
+      "kind": "decal",
+      "path": "assets/decals/world_03/source/w03_decal_flowers_2.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "zero_alpha_percent": 68.985,
+      "sha256": "af75feb901e102935f7ef38e290a906102964b8a622069c37347cd36d234479d",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/decals/world_03/source/prompts.txt",
+      "all_prompts_logged": true,
+      "visible_alpha_gt_8_bbox": [
+        61,
+        236,
+        1484,
+        807
+      ],
+      "median_alpha_nonzero": 252.0,
+      "border_alpha_max": 0
+    },
+    {
+      "id": "D3.5",
+      "world": 3,
+      "kind": "decal",
+      "path": "assets/decals/world_03/source/w03_decal_bronze_ornament.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "zero_alpha_percent": 74.223,
+      "sha256": "097ac4293d101ac9b253bc441852798e2ad1e187a60a2893a9042202eb11a36c",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/decals/world_03/source/prompts.txt",
+      "all_prompts_logged": true,
+      "visible_alpha_gt_8_bbox": [
+        363,
+        122,
+        1173,
+        916
+      ],
+      "median_alpha_nonzero": 253.0,
+      "border_alpha_max": 0
+    },
+    {
+      "id": "D3.5.2",
+      "world": 3,
+      "kind": "decal",
+      "path": "assets/decals/world_03/source/w03_decal_bronze_ornament_2.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "zero_alpha_percent": 70.695,
+      "sha256": "ab9dd92ab17fced7f891b325ed130eef21da2f37276c3dcf60bfb98520a6cd74",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/decals/world_03/source/prompts.txt",
+      "all_prompts_logged": true,
+      "visible_alpha_gt_8_bbox": [
+        201,
+        136,
+        1336,
+        886
+      ],
+      "median_alpha_nonzero": 253.0,
+      "border_alpha_max": 1
+    },
+    {
+      "id": "D3.6",
+      "world": 3,
+      "kind": "decal",
+      "path": "assets/decals/world_03/source/w03_decal_sunbeam.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        253
+      ],
+      "zero_alpha_percent": 62.778,
+      "sha256": "f0d68c32009f5fb2ddf1ba3379ab1518ca218673a34f1cefd8a23e65d7e2e836",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/decals/world_03/source/prompts.txt",
+      "all_prompts_logged": true,
+      "visible_alpha_gt_8_bbox": [
+        153,
+        73,
+        1411,
+        952
+      ],
+      "median_alpha_nonzero": 66.0,
+      "border_alpha_max": 1
+    },
+    {
+      "id": "D3.6.2",
+      "world": 3,
+      "kind": "decal",
+      "path": "assets/decals/world_03/source/w03_decal_sunbeam_2.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        253
+      ],
+      "zero_alpha_percent": 62.999,
+      "sha256": "b5979814272a1cd6575f880bbdc16b1b2d931a0b53bfb32c4dfa5ddb94e2fcaf",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/decals/world_03/source/prompts.txt",
+      "all_prompts_logged": true,
+      "visible_alpha_gt_8_bbox": [
+        79,
+        72,
+        1432,
+        980
+      ],
+      "median_alpha_nonzero": 32.0,
+      "border_alpha_max": 1
+    },
+    {
+      "id": "D4.1",
+      "world": 4,
+      "kind": "decal",
+      "path": "assets/decals/world_04/source/w04_decal_coral.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "zero_alpha_percent": 72.409,
+      "sha256": "10282d3eca976819403d5f7cd341dff7aa74d8e99f168030164e045ccddbd1e6",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/decals/world_04/source/prompts.txt",
+      "all_prompts_logged": true,
+      "visible_alpha_gt_8_bbox": [
+        227,
+        192,
+        1325,
+        843
+      ],
+      "median_alpha_nonzero": 253.0,
+      "border_alpha_max": 1
+    },
+    {
+      "id": "D4.1.2",
+      "world": 4,
+      "kind": "decal",
+      "path": "assets/decals/world_04/source/w04_decal_coral_2.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "zero_alpha_percent": 73.908,
+      "sha256": "b9dedde217649c4025d3cba200add8c701bee7660fcc0d1203ba522b62250951",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/decals/world_04/source/prompts.txt",
+      "all_prompts_logged": true,
+      "visible_alpha_gt_8_bbox": [
+        149,
+        233,
+        1388,
+        802
+      ],
+      "median_alpha_nonzero": 252.0,
+      "border_alpha_max": 1
+    },
+    {
+      "id": "D4.2",
+      "world": 4,
+      "kind": "decal",
+      "path": "assets/decals/world_04/source/w04_decal_seaweed.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "zero_alpha_percent": 91.344,
+      "sha256": "cf1de67dc5c666beba81660fbeb800cef0ac30beee2de7cc7592d331dfd2f09a",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/decals/world_04/source/prompts.txt",
+      "all_prompts_logged": true,
+      "visible_alpha_gt_8_bbox": [
+        633,
+        37,
+        926,
+        1001
+      ],
+      "median_alpha_nonzero": 252.0,
+      "border_alpha_max": 0
+    },
+    {
+      "id": "D4.2.2",
+      "world": 4,
+      "kind": "decal",
+      "path": "assets/decals/world_04/source/w04_decal_seaweed_2.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "zero_alpha_percent": 90.835,
+      "sha256": "8b5f277d26bc85d70316eebcc3e2679c5ac6a81abde6132d5277dc2bee06120a",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/decals/world_04/source/prompts.txt",
+      "all_prompts_logged": true,
+      "visible_alpha_gt_8_bbox": [
+        641,
+        16,
+        936,
+        1009
+      ],
+      "median_alpha_nonzero": 252.0,
+      "border_alpha_max": 0
+    },
+    {
+      "id": "D4.3",
+      "world": 4,
+      "kind": "decal",
+      "path": "assets/decals/world_04/source/w04_decal_shells.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "zero_alpha_percent": 71.458,
+      "sha256": "e32658c43ddbd3f2b97010b586da0be01c41634b32580ee9a36a4d958e288288",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/decals/world_04/source/prompts.txt",
+      "all_prompts_logged": true,
+      "visible_alpha_gt_8_bbox": [
+        134,
+        193,
+        1435,
+        838
+      ],
+      "median_alpha_nonzero": 253.0,
+      "border_alpha_max": 1
+    },
+    {
+      "id": "D4.3.2",
+      "world": 4,
+      "kind": "decal",
+      "path": "assets/decals/world_04/source/w04_decal_shells_2.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "zero_alpha_percent": 74.224,
+      "sha256": "4918ed641223c744ac52b48354ea1f82bfbb0b923771a098e3122ac4a7baa545",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/decals/world_04/source/prompts.txt",
+      "all_prompts_logged": true,
+      "visible_alpha_gt_8_bbox": [
+        184,
+        278,
+        1455,
+        816
+      ],
+      "median_alpha_nonzero": 253.0,
+      "border_alpha_max": 1
+    },
+    {
+      "id": "D4.4",
+      "world": 4,
+      "kind": "decal",
+      "path": "assets/decals/world_04/source/w04_decal_anemone.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "zero_alpha_percent": 76.628,
+      "sha256": "b94e86877a51dabb76ff16cf732c2f2021d34066485a7359ad8d9228a75d3c4e",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/decals/world_04/source/prompts.txt",
+      "all_prompts_logged": true,
+      "visible_alpha_gt_8_bbox": [
+        280,
+        217,
+        1273,
+        842
+      ],
+      "median_alpha_nonzero": 252.0,
+      "border_alpha_max": 1
+    },
+    {
+      "id": "D4.4.2",
+      "world": 4,
+      "kind": "decal",
+      "path": "assets/decals/world_04/source/w04_decal_anemone_2.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "zero_alpha_percent": 80.822,
+      "sha256": "d23ad5d45d9be5a61e1709126bd8a677147cd26020167fd723835f6ba04e9875",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/decals/world_04/source/prompts.txt",
+      "all_prompts_logged": true,
+      "visible_alpha_gt_8_bbox": [
+        314,
+        221,
+        1222,
+        833
+      ],
+      "median_alpha_nonzero": 253.0,
+      "border_alpha_max": 1
+    },
+    {
+      "id": "D4.5",
+      "world": 4,
+      "kind": "decal",
+      "path": "assets/decals/world_04/source/w04_decal_bubbles.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "zero_alpha_percent": 96.134,
+      "sha256": "38568c4382d784489c83ec42c38cdaab5da4ab50e4660e2d2d87cb58995f1d3c",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/decals/world_04/source/prompts.txt",
+      "all_prompts_logged": true,
+      "visible_alpha_gt_8_bbox": [
+        663,
+        96,
+        891,
+        941
+      ],
+      "median_alpha_nonzero": 246.0,
+      "border_alpha_max": 0
+    },
+    {
+      "id": "D4.5.2",
+      "world": 4,
+      "kind": "decal",
+      "path": "assets/decals/world_04/source/w04_decal_bubbles_2.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "zero_alpha_percent": 96.715,
+      "sha256": "f3e1f334d744fe16a7875eaf06f44d32f876d8ac5b8e63dadf0b8a968fbb6351",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/decals/world_04/source/prompts.txt",
+      "all_prompts_logged": true,
+      "visible_alpha_gt_8_bbox": [
+        672,
+        83,
+        852,
+        952
+      ],
+      "median_alpha_nonzero": 246.0,
+      "border_alpha_max": 0
+    },
+    {
+      "id": "D5.1",
+      "world": 5,
+      "kind": "decal",
+      "path": "assets/decals/world_05/source/w05_decal_snowdrift.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "zero_alpha_percent": 79.776,
+      "sha256": "d688496125f597cded064de4bf4320f13484c5a68981aab2d79321874e92f2af",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/decals/world_05/source/prompts.txt",
+      "all_prompts_logged": true,
+      "visible_alpha_gt_8_bbox": [
+        33,
+        382,
+        1501,
+        656
+      ],
+      "median_alpha_nonzero": 253.0,
+      "border_alpha_max": 0
+    },
+    {
+      "id": "D5.1.2",
+      "world": 5,
+      "kind": "decal",
+      "path": "assets/decals/world_05/source/w05_decal_snowdrift_2.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "zero_alpha_percent": 78.557,
+      "sha256": "27f4ec670f985846a805ac4a368b9c3926b983f131003ff71ffba29db9a4001a",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/decals/world_05/source/prompts.txt",
+      "all_prompts_logged": true,
+      "visible_alpha_gt_8_bbox": [
+        51,
+        367,
+        1486,
+        706
+      ],
+      "median_alpha_nonzero": 253.0,
+      "border_alpha_max": 0
+    },
+    {
+      "id": "D5.2",
+      "world": 5,
+      "kind": "decal",
+      "path": "assets/decals/world_05/source/w05_decal_pine_branch.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "zero_alpha_percent": 72.465,
+      "sha256": "d5e9fee968cbe923a16e15e8f07a4ecb87fb24828c42eca711d5d9e3335c6f25",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/decals/world_05/source/prompts.txt",
+      "all_prompts_logged": true,
+      "visible_alpha_gt_8_bbox": [
+        0,
+        68,
+        1151,
+        828
+      ],
+      "median_alpha_nonzero": 252.0,
+      "border_alpha_max": 253
+    },
+    {
+      "id": "D5.2.2",
+      "world": 5,
+      "kind": "decal",
+      "path": "assets/decals/world_05/source/w05_decal_pine_branch_2.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "zero_alpha_percent": 67.196,
+      "sha256": "bfbd3f18180b898041990fa16afd41f9a714b2a7c7b4762e5d6cdedfa7a5b509",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/decals/world_05/source/prompts.txt",
+      "all_prompts_logged": true,
+      "visible_alpha_gt_8_bbox": [
+        0,
+        0,
+        1237,
+        979
+      ],
+      "median_alpha_nonzero": 252.0,
+      "border_alpha_max": 253
+    },
+    {
+      "id": "D5.3",
+      "world": 5,
+      "kind": "decal",
+      "path": "assets/decals/world_05/source/w05_decal_frozen_bush.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "zero_alpha_percent": 68.516,
+      "sha256": "f4f1678a9b12d840fb22bb67434d233064f9b2e3f632bec5e263c0b655c41682",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/decals/world_05/source/prompts.txt",
+      "all_prompts_logged": true,
+      "visible_alpha_gt_8_bbox": [
+        173,
+        222,
+        1360,
+        854
+      ],
+      "median_alpha_nonzero": 252.0,
+      "border_alpha_max": 1
+    },
+    {
+      "id": "D5.3.2",
+      "world": 5,
+      "kind": "decal",
+      "path": "assets/decals/world_05/source/w05_decal_frozen_bush_2.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "zero_alpha_percent": 75.445,
+      "sha256": "a2455e7bea01ab83c1fe11b98dbb7df6c19c3ff99951b45555bea67a3bc6570c",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/decals/world_05/source/prompts.txt",
+      "all_prompts_logged": true,
+      "visible_alpha_gt_8_bbox": [
+        265,
+        253,
+        1270,
+        818
+      ],
+      "median_alpha_nonzero": 252.0,
+      "border_alpha_max": 1
+    },
+    {
+      "id": "D5.4",
+      "world": 5,
+      "kind": "decal",
+      "path": "assets/decals/world_05/source/w05_decal_snowy_rocks.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "zero_alpha_percent": 75.472,
+      "sha256": "2bcb112b5ffad2e03ea96cebfc6a72ccef6b68600d5432fb8347ad0f33fc29b1",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/decals/world_05/source/prompts.txt",
+      "all_prompts_logged": true,
+      "visible_alpha_gt_8_bbox": [
+        174,
+        304,
+        1362,
+        786
+      ],
+      "median_alpha_nonzero": 252.0,
+      "border_alpha_max": 0
+    },
+    {
+      "id": "D5.4.2",
+      "world": 5,
+      "kind": "decal",
+      "path": "assets/decals/world_05/source/w05_decal_snowy_rocks_2.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "zero_alpha_percent": 75.992,
+      "sha256": "11b038785d0cc63fe2d733a97f7988e7ea8cb442a06f433847064c44e891c07f",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/decals/world_05/source/prompts.txt",
+      "all_prompts_logged": true,
+      "visible_alpha_gt_8_bbox": [
+        165,
+        295,
+        1376,
+        754
+      ],
+      "median_alpha_nonzero": 253.0,
+      "border_alpha_max": 1
+    },
+    {
+      "id": "D5.5",
+      "world": 5,
+      "kind": "decal",
+      "path": "assets/decals/world_05/source/w05_decal_frost.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        253
+      ],
+      "zero_alpha_percent": 77.331,
+      "sha256": "ad82dd372309385f162cf372f2143494b2fe19435b41938fa66b7e9e5303134c",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/decals/world_05/source/prompts.txt",
+      "all_prompts_logged": true,
+      "visible_alpha_gt_8_bbox": [
+        183,
+        256,
+        1367,
+        778
+      ],
+      "median_alpha_nonzero": 41.0,
+      "border_alpha_max": 1
+    },
+    {
+      "id": "D5.5.2",
+      "world": 5,
+      "kind": "decal",
+      "path": "assets/decals/world_05/source/w05_decal_frost_2.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        253
+      ],
+      "zero_alpha_percent": 67.092,
+      "sha256": "51b4ebafafbc2c612df713b30b2d90f21a47ece5d8f573dad73b40adf64608c7",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/decals/world_05/source/prompts.txt",
+      "all_prompts_logged": true,
+      "visible_alpha_gt_8_bbox": [
+        101,
+        212,
+        1446,
+        796
+      ],
+      "median_alpha_nonzero": 27.0,
+      "border_alpha_max": 1
+    },
+    {
+      "id": "D6.1",
+      "world": 6,
+      "kind": "decal",
+      "path": "assets/decals/world_06/source/w06_decal_flowers.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "zero_alpha_percent": 74.993,
+      "sha256": "ed2def515ce85385e77e74d78d3c0d465a22ee8afedcc1ad0306137089267f61",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/decals/world_06/source/prompts.txt",
+      "all_prompts_logged": true,
+      "visible_alpha_gt_8_bbox": [
+        224,
+        267,
+        1325,
+        798
+      ],
+      "median_alpha_nonzero": 252.0,
+      "border_alpha_max": 0
+    },
+    {
+      "id": "D6.1.2",
+      "world": 6,
+      "kind": "decal",
+      "path": "assets/decals/world_06/source/w06_decal_flowers_2.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "zero_alpha_percent": 78.737,
+      "sha256": "e7f1dabab45486ece36c0f4964366159288fa76220d8f62ef12cd7a42f66d93b",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/decals/world_06/source/prompts.txt",
+      "all_prompts_logged": true,
+      "visible_alpha_gt_8_bbox": [
+        235,
+        303,
+        1325,
+        738
+      ],
+      "median_alpha_nonzero": 253.0,
+      "border_alpha_max": 0
+    },
+    {
+      "id": "D6.2",
+      "world": 6,
+      "kind": "decal",
+      "path": "assets/decals/world_06/source/w06_decal_moss.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "zero_alpha_percent": 83.673,
+      "sha256": "6a7d73c2099e86ff5dbddd37c5f452f4161a27855d5e4042ad18e40815e8d722",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/decals/world_06/source/prompts.txt",
+      "all_prompts_logged": true,
+      "visible_alpha_gt_8_bbox": [
+        192,
+        339,
+        1350,
+        700
+      ],
+      "median_alpha_nonzero": 253.0,
+      "border_alpha_max": 1
+    },
+    {
+      "id": "D6.2.2",
+      "world": 6,
+      "kind": "decal",
+      "path": "assets/decals/world_06/source/w06_decal_moss_2.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "zero_alpha_percent": 81.602,
+      "sha256": "bde503c4b1a38ed0cfdf6a100df30d3d480e8689996b31e671dbb2558971d3b6",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/decals/world_06/source/prompts.txt",
+      "all_prompts_logged": true,
+      "visible_alpha_gt_8_bbox": [
+        151,
+        360,
+        1384,
+        723
+      ],
+      "median_alpha_nonzero": 253.0,
+      "border_alpha_max": 1
+    },
+    {
+      "id": "D6.3",
+      "world": 6,
+      "kind": "decal",
+      "path": "assets/decals/world_06/source/w06_decal_roots.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "zero_alpha_percent": 83.739,
+      "sha256": "f19ee8025b1c72cae06baa55af1a9b9327fc77b1a422a39c0b974ab115358c72",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/decals/world_06/source/prompts.txt",
+      "all_prompts_logged": true,
+      "visible_alpha_gt_8_bbox": [
+        466,
+        58,
+        1069,
+        968
+      ],
+      "median_alpha_nonzero": 249.0,
+      "border_alpha_max": 0
+    },
+    {
+      "id": "D6.3.2",
+      "world": 6,
+      "kind": "decal",
+      "path": "assets/decals/world_06/source/w06_decal_roots_2.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "zero_alpha_percent": 81.433,
+      "sha256": "65a2fcf55daa1e386b7ab1d37bc99dd75c7ae1dc36101ed6ee3ddbb3f564ce3b",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/decals/world_06/source/prompts.txt",
+      "all_prompts_logged": true,
+      "visible_alpha_gt_8_bbox": [
+        471,
+        91,
+        1103,
+        951
+      ],
+      "median_alpha_nonzero": 252.0,
+      "border_alpha_max": 0
+    },
+    {
+      "id": "D6.4",
+      "world": 6,
+      "kind": "decal",
+      "path": "assets/decals/world_06/source/w06_decal_floating_rocks.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "zero_alpha_percent": 92.68,
+      "sha256": "7bd77f0a070bce4d531936ca22f2c232ae71ccc4c3a96acd25c6726ebd0b178a",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/decals/world_06/source/prompts.txt",
+      "all_prompts_logged": true,
+      "visible_alpha_gt_8_bbox": [
+        484,
+        310,
+        1106,
+        722
+      ],
+      "median_alpha_nonzero": 252.0,
+      "border_alpha_max": 0
+    },
+    {
+      "id": "D6.4.2",
+      "world": 6,
+      "kind": "decal",
+      "path": "assets/decals/world_06/source/w06_decal_floating_rocks_2.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "zero_alpha_percent": 90.587,
+      "sha256": "7d292225a07cf8136cecf2af10f3aeeb136e496d74f23581ad12d18c1b8edbc9",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/decals/world_06/source/prompts.txt",
+      "all_prompts_logged": true,
+      "visible_alpha_gt_8_bbox": [
+        449,
+        275,
+        1087,
+        750
+      ],
+      "median_alpha_nonzero": 252.0,
+      "border_alpha_max": 0
+    },
+    {
+      "id": "D6.5",
+      "world": 6,
+      "kind": "decal",
+      "path": "assets/decals/world_06/source/w06_decal_banner.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "zero_alpha_percent": 80.026,
+      "sha256": "c146effa2e7d00574d00bc12eb7ec7db4d405d582d76bdb078f76e4b00d30dd8",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/decals/world_06/source/prompts.txt",
+      "all_prompts_logged": true,
+      "visible_alpha_gt_8_bbox": [
+        338,
+        158,
+        1183,
+        882
+      ],
+      "median_alpha_nonzero": 253.0,
+      "border_alpha_max": 0
+    },
+    {
+      "id": "D6.5.2",
+      "world": 6,
+      "kind": "decal",
+      "path": "assets/decals/world_06/source/w06_decal_banner_2.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "zero_alpha_percent": 78.827,
+      "sha256": "d8c398d340be040b33b6b97f45cb45e96d4396e99f936b92326416ec2a4403f7",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/decals/world_06/source/prompts.txt",
+      "all_prompts_logged": true,
+      "visible_alpha_gt_8_bbox": [
+        380,
+        89,
+        1154,
+        914
+      ],
+      "median_alpha_nonzero": 253.0,
+      "border_alpha_max": 0
+    },
+    {
+      "id": "Z3",
+      "world": 1,
+      "kind": "correction",
+      "path": "assets/backgrounds/world_01/v2/source/w01_v2_far_canyon.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "zero_alpha_percent": 0.0,
+      "sha256": "b9971ea270ba2d1dcd38d92c361429ebdb5d7964e165612f627b8e5c84fa4821",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/backgrounds/world_01/v2/source/prompts.txt",
+      "all_prompts_logged": true
+    },
+    {
+      "id": "W2Z1",
+      "world": 2,
+      "kind": "far",
+      "path": "assets/backgrounds/world_02/source/w02_far_yard.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "zero_alpha_percent": 0.0,
+      "sha256": "f365fbb4802098d13eadb4d7f2e4db1f95307621f9238ee34080e5d2c205fc71",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/backgrounds/world_02/source/prompts.txt",
+      "all_prompts_logged": true
+    },
+    {
+      "id": "W2Z3",
+      "world": 2,
+      "kind": "far",
+      "path": "assets/backgrounds/world_02/source/w02_far_forge.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "zero_alpha_percent": 0.0,
+      "sha256": "8f7c4fdb31deb08b5f82d154cb3c03ad9b30b77455d8a919413c5153f934b662",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/backgrounds/world_02/source/prompts.txt",
+      "all_prompts_logged": true
+    },
+    {
+      "id": "W2Z5",
+      "world": 2,
+      "kind": "far",
+      "path": "assets/backgrounds/world_02/source/w02_far_scaffolds.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "zero_alpha_percent": 0.0,
+      "sha256": "70b78261cdf95d908d724df96ec22e824e85007ea4e1533aceb6b9e8ad8634e6",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/backgrounds/world_02/source/prompts.txt",
+      "all_prompts_logged": true
+    },
+    {
+      "id": "W2Z7",
+      "world": 2,
+      "kind": "far",
+      "path": "assets/backgrounds/world_02/source/w02_far_machine.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "zero_alpha_percent": 0.0,
+      "sha256": "058313662115311ad928568c926b461a0ea474a9c382e53d1b8b10f1d052859e",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/backgrounds/world_02/source/prompts.txt",
+      "all_prompts_logged": true
+    },
+    {
+      "id": "W2Z2",
+      "world": 2,
+      "kind": "middle",
+      "path": "assets/backgrounds/world_02/source/w02_mid_yard.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "zero_alpha_percent": 57.106,
+      "sha256": "fe5938ba60f17bf6a230b65b0b47f4bf1d4461d0a1f944939a9badf450b72ea8",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/backgrounds/world_02/source/prompts.txt",
+      "all_prompts_logged": true,
+      "visible_alpha_gt_8_bbox": [
+        0,
+        489,
+        1536,
+        1024
+      ],
+      "median_alpha_nonzero": 252.0,
+      "border_alpha_max": 253,
+      "upper_half_alpha_max": 252,
+      "upper_half_pixels_alpha_gt_1": 2328,
+      "highest_visible_row_percent": 47.75
+    },
+    {
+      "id": "W2Z4",
+      "world": 2,
+      "kind": "middle",
+      "path": "assets/backgrounds/world_02/source/w02_mid_forge.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "zero_alpha_percent": 52.098,
+      "sha256": "32f0310981269834cacc88e6777395d75aef08ed09dcaa632a5e9f973e1ae117",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/backgrounds/world_02/source/prompts.txt",
+      "all_prompts_logged": true,
+      "visible_alpha_gt_8_bbox": [
+        0,
+        472,
+        1536,
+        1024
+      ],
+      "median_alpha_nonzero": 252.0,
+      "border_alpha_max": 254,
+      "upper_half_alpha_max": 253,
+      "upper_half_pixels_alpha_gt_1": 7380,
+      "highest_visible_row_percent": 46.09
+    },
+    {
+      "id": "W2Z6",
+      "world": 2,
+      "kind": "middle",
+      "path": "assets/backgrounds/world_02/source/w02_mid_scaffolds.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "zero_alpha_percent": 52.631,
+      "sha256": "2d7c91d82681f287e1870908b12935d795e1584527c6f640ca32d9d2532b164a",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/backgrounds/world_02/source/prompts.txt",
+      "all_prompts_logged": true,
+      "visible_alpha_gt_8_bbox": [
+        0,
+        488,
+        1536,
+        1024
+      ],
+      "median_alpha_nonzero": 252.0,
+      "border_alpha_max": 254,
+      "upper_half_alpha_max": 253,
+      "upper_half_pixels_alpha_gt_1": 4317,
+      "highest_visible_row_percent": 47.66
+    },
+    {
+      "id": "W2Z8",
+      "world": 2,
+      "kind": "middle",
+      "path": "assets/backgrounds/world_02/source/w02_mid_machine.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "zero_alpha_percent": 55.312,
+      "sha256": "f3bfab054cccce9da9b752ed05acd7ab43108c399608f3a270beb5b0119c5107",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/backgrounds/world_02/source/prompts.txt",
+      "all_prompts_logged": true,
+      "visible_alpha_gt_8_bbox": [
+        0,
+        486,
+        1536,
+        1024
+      ],
+      "median_alpha_nonzero": 252.0,
+      "border_alpha_max": 254,
+      "upper_half_alpha_max": 252,
+      "upper_half_pixels_alpha_gt_1": 1803,
+      "highest_visible_row_percent": 47.46
+    },
+    {
+      "id": "W2L01",
+      "world": 2,
+      "kind": "landmark",
+      "path": "assets/backgrounds/world_02/source/w02_lm01_conveyor_gallery.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "aspect": 1.5,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "zero_alpha_percent": 49.811,
+      "sha256": "04185ac835012493b769bd10f2a2c98d8c195960b8b483f9f8df23d6db0353ff",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/backgrounds/world_02/source/prompts.txt",
+      "all_prompts_logged": true,
+      "visible_alpha_gt_8_bbox": [
+        47,
+        112,
+        1536,
+        930
+      ],
+      "median_alpha_nonzero": 251.0,
+      "border_alpha_max": 86
+    },
+    {
+      "id": "W2L02",
+      "world": 2,
+      "kind": "landmark",
+      "path": "assets/backgrounds/world_02/source/w02_lm02_spring_press.png",
+      "size": [
+        1024,
+        1536
+      ],
+      "aspect": 0.666667,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "zero_alpha_percent": 45.458,
+      "sha256": "7754c2828b0c523eed7986e238b9d3cca67182cacb275cba031de5484e219314",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/backgrounds/world_02/source/prompts.txt",
+      "all_prompts_logged": true,
+      "visible_alpha_gt_8_bbox": [
+        42,
+        128,
+        984,
+        1399
+      ],
+      "median_alpha_nonzero": 252.0,
+      "border_alpha_max": 1
+    },
+    {
+      "id": "W2L03",
+      "world": 2,
+      "kind": "landmark",
+      "path": "assets/backgrounds/world_02/source/w02_lm03_launch_tower.png",
+      "size": [
+        1024,
+        1536
+      ],
+      "aspect": 0.666667,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "zero_alpha_percent": 53.571,
+      "sha256": "980e83393644563fbcd86724d0c41c12de25718b4ddd50de1eeed5284f1b2796",
+      "final_bytes_equal_generator_output": true,
+      "prompt_log": "assets/backgrounds/world_02/source/prompts.txt",
+      "all_prompts_logged": true,
+      "visible_alpha_gt_8_bbox": [
+        55,
+        160,
+        1010,
+        1403
+      ],
+      "median_alpha_nonzero": 252.0,
+      "border_alpha_max": 1
+    }
+  ],
+  "variant_checks": [
+    {
+      "first": "w02_decal_lantern.png",
+      "second": "w02_decal_lantern_2.png",
+      "different_bytes": true
+    },
+    {
+      "first": "w02_decal_steam.png",
+      "second": "w02_decal_steam_2.png",
+      "different_bytes": true
+    },
+    {
+      "first": "w02_decal_pipes.png",
+      "second": "w02_decal_pipes_2.png",
+      "different_bytes": true
+    },
+    {
+      "first": "w02_decal_banner.png",
+      "second": "w02_decal_banner_2.png",
+      "different_bytes": true
+    },
+    {
+      "first": "w02_decal_soot_moss.png",
+      "second": "w02_decal_soot_moss_2.png",
+      "different_bytes": true
+    },
+    {
+      "first": "w03_decal_ivy_flowers.png",
+      "second": "w03_decal_ivy_flowers_2.png",
+      "different_bytes": true
+    },
+    {
+      "first": "w03_decal_cypress_pot.png",
+      "second": "w03_decal_cypress_pot_2.png",
+      "different_bytes": true
+    },
+    {
+      "first": "w03_decal_statue_piece.png",
+      "second": "w03_decal_statue_piece_2.png",
+      "different_bytes": true
+    },
+    {
+      "first": "w03_decal_flowers.png",
+      "second": "w03_decal_flowers_2.png",
+      "different_bytes": true
+    },
+    {
+      "first": "w03_decal_bronze_ornament.png",
+      "second": "w03_decal_bronze_ornament_2.png",
+      "different_bytes": true
+    },
+    {
+      "first": "w03_decal_sunbeam.png",
+      "second": "w03_decal_sunbeam_2.png",
+      "different_bytes": true
+    },
+    {
+      "first": "w04_decal_coral.png",
+      "second": "w04_decal_coral_2.png",
+      "different_bytes": true
+    },
+    {
+      "first": "w04_decal_seaweed.png",
+      "second": "w04_decal_seaweed_2.png",
+      "different_bytes": true
+    },
+    {
+      "first": "w04_decal_shells.png",
+      "second": "w04_decal_shells_2.png",
+      "different_bytes": true
+    },
+    {
+      "first": "w04_decal_anemone.png",
+      "second": "w04_decal_anemone_2.png",
+      "different_bytes": true
+    },
+    {
+      "first": "w04_decal_bubbles.png",
+      "second": "w04_decal_bubbles_2.png",
+      "different_bytes": true
+    },
+    {
+      "first": "w05_decal_snowdrift.png",
+      "second": "w05_decal_snowdrift_2.png",
+      "different_bytes": true
+    },
+    {
+      "first": "w05_decal_pine_branch.png",
+      "second": "w05_decal_pine_branch_2.png",
+      "different_bytes": true
+    },
+    {
+      "first": "w05_decal_frozen_bush.png",
+      "second": "w05_decal_frozen_bush_2.png",
+      "different_bytes": true
+    },
+    {
+      "first": "w05_decal_snowy_rocks.png",
+      "second": "w05_decal_snowy_rocks_2.png",
+      "different_bytes": true
+    },
+    {
+      "first": "w05_decal_frost.png",
+      "second": "w05_decal_frost_2.png",
+      "different_bytes": true
+    },
+    {
+      "first": "w06_decal_flowers.png",
+      "second": "w06_decal_flowers_2.png",
+      "different_bytes": true
+    },
+    {
+      "first": "w06_decal_moss.png",
+      "second": "w06_decal_moss_2.png",
+      "different_bytes": true
+    },
+    {
+      "first": "w06_decal_roots.png",
+      "second": "w06_decal_roots_2.png",
+      "different_bytes": true
+    },
+    {
+      "first": "w06_decal_floating_rocks.png",
+      "second": "w06_decal_floating_rocks_2.png",
+      "different_bytes": true
+    },
+    {
+      "first": "w06_decal_banner.png",
+      "second": "w06_decal_banner_2.png",
+      "different_bytes": true
+    }
+  ],
+  "generator_deviations": [
+    {
+      "id": "C2.3",
+      "issue": "native_top_aspect",
+      "actual_size": [
+        2172,
+        724
+      ],
+      "requested": "4:1"
+    },
+    {
+      "id": "C2.4",
+      "issue": "native_side_aspect",
+      "actual_size": [
+        724,
+        2172
+      ],
+      "requested": "1:4"
+    },
+    {
+      "id": "C2.4",
+      "issue": "right_half_not_exactly_zero",
+      "maximum_alpha": 1,
+      "pixels_alpha_gt_8": 0
+    },
+    {
+      "id": "C3.3",
+      "issue": "native_top_aspect",
+      "actual_size": [
+        2172,
+        724
+      ],
+      "requested": "4:1"
+    },
+    {
+      "id": "C3.4",
+      "issue": "native_side_aspect",
+      "actual_size": [
+        724,
+        2172
+      ],
+      "requested": "1:4"
+    },
+    {
+      "id": "C3.4",
+      "issue": "right_half_not_exactly_zero",
+      "maximum_alpha": 250,
+      "pixels_alpha_gt_8": 892
+    },
+    {
+      "id": "C4.3",
+      "issue": "native_top_aspect",
+      "actual_size": [
+        2172,
+        724
+      ],
+      "requested": "4:1"
+    },
+    {
+      "id": "C4.4",
+      "issue": "native_side_aspect",
+      "actual_size": [
+        724,
+        2172
+      ],
+      "requested": "1:4"
+    },
+    {
+      "id": "C4.4",
+      "issue": "right_half_not_exactly_zero",
+      "maximum_alpha": 9,
+      "pixels_alpha_gt_8": 2
+    },
+    {
+      "id": "C5.3",
+      "issue": "native_top_aspect",
+      "actual_size": [
+        2172,
+        724
+      ],
+      "requested": "4:1"
+    },
+    {
+      "id": "C5.4",
+      "issue": "native_top_aspect",
+      "actual_size": [
+        2172,
+        724
+      ],
+      "requested": "4:1"
+    },
+    {
+      "id": "C5.5",
+      "issue": "native_side_aspect",
+      "actual_size": [
+        807,
+        1949
+      ],
+      "requested": "1:4"
+    },
+    {
+      "id": "C5.5",
+      "issue": "right_half_not_exactly_zero",
+      "maximum_alpha": 1,
+      "pixels_alpha_gt_8": 0
+    },
+    {
+      "id": "C6.3",
+      "issue": "native_top_aspect",
+      "actual_size": [
+        2173,
+        724
+      ],
+      "requested": "4:1"
+    },
+    {
+      "id": "C6.4",
+      "issue": "native_side_aspect",
+      "actual_size": [
+        743,
+        2115
+      ],
+      "requested": "1:4"
+    },
+    {
+      "id": "C6.4",
+      "issue": "right_half_not_exactly_zero",
+      "maximum_alpha": 251,
+      "pixels_alpha_gt_8": 1512
+    },
+    {
+      "id": "W2Z2",
+      "issue": "upper_half_not_exactly_zero",
+      "maximum_alpha": 252,
+      "pixels_alpha_gt_1": 2328
+    },
+    {
+      "id": "W2Z4",
+      "issue": "upper_half_not_exactly_zero",
+      "maximum_alpha": 253,
+      "pixels_alpha_gt_1": 7380
+    },
+    {
+      "id": "W2Z6",
+      "issue": "upper_half_not_exactly_zero",
+      "maximum_alpha": 253,
+      "pixels_alpha_gt_1": 4317
+    },
+    {
+      "id": "W2Z8",
+      "issue": "upper_half_not_exactly_zero",
+      "maximum_alpha": 252,
+      "pixels_alpha_gt_1": 1803
+    }
+  ],
+  "pending_backgrounds": [
+    {
+      "id": "W2L04",
+      "path": "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_02\\source\\w02_lm04_rickety_bridge.png"
+    },
+    {
+      "id": "W2L05",
+      "path": "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_02\\source\\w02_lm05_rotating_bridge.png"
+    },
+    {
+      "id": "W2L06",
+      "path": "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_02\\source\\w02_lm06_forge_bellows.png"
+    },
+    {
+      "id": "W2L07",
+      "path": "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_02\\source\\w02_lm07_gantry_crane.png"
+    },
+    {
+      "id": "W2L08",
+      "path": "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_02\\source\\w02_lm08_stamping_presses.png"
+    },
+    {
+      "id": "W2L09",
+      "path": "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_02\\source\\w02_lm09_sawmill.png"
+    },
+    {
+      "id": "W2L10",
+      "path": "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_02\\source\\w02_lm10_three_chimneys_forge.png"
+    },
+    {
+      "id": "W2L11",
+      "path": "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_02\\source\\w02_lm11_beetle_statue.png"
+    },
+    {
+      "id": "W2L12",
+      "path": "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_02\\source\\w02_lm12_weighing_tower.png"
+    },
+    {
+      "id": "W2L13",
+      "path": "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_02\\source\\w02_lm13_wire_pole.png"
+    },
+    {
+      "id": "W2L14",
+      "path": "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_02\\source\\w02_lm14_switch_tower.png"
+    },
+    {
+      "id": "W2L15",
+      "path": "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_02\\source\\w02_lm15_blown_wall.png"
+    },
+    {
+      "id": "W2L16",
+      "path": "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_02\\source\\w02_lm16_wind_tunnel.png"
+    },
+    {
+      "id": "W2L17",
+      "path": "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_02\\source\\w02_lm17_abandoned_corner.png"
+    },
+    {
+      "id": "W2L18",
+      "path": "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_02\\source\\w02_lm18_sorting_carousel.png"
+    },
+    {
+      "id": "W2L19",
+      "path": "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_02\\source\\w02_lm19_lightning_tower.png"
+    },
+    {
+      "id": "W2L20",
+      "path": "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\world_02\\source\\w02_lm20_machine_core.png"
+    },
+    {
+      "id": "W2M2",
+      "path": "D:\\Cluade projects\\games\\Glue\\assets\\backgrounds\\menu\\source\\menu_panorama_w02.png"
+    }
+  ],
+  "generation_limit": {
+    "reset_unix": 1791049996,
+    "reset_moscow": "2026-10-03 20:53:16 +03:00",
+    "latest_check_utc": "2026-10-03T03:33:18+00:00",
+    "latest_result": "HTTP 429 usage_limit_reached"
+  },
+  "browser_review": {
+    "gallery": "docs/11_графика_галерея.html",
+    "images_loaded": 130,
+    "broken_images": 0,
+    "checks": [
+      "All 42 new decals viewed on light or dark backgrounds, no visible painted black backdrop or broad raw-RGB halos.",
+      "Square textures of worlds 3-6 repeated 2 x 2: color and geometry seams remain.",
+      "Top/side strips of worlds 3-6 viewed on a dark background. Snow and ice tops are distinct.",
+      "All four world 2 middle layers and three landmarks viewed with actual alpha."
+    ],
+    "reviewer": "Codex"
+  },
+  "latest_world2_backgrounds_attempt": {
+    "timestamp_utc": "2026-10-03T03:33:18+00:00",
+    "timestamp_moscow": "03.10.2026 06:33:18 МСК",
+    "id": "W2Z4",
+    "error": "HTTP 429 usage_limit_reached",
+    "new_png_saved": false,
+    "reset_moscow": "2026-10-03 20:53:16 +03:00"
+  }
+}

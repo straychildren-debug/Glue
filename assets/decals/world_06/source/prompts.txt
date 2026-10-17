@@ -1,0 +1,182 @@
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+D6.1 | w06_decal_flowers.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world6_sky_forge.png
+D:/Cluade projects/games/Glue/assets/tiles/world_06/source/w06_top.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the approved concept sheet of world 6 — match its palette and light. Attached image 3: the floor top strip of the same world — match its painting style and colors. Do NOT copy layouts, text, UI or characters.
+
+Create ONE isolated decorative sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no unrelated objects.
+Object: a round bush of purple and pink flowers.
+Neutral white balance. Genuine PNG alpha transparency, no painted checkerboard, no wall slab, ground plane or backdrop. Soft painted edges WITHOUT black/navy contour. Landscape 3:2. ONE centered object or specified decorative group with generous empty alpha margins. No broad cast shadow or glow outside the object.
+No clouds (clouds are platforms in this world), no crystals, chains, lanterns, rings or portals, magnets, cannons, grates, streams of glowing metal.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-554ac376-5105-42dc-8f24-8d156507865c.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+D6.1.2 | w06_decal_flowers_2.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world6_sky_forge.png
+D:/Cluade projects/games/Glue/assets/tiles/world_06/source/w06_top.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the approved concept sheet of world 6 — match its palette and light. Attached image 3: the floor top strip of the same world — match its painting style and colors. Do NOT copy layouts, text, UI or characters.
+
+Create ONE isolated decorative sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no unrelated objects.
+Object: a round bush of purple and pink flowers.
+Neutral white balance. Genuine PNG alpha transparency, no painted checkerboard, no wall slab, ground plane or backdrop. Soft painted edges WITHOUT black/navy contour. Landscape 3:2. ONE centered object or specified decorative group with generous empty alpha margins. No broad cast shadow or glow outside the object.
+A second independent variant of this ONE object: modestly different silhouette and details, same scale, colors and materials. No pair, grid or comparison sheet.
+No clouds (clouds are platforms in this world), no crystals, chains, lanterns, rings or portals, magnets, cannons, grates, streams of glowing metal.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-f2aa8f77-a372-41ee-aaf7-771b5239afea.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+D6.2 | w06_decal_moss.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world6_sky_forge.png
+D:/Cluade projects/games/Glue/assets/tiles/world_06/source/w06_top.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the approved concept sheet of world 6 — match its palette and light. Attached image 3: the floor top strip of the same world — match its painting style and colors. Do NOT copy layouts, text, UI or characters.
+
+Create ONE isolated decorative sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no unrelated objects.
+Object: a tuft of golden-green moss with a few small purple flowers, flat bottom edge.
+Neutral white balance. Genuine PNG alpha transparency, no painted checkerboard, no wall slab, ground plane or backdrop. Soft painted edges WITHOUT black/navy contour. Landscape 3:2. ONE centered object or specified decorative group with generous empty alpha margins. No broad cast shadow or glow outside the object.
+No clouds (clouds are platforms in this world), no crystals, chains, lanterns, rings or portals, magnets, cannons, grates, streams of glowing metal.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-6c23bdb9-26c1-4728-a724-22bf9e8378ab.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+D6.2.2 | w06_decal_moss_2.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world6_sky_forge.png
+D:/Cluade projects/games/Glue/assets/tiles/world_06/source/w06_top.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the approved concept sheet of world 6 — match its palette and light. Attached image 3: the floor top strip of the same world — match its painting style and colors. Do NOT copy layouts, text, UI or characters.
+
+Create ONE isolated decorative sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no unrelated objects.
+Object: a tuft of golden-green moss with a few small purple flowers, flat bottom edge.
+Neutral white balance. Genuine PNG alpha transparency, no painted checkerboard, no wall slab, ground plane or backdrop. Soft painted edges WITHOUT black/navy contour. Landscape 3:2. ONE centered object or specified decorative group with generous empty alpha margins. No broad cast shadow or glow outside the object.
+A second independent variant of this ONE object: modestly different silhouette and details, same scale, colors and materials. No pair, grid or comparison sheet.
+No clouds (clouds are platforms in this world), no crystals, chains, lanterns, rings or portals, magnets, cannons, grates, streams of glowing metal.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-ba20c428-6105-406c-abd3-2b13340973c8.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+D6.3 | w06_decal_roots.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world6_sky_forge.png
+D:/Cluade projects/games/Glue/assets/tiles/world_06/source/w06_top.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the approved concept sheet of world 6 — match its palette and light. Attached image 3: the floor top strip of the same world — match its painting style and colors. Do NOT copy layouts, text, UI or characters.
+
+Create ONE isolated decorative sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no unrelated objects.
+Object: hanging roots with small purple flowers under an overhang.
+Neutral white balance. Genuine PNG alpha transparency, no painted checkerboard, no wall slab, ground plane or backdrop. Soft painted edges WITHOUT black/navy contour. Landscape 3:2. ONE centered object or specified decorative group with generous empty alpha margins. No broad cast shadow or glow outside the object.
+Draw one connected hanging cluster of roots with tiny purple flowers, attached together along its upper tips to an implied overhang outside the image. Roots descend vertically in unequal lengths. Do not paint the overhang, stone slab, island, ground or any horizontal foliage garland. Fully visible root ends, clear alpha margins on every side.
+No clouds (clouds are platforms in this world), no crystals, chains, lanterns, rings or portals, magnets, cannons, grates, streams of glowing metal.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-8092d43e-fb5e-45b1-b321-7b6b9b1f17a9.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+D6.3.2 | w06_decal_roots_2.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world6_sky_forge.png
+D:/Cluade projects/games/Glue/assets/tiles/world_06/source/w06_top.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the approved concept sheet of world 6 — match its palette and light. Attached image 3: the floor top strip of the same world — match its painting style and colors. Do NOT copy layouts, text, UI or characters.
+
+Create ONE isolated decorative sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no unrelated objects.
+Object: hanging roots with small purple flowers under an overhang.
+Neutral white balance. Genuine PNG alpha transparency, no painted checkerboard, no wall slab, ground plane or backdrop. Soft painted edges WITHOUT black/navy contour. Landscape 3:2. ONE centered object or specified decorative group with generous empty alpha margins. No broad cast shadow or glow outside the object.
+A second independent variant of this ONE object: modestly different silhouette and details, same scale, colors and materials. No pair, grid or comparison sheet.
+Draw one connected hanging cluster of roots with tiny purple flowers, attached together along its upper tips to an implied overhang outside the image. Roots descend vertically in unequal lengths. Do not paint the overhang, stone slab, island, ground or any horizontal foliage garland. Fully visible root ends, clear alpha margins on every side.
+No clouds (clouds are platforms in this world), no crystals, chains, lanterns, rings or portals, magnets, cannons, grates, streams of glowing metal.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-321a4fea-463a-436c-8b5c-e37954398821.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+D6.4 | w06_decal_floating_rocks.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world6_sky_forge.png
+D:/Cluade projects/games/Glue/assets/tiles/world_06/source/w06_top.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the approved concept sheet of world 6 — match its palette and light. Attached image 3: the floor top strip of the same world — match its painting style and colors. Do NOT copy layouts, text, UI or characters.
+
+Create ONE isolated decorative sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no unrelated objects.
+Object: three small floating pebbles of slate with tiny moss caps.
+Neutral white balance. Genuine PNG alpha transparency, no painted checkerboard, no wall slab, ground plane or backdrop. Soft painted edges WITHOUT black/navy contour. Landscape 3:2. ONE centered object or specified decorative group with generous empty alpha margins. No broad cast shadow or glow outside the object.
+Exactly THREE small separate slate pebbles hovering in one compact centered group, each with a tiny golden-green moss cap. No fourth stone, fragments, ground, support slab, extra flowers or sparkle particles. Three distinct small rocks only, completely surrounded by transparent air.
+No clouds (clouds are platforms in this world), no crystals, chains, lanterns, rings or portals, magnets, cannons, grates, streams of glowing metal.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-99608db3-1f81-4137-aba2-e49474be6bdb.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+D6.4.2 | w06_decal_floating_rocks_2.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world6_sky_forge.png
+D:/Cluade projects/games/Glue/assets/tiles/world_06/source/w06_top.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the approved concept sheet of world 6 — match its palette and light. Attached image 3: the floor top strip of the same world — match its painting style and colors. Do NOT copy layouts, text, UI or characters.
+
+Create ONE isolated decorative sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no unrelated objects.
+Object: three small floating pebbles of slate with tiny moss caps.
+Neutral white balance. Genuine PNG alpha transparency, no painted checkerboard, no wall slab, ground plane or backdrop. Soft painted edges WITHOUT black/navy contour. Landscape 3:2. ONE centered object or specified decorative group with generous empty alpha margins. No broad cast shadow or glow outside the object.
+A second independent variant of this ONE object: modestly different silhouette and details, same scale, colors and materials. No pair, grid or comparison sheet.
+Exactly THREE small separate slate pebbles hovering in one compact centered group, each with a tiny golden-green moss cap. No fourth stone, fragments, ground, support slab, extra flowers or sparkle particles. Three distinct small rocks only, completely surrounded by transparent air.
+No clouds (clouds are platforms in this world), no crystals, chains, lanterns, rings or portals, magnets, cannons, grates, streams of glowing metal.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-25f3f76e-ebb8-4962-9d86-c07a59044222.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+D6.5 | w06_decal_banner.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world6_sky_forge.png
+D:/Cluade projects/games/Glue/assets/tiles/world_06/source/w06_top.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the approved concept sheet of world 6 — match its palette and light. Attached image 3: the floor top strip of the same world — match its painting style and colors. Do NOT copy layouts, text, UI or characters.
+
+Create ONE isolated decorative sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no unrelated objects.
+Object: a hanging cloth banner, plain deep purple with a gold border, no symbols.
+Neutral white balance. Genuine PNG alpha transparency, no painted checkerboard, no wall slab, ground plane or backdrop. Soft painted edges WITHOUT black/navy contour. Landscape 3:2. ONE centered object or specified decorative group with generous empty alpha margins. No broad cast shadow or glow outside the object.
+No clouds (clouds are platforms in this world), no crystals, chains, lanterns, rings or portals, magnets, cannons, grates, streams of glowing metal.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-66ff93e5-4643-45fb-b707-6772d5fa0e33.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+D6.5.2 | w06_decal_banner_2.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world6_sky_forge.png
+D:/Cluade projects/games/Glue/assets/tiles/world_06/source/w06_top.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the approved concept sheet of world 6 — match its palette and light. Attached image 3: the floor top strip of the same world — match its painting style and colors. Do NOT copy layouts, text, UI or characters.
+
+Create ONE isolated decorative sprite for a 2D side-scrolling platformer. TRANSPARENT BACKGROUND PNG, nothing else in the image. Strict side view, centered, empty transparent space around it. Hand-painted cartoon style, soft shading, light from the upper left, no black outline. No text, no characters, no animals, no unrelated objects.
+Object: a hanging cloth banner, plain deep purple with a gold border, no symbols.
+Neutral white balance. Genuine PNG alpha transparency, no painted checkerboard, no wall slab, ground plane or backdrop. Soft painted edges WITHOUT black/navy contour. Landscape 3:2. ONE centered object or specified decorative group with generous empty alpha margins. No broad cast shadow or glow outside the object.
+A second independent variant of this ONE object: modestly different silhouette and details, same scale, colors and materials. No pair, grid or comparison sheet.
+No clouds (clouds are platforms in this world), no crystals, chains, lanterns, rings or portals, magnets, cannons, grates, streams of glowing metal.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-e4653594-ba51-4ea3-93f3-941897d981cb.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+D6.3.2 | w06_decal_roots_2.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/assets/decals/world_06/source/w06_decal_roots_2.png
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world6_sky_forge.png
+D:/Cluade projects/games/Glue/assets/tiles/world_06/source/w06_top.png
+Edit prompt:
+Image 1 is the edit target, images 2–4 style references. Keep the painted golden-brown hanging roots, small purple flowers and leaves, design, lighting and colors. Correct ONLY composition: redraw the entire root cluster 20 percent smaller, centered within this same landscape canvas, with a generous EMPTY TRANSPARENT margin above the top attachment tips and below the root ends. The whole cluster must fit, without cropping or a hard horizontal cut at the top. No overhang, rock slab, ground, border, shadow or backdrop. Transparent PNG alpha, no outline, no text. Preserve the image dimensions.
+No clouds (clouds are platforms in this world), no crystals, chains, lanterns, rings or portals, magnets, cannons, grates, streams of glowing metal.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-fe35b5dc-9dc5-4e4a-9cc4-a20adb818b18.png

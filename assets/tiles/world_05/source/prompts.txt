@@ -1,0 +1,85 @@
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+C5.1 | w05_fill.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world5_ice_peaks.png
+D:/Cluade projects/games/Glue/assets/tiles/world_01/source/w01_stone_fill.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the approved concept sheet of world 5 — match its palette. Attached image 3: the approved stone masonry texture of the same game — match its painting style, stone scale and level of detail. Do NOT copy layouts, text, UI or characters.
+
+Create a SEAMLESS TILEABLE TEXTURE, square 1:1, tileable on all four sides. Strict front orthographic view, no perspective. Hand-painted cartoon style, soft shading, light from the upper left. Medium-dark values and low contrast, so small bright red, blue, yellow and green characters read clearly in front of it. No moss, no grass, no plants, no holes, no doors, no objects, no text. Even lighting across the whole tile — no vignette, no gradient from one side to the other. Neutral white balance, no yellow tint.
+Surface: frosty grey stone masonry with snow packed in the joints and light frost on the blocks; cool blue-grey.
+SQUARE 1:1 output, edge-to-edge masonry. Completely even illumination across the canvas, subdued highlights, low overall contrast. Mortar is soft, never a dark silhouette outline. Opposite edges must continue the same bond. No blank margins, scenery or props.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-40521bac-17b3-45db-8c9f-f781bd77ef26.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+C5.2 | w05_deep.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world5_ice_peaks.png
+D:/Cluade projects/games/Glue/assets/tiles/world_01/source/w01_stone_fill.png
+Prompt:
+Attached image 1: the concept sheet of my game "Hold On!" — style reference only. Attached image 2: the approved concept sheet of world 5 — match its palette. Attached image 3: the approved stone masonry texture of the same game — match its painting style, stone scale and level of detail. Do NOT copy layouts, text, UI or characters.
+
+Create a SEAMLESS TILEABLE TEXTURE, square 1:1, tileable on all four sides. Strict front orthographic view, no perspective. Hand-painted cartoon style, soft shading, light from the upper left. Medium-dark values and low contrast, so small bright red, blue, yellow and green characters read clearly in front of it. No moss, no grass, no plants, no holes, no doors, no objects, no text. Even lighting across the whole tile — no vignette, no gradient from one side to the other. Neutral white balance, no yellow tint.
+Surface: deep glacier: dense blue-white ice mass with dark rocks frozen inside, calm and slightly darker.
+SQUARE 1:1 output, edge-to-edge continuous natural material. Completely even illumination across the canvas, subdued highlights, low overall contrast. Natural material boundaries are soft, never dark silhouette outlines. Opposite edges must continue the same natural material. No blank margins, scenery or props. Continuous glacier ICE, not stone blocks or masonry; embedded dark rocks are the explicitly intended exception to no-objects. No mortar joints or regular brick rows.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-cb8db3f9-fdde-4bbc-adf4-04e319a6d841.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+C5.3 | w05_top_snow.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world5_ice_peaks.png
+D:/Cluade projects/games/Glue/assets/tiles/world_01/source/w01_stone_fill.png
+Prompt:
+Attached image 1: the game concept sheet, style only. Attached image 2: the approved concept sheet of world 5, match its materials and palette. Attached image 3: the approved world 1 masonry, match its painting style and material scale. Do NOT copy layouts, text, UI, characters or mechanisms.
+
+Create ONE horizontal strip, 4:1, TRANSPARENT BACKGROUND PNG, tileable horizontally. Strict side orthographic view. A fairly flat walkable top line lies about 30% from the top of the canvas. Only the shallow decorative cap exists; all pixels below the narrow cap are transparent. The cap extends to both left and right canvas edges and continues across them, no empty end margins and no rounded end caps. Hand-painted cartoon shading, light from upper left, no dark outline, no text, no interactive objects, no backdrop. Neutral white balance.
+Surface: a thick rounded cap of fresh soft snow on top of a platform, overhanging the edge in soft rounded lumps (no icicles). Cool neutral icy daylight only, absolutely no warm yellow light or beige snow. Snow remains soft matte white with pale blue shadows; solid ice remains distinct smooth glossy cool blue.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-9d90d46f-1be7-4b48-8e38-9e6e0c01b96e.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+C5.4 | w05_top_ice.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world5_ice_peaks.png
+D:/Cluade projects/games/Glue/assets/tiles/world_01/source/w01_stone_fill.png
+Prompt:
+Attached image 1: the game concept sheet, style only. Attached image 2: the approved concept sheet of world 5, match its materials and palette. Attached image 3: the approved world 1 masonry, match its painting style and material scale. Do NOT copy layouts, text, UI, characters or mechanisms.
+
+Create ONE horizontal strip, 4:1, TRANSPARENT BACKGROUND PNG, tileable horizontally. Strict side orthographic view. A fairly flat walkable top line lies about 30% from the top of the canvas. Only the shallow decorative cap exists; all pixels below the narrow cap are transparent. The cap extends to both left and right canvas edges and continues across them, no empty end margins and no rounded end caps. Hand-painted cartoon shading, light from upper left, no dark outline, no text, no interactive objects, no backdrop. Neutral white balance.
+Surface: a smooth glossy layer of clear blue ice on top of a platform with bright highlights and a thin snow dusting — a SLIPPERY ice floor that must look clearly different from the snow cap.
+This ice floor must be distinctly smooth, glossy blue and SLIPPERY, visibly different from the soft matte white snow cap. No icicles, cubes, floating ice blocks or cracked thin ice hazard. Cool neutral icy daylight only, absolutely no warm yellow light or beige snow. Snow remains soft matte white with pale blue shadows; solid ice remains distinct smooth glossy cool blue.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-5a906283-f908-4ed4-b3ac-0192123f9bb4.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+C5.5 | w05_side.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world5_ice_peaks.png
+D:/Cluade projects/games/Glue/assets/tiles/world_01/source/w01_stone_fill.png
+Prompt:
+Attached image 1: the game concept sheet, style only. Attached image 2: the approved concept sheet of world 5, match its materials and palette. Attached image 3: the approved world 1 masonry, match its painting style and material scale. Do NOT copy layouts, text, UI, characters or mechanisms.
+
+Create ONE vertical strip, 1:4, TRANSPARENT BACKGROUND PNG, tileable vertically. Strict side orthographic view. The narrow platform edge occupies ONLY the LEFT HALF; the entire RIGHT HALF must have alpha zero, including shadows. The edge strip reaches both top and bottom canvas edges; no empty end margins. Hand-painted cartoon shading, light from upper left, no dark silhouette outline, no text, no interactive objects, no backdrop. Neutral white balance.
+Surface: the left edge of frosty stone blocks with frost and short rounded frozen drips (small, not long icicles). Cool neutral icy daylight only, absolutely no warm yellow light or beige snow. Snow remains soft matte white with pale blue shadows; solid ice remains distinct smooth glossy cool blue.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-521c9271-4006-43af-a8c6-bd6a933a6711.png
+
+
+=== GRAPHICS 11 / 2026-10-03 / BUILT-IN IMAGE_GEN ===
+C5.2 | w05_deep.png
+References, in attachment order:
+D:/Cluade projects/games/Glue/assets/tiles/world_05/source/w05_deep.png
+D:/Cluade projects/games/Glue/docs/референсы/reference.png
+D:/Cluade projects/games/Glue/docs/референсы/world5_ice_peaks.png
+D:/Cluade projects/games/Glue/assets/tiles/world_01/source/w01_stone_fill.png
+Edit prompt:
+Image 1 is the glacier depth texture to edit; images 2–4 are style references. Keep everything the same, but strongly simplify and subdue its values: dense calm medium-to-dark blue-grey ice, with the same dark rocks frozen inside. Replace brilliant near-white crack web highlights by subtle narrow soft blue-grey traces; reduce small flecks and busy bubble clusters. Lower contrast so bright player silhouettes stand out. The darkest and lightest material tones remain close together. Preserve continuous glacier material, square seamless all-four-side tiling, front view, edge-to-edge coverage, uniform illumination and native canvas. No outline, plants, props, text, vignette or gradients.
+Final generator output: C:\Users\Марат\.codex\generated_images\01a0fe7f-089d-7071-9b6f-2f5687fa78c2\exec-b538c5ac-b222-481b-892b-157ae67e99fb.png

@@ -1,0 +1,115 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://src/level/greybox_level.gd" id="1"]
+[ext_resource type="PackedScene" path="res://levels/backdrops/w02_yard.tscn" id="bd"]
+[ext_resource type="Script" path="res://src/level/backdrop_layer.gd" id="bl"]
+[ext_resource type="Texture2D" path="res://assets/backgrounds/world_02/source/w02_lm04_sorting_yard.png" id="lm"]
+[ext_resource type="Script" path="res://src/mechanisms/crate.gd" id="crate"]
+[ext_resource type="Script" path="res://src/mechanisms/door.gd" id="door"]
+[ext_resource type="Script" path="res://src/mechanisms/finish.gd" id="finish"]
+[ext_resource type="Script" path="res://src/mechanisms/pressure_plate.gd" id="plate"]
+
+[node name="W02L04" type="Node2D"]
+script = ExtResource("1")
+title = "04 · Сортировка"
+blocks = Array[Rect2]([Rect2(0, -8, 1, 30), Rect2(56, -8, 1, 30), Rect2(0, 12, 11, 6), Rect2(11, 9, 6, 9), Rect2(17, 6, 29, 12), Rect2(25, -8, 1, 10), Rect2(31, -8, 1, 10), Rect2(39, -8, 1, 10), Rect2(45, -8, 1, 10), Rect2(46, 9, 10, 9)])
+checkpoints = Array[Vector2]([Vector2(2, 12)])
+bounds_tiles = Rect2(0, -8, 57, 27)
+kill_y_tiles = 19
+ground_fill = "w02_fill"
+ground_deep = "w02_deep"
+ground_top = "w02_top"
+ground_side = "w02_side"
+
+[node name="Crate1" type="CharacterBody2D" parent="."]
+position = Vector2(384, 737)
+script = ExtResource("crate")
+
+[node name="P5" type="AnimatableBody2D" parent="."]
+position = Vector2(640, 768)
+script = ExtResource("plate")
+width_tiles = 2.0
+threshold = 2.0
+mark_color = Color(0.95, 0.6, 0.2, 1)
+
+[node name="P1" type="AnimatableBody2D" parent="."]
+position = Vector2(896, 576)
+script = ExtResource("plate")
+width_tiles = 1.5
+mark_color = Color(0.7, 0.45, 0.95, 1)
+
+[node name="Crate0" type="CharacterBody2D" parent="."]
+position = Vector2(1216, 353)
+script = ExtResource("crate")
+
+[node name="P4" type="AnimatableBody2D" parent="."]
+position = Vector2(1440, 384)
+script = ExtResource("plate")
+width_tiles = 2.5
+threshold = 2.0
+mark_color = Color(0.4, 0.7, 0.95, 1)
+
+[node name="D23" type="AnimatableBody2D" parent="."]
+position = Vector2(1600, 128)
+script = ExtResource("door")
+size_tiles = Vector2(1, 4)
+triggers = Array[NodePath]([NodePath("../P5"), NodePath("../P4")])
+open_offset_tiles = Vector2(0, -3.5)
+mark_colors = Array[Color]([Color(0.95, 0.6, 0.2, 1), Color(0.4, 0.7, 0.95, 1)])
+require_all = true
+invert = true
+
+[node name="D34" type="AnimatableBody2D" parent="."]
+position = Vector2(1984, 128)
+script = ExtResource("door")
+size_tiles = Vector2(1, 4)
+triggers = Array[NodePath]([NodePath("../P5"), NodePath("../P2")])
+open_offset_tiles = Vector2(0, -3.5)
+mark_colors = Array[Color]([Color(0.95, 0.6, 0.2, 1), Color(0.35, 0.8, 0.4, 1)])
+
+[node name="D45" type="AnimatableBody2D" parent="."]
+position = Vector2(2496, 128)
+script = ExtResource("door")
+size_tiles = Vector2(1, 4)
+triggers = Array[NodePath]([NodePath("../P4")])
+open_offset_tiles = Vector2(0, -3.5)
+mark_colors = Array[Color]([Color(0.4, 0.7, 0.95, 1)])
+
+[node name="D56" type="AnimatableBody2D" parent="."]
+position = Vector2(2880, 128)
+script = ExtResource("door")
+size_tiles = Vector2(1, 4)
+triggers = Array[NodePath]([NodePath("../P1"), NodePath("../P2")])
+open_offset_tiles = Vector2(0, -3.5)
+mark_colors = Array[Color]([Color(0.7, 0.45, 0.95, 1), Color(0.35, 0.8, 0.4, 1)])
+require_all = true
+invert = true
+
+[node name="P2" type="AnimatableBody2D" parent="."]
+position = Vector2(2272, 384)
+script = ExtResource("plate")
+width_tiles = 3.5
+mark_color = Color(0.35, 0.8, 0.4, 1)
+
+[node name="Crate2" type="CharacterBody2D" parent="."]
+position = Vector2(2752, 353)
+script = ExtResource("crate")
+
+[node name="Finish" type="Node2D" parent="."]
+position = Vector2(3328, 576)
+script = ExtResource("finish")
+
+[node name="Backdrop" parent="." instance=ExtResource("bd")]
+
+[node name="Landmark" type="Node2D" parent="Backdrop"]
+script = ExtResource("bl")
+texture = ExtResource("lm")
+parallax = 0.3
+parallax_y = 0.1
+height = 0.6
+center_y = 0.55
+zoom_follow = 0.3
+repeat = false
+world_x = 1277.0
+haze = 0.22
+haze_color = Color(0.860, 0.900, 0.960, 1)

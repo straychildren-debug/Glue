@@ -1,0 +1,115 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://src/level/greybox_level.gd" id="1"]
+[ext_resource type="Script" path="res://src/mechanisms/conveyor.gd" id="2"]
+[ext_resource type="Script" path="res://src/mechanisms/lever.gd" id="3"]
+[ext_resource type="Script" path="res://src/mechanisms/crate.gd" id="4"]
+[ext_resource type="Script" path="res://src/mechanisms/spring_pad.gd" id="5"]
+[ext_resource type="Script" path="res://src/mechanisms/brittle_floor.gd" id="6"]
+[ext_resource type="Script" path="res://src/mechanisms/spinner.gd" id="7"]
+[ext_resource type="Script" path="res://src/mechanisms/bellows.gd" id="8"]
+[ext_resource type="Script" path="res://src/mechanisms/pressure_plate.gd" id="9"]
+[ext_resource type="Script" path="res://src/mechanisms/crane.gd" id="10"]
+[ext_resource type="Script" path="res://src/mechanisms/wire.gd" id="11"]
+[ext_resource type="Script" path="res://src/mechanisms/spark.gd" id="12"]
+[ext_resource type="Script" path="res://src/mechanisms/keg.gd" id="13"]
+[ext_resource type="Script" path="res://src/mechanisms/cracked_wall.gd" id="14"]
+[ext_resource type="Script" path="res://src/mechanisms/beetle.gd" id="15"]
+[ext_resource type="PackedScene" path="res://levels/backdrops/w02_forge.tscn" id="bd"]
+
+[node name="WorkshopLab" type="Node2D"]
+script = ExtResource("1")
+title = "Мастерская (прототип)"
+ground_fill = "w02_fill"
+ground_deep = "w02_deep"
+ground_top = "w02_top"
+ground_side = "w02_side"
+blocks = Array[Rect2]([Rect2(0, -8, 1, 26), Rect2(0, 12, 27, 6), Rect2(20, 7, 3, 5), Rect2(33, 12, 11, 6), Rect2(52, 12, 5, 6), Rect2(63, 12, 34, 6), Rect2(84, 10, 8, 2), Rect2(96, -8, 1, 26)])
+checkpoints = Array[Vector2]([Vector2(2, 12)])
+bounds_tiles = Rect2(0, -8, 97, 27)
+kill_y_tiles = 19.0
+
+[node name="Conveyor" type="StaticBody2D" parent="."]
+position = Vector2(384, 744)
+script = ExtResource("2")
+width_tiles = 6.0
+control = NodePath("../ConveyorLever")
+
+[node name="ConveyorLever" type="Node2D" parent="."]
+position = Vector2(896, 768)
+script = ExtResource("3")
+
+[node name="ConveyorCrate" type="CharacterBody2D" parent="."]
+position = Vector2(480, 711)
+script = ExtResource("4")
+
+[node name="Spring" type="StaticBody2D" parent="."]
+position = Vector2(1152, 768)
+script = ExtResource("5")
+
+[node name="Brittle" type="StaticBody2D" parent="."]
+position = Vector2(1728, 768)
+script = ExtResource("6")
+width_tiles = 6.0
+
+[node name="SpinnerLever" type="Node2D" parent="."]
+position = Vector2(2304, 768)
+script = ExtResource("3")
+
+[node name="Spinner" type="AnimatableBody2D" parent="."]
+position = Vector2(2496, 576)
+script = ExtResource("7")
+trigger = NodePath("../SpinnerLever")
+
+[node name="Pedal" type="AnimatableBody2D" parent="."]
+position = Vector2(2656, 768)
+script = ExtResource("9")
+width_tiles = 1.5
+
+[node name="Bellows" type="Node2D" parent="."]
+position = Vector2(2752, 640)
+script = ExtResource("8")
+length_tiles = 10.0
+height_tiles = 5.0
+pedal = NodePath("../Pedal")
+
+[node name="CranePlate" type="AnimatableBody2D" parent="."]
+position = Vector2(3488, 768)
+script = ExtResource("9")
+width_tiles = 1.5
+
+[node name="Crane" type="Node2D" parent="."]
+position = Vector2(3584, 256)
+script = ExtResource("10")
+length_tiles = 8.0
+hang_tiles = 2.5
+trigger = NodePath("../CranePlate")
+
+[node name="Wire" type="Node2D" parent="."]
+script = ExtResource("11")
+points = PackedVector2Array(68, 11.5, 76.5, 11.5)
+target = NodePath("../Keg")
+
+[node name="Spark" type="Node2D" parent="."]
+script = ExtResource("12")
+wire = NodePath("../Wire")
+
+[node name="Keg" type="Node2D" parent="."]
+position = Vector2(4928, 768)
+script = ExtResource("13")
+walls = Array[NodePath]([NodePath("../CrackedWall")])
+
+[node name="CrackedWall" type="StaticBody2D" parent="."]
+position = Vector2(5056, 576)
+script = ExtResource("14")
+
+[node name="Beetle" type="CharacterBody2D" parent="."]
+position = Vector2(5504, 611)
+script = ExtResource("15")
+
+[node name="BeetlePlate" type="AnimatableBody2D" parent="."]
+position = Vector2(5760, 640)
+script = ExtResource("9")
+width_tiles = 1.5
+
+[node name="Backdrop" parent="." instance=ExtResource("bd")]

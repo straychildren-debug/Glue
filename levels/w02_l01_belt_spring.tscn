@@ -1,0 +1,77 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://src/level/greybox_level.gd" id="1"]
+[ext_resource type="PackedScene" path="res://levels/backdrops/w02_yard.tscn" id="bd"]
+[ext_resource type="Script" path="res://src/level/backdrop_layer.gd" id="bl"]
+[ext_resource type="Texture2D" path="res://assets/backgrounds/world_02/source/w02_lm01_conveyor_gallery.png" id="lm"]
+[ext_resource type="Script" path="res://src/mechanisms/brittle_floor.gd" id="brittle"]
+[ext_resource type="Script" path="res://src/mechanisms/conveyor.gd" id="conveyor"]
+[ext_resource type="Script" path="res://src/mechanisms/finish.gd" id="finish"]
+[ext_resource type="Script" path="res://src/level/hint_sign.gd" id="hint"]
+[ext_resource type="Script" path="res://src/mechanisms/spikes.gd" id="spikes"]
+[ext_resource type="Script" path="res://src/mechanisms/spring_pad.gd" id="spring"]
+
+[node name="W02L01" type="Node2D"]
+script = ExtResource("1")
+title = "01 · Лента и пружина"
+blocks = Array[Rect2]([Rect2(0, -8, 1, 26), Rect2(60, -8, 1, 26), Rect2(0, 12, 4, 6), Rect2(4, 12.375, 9, 5.625), Rect2(18, 12, 7, 6), Rect2(25, 9, 6.5, 9), Rect2(31.5, 3, 4.5, 15), Rect2(36, 12, 2, 6), Rect2(43, 12, 1, 6), Rect2(38, 15, 11, 3), Rect2(49, 12, 11, 6)])
+checkpoints = Array[Vector2]([Vector2(2, 12), Vector2(19.5, 12), Vector2(37, 12)])
+bounds_tiles = Rect2(0, -8, 61, 27)
+kill_y_tiles = 19
+ground_fill = "w02_fill"
+ground_deep = "w02_deep"
+ground_top = "w02_top"
+ground_side = "w02_side"
+
+[node name="RideBelt" type="StaticBody2D" parent="."]
+position = Vector2(256, 768)
+script = ExtResource("conveyor")
+width_tiles = 9.0
+
+[node name="Hint" type="Node2D" parent="."]
+position = Vector2(1299.2, 768)
+script = ExtResource("hint")
+text = "Батут: прыгни на него — подбросит выше обычного; упадёшь с высоты — ещё выше.\nВзведённая пружина: один встаёт на батут и замирает, второй забирается\nему на голову, первый оживает — взлетают оба, выше всего"
+radius_tiles = 5.0
+
+[node name="Pad1" type="StaticBody2D" parent="."]
+position = Vector2(1472, 768)
+script = ExtResource("spring")
+
+[node name="Pad2" type="StaticBody2D" parent="."]
+position = Vector2(1888, 576)
+script = ExtResource("spring")
+
+[node name="Brittle1" type="StaticBody2D" parent="."]
+position = Vector2(2432, 768)
+script = ExtResource("brittle")
+width_tiles = 5.0
+
+[node name="Brittle2" type="StaticBody2D" parent="."]
+position = Vector2(2816, 768)
+script = ExtResource("brittle")
+width_tiles = 5.0
+
+[node name="Spikes" type="Node2D" parent="."]
+position = Vector2(2784, 960)
+script = ExtResource("spikes")
+width_tiles = 11.0
+
+[node name="Finish" type="Node2D" parent="."]
+position = Vector2(3552, 768)
+script = ExtResource("finish")
+
+[node name="Backdrop" parent="." instance=ExtResource("bd")]
+
+[node name="Landmark" type="Node2D" parent="Backdrop"]
+script = ExtResource("bl")
+texture = ExtResource("lm")
+parallax = 0.3
+parallax_y = 0.1
+height = 0.6
+center_y = 0.55
+zoom_follow = 0.3
+repeat = false
+world_x = 1366.0
+haze = 0.22
+haze_color = Color(0.860, 0.900, 0.960, 1)
